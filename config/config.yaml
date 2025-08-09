@@ -1,0 +1,4 @@
+version: "v2025.08.09"
+taxon_query: "Boletaceae[Organism]"
+update_window_days: 8
+backbone_loci: [RPB1, RPB2, TEF1, LSU]

@@ -1,0 +1,10 @@
+# Minimal Snakefile so `snakemake site` works locally if you want it
+rule site:
+    output:
+        directory("site")
+    shell:
+        "python3 workflow/scripts/build_site.py"
+
+rule all:
+    input:
+        "site"
