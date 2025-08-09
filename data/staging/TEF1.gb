@@ -1,0 +1,116 @@
+LOCUS       MZ707784                 537 bp    DNA     linear   PLN 05-AUG-2025
+DEFINITION  Leccinum aurantiacum strain LJW270 translation elongation factor
+            1-alpha (TEF1) gene, partial cds.
+ACCESSION   MZ707784
+VERSION     MZ707784.1
+KEYWORDS    .
+SOURCE      Leccinum aurantiacum
+  ORGANISM  Leccinum aurantiacum
+            Eukaryota; Fungi; Dikarya; Basidiomycota; Agaricomycotina;
+            Agaricomycetes; Agaricomycetidae; Boletales; Boletineae;
+            Boletaceae; Leccinoideae; Leccinum.
+REFERENCE   1  (bases 1 to 537)
+  AUTHORS   Meng,X., Li,Y. and Yang,Z.
+  TITLE     New species of Leccinum (Boletaceae, Boletales) from China based on
+            morphological and molecular data
+  JOURNAL   Unpublished
+REFERENCE   2  (bases 1 to 537)
+  AUTHORS   Meng,X., Li,Y. and Yang,Z.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (05-AUG-2021) Updating Information on GenBank Records,
+            Kunming Institute of Botany, Chinese Academy of Sciences, Lanhei
+            Road, Kunming, Yunnan 650201, China
+COMMENT     ##Assembly-Data-START##
+            Sequencing Technology :: Sanger dideoxy sequencing
+            ##Assembly-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..537
+                     /organism="Leccinum aurantiacum"
+                     /mol_type="genomic DNA"
+                     /strain="LJW270"
+                     /specimen_voucher="HKAS91078"
+                     /db_xref="taxon:121046"
+                     /geo_loc_name="China"
+     gene            <1..>537
+                     /gene="TEF1"
+     mRNA            join(<1..192,250..386,438..>537)
+                     /gene="TEF1"
+                     /product="translation elongation factor 1-alpha"
+     CDS             join(<1..192,250..386,438..>537)
+                     /gene="TEF1"
+                     /codon_start=1
+                     /product="translation elongation factor 1-alpha"
+                     /protein_id="UAX26431.1"
+                     /translation="RDFIKNMITGTSQADCAILIIAGGTGEFEAGISKDGQTREHALL
+                     AFTLGVRQLIVAVNKMDTTKWSEDRFNEIVKETSTFIKKVGYNPKAVAFVPISGWHGD
+                     NMLEESPNMTWYKGWTKEVKSGTVKGKTLLDAIDAIEPPTR"
+ORIGIN      
+        1 cgtgatttta tcaaaaacat gattactggt acctctcagg ctgactgtgc catcctcatc
+       61 atcgccggtg gtaccggtga gttcgaggct ggtatctcga aggacggtca gacccgtgaa
+      121 catgctcttc tggcgttcac tctcggtgtg cgtcagctca tcgtcgcagt aaataagatg
+      181 gacacgacca aagttcgttg catatatatt ttttcccctg aggaaggcgg tttgacatgt
+      241 cgtcgatagt ggagcgagga ccgtttcaat gaaatcgtca aggaaacttc gaccttcatc
+      301 aagaaggttg gttacaaccc gaaggctgtc gctttcgtcc ccatctctgg ctggcatggt
+      361 gacaacatgc tcgaggagtc ccccaagtac gtgctacttc gttagatcga tcgacagcat
+      421 tctgaacgtt gaaatagcat gacttggtac aagggatgga cgaaggaggt caagagtggt
+      481 accgtcaagg gaaagaccct cctcgacgcc atcgacgcca tcgagcctcc tacccgt
+//
+
+LOCUS       MZ707783                 531 bp    DNA     linear   PLN 05-AUG-2025
+DEFINITION  Leccinum aurantiacum strain LJW263 translation elongation factor
+            1-alpha (TEF1) gene, partial cds.
+ACCESSION   MZ707783
+VERSION     MZ707783.1
+KEYWORDS    .
+SOURCE      Leccinum aurantiacum
+  ORGANISM  Leccinum aurantiacum
+            Eukaryota; Fungi; Dikarya; Basidiomycota; Agaricomycotina;
+            Agaricomycetes; Agaricomycetidae; Boletales; Boletineae;
+            Boletaceae; Leccinoideae; Leccinum.
+REFERENCE   1  (bases 1 to 531)
+  AUTHORS   Meng,X., Li,Y. and Yang,Z.
+  TITLE     New species of Leccinum (Boletaceae, Boletales) from China based on
+            morphological and molecular data
+  JOURNAL   Unpublished
+REFERENCE   2  (bases 1 to 531)
+  AUTHORS   Meng,X., Li,Y. and Yang,Z.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (05-AUG-2021) Updating Information on GenBank Records,
+            Kunming Institute of Botany, Chinese Academy of Sciences, Lanhei
+            Road, Kunming, Yunnan 650201, China
+COMMENT     ##Assembly-Data-START##
+            Sequencing Technology :: Sanger dideoxy sequencing
+            ##Assembly-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..531
+                     /organism="Leccinum aurantiacum"
+                     /mol_type="genomic DNA"
+                     /strain="LJW263"
+                     /specimen_voucher="HKAS91071"
+                     /db_xref="taxon:121046"
+                     /geo_loc_name="China"
+     gene            <1..>531
+                     /gene="TEF1"
+     mRNA            join(<1..192,248..384,436..>531)
+                     /gene="TEF1"
+                     /product="translation elongation factor 1-alpha"
+     CDS             join(<1..192,248..384,436..>531)
+                     /gene="TEF1"
+                     /codon_start=1
+                     /product="translation elongation factor 1-alpha"
+                     /protein_id="UAX26430.1"
+                     /translation="RDFIKNMITGTSQADCAILIIAGGTGEFEAGISKDGQTREHALL
+                     AFTLGVRQLIVAVNKMDTTKWSEDRFNEIVKETSTFIKKVGYNPKAVAFVPISGWHGD
+                     NMLEESPNMTWYKGWTKEVKSGTVKGKTLLDAIDAIEPPT"
+ORIGIN      
+        1 cgtgatttta tcaaaaacat gattactggt acctctcagg ctgactgtgc catcctcatc
+       61 atcgccggtg gtaccggtga gttcgaggct ggtatctcga aggacggtca gacccgtgaa
+      121 catgctcttc tggcgttcac tctcggtgtg cgtcagctca tcgtcgcagt aaataagatg
+      181 gacacgacca aagttcgttg catatttttt ttcccctgag gaaggcggtt tgacatgtcg
+      241 tcgatagtgg agcgaggacc gtttcaatga aatcgtcaag gaaacttcga ccttcatcaa
+      301 gaaggttggt tacaacccga aggctgtcgc tttcgtcccc atctctggct ggcatggtga
+      361 caacatgctc gaggagtccc ccaagtacgt gctactttgt tagatcgacc gacagcattc
+      421 tgaatgtcga aatagcatga cttggtacaa gggatggacg aaggaagtca agagtggtac
+      481 cgtcaaggga aagaccctcc tcgacgccat cgacgccatc gagcctccta c
+//
+

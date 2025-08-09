@@ -72,6 +72,6 @@ with open(args.out_parts, "w") as out:
         out.write(f"DNA, {locus} = {start}-{end}\n")
 
 # Write taxa list
-with open(args.out_taxes if False else args.out_taxes, "w") as out:
+with open(args.out_taxa if False else args.out_taxa, "w") as out:
     for t in taxa:
         out.write(t + "\n")

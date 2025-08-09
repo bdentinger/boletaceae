@@ -1,0 +1,1289 @@
+IQ-TREE multicore version 2.2.0.5 COVID-edition for Linux 64-bit built Jun 21 2022
+Developed by Bui Quang Minh, James Barbetti, Nguyen Lam Tung,
+Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams, Ly Trong Nhan.
+
+Host:    lnx820.umnh.utah.edu (AVX2, FMA3, 865 GB RAM)
+Command: iqtree2 -s data/align/concat.fasta -p data/align/partitions.txt -m MFP+MERGE -T AUTO -B 1000 --alrt 1000 -pre data/trees/backbone
+Seed:    814615 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Sat Aug  9 13:02:26 2025
+Kernel:  AVX+FMA - auto-detect threads (72 CPU cores detected)
+
+Reading partition model file data/align/partitions.txt ...
+Reading alignment file data/align/concat.fasta ... Fasta format detected
+Reading fasta file: done in 0.024298 secs using 93.8% CPU
+Alignment most likely contains DNA/RNA sequences
+Constructing alignment: done in 0.0556509 secs using 3855% CPU
+Alignment has 853 sequences with 1997 columns, 751 distinct patterns
+637 parsimony-informative, 72 singleton sites, 1288 constant sites
+                                                 Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 0.000551939 secs using 3922% CPU
+   1  cesar_135|RPB1|MZ233731.1                         62.79%    passed     94.60%
+   2  montoya_5278|RPB1|MZ233737.1                      62.79%    passed     99.61%
+   3  cesar_156|RPB1|MZ233736.1                         62.79%    passed     99.81%
+   4  cesar_134|RPB1|MZ233735.1                         62.79%    passed     99.61%
+   5  cesar_133|RPB1|MZ233734.1                         62.79%    passed     99.61%
+   6  cesar_128|RPB1|MZ233733.1                         62.79%    passed     99.81%
+   7  hervert_67|RPB1|MZ233732.1                        62.79%    passed     94.60%
+   8  hkas122793|RPB1|OQ873489.1                        62.69%    passed     96.90%
+   9  tns_f_44612|RPB1|OQ873488.1                       62.69%    passed     92.79%
+  10  tns_f_44611|RPB1|OQ873487.1                       62.69%    passed     96.90%
+  11  hkas126549|RPB1|OQ873486.1                        62.59%    passed     91.20%
+  12  hkas126548|RPB1|OQ873485.1                        62.59%    passed     85.92%
+  13  hkas126550|RPB1|OQ873484.1                        62.69%    passed     85.37%
+  14  hkas126555|RPB1|OQ873483.1                        62.69%    passed     79.38%
+  15  hkas126554|RPB1|OQ873482.1                        62.69%    passed     76.33%
+  16  hkas123826|RPB1|OQ873481.1                        62.69%    passed     76.33%
+  17  hkas126551|RPB1|OQ873480.1                        62.69%    passed     76.33%
+  18  hkas126547|RPB1|OQ873479.1                        62.74%    passed     77.54%
+  19  hkas126557|RPB1|OQ873478.1                        68.40%    passed     54.59%
+  20  hkas90906|RPB1|OQ873477.1                         62.74%    passed     95.40%
+  21  hkas126558|RPB1|OQ873476.1                        66.30%    passed     87.23%
+  22  hkas126559|RPB1|OQ873475.1                        63.24%    passed     91.44%
+  23  hkas80691|RPB1|OQ873474.1                         62.94%    passed     89.51%
+  24  hkas126556|RPB1|OQ873473.1                        62.94%    passed     89.51%
+  25  hkas123872|RPB1|OQ873472.1                        62.94%    passed     89.51%
+  26  zt14030|RPB1|OQ873471.1                           63.14%    passed     98.38%
+  27  hkas101248|RPB1|OQ873470.1                        63.29%    passed     69.34%
+  28  hkas126560|RPB1|OQ873469.1                        63.29%    passed     71.60%
+  29  hkas_125907|RPB1|OQ750574.1                       67.70%    passed     79.04%
+  30  hkas_91279|RPB1|OQ750573.1                        62.64%    passed     88.70%
+  31  hkas_76664|RPB1|OQ750572.1                        62.64%    passed     83.91%
+  32  w3710|RPB1|OR828575.1                             67.00%    passed     83.93%
+  33  m745|RPB1|OR566423.1                              69.60%    passed     90.86%
+  34  m692|RPB1|OR566422.1                              67.30%    passed     90.54%
+  35  w3096|RPB1|OR566415.1                             62.69%    passed     94.22%
+  36  lei_647|RPB1|OR566414.1                           66.35%    passed     85.10%
+  37  lei_607|RPB1|OR566413.1                           68.10%    passed     75.95%
+  38  w3272|RPB1|OR663951.1                             65.95%    passed     72.55%
+  39  w3270|RPB1|OR663950.1                             66.50%    passed     79.32%
+  40  w3110|RPB1|OR663949.1                             64.40%    passed     76.40%
+  41  w3109|RPB1|OR663948.1                             66.30%    passed     86.40%
+  42  w3105|RPB1|OR663947.1                             71.51%    passed     83.95%
+  43  w3104_2|RPB1|OR663946.1                           65.45%    passed     91.36%
+  44  w3104_1|RPB1|OR663945.1                           65.80%    passed     88.75%
+  45  w3100|RPB1|OR663944.1                             66.45%    passed     62.48%
+  46  w3075_2|RPB1|OR663943.1                           73.06%    passed     55.26%
+  47  w3075_1|RPB1|OR663942.1                           72.96%    passed     53.50%
+  48  w3044|RPB1|OR663941.1                             64.40%    passed     70.96%
+  49  qb10325|RPB1|OR663940.1                           68.20%    passed     82.39%
+  50  qb10274|RPB1|OR663939.1                           70.51%    passed     92.79%
+  51  w3383|RPB1|OR683477.1                             66.60%    passed     95.05%
+  52  w3380|RPB1|OR683476.1                             66.55%    passed     93.78%
+  53  w3351|RPB1|OR683475.1                             66.90%    passed     75.70%
+  54  t188|RPB1|OR683474.1                              67.75%    passed     90.63%
+  55  r345|RPB1|OR683473.1                              65.70%    passed     91.16%
+  56  mhkmu_h.y._huang_674|RPB1|PP195251.1              63.09%    passed     98.88%
+  57  mhkmu_h.y._huang_699|RPB1|PP195250.1              63.09%    passed     98.88%
+  58  mhkmu_h.y._huang_682|RPB1|PP195249.1              63.50%    passed     98.67%
+  59  mhkmu_y.j._pu_216|RPB1|PP195248.1                 63.09%    passed     99.48%
+  60  mhkmu_s._jiang_414|RPB1|PP195247.1                63.29%    passed     98.82%
+  61  mhkmu_l.p._tang_3774|RPB1|PP195246.1              62.89%    passed     98.61%
+  62  mhkmu_r._xue_100|RPB1|PP195245.1                  64.40%    passed     95.66%
+  63  mhkmu_j._ma_123|RPB1|PP195244.1                   62.79%    passed     97.35%
+  64  mhkmu_r._xue_95|RPB1|PP195243.1                   62.84%    passed     97.04%
+  65  mhkmu_r._xue_94|RPB1|PP195242.1                   62.89%    passed     97.12%
+  66  mexu                                              65.15%    passed     98.88%
+  67  gdgm44729|RPB1|OP918157.1                         62.84%    passed     35.49%
+  68  gdgm44401|RPB1|OP918156.1                         63.09%    passed     52.41%
+  69  gdgm44400|RPB1|OP918155.1                         63.09%    passed     56.71%
+  70  gdgm91094|RPB1|OQ676968.1                         63.45%    passed     85.02%
+  71  gdgm91093|RPB1|OQ676967.1                         63.45%    passed     85.02%
+  72  gdgm91092|RPB1|OQ676966.1                         63.45%    passed     85.02%
+  73  b21061201|RPB1|OQ676965.1                         63.45%    passed     85.02%
+  74  gdgm91091|RPB1|OQ676964.1                         63.45%    passed     85.02%
+  75  hmjau_60056|RPB1|OP495823.1                       67.25%    passed     91.06%
+  76  hmjau_60053|RPB1|OP495813.1                       67.90%    passed     80.71%
+  77  hmjau_60052|RPB1|OP495812.1                       67.20%    passed     82.75%
+  78  hmjau_60068|RPB1|OP495801.1                       68.35%    passed     39.67%
+  79  hmjau_60067|RPB1|OP495800.1                       68.30%    passed     42.73%
+  80  hmjau_60066|RPB1|OP495799.1                       68.30%    passed     38.20%
+  81  hmjau_60065|RPB1|OP495798.1                       68.30%    passed     37.27%
+  82  hmjau_60064|RPB1|OP495797.1                       68.40%    passed     36.63%
+  83  hmjau_60063|RPB1|OP495796.1                       68.40%    passed     36.63%
+  84  hmjau_60062|RPB1|OP495795.1                       68.30%    passed     40.76%
+  85  hmjau_60061|RPB1|OP495794.1                       68.35%    passed     34.35%
+  86  b21061253|RPB1|ON390834.1                         62.94%    passed     75.58%
+  87  gdgm87995|RPB1|ON390833.1                         62.94%    passed     75.58%
+  88  gdgm87994|RPB1|ON390832.1                         62.99%    passed     81.90%
+  89  b21081640|RPB1|ON390831.1                         63.04%    passed     79.74%
+  90  gdgm87993|RPB1|ON390830.1                         63.04%    passed     76.41%
+  91  gdgm87996|RPB1|ON390829.1                         62.99%    passed     78.11%
+  92  bjtc_fm1906|RPB1|OP792031.1                       62.54%    passed     88.47%
+  93  bjtc_fm1904|RPB1|OP792030.1                       62.54%    passed     88.47%
+  94  bjtc_fm1869|RPB1|OP792029.1                       62.54%    passed     88.47%
+  95  herrera_226|RPB1|ON704173.1                       63.45%    passed     77.46%
+  96  montoya_5385|RPB1|ON704172.1                      63.45%    passed     77.46%
+  97  corona_1385|RPB1|ON704171.1                       63.45%    passed     77.46%
+  98  corona_1378|RPB1|ON704170.1                       63.45%    passed     77.46%
+  99  saldivar_524|RPB1|ON704169.1                      63.45%    passed     67.76%
+ 100  saldivar_419|RPB1|ON704168.1                      63.45%    passed     67.76%
+ 101  ramos_928|RPB1|ON704167.1                         63.45%    passed     67.76%
+ 102  montoya_5019|RPB1|ON704166.1                      63.45%    passed     67.76%
+ 103  hkas                                              62.54%    passed     81.27%
+ 104  179/97|RPB1|KF030396.1                            65.15%    passed     68.81%
+ 105  mb06_056|RPB1|KF030395.1                          64.65%    passed     99.65%
+ 106  xpa1|RPB1|KF030394.1                              65.15%    passed     77.54%
+ 107  mb03_098a|RPB1|KF030393.1                         64.95%    passed     90.95%
+ 108  00_436|RPB1|KF030392.1                            63.29%    passed     82.96%
+ 109  xs1|RPB1|KF030391.1                               65.95%    passed     88.92%
+ 110  pp1|RPB1|KF030390.1                               66.45%    passed     76.88%
+ 111  buf_4507|RPB1|KF030389.1                          63.40%    passed     95.71%
+ 112  4588|RPB1|KF030388.1                              68.65%    passed     79.93%
+ 113  ded_7873|RPB1|KF030387.1                          63.40%    passed     87.11%
+ 114  3518|RPB1|KF030386.1                              63.29%    passed     72.45%
+ 115  dpl_2704|RPB1|KF030385.1                          63.75%    passed     88.70%
+ 116  pbm_3076|RPB1|KF030384.1                          63.85%    passed     96.00%
+ 117  3838|RPB1|KF030383.1                              72.56%    passed     75.84%
+ 118  mb03_053|RPB1|KF030382.1                          63.19%    passed     97.44%
+ 119  ds626_07|RPB1|KF030381.1                          63.35%    passed     33.22%
+ 120  at2001011|RPB1|KF030380.1                         62.69%    passed     82.58%
+ 121  27882|RPB1|KF030379.1                             82.02%    failed      1.97%
+ 122  4249|RPB1|KF030378.1                              62.94%    passed     93.74%
+ 123  ny                                                62.84%    passed     96.17%
+ 124  ds_4514|RPB1|KF030376.1                           78.87%    passed     22.70%
+ 125  bim1|RPB1|KF030375.1                              62.79%    passed     95.12%
+ 126  72206|RPB1|KF030374.1                             62.69%    passed     96.49%
+ 127  both_sn|RPB1|KF030373.1                           62.74%    passed     95.97%
+ 128  mb06_059|RPB1|KF030372.1                          62.54%    passed     75.70%
+ 129  mb03_033|RPB1|KF030371.1                          87.93%    failed      4.44%
+ 130  mb07_001|RPB1|KF030370.1                          70.56%    passed     65.96%
+ 131  4414|RPB1|KF030369.1                              62.79%    passed     85.75%
+ 132  mb06_060|RPB1|KF030368.1                          62.94%    passed     85.30%
+ 133  at2005034|RPB1|KF030367.1                         63.29%    passed     95.93%
+ 134  ny1193858|RPB1|KF030366.1                         62.59%    passed     74.84%
+ 135  xch1|RPB1|KF030365.1                              62.74%    passed     80.50%
+ 136  9606|RPB1|KF030364.1                              94.24%    failed      1.41%
+ 137  mb06_061|RPB1|KF030363.1                          62.64%    passed     89.07%
+ 138  mb06_044|RPB1|KF030362.1                          62.59%    passed     80.30%
+ 139  jam_0607|RPB1|KF030361.1                          63.60%    passed     93.55%
+ 140  112605ba|RPB1|KF030360.1                          74.11%    passed     60.24%
+ 141  bap1|RPB1|KF030359.1                              62.54%    passed     74.20%
+ 142  112/96|RPB1|KF030358.1                            62.69%    passed     86.00%
+ 143  mo334053|RPB1|MZ868934.1                          68.25%    passed     57.35%
+ 144  flas_f_58917|RPB1|MZ868933.1                      65.25%    passed     85.45%
+ 145  flas_f_68321|RPB1|MZ868932.1                      64.95%    passed     87.86%
+ 146  flas_f_60314|RPB1|MZ868931.1                      65.45%    passed     86.69%
+ 147  flas_f_68320|RPB1|MZ868930.1                      65.15%    passed     88.74%
+ 148  mes3141|RPB1|MZ868929.1                           62.94%    passed     81.51%
+ 149  hkas80856|RPB1|KJ184563.1                         70.31%    passed     48.94%
+ 150  hao230_hkas69214|RPB1|KJ184562.1                  62.74%    passed     63.01%
+ 151  feng333_hkas57410|RPB1|KJ184561.1                 62.59%    passed     96.61%
+ 152  brbr5020159063805|RPB1|KJ184560.1                 71.06%    passed     64.88%
+ 153  hkas63040|RPB1|KJ619480.1                         63.50%    passed     59.38%
+ 154  hkas58694|RPB1|KJ619479.1                         62.54%    passed     62.10%
+ 155  hkas77530|RPB1|KJ619478.1                         71.51%    passed     61.89%
+ 156  hkas77506|RPB1|KJ619477.1                         70.61%    passed     56.39%
+ 157  hkas63560|RPB1|KJ619476.1                         62.69%    passed     97.44%
+ 158  hkas56164|RPB1|KJ619475.1                         62.59%    passed     97.15%
+ 159  ny00796115|RPB1|KJ619473.1                        72.21%    passed     32.65%
+ 160  flor_51716|RPB1|OM160575.1                        71.01%    passed     90.51%
+ 161  cato106|RPB1|OM160574.1                           62.89%    passed     94.56%
+ 162  acm1275|RPB1|OM160573.1                           62.69%    passed     88.81%
+ 163  acm1138|RPB1|OM160572.1                           69.05%    passed     90.77%
+ 164  icn_192818|RPB1|OM160568.1                        67.20%    passed     80.98%
+ 165  vies_9901327|RPB1|OM160567.1                      68.55%    passed     79.94%
+ 166  vies_9901323|RPB1|OM160566.1                      64.65%    passed     98.74%
+ 167  vies_9901322|RPB1|OM160565.1                      62.59%    passed     92.63%
+ 168  s_f119691|RPB1|KJ806972.1                         69.95%    passed     96.06%
+ 169  r.e._halling_8187_ny|RPB1|EU434342.1              63.65%    passed     59.66%
+ 170  fmnh_1073250_f|RPB1|EU434341.1                    69.00%    passed     69.04%
+ 171  ny2072258|RPB1|EU434340.1                         63.45%    passed     91.72%
+ 172  ny00796119|RPB1|EU434339.1                        63.40%    passed     98.57%
+ 173  t.w._osmundson_1030_ny|RPB1|EU434338.1            63.55%    passed     87.92%
+ 174  t.w._osmundson_1087_ny|RPB1|EU434337.1            63.50%    passed     85.91%
+ 175  ny00796120|RPB1|EU434336.1                        63.40%    passed     98.57%
+ 176  r.e._halling_8636_ny|RPB1|EU434335.1              62.74%    passed     99.65%
+ 177  t.w._osmundson_1117_ny|RPB1|EU434334.1            76.11%    passed     85.75%
+ 178  t.w._osmundson_1121_ny|RPB1|EU434333.1            63.40%    passed     59.83%
+ 179  t.w._osmundson_1132_ny|RPB1|EU434332.1            63.40%    passed     91.92%
+ 180  t.w._osmundson_1105_ny|RPB1|EU434331.1            63.55%    passed     87.92%
+ 181  t.w._osmundson_1111_ny|RPB1|EU434330.1            63.45%    passed     86.90%
+ 182  r.e._halling_8087_ny|RPB1|EU434329.1              63.65%    passed     59.66%
+ 183  hmjau59035|RPB1|OL739120.1                        66.30%    passed     91.59%
+ 184  hmjau59034|RPB1|OL739119.1                        69.50%    passed     81.01%
+ 185  hmjau60202|RPB1|OM285113.1                        62.54%    passed     87.59%
+ 186  adk5072_holotype|RPB1|MZ707879.1                  63.14%    passed     93.49%
+ 187  sab0716_holotype|RPB1|MZ707878.1                  65.10%    passed     80.98%
+ 188  adk5006|RPB1|MZ707877.1                           63.24%    passed     95.84%
+ 189  sab0715|RPB1|MZ707876.1                           63.75%    passed     92.51%
+ 190  hkas50282|RPB1|MT110408.1                         72.91%    passed     74.42%
+ 191  hkas74928|RPB1|MT110407.1                         64.50%    passed     91.15%
+ 192  hkas59217|RPB1|MT110406.1                         67.95%    passed     98.59%
+ 193  hkas59845|RPB1|MT110405.1                         70.66%    passed     90.10%
+ 194  hkas80671|RPB1|MT110404.1                         70.01%    passed     63.13%
+ 195  hkas59444|RPB1|MT110403.1                         68.15%    passed     82.16%
+ 196  hkas52258|RPB1|MT110402.1                         63.24%    passed     93.47%
+ 197  hkas59572|RPB1|MT110401.1                         68.95%    passed     59.19%
+ 198  hkas92428|RPB1|MT110400.1                         63.65%    passed     64.84%
+ 199  hkas79727|RPB1|MT110399.1                         68.05%    passed     90.34%
+ 200  hkas106467|RPB1|MT110398.1                        73.01%    passed     58.69%
+ 201  hkas53420|RPB1|MT110397.1                         63.04%    passed     99.65%
+ 202  hkas82644|RPB1|MT110396.1                         76.87%    passed     64.92%
+ 203  hkas52602|RPB1|MT110395.1                         69.20%    passed     97.05%
+ 204  hkas89413|RPB1|MT110394.1                         63.50%    passed     98.91%
+ 205  hkas93425|RPB1|MT110393.1                         64.35%    passed     56.76%
+ 206  hkas91278|RPB1|MT110392.1                         66.90%    passed     78.86%
+ 207  hkas88998|RPB1|MT110391.1                         66.85%    passed     88.79%
+ 208  hkas84693|RPB1|MT110390.1                         64.55%    passed     79.97%
+ 209  hkas90204|RPB1|MT110389.1                         63.19%    passed     97.42%
+ 210  hkas88992|RPB1|MT110388.1                         62.84%    passed     76.16%
+ 211  hkas59664|RPB1|MT110387.1                         67.65%    passed     72.12%
+ 212  hkas106432|RPB1|MT110386.1                        63.70%    passed     95.34%
+ 213  hkas80115|RPB1|MT110385.1                         66.95%    passed     80.07%
+ 214  hkas84351|RPB1|MT110384.1                         68.50%    passed     66.73%
+ 215  hkas106464|RPB1|MT110383.1                        70.56%    passed     72.91%
+ 216  hkas92013|RPB1|MT110382.1                         68.25%    passed     73.50%
+ 217  hkas106466|RPB1|MT110381.1                        68.20%    passed     54.03%
+ 218  hkas106331|RPB1|MT110380.1                        70.06%    passed     38.25%
+ 219  hkas106465|RPB1|MT110378.1                        69.80%    passed     88.79%
+ 220  hkas107153|RPB1|MT110376.1                        68.25%    passed     65.34%
+ 221  hkas76299|RPB1|MT110375.1                         91.49%    passed     14.57%
+ 222  lf782|RPB1|MW165281.1                             63.65%    passed     96.75%
+ 223  lf558|RPB1|MW165280.1                             72.21%    passed     65.76%
+ 224  yang4955|RPB1|MW165279.1                          63.50%    passed     87.19%
+ 225  li997|RPB1|MW165278.1                             63.65%    passed     78.10%
+ 226  feng123|RPB1|MW165277.1                           63.90%    passed     80.44%
+ 227  feng122|RPB1|MW165276.1                           63.80%    passed     72.86%
+ 228  yang3960|RPB1|MW165275.1                          68.85%    passed     87.87%
+ 229  yang4531|RPB1|MW165274.1                          75.16%    passed     80.11%
+ 230  ny02072669|RPB1|MZ647700.1                        73.71%    passed     87.23%
+ 231  bri                                               64.15%    passed     51.66%
+ 232  jlf5745|RPB1|MW737519.1                           63.04%    passed     89.26%
+ 233  jlf5684|RPB1|MW737518.1                           63.14%    passed     85.47%
+ 234  jlf3620|RPB1|MW737517.1                           62.59%    passed     70.80%
+ 235  jlf3588|RPB1|MW737516.1                           62.99%    passed     83.71%
+ 236  jlf3523|RPB1|MW737515.1                           62.54%    passed     81.27%
+ 237  jlf3498|RPB1|MW737514.1                           62.99%    passed     73.60%
+ 238  jlf3093|RPB1|MW737513.1                           62.84%    passed     90.06%
+ 239  farid_335|RPB1|MW737512.1                         83.98%    failed      4.16%
+ 240  jab_95|RPB1|MW737511.1                            62.74%    passed     99.29%
+ 241  jab_80|RPB1|MW737510.1                            64.40%    passed     84.24%
+ 242  jab_43|RPB1|MW737509.1                            62.74%    passed     99.29%
+ 243  jab_320|RPB1|MW737508.1                           64.85%    passed     82.18%
+ 244  jab_110|RPB1|MW737507.1                           64.00%    passed     99.43%
+ 245  jab_325|RPB1|MW737506.1                           79.67%    passed     13.77%
+ 246  jab_324|RPB1|MW737505.1                           79.67%    passed     13.77%
+ 247  jab_184|RPB1|MW737504.1                           79.67%    passed     13.77%
+ 248  farid_920|RPB1|MW737503.1                         79.67%    passed     13.77%
+ 249  farid_340|RPB1|MW737502.1                         79.67%    passed     13.77%
+ 250  farid_631|RPB1|MW737501.1                         64.80%    passed     89.10%
+ 251  farid_501|RPB1|MW737500.1                         67.50%    passed     95.95%
+ 252  farid_343|RPB1|MW737499.1                         64.80%    passed     89.10%
+ 253  farid_1023|RPB1|MW737498.1                        64.80%    passed     89.10%
+ 254  farid_499|RPB1|MW737497.1                         80.07%    passed     10.27%
+ 255  b391|RPB1|MW737496.1                              63.14%    passed     99.42%
+ 256  hkas115554|RPB1|MZ936350.1                        70.91%    passed     23.65%
+ 257  hkas99764|RPB1|MZ936349.1                         70.81%    passed     17.13%
+ 258  hkas115553|RPB1|MZ936348.1                        70.81%    passed     17.13%
+ 259  hkas93310|RPB1|MZ936347.1                         70.91%    passed     19.29%
+ 260  hkas678960|RPB1|MZ936346.1                        71.06%    passed     14.93%
+ 261  hkas89150|RPB1|MZ936345.1                         71.06%    passed     15.66%
+ 262  hkas83333|RPB1|MZ936344.1                         70.91%    passed      9.81%
+ 263  hkas115749|RPB1|MZ936343.1                        70.91%    passed      8.94%
+ 264  hkas50350|RPB1|MZ936342.1                         70.91%    passed      9.81%
+ 265  hkas83400|RPB1|MZ936341.1                         70.91%    passed      9.81%
+ 266  hkas83355|RPB1|MZ936340.1                         70.91%    passed      9.81%
+ 267  hkas81120|RPB1|MZ936339.1                         70.91%    passed      9.81%
+ 268  hkas87105|RPB1|MZ936338.1                         70.91%    passed      9.81%
+ 269  hkas85753|RPB1|MZ936337.1                         70.91%    passed      9.81%
+ 270  hkas84554|RPB1|MZ936336.1                         70.91%    passed      9.81%
+ 271  hkas50503|RPB1|MZ936335.1                         70.91%    passed      9.81%
+ 272  hkas87225|RPB1|MZ936334.1                         70.91%    passed      9.81%
+ 273  amh_9976|RPB1|MT140888.1                          63.60%    passed     91.12%
+ 274  kpm_nc_18036|RPB1|MT868876.1                      64.10%    passed     94.86%
+ 275  kpm_nc_17840|RPB1|MT868875.1                      64.15%    passed     85.79%
+ 276  kpm_nc_17841|RPB1|MT868874.1                      64.10%    passed     92.19%
+ 277  kpm_nc_24518|RPB1|MT868873.1                      64.10%    passed     95.25%
+ 278  kra_f_2013_38|RPB1|MT868872.1                     63.29%    passed     99.41%
+ 279  kpm_nc_18071|RPB1|MT868871.1                      63.45%    passed     99.24%
+ 280  kpm_nc_17822|RPB1|MT868870.1                      63.35%    passed     92.22%
+ 281  kpm_nc_17819|RPB1|MT868869.1                      63.35%    passed     95.24%
+ 282  kpm_nc_17818|RPB1|MT868868.1                      63.35%    passed     95.24%
+ 283  kpm_nc_27371|RPB1|MT868867.1                      63.35%    passed     89.50%
+ 284  kpm_nc_28183|RPB1|MT868866.1                      63.35%    passed     88.37%
+ 285  kpm_nc_17829|RPB1|MT868865.1                      63.70%    passed     86.30%
+ 286  kpm_nc_18031|RPB1|MT868864.1                      63.35%    passed     88.37%
+ 287  kpm_nc_17813|RPB1|MT868863.1                      63.40%    passed     86.10%
+ 288  kpm_nc_27932|RPB1|MT868862.1                      63.35%    passed     89.74%
+ 289  kpm_nc_24891|RPB1|MT868861.1                      63.35%    passed     88.34%
+ 290  kpm_nc_24889|RPB1|MT868860.1                      63.35%    passed     88.34%
+ 291  kpm_nc_27972|RPB1|MT868859.1                      63.40%    passed     89.34%
+ 292  kpm_nc_27968|RPB1|MT868858.1                      63.35%    passed     78.40%
+ 293  kpm_nc_27965|RPB1|MT868857.1                      63.35%    passed     89.74%
+ 294  kpm_nc_27960|RPB1|MT868856.1                      63.35%    passed     88.34%
+ 295  kpm_nc_26008|RPB1|MT868855.1                      63.35%    passed     88.34%
+ 296  kpm_nc_25370|RPB1|MT868854.1                      63.35%    passed     88.34%
+ 297  kpm_nc_27956|RPB1|MT868853.1                      63.35%    passed     88.34%
+ 298  kpm_nc_28187|RPB1|MT868852.1                      63.35%    passed     88.34%
+ 299  kpm_nc_27623|RPB1|MT868851.1                      63.35%    passed     78.40%
+ 300  kpm_nc_27622|RPB1|MT868850.1                      63.35%    passed     78.40%
+ 301  kpm_nc_17812|RPB1|MT868849.1                      63.35%    passed     78.40%
+ 302  kpm_nc_17810|RPB1|MT868848.1                      63.35%    passed     78.40%
+ 303  kpm_nc_17806|RPB1|MT868847.1                      63.35%    passed     78.40%
+ 304  kpm_nc_17797|RPB1|MT868846.1                      63.35%    passed     78.40%
+ 305  kpm_nc_17798|RPB1|MT868845.1                      63.35%    passed     78.40%
+ 306  kpm_nc_27952|RPB1|MT868844.1                      63.24%    passed     68.13%
+ 307  kpm_nc_27945|RPB1|MT868843.1                      63.24%    passed     68.13%
+ 308  kpm_nc_27955|RPB1|MT868842.1                      63.24%    passed     68.13%
+ 309  kpm_nc_23934|RPB1|MT868841.1                      64.00%    passed     82.48%
+ 310  kpm_nc_18032|RPB1|MT868840.1                      63.29%    passed     97.76%
+ 311  a._corrales_1036|RPB1|MT868839.1                  63.35%    passed     97.73%
+ 312  kpm_nc_17828rh1181|RPB1|MT868838.1                64.75%    passed     95.65%
+ 313  kpm_nc_17828rh1181|RPB1|MT868837.1                64.15%    passed     93.27%
+ 314  kpm_nc_17827rh30|RPB1|MT868836.1                  63.50%    passed     97.76%
+ 315  osc_131925|RPB1|MT868835.1                        64.15%    passed     95.78%
+ 316  kpm_nc_28189|RPB1|MT868834.1                      63.24%    passed     87.97%
+ 317  kpm_nc_17793|RPB1|MT868833.1                      63.24%    passed     87.97%
+ 318  kpm_nc_17785|RPB1|MT868832.1                      63.29%    passed     90.46%
+ 319  kpm_nc_28188|RPB1|MT868831.1                      63.29%    passed     93.11%
+ 320  kpm_nc_17783|RPB1|MT868830.1                      63.29%    passed     93.11%
+ 321  kpm_nc_17785|RPB1|MT868829.1                      63.29%    passed     93.11%
+ 322  kpm_nc_17824|RPB1|MT868828.1                      63.45%    passed     97.50%
+ 323  osc_58498|RPB1|MT868827.1                         63.29%    passed     90.04%
+ 324  kra_f_2012_99|RPB1|MT868826.1                     63.29%    passed     98.08%
+ 325  aqui_3899|RPB1|MT868825.1                         64.20%    passed     91.27%
+ 326  mel_2341996|RPB1|MT868824.1                       63.50%    passed     98.32%
+ 327  kpm_nc_24872|RPB1|MT868823.1                      63.80%    passed     52.20%
+ 328  kpm_nc_17771|RPB1|MT868822.1                      63.35%    passed     67.39%
+ 329  kpm_nc_17763|RPB1|MT868821.1                      63.35%    passed     61.83%
+ 330  kpm_nc_17752|RPB1|MT868820.1                      63.35%    passed     75.76%
+ 331  kpm_nc_17748|RPB1|MT868819.1                      63.40%    passed     72.16%
+ 332  kpm_nc_18041|RPB1|MT868818.1                      63.40%    passed     98.84%
+ 333  kpm_nc_28200|RPB1|MT868817.1                      64.45%    passed     86.41%
+ 334  kpm_nc_17831|RPB1|MT868816.1                      65.65%    passed     88.79%
+ 335  kpm_nc_18087|RPB1|MT868815.1                      63.55%    passed     90.04%
+ 336  kpm_nc_28186|RPB1|MT868814.1                      63.60%    passed     87.10%
+ 337  kpm_nc_26877|RPB1|MT868813.1                      64.20%    passed     86.73%
+ 338  kpm_nc_28182|RPB1|MT868812.1                      64.20%    passed     88.95%
+ 339  tns_f_36991|RPB1|MT868811.1                       63.29%    passed     93.90%
+ 340  tns_f_36990|RPB1|MT868810.1                       64.35%    passed     91.40%
+ 341  kpm_nc_23336|RPB1|MT868809.1                      63.40%    passed     96.25%
+ 342  mel_2128491|RPB1|MT868808.1                       63.40%    passed     91.42%
+ 343  mel_2329434|RPB1|MT868807.1                       63.40%    passed     89.45%
+ 344  kpm_nc_17850|RPB1|MT868806.1                      63.55%    passed     83.51%
+ 345  kpm_nc_17743|RPB1|MT868805.1                      63.60%    passed     98.85%
+ 346  kpm_nc_18014|RPB1|MT868804.1                      63.35%    passed     94.53%
+ 347  kpm_nc_18011|RPB1|MT868803.1                      63.50%    passed     84.76%
+ 348  kpm_nc_18001|RPB1|MT868802.1                      64.05%    passed     88.72%
+ 349  perth6658407|RPB1|KP242085.1                      81.82%    passed     79.00%
+ 350  mel2382826|RPB1|KP242084.1                        74.11%    passed     80.58%
+ 351  mel                                               64.15%    passed     47.78%
+ 352  perth_6660703|RPB1|KP242080.1                     74.31%    passed     50.86%
+ 353  perth_7660928|RPB1|KP242075.1                     74.21%    passed     82.74%
+ 354  perth_7588682|RPB1|KP242074.1                     73.91%    passed     26.51%
+ 355  perth_7588607|RPB1|KP242073.1                     73.96%    passed     54.43%
+ 356  mel2371703|RPB1|KP242055.1                        64.10%    passed     62.30%
+ 357  perth_6640133|RPB1|KP242042.1                     65.35%    passed     82.69%
+ 358  perth_6668208|RPB1|KP242041.1                     82.02%    passed     11.84%
+ 359  kun_hkas_84878|RPB1|MT269660.1                    69.95%    passed     77.29%
+ 360  kun_hkas_103513_513301mf1014|RPB1|MT063119.1      62.54%    passed     89.10%
+ 361  kun_hkas_106891_zhu_l._yang6279|RPB1|MT063118.1   62.54%    passed     89.10%
+ 362  hkas105252|RPB1|MN304787.1                        66.40%    passed     26.19%
+ 363  hkas105251|RPB1|MN304786.1                        66.40%    passed     26.19%
+ 364  hkas105250|RPB1|MN304785.1                        66.40%    passed     26.19%
+ 365  franck_4235|RPB1|MN584680.1                       69.10%    passed     98.65%
+ 366  franck_3973|RPB1|MN584679.1                       69.10%    passed     98.65%
+ 367  franck_4234|RPB1|MN584678.1                       69.10%    passed     98.65%
+ 368  flas_f_60333|RPB1|MF614168.1                      62.64%    passed     76.27%
+ 369  zm131|RPB1|MH700220.1                             64.30%    passed     83.83%
+ 370  gdgm52590|RPB1|MH700219.1                         63.55%    passed     77.52%
+ 371  gdgm44832|RPB1|MH700218.1                         63.70%    passed     88.03%
+ 372  gdgm53501|RPB1|MH700217.1                         62.79%    passed     60.76%
+ 373  gdgm52888|RPB1|MH700216.1                         62.79%    passed     60.76%
+ 374  gdgm53274|RPB1|MH700215.1                         62.79%    passed     71.26%
+ 375  gdgm42855|RPB1|MH700214.1                         62.79%    passed     60.76%
+ 376  gdgm44713|RPB1|MH700213.1                         62.84%    passed     22.69%
+ 377  gdgm42608|RPB1|MH700212.1                         62.84%    passed     21.64%
+ 378  gdgm44473|RPB1|MH700211.1                         66.40%    passed     84.71%
+ 379  gdgm44736|RPB1|MH700210.1                         64.45%    passed     73.84%
+ 380  gdgm44730|RPB1|MH700209.1                         64.40%    passed     67.28%
+ 381  gdgm43275|RPB1|MH700208.1                         64.40%    passed     67.28%
+ 382  gdgm44732|RPB1|MH700207.1                         71.51%    passed     51.21%
+ 383  zm56|RPB1|MN473187.1                              67.30%    passed     71.12%
+ 384  zm142|RPB1|MN473186.1                             64.40%    passed     82.83%
+ 385  a_2|RPB1|MN473185.1                               64.40%    passed     82.83%
+ 386  gdgm75923|RPB1|MN473184.1                         65.05%    passed     71.51%
+ 387  gdgm75881|RPB1|MN473183.1                         64.85%    passed     80.93%
+ 388  gdgm75499|RPB1|MN473182.1                         64.40%    passed     67.28%
+ 389  gdgm75495|RPB1|MN473181.1                         62.79%    passed     60.76%
+ 390  gdgm75477|RPB1|MN473180.1                         64.40%    passed     72.57%
+ 391  gdgm75292|RPB1|MN473179.1                         67.30%    passed     71.12%
+ 392  gdgm75258|RPB1|MN473178.1                         65.05%    passed     61.34%
+ 393  gdgm72253|RPB1|MN473177.1                         64.40%    passed     67.28%
+ 394  gdgm71932|RPB1|MN473176.1                         64.40%    passed     67.28%
+ 395  gdgm71724|RPB1|MN473175.1                         66.80%    passed     79.88%
+ 396  gdgm71707|RPB1|MN473174.1                         62.84%    passed     28.31%
+ 397  gdgm71293|RPB1|MN473173.1                         65.05%    passed     84.10%
+ 398  gdgm70547|RPB1|MN473172.1                         67.30%    passed     80.59%
+ 399  gdgm53350|RPB1|MN473171.1                         62.79%    passed     60.76%
+ 400  gdgm53336|RPB1|MN473170.1                         67.30%    passed     70.16%
+ 401  gdgm53181|RPB1|MN473169.1                         65.05%    passed     84.10%
+ 402  gdgm53170|RPB1|MN473168.1                         65.05%    passed     74.87%
+ 403  gdgm53135|RPB1|MN473167.1                         65.05%    passed     73.01%
+ 404  gdgm43134|RPB1|MN473166.1                         65.05%    passed     77.27%
+ 405  gdgm53127|RPB1|MN473165.1                         63.55%    passed     77.52%
+ 406  gdgm52898|RPB1|MN473164.1                         65.05%    passed     77.27%
+ 407  gdgm52889|RPB1|MN473163.1                         65.05%    passed     84.10%
+ 408  gdgm52298|RPB1|MN473162.1                         63.14%    passed     68.68%
+ 409  gdgm49735|RPB1|MN473161.1                         67.30%    passed     65.59%
+ 410  gdgm49451|RPB1|MN473160.1                         65.05%    passed     62.69%
+ 411  gdgm49432|RPB1|MN473159.1                         64.40%    passed     72.57%
+ 412  gdgm49259|RPB1|MN473158.1                         62.84%    passed     42.89%
+ 413  gdgm45142|RPB1|MN473157.1                         62.89%    passed     41.45%
+ 414  gdgm44739|RPB1|MN473156.1                         67.30%    passed     71.29%
+ 415  gdgm44734|RPB1|MN473155.1                         67.30%    passed     68.46%
+ 416  gdgm44727|RPB1|MN473154.1                         62.79%    passed     73.20%
+ 417  gdgm44444|RPB1|MN473153.1                         65.35%    passed     51.64%
+ 418  gdgm44441|RPB1|MN473152.1                         64.45%    passed     55.43%
+ 419  gdgm44406|RPB1|MN473151.1                         64.85%    passed     79.56%
+ 420  gdgm43502|RPB1|MN473150.1                         67.30%    passed     71.19%
+ 421  gdgm43437|RPB1|MN473149.1                         62.79%    passed     60.76%
+ 422  gdgm43282|RPB1|MN473148.1                         62.79%    passed     72.33%
+ 423  gdgm43239|RPB1|MN473147.1                         67.30%    passed     71.19%
+ 424  gdgm42937|RPB1|MN473146.1                         63.50%    passed     89.28%
+ 425  gdgm26359|RPB1|MN473145.1                         62.89%    passed     33.51%
+ 426  gdgm24560|RPB1|MN473144.1                         62.89%    passed     28.74%
+ 427  gdgm24382|RPB1|MN473143.1                         65.05%    passed     71.85%
+ 428  hkas105267|RPB1|MN304790.1                        70.96%    passed     98.08%
+ 429  hkas105266|RPB1|MN304789.1                        70.96%    passed     98.08%
+ 430  hkas105265|RPB1|MN304788.1                        70.96%    passed     98.08%
+ 431  gdgm44447|RPB1|MK165980.1                         63.85%    passed     43.72%
+ 432  gdgm44783|RPB1|MK165979.1                         63.85%    passed     43.72%
+ 433  gdgm45162|RPB1|MK165978.1                         63.85%    passed     41.49%
+ 434  fo_46874|RPB1|DQ067991.1                          62.79%    passed     99.85%
+ 435  farid_617|RPB1|MG820263.1                         65.80%    passed     57.29%
+ 436  gdgm70536|RPB1|MH374031.1                         62.59%    passed     52.31%
+ 437  gdgm46541|RPB1|MH374030.1                         62.59%    passed     63.31%
+ 438  gdgm44440|RPB1|MH374029.1                         62.59%    passed     63.31%
+ 439  sing_0206334|RPB1|MG979393.1                      63.50%    passed     66.12%
+ 440  hkas_79737|RPB1|KY553122.1                        63.40%    passed     75.57%
+ 441  hkas_81881|RPB1|KY553121.1                        65.70%    passed     13.77%
+ 442  hkas_84701|RPB1|KY553120.1                        63.70%    passed     49.28%
+ 443  hkas_78560|RPB1|KY553119.1                        63.70%    passed     26.17%
+ 444  pc_0723572|RPB1|KY553118.1                        62.89%    passed     97.60%
+ 445  pc_0723578|RPB1|KY553117.1                        62.64%    passed     97.40%
+ 446  pc_0723577|RPB1|KY553116.1                        62.64%    passed     97.26%
+ 447  yorou_4599|RPB1|KY553115.1                        63.55%    passed     82.92%
+ 448  yorou_3141|RPB1|KY553114.1                        63.60%    passed     83.40%
+ 449  yorou_3071|RPB1|KY553113.1                        63.29%    passed     81.36%
+ 450  hkas_57735|RPB1|KP136974.1                        70.81%    passed     57.74%
+ 451  hkas_53355|RPB1|KP136973.1                        70.81%    passed     58.89%
+ 452  hkas_68306|RPB1|KP136972.1                        79.07%    passed     83.48%
+ 453  hkas_54803|RPB1|KP136971.1                        70.81%    passed     57.74%
+ 454  hkas_68284|RPB1|KP136970.1                        80.02%    passed     88.68%
+ 455  hkas_57427|RPB1|KP136969.1                        77.67%    passed     42.34%
+ 456  hkas_55357|RPB1|KP136968.1                        77.67%    passed     49.42%
+ 457  hkas_53383|RPB1|KP136967.1                        72.56%    passed     67.83%
+ 458  hkas_54450|RPB1|KP136966.1                        79.07%    passed     81.64%
+ 459  hui_m.shao_f2|RPB1|KY272133.1                     73.56%    passed     80.20%
+ 460  k.zhao893|RPB1|KY272132.1                         73.86%    passed     80.85%
+ 461  mb_000295|RPB1|KY272131.1                         72.31%    passed     89.93%
+ 462  hkas50477|RPB1|KC215233.1                         63.40%    passed     88.75%
+ 463  km128205|RPB1|KC215232.1                          66.50%    passed     85.80%
+ 464  hkas56375|RPB1|KC215231.1                         63.35%    passed     80.70%
+ 465  hkas74712|RPB1|KC215230.1                         65.35%    passed     86.91%
+ 466  hkas55341|RPB1|KC215229.1                         63.29%    passed     77.62%
+ 467  hkas59437|RPB1|KC215228.1                         63.29%    passed     74.53%
+ 468  hkas56495|RPB1|KC215227.1                         63.60%    passed     96.36%
+ 469  hkas53502|RPB1|KC215226.1                         64.85%    passed     96.54%
+ 470  hkas52557|RPB1|KC215225.1                         65.40%    passed     89.54%
+ 471  hkas74714|RPB1|KC215224.1                         67.00%    passed     99.97%
+ 472  hkas50496|RPB1|JN563864.1                         63.04%    passed     91.74%
+ 473  ny0075256|RPB1|KM460931.1                         65.55%    passed     90.36%
+ 474  ny0075253|RPB1|KM460930.1                         63.19%    passed     82.26%
+ 475  gdgm43786|RPB1|KY039965.1                         65.90%    passed     78.03%
+ 476  gdgm43758|RPB1|KY039964.1                         64.85%    passed     74.90%
+ 477  gdgm43755|RPB1|KY039963.1                         64.85%    passed     74.90%
+ 478  gdgm43757|RPB1|KY039962.1                         67.20%    passed     85.86%
+ 479  gdgm44725|RPB1|KY800426.1                         62.64%    passed     67.81%
+ 480  gdgm44833|RPB1|KY800425.1                         62.64%    passed     67.81%
+ 481  gdgm45160|RPB1|KY800424.1                         62.64%    passed     67.81%
+ 482  hkas_58724|RPB1|KU974143.1                        64.40%    passed     79.52%
+ 483  hkas_59443|RPB1|KU974142.1                        66.25%    passed     90.53%
+ 484  hkas57435|RPB1|KM820829.1                         63.04%    passed     87.23%
+ 485  hkas83204|RPB1|KM820828.1                         69.05%    passed     53.40%
+ 486  hkas83199|RPB1|KM820827.1                         62.94%    passed     87.41%
+ 487  hkas83138|RPB1|KM820826.1                         62.94%    passed     87.41%
+ 488  hkas83086|RPB1|KM820825.1                         62.94%    passed     83.15%
+ 489  hkas83202|RPB1|KM820824.1                         63.45%    passed     98.27%
+ 490  hkas83196|RPB1|KM820823.1                         63.45%    passed     99.06%
+ 491  hkas53613|RPB1|KM820822.1                         62.79%    passed     98.77%
+ 492  hkas50602|RPB1|KM820821.1                         62.89%    passed     97.63%
+ 493  hkas55396|RPB1|KM820820.1                         62.74%    passed     88.33%
+ 494  hkas55426|RPB1|KM820819.1                         62.74%    passed     84.10%
+ 495  hkas83149|RPB1|KM820818.1                         63.35%    passed     93.05%
+ 496  hkas83098|RPB1|KM820817.1                         62.69%    passed     91.23%
+ 497  hkas83205|RPB1|KM820816.1                         62.69%    passed     91.23%
+ 498  hkas83203|RPB1|KM820815.1                         62.69%    passed     91.23%
+ 499  hkas83195|RPB1|KM820814.1                         62.99%    passed     78.01%
+ 500  hkas83194|RPB1|KM820813.1                         64.45%    passed     78.45%
+ 501  hkas55285|RPB1|KM820812.1                         62.74%    passed     95.86%
+ 502  hkas41151_china|RPB1|DQ435800.1                   68.65%    passed      6.99%
+ 503  zhangping956_hkas|RPB1|KU317765.1                 69.85%    passed     77.02%
+ 504  henkel_9585|RPB1|LC043094.1                       62.69%    passed     90.50%
+ 505  aime_4004|RPB1|LC043091.1                         62.74%    passed     93.06%
+ 506  henkel_9199|RPB1|LC043088.1                       62.74%    passed     93.06%
+ 507  henkel_8865|RPB1|LC043085.1                       63.50%    passed     89.77%
+ 508  henkel_8848|RPB1|LC043082.1                       63.55%    passed     98.32%
+ 509  henkel_8035|RPB1|LC043079.1                       66.55%    passed     82.13%
+ 510  bd329|RPB1|HQ161845.1                             81.12%    failed      0.05%
+ 511  bd277|RPB1|HQ161844.1                             81.12%    failed      0.05%
+ 512  bd391|RPB1|HQ161843.1                             81.12%    passed      5.76%
+ 513  th8409|RPB1|HQ161842.1                            81.12%    failed      1.95%
+ 514  th8593|RPB1|HQ161841.1                            81.12%    failed      2.24%
+ 515  bdcr0431|RPB1|HQ161840.1                          81.22%    passed      5.59%
+ 516  rc/f_94.103|RPB1|HQ161839.1                       81.12%    failed      1.20%
+ 517  bdcr14|RPB1|HQ161838.1                            81.12%    failed      1.10%
+ 518  bd394|RPB1|HQ161836.1                             81.12%    passed      5.54%
+ 519  bd228|RPB1|HQ161833.1                             86.53%    failed      1.64%
+ 520  th8848|RPB1|HQ161837.1                            81.27%    failed      0.54%
+ 521  th8821|RPB1|HQ161835.1                            81.12%    failed      2.09%
+ 522  th8850|RPB1|HQ161834.1                            81.12%    failed      1.99%
+ 523  th8408|RPB1|HQ161832.1                            81.12%    failed      4.30%
+ 524  th8809|RPB1|HQ161831.1                            81.12%    failed      4.22%
+ 525  th8077|RPB1|HQ161830.1                            81.12%    passed      9.24%
+ 526  bd396|RPB1|HQ161829.1                             81.12%    passed      5.12%
+ 527  bd368|RPB1|HQ161828.1                             81.12%    failed      4.75%
+ 528  bd210|RPB1|HQ161827.1                             81.12%    failed      2.50%
+ 529  bd366|RPB1|HQ161826.1                             81.12%    passed      7.97%
+ 530  bd377|RPB1|HQ161825.1                             81.12%    failed      4.32%
+ 531  bdcr0418|RPB1|HQ161824.1                          81.12%    passed     11.87%
+ 532  bd217|RPB1|HQ161823.1                             81.12%    passed      9.70%
+ 533  th8819|RPB1|HQ161822.1                            81.12%    failed      3.39%
+ 534  th8840|RPB1|HQ161821.1                            81.12%    failed      2.71%
+ 535  bd374|RPB1|HQ161820.1                             81.12%    failed      4.81%
+ 536  djm1332|RPB1|HQ161819.1                           81.12%    failed      1.44%
+ 537  bdcr0417|RPB1|HQ161818.1                          81.12%    failed      0.99%
+ 538  bd380|RPB1|HQ161817.1                             67.50%    passed     79.45%
+ 539  reh8790|RPB1|HQ161877.1                           62.59%    passed     93.96%
+ 540  reh8969|RPB1|HQ161816.1                           63.45%    passed     84.38%
+ 541  hkas59407|RPB1|KT991030.1                         68.10%    passed     99.73%
+ 542  hkas59657|RPB1|KT991029.1                         63.40%    passed     77.90%
+ 543  hkas89443|RPB1|KT991028.1                         68.15%    passed     82.14%
+ 544  hkas90194|RPB1|KT991027.1                         68.40%    passed     92.61%
+ 545  hkas52554|RPB1|KT991026.1                         68.85%    passed     50.38%
+ 546  hkas49627|RPB1|KT991025.1                         70.71%    passed     95.84%
+ 547  hkas50542|RPB1|KT991024.1                         68.15%    passed     90.97%
+ 548  hkas50526|RPB1|KT991023.1                         68.15%    passed     93.86%
+ 549  hkas50546|RPB1|KT991022.1                         68.15%    passed     96.58%
+ 550  hkas68420|RPB1|KT991021.1                         70.61%    passed     57.57%
+ 551  hkas55384|RPB1|KT991020.1                         63.60%    passed     75.75%
+ 552  hkas68292|RPB1|KT991019.1                         62.89%    passed     71.76%
+ 553  hkas55452|RPB1|KT991018.1                         74.11%    passed     26.95%
+ 554  hkas76492|RPB1|KT991017.1                         74.11%    passed     26.95%
+ 555  hkas54753|RPB1|KT991016.1                         63.80%    passed     87.40%
+ 556  hkas53374|RPB1|KT991015.1                         63.80%    passed     67.55%
+ 557  hkas67749|RPB1|KT991014.1                         67.85%    passed     61.77%
+ 558  hkas57765|RPB1|KT991013.1                         73.21%    passed     42.52%
+ 559  hkas57339|RPB1|KT991012.1                         73.91%    passed     37.97%
+ 560  hkas68135|RPB1|KT991011.1                         63.65%    passed     79.99%
+ 561  hkas52556|RPB1|KT991010.1                         62.94%    passed     67.16%
+ 562  hkas68204|RPB1|KT991009.1                         64.00%    passed     90.86%
+ 563  hkas50467|RPB1|KT991008.1                         64.00%    passed     91.83%
+ 564  hkas90206|RPB1|KT991007.1                         63.04%    passed     78.95%
+ 565  hkas52503|RPB1|KT991006.1                         63.04%    passed     77.05%
+ 566  hkas50295|RPB1|KT991005.1                         63.60%    passed     75.75%
+ 567  hkas80118|RPB1|KT991004.1                         70.46%    passed     97.57%
+ 568  hkas77758|RPB1|KT991003.1                         70.31%    passed     96.78%
+ 569  hkas77651|RPB1|KT991002.1                         70.36%    passed     96.55%
+ 570  hkas00720964|RPB1|KT991001.1                      63.55%    passed     47.56%
+ 571  hkas90217|RPB1|KT991000.1                         63.04%    passed     79.35%
+ 572  ny00815399|RPB1|KT990999.1                        70.31%    passed     96.81%
+ 573  ny01193907|RPB1|KT990998.1                        63.24%    passed     72.10%
+ 574  ny00815464|RPB1|KT990997.1                        62.64%    passed     78.46%
+ 575  hkas77869|RPB1|KT990996.1                         70.26%    passed     73.90%
+ 576  hkas52241|RPB1|KT990995.1                         68.15%    passed     95.56%
+ 577  hkas53452|RPB1|KT990994.1                         63.35%    passed     97.86%
+ 578  hkas74745|RPB1|KT990993.1                         63.80%    passed     72.75%
+ 579  hkas57953|RPB1|KT990992.1                         64.30%    passed     58.04%
+ 580  hkas53641|RPB1|KT990991.1                         64.50%    passed     57.50%
+ 581  ny00035656|RPB1|KT990990.1                        69.90%    passed     85.43%
+ 582  hkas55368|RPB1|KT990989.1                         63.70%    passed     48.51%
+ 583  hkas59637|RPB1|KT990988.1                         62.84%    passed     84.55%
+ 584  wu0016537|RPB1|KT990987.1                         64.40%    passed     14.19%
+ 585  hkas75466|RPB1|KT990986.1                         64.00%    passed     24.95%
+ 586  hkas82848|RPB1|KT990985.1                         62.99%    passed     85.06%
+ 587  hkas80400|RPB1|KT990984.1                         63.29%    passed     92.20%
+ 588  hkas78563|RPB1|KT990983.1                         63.70%    passed     59.81%
+ 589  hkas74754|RPB1|KT990982.1                         62.64%    passed     70.32%
+ 590  hkas84879|RPB1|KT990981.1                         68.20%    passed     73.04%
+ 591  hkas74756|RPB1|KT990980.1                         62.69%    passed     92.53%
+ 592  hkas63624|RPB1|KT990979.1                         62.69%    passed     92.53%
+ 593  hkas59832|RPB1|KT990978.1                         62.89%    passed     89.67%
+ 594  hkas52820|RPB1|KT990977.1                         63.35%    passed     90.17%
+ 595  hkas53418|RPB1|KT990976.1                         63.35%    passed     99.58%
+ 596  hkas53372|RPB1|KT990975.1                         69.05%    passed     47.40%
+ 597  hkas53370|RPB1|KT990974.1                         63.45%    passed     97.89%
+ 598  hkas52685|RPB1|KT990973.1                         63.45%    passed     98.89%
+ 599  hkas52609|RPB1|KT990972.1                         68.25%    passed     71.71%
+ 600  hkas90200|RPB1|KT990971.1                         70.21%    passed     75.90%
+ 601  hkas90202|RPB1|KT990970.1                         70.01%    passed     97.05%
+ 602  hkas55375|RPB1|KT990969.1                         63.29%    passed     95.47%
+ 603  hkas52615|RPB1|KT990968.1                         62.84%    passed     99.04%
+ 604  hkas59530|RPB1|KT990967.1                         64.55%    passed     77.96%
+ 605  hkas50203|RPB1|KT990966.1                         62.94%    passed     99.39%
+ 606  hkas90209|RPB1|KT990965.1                         62.64%    passed     79.96%
+ 607  hkas63515|RPB1|KT990964.1                         62.64%    passed     79.19%
+ 608  hkas63535|RPB1|KT990963.1                         64.15%    passed     77.49%
+ 609  hkas77703|RPB1|KT990962.1                         70.56%    passed     68.11%
+ 610  hkas77656|RPB1|KT990961.1                         62.74%    passed     85.19%
+ 611  hkas77614|RPB1|KT990960.1                         70.61%    passed     65.22%
+ 612  hkas90211|RPB1|KT990959.1                         64.25%    passed     80.86%
+ 613  hkas80849|RPB1|KT990958.1                         77.27%    passed     73.33%
+ 614  hkas80823|RPB1|KT990957.1                         70.16%    passed     94.19%
+ 615  hkas63530|RPB1|KT990956.1                         63.24%    passed     97.68%
+ 616  hkas74733|RPB1|KT990955.1                         63.24%    passed     97.68%
+ 617  hkas57766|RPB1|KT990954.1                         64.75%    passed     82.83%
+ 618  hkas90210|RPB1|KT990953.1                         62.64%    passed     94.62%
+ 619  hkas89181|RPB1|KT990952.1                         62.64%    passed     94.62%
+ 620  hkas89174|RPB1|KT990951.1                         62.64%    passed     94.62%
+ 621  hkas83026|RPB1|KT990950.1                         62.64%    passed     94.62%
+ 622  hkas89027|RPB1|KT990949.1                         66.95%    passed     88.61%
+ 623  hkas89014|RPB1|KT990948.1                         63.50%    passed     94.51%
+ 624  hkas77774|RPB1|KT990947.1                         70.11%    passed     75.50%
+ 625  hkas63498|RPB1|KT990946.1                         62.64%    passed     95.73%
+ 626  hkas74880|RPB1|KT990945.1                         62.64%    passed     83.52%
+ 627  hkas77718|RPB1|KT990944.1                         69.80%    passed     92.20%
+ 628  hkas77617|RPB1|KT990943.1                         62.64%    passed     86.18%
+ 629  hkas59704|RPB1|KT990942.1                         73.01%    passed     96.13%
+ 630  hkas59706|RPB1|KT990941.1                         74.61%    passed     77.42%
+ 631  hkas52253|RPB1|KT990940.1                         63.50%    passed     75.02%
+ 632  hkas51181|RPB1|KT990939.1                         68.15%    passed     98.28%
+ 633  hkas53604|RPB1|KT990938.1                         64.10%    passed     89.68%
+ 634  hkas53410|RPB1|KT990937.1                         63.24%    passed     94.82%
+ 635  hkas90639|RPB1|KT990936.1                         63.24%    passed     98.43%
+ 636  hkas63516|RPB1|KT990935.1                         62.69%    passed     85.44%
+ 637  hkas68158|RPB1|KT990934.1                         63.19%    passed     79.83%
+ 638  hkas54166|RPB1|KT990933.1                         63.29%    passed     90.13%
+ 639  hkas59445|RPB1|KT990932.1                         62.84%    passed     93.96%
+ 640  hkas84355|RPB1|KT990931.1                         62.74%    passed     88.47%
+ 641  hkas84869|RPB1|KT990930.1                         69.70%    passed     65.69%
+ 642  hkas80583|RPB1|KT990929.1                         63.70%    passed     28.04%
+ 643  hkas80579_2|RPB1|KT990927.1                       63.19%    passed     79.98%
+ 644  hkas80579_1|RPB1|KT990926.1                       63.19%    passed     82.79%
+ 645  hkas50232|RPB1|KT990925.1                         63.24%    passed     58.21%
+ 646  hkas49445_1|RPB1|KT990924.1                       68.95%    passed     70.46%
+ 647  hkas90197|RPB1|KT990923.1                         68.20%    passed     99.18%
+ 648  hkas50338|RPB1|KT990922.1                         68.55%    passed     95.79%
+ 649  hkas50240|RPB1|KT990921.1                         69.85%    passed     77.35%
+ 650  hkas50211|RPB1|KT990920.1                         68.35%    passed     18.42%
+ 651  hkas50209|RPB1|KT990919.1                         72.71%    passed      6.87%
+ 652  hkas50543|RPB1|KT990918.1                         68.95%    passed     70.46%
+ 653  hkas50420|RPB1|KT990917.1                         63.40%    passed     82.61%
+ 654  hkas63076|RPB1|KT990916.1                         68.85%    passed     50.38%
+ 655  hkas71039|RPB1|KT990915.1                         68.65%    passed     87.49%
+ 656  hkas90183|RPB1|KT990914.1                         68.35%    passed     96.66%
+ 657  hkas90203|RPB1|KT990913.1                         68.15%    passed     70.73%
+ 658  hkas49182|RPB1|KT990912.1                         68.85%    passed     60.86%
+ 659  hkas48585|RPB1|KT990911.1                         68.85%    passed     60.86%
+ 660  hkas63596|RPB1|KT990910.1                         62.54%    passed     80.21%
+ 661  hkas63513|RPB1|KT990909.1                         62.54%    passed     80.21%
+ 662  hkas50444|RPB1|KT990908.1                         64.40%    passed     71.23%
+ 663  mhhnu7456|RPB1|KT990907.1                         69.90%    passed     80.00%
+ 664  hkas51232|RPB1|KT990906.1                         66.55%    passed     82.73%
+ 665  hkas74907|RPB1|KT990905.1                         62.59%    passed     97.85%
+ 666  hkas90215|RPB1|KT990904.1                         69.35%    passed     82.53%
+ 667  hkas80681|RPB1|KT990903.1                         69.65%    passed     81.44%
+ 668  hkas89494|RPB1|KT990902.1                         72.81%    failed      1.77%
+ 669  hkas57692|RPB1|KT990901.1                         72.81%    failed      2.22%
+ 670  hkas74766|RPB1|KT990900.1                         64.85%    passed     80.93%
+ 671  hkas74751|RPB1|KT990899.1                         64.85%    passed     80.93%
+ 672  hkas75050|RPB1|KT990898.1                         63.19%    passed     34.30%
+ 673  hkas75104|RPB1|KT990897.1                         72.81%    failed      4.13%
+ 674  hkas74929|RPB1|KT990896.1                         74.06%    passed     53.87%
+ 675  hkas67931|RPB1|KT990895.1                         74.06%    passed     47.99%
+ 676  hkas80485|RPB1|KT990894.1                         62.79%    passed     60.76%
+ 677  hkas59694|RPB1|KT990893.1                         65.20%    passed     37.92%
+ 678  hkas83115|RPB1|KT990892.1                         72.26%    passed     90.90%
+ 679  hkas63009|RPB1|KT990891.1                         65.05%    passed     84.10%
+ 680  hkas54463|RPB1|KT990890.1                         62.94%    passed     34.61%
+ 681  hkas68927|RPB1|KT990889.1                         68.20%    passed     98.39%
+ 682  henkel_9061|RPB1|LC053663.1                       62.64%    passed     78.67%
+ 683  mb_03_118|RPB1|AY788850.2                         71.61%    passed     12.75%
+ 684  aftol_id_716|RPB1|AY858964.1                      64.50%    failed      2.83%
+ 685  aftol_id_716|RPB1|AY858963.1                      64.00%    passed     22.88%
+ 686  hkas_57503|RPB1|KT002632.1                        69.55%    passed     86.45%
+ 687  hkas_68010|RPB1|KT002631.1                        69.55%    passed     80.26%
+ 688  mb000260|RPB1|KT002630.1                          69.45%    passed     91.05%
+ 689  e.e._both_3765|RPB1|KT002629.1                    69.75%    passed     82.77%
+ 690  mb000287|RPB1|KT002628.1                          69.25%    passed     80.14%
+ 691  r._chapman_0945|RPB1|KT002627.1                   77.62%    passed     90.48%
+ 692  br50201533559_51|RPB1|KT002626.1                  67.60%    passed     82.45%
+ 693  br50201618465_02|RPB1|KT002625.1                  70.81%    passed     89.27%
+ 694  tenn067311|RPB1|KT002624.1                        69.70%    passed     79.33%
+ 695  ny00013631|RPB1|KT002623.1                        69.85%    passed     93.84%
+ 696  mb000286|RPB1|KT002622.1                          69.30%    passed     79.14%
+ 697  br50200893390_25|RPB1|KT002621.1                  67.00%    passed     71.39%
+ 698  g.wu352|RPB1|KP739298.1                           62.64%    passed     67.33%
+ 699  brnm_766850|RPB1|KT121571.1                       72.41%    passed     87.19%
+ 700  brnm_766848|RPB1|KT121570.1                       72.41%    passed     87.11%
+ 701  brnm_718716|RPB1|KT121569.1                       65.30%    passed     11.07%
+ 702  gdgm42849|RPB1|KR052058.1                         71.11%    passed     56.84%
+ 703  gdgm42963|RPB1|KR052057.1                         63.19%    passed     80.94%
+ 704  gdgm42962|RPB1|KR052056.1                         63.19%    passed     80.94%
+ 705  gs_10070|RPB1|KT157066.1                          62.64%    passed     95.22%
+ 706  gs_11008|RPB1|KT157065.1                          62.64%    passed     95.22%
+ 707  mg_524a|RPB1|KT220593.1                           62.54%    passed     99.64%
+ 708  zt_13553|RPB1|KT220592.1                          62.54%    passed     99.77%
+ 709  gdgm_43238|RPB1|KT220591.1                        62.54%    passed     99.77%
+ 710  blt_136|RPB1|AB999752.1                           64.15%    passed     57.14%
+ 711  blt_132|RPB1|AB999751.1                           65.30%    passed     83.76%
+ 712  blt_130|RPB1|AB999750.1                           64.30%    passed     94.45%
+ 713  blt_128|RPB1|AB999749.1                           66.20%    passed     96.66%
+ 714  blt_126|RPB1|AB999748.1                           62.59%    passed     95.53%
+ 715  blt_124|RPB1|AB999747.1                           65.20%    passed     78.59%
+ 716  blt_123|RPB1|AB999746.1                           63.55%    passed     95.45%
+ 717  blt_117|RPB1|AB999745.1                           66.00%    passed     93.69%
+ 718  blt_116|RPB1|AB999744.1                           62.59%    passed     95.53%
+ 719  blt_113|RPB1|AB999743.1                           62.59%    passed     97.34%
+ 720  blt_111|RPB1|AB999742.1                           62.59%    passed     97.34%
+ 721  blt_69|RPB1|AB999741.1                            62.59%    passed     95.53%
+ 722  blt_68|RPB1|AB999740.1                            63.40%    passed     95.95%
+ 723  blt_67|RPB1|AB999739.1                            62.59%    passed     95.18%
+ 724  blt_66|RPB1|AB999738.1                            64.00%    passed     91.05%
+ 725  blt_65|RPB1|AB999737.1                            62.59%    passed     95.18%
+ 726  blt_64|RPB1|AB999736.1                            62.59%    passed     95.53%
+ 727  blt_63|RPB1|AB999735.1                            63.70%    passed     94.77%
+ 728  blt_62|RPB1|AB999734.1                            65.40%    passed     93.19%
+ 729  blt_60|RPB1|AB999733.1                            64.10%    passed     96.76%
+ 730  blt_59|RPB1|AB999732.1                            63.14%    passed     97.34%
+ 731  blt_58|RPB1|AB999731.1                            64.85%    passed     84.74%
+ 732  blt_42|RPB1|AB999730.1                            64.10%    passed     94.56%
+ 733  blt_40|RPB1|AB999729.1                            64.40%    passed     97.54%
+ 734  blt_39|RPB1|AB999728.1                            76.26%    passed     10.75%
+ 735  blt_38|RPB1|AB999727.1                            67.85%    passed     76.50%
+ 736  blt_36|RPB1|AB999726.1                            62.59%    passed     97.34%
+ 737  blt_35|RPB1|AB999725.1                            63.75%    passed     96.04%
+ 738  blt_23|RPB1|AB999724.1                            70.31%    passed     32.29%
+ 739  blt_22|RPB1|AB999723.1                            75.81%    passed     25.20%
+ 740  blt_12|RPB1|AB999722.1                            64.45%    passed     96.46%
+ 741  blt_7|RPB1|AB999721.1                             64.30%    passed     95.70%
+ 742  blt_3|RPB1|AB999720.1                             62.59%    passed     97.34%
+ 743  hkas_80480|RPB1|KP658472.1                        63.60%    passed     83.09%
+ 744  hkas_77032|RPB1|KP658471.1                        63.60%    passed     78.66%
+ 745  hkas_74759|RPB1|KM605167.1                        62.74%    passed     98.76%
+ 746  hkas_74752|RPB1|KM605166.1                        62.74%    passed     99.41%
+ 747  hkas_63603|RPB1|KM605165.1                        62.69%    passed     88.84%
+ 748  hkas_54095|RPB1|KM605164.1                        62.69%    passed     83.85%
+ 749  hkas_63592|RPB1|KM605163.1                        68.95%    passed     56.74%
+ 750  hkas_50538|RPB1|KM605162.1                        66.20%    passed     87.98%
+ 751  hkas_57451|RPB1|KM605161.1                        62.64%    passed     95.46%
+ 752  hkas_63591|RPB1|KM605160.1                        64.45%    passed     46.85%
+ 753  hkas_76663|RPB1|KM605159.1                        62.64%    passed     67.33%
+ 754  hkas_83209|RPB1|KM605158.1                        64.45%    passed     58.92%
+ 755  hkas_83210|RPB1|KM605157.1                        62.84%    passed     77.82%
+ 756  hkas_83009|RPB1|KM605156.1                        62.84%    passed     77.82%
+ 757  tenn                                              69.70%    passed     79.33%
+ 758  hkas63593|RPB1|KJ184565.1                         62.54%    passed     81.27%
+ 759  hkas75739|RPB1|KJ184564.1                         71.46%    passed     68.90%
+ 760  tub_020295|RPB1|KF211285.1                        62.79%    passed     99.50%
+ 761  hkas56304|RPB1|KJ619482.1                         62.74%    passed     94.29%
+ 762  br50200892955_50|RPB1|KJ619481.1                  67.00%    passed     71.39%
+ 763  hkas80478|RPB1|KJ619474.1                         72.21%    passed     65.46%
+ 764  mb97_023|RPB1|GU187475.1                          68.30%    passed     58.71%
+ 765  mb04_001|RPB1|GU187453.1                          68.45%    passed     17.53%
+ 766  be3|RPB1|GU187444.1                               62.84%    passed     99.30%
+ 767  hmjau4637|RPB1|KF112586.1                         62.79%    passed     98.31%
+ 768  mg374a|RPB1|KF112559.1                            62.89%    passed     36.78%
+ 769  mg372a|RPB1|KF112557.1                            64.40%    passed     86.45%
+ 770  pdd94421|RPB1|KF112525.1                          63.14%    passed     95.04%
+ 771  hkas74705|RPB1|JQ928589.1                         66.50%    passed     27.41%
+ 772  hkas74706|RPB1|JQ928588.1                         66.80%    passed     23.02%
+ 773  to_mg001|RPB1|JX870650.1                          63.70%    passed     44.72%
+ 774  hkas75207|RPB1|JX889721.1                         64.85%    passed     29.15%
+ 775  hkas52661|RPB1|JQ928595.1                         65.05%    passed     91.32%
+ 776  hkas50214|RPB1|JQ928594.1                         68.00%    passed     41.80%
+ 777  hkas50221|RPB1|JQ928593.1                         66.50%    passed     91.56%
+ 778  hkas59699|RPB1|JQ928592.1                         65.90%    passed     90.71%
+ 779  hkas57390|RPB1|JQ928591.1                         67.20%    passed     98.78%
+ 780  hkas59460|RPB1|JQ928590.1                         65.80%    passed     97.33%
+ 781  hkas73792|RPB1|JQ928587.1                         66.95%    passed     69.93%
+ 782  hkas73789|RPB1|JQ928586.1                         64.15%    passed     84.78%
+ 783  hkas73785|RPB1|JQ928585.1                         68.50%    passed     72.77%
+ 784  kyo                                               63.24%    passed     99.87%
+ 785  tns                                               63.24%    passed     85.14%
+ 786  mak                                               64.25%    passed     27.59%
+ 787  kep                                               63.75%    passed     60.28%
+ 788  hkas71349|RPB1|JQ172794.1                         63.95%    passed     75.52%
+ 789  tmi24051|RPB1|JQ172793.1                          62.99%    passed     77.17%
+ 790  hkas71346|RPB1|JQ172792.1                         62.69%    passed     93.67%
+ 791  hkas71347|RPB1|JQ172791.1                         62.99%    passed     70.51%
+ 792  hkas52241|RPB1|JN563881.1                         62.89%    passed     96.27%
+ 793  hkas53412|RPB1|JN563880.1                         62.69%    passed     95.60%
+ 794  hkas55975|RPB1|JN563879.1                         63.09%    passed     82.16%
+ 795  hkas50235|RPB1|JN563878.1                         63.35%    passed     93.05%
+ 796  hkas62901|RPB1|JN563877.1                         63.45%    passed     94.64%
+ 797  hkas62902|RPB1|JN563876.1                         63.45%    passed     96.45%
+ 798  hkas62903|RPB1|JN563875.1                         65.25%    passed     54.32%
+ 799  hkas62908|RPB1|JN563874.1                         63.09%    passed     97.51%
+ 800  hkas62907|RPB1|JN563873.1                         63.09%    passed     96.04%
+ 801  hkas62904|RPB1|JN563872.1                         62.94%    passed     87.41%
+ 802  hkas50339|RPB1|JN563871.1                         62.94%    passed     87.41%
+ 803  hkas55282|RPB1|JN563870.1                         62.74%    passed     95.86%
+ 804  hkas55089|RPB1|JN563869.1                         62.74%    passed     88.33%
+ 805  hkas55393|RPB1|JN563868.1                         62.79%    passed     89.89%
+ 806  hkas55382|RPB1|JN563867.1                         62.79%    passed     85.14%
+ 807  hkas55394|RPB1|JN563866.1                         62.79%    passed     87.85%
+ 808  hkas62905|RPB1|JN563865.1                         62.69%    passed     91.73%
+ 809  hkas55436|RPB1|JN563863.1                         62.79%    passed     98.77%
+ 810  hkas62910|RPB1|JN563862.1                         62.84%    passed     99.07%
+ 811  bd378_min|RPB1|EU232007.1                         62.94%    passed     92.05%
+ 812  trudell_03_289_09|RPB1|EU231999.1                 62.84%    passed     98.80%
+ 813  jfa13101|RPB1|EU231998.1                          62.79%    passed     98.19%
+ 814  bd298_min|RPB1|EU231997.1                         62.84%    passed     97.55%
+ 815  bd245_min|RPB1|EU231996.1                         62.99%    passed     99.18%
+ 816  bdcr0417_min|RPB1|EU231995.1                      62.74%    passed     90.11%
+ 817  bd243_min|RPB1|EU231994.1                         63.50%    passed     99.89%
+ 818  bd239_min|RPB1|EU231993.1                         63.45%    passed     92.08%
+ 819  r0501|RPB1|AB275263.1                             62.99%    passed     89.03%
+ 820  p4|RPB1|AB353796.1                                62.89%    passed     89.40%
+ 821  p3|RPB1|AB353795.1                                62.94%    passed     86.82%
+ 822  p2|RPB1|AB353794.1                                62.94%    passed     86.82%
+ 823  p1|RPB1|AB353793.1                                62.99%    passed     88.86%
+ 824  r1401|RPB1|AB275276.1                             62.84%    passed     34.78%
+ 825  r1302|RPB1|AB275275.1                             63.70%    passed     44.63%
+ 826  r1301|RPB1|AB275274.1                             63.70%    passed     41.75%
+ 827  r1201|RPB1|AB275273.1                             63.75%    passed     68.54%
+ 828  r1102|RPB1|AB275272.1                             64.00%    passed     18.81%
+ 829  r1101|RPB1|AB275271.1                             64.00%    passed     18.61%
+ 830  r1002|RPB1|AB275270.1                             64.15%    passed     27.98%
+ 831  r1001|RPB1|AB275269.1                             64.10%    passed     27.50%
+ 832  r0901|RPB1|AB275268.1                             63.70%    passed     44.72%
+ 833  r0802|RPB1|AB275267.1                             64.15%    passed     65.71%
+ 834  r0801|RPB1|AB275266.1                             64.25%    passed     27.59%
+ 835  r0701|RPB1|AB275265.1                             63.70%    passed     48.51%
+ 836  r0601|RPB1|AB275264.1                             63.70%    passed     35.55%
+ 837  r0404|RPB1|AB275262.1                             62.89%    passed     86.31%
+ 838  r0403|RPB1|AB275261.1                             62.94%    passed     88.37%
+ 839  r0402|RPB1|AB275260.1                             62.89%    passed     84.56%
+ 840  r0401|RPB1|AB275259.1                             62.89%    passed     86.39%
+ 841  r0305|RPB1|AB275258.1                             62.79%    passed     83.08%
+ 842  r0304|RPB1|AB275257.1                             62.79%    passed     86.73%
+ 843  r0303|RPB1|AB275256.1                             62.84%    passed     86.08%
+ 844  r0302|RPB1|AB275255.1                             62.89%    passed     88.43%
+ 845  r0301|RPB1|AB275254.1                             62.79%    passed     86.77%
+ 846  r0203|RPB1|AB275253.1                             62.94%    passed     87.29%
+ 847  r0202|RPB1|AB275252.1                             62.99%    passed     86.53%
+ 848  r0201|RPB1|AB275251.1                             63.04%    passed     85.57%
+ 849  r0101|RPB1|AB275250.1                             63.24%    passed     85.14%
+ 850  hkas91078|RPB2|MZ707778.1                         64.05%    passed     38.66%
+ 851  hkas91071|RPB2|MZ707777.1                         64.05%    passed     35.24%
+ 852  hkas91078|TEF1|MZ707784.1                         73.41%    passed     87.64%
+ 853  hkas91071|TEF1|MZ707783.1                         73.41%    passed     89.98%
+WARNING: 853 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                                             66.19%  28 sequences failed composition chi2 test (p-value<5%; df=3)
+
+Partition file is not in NEXUS format, assuming RAxML-style partition file...
+Identifying sites to remove: done in 0.009624 secs using 3821% CPU
+Identifying sites to remove: done in 0.000238895 secs using 3858% CPU
+Identifying sites to remove: done in 0.000178814 secs using 3870% CPU
+Subset	Type	Seqs	Sites	Infor	Invar	Model	Name
+1	DNA	849	748	637	46	GTR+MERGE	RPB1
+2	DNA	3	718	0	717	GTR+MERGE	RPB2
+WARNING: No parsimony-informative sites in partition RPB2
+3	DNA	3	531	0	525	GTR+MERGE	TEF1
+WARNING: No parsimony-informative sites in partition TEF1
+Degree of missing data: 0.625
+Info: multi-threading strategy over partitions
+
+NOTE: cesar_134|RPB1|MZ233735.1 is identical to montoya_5278|RPB1|MZ233737.1 but kept for subsequent analysis
+NOTE: cesar_128|RPB1|MZ233733.1 is identical to cesar_156|RPB1|MZ233736.1 but kept for subsequent analysis
+NOTE: hkas126551|RPB1|OQ873480.1 is identical to hkas123826|RPB1|OQ873481.1 but kept for subsequent analysis
+NOTE: hkas126556|RPB1|OQ873473.1 is identical to hkas80691|RPB1|OQ873474.1 but kept for subsequent analysis
+NOTE: mhkmu_h.y._huang_699|RPB1|PP195250.1 is identical to mhkmu_h.y._huang_674|RPB1|PP195251.1 but kept for subsequent analysis
+NOTE: gdgm91093|RPB1|OQ676967.1 is identical to gdgm91094|RPB1|OQ676968.1 but kept for subsequent analysis
+NOTE: gdgm87995|RPB1|ON390833.1 is identical to b21061253|RPB1|ON390834.1 but kept for subsequent analysis
+NOTE: bjtc_fm1869|RPB1|OP792029.1 is identical to bjtc_fm1906|RPB1|OP792031.1 but kept for subsequent analysis
+NOTE: montoya_5385|RPB1|ON704172.1 is identical to herrera_226|RPB1|ON704173.1 but kept for subsequent analysis
+NOTE: saldivar_419|RPB1|ON704168.1 is identical to saldivar_524|RPB1|ON704169.1 but kept for subsequent analysis
+NOTE: hkas63593|RPB1|KJ184565.1 is identical to hkas but kept for subsequent analysis
+NOTE: r.e._halling_8087_ny|RPB1|EU434329.1 is identical to r.e._halling_8187_ny|RPB1|EU434342.1 but kept for subsequent analysis
+NOTE: ny00796120|RPB1|EU434336.1 is identical to ny00796119|RPB1|EU434339.1 but kept for subsequent analysis
+NOTE: t.w._osmundson_1105_ny|RPB1|EU434331.1 is identical to t.w._osmundson_1030_ny|RPB1|EU434338.1 but kept for subsequent analysis
+NOTE: jab_43|RPB1|MW737509.1 is identical to jab_95|RPB1|MW737511.1 but kept for subsequent analysis
+NOTE: jab_324|RPB1|MW737505.1 is identical to jab_325|RPB1|MW737506.1 but kept for subsequent analysis
+NOTE: farid_343|RPB1|MW737499.1 is identical to farid_631|RPB1|MW737501.1 but kept for subsequent analysis
+NOTE: hkas115553|RPB1|MZ936348.1 is identical to hkas99764|RPB1|MZ936349.1 but kept for subsequent analysis
+NOTE: hkas50350|RPB1|MZ936342.1 is identical to hkas83333|RPB1|MZ936344.1 but kept for subsequent analysis
+NOTE: kpm_nc_17818|RPB1|MT868868.1 is identical to kpm_nc_17819|RPB1|MT868869.1 but kept for subsequent analysis
+NOTE: kpm_nc_18031|RPB1|MT868864.1 is identical to kpm_nc_28183|RPB1|MT868866.1 but kept for subsequent analysis
+NOTE: kpm_nc_27965|RPB1|MT868857.1 is identical to kpm_nc_27932|RPB1|MT868862.1 but kept for subsequent analysis
+NOTE: kpm_nc_24889|RPB1|MT868860.1 is identical to kpm_nc_24891|RPB1|MT868861.1 but kept for subsequent analysis
+NOTE: kpm_nc_27623|RPB1|MT868851.1 is identical to kpm_nc_27968|RPB1|MT868858.1 but kept for subsequent analysis
+NOTE: kpm_nc_27945|RPB1|MT868843.1 is identical to kpm_nc_27952|RPB1|MT868844.1 but kept for subsequent analysis
+NOTE: kpm_nc_17793|RPB1|MT868833.1 is identical to kpm_nc_28189|RPB1|MT868834.1 but kept for subsequent analysis
+NOTE: kpm_nc_17783|RPB1|MT868830.1 is identical to kpm_nc_28188|RPB1|MT868831.1 but kept for subsequent analysis
+NOTE: kun_hkas_106891_zhu_l._yang6279|RPB1|MT063118.1 is identical to kun_hkas_103513_513301mf1014|RPB1|MT063119.1 but kept for subsequent analysis
+NOTE: hkas105251|RPB1|MN304786.1 is identical to hkas105252|RPB1|MN304787.1 but kept for subsequent analysis
+NOTE: franck_3973|RPB1|MN584679.1 is identical to franck_4235|RPB1|MN584680.1 but kept for subsequent analysis
+NOTE: gdgm53127|RPB1|MN473165.1 is identical to gdgm52590|RPB1|MH700219.1 but kept for subsequent analysis
+NOTE: gdgm52888|RPB1|MH700216.1 is identical to gdgm53501|RPB1|MH700217.1 but kept for subsequent analysis
+NOTE: gdgm43275|RPB1|MH700208.1 is identical to gdgm44730|RPB1|MH700209.1 but kept for subsequent analysis
+NOTE: gdgm75292|RPB1|MN473179.1 is identical to zm56|RPB1|MN473187.1 but kept for subsequent analysis
+NOTE: a_2|RPB1|MN473185.1 is identical to zm142|RPB1|MN473186.1 but kept for subsequent analysis
+NOTE: hkas74766|RPB1|KT990900.1 is identical to gdgm75881|RPB1|MN473183.1 but kept for subsequent analysis
+NOTE: gdgm49432|RPB1|MN473159.1 is identical to gdgm75477|RPB1|MN473180.1 but kept for subsequent analysis
+NOTE: gdgm53181|RPB1|MN473169.1 is identical to gdgm71293|RPB1|MN473173.1 but kept for subsequent analysis
+NOTE: gdgm52898|RPB1|MN473164.1 is identical to gdgm43134|RPB1|MN473166.1 but kept for subsequent analysis
+NOTE: gdgm43239|RPB1|MN473147.1 is identical to gdgm43502|RPB1|MN473150.1 but kept for subsequent analysis
+NOTE: hkas105266|RPB1|MN304789.1 is identical to hkas105267|RPB1|MN304790.1 but kept for subsequent analysis
+NOTE: gdgm44783|RPB1|MK165979.1 is identical to gdgm44447|RPB1|MK165980.1 but kept for subsequent analysis
+NOTE: gdgm44440|RPB1|MH374029.1 is identical to gdgm46541|RPB1|MH374030.1 but kept for subsequent analysis
+NOTE: hkas_54803|RPB1|KP136971.1 is identical to hkas_57735|RPB1|KP136974.1 but kept for subsequent analysis
+NOTE: gdgm43755|RPB1|KY039963.1 is identical to gdgm43758|RPB1|KY039964.1 but kept for subsequent analysis
+NOTE: gdgm44833|RPB1|KY800425.1 is identical to gdgm44725|RPB1|KY800426.1 but kept for subsequent analysis
+NOTE: hkas50339|RPB1|JN563871.1 is identical to hkas83138|RPB1|KM820826.1 but kept for subsequent analysis
+NOTE: hkas55436|RPB1|JN563863.1 is identical to hkas53613|RPB1|KM820822.1 but kept for subsequent analysis
+NOTE: hkas55089|RPB1|JN563869.1 is identical to hkas55396|RPB1|KM820820.1 but kept for subsequent analysis
+NOTE: hkas50235|RPB1|JN563878.1 is identical to hkas83149|RPB1|KM820818.1 but kept for subsequent analysis
+NOTE: hkas83205|RPB1|KM820816.1 is identical to hkas83098|RPB1|KM820817.1 but kept for subsequent analysis
+NOTE: hkas55282|RPB1|JN563870.1 is identical to hkas55285|RPB1|KM820812.1 but kept for subsequent analysis
+NOTE: henkel_9199|RPB1|LC043088.1 is identical to aime_4004|RPB1|LC043091.1 but kept for subsequent analysis
+NOTE: bd277|RPB1|HQ161844.1 is identical to bd329|RPB1|HQ161845.1 but kept for subsequent analysis
+NOTE: hkas50295|RPB1|KT991005.1 is identical to hkas55384|RPB1|KT991020.1 but kept for subsequent analysis
+NOTE: hkas76492|RPB1|KT991017.1 is identical to hkas55452|RPB1|KT991018.1 but kept for subsequent analysis
+NOTE: r0701|RPB1|AB275265.1 is identical to hkas55368|RPB1|KT990989.1 but kept for subsequent analysis
+NOTE: hkas74733|RPB1|KT990955.1 is identical to hkas63530|RPB1|KT990956.1 but kept for subsequent analysis
+NOTE: hkas89181|RPB1|KT990952.1 is identical to hkas90210|RPB1|KT990953.1 but kept for subsequent analysis
+NOTE: hkas50543|RPB1|KT990918.1 is identical to hkas49445_1|RPB1|KT990924.1 but kept for subsequent analysis
+NOTE: hkas48585|RPB1|KT990911.1 is identical to hkas49182|RPB1|KT990912.1 but kept for subsequent analysis
+NOTE: hkas63513|RPB1|KT990909.1 is identical to hkas63596|RPB1|KT990910.1 but kept for subsequent analysis
+NOTE: tenn is identical to tenn067311|RPB1|KT002624.1 but kept for subsequent analysis
+NOTE: br50200892955_50|RPB1|KJ619481.1 is identical to br50200893390_25|RPB1|KT002621.1 but kept for subsequent analysis
+NOTE: gdgm42962|RPB1|KR052056.1 is identical to gdgm42963|RPB1|KR052057.1 but kept for subsequent analysis
+NOTE: gs_11008|RPB1|KT157065.1 is identical to gs_10070|RPB1|KT157066.1 but kept for subsequent analysis
+NOTE: gdgm_43238|RPB1|KT220591.1 is identical to zt_13553|RPB1|KT220592.1 but kept for subsequent analysis
+NOTE: blt_116|RPB1|AB999744.1 is identical to blt_126|RPB1|AB999748.1 but kept for subsequent analysis
+NOTE: blt_111|RPB1|AB999742.1 is identical to blt_113|RPB1|AB999743.1 but kept for subsequent analysis
+NOTE: blt_65|RPB1|AB999737.1 is identical to blt_67|RPB1|AB999739.1 but kept for subsequent analysis
+NOTE: hkas_83009|RPB1|KM605156.1 is identical to hkas_83210|RPB1|KM605157.1 but kept for subsequent analysis
+NOTE: r0101|RPB1|AB275250.1 is identical to tns but kept for subsequent analysis
+NOTE: r0801|RPB1|AB275266.1 is identical to mak but kept for subsequent analysis
+NOTE: p2|RPB1|AB353794.1 is identical to p3|RPB1|AB353795.1 but kept for subsequent analysis
+Identifying sites to remove: done in 0.00499201 secs using 4114% CPU
+Identifying sites to remove: done in 0.000254869 secs using 4227% CPU
+Identifying sites to remove: done in 0.00018096 secs using 4508% CPU
+NOTE: 54 identical sequences (see below) will be ignored for subsequent analysis
+NOTE: cesar_133|RPB1|MZ233734.1 (identical to montoya_5278|RPB1|MZ233737.1) is ignored but added at the end
+NOTE: hkas123872|RPB1|OQ873472.1 (identical to hkas80691|RPB1|OQ873474.1) is ignored but added at the end
+NOTE: gdgm91092|RPB1|OQ676966.1 (identical to gdgm91094|RPB1|OQ676968.1) is ignored but added at the end
+NOTE: b21061201|RPB1|OQ676965.1 (identical to gdgm91094|RPB1|OQ676968.1) is ignored but added at the end
+NOTE: gdgm91091|RPB1|OQ676964.1 (identical to gdgm91094|RPB1|OQ676968.1) is ignored but added at the end
+NOTE: corona_1385|RPB1|ON704171.1 (identical to herrera_226|RPB1|ON704173.1) is ignored but added at the end
+NOTE: corona_1378|RPB1|ON704170.1 (identical to herrera_226|RPB1|ON704173.1) is ignored but added at the end
+NOTE: ramos_928|RPB1|ON704167.1 (identical to saldivar_524|RPB1|ON704169.1) is ignored but added at the end
+NOTE: montoya_5019|RPB1|ON704166.1 (identical to saldivar_524|RPB1|ON704169.1) is ignored but added at the end
+NOTE: jab_184|RPB1|MW737504.1 (identical to jab_325|RPB1|MW737506.1) is ignored but added at the end
+NOTE: farid_920|RPB1|MW737503.1 (identical to jab_325|RPB1|MW737506.1) is ignored but added at the end
+NOTE: farid_340|RPB1|MW737502.1 (identical to jab_325|RPB1|MW737506.1) is ignored but added at the end
+NOTE: farid_1023|RPB1|MW737498.1 (identical to farid_631|RPB1|MW737501.1) is ignored but added at the end
+NOTE: hkas83400|RPB1|MZ936341.1 (identical to hkas83333|RPB1|MZ936344.1) is ignored but added at the end
+NOTE: hkas83355|RPB1|MZ936340.1 (identical to hkas83333|RPB1|MZ936344.1) is ignored but added at the end
+NOTE: hkas81120|RPB1|MZ936339.1 (identical to hkas83333|RPB1|MZ936344.1) is ignored but added at the end
+NOTE: hkas87105|RPB1|MZ936338.1 (identical to hkas83333|RPB1|MZ936344.1) is ignored but added at the end
+NOTE: hkas85753|RPB1|MZ936337.1 (identical to hkas83333|RPB1|MZ936344.1) is ignored but added at the end
+NOTE: hkas84554|RPB1|MZ936336.1 (identical to hkas83333|RPB1|MZ936344.1) is ignored but added at the end
+NOTE: hkas50503|RPB1|MZ936335.1 (identical to hkas83333|RPB1|MZ936344.1) is ignored but added at the end
+NOTE: hkas87225|RPB1|MZ936334.1 (identical to hkas83333|RPB1|MZ936344.1) is ignored but added at the end
+NOTE: kpm_nc_27960|RPB1|MT868856.1 (identical to kpm_nc_24891|RPB1|MT868861.1) is ignored but added at the end
+NOTE: kpm_nc_26008|RPB1|MT868855.1 (identical to kpm_nc_24891|RPB1|MT868861.1) is ignored but added at the end
+NOTE: kpm_nc_25370|RPB1|MT868854.1 (identical to kpm_nc_24891|RPB1|MT868861.1) is ignored but added at the end
+NOTE: kpm_nc_27956|RPB1|MT868853.1 (identical to kpm_nc_24891|RPB1|MT868861.1) is ignored but added at the end
+NOTE: kpm_nc_28187|RPB1|MT868852.1 (identical to kpm_nc_24891|RPB1|MT868861.1) is ignored but added at the end
+NOTE: kpm_nc_27622|RPB1|MT868850.1 (identical to kpm_nc_27968|RPB1|MT868858.1) is ignored but added at the end
+NOTE: kpm_nc_17812|RPB1|MT868849.1 (identical to kpm_nc_27968|RPB1|MT868858.1) is ignored but added at the end
+NOTE: kpm_nc_17810|RPB1|MT868848.1 (identical to kpm_nc_27968|RPB1|MT868858.1) is ignored but added at the end
+NOTE: kpm_nc_17806|RPB1|MT868847.1 (identical to kpm_nc_27968|RPB1|MT868858.1) is ignored but added at the end
+NOTE: kpm_nc_17797|RPB1|MT868846.1 (identical to kpm_nc_27968|RPB1|MT868858.1) is ignored but added at the end
+NOTE: kpm_nc_17798|RPB1|MT868845.1 (identical to kpm_nc_27968|RPB1|MT868858.1) is ignored but added at the end
+NOTE: kpm_nc_27955|RPB1|MT868842.1 (identical to kpm_nc_27952|RPB1|MT868844.1) is ignored but added at the end
+NOTE: kpm_nc_17785|RPB1|MT868829.1 (identical to kpm_nc_28188|RPB1|MT868831.1) is ignored but added at the end
+NOTE: hkas105250|RPB1|MN304785.1 (identical to hkas105252|RPB1|MN304787.1) is ignored but added at the end
+NOTE: franck_4234|RPB1|MN584678.1 (identical to franck_4235|RPB1|MN584680.1) is ignored but added at the end
+NOTE: gdgm42855|RPB1|MH700214.1 (identical to gdgm53501|RPB1|MH700217.1) is ignored but added at the end
+NOTE: gdgm75495|RPB1|MN473181.1 (identical to gdgm53501|RPB1|MH700217.1) is ignored but added at the end
+NOTE: gdgm53350|RPB1|MN473171.1 (identical to gdgm53501|RPB1|MH700217.1) is ignored but added at the end
+NOTE: gdgm43437|RPB1|MN473149.1 (identical to gdgm53501|RPB1|MH700217.1) is ignored but added at the end
+NOTE: hkas80485|RPB1|KT990894.1 (identical to gdgm53501|RPB1|MH700217.1) is ignored but added at the end
+NOTE: gdgm72253|RPB1|MN473177.1 (identical to gdgm44730|RPB1|MH700209.1) is ignored but added at the end
+NOTE: hkas74751|RPB1|KT990899.1 (identical to gdgm75881|RPB1|MN473183.1) is ignored but added at the end
+NOTE: gdgm52889|RPB1|MN473163.1 (identical to gdgm71293|RPB1|MN473173.1) is ignored but added at the end
+NOTE: hkas63009|RPB1|KT990891.1 (identical to gdgm71293|RPB1|MN473173.1) is ignored but added at the end
+NOTE: hkas105265|RPB1|MN304788.1 (identical to hkas105267|RPB1|MN304790.1) is ignored but added at the end
+NOTE: gdgm45160|RPB1|KY800424.1 (identical to gdgm44725|RPB1|KY800426.1) is ignored but added at the end
+NOTE: hkas83203|RPB1|KM820815.1 (identical to hkas83098|RPB1|KM820817.1) is ignored but added at the end
+NOTE: hkas89174|RPB1|KT990951.1 (identical to hkas90210|RPB1|KT990953.1) is ignored but added at the end
+NOTE: hkas83026|RPB1|KT990950.1 (identical to hkas90210|RPB1|KT990953.1) is ignored but added at the end
+NOTE: blt_69|RPB1|AB999741.1 (identical to blt_126|RPB1|AB999748.1) is ignored but added at the end
+NOTE: blt_64|RPB1|AB999736.1 (identical to blt_126|RPB1|AB999748.1) is ignored but added at the end
+NOTE: blt_36|RPB1|AB999726.1 (identical to blt_113|RPB1|AB999743.1) is ignored but added at the end
+NOTE: blt_3|RPB1|AB999720.1 (identical to blt_113|RPB1|AB999743.1) is ignored but added at the end
+Alignment was printed to data/trees/backbone.uniqueseq.phy
+
+For your convenience alignment with unique sequences printed to data/trees/backbone.uniqueseq.phy
+
+Creating fast initial parsimony tree by random order stepwise addition...
+16.858 seconds, parsimony score: 12648 (based on 709 sites)
+Measuring multi-threading efficiency up to 72 CPU cores
+Increase to 10 rounds for branch lengths
+34 trees examined
+Threads: 1 / Time: 73.952 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -212569
+Threads: 2 / Time: 77.958 sec / Speedup: 0.949 / Efficiency: 47% / LogL: -212569
+Determining AUTO threadcount: done in 151.926 secs using 155% CPU
+BEST NUMBER OF THREADS: 1
+
+Perform fast likelihood tree search using GTR+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Initial log-likelihood: -66631.859
+Current log-likelihood at step 1: -61387.160
+Current log-likelihood at step 2: -61376.174
+Current log-likelihood at step 3: -61374.992
+Parameters optimization took 2 rounds (9.672 sec)
+
+Perform nearest neighbor interchange...
+Optimizing NNI: done in 8.36358 secs using 99.86% CPU
+Estimate model parameters (epsilon = 1.000)
+Initial log-likelihood: -60890.734
+Current log-likelihood at step 1: -60890.317
+Partition-specific rates:  1.605 0.141 1.309
+Parameters optimization took 0 rounds (1.216 sec)
+
+Time for fast ML tree search: 19.324 seconds
+
+NOTE: ModelFinder requires 194 MB RAM!
+NUMBER OF THREADS FOR PARTITION FINDING: 7
+Selecting individual models for 3 charsets using BIC...
+ No. Model        Score       TreeLen     Charset
+   1 GTR+F+I+G4   118308.563  27.710      RPB1
+WARNING: 7 threads for alignment length 8 will slow down analysis
+   2 GTR+F+I+G4   1608.665    0.201       TEF1
+WARNING: 7 threads for alignment length 5 will slow down analysis
+   3 GTR+F+I+G4   2074.399    1.478       RPB2
+Full partition model BIC score: 134141.699 (LnL: -60888.736  df:1627)
+Merging models to increase model fit (about 7 total partition schemes)...
+   4 GTR+F+I+G4   134068.499  6.217       RPB2+TEF1
+   5 GTR+F+I+G4   134063.702  27.648      RPB1+TEF1
+   6 GTR+F+I+G4   134077.715  43.512      RPB1+RPB2
+Merging RPB1+TEF1 with BIC score: 134063.702 (LnL: -60891.535  df: 1616)
+   7 GTR+F+I+G4   133998.797  43.444      RPB1+RPB2+TEF1
+Merging RPB1+RPB2+TEF1 with BIC score: 133998.797 (LnL: -60900.879  df: 1605)
+Agglomerative model selection: ((RPB1,TEF1)1:134064,RPB2)2:133999
+Merging into 1 partitions...
+   8 SYM+R7       121572.155  RPB1+RPB2+TEF1
+Best partition model BIC score: 133685.600 (LnL: -60717.683  df:1612)
+Partition information was printed to data/trees/backbone.best_scheme.nex
+Partition information in Raxml format was printed to data/trees/backbone.best_scheme
+
+All model information printed to data/trees/backbone.model.gz
+CPU time for ModelFinder: 7594.746 seconds (2h:6m:34s)
+Wall-clock time for ModelFinder: 1139.424 seconds (0h:18m:59s)
+Generating 1000 samples for ultrafast bootstrap (seed: 814615)...
+
+NOTE: 139 MB RAM (0 GB) is required!
+Measuring multi-threading efficiency up to 72 CPU cores
+Increase to 10 rounds for branch lengths
+24 trees examined
+Threads: 1 / Time: 74.805 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -212292
+Threads: 2 / Time: 64.558 sec / Speedup: 1.159 / Efficiency: 58% / LogL: -212292
+Threads: 3 / Time: 53.065 sec / Speedup: 1.410 / Efficiency: 47% / LogL: -212292
+Determining AUTO threadcount: done in 192.467 secs using 185.1% CPU
+BEST NUMBER OF THREADS: 2
+
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -60717.683
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 1: -60708.291
+WARNING: Too high (saturated) partition rates for proportional partition model!
+Current log-likelihood at step 2: -60708.151
+Current log-likelihood at step 3: -60706.119
+Current log-likelihood at step 4: -60704.869
+Current log-likelihood at step 5: -60703.822
+Current log-likelihood at step 6: -60702.881
+Current log-likelihood at step 7: -60702.038
+Current log-likelihood at step 8: -60701.270
+Current log-likelihood at step 9: -60700.574
+Current log-likelihood at step 10: -60699.957
+Current log-likelihood at step 11: -60699.374
+Current log-likelihood at step 12: -60698.848
+Current log-likelihood at step 13: -60698.377
+Current log-likelihood at step 14: -60697.927
+Current log-likelihood at step 15: -60697.528
+Current log-likelihood at step 16: -60697.148
+Current log-likelihood at step 17: -60696.791
+Current log-likelihood at step 18: -60696.468
+Current log-likelihood at step 19: -60696.164
+Current log-likelihood at step 20: -60695.880
+Current log-likelihood at step 21: -60695.633
+Current log-likelihood at step 22: -60695.400
+Current log-likelihood at step 23: -60695.161
+Current log-likelihood at step 24: -60694.944
+Current log-likelihood at step 25: -60694.763
+Current log-likelihood at step 26: -60694.642
+Current log-likelihood at step 27: -60694.587
+Partition-specific rates:  1.000
+Parameters optimization took 26 rounds (93.754 sec)
+
+Wrote distance file to... 
+Computing ML distances based on estimated model parameters...
+Calculating distance matrix: done in 0.024709 secs using 199.6% CPU
+Computing ML distances took 0.026097 sec (of wall-clock time) 0.051058 sec (of CPU time)
+Setting up auxiliary I and S matrices: done in 0.00513601 secs using 194.4% CPU
+Constructing RapidNJ tree: done in 0.0366659 secs using 282.4% CPU
+Computing RapidNJ tree took 0.041932 sec (of wall-clock time) 0.113650 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -187014.307
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 24.691 second
+Computing log-likelihood of 98 initial trees ... 34.203 seconds
+Current best score: -60694.587
+
+Do NNI search on 20 best initial trees
+Optimizing NNI: done in 2.95934 secs using 194.9% CPU
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -60691.658
+Current log-likelihood at step 1: -60691.588
+Parameters optimization took 0 rounds (3.485 sec)
+
+BETTER TREE FOUND at iteration 1: -60691.588
+Optimizing NNI: done in 32.9614 secs using 195.2% CPU
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -60589.291
+Current log-likelihood at step 1: -60589.074
+Current log-likelihood at step 2: -60589.005
+Parameters optimization took 1 rounds (7.609 sec)
+
+BETTER TREE FOUND at iteration 2: -60589.005
+Optimizing NNI: done in 32.7761 secs using 195.3% CPU
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -60587.771
+Current log-likelihood at step 1: -60587.624
+Current log-likelihood at step 2: -60587.521
+Current log-likelihood at step 3: -60587.482
+Parameters optimization took 2 rounds (10.786 sec)
+
+BETTER TREE FOUND at iteration 3: -60587.482
+Optimizing NNI: done in 32.3467 secs using 195.3% CPU
+Optimizing NNI: done in 34.0577 secs using 195.3% CPU
+Optimizing NNI: done in 33.0288 secs using 195.3% CPU
+Optimizing NNI: done in 31.4595 secs using 195% CPU
+Optimizing NNI: done in 31.7476 secs using 195% CPU
+Optimizing NNI: done in 33.7625 secs using 195.3% CPU
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -60576.769
+Current log-likelihood at step 1: -60576.297
+Current log-likelihood at step 2: -60576.116
+Current log-likelihood at step 3: -60576.045
+Parameters optimization took 2 rounds (11.097 sec)
+
+BETTER TREE FOUND at iteration 9: -60576.045
+Optimizing NNI: done in 36.242 secs using 195.4% CPU
+Iteration 10 / LogL: -60687.242 / Time: 0h:11m:37s
+Optimizing NNI: done in 33.375 secs using 195.3% CPU
+Optimizing NNI: done in 33.125 secs using 195.4% CPU
+Optimizing NNI: done in 31.8821 secs using 195.2% CPU
+Optimizing NNI: done in 32.3736 secs using 195.3% CPU
+Optimizing NNI: done in 27.9132 secs using 195.1% CPU
+Optimizing NNI: done in 31.9935 secs using 195% CPU
+Optimizing NNI: done in 32.4153 secs using 195.2% CPU
+Optimizing NNI: done in 34.9187 secs using 195.4% CPU
+Optimizing NNI: done in 33.9619 secs using 195.5% CPU
+Optimizing NNI: done in 33.0716 secs using 195.3% CPU
+Iteration 20 / LogL: -60801.380 / Time: 0h:17m:3s
+Finish initializing candidate tree set (20)
+Current best tree score: -60576.045 / CPU time: 719.261
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Optimizing NNI: done in 13.5198 secs using 195.9% CPU
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -60560.547
+Current log-likelihood at step 1: -60560.446
+Current log-likelihood at step 2: -60560.423
+Parameters optimization took 1 rounds (7.038 sec)
+
+BETTER TREE FOUND at iteration 21: -60560.423
+Optimizing NNI: done in 8.49823 secs using 196% CPU
+Optimizing NNI: done in 11.8025 secs using 195.9% CPU
+Optimizing NNI: done in 6.80126 secs using 196% CPU
+Optimizing NNI: done in 8.6316 secs using 196.1% CPU
+Optimizing NNI: done in 14.0563 secs using 195.6% CPU
+Optimizing NNI: done in 13.2352 secs using 195.8% CPU
+Optimizing NNI: done in 11.1309 secs using 195.6% CPU
+Optimizing NNI: done in 13.6275 secs using 195.8% CPU
+Optimizing NNI: done in 7.81371 secs using 196% CPU
+Iteration 30 / LogL: -60627.324 / Time: 0h:19m:1s (0h:59m:41s left)
+Optimizing NNI: done in 11.5447 secs using 195.7% CPU
+Optimizing NNI: done in 5.72406 secs using 196.4% CPU
+Optimizing NNI: done in 6.66385 secs using 196.3% CPU
+Optimizing NNI: done in 8.8963 secs using 196.1% CPU
+Optimizing NNI: done in 6.92837 secs using 195.7% CPU
+Optimizing NNI: done in 9.5223 secs using 196.1% CPU
+Optimizing NNI: done in 9.80642 secs using 195.7% CPU
+Optimizing NNI: done in 10.7071 secs using 195.6% CPU
+Optimizing NNI: done in 8.96042 secs using 196.1% CPU
+Optimizing NNI: done in 11.5842 secs using 195.7% CPU
+Iteration 40 / LogL: -60609.705 / Time: 0h:20m:33s (0h:42m:41s left)
+Optimizing NNI: done in 10.6307 secs using 195.5% CPU
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -60545.995
+Current log-likelihood at step 1: -60545.920
+Parameters optimization took 0 rounds (3.488 sec)
+
+BETTER TREE FOUND at iteration 41: -60545.920
+Optimizing NNI: done in 8.68926 secs using 196.3% CPU
+Optimizing NNI: done in 13.1294 secs using 195.7% CPU
+Optimizing NNI: done in 11.3813 secs using 196.3% CPU
+Optimizing NNI: done in 11.9769 secs using 195.4% CPU
+Optimizing NNI: done in 12.0388 secs using 195.9% CPU
+Optimizing NNI: done in 6.78105 secs using 196.4% CPU
+Optimizing NNI: done in 9.7569 secs using 195.7% CPU
+Optimizing NNI: done in 10.4988 secs using 195.9% CPU
+Optimizing NNI: done in 8.53471 secs using 196.4% CPU
+Iteration 50 / LogL: -60575.210 / Time: 0h:22m:21s (0h:41m:32s left)
+Log-likelihood cutoff on original alignment: -60642.737
+Optimizing NNI: done in 9.69732 secs using 195.6% CPU
+Optimizing NNI: done in 7.68965 secs using 195.6% CPU
+Optimizing NNI: done in 10.0398 secs using 195.4% CPU
+Optimizing NNI: done in 9.56406 secs using 196.3% CPU
+Optimizing NNI: done in 9.40964 secs using 196.2% CPU
+Optimizing NNI: done in 13.4924 secs using 195.8% CPU
+Optimizing NNI: done in 11.879 secs using 195.9% CPU
+Optimizing NNI: done in 10.5953 secs using 196.2% CPU
+Optimizing NNI: done in 7.08511 secs using 196.5% CPU
+Optimizing NNI: done in 8.74525 secs using 196% CPU
+Iteration 60 / LogL: -60651.012 / Time: 0h:24m:5s (0h:33m:3s left)
+Optimizing NNI: done in 11.5496 secs using 195.6% CPU
+Optimizing NNI: done in 11.2281 secs using 195.9% CPU
+Optimizing NNI: done in 15.5691 secs using 195.7% CPU
+Optimizing NNI: done in 7.99826 secs using 196.3% CPU
+Optimizing NNI: done in 12.3796 secs using 195.6% CPU
+Optimizing NNI: done in 7.00792 secs using 196% CPU
+Optimizing NNI: done in 12.7819 secs using 195.5% CPU
+Optimizing NNI: done in 11.4542 secs using 195.4% CPU
+Optimizing NNI: done in 11.522 secs using 195.5% CPU
+Optimizing NNI: done in 14.8017 secs using 195.9% CPU
+Iteration 70 / LogL: -60557.302 / Time: 0h:26m:3s (0h:26m:48s left)
+Optimizing NNI: done in 6.7349 secs using 196.2% CPU
+Optimizing NNI: done in 11.4088 secs using 195.7% CPU
+Optimizing NNI: done in 10.901 secs using 196% CPU
+Optimizing NNI: done in 9.8597 secs using 195.5% CPU
+Optimizing NNI: done in 9.15491 secs using 196.1% CPU
+Optimizing NNI: done in 8.69793 secs using 196.1% CPU
+Optimizing NNI: done in 10.7873 secs using 195.8% CPU
+Optimizing NNI: done in 7.92146 secs using 195.7% CPU
+Optimizing NNI: done in 10.5616 secs using 195.6% CPU
+Optimizing NNI: done in 11.53 secs using 195.9% CPU
+Iteration 80 / LogL: -60561.518 / Time: 0h:27m:42s (0h:21m:23s left)
+Optimizing NNI: done in 14.3448 secs using 195.8% CPU
+Optimizing NNI: done in 9.7002 secs using 196% CPU
+Optimizing NNI: done in 8.84943 secs using 196.1% CPU
+Optimizing NNI: done in 7.85175 secs using 195.9% CPU
+Optimizing NNI: done in 8.46253 secs using 196.2% CPU
+Optimizing NNI: done in 11.5069 secs using 195.7% CPU
+Optimizing NNI: done in 8.359 secs using 195.9% CPU
+Optimizing NNI: done in 11.26 secs using 195.9% CPU
+Optimizing NNI: done in 7.74918 secs using 196.1% CPU
+Optimizing NNI: done in 14.9645 secs using 195.5% CPU
+Iteration 90 / LogL: -60557.737 / Time: 0h:29m:27s (0h:16m:52s left)

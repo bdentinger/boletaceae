@@ -2,5 +2,10 @@ version: "v2025.08.09"
 taxon_query: "Boletaceae[Organism]"
 update_window_days: 8
 backbone_loci: [RPB1, RPB2, TEF1]
-constraint_tree: "constraints/boletaceae_constraint.nwk"
+constraint_tree: ""
 python_bin: "python3.11"
+threads:
+  align: 48          # MAFFT per-locus
+  iqtree: 72         # IQ-TREE ML + UFBoot
+  epa: 48            # if/when you place queries
+speed_mode: accurate # or "fast" (see below)

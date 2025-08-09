@@ -1,0 +1,162 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 64
+Rules claiming more threads will be scaled down.
+Job stats:
+job                           count
+--------------------------  -------
+align_locus                       3
+build_backbone_constrained        1
+concat_supermatrix                1
+fetch_locus                       2
+mask_locus                        3
+qc_locus                          3
+total                            13
+
+Select jobs to execute...
+
+[Sat Aug  9 12:13:57 2025]
+rule qc_locus:
+    input: data/staging/RPB1.gb
+    output: data/qc/RPB1.cleaned.fasta
+    jobid: 5
+    reason: Missing output files: data/qc/RPB1.cleaned.fasta
+    wildcards: locus=RPB1
+    resources: tmpdir=/tmp
+
+
+[Sat Aug  9 12:13:58 2025]
+rule fetch_locus:
+    output: data/staging/TEF1.gb
+    jobid: 14
+    reason: Missing output files: data/staging/TEF1.gb
+    wildcards: locus=TEF1
+    resources: tmpdir=/tmp
+
+
+[Sat Aug  9 12:13:58 2025]
+rule fetch_locus:
+    output: data/staging/RPB2.gb
+    jobid: 10
+    reason: Missing output files: data/staging/RPB2.gb
+    wildcards: locus=RPB2
+    resources: tmpdir=/tmp
+
+[Sat Aug  9 12:13:59 2025]
+Finished job 5.
+1 of 13 steps (8%) done
+Select jobs to execute...
+
+[Sat Aug  9 12:13:59 2025]
+rule align_locus:
+    input: data/qc/RPB1.cleaned.fasta
+    output: data/align/RPB1.aln.fasta
+    jobid: 4
+    reason: Missing output files: data/align/RPB1.aln.fasta; Input files updated by another job: data/qc/RPB1.cleaned.fasta
+    wildcards: locus=RPB1
+    threads: 4
+    resources: tmpdir=/tmp
+
+[Sat Aug  9 12:14:00 2025]
+Finished job 14.
+2 of 13 steps (15%) done
+Select jobs to execute...
+
+[Sat Aug  9 12:14:00 2025]
+rule qc_locus:
+    input: data/staging/TEF1.gb
+    output: data/qc/TEF1.cleaned.fasta
+    jobid: 13
+    reason: Missing output files: data/qc/TEF1.cleaned.fasta; Input files updated by another job: data/staging/TEF1.gb
+    wildcards: locus=TEF1
+    resources: tmpdir=/tmp
+
+[Sat Aug  9 12:14:00 2025]
+Finished job 13.
+3 of 13 steps (23%) done
+Select jobs to execute...
+
+[Sat Aug  9 12:14:00 2025]
+rule align_locus:
+    input: data/qc/TEF1.cleaned.fasta
+    output: data/align/TEF1.aln.fasta
+    jobid: 12
+    reason: Missing output files: data/align/TEF1.aln.fasta; Input files updated by another job: data/qc/TEF1.cleaned.fasta
+    wildcards: locus=TEF1
+    threads: 4
+    resources: tmpdir=/tmp
+
+[Sat Aug  9 12:14:01 2025]
+Finished job 12.
+4 of 13 steps (31%) done
+Select jobs to execute...
+
+[Sat Aug  9 12:14:01 2025]
+rule mask_locus:
+    input: data/align/TEF1.aln.fasta
+    output: data/align/TEF1.masked.fasta
+    jobid: 11
+    reason: Missing output files: data/align/TEF1.masked.fasta; Input files updated by another job: data/align/TEF1.aln.fasta
+    wildcards: locus=TEF1
+    resources: tmpdir=/tmp
+
+[Sat Aug  9 12:14:01 2025]
+Finished job 11.
+5 of 13 steps (38%) done
+[Sat Aug  9 12:14:01 2025]
+Finished job 10.
+6 of 13 steps (46%) done
+Select jobs to execute...
+
+[Sat Aug  9 12:14:01 2025]
+rule qc_locus:
+    input: data/staging/RPB2.gb
+    output: data/qc/RPB2.cleaned.fasta
+    jobid: 9
+    reason: Missing output files: data/qc/RPB2.cleaned.fasta; Input files updated by another job: data/staging/RPB2.gb
+    wildcards: locus=RPB2
+    resources: tmpdir=/tmp
+
+[Sat Aug  9 12:14:01 2025]
+Finished job 9.
+7 of 13 steps (54%) done
+Select jobs to execute...
+
+[Sat Aug  9 12:14:01 2025]
+rule align_locus:
+    input: data/qc/RPB2.cleaned.fasta
+    output: data/align/RPB2.aln.fasta
+    jobid: 8
+    reason: Missing output files: data/align/RPB2.aln.fasta; Input files updated by another job: data/qc/RPB2.cleaned.fasta
+    wildcards: locus=RPB2
+    threads: 4
+    resources: tmpdir=/tmp
+
+[Sat Aug  9 12:14:02 2025]
+Finished job 8.
+8 of 13 steps (62%) done
+Select jobs to execute...
+
+[Sat Aug  9 12:14:02 2025]
+rule mask_locus:
+    input: data/align/RPB2.aln.fasta
+    output: data/align/RPB2.masked.fasta
+    jobid: 7
+    reason: Missing output files: data/align/RPB2.masked.fasta; Input files updated by another job: data/align/RPB2.aln.fasta
+    wildcards: locus=RPB2
+    resources: tmpdir=/tmp
+
+[Sat Aug  9 12:14:02 2025]
+Finished job 7.
+9 of 13 steps (69%) done
+Terminating processes on user request, this might take some time.
+[Sat Aug  9 12:26:46 2025]
+Error in rule align_locus:
+    jobid: 4
+    input: data/qc/RPB1.cleaned.fasta
+    output: data/align/RPB1.aln.fasta
+    shell:
+        mkdir -p data/align && mafft --thread 4 --maxiterate 1000 --localpair data/qc/RPB1.cleaned.fasta > data/align/RPB1.aln.fasta
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Complete log: .snakemake/log/2025-08-09T121356.887163.snakemake.log

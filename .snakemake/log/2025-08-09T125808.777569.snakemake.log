@@ -1,0 +1,35 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 64
+Rules claiming more threads will be scaled down.
+Job stats:
+job                           count
+--------------------------  -------
+build_backbone_constrained        1
+concat_supermatrix                1
+total                             2
+
+Select jobs to execute...
+
+[Sat Aug  9 12:58:09 2025]
+rule concat_supermatrix:
+    input: data/align/RPB1.masked.fasta, data/align/RPB2.masked.fasta, data/align/TEF1.masked.fasta
+    output: data/align/concat.fasta, data/align/partitions.txt, data/align/taxa.txt
+    jobid: 1
+    reason: Missing output files: data/align/partitions.txt, data/align/concat.fasta
+    resources: tmpdir=/tmp
+
+[Sat Aug  9 12:58:10 2025]
+Error in rule concat_supermatrix:
+    jobid: 1
+    input: data/align/RPB1.masked.fasta, data/align/RPB2.masked.fasta, data/align/TEF1.masked.fasta
+    output: data/align/concat.fasta, data/align/partitions.txt, data/align/taxa.txt
+    shell:
+        python3.11 workflow/scripts/concat_supermatrix.py --inputs data/align/RPB1.masked.fasta data/align/RPB2.masked.fasta data/align/TEF1.masked.fasta --out-matrix data/align/concat.fasta --out-parts data/align/partitions.txt --out-taxa data/align/taxa.txt
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job concat_supermatrix since they might be corrupted:
+data/align/concat.fasta, data/align/partitions.txt
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2025-08-09T125808.777569.snakemake.log

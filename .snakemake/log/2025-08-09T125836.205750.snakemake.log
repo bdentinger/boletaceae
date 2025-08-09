@@ -1,0 +1,58 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 64
+Rules claiming more threads will be scaled down.
+Job stats:
+job                           count
+--------------------------  -------
+build_backbone_constrained        1
+concat_supermatrix                1
+total                             2
+
+Select jobs to execute...
+
+[Sat Aug  9 12:58:36 2025]
+rule concat_supermatrix:
+    input: data/align/RPB1.masked.fasta, data/align/RPB2.masked.fasta, data/align/TEF1.masked.fasta
+    output: data/align/concat.fasta, data/align/partitions.txt, data/align/taxa.txt
+    jobid: 2
+    reason: Missing output files: data/align/partitions.txt, data/align/concat.fasta
+    resources: tmpdir=/tmp
+
+[Sat Aug  9 12:58:37 2025]
+Finished job 2.
+1 of 2 steps (50%) done
+Select jobs to execute...
+
+[Sat Aug  9 12:58:37 2025]
+rule build_backbone_constrained:
+    input: data/align/concat.fasta, data/align/partitions.txt
+    output: data/trees/backbone.treefile
+    jobid: 1
+    reason: Missing output files: data/trees/backbone.treefile; Input files updated by another job: data/align/partitions.txt, data/align/concat.fasta
+    threads: 64
+    resources: tmpdir=/tmp
+
+[Sat Aug  9 12:58:38 2025]
+Error in rule build_backbone_constrained:
+    jobid: 1
+    input: data/align/concat.fasta, data/align/partitions.txt
+    output: data/trees/backbone.treefile
+    shell:
+        
+        mkdir -p data/trees
+        if [ -n "constraints/boletaceae_constraint.nwk" ] && [ -s "constraints/boletaceae_constraint.nwk" ]; then
+          iqtree2 -s data/align/concat.fasta -p data/align/partitions.txt -m MFP+MERGE -T AUTO \
+                  -g constraints/boletaceae_constraint.nwk -B 1000 --alrt 1000 \
+                  -pre data/trees/backbone
+        else
+          iqtree2 -s data/align/concat.fasta -p data/align/partitions.txt -m MFP+MERGE -T AUTO \
+                  -B 1000 --alrt 1000 \
+                  -pre data/trees/backbone
+        fi
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2025-08-09T125836.205750.snakemake.log

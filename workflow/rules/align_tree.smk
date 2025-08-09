@@ -2,15 +2,23 @@
 
 LOCUS_LIST = config.get("backbone_loci", [])   # e.g., ["RPB1","RPB2","TEF1"]
 CONSTR = config.get("constraint_tree", "")     # path set in config/config.yaml
+T_ALIGN    = int(config.get("threads", {}).get("align", 8))
+T_IQTREE   = int(config.get("threads", {}).get("iqtree", 8))
 
 # 1) MAFFT align each locus
 rule align_locus:
     input:  "data/qc/{locus}.cleaned.fasta"
     output: "data/align/{locus}.aln.fasta"
-    threads: 4
+    threads: T_ALIGN
     shell:
-        "mkdir -p data/align && "
-        "mafft --thread {threads} --maxiterate 1000 --localpair {input} > {output}"
+                r"""
+        mkdir -p data/align
+        if [ "{config[speed_mode]}" = "fast" ]; then
+          mafft --thread {threads} --retree 2 --maxiterate 0 --fft --anysymbol {input} > {output}
+        else
+          mafft --thread {threads} --maxiterate 1000 --localpair --anysymbol {input} > {output}
+        fi
+        """
 
 # 2) Mask with trimAl (simple gap threshold)
 rule mask_locus:
@@ -40,16 +48,16 @@ rule build_backbone_constrained:
         tree="data/trees/backbone.treefile"
     params:
         constr=CONSTR
-    threads: 8
+    threads: T_IQTREE
     shell:
         r"""
         mkdir -p data/trees
         if [ -n "{params.constr}" ] && [ -s "{params.constr}" ]; then
-          iqtree2 -s {input.matrix} -p {input.parts} -m MFP+MERGE -T AUTO \
+          iqtree3 -s {input.matrix} -p {input.parts} -m MFP+MERGE -T AUTO \
                   -g {params.constr} -B 1000 --alrt 1000 \
                   -pre data/trees/backbone
         else
-          iqtree2 -s {input.matrix} -p {input.parts} -m MFP+MERGE -T AUTO \
+          iqtree3 -s {input.matrix} -p {input.parts} -m MFP+MERGE -T AUTO \
                   -B 1000 --alrt 1000 \
                   -pre data/trees/backbone
         fi
