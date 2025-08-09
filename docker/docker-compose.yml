@@ -1,0 +1,10 @@
+version: '3.9'
+services:
+  boletaceae-api:
+    build: ./docker
+    container_name: boletaceae-api
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data:/app/data  # Mount releases into container
+    restart: unless-stopped

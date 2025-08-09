@@ -1,0 +1,13 @@
+<!doctype html>
+<html><body style="font-family:system-ui">
+  <h2>Boletaceae Identification</h2>
+  <form action="/identify" method="post" enctype="multipart/form-data" target="_blank">
+    <label>FASTA file: <input type="file" name="file" required></label><br><br>
+    <label>Locus:
+      <select name="locus"><option>ITS</option></select>
+    </label>
+    <label style="margin-left:8px">Clade hint (optional): <input name="clade_hint" placeholder="e.g., Boletus"></label>
+    <button type="submit" style="margin-left:8px">Identify</button>
+  </form>
+  <p style="margin-top:1rem;color:#555">Returns JSON with name + confidence. A polished result page can be added later.</p>
+</body></html>

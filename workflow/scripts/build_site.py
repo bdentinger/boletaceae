@@ -1,0 +1,181 @@
+#!/usr/bin/env python3
+"""
+Build a static viewer site:
+  site/
+   ├─ index.html           (viewer with phylotree.js)
+   ├─ releases.json        (list of releases, newest first)
+   ├─ latest/
+   │    ├─ backbone.newick
+   │    └─ tips.json
+   └─ <version>/
+        ├─ backbone.newick
+        └─ tips.json
+Reads: data/releases/*/manifest.json (backbone_tree path) and optional tips.json
+"""
+import json, shutil
+from pathlib import Path
+
+RELEASES = Path("data/releases")
+SITE = Path("site")
+
+def copy_release(version: str, tree_path: Path, tips_path: Path | None):
+    outdir = SITE / version
+    outdir.mkdir(parents=True, exist_ok=True)
+    shutil.copyfile(tree_path, outdir / "backbone.newick")
+    if tips_path and tips_path.exists():
+        shutil.copyfile(tips_path, outdir / "tips.json")
+
+def main():
+    SITE.mkdir(exist_ok=True)
+    versions = []
+    if RELEASES.exists():
+        for d in sorted([p for p in RELEASES.iterdir() if p.is_dir()]):
+            mani = d / "manifest.json"
+            if not mani.exists():
+                continue
+            m = json.loads(mani.read_text())
+            tree = m.get("artifacts", {}).get("backbone_tree")
+            if not tree:
+                continue
+            tree_path = Path(tree)
+            tips_path = (d / "tips.json")
+            v = d.name
+            versions.append(v)
+            copy_release(v, tree_path, tips_path if tips_path.exists() else None)
+
+    versions = versions[::-1]  # newest first
+    (SITE / "releases.json").write_text(json.dumps({"releases": versions}, indent=2))
+
+    # Symlink/copy latest
+    if versions:
+        latest = versions[0]
+        lat_dir = SITE / "latest"
+        lat_dir.mkdir(exist_ok=True)
+        shutil.copyfile(SITE / latest / "backbone.newick", lat_dir / "backbone.newick")
+        if (SITE / latest / "tips.json").exists():
+            shutil.copyfile(SITE / latest / "tips.json", lat_dir / "tips.json")
+
+    # Write viewer (index.html)
+    (SITE / "index.html").write_text(VIEWER_HTML)
+
+VIEWER_HTML = """<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Boletaceae Backbone Tree</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <style>
+    body { font-family: ui-sans-serif, system-ui, -apple-system; margin: 0; }
+    header { padding: 12px 16px; border-bottom: 1px solid #ddd; display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
+    #viewer { width: 100vw; height: calc(100vh - 56px); }
+    #tree { width: 100%; height: 100%; }
+    select, input, button { padding: 6px 10px; font-size: 14px; }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.min.js"></script>
+  <script src="https://unpkg.com/phylotree/build/phylotree.js"></script>
+</head>
+<body>
+<header>
+  <strong>Boletaceae Backbone</strong>
+  <label>Release:
+    <select id="release"></select>
+  </label>
+  <button id="load">Load</button>
+  <input type="text" id="search" placeholder="Find tip (regex ok)"/>
+  <button id="collapse">Collapse</button>
+  <button id="expand">Expand</button>
+  <button id="download">Download Newick</button>
+</header>
+<div id="viewer"><div id="tree"></div></div>
+
+<script>
+let releases = [];
+let tipMeta = {};
+let tree = null, currentNewick = "";
+
+async function fetchJSON(p){ const r = await fetch(p); if(!r.ok) return null; return r.json(); }
+async function fetchText(p){ const r = await fetch(p); if(!r.ok) return ""; return r.text(); }
+
+async function loadReleases(){
+  const js = await fetchJSON("releases.json") || {releases:[]};
+  releases = js.releases || [];
+  const sel = document.getElementById('release');
+  sel.innerHTML = "";
+  if(releases.length===0){
+    const o=document.createElement('option'); o.value="latest"; o.textContent="latest"; sel.appendChild(o);
+  }else{
+    releases.forEach(v => { const o=document.createElement('option'); o.value=v; o.textContent=v; sel.appendChild(o); });
+  }
+}
+
+async function loadMeta(version){
+  const url = version==="latest" ? "latest/tips.json" : `${version}/tips.json`;
+  const js = await fetchJSON(url);
+  tipMeta = js || {};
+}
+
+async function loadTree(version){
+  const url = version==="latest" ? "latest/backbone.newick" : `${version}/backbone.newick`;
+  currentNewick = await fetchText(url);
+  await loadMeta(version);
+  renderTree(currentNewick);
+}
+
+function renderTree(newick){
+  d3.select("#tree").selectAll("*").remove();
+  const svg = d3.select("#tree").append("svg").attr("width","100%").attr("height","100%");
+  tree = new phylotree.phylotree(newick)
+    .options({'left-right-spacing':'fit-to-size','top-bottom-spacing':'fit-to-size', collapsible:true})
+    .svg(svg).layout();
+
+  const tip = d3.select("body").append("div")
+    .style("position","absolute").style("padding","6px 8px").style("font","12px sans-serif")
+    .style("background","#fff").style("border","1px solid #ccc").style("border-radius","6px")
+    .style("box-shadow","0 2px 8px rgba(0,0,0,0.1)").style("pointer-events","none").style("display","none");
+
+  tree.get_nodes().forEach(n => {
+    if (n.is_leaf()) {
+      const sel = d3.select(n.display.newick_label[0]);
+      sel.on("mouseover", () => {
+        const name = n.data.name || "";
+        const m = tipMeta[name] || {};
+        const lines = [`<strong>${name}</strong>`];
+        Object.keys(m).forEach(k => lines.push(`${k}: ${m[k]}`));
+        tip.html(lines.join("<br>")).style("display","block");
+      }).on("mousemove", (ev) => {
+        tip.style("left",(ev.pageX+12)+"px").style("top",(ev.pageY+12)+"px");
+      }).on("mouseout", () => tip.style("display","none"));
+    }
+  });
+}
+
+document.getElementById('load').onclick = () => loadTree(document.getElementById('release').value);
+document.getElementById('collapse').onclick = () => { if (tree) { tree.get_nodes().forEach(n=>tree.collapse(n)); tree.update(); } };
+document.getElementById('expand').onclick   = () => { if (tree) { tree.get_nodes().forEach(n=>tree.expand(n));   tree.update(); } };
+document.getElementById('download').onclick = () => {
+  const blob = new Blob([currentNewick], {type:"text/plain"});
+  const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = "backbone.newick"; a.click();
+};
+document.getElementById('search').addEventListener('keyup', e => {
+  if (!tree) return;
+  const q = e.target.value || ""; tree.clear_highlighted_branches();
+  if (!q) { tree.update(); return; }
+  let re=null; try { re = new RegExp(q, 'i'); } catch {}
+  tree.get_tips().forEach(t => {
+    if ((re && re.test(t.data.name)) || t.data.name.toLowerCase().includes(q.toLowerCase())) {
+      tree.modify_selection([t], true);
+    }
+  });
+  tree.update();
+});
+
+(async function init(){
+  await loadReleases();
+  await loadTree(releases[0] || "latest");
+})();
+</script>
+</body></html>
+"""
+
+if __name__ == "__main__":
+    main()
