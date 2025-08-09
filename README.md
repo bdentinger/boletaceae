@@ -3,7 +3,7 @@
 This repository blueprint delivers:
 
 * Weekly GenBank updates scoped to **Boletaceae**
-* Curated **backbone** from conserved loci (RPB1, RPB2, TEF1, LSU ± mtSSU/atp6 optional)
+* Curated **backbone** from conserved loci (RPB1, RPB2, TEF1)
 * **Bridge taxa** linking ITS to backbone
 * Clade‑specific **ITS placement packages** (EPA-ng/SEPP)
 * Trainable **ITS classifier** (QIIME2-sklearn or IDTAXA)
@@ -111,7 +111,7 @@ Response includes the best placement, confidence, nearest named lineage, and a l
 
 ## Loci
 
-Backbone defaults: `RPB1`, `RPB2`, `TEF1`, `LSU`. Optional: `mtSSU`, `atp6`.
+Backbone defaults: `RPB1`, `RPB2`, `TEF1`.
 
 ITS is handled via clade packages (genus-level within Boletaceae) anchored by bridge taxa.
 

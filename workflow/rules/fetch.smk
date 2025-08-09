@@ -1,17 +1,24 @@
-# Fetch GenBank per locus, then link loci across the same specimen
-# Uses scripts you already have in workflow/scripts/
+##############################
+# fetch.smk — data ingestion #
+##############################
 
-import os
+# Loci to process: backbone loci from config + ITS
+LOCUS_LIST  = config.get("backbone_loci", []) + ["ITS"]
 
-LOCUS_LIST = config.get("backbone_loci", []) + ["ITS"]
-TAXON      = config.get("taxon_query", "Boletaceae[Organism]")
-DAYS       = config.get("update_window_days", 8)
-EMAIL      = config.get("email", "you@uni.edu")
-TOOLNAME   = config.get("toolname", "BoletaceaeBackbone")
+# GenBank query settings
+TAXON       = config.get("taxon_query", "Boletaceae[Organism]")
+DAYS        = config.get("update_window_days", 8)
+EMAIL       = config.get("email", "you@uni.edu")
+TOOLNAME    = config.get("toolname", "BoletaceaeBackbone")
 
-# 1) Fetch GenBank flatfiles for each locus
+# Path to optional custom metadata table
+CUSTOM_META = "data/custom/metadata.tsv"
+
+
+# 1) Fetch GenBank flatfiles for each locus (delta window with fallback)
 rule fetch_locus:
-    output: "data/staging/{locus}.gb"
+    output:
+        "data/staging/{locus}.gb"
     params:
         locus = "{locus}",
         taxon = TAXON,
@@ -20,31 +27,103 @@ rule fetch_locus:
         tool  = TOOLNAME
     shell:
         (
-          "python3 workflow/scripts/fetch_ncbi.py "
-          "--taxon '{params.taxon}' "
-          "--locus {params.locus} "
-          "--days {params.days} "
-          "--email {params.email} "
-          "--tool {params.tool} "
-          "--out {output}"
+            "mkdir -p data/staging && "
+            "python3 workflow/scripts/fetch_ncbi.py "
+            "--taxon '{params.taxon}' "
+            "--locus {params.locus} "
+            "--days {params.days} "
+            "--email {params.email} "
+            "--tool {params.tool} "
+            "--out {output}"
         )
 
-# 2) Normalize headers -> specimen keys for each locus (FASTA)
+
+# 2) Normalize GenBank records to FASTA with specimen keys in headers
+#    Header: {specimen_key}|{locus}|{genbank_acc}
 rule qc_locus:
-    input:  "data/staging/{locus}.gb"
-    output: "data/qc/{locus}.cleaned.fasta"
-    params: locus="{locus}"
+    input:
+        "data/staging/{locus}.gb"
+    output:
+        "data/qc/{locus}.cleaned.fasta"
+    params:
+        locus = "{locus}"
     shell:
-        "python3 workflow/scripts/normalize_ids.py --in {input} --locus {params.locus} --out {output}"
+        (
+            "mkdir -p data/qc && "
+            "python3 workflow/scripts/normalize_ids.py "
+            "--in {input} --locus {params.locus} --out {output}"
+        )
 
-# 3) Link loci across specimens (choose longest per specimen×locus)
+
+# 3) Ingest optional custom sequences for a locus (if files exist)
+#    Produces normalized headers compatible with pipeline; creates an empty file if none.
+rule ingest_custom_locus:
+    input:
+        fasta = lambda wc: f"data/custom/sequences/{wc.locus}.fasta",
+        meta  = CUSTOM_META
+    output:
+        "data/qc/{locus}.custom.fasta"
+    shell:
+        r"""
+        mkdir -p data/qc
+        if [ -s {input.fasta} ] && [ -s {input.meta} ]; then
+          python3 workflow/scripts/ingest_custom.py \
+            --locus {wildcards.locus} \
+            --fasta {input.fasta} \
+            --meta {input.meta} \
+            --out {output}
+        else
+          : > {output}
+        fi
+        """
+
+
+# 4) Merge GenBank-cleaned + custom (prefer custom on specimen×locus clashes)
+rule merge_locus:
+    input:
+        gb   = "data/qc/{locus}.cleaned.fasta",
+        cust = "data/qc/{locus}.custom.fasta"
+    output:
+        "data/qc/{locus}.merged.fasta"
+    shell:
+        (
+            "python3 workflow/scripts/merge_locus.py "
+            "--gb {input.gb} --cust {input.cust} --out {output}"
+        )
+
+
+# 5) Link loci across the same specimen (choose longest per specimen×locus)
 rule link_specimens:
-    input:  expand("data/qc/{locus}.cleaned.fasta", locus=LOCUS_LIST)
-    output: directory("data/staging/specimens")
-    shell:  "python3 workflow/scripts/link_specimens.py --inputs {input} --outdir {output}"
+    input:
+        expand("data/qc/{locus}.merged.fasta", locus=LOCUS_LIST)
+    output:
+        directory("data/staging/specimens")
+    shell:
+        (
+            "python3 workflow/scripts/link_specimens.py "
+            "--inputs {input} --outdir {output}"
+        )
 
-# 4) Build a specimen × locus presence/absence table
+
+# 6) Build specimen × locus presence/absence table
 rule loci_table:
-    input:  "data/staging/specimens/specimen_loci.tsv"
-    output: "data/staging/loci_table.tsv"
-    shell:  "python3 workflow/scripts/loci_table.py --specimen_loci {input} --out {output}"
+    input:
+        "data/staging/specimens/specimen_loci.tsv"
+    output:
+        "data/staging/loci_table.tsv"
+    shell:
+        (
+            "python3 workflow/scripts/loci_table.py "
+            "--specimen_loci {input} --out {output}"
+        )
+
+
+# Convenience: materialize all fetch/normalize/merge outputs for debugging
+rule fetch_all:
+    input:
+        expand("data/staging/{locus}.gb", locus=LOCUS_LIST),
+        expand("data/qc/{locus}.cleaned.fasta", locus=LOCUS_LIST),
+        expand("data/qc/{locus}.custom.fasta",  locus=LOCUS_LIST),
+        expand("data/qc/{locus}.merged.fasta",  locus=LOCUS_LIST),
+        "data/staging/specimens/specimen_loci.tsv",
+        "data/staging/loci_table.tsv"
