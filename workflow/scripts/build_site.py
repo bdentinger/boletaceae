@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python3.11
 """
 Build a static viewer site:
   site/
@@ -111,8 +111,10 @@ VIEWER_HTML = """<!doctype html>
     table { border-collapse: collapse; }
     th, td { border: 1px solid #ddd; padding: 4px 8px; }
   </style>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.min.js"></script>
-  <script src="https://unpkg.com/phylotree/build/phylotree.js"></script>
+  <!-- D3 and Phylotree (pinned, known-good) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.min.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/phylotree@2.0.1/build/phylotree.css">
+  <script src="https://cdn.jsdelivr.net/npm/phylotree@2.0.1/build/phylotree.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <header>
@@ -221,6 +223,17 @@ document.getElementById('show-loci').onclick = async () => {
 </body>
 </html>
 """
+
+# Fallback: if no release-provided tree, use the freshly built backbone
+latest_dir = Path("site/latest")
+latest_dir.mkdir(parents=True, exist_ok=True)
+built = Path("data/trees/backbone.treefile")
+target = latest_dir / "backbone.newick"
+if built.exists() and not target.exists():
+    shutil.copyfile(built, target)
+
+# Ensure Pages doesn't run Jekyll
+(Path("site") / ".nojekyll").write_text("")
 
 if __name__ == "__main__":
     main()
