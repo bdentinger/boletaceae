@@ -50,5 +50,17 @@ def main():
 
   SeqIO.write(out_recs, args.out, "fasta")
 
+# clean tax names
+  from pathlib import Path
+    map_path = Path("data/staging/taxon_map.tsv")
+    map_path.parent.mkdir(parents=True, exist_ok=True)
+  with map_path.open("a") as M:
+      for rec in records:
+          # rec.id = "{specimen_key}|{locus}|{acc}"
+          specimen = rec.id.split("|",1)[0]
+          # best-effort species from source/organism or rec.annotations
+          sp = (rec.annotations.get("organism") or "").strip()
+          M.write(f"{specimen}\t{sp}\n")
+
 if __name__ == "__main__":
   main()

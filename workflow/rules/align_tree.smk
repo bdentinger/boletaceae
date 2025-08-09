@@ -14,9 +14,9 @@ rule align_locus:
                 r"""
         mkdir -p data/align
         if [ "{config[speed_mode]}" = "fast" ]; then
-          mafft --thread {threads} --retree 2 --maxiterate 0 --fft --anysymbol {input} > {output}
+          mafft --thread {threads} --adjustdirection --retree 2 --maxiterate 0 --fft --anysymbol {input} > {output}
         else
-          mafft --thread {threads} --maxiterate 1000 --localpair --anysymbol {input} > {output}
+          mafft --thread {threads} --adjustdirection --maxiterate 1000 --localpair --anysymbol {input} > {output}
         fi
         """
 
@@ -60,5 +60,65 @@ rule build_backbone_constrained:
           iqtree3 -s {input.matrix} -p {input.parts} -m MFP+MERGE -T AUTO \
                   -B 1000 --alrt 1000 \
                   -pre data/trees/backbone
+        fi
+        """
+# 5) After build_backbone_constrained (first pass), prune rogues, then rebuild
+
+rule build_backbone_firstpass:
+    input:
+        matrix="data/align/concat.fasta",
+        parts ="data/align/partitions.txt",
+        filt  ="constraints/constraint.on_concat.nwk"  # your filtered/empty constraint file
+    output:
+        tree="data/trees/backbone.firstpass.treefile"
+    threads: int(config.get("threads", {}).get("iqtree", 8))
+    shell:
+        r"""
+        mkdir -p data/trees
+        if [ -s {input.filt} ]; then
+          {config[iqtree_bin]} -s {input.matrix} -p {input.parts} -m MFP+MERGE -g {input.filt} \
+            -T {threads} -B 1000 --alrt 1000 -pre data/trees/backbone.firstpass
+        else
+          {config[iqtree_bin]} -s {input.matrix} -p {input.parts} -m MFP+MERGE \
+            -T {threads} -B 1000 --alrt 1000 -pre data/trees/backbone.firstpass
+        fi
+        """
+
+rule treeshrink_prune:
+    input:
+        tree="data/trees/backbone.firstpass.treefile"
+    output:
+        pruned="data/trees/treeshrink/keep.txt"
+    params:
+        outdir="data/trees/treeshrink"
+    shell:
+        r"""
+        mkdir -p {params.outdir}
+        TreeShrink.py -t {input.tree} -o {params.outdir} -q 0.05 >/dev/null 2>&1 || true
+        # TreeShrink writes 'TS_keep.txt' with taxa to keep
+        cp {params.outdir}/TS_keep.txt {output.pruned}
+        """
+
+rule rebuild_backbone_after_prune:
+    input:
+        matrix="data/align/concat.fasta",
+        parts ="data/align/partitions.txt",
+        keep  ="data/trees/treeshrink/keep.txt",
+        filt  ="constraints/constraint.on_concat.nwk"
+    output:
+        tree="data/trees/backbone.treefile"
+    threads: int(config.get("threads", {}).get("iqtree", 8))
+    shell:
+        r"""
+        # subset alignment to kept taxa
+        {config[python_bin]} workflow/scripts/subset_alignment.py \
+          --in {input.matrix} --keep {input.keep} --out data/align/concat.pruned.fasta
+        # rebuild constrained (if filt non-empty) on pruned matrix
+        if [ -s {input.filt} ]; then
+          {config[iqtree_bin]} -s data/align/concat.pruned.fasta -p {input.parts} -m MFP+MERGE -g {input.filt} \
+            -T {threads} -B 1000 --alrt 1000 -pre data/trees/backbone
+        else
+          {config[iqtree_bin]} -s data/align/concat.pruned.fasta -p {input.parts} -m MFP+MERGE \
+            -T {threads} -B 1000 --alrt 1000 -pre data/trees/backbone
         fi
         """
