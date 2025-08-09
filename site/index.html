@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Boletaceae Backbone Tree</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <style>
+    body { font-family: ui-sans-serif, system-ui, -apple-system; margin: 0; }
+    header { padding: 12px 16px; border-bottom: 1px solid #ddd; display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
+    #viewer { width: 100vw; height: calc(100vh - 112px); }
+    #tree { width: 100%; height: 100%; }
+    #meta { padding: 10px 16px; font-size: 14px; color: #333; display:flex; gap:16px; align-items:center; flex-wrap:wrap; }
+    select, input, button { padding: 6px 10px; font-size: 14px; }
+    table { border-collapse: collapse; }
+    th, td { border: 1px solid #ddd; padding: 4px 8px; }
+  </style>
+  <!-- D3 and Phylotree (pinned, known-good) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.min.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/phylotree@2.1.0/dist/phylotree.css">
+  <script src="https://cdn.jsdelivr.net/npm/phylotree@2.1.0/dist/phylotree.js" crossorigin="anonymous"></script>
+  <script>
+   (function ensurePhylotree(){
+     if (window.phylotree) return; // loaded OK
+     // 2.1.0 not present? load 2.0.1 build/ as fallback
+     var s1=document.createElement('script');
+     s1.src="https://cdn.jsdelivr.net/npm/phylotree@2.0.1/build/phylotree.js";
+     s1.onload=function(){ console.log("Loaded phylotree 2.0.1 fallback"); };
+     document.head.appendChild(s1);
+
+     var l1=document.createElement('link');
+     l1.rel="stylesheet";
+     l1.href="https://cdn.jsdelivr.net/npm/phylotree@2.0.1/build/phylotree.css";
+     document.head.appendChild(l1);
+   })();
+  </script>
+</head>
+<body>
+<header>
+  <strong>Boletaceae Backbone</strong>
+  <label>Release:
+    <select id="release"></select>
+  </label>
+  <button id="load">Load</button>
+  <input type="text" id="search" placeholder="Find tip (regex ok)"/>
+  <button id="collapse">Collapse</button>
+  <button id="expand">Expand</button>
+  <button id="download">Download Newick</button>
+</header>
+
+<div id="viewer"><div id="tree"></div></div>
+
+<div id="meta">
+  <button id="show-loci">Show locus coverage</button>
+  <span id="loci-summary"></span>
+</div>
+
+<script>
+let releases = [];
+let tipMeta = {};
+let currentNewick = "", tree = null;
+
+async function fetchJSON(p){ const r = await fetch(p); if(!r.ok) return null; return r.json(); }
+async function fetchText(p){ const r = await fetch(p); if(!r.ok) return ""; return r.text(); }
+
+async function loadReleases(){
+  const js = await fetchJSON("releases.json") || {releases:[]};
+  releases = js.releases || [];
+  const sel = document.getElementById('release');
+  sel.innerHTML = "";
+  if(releases.length===0){
+    const o=document.createElement('option'); o.value="latest"; o.textContent="latest"; sel.appendChild(o);
+  }else{
+    releases.forEach(v => { const o=document.createElement('option'); o.value=v; o.textContent=v; sel.appendChild(o); });
+  }
+}
+
+function renderTree(newick){
+  d3.select("#tree").selectAll("*").remove();
+  const svg = d3.select("#tree").append("svg").attr("width","100%").attr("height","100%");
+  tree = new phylotree.phylotree(newick)
+    .options({'left-right-spacing':'fit-to-size','top-bottom-spacing':'fit-to-size', collapsible:true})
+    .svg(svg).layout();
+
+  const tip = d3.select("body").append("div")
+    .style("position","absolute").style("padding","6px 8px").style("font","12px sans-serif")
+    .style("background","#fff").style("border","1px solid #ccc").style("border-radius","6px")
+    .style("box-shadow","0 2px 8px rgba(0,0,0,0.1)").style("pointer-events","none").style("display","none");
+
+  tree.get_nodes().forEach(n => {
+    if (n.is_leaf()) {
+      const sel = d3.select(n.display.newick_label[0]);
+      sel.on("mouseover", () => {
+        const name = n.data.name || "";
+        tip.html('<strong>'+name+'</strong>').style("display","block");
+      }).on("mousemove", (ev) => {
+        tip.style("left",(ev.pageX+12)+"px").style("top",(ev.pageY+12)+"px");
+      }).on("mouseout", () => tip.style("display","none"));
+    }
+  });
+}
+
+async function loadTree(version){
+  const url = version==="latest" ? "latest/backbone.newick" : `${version}/backbone.newick`;
+  currentNewick = await fetchText(url);
+  renderTree(currentNewick);
+}
+
+document.getElementById('load').onclick = () => loadTree(document.getElementById('release').value);
+document.getElementById('collapse').onclick = () => { if (tree) { tree.get_nodes().forEach(n=>tree.collapse(n)); tree.update(); } };
+document.getElementById('expand').onclick   = () => { if (tree) { tree.get_nodes().forEach(n=>tree.expand(n));   tree.update(); } };
+document.getElementById('download').onclick = () => {
+  const blob = new Blob([currentNewick], {type:"text/plain"});
+  const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = "backbone.newick"; a.click();
+};
+
+document.getElementById('search').addEventListener('keyup', e => {
+  if (!tree) return;
+  const q = e.target.value || ""; tree.clear_highlighted_branches();
+  if (!q) { tree.update(); return; }
+  let re=null; try { re = new RegExp(q, 'i'); } catch {}
+  tree.get_tips().forEach(t => {
+    if ((re && re.test(t.data.name)) || t.data.name.toLowerCase().includes(q.toLowerCase())) {
+      tree.modify_selection([t], true);
+    }
+  });
+  tree.update();
+});
+
+document.getElementById('show-loci').onclick = async () => {
+  const v = document.getElementById('release').value || 'latest';
+  const url = v==="latest" ? "latest/loci_table.json" : `${v}/loci_table.json`;
+  const js = await fetchJSON(url);
+  const tgt = document.getElementById('loci-summary');
+  if (!js) { tgt.textContent = "(no locus table available)"; return; }
+  // Build a tiny summary: list loci present in the table (LSU already removed server-side)
+  const cols = Object.keys(js[0] || {}).filter(k => !['specimen_id'].includes(k));
+  tgt.innerHTML = "Loci: " + cols.join(", ");
+};
+(async function init(){ await loadReleases(); await loadTree(releases[0] || "latest"); })();
+</script>
+</body>
+</html>
