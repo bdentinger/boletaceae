@@ -1,0 +1,783 @@
+#NEXUS
+
+Begin Taxa;
+	Dimensions ntax=385;
+	TaxLabels
+		0281BoletusfloridannsSTA
+		0297firmusRincon
+		BAKO2-Heimioporus-punctisporus
+		BAKO3-Chiua-aff-virens
+		BD606-Spongispora-temasekensis
+		BD614-Phylloporus
+		BD616-Boletus-cervinococcineus
+		BD619-Boletus-cervinococcineus
+		BD622-Caloboletus
+		BD623-Heimioporus
+		BD625-Tylopilus
+		BD626-Boletus-sp
+		BD630a-Tylopilus-sp-13
+		BD634-Tubosaeta-sp2
+		BD639-Xerocomus-spinulosus
+		BD644-Tylopilus-ballouii
+		BD652b-Phylloporus-sp5
+		BD655-Tylopilus-cordonbleu-nom-prov
+		BD667-Xdrocomus-sp8
+		BD686-Tubosaeta-aff-heterosetosa
+		BD695-Xerocomus-sp8
+		BD697
+		BD703-Stobilomyces-lepidellus
+		BD713-Xerocomus-sp14
+		BD714-Boletellus
+		BD716-Tylopilus-sp
+		BD719-Phylloporus-cf-tubipes
+		BD747-hybrid-assembly
+		BD773-Xerocomus-sp9
+		BD778
+		BD780-Tylopilus-aff-striatulus
+		BD784-Pulveroboletus-sp1
+		BD785-Phylloporus-sp3
+		BD787-Tylopilus-sp1
+		BD806-Tubosaeta-sp1
+		BD815-Tylopilus-sp10
+		BD816-Tylopilus-sp8
+		BD831-Phylloporus-sp4
+		BD832-Boletellus-aff-lepidosporta
+		BD845-Porphyrellus-aff-excedens
+		BD848-Fistulinella-staudtii
+		BD858-Porphyrellus-niger
+		BD869-Tylopilus-sp3
+		BD870-Pulveroboletus-sp2
+		BD872-Tylopilus-sp7
+		BD885
+		BD886-Xerocomus-spinulosus
+		BD890-Emersons-bolete
+		BD919Chile-Boletus-loyita
+		BD921Chile-Boletus-putidus
+		BTNG10-Spongiforma-sp
+		BTNG24-Pulveroboletus-aff-ridleyi
+		BTNG34
+		BTNG58-Boletaceae
+		BTNG65-Boletaceae
+		BTNG86-Tylopilus-callainus-aff
+		Bolcoc1-Boletus-coccyginus
+		Bolret1-Boletus-reticuloceps
+		Buchwaldoboletus-MVC-757
+		Butyri1-Butyriboletus-roseoflavus
+		CTN08-007-Boletaceae
+		CTN08-029
+		CTN08-033-Phylloporus-cf-gajari
+		CTN08-038-Tylopilus-sp
+		CTN08-043-Heimioporus-sp
+		CTN08-049-Leccinum-sp
+		CTN08-051-Boletaceae
+		CTN08-41-Tylopilus-aff-griseipurpureus
+		Chalciporus-piperatus-BD1043
+		Chivir1-Chiua-virens
+		DBG214687-Boletus-cf-mottiae
+		DED7854-Boletus-albobrunnescens
+		DLT-08-0025-Boletus-tylopilopsis
+		DLT08-013-Boletellus-emodensis
+		DLT08-019-Strobilomyces-confusus
+		DLT08-049-Rugiboletus-extremiorientale
+		DLT08-057-Porphyrellus-sp
+		DLT08-059-Tylopilus-aff-ballouii
+		DLT08-065-Neoboletus-cf-brunneissimus
+		DLT08-078-Butyriboletus-pseudospeciosus
+		DLT08-087-Retiboletus-fuscus
+		DLT08-089-Tylopilus-microsporus
+		DLT08-10-Imleria-aff-parva
+		DLT08-109-Strobilomyces-sp
+		DLT08-121-Butyriboletus-sp
+		DLT08-125-Butyriboletus-sp
+		DLT08-126-Austroboletus-cf-mucosus
+		DLT08-127-Boletus-sp
+		DUKE-0350624-Boletus-nobilis
+		DUKE-0351781
+		EAZ1-Chalciporus-piperatus
+		GMF-788-Boletus-loyo
+		JMMU381-Phylloporus-spA
+		JMMU383-Phylloporus-spB
+		KD11096-Boletus-reticuloceps
+		KD12250-Austroboletus-olicaceoglutinosus
+		KM167115-Butyriboletus-regius
+		KM172029-Butyriboletus-appendiculatus
+		KM192148-Rubinoboletus-rubinus
+		KZOM-212-Boletus-reticulatus
+		Lanmao1-Lanmaoa-asiatica
+		MAD-m10-Boletaceae
+		MAD-m19-Leccinum-sp1
+		MAD-m35-Tylopilus-aff-ballouii
+		MAD-m38-Xerocomus-sp
+		MAD-m39-Tylopilus-aff-ballouii
+		MAD-m47-Boletaceae
+		MAD-m49-Boletaceae
+		MAD-m63-Boletellus-sp
+		MAD-m71-Xerocomus-sp
+		MAD-m73-Boletellus-sp
+		MAD-m75-Boletellus-sp
+		MAD-m79-Tylopilus-sp
+		MICH10001-Boletus-bicolor
+		MICH10002-Boletus-carminipes
+		MICH10003-Boletus-chrysenteron
+		MICH10004-Boletus-bicolor
+		MICH10005-Boletus-brunneocitrinus
+		MICH10006-Boletus-calvinii
+		MICH10007-Boletus-chippewaensis
+		MICH10008-Boletus-edulis
+		MICH10009-Boletus-fagicola
+		MICH10010-Boletus-felleus
+		MICH10011-Boletus-harrisonii
+		MICH10012-Boletus-holoroseus
+		MICH10013-Boletus-hoseneae
+		MICH10014-Boletus-huronensis
+		MICH10015-Boletus-flavorubellus
+		MICH10017-Boletus-insuetus
+		MICH10018-Boletus-longicurvipes
+		MICH10019-Boletus-mariae
+		MICH10020-Boletus-miniato-pallescens
+		MICH10022-Boletus-minutiporus
+		MICH10023-Boletus-nancyae
+		MICH10024-Boletus-patriciae
+		MICH10025-Boletus-piperatoides
+		MICH10027-Boletus-pseudo-olivaceus
+		MICH10028-Boletus-pseudopeckii
+		MICH10029-Boletus-pseudorubinellus
+		MICH10030-Boletus-pseudosensibilis
+		MICH10032-Boletus-roseobadius
+		MICH10033-Boletus-piedmontensis
+		MICH10034-Boletus-pseudoseparans
+		MICH10035-Boletus-rubellus
+		MICH10036-Boletus-rubescentipes
+		MICH10037-Boletus-rubissimus
+		MICH10039-Boletus-rubritubifer
+		MICH10040-Boletus-rubroflammeus
+		MICH10041-Boletus-rubropictus
+		MICH10042-Boletus-rufocinnamomeus
+		MICH10045-Boletus-sensibilis
+		MICH10047-Boletus-smithii
+		MICH10048-Boletus-spadiceus
+		MICH10049-Boletus-sphaerocystis
+		MICH10052-Boletus-subdepauperatus
+		MICH10053-Boletus-subgraveolens
+		MICH10054-Boletus-subilludens
+		MICH10055-Boletus-subluridellus
+		MICH10056-Boletus-subpalustris
+		MICH10057-Boletus-subparvulus
+		MICH10058-Boletus-subtomentosus
+		MICH10059-Boletus-tenax
+		MICH10060-Boletus-tennesseensis
+		MICH10061-Boletus-tomentosulus
+		MICH10063-Boletus-variipes
+		MICH10064-Boletus-vermiculosoides
+		MICH10065-Boletus-vinaceobasis
+		MICH10105-Ceriomyces-inedulis
+		MICH11237-Leccinum-arenicola
+		MICH11239-Leccinum-ambiguum
+		MICH11241-Leccinum-areolatum
+		MICH11244-Leccinum-aurantiacum
+		MICH11245-Leccinum-aurantiacum
+		MICH11246-Leccinum-barrowsii
+		MICH11247-Leccinum-boreale
+		MICH11248-Leccinum-broughii
+		MICH11249-Leccinum-brunneo-olivaceum
+		MICH11250-Leccinum-cinnamomeum
+		MICH11251-Leccinum-cinnamomeum
+		MICH11252-Leccinum-coffeatum
+		MICH11253-Leccinum-colubrinum
+		MICH11254-Leccinum-disarticulatum
+		MICH11256-Leccinum-fuscescens
+		MICH11257-Leccinum-glutinopallens
+		MICH11258-Leccinum-holopus
+		MICH11259-Leccinum-huronense
+		MICH11260-Leccinum-imitatum
+		MICH11262-Leccinum-insigne
+		MICH11264-Leccinum-insolens
+		MICH11265-Leccinum-griseonigrum
+		MICH11266-Leccinum-laetum
+		MICH11267-Leccinum-luteum
+		MICH11268-Leccinum-obscurum
+		MICH11269-Leccinum-ochraceum
+		MICH11270-Leccinum-olivace-lutinosum
+		MICH11271-Leccinum-olivaceopallidum
+		MICH11272-Leccinum-pallidistipes
+		MICH11274-Leccinum-pellstonianum
+		MICH11275-Leccinum-ponderosum
+		MICH11277-Leccinum-proliferum
+		MICH11278-Leccinum-proximum
+		MICH11279-Leccinum-pseudoinsigne
+		MICH11280-Leccinum-singeri
+		MICH11281-Leccinum-snellii
+		MICH11282-Leccinum-solheimii
+		MICH11283-Leccinum-subatratum
+		MICH11284-Leccinum-subgranulosum
+		MICH11285-Leccinum-sublutescens
+		MICH11286-Leccinum-subpulchripes
+		MICH11287-Leccinum-subrobustum
+		MICH11288-Leccinum-subspadiceum
+		MICH11289-Leccinum-subtestaceum
+		MICH11290-Leccinum-subtestaceum
+		MICH11291-Leccinum-uliginosum
+		MICH11292-Leccinum-variabile
+		MICH11293-Leccinum-variicolor
+		MICH11316-Leccinum-rimulosum
+		MICH11739-Phylloboletellus-chloephorus
+		MICH11741-Phylloporus-arenicola
+		MICH12342-Tylopilus-cyaneotinctus
+		MICH12343-Tylopilus-felleus
+		MICH12344-Tylopilus-intermedius
+		MICH12346-Tylopilus-rubrobrunneus
+		MICH12347-Tylopilus-subfusipes
+		MICH139781-Retiboletus-ornatipes
+		MICH139813-Phylloporus-rhodoxanthus
+		MICH24411-Boletus-pulcherrimus
+		MICH254595-Tylopilus-chromapes
+		MICH254748-Rubroboletus-rhodosanguineus
+		MICH338577-Phylloporus-rhodoxanthus
+		MICH351-Leccinum-angustisporum
+		MICH40049-Boletus-hortonii
+		MICH41204-Boletus-vermiculosus
+		MICH41231-Boletus-vermiculosoides
+		MICH4994-Boletellus-pseudochrysenteroides
+		MICH4995-Boletellus-intermedius
+		MICH4997-Boletus-eberwhitei
+		MICH4999-Boletus-campestris
+		MICH5000-Boletus-bicoloroides
+		MICH5264-Leccinum-fallax
+		MICH5268-Leccinum-clavatum
+		MICH5271-Leccinum-discolor
+		MICH5272-Leccinum-fibrillosum
+		MICH5294-Leccinum-idahoense
+		MICH5295-Leccinum-incarnatum
+		MICH5296-Leccinum-truebloodii
+		MICH5365-Porphyrellus-amylosporus
+		MICH5547-Gastroboletus-turbinatus
+		MICH5836-Leccinum-subfulvum
+		MICH61460-Boletus-satanas
+		MN840070
+		MU-11-Boletaceae
+		MULU70-Boletus
+		Mulu15-Pulveroboletus-aff-icterinus
+		Mulu19-Tylopilus-cf-pernanus
+		Mulu21-Phylloporus-cf-gajari
+		Mulu29-Pulveroboletus-aff-icterinus
+		Mulu38-Pulveroboletus-cf-viridisquamosus
+		NY1034447-Tylopilus-alboater
+		NY1034450-Royoungia-boletoides
+		NY1115402-Heimioporus-retisporus
+		NY1193852-Wakefieldia-striaesporta
+		NY1193956
+		NY1194050-Phylloporus-scabripes
+		NY1194094-Rossbeevera-mucosa
+		NY13528-Boletus-rubroflammeus
+		NY1393526-Hemioporus-cooloolae
+		NY1393545-Gymnogaster-boletoides
+		NY1393556-Xanthoconium-stramineum
+		NY1393587-Chiua-virens
+		NY1491142-Solioccasus-polychromus
+		NY1491204-Austroboletus-novazelandiae
+		NY2072379-Boletus-semigastroideus
+		NY2072385-Austroboletus-niveus
+		NY2072388-Harrya-chromapes
+		NY2072397-Pulveroboletus-ravenelii
+		NY2072458-Boletellus-deceptivus
+		NY2072517-Austroboletus-eburneus
+		NY2072539-Rossbeevera-pachydermis
+		NY2342733-Zangia-roseola
+		NY2342738-Strobilomyces-echinocephalus
+		NY237215
+		NY2449667-Xanthoconium-purpureum
+		NY2449668-Hemileccinum-hortonii
+		NY2449760-Xerocomus-nothofagi
+		NY2685927-Leccinum-albellum
+		NY2685946-Tylopilus-balloui
+		NY2685958-Boletellus-ananiceps
+		NY2685960-Boletellus-emodensis
+		NY2685980-Strobilomyces-dryophilus
+		NY2685995-Boletellus-ananas
+		NY2686008-Sutorius-australiensis
+		NY2686028-Australopilus-palumanus
+		NY2686029-Crocinoboletus-rufoaureus
+		NY2686045-Xerocomus-mcrobbii
+		NY2686046-Fistulinella-prunicolor
+		NY354083-Retiboletus-flavoniger
+		NY45313-Sutorius-eximius
+		NY575842-Boletus-neoregius
+		NY577517-Leccinum-rugosiceps
+		NY75261-Boletus-frostii
+		NY796126-Veloporphyrellus-conicus
+		NY796211-Leccinum-variicolor
+		NY796215-Imleria-badia
+		NY815401-Xanthoconium-separans
+		NY815461-Aureoboletus-auriporus
+		NY815477-Hemioporus-ivoryi
+		NY817307-Chalciporus-chontae
+		NY817393-Hemileccinum-rubropunctus
+		NY817394-Bothia-castanella
+		PAM-Leccinum-crocipodium
+		PAM-Phylloporus-pelletieri
+		PAM-Xerocomus-dryophilus
+		Paxin1
+		Paxru2
+		REH8497-Boletus-austroedulis
+		S0258-Neoboletus-aff-vermiculosoides.
+		S0261ballouii
+		S0262-Caloboletus-cf-firmus
+		SB01-Pulveroboletus-frians
+		SG-0094881-Gastroboletus-valdivianus
+		SWK119-Sutorius-sp
+		SWK140-Xerocomus-sp
+		SWK144-Xerocomus-sp
+		SWK157-Boletus
+		SWK177-Boletaceae
+		SWK188-Pulveroboletus-cf-ridleyi
+		SWK209-Pseudoaustroboletus-valens
+		SWK246-Leccinum-sp
+		SWK264-Phylloporus-sp
+		SWK277-Phylloporus-sp
+		SWK286-Pseudoaustroboletus-aff-valens
+		SWK290-Boletellus-sp
+		SWK331-Phylloporus-sp
+		SWK335-Crocinoboletus-laetissimus
+		SWK342-Aureoboletus-sp
+		SWK351-Boletaceae
+		SWK356-Hourangia-sp
+		SWK373-Phylloporus-sp
+		SWK382-Crocinoboletus-sp
+		SWK385-Boletaceae
+		SWK386-Pulchroboletus-cf
+		TH10052-Xerocomus-amazonicus
+		TH10065-Pulveroboletus-cf-roseraoriae
+		TH10071-Austroboletus-rostrupii
+		TH10075-Boletellus-ananas-var-ananas
+		TH10094-Tylopilus-vinaceipallidus
+		TH10115-Tylopilus-rufonigricans
+		TH10119-Tylopilus-exiguus
+		TH10390-Chalciporus-sp
+		TH1141B-Guyana-eduloid
+		TH8030-Fistulinella-cinerea
+		TH8035-Binderoboletus-segoi
+		TH8106-Tylopilus-orsonianus
+		TH8459-Singerocomus-inundabilis
+		TH8543-Tylopilus-aff-ballouii-Brown
+		TH8616-Boletellus-dicymbophilus
+		TH8848-Guyanaporus-albipodus
+		TH8875-Chalciporus-aff-trinitensis
+		TH9197-Xerocomus-cyaneibrunnescens
+		TH9209-Xerocomus-parvogracilis
+		TH9221-Pulveroboletus-viridisquamosus
+		TH9249-Sutorius-eximius
+		TH9250-Austroboletus-festivus
+		TH9260-Xerocomus-potaroensis
+		TH9585-Singerocomus-rubriflavus
+		TH9694-Tylopilus-aff-ballouii-Red
+		TW01-indigo-boletus-Taiwan
+		UBC-30908-Boletus-rex-veris
+		UT475-Boletus-sp-nov
+		UT480-Boletus-barrowsii
+		UT485-Boletus-nobilissimus
+		UT486-Boletus-nobilissimus
+		UT492-Boletus-aff-separans-TX
+		UT508-Boletus-variipes
+		UT511-Boletus-atkinsonii
+		UT517-Boletus-separans
+		UT520-Boletus-variipes-var-fagicola
+		VeloBol-ISO
+		WS54583-Boletus-rex-veris
+		Xerba1-Xerocomus-badius
+		ZimZam308-Tylopilus-aff-ballouii
+		ZimZam359-Xerocomus
+		frians-sarawak
+		loyo2-Boletus-loyo
+		;
+End;
+
+Begin Trees;
+	Translate
+		1 0281BoletusfloridannsSTA,
+		2 0297firmusRincon,
+		3 BAKO2-Heimioporus-punctisporus,
+		4 BAKO3-Chiua-aff-virens,
+		5 BD606-Spongispora-temasekensis,
+		6 BD614-Phylloporus,
+		7 BD616-Boletus-cervinococcineus,
+		8 BD619-Boletus-cervinococcineus,
+		9 BD622-Caloboletus,
+		10 BD623-Heimioporus,
+		11 BD625-Tylopilus,
+		12 BD626-Boletus-sp,
+		13 BD630a-Tylopilus-sp-13,
+		14 BD634-Tubosaeta-sp2,
+		15 BD639-Xerocomus-spinulosus,
+		16 BD644-Tylopilus-ballouii,
+		17 BD652b-Phylloporus-sp5,
+		18 BD655-Tylopilus-cordonbleu-nom-prov,
+		19 BD667-Xdrocomus-sp8,
+		20 BD686-Tubosaeta-aff-heterosetosa,
+		21 BD695-Xerocomus-sp8,
+		22 BD697,
+		23 BD703-Stobilomyces-lepidellus,
+		24 BD713-Xerocomus-sp14,
+		25 BD714-Boletellus,
+		26 BD716-Tylopilus-sp,
+		27 BD719-Phylloporus-cf-tubipes,
+		28 BD747-hybrid-assembly,
+		29 BD773-Xerocomus-sp9,
+		30 BD778,
+		31 BD780-Tylopilus-aff-striatulus,
+		32 BD784-Pulveroboletus-sp1,
+		33 BD785-Phylloporus-sp3,
+		34 BD787-Tylopilus-sp1,
+		35 BD806-Tubosaeta-sp1,
+		36 BD815-Tylopilus-sp10,
+		37 BD816-Tylopilus-sp8,
+		38 BD831-Phylloporus-sp4,
+		39 BD832-Boletellus-aff-lepidosporta,
+		40 BD845-Porphyrellus-aff-excedens,
+		41 BD848-Fistulinella-staudtii,
+		42 BD858-Porphyrellus-niger,
+		43 BD869-Tylopilus-sp3,
+		44 BD870-Pulveroboletus-sp2,
+		45 BD872-Tylopilus-sp7,
+		46 BD885,
+		47 BD886-Xerocomus-spinulosus,
+		48 BD890-Emersons-bolete,
+		49 BD919Chile-Boletus-loyita,
+		50 BD921Chile-Boletus-putidus,
+		51 BTNG10-Spongiforma-sp,
+		52 BTNG24-Pulveroboletus-aff-ridleyi,
+		53 BTNG34,
+		54 BTNG58-Boletaceae,
+		55 BTNG65-Boletaceae,
+		56 BTNG86-Tylopilus-callainus-aff,
+		57 Bolcoc1-Boletus-coccyginus,
+		58 Bolret1-Boletus-reticuloceps,
+		59 Buchwaldoboletus-MVC-757,
+		60 Butyri1-Butyriboletus-roseoflavus,
+		61 CTN08-007-Boletaceae,
+		62 CTN08-029,
+		63 CTN08-033-Phylloporus-cf-gajari,
+		64 CTN08-038-Tylopilus-sp,
+		65 CTN08-043-Heimioporus-sp,
+		66 CTN08-049-Leccinum-sp,
+		67 CTN08-051-Boletaceae,
+		68 CTN08-41-Tylopilus-aff-griseipurpureus,
+		69 Chalciporus-piperatus-BD1043,
+		70 Chivir1-Chiua-virens,
+		71 DBG214687-Boletus-cf-mottiae,
+		72 DED7854-Boletus-albobrunnescens,
+		73 DLT-08-0025-Boletus-tylopilopsis,
+		74 DLT08-013-Boletellus-emodensis,
+		75 DLT08-019-Strobilomyces-confusus,
+		76 DLT08-049-Rugiboletus-extremiorientale,
+		77 DLT08-057-Porphyrellus-sp,
+		78 DLT08-059-Tylopilus-aff-ballouii,
+		79 DLT08-065-Neoboletus-cf-brunneissimus,
+		80 DLT08-078-Butyriboletus-pseudospeciosus,
+		81 DLT08-087-Retiboletus-fuscus,
+		82 DLT08-089-Tylopilus-microsporus,
+		83 DLT08-10-Imleria-aff-parva,
+		84 DLT08-109-Strobilomyces-sp,
+		85 DLT08-121-Butyriboletus-sp,
+		86 DLT08-125-Butyriboletus-sp,
+		87 DLT08-126-Austroboletus-cf-mucosus,
+		88 DLT08-127-Boletus-sp,
+		89 DUKE-0350624-Boletus-nobilis,
+		90 DUKE-0351781,
+		91 EAZ1-Chalciporus-piperatus,
+		92 GMF-788-Boletus-loyo,
+		94 JMMU381-Phylloporus-spA,
+		95 JMMU383-Phylloporus-spB,
+		96 KD11096-Boletus-reticuloceps,
+		97 KD12250-Austroboletus-olicaceoglutinosus,
+		98 KM167115-Butyriboletus-regius,
+		99 KM172029-Butyriboletus-appendiculatus,
+		100 KM192148-Rubinoboletus-rubinus,
+		101 KZOM-212-Boletus-reticulatus,
+		102 Lanmao1-Lanmaoa-asiatica,
+		103 MAD-m10-Boletaceae,
+		104 MAD-m19-Leccinum-sp1,
+		105 MAD-m35-Tylopilus-aff-ballouii,
+		106 MAD-m38-Xerocomus-sp,
+		107 MAD-m39-Tylopilus-aff-ballouii,
+		108 MAD-m47-Boletaceae,
+		109 MAD-m49-Boletaceae,
+		110 MAD-m63-Boletellus-sp,
+		111 MAD-m71-Xerocomus-sp,
+		112 MAD-m73-Boletellus-sp,
+		113 MAD-m75-Boletellus-sp,
+		114 MAD-m79-Tylopilus-sp,
+		115 MICH10001-Boletus-bicolor,
+		116 MICH10002-Boletus-carminipes,
+		117 MICH10003-Boletus-chrysenteron,
+		118 MICH10004-Boletus-bicolor,
+		119 MICH10005-Boletus-brunneocitrinus,
+		120 MICH10006-Boletus-calvinii,
+		121 MICH10007-Boletus-chippewaensis,
+		122 MICH10008-Boletus-edulis,
+		123 MICH10009-Boletus-fagicola,
+		124 MICH10010-Boletus-felleus,
+		125 MICH10011-Boletus-harrisonii,
+		126 MICH10012-Boletus-holoroseus,
+		127 MICH10013-Boletus-hoseneae,
+		128 MICH10014-Boletus-huronensis,
+		129 MICH10015-Boletus-flavorubellus,
+		130 MICH10017-Boletus-insuetus,
+		131 MICH10018-Boletus-longicurvipes,
+		132 MICH10019-Boletus-mariae,
+		133 MICH10020-Boletus-miniato-pallescens,
+		134 MICH10022-Boletus-minutiporus,
+		135 MICH10023-Boletus-nancyae,
+		136 MICH10024-Boletus-patriciae,
+		137 MICH10025-Boletus-piperatoides,
+		138 MICH10027-Boletus-pseudo-olivaceus,
+		139 MICH10028-Boletus-pseudopeckii,
+		140 MICH10029-Boletus-pseudorubinellus,
+		141 MICH10030-Boletus-pseudosensibilis,
+		142 MICH10032-Boletus-roseobadius,
+		143 MICH10033-Boletus-piedmontensis,
+		144 MICH10034-Boletus-pseudoseparans,
+		145 MICH10035-Boletus-rubellus,
+		146 MICH10036-Boletus-rubescentipes,
+		147 MICH10037-Boletus-rubissimus,
+		148 MICH10039-Boletus-rubritubifer,
+		149 MICH10040-Boletus-rubroflammeus,
+		150 MICH10041-Boletus-rubropictus,
+		151 MICH10042-Boletus-rufocinnamomeus,
+		152 MICH10045-Boletus-sensibilis,
+		153 MICH10047-Boletus-smithii,
+		154 MICH10048-Boletus-spadiceus,
+		155 MICH10049-Boletus-sphaerocystis,
+		156 MICH10052-Boletus-subdepauperatus,
+		157 MICH10053-Boletus-subgraveolens,
+		158 MICH10054-Boletus-subilludens,
+		159 MICH10055-Boletus-subluridellus,
+		160 MICH10056-Boletus-subpalustris,
+		161 MICH10057-Boletus-subparvulus,
+		162 MICH10058-Boletus-subtomentosus,
+		163 MICH10059-Boletus-tenax,
+		164 MICH10060-Boletus-tennesseensis,
+		165 MICH10061-Boletus-tomentosulus,
+		166 MICH10063-Boletus-variipes,
+		167 MICH10064-Boletus-vermiculosoides,
+		168 MICH10065-Boletus-vinaceobasis,
+		169 MICH10105-Ceriomyces-inedulis,
+		170 MICH11237-Leccinum-arenicola,
+		171 MICH11239-Leccinum-ambiguum,
+		172 MICH11241-Leccinum-areolatum,
+		173 MICH11244-Leccinum-aurantiacum,
+		174 MICH11245-Leccinum-aurantiacum,
+		175 MICH11246-Leccinum-barrowsii,
+		176 MICH11247-Leccinum-boreale,
+		177 MICH11248-Leccinum-broughii,
+		178 MICH11249-Leccinum-brunneo-olivaceum,
+		179 MICH11250-Leccinum-cinnamomeum,
+		180 MICH11251-Leccinum-cinnamomeum,
+		181 MICH11252-Leccinum-coffeatum,
+		182 MICH11253-Leccinum-colubrinum,
+		183 MICH11254-Leccinum-disarticulatum,
+		184 MICH11256-Leccinum-fuscescens,
+		185 MICH11257-Leccinum-glutinopallens,
+		186 MICH11258-Leccinum-holopus,
+		187 MICH11259-Leccinum-huronense,
+		188 MICH11260-Leccinum-imitatum,
+		189 MICH11262-Leccinum-insigne,
+		190 MICH11264-Leccinum-insolens,
+		191 MICH11265-Leccinum-griseonigrum,
+		192 MICH11266-Leccinum-laetum,
+		193 MICH11267-Leccinum-luteum,
+		194 MICH11268-Leccinum-obscurum,
+		195 MICH11269-Leccinum-ochraceum,
+		196 MICH11270-Leccinum-olivace-lutinosum,
+		197 MICH11271-Leccinum-olivaceopallidum,
+		198 MICH11272-Leccinum-pallidistipes,
+		199 MICH11274-Leccinum-pellstonianum,
+		200 MICH11275-Leccinum-ponderosum,
+		201 MICH11277-Leccinum-proliferum,
+		202 MICH11278-Leccinum-proximum,
+		203 MICH11279-Leccinum-pseudoinsigne,
+		204 MICH11280-Leccinum-singeri,
+		205 MICH11281-Leccinum-snellii,
+		206 MICH11282-Leccinum-solheimii,
+		207 MICH11283-Leccinum-subatratum,
+		208 MICH11284-Leccinum-subgranulosum,
+		209 MICH11285-Leccinum-sublutescens,
+		210 MICH11286-Leccinum-subpulchripes,
+		211 MICH11287-Leccinum-subrobustum,
+		212 MICH11288-Leccinum-subspadiceum,
+		213 MICH11289-Leccinum-subtestaceum,
+		214 MICH11290-Leccinum-subtestaceum,
+		215 MICH11291-Leccinum-uliginosum,
+		216 MICH11292-Leccinum-variabile,
+		217 MICH11293-Leccinum-variicolor,
+		218 MICH11316-Leccinum-rimulosum,
+		219 MICH11739-Phylloboletellus-chloephorus,
+		220 MICH11741-Phylloporus-arenicola,
+		221 MICH12342-Tylopilus-cyaneotinctus,
+		222 MICH12343-Tylopilus-felleus,
+		223 MICH12344-Tylopilus-intermedius,
+		224 MICH12346-Tylopilus-rubrobrunneus,
+		225 MICH12347-Tylopilus-subfusipes,
+		226 MICH139781-Retiboletus-ornatipes,
+		227 MICH139813-Phylloporus-rhodoxanthus,
+		228 MICH24411-Boletus-pulcherrimus,
+		229 MICH254595-Tylopilus-chromapes,
+		230 MICH254748-Rubroboletus-rhodosanguineus,
+		231 MICH338577-Phylloporus-rhodoxanthus,
+		232 MICH351-Leccinum-angustisporum,
+		233 MICH40049-Boletus-hortonii,
+		234 MICH41204-Boletus-vermiculosus,
+		235 MICH41231-Boletus-vermiculosoides,
+		236 MICH4994-Boletellus-pseudochrysenteroides,
+		237 MICH4995-Boletellus-intermedius,
+		238 MICH4997-Boletus-eberwhitei,
+		239 MICH4999-Boletus-campestris,
+		240 MICH5000-Boletus-bicoloroides,
+		241 MICH5264-Leccinum-fallax,
+		242 MICH5268-Leccinum-clavatum,
+		243 MICH5271-Leccinum-discolor,
+		244 MICH5272-Leccinum-fibrillosum,
+		245 MICH5294-Leccinum-idahoense,
+		246 MICH5295-Leccinum-incarnatum,
+		247 MICH5296-Leccinum-truebloodii,
+		248 MICH5365-Porphyrellus-amylosporus,
+		249 MICH5547-Gastroboletus-turbinatus,
+		250 MICH5836-Leccinum-subfulvum,
+		251 MICH61460-Boletus-satanas,
+		252 MN840070,
+		253 MU-11-Boletaceae,
+		254 MULU70-Boletus,
+		255 Mulu15-Pulveroboletus-aff-icterinus,
+		256 Mulu19-Tylopilus-cf-pernanus,
+		257 Mulu21-Phylloporus-cf-gajari,
+		258 Mulu29-Pulveroboletus-aff-icterinus,
+		259 Mulu38-Pulveroboletus-cf-viridisquamosus,
+		260 NY1034447-Tylopilus-alboater,
+		261 NY1034450-Royoungia-boletoides,
+		262 NY1115402-Heimioporus-retisporus,
+		263 NY1193852-Wakefieldia-striaesporta,
+		264 NY1193956,
+		265 NY1194050-Phylloporus-scabripes,
+		266 NY1194094-Rossbeevera-mucosa,
+		267 NY13528-Boletus-rubroflammeus,
+		268 NY1393526-Hemioporus-cooloolae,
+		269 NY1393545-Gymnogaster-boletoides,
+		270 NY1393556-Xanthoconium-stramineum,
+		271 NY1393587-Chiua-virens,
+		272 NY1491142-Solioccasus-polychromus,
+		273 NY1491204-Austroboletus-novazelandiae,
+		274 NY2072379-Boletus-semigastroideus,
+		275 NY2072385-Austroboletus-niveus,
+		276 NY2072388-Harrya-chromapes,
+		277 NY2072397-Pulveroboletus-ravenelii,
+		278 NY2072458-Boletellus-deceptivus,
+		279 NY2072517-Austroboletus-eburneus,
+		280 NY2072539-Rossbeevera-pachydermis,
+		281 NY2342733-Zangia-roseola,
+		282 NY2342738-Strobilomyces-echinocephalus,
+		283 NY237215,
+		284 NY2449667-Xanthoconium-purpureum,
+		285 NY2449668-Hemileccinum-hortonii,
+		286 NY2449760-Xerocomus-nothofagi,
+		287 NY2685927-Leccinum-albellum,
+		288 NY2685946-Tylopilus-balloui,
+		289 NY2685958-Boletellus-ananiceps,
+		290 NY2685960-Boletellus-emodensis,
+		291 NY2685980-Strobilomyces-dryophilus,
+		292 NY2685995-Boletellus-ananas,
+		293 NY2686008-Sutorius-australiensis,
+		294 NY2686028-Australopilus-palumanus,
+		295 NY2686029-Crocinoboletus-rufoaureus,
+		296 NY2686045-Xerocomus-mcrobbii,
+		297 NY2686046-Fistulinella-prunicolor,
+		298 NY354083-Retiboletus-flavoniger,
+		299 NY45313-Sutorius-eximius,
+		300 NY575842-Boletus-neoregius,
+		301 NY577517-Leccinum-rugosiceps,
+		302 NY75261-Boletus-frostii,
+		303 NY796126-Veloporphyrellus-conicus,
+		304 NY796211-Leccinum-variicolor,
+		305 NY796215-Imleria-badia,
+		306 NY815401-Xanthoconium-separans,
+		307 NY815461-Aureoboletus-auriporus,
+		308 NY815477-Hemioporus-ivoryi,
+		309 NY817307-Chalciporus-chontae,
+		310 NY817393-Hemileccinum-rubropunctus,
+		311 NY817394-Bothia-castanella,
+		312 PAM-Leccinum-crocipodium,
+		313 PAM-Phylloporus-pelletieri,
+		314 PAM-Xerocomus-dryophilus,
+		315 Paxin1,
+		316 Paxru2,
+		317 REH8497-Boletus-austroedulis,
+		318 S0258-Neoboletus-aff-vermiculosoides.,
+		319 S0261ballouii,
+		320 S0262-Caloboletus-cf-firmus,
+		321 SB01-Pulveroboletus-frians,
+		322 SG-0094881-Gastroboletus-valdivianus,
+		323 SWK119-Sutorius-sp,
+		324 SWK140-Xerocomus-sp,
+		325 SWK144-Xerocomus-sp,
+		326 SWK157-Boletus,
+		327 SWK177-Boletaceae,
+		328 SWK188-Pulveroboletus-cf-ridleyi,
+		329 SWK209-Pseudoaustroboletus-valens,
+		330 SWK246-Leccinum-sp,
+		331 SWK264-Phylloporus-sp,
+		332 SWK277-Phylloporus-sp,
+		333 SWK286-Pseudoaustroboletus-aff-valens,
+		334 SWK290-Boletellus-sp,
+		335 SWK331-Phylloporus-sp,
+		336 SWK335-Crocinoboletus-laetissimus,
+		337 SWK342-Aureoboletus-sp,
+		338 SWK351-Boletaceae,
+		339 SWK356-Hourangia-sp,
+		340 SWK373-Phylloporus-sp,
+		341 SWK382-Crocinoboletus-sp,
+		342 SWK385-Boletaceae,
+		343 SWK386-Pulchroboletus-cf,
+		344 TH10052-Xerocomus-amazonicus,
+		345 TH10065-Pulveroboletus-cf-roseraoriae,
+		346 TH10071-Austroboletus-rostrupii,
+		347 TH10075-Boletellus-ananas-var-ananas,
+		348 TH10094-Tylopilus-vinaceipallidus,
+		349 TH10115-Tylopilus-rufonigricans,
+		350 TH10119-Tylopilus-exiguus,
+		351 TH10390-Chalciporus-sp,
+		352 TH1141B-Guyana-eduloid,
+		353 TH8030-Fistulinella-cinerea,
+		354 TH8035-Binderoboletus-segoi,
+		355 TH8106-Tylopilus-orsonianus,
+		356 TH8459-Singerocomus-inundabilis,
+		357 TH8543-Tylopilus-aff-ballouii-Brown,
+		358 TH8616-Boletellus-dicymbophilus,
+		359 TH8848-Guyanaporus-albipodus,
+		360 TH8875-Chalciporus-aff-trinitensis,
+		361 TH9197-Xerocomus-cyaneibrunnescens,
+		362 TH9209-Xerocomus-parvogracilis,
+		363 TH9221-Pulveroboletus-viridisquamosus,
+		364 TH9249-Sutorius-eximius,
+		365 TH9250-Austroboletus-festivus,
+		366 TH9260-Xerocomus-potaroensis,
+		367 TH9585-Singerocomus-rubriflavus,
+		368 TH9694-Tylopilus-aff-ballouii-Red,
+		369 TW01-indigo-boletus-Taiwan,
+		370 UBC-30908-Boletus-rex-veris,
+		371 UT475-Boletus-sp-nov,
+		372 UT480-Boletus-barrowsii,
+		373 UT485-Boletus-nobilissimus,
+		374 UT486-Boletus-nobilissimus,
+		375 UT492-Boletus-aff-separans-TX,
+		376 UT508-Boletus-variipes,
+		377 UT511-Boletus-atkinsonii,
+		378 UT517-Boletus-separans,
+		379 UT520-Boletus-variipes-var-fagicola,
+		380 VeloBol-ISO,
+		381 WS54583-Boletus-rex-veris,
+		382 Xerba1-Xerocomus-badius,
+		383 ZimZam308-Tylopilus-aff-ballouii,
+		384 ZimZam359-Xerocomus,
+		385 frians-sarawak,
+		386 loyo2-Boletus-loyo
+		;
+tree TREE1 = [&R] ((((((((((((((((((((((75[&rate=NA,branch_length=1.7008453248452866E-002]:3.3004073526184436E+000,84[&rate=NA,branch_length=3.2364757217630734E-002]:3.3004073526184436E+000)[&rate=NA,branch_length=4.4106970174170944E-002,reltime=9.1707805644904169E-003,reltime_stderr=6.0359495425255349E-003,divtime=3.3004073526184437E+000,divtime_95%_CI={1.1294111786470010E+000,9.6445731184164315E+000},data_coverage=16%]:6.2044913703447901E+000,(282[&rate=NA,branch_length=2.4505998685460710E-002]:3.7157293010239019E+000,291[&rate=NA,branch_length=3.5221819542162455E-002]:3.7157293010239019E+000)[&rate=NA,branch_length=4.5773517681562945E-002,reltime=1.0324827942739426E-002,reltime_stderr=6.7806893820913990E-003,divtime=3.7157293010239019E+000,divtime_95%_CI={1.2737311133456424E+000,1.0839528134177699E+001},data_coverage=22%]:5.7891694219393319E+000)[&rate=NA,branch_length=3.2269451638038321E-002,reltime=2.6411085409455614E-002,reltime_stderr=1.2945872620448618E-002,divtime=9.5048987229632338E+000,divtime_95%_CI={4.0490266042286258E+000,2.2312300847674782E+001},data_coverage=21%]:4.3041961040441079E+000,23[&rate=NA,branch_length=8.8849919485545062E-002]:1.3809094827007343E+001)[&rate=NA,branch_length=3.3158008463467496E-002,reltime=3.8371075119636849E-002,reltime_stderr=1.6124098074183436E-002,divtime=1.3809094827007342E+001,divtime_95%_CI={6.5163875084375482E+000,2.9263314941655986E+001},data_coverage=22%]:4.5950562262117079E+000,(349[&rate=NA,branch_length=6.7411783161668654E-002]:1.6220376695041132E+001,350[&rate=NA,branch_length=8.9844850609836935E-002]:1.6220376695041132E+001)[&rate=NA,branch_length=1.0477588295923986E-002,reltime=4.5071259226707259E-002,reltime_stderr=2.0043207012104124E-002,divtime=1.6220376695041131E+001,divtime_95%_CI={7.3790937067081093E+000,3.4103232259650324E+001},data_coverage=21%]:2.1837743581779183E+000)[&rate=NA,branch_length=8.6772837685414588E-003,reltime=5.1139272444930712E-002,reltime_stderr=1.7133723653505618E-002,divtime=1.8404151053219050E+001,divtime_95%_CI={9.9319845523984604E+000,3.4103232259650324E+001},data_coverage=25%]:1.4747153899332687E+000,(((37[&rate=NA,branch_length=4.6982301975528953E-003]:6.3372416865143821E-001,43[&rate=NA,branch_length=4.5605523193657359E-003]:6.3372416865143821E-001)[&rate=NA,branch_length=6.3810927109993448E-002,reltime=1.7609175681012811E-003,reltime_stderr=2.2655219836119019E-003,divtime=6.3372416865143825E-001,divtime_95%_CI={1.2107023199132365E-001,3.3171351481488628E+000},data_coverage=21%]:8.7361374366461316E+000,104[&rate=NA,branch_length=5.0673053068987270E-002]:9.3698616052975705E+000)[&rate=NA,branch_length=4.4453085217743438E-002,reltime=2.6035860280596726E-002,reltime_stderr=1.3968892860965803E-002,divtime=9.3698616052975698E+000,divtime_95%_CI={3.7438407209312577E+000,2.3450331637129918E+001},data_coverage=12%]:6.5608368274013865E+000,33[&rate=NA,branch_length=9.8876873581432323E-002]:1.5930698432698957E+001)[&rate=NA,branch_length=2.5683805647786346E-002,reltime=4.4266335623523753E-002,reltime_stderr=1.7186250112637515E-002,divtime=1.5930698432698956E+001,divtime_95%_CI={7.8959765548396874E+000,3.2141325495456672E+001},data_coverage=12%]:3.9481680104533620E+000)[&rate=NA,branch_length=1.0308388852333318E-002,reltime=5.5237036687706732E-002,reltime_stderr=1.6597345410687629E-002,divtime=1.9878866443152318E+001,divtime_95%_CI={1.1362825578722632E+001,3.4777382467672344E+001},data_coverage=25%]:1.6661769572729149E+000,(42[&rate=NA,branch_length=9.1454413887636463E-002]:1.5951651297261479E+001,77[&rate=NA,branch_length=5.8891203904437098E-002]:1.5951651297261479E+001)[&rate=NA,branch_length=2.5733399911529529E-002,reltime=4.4324556958822847E-002,reltime_stderr=1.8396509150671651E-002,divtime=1.5951651297261480E+001,divtime_95%_CI={7.5867420438478468E+000,3.3539453119506511E+001},data_coverage=9%]:5.5933921031637529E+000)[&rate=NA,branch_length=7.1213220290373873E-003,reltime=5.9866811628862836E-002,reltime_stderr=1.6748881318586478E-002,divtime=2.1545043400425233E+001,divtime_95%_CI={1.2757430965729746E+001,3.6385765784126626E+001},data_coverage=22%]:1.3347958223631515E+000,260[&rate=NA,branch_length=5.0108918502831445E-002]:2.2879839222788384E+001)[&rate=NA,branch_length=1.3538196467990902E-002,reltime=6.3575783969982867E-002,reltime_stderr=1.6472320537764299E-002,divtime=2.2879839222788385E+001,divtime_95%_CI={1.4041975975664582E+001,3.7280155141119309E+001},data_coverage=21%]:3.1910711752838778E+000,((((((18[&rate=NA,branch_length=7.7300820296406350E-002]:1.1824745022815371E+001,221[&rate=NA,branch_length=4.9665899861976857E-002]:1.1824745022815371E+001)[&rate=NA,branch_length=1.3325032348964311E-002,reltime=3.2857199202775765E-002,reltime_stderr=2.0201864730081395E-002,divtime=1.1824745022815372E+001,divtime_95%_CI={4.2672568240267091E+000,3.2766857168595328E+001},data_coverage=21%]:2.5429560322320528E+000,26[&rate=NA,branch_length=9.2527147677275517E-002]:1.4367701055047425E+001)[&rate=NA,branch_length=4.7950267499675290E-003,reltime=3.9923263862414002E-002,reltime_stderr=2.0309370093036137E-002,divtime=1.4367701055047425E+001,divtime_95%_CI={5.9636403945516212E+000,3.3075130175304234E+001},data_coverage=21%]:8.6910749645035361E-001,40[&rate=NA,branch_length=8.3804187818236092E-002]:1.5236808551497779E+001)[&rate=NA,branch_length=9.3556231312355905E-003,reltime=4.2338236708289029E-002,reltime_stderr=1.8689579742268908E-002,divtime=1.5236808551497778E+001,divtime_95%_CI={6.9652188976061723E+000,3.3075130175304234E+001},data_coverage=23%]:1.6753077906729956E+000,46[&rate=NA,branch_length=8.9081119655245969E-002]:1.6912116342170773E+001)[&rate=NA,branch_length=2.4743508103011843E-002,reltime=4.6993383326494824E-002,reltime_stderr=1.7315406288260350E-002,divtime=1.6912116342170774E+001,divtime_95%_CI={8.6475753127852615E+000,3.3075130175304234E+001},data_coverage=21%]:4.4824517117980277E+000,(108[&rate=NA,branch_length=6.3521574127330130E-002]:1.2728481554994513E+001,109[&rate=NA,branch_length=6.9670588173752657E-002]:1.2728481554994513E+001)[&rate=NA,branch_length=4.5293072906531236E-002,reltime=3.5368395106564131E-002,reltime_stderr=1.5946465038907012E-002,divtime=1.2728481554994513E+001,divtime_95%_CI={5.7381659787327363E+000,2.8234499193001053E+001},data_coverage=6%]:8.6660864989742884E+000)[&rate=NA,branch_length=1.0898151311249688E-002,reltime=5.9448688580620693E-002,reltime_stderr=1.6988053520516087E-002,divtime=2.1394568053968801E+001,divtime_95%_CI={1.2538888799503336E+001,3.6504633666902997E+001},data_coverage=16%]:2.0289699882927402E+000,361[&rate=NA,branch_length=8.7904055060361058E-002]:2.3423538042261541E+001)[&rate=NA,branch_length=1.2981742307534561E-002,reltime=6.5086549773666148E-002,reltime_stderr=1.6715690536072611E-002,divtime=2.3423538042261542E+001,divtime_95%_CI={1.4432975098989181E+001,3.7328752551036448E+001},data_coverage=22%]:2.6473723558107208E+000)[&rate=NA,branch_length=5.9041250632910075E-003,reltime=7.2442754130796900E-002,reltime_stderr=1.4593639911961774E-002,divtime=2.6070910398072263E+001,divtime_95%_CI={1.7735654194263901E+001,3.7328752551036448E+001},data_coverage=29%]:1.2944474086910583E+000,(340[&rate=NA,branch_length=3.2242027049020901E-003]:7.1499624198996270E-001,56[&rate=NA,branch_length=3.1133095583487881E-003]:7.1499624198996270E-001)[&rate=NA,branch_length=1.1809232356677367E-001,reltime=1.9867467676446219E-003,reltime_stderr=1.9707023885719692E-003,divtime=7.1499624198996271E-001,divtime_95%_CI={1.7310381015028313E-001,2.9532546141875500E+000},data_coverage=6%]:2.6650361564773358E+001)[&rate=NA,branch_length=5.1691536473559138E-003,reltime=7.6039611084821310E-002,reltime_stderr=1.3873725220745268E-002,divtime=2.7365357806763321E+001,divtime_95%_CI={1.9276417189187899E+001,3.7328752551036448E+001},data_coverage=19%]:1.1498060545569938E+000,(((270[&rate=NA,branch_length=3.0766857578739659E-002]:6.7336107496940487E+000,284[&rate=NA,branch_length=2.2061707763570859E-002]:6.7336107496940487E+000)[&rate=NA,branch_length=5.4535452383981296E-002,reltime=1.8710559029371143E-002,reltime_stderr=9.5970754940045771E-003,divtime=6.7336107496940492E+000,divtime_95%_CI={2.7786765634100870E+000,1.6317665152345258E+001},data_coverage=23%]:1.4095023140742395E+001,38[&rate=NA,branch_length=8.6671807448162150E-002]:2.0828633890436443E+001)[&rate=NA,branch_length=2.0045524305143069E-002,reltime=5.7876137839698956E-002,reltime_stderr=1.7135523600888260E-002,divtime=2.0828633890436445E+001,divtime_95%_CI={1.1994738185135883E+001,3.6168525152091340E+001},data_coverage=18%]:5.0874869489294925E+000,295[&rate=NA,branch_length=1.1288888144309736E-001]:2.5916120839365938E+001)[&rate=NA,branch_length=1.0548594357767465E-002,reltime=7.2012643261166278E-002,reltime_stderr=1.4587055321592039E-002,divtime=2.5916120839365937E+001,divtime_95%_CI={1.7594669431331112E+001,3.7328752551036448E+001},data_coverage=23%]:2.5990430219543776E+000)[&rate=NA,branch_length=6.3368818340501076E-003,reltime=7.9234555796630567E-002,reltime_stderr=1.1019899808721249E-002,divtime=2.8515163861320315E+001,divtime_95%_CI={2.1782527260353671E+001,3.7328752551036448E+001},data_coverage=27%]:3.3665496668894767E+000,(((352[&rate=NA,branch_length=3.3208596614197235E-002]:8.0675368488388237E+000,362[&rate=NA,branch_length=3.5042386800400872E-002]:8.0675368488388237E+000)[&rate=NA,branch_length=3.9073841487457191E-002,reltime=2.2417114686750228E-002,reltime_stderr=1.1675289497028211E-002,divtime=8.0675368488388245E+000,divtime_95%_CI={3.2931267738736484E+000,1.9763937217276857E+001},data_coverage=22%]:9.2407020439630081E+000,62[&rate=NA,branch_length=8.5300808884203369E-002]:1.7308238892801832E+001)[&rate=NA,branch_length=1.5722829595952718E-002,reltime=4.8094081695016385E-002,reltime_stderr=1.6033931464275873E-002,divtime=1.7308238892801833E+001,divtime_95%_CI={9.3659232613065046E+000,3.1985648954431921E+001},data_coverage=14%]:3.5786545938192734E+000,48[&rate=NA,branch_length=8.6551562135887522E-002]:2.0886893486621105E+001)[&rate=NA,branch_length=4.8062242332954037E-002,reltime=5.8038022696718641E-002,reltime_stderr=1.3571382949667529E-002,divtime=2.0886893486621106E+001,divtime_95%_CI={1.3403261029407192E+001,3.2548968386445763E+001},data_coverage=23%]:1.0994820041588685E+001)[&rate=NA,branch_length=6.3758239915898511E-003,reltime=8.8589124780367465E-002,reltime_stderr=1.0109679801353185E-002,divtime=3.1881713528209791E+001,divtime_95%_CI={2.5538423461782503E+001,3.9800564001764367E+001},data_coverage=28%]:2.5393361201406511E+000,(((((((((((121[&rate=NA,branch_length=7.1422724056063158E-003]:1.7521629619157877E+000,122[&rate=NA,branch_length=4.9154712260587137E-003]:1.7521629619157877E+000)[&rate=NA,branch_length=2.2146056319959223E-003,reltime=4.8687026539947698E-003,reltime_stderr=3.4206763506655068E-003,divtime=1.7521629619157877E+000,divtime_95%_CI={5.6908337265461874E-001,5.3947720011365706E+000},data_coverage=15%]:6.5489264301872844E-001,28[&rate=NA,branch_length=5.3985374504952411E-003]:2.4070556049345160E+000)[&rate=NA,branch_length=9.6442896299356803E-003,reltime=6.6884406683520078E-003,reltime_stderr=3.7666623745869418E-003,divtime=2.4070556049345162E+000,divtime_95%_CI={9.2821477058329128E-001,6.2420000940146271E+000},data_coverage=20%]:3.1602979477051540E+000,(58[&rate=NA,branch_length=1.4363740096709982E-002]:2.7586437801096664E+000,96[&rate=NA,branch_length=6.1204807232122620E-003]:2.7586437801096664E+000)[&rate=NA,branch_length=9.5463593301058115E-003,reltime=7.6653921955757088E-003,reltime_stderr=3.6622181027493826E-003,divtime=2.7586437801096665E+000,divtime_95%_CI={1.1960840736029256E+000,6.3625255728170042E+000},data_coverage=9%]:2.8087097725300037E+000)[&rate=NA,branch_length=1.7908744558551677E-003,reltime=1.5469901833689558E-002,reltime_stderr=5.9684647152389412E-003,divtime=5.5673535526396702E+000,divtime_95%_CI={2.8712676685088740E+000,1.1189903954054648E+001},data_coverage=21%]:5.5606886403699836E-001,(370[&rate=NA,branch_length=2.9139797609256629E-003]:1.5703526999812185E+000,381[&rate=NA,branch_length=4.0814399444150419E-003]:1.5703526999812185E+000)[&rate=NA,branch_length=9.9990114457874594E-003,reltime=4.3635098585504013E-003,reltime_stderr=3.3410507102352505E-003,divtime=1.5703526999812185E+000,divtime_95%_CI={4.7527152299717904E-001,5.1886289899867193E+000},data_coverage=9%]:4.5530697166954500E+000)[&rate=NA,branch_length=1.9997186575503906E-003,reltime=1.7015040050274524E-002,reltime_stderr=7.9602349474583114E-003,divtime=6.1234224166766686E+000,divtime_95%_CI={2.8712676685088740E+000,1.3922957976418387E+001},data_coverage=23%]:6.5116515607991787E-001,(71[&rate=NA,branch_length=4.2803614508251323E-003]:1.5646682569279391E+000,252[&rate=NA,branch_length=3.8616544557535312E-003]:1.5646682569279391E+000)[&rate=NA,branch_length=1.3537412195198032E-002,reltime=4.3477146022976816E-003,reltime_stderr=3.2476719105859736E-003,divtime=1.5646682569279390E+000,divtime_95%_CI={4.8335567639975536E-001,5.0649798352904044E+000},data_coverage=23%]:5.2099193158286474E+000)[&rate=NA,branch_length=7.6704874352556242E-003,reltime=1.8824420565959449E-002,reltime_stderr=8.2138731432554557E-003,divtime=6.7745875727565864E+000,divtime_95%_CI={3.1204024184827136E+000,1.4708050637668811E+001},data_coverage=24%]:2.5737078745972883E+000,(((130[&rate=NA,branch_length=1.3026726315251451E-003]:6.6626782223453418E-001,166[&rate=NA,branch_length=1.6209585781265094E-003]:6.6626782223453418E-001)[&rate=NA,branch_length=8.4534118015962105E-004,reltime=1.8513460134083682E-003,reltime_stderr=2.3895464825871562E-003,divtime=6.6626782223453419E-001,divtime_95%_CI={1.2690698512826194E-001,3.4979383561629528E+000},data_coverage=21%]:3.8759419331519537E-001,379[&rate=NA,branch_length=2.6528258512097508E-003]:1.0538620155497296E+000)[&rate=NA,branch_length=1.1981483119368494E-002,reltime=2.9283467939769454E-003,reltime_stderr=2.7320272845643629E-003,divtime=1.0538620155497296E+000,divtime_95%_CI={2.6933896072454910E-001,4.1235220661386836E+000},data_coverage=8%]:5.3001512115117763E+000,376[&rate=NA,branch_length=2.6312415001413743E-002]:6.3540132270615057E+000)[&rate=NA,branch_length=7.9456514434069567E-003,reltime=1.7655778448990556E-002,reltime_stderr=9.8478759984279844E-003,divtime=6.3540132270615058E+000,divtime_95%_CI={2.4677356080616347E+000,1.6360538769947593E+001},data_coverage=8%]:2.9942822202923689E+000)[&rate=NA,branch_length=2.5070034809159840E-003,reltime=2.5975934798378945E-002,reltime_stderr=1.0752788426696054E-002,divtime=9.3482954473538748E+000,divtime_95%_CI={4.4535017160897450E+000,1.9622902008837157E+001},data_coverage=24%]:8.3805027563229053E-001,((((374[&rate=NA,branch_length=4.4163986377352242E-003]:1.5040438964586627E+000,373[&rate=NA,branch_length=1.2725684293063992E-002]:1.5040438964586627E+000)[&rate=NA,branch_length=1.1776509308395858E-002,reltime=4.1792588187153280E-003,reltime_stderr=3.5681237727460718E-003,divtime=1.5040438964586626E+000,divtime_95%_CI={4.1515997244289084E-001,5.4488587354980037E+000},data_coverage=7%]:2.3626662919134409E+000,101[&rate=NA,branch_length=1.6581740241640081E-002]:3.8667101883721036E+000)[&rate=NA,branch_length=2.5791917303262693E-003,reltime=1.0744355728060803E-002,reltime_stderr=7.0197620270361273E-003,divtime=3.8667101883721035E+000,divtime_95%_CI={1.3309128537135526E+000,1.0158544092717002E+001},data_coverage=22%]:5.3728023033515149E-001,90[&rate=NA,branch_length=1.7408611856735697E-002]:4.4039904187072549E+000)[&rate=NA,branch_length=1.4796231019169623E-003,reltime=1.2237286317411656E-002,reltime_stderr=6.6512389903659958E-003,divtime=4.4039904187072550E+000,divtime_95%_CI={1.7431714754368777E+000,1.0158544092717002E+001},data_coverage=16%]:3.2661974911434035E-001,(372[&rate=NA,branch_length=8.8854107618448561E-003]:3.5522969892930356E+000,377[&rate=NA,branch_length=1.3556141402833569E-002]:3.5522969892930356E+000)[&rate=NA,branch_length=3.6404767947358671E-003,reltime=9.8707016159264451E-003,reltime_stderr=6.0583082710498302E-003,divtime=3.5522969892930355E+000,divtime_95%_CI={1.2836571604944334E+000,9.8303614769537882E+000},data_coverage=21%]:1.1783131785285598E+000)[&rate=NA,branch_length=2.0410629947784861E-002,reltime=1.3144858543240114E-002,reltime_stderr=5.6393078154949330E-003,divtime=4.7306101678215953E+000,divtime_95%_CI={2.2029409289015221E+000,1.0158544092717002E+001},data_coverage=23%]:5.4557355551645700E+000)[&rate=NA,branch_length=4.7550556491250369E-003,reltime=2.8304609522042054E-002,reltime_stderr=1.0783348879730227E-002,divtime=1.0186345722986165E+001,divtime_95%_CI={5.1066021957260838E+000,2.0319115374806508E+001},data_coverage=25%]:1.3237377734169282E+000,371[&rate=NA,branch_length=3.7195167542136566E-002]:1.1510083496403093E+001)[&rate=NA,branch_length=2.7225703348983322E-002,reltime=3.1982855068096394E-002,reltime_stderr=1.1277789607529791E-002,divtime=1.1510083496403094E+001,divtime_95%_CI={6.0365617234057933E+000,2.1946602745813600E+001},data_coverage=22%]:7.5763239510575551E+000,(317[&rate=NA,branch_length=5.3014356122081781E-002]:8.8998671888357794E+000,12[&rate=NA,branch_length=4.3332152565983655E-002]:8.8998671888357794E+000)[&rate=NA,branch_length=5.4858642608871508E-002,reltime=2.4729895531582573E-002,reltime_stderr=1.1229292294857841E-002,divtime=8.8998671888357786E+000,divtime_95%_CI={3.9933350207319715E+000,1.9834958892178558E+001},data_coverage=12%]:1.0186540258624870E+001)[&rate=NA,branch_length=2.6062654580991058E-002,reltime=5.3035045606187971E-002,reltime_stderr=1.2392828977086405E-002,divtime=1.9086407447460649E+001,divtime_95%_CI={1.2251448312682090E+001,2.9734521172764974E+001},data_coverage=22%]:5.5849427935382395E+000,(((((144[&rate=NA,branch_length=5.0527676790833014E-003]:7.2081482647418771E-001,306[&rate=NA,branch_length=2.7040943510223303E-003]:7.2081482647418771E-001)[&rate=NA,branch_length=1.0316393255952411E-003,reltime=2.0029147601981597E-003,reltime_stderr=2.3135561040028838E-003,divtime=7.2081482647418774E-001,divtime_95%_CI={1.5210315875712783E-001,3.4159317815000027E+000},data_coverage=16%]:2.0117592847082940E-001,378[&rate=NA,branch_length=2.7883728206306050E-003]:9.2199075494501714E-001)[&rate=NA,branch_length=1.7412920481600948E-002,reltime=2.5619185732880429E-003,reltime_stderr=2.3787742180554347E-003,divtime=9.2199075494501714E-001,divtime_95%_CI={2.3662531971074532E-001,3.5924598147113693E+000},data_coverage=20%]:3.8748209773646908E+000,(73[&rate=NA,branch_length=2.1075186078249340E-002]:3.5652775359492122E+000,89[&rate=NA,branch_length=1.2806766523760071E-002]:3.5652775359492122E+000)[&rate=NA,branch_length=5.6749048957378864E-003,reltime=9.9067704196444105E-003,reltime_stderr=6.5129904138407621E-003,divtime=3.5652775359492120E+000,divtime_95%_CI={1.2211410278863522E+000,1.0409284118760341E+001},data_coverage=21%]:1.2315341963604959E+000)[&rate=NA,branch_length=1.1633960774240415E-002,reltime=1.3328811599963482E-002,reltime_stderr=6.5223007584552409E-003,divtime=4.7968117323097080E+000,divtime_95%_CI={2.0458098917075517E+000,1.1247087468141567E+001},data_coverage=22%]:2.5565927429982232E+000,(274[&rate=NA,branch_length=4.1688433730472506E-002]:6.6800046540382079E+000,369[&rate=NA,branch_length=2.9935245013292464E-002]:6.6800046540382079E+000)[&rate=NA,branch_length=3.5611923321191862E-003,reltime=1.8561604767774077E-002,reltime_stderr=1.0281541516355310E-002,divtime=6.6800046540382075E+000,divtime_95%_CI={2.6076358988316328E+000,1.4885695796689145E+001},data_coverage=21%]:6.7339982126972361E-001)[&rate=NA,branch_length=2.1529106796261292E-002,reltime=2.0432768334335691E-002,reltime_stderr=7.9767847136597898E-003,divtime=7.3534044753079311E+000,divtime_95%_CI={3.6325179632856296E+000,1.4885695796689145E+001},data_coverage=24%]:4.3886583600214596E+000,254[&rate=NA,branch_length=6.2431557246296933E-002]:1.1742062835329390E+001)[&rate=NA,branch_length=6.4184027644163560E-002,reltime=3.2627451745261345E-002,reltime_stderr=1.0640981505000659E-002,divtime=1.1742062835329391E+001,divtime_95%_CI={6.4302189881158222E+000,2.1441888664078612E+001},data_coverage=13%]:1.2929287405669497E+001)[&rate=NA,branch_length=7.2912185985480171E-003,reltime=6.8553822336622854E-002,reltime_stderr=1.1893477723560014E-002,divtime=2.4671350240998888E+001,divtime_95%_CI={1.7669394659290657E+001,3.4308723764704291E+001},data_coverage=26%]:1.4609135693613827E+000,(375[&rate=NA,branch_length=5.0259675557943265E-002]:2.0451477522886723E+001,72[&rate=NA,branch_length=7.1857433623758044E-002]:2.0451477522886723E+001)[&rate=NA,branch_length=1.6692810133914628E-002,reltime=5.6828140451572106E-002,reltime_stderr=1.6429038324088134E-002,divtime=2.0451477522886724E+001,divtime_95%_CI={1.1917985166152281E+001,3.4308723764704291E+001},data_coverage=20%]:5.6807862874735469E+000)[&rate=NA,branch_length=3.2285987762877694E-002,reltime=7.2613235717116734E-002,reltime_stderr=1.0210452555219804E-002,divtime=2.6132263810360271E+001,divtime_95%_CI={1.9904418961710423E+001,3.4308723764704291E+001},data_coverage=26%]:8.2887858379901717E+000)[&rate=NA,branch_length=2.8030266837953672E-003,reltime=9.5645130857562339E-002,reltime_stderr=9.8317293741400972E-003,divtime=3.4421049648350442E+001,divtime_95%_CI={2.8177707027312773E+001,4.1887256573984474E+001},data_coverage=33%]:6.7485601750742443E-001,22[&rate=NA,branch_length=1.0204992364115423E-001]:3.5095905665857870E+001)[&rate=NA,branch_length=2.9120670372814544E-003,reltime=9.7520340729542645E-002,reltime_stderr=9.6355615350166555E-003,divtime=3.5095905665857867E+001,divtime_95%_CI={2.8951322732293244E+001,4.1887256573984474E+001},data_coverage=14%]:7.9677632560256441E-001,((((((((((((223[&rate=NA,branch_length=3.4096671256607630E-003]:8.8874569191250541E-001,224[&rate=NA,branch_length=4.1335240319985075E-003]:8.8874569191250541E-001)[&rate=NA,branch_length=8.1374105547055847E-004,reltime=2.4695411345812930E-003,reltime_stderr=3.0011268319202458E-003,divtime=8.8874569191250545E-001,divtime_95%_CI={1.7899464211234188E-001,4.4128075319555932E+000},data_coverage=18%]:1.9264046230400494E-001,124[&rate=NA,branch_length=4.4256893273796911E-003]:1.0813861542165104E+000)[&rate=NA,branch_length=1.7691647302529069E-002,reltime=3.0048276064861625E-003,reltime_stderr=3.1223445811665291E-003,divtime=1.0813861542165104E+000,divtime_95%_CI={2.5116002875923496E-001,4.6559797763527554E+000},data_coverage=10%]:4.2214748457513541E+000,11[&rate=NA,branch_length=5.0009865034373345E-002]:5.3028609999678649E+000)[&rate=NA,branch_length=1.4925622654172252E-002,reltime=1.4734961293828425E-002,reltime_stderr=1.0162213912324150E-002,divtime=5.3028609999678645E+000,divtime_95%_CI={1.7482838236699237E+000,1.6084536391780574E+001},data_coverage=12%]:2.9135784081023177E+000,82[&rate=NA,branch_length=4.8264069570552591E-002]:8.2164394080701815E+000)[&rate=NA,branch_length=9.4868570839891069E-003,reltime=2.2830867460364198E-002,reltime_stderr=1.3107744782607039E-002,divtime=8.2164394080701822E+000,divtime_95%_CI={3.1232981137013607E+000,2.1614932065029177E+001},data_coverage=10%]:1.7019921662475292E+000,68[&rate=NA,branch_length=9.9003895692502758E-002]:9.9184315743177116E+000)[&rate=NA,branch_length=1.3829050889251581E-002,reltime=2.7560161456983855E-002,reltime_stderr=1.3355313224023589E-002,divtime=9.9184315743177114E+000,divtime_95%_CI={4.2587389482791462E+000,2.3099627868520468E+001},data_coverage=17%]:2.0999148742772504E+000,(((31[&rate=NA,branch_length=2.4567356982287325E-003]:4.3022530629456146E-001,36[&rate=NA,branch_length=8.7890408072795398E-003]:4.3022530629456146E-001)[&rate=NA,branch_length=8.3932182728475131E-004,reltime=1.1954590617997075E-003,reltime_stderr=2.0482895083405129E-003,divtime=4.3022530629456148E-001,divtime_95%_CI={6.2694765890205326E-002,2.9523009065923646E+000},data_coverage=13%]:7.7709570962565188E-002,13[&rate=NA,branch_length=2.4093542906764354E-003]:5.0793487725712672E-001)[&rate=NA,branch_length=4.2613361063089529E-002,reltime=1.4113892022088848E-003,reltime_stderr=2.0580423329384327E-003,divtime=5.0793487725712667E-001,divtime_95%_CI={8.6296671901573276E-002,2.9896615228507877E+000},data_coverage=22%]:4.8465436342481461E+000,114[&rate=NA,branch_length=3.4552578692612530E-002]:5.3544785115052731E+000)[&rate=NA,branch_length=5.1513061816929773E-002,reltime=1.4878389913698352E-002,reltime_stderr=8.3408749105362604E-003,divtime=5.3544785115052727E+000,divtime_95%_CI={2.0717747289636732E+000,1.3838589557713653E+001},data_coverage=7%]:6.6638679370896890E+000)[&rate=NA,branch_length=5.4205636050790394E-002,reltime=3.3395155886028361E-002,reltime_stderr=1.3014695652559616E-002,divtime=1.2018346448594962E+001,divtime_95%_CI={5.9431900670796490E+000,2.4303555788756735E+001},data_coverage=22%]:7.5972009020930644E+000,222[&rate=NA,branch_length=5.2515569995187444E-002]:1.9615547350688026E+001)[&rate=NA,branch_length=1.0083260299235850E-002,reltime=5.4505356819912557E-002,reltime_stderr=1.8508803220517217E-002,divtime=1.9615547350688026E+001,divtime_95%_CI={1.0507488421716210E+001,3.6021692374378068E+001},data_coverage=23%]:1.7971032924704315E+000,225[&rate=NA,branch_length=5.2946539193750274E-002]:2.1412650643158457E+001)[&rate=NA,branch_length=1.7446978290012228E-002,reltime=5.9498934335092363E-002,reltime_stderr=1.6511326416695034E-002,divtime=2.1412650643158458E+001,divtime_95%_CI={1.2728486013391273E+001,3.6021692374378068E+001},data_coverage=22%]:4.0527349679599428E+000,(((((16[&rate=NA,branch_length=7.1579609678028688E-003]:1.7216981283691573E+000,383[&rate=NA,branch_length=1.2491445018234366E-002]:1.7216981283691573E+000)[&rate=NA,branch_length=4.6573713353161530E-002,reltime=4.7840505872829994E-003,reltime_stderr=3.7694083500403764E-003,divtime=1.7216981283691573E+000,divtime_95%_CI={5.0875927725542022E-001,5.8264184610469013E+000},data_coverage=10%]:8.4800198714686078E+000,(107[&rate=NA,branch_length=1.6198563432393107E-003]:7.1750567087016814E-001,105[&rate=NA,branch_length=7.1465088327908434E-003]:7.1750567087016814E-001)[&rate=NA,branch_length=4.4973961956631850E-002,reltime=1.9937196710301088E-003,reltime_stderr=2.4372735403825728E-003,divtime=7.1750567087016815E-001,divtime_95%_CI={1.4371935000310216E-001,3.5820812418072993E+000},data_coverage=10%]:9.4842123289675970E+000)[&rate=NA,branch_length=6.1635199549639657E-003,reltime=2.8347324181997824E-002,reltime_stderr=1.5463742576196773E-002,divtime=1.0201717999837765E+001,divtime_95%_CI={4.0272664855983209E+000,2.5087412424412269E+001},data_coverage=19%]:1.2077495057672115E+000,(319[&rate=NA,branch_length=1.6707797935654814E-002]:3.6398141541252298E+000,78[&rate=NA,branch_length=1.7352582457997701E-002]:3.6398141541252298E+000)[&rate=NA,branch_length=3.6346625725611412E-002,reltime=1.0113883935122780E-002,reltime_stderr=6.3122568168561115E-003,divtime=3.6398141541252296E+000,divtime_95%_CI={1.2984177801739253E+000,1.0203377740865298E+001},data_coverage=8%]:7.7696533514797471E+000)[&rate=NA,branch_length=9.7549880951627171E-003,reltime=3.1703275284662615E-002,reltime_stderr=1.4105010336359058E-002,divtime=1.1409467505604977E+001,divtime_95%_CI={5.1888949947975961E+000,2.5087412424412269E+001},data_coverage=18%]:1.9965010674570722E+000,288[&rate=NA,branch_length=3.9087756622353309E-002]:1.3405968573062049E+001)[&rate=NA,branch_length=5.1898301865524561E-003,reltime=3.7250915690897168E-002,reltime_stderr=1.4332608241840886E-002,divtime=1.3405968573062049E+001,divtime_95%_CI={6.6809133602483253E+000,2.5432103153304395E+001},data_coverage=23%]:1.2085082316007372E+000,(357[&rate=NA,branch_length=1.1305952222970124E-002]:2.9698167838594061E+000,368[&rate=NA,branch_length=1.7359272522377307E-002]:2.9698167838594061E+000)[&rate=NA,branch_length=5.4930871525354266E-002,reltime=8.2521746959227389E-003,reltime_stderr=4.4221187972590458E-003,divtime=2.9698167838594059E+000,divtime_95%_CI={1.1876716745554941E+000,7.4261362956172099E+000},data_coverage=21%]:1.1644660020803380E+001)[&rate=NA,branch_length=4.8838545245377091E-002,reltime=4.0608975050932781E-002,reltime_stderr=1.2074462901295190E-002,divtime=1.4614476804662786E+001,divtime_95%_CI={8.3981623928839620E+000,2.5432103153304395E+001},data_coverage=24%]:1.0850908806455614E+001)[&rate=NA,branch_length=1.1682956463634202E-002,reltime=7.0760193660463446E-002,reltime_stderr=1.4326983664327387E-002,divtime=2.5465385611118400E+001,divtime_95%_CI={1.7291498147112552E+001,3.7503162467807598E+001},data_coverage=27%]:2.6541071197860393E+000,(7[&rate=NA,branch_length=1.0724154944096278E-003]:3.1496413529455464E-001,8[&rate=NA,branch_length=1.3685144721377661E-003]:3.1496413529455464E-001)[&rate=NA,branch_length=1.0694504554858902E-001,reltime=8.7518498835581896E-004,reltime_stderr=1.5415187979270022E-003,divtime=3.1496413529455465E-001,divtime_95%_CI={4.4698209820417295E-002,2.2193820942809380E+000},data_coverage=22%]:2.7804528595609885E+001)[&rate=NA,branch_length=1.2521528189959132E-002,reltime=7.8135111781070177E-002,reltime_stderr=1.3987231815753724E-002,divtime=2.8119492730904440E+001,divtime_95%_CI={1.9933942998690564E+001,3.9666305431661368E+001},data_coverage=24%]:3.0431097339638529E+000,64[&rate=NA,branch_length=1.1458548761140193E-001]:3.1162602464868293E+001)[&rate=NA,branch_length=1.3897302828046174E-002,reltime=8.6590944235117458E-002,reltime_stderr=1.1624713522092194E-002,divtime=3.1162602464868293E+001,divtime_95%_CI={2.4023605400289572E+001,4.0423066238496825E+001},data_coverage=20%]:3.5460465052264917E+000,((((((305[&rate=NA,branch_length=2.7584745532172709E-003]:9.8787930473544117E-001,382[&rate=NA,branch_length=1.0230059416142937E-003]:9.8787930473544117E-001)[&rate=NA,branch_length=1.3435159695179969E-002,reltime=2.7450018618890958E-003,reltime_stderr=2.6361721184015630E-003,divtime=9.8787930473544115E-001,divtime_95%_CI={2.4612497372848192E-001,3.9650812590890100E+000},data_coverage=22%]:7.9008378965359403E+000,83[&rate=NA,branch_length=3.3398297055676714E-002]:8.8887172012713815E+000)[&rate=NA,branch_length=2.0785906363378077E-002,reltime=2.4698913268387469E-002,reltime_stderr=1.2271440259908589E-002,divtime=8.8887172012713814E+000,divtime_95%_CI={3.7511062958815657E+000,2.1062931106730843E+001},data_coverage=14%]:1.0025831395825950E+001,120[&rate=NA,branch_length=4.1941526485097427E-002]:1.8914548597097333E+001)[&rate=NA,branch_length=6.7705326647098628E-003,reltime=5.2557504613105054E-002,reltime_stderr=1.7403797053486548E-002,divtime=1.8914548597097332E+001,divtime_95%_CI={1.0273007573658738E+001,3.4825258919237820E+001},data_coverage=19%]:3.0560089758086423E+000,146[&rate=NA,branch_length=5.3974774346209772E-002]:2.1970557572905975E+001)[&rate=NA,branch_length=2.1772103878542073E-002,reltime=6.1049179950702150E-002,reltime_stderr=1.5117449775835456E-002,divtime=2.1970557572905974E+001,divtime_95%_CI={1.3758176500155534E+001,3.5084983831899462E+001},data_coverage=22%]:9.4190453688967973E+000,50[&rate=NA,branch_length=3.4071864542404920E-002]:3.1389602941802771E+001)[&rate=NA,branch_length=2.7311360502172400E-003,reltime=8.7221706241010203E-002,reltime_stderr=1.3505930932942302E-002,divtime=3.1389602941802771E+001,divtime_95%_CI={2.3276742638224956E+001,4.1339905302289232E+001},data_coverage=18%]:1.4122590269619596E+000,359[&rate=NA,branch_length=1.4927104432594579E-001]:3.2801861968764733E+001)[&rate=NA,branch_length=4.3679438765940864E-003,reltime=9.1145924148903767E-002,reltime_stderr=1.1213016990371817E-002,divtime=3.2801861968764731E+001,divtime_95%_CI={2.5832625424525431E+001,4.1339905302289232E+001},data_coverage=23%]:1.9067870013300533E+000)[&rate=NA,branch_length=3.5476788187382932E-003,reltime=9.6444277747148897E-002,reltime_stderr=8.6470902093852210E-003,divtime=3.4708648970094784E+001,divtime_95%_CI={2.9141099973989321E+001,4.1339905302289232E+001},data_coverage=28%]:1.1840330213656470E+000)[&rate=NA,branch_length=4.6278220567445892E-003,reltime=9.9734328295436560E-002,reltime_stderr=7.8903584954114556E-003,divtime=3.5892681991460431E+001,divtime_95%_CI={3.0756003756527745E+001,4.1887256573984474E+001},data_coverage=35%]:1.3804056704953796E+000,67[&rate=NA,branch_length=1.1224374242438294E-001]:3.7273087661955813E+001)[&rate=NA,branch_length=1.4921162117382359E-002,reltime=1.0357003587378982E-001,reltime_stderr=7.4962884170515337E-003,divtime=3.7273087661955811E+001,divtime_95%_CI={3.2358619342361985E+001,4.2933941314272192E+001},data_coverage=13%]:4.5847709358000253E+000,(((((((117[&rate=NA,branch_length=7.8969309601870877E-003]:5.0377420257912826E+000,161[&rate=NA,branch_length=7.3755357268737954E-003]:5.0377420257912826E+000)[&rate=NA,branch_length=2.3243000841086311E-002,reltime=1.3998280128175561E-002,reltime_stderr=7.5878100901345198E-003,divtime=5.0377420257912822E+000,divtime_95%_CI={1.9979577479713274E+000,1.2702393103253885E+001},data_coverage=23%]:1.5342713170920404E+001,314[&rate=NA,branch_length=3.4228232016135583E-002]:2.0380455196711686E+001)[&rate=NA,branch_length=4.6392752204762640E-003,reltime=5.6630792033955055E-002,reltime_stderr=1.8170361758786924E-002,divtime=2.0380455196711687E+001,divtime_95%_CI={1.1258757406100831E+001,3.6264868830091696E+001},data_coverage=22%]:2.9844545305688973E+000,237[&rate=NA,branch_length=3.0694458516771342E-002]:2.3364909727280583E+001)[&rate=NA,branch_length=5.5089270422498619E-003,reltime=6.4923640364580745E-002,reltime_stderr=1.5068346618163417E-002,divtime=2.3364909727280584E+001,divtime_95%_CI={1.5040079333428731E+001,3.6264868830091696E+001},data_coverage=23%]:3.6724457647318688E+000,((136[&rate=NA,branch_length=3.0692679989413386E-003]:2.1368609441506754E+000,156[&rate=NA,branch_length=3.6582672590229747E-003]:2.1368609441506754E+000)[&rate=NA,branch_length=2.2341329418388449E-002,reltime=5.9376557866677397E-003,reltime_stderr=3.5410741352760684E-003,divtime=2.1368609441506755E+000,divtime_95%_CI={7.8933064817258917E-001,5.7848693766140330E+000},data_coverage=19%]:1.4247220732195757E+001,248[&rate=NA,branch_length=2.6268786518457841E-002]:1.6384081676346433E+001)[&rate=NA,branch_length=1.6798546690615389E-002,reltime=4.5526143215398485E-002,reltime_stderr=1.4909460243514747E-002,divtime=1.6384081676346433E+001,divtime_95%_CI={8.9522295825899389E+000,2.9985617538142941E+001},data_coverage=22%]:1.0653273815666020E+001)[&rate=NA,branch_length=6.5141571275274344E-003,reltime=7.5128197149557033E-002,reltime_stderr=1.1417479228502514E-002,divtime=2.7037355492012453E+001,divtime_95%_CI={2.0157761921776888E+001,3.6264868830091696E+001},data_coverage=24%]:4.2355333370109143E+000,253[&rate=NA,branch_length=6.9522910195778179E-002]:3.1272888829023366E+001)[&rate=NA,branch_length=1.1388805474780156E-002,reltime=8.6897394905250418E-002,reltime_stderr=1.0356266794302882E-002,divtime=3.1272888829023367E+001,divtime_95%_CI={2.4809736949148517E+001,3.9419747888379758E+001},data_coverage=16%]:6.7788897028476321E+000,((((129[&rate=NA,branch_length=2.2615863110266119E-003]:8.9708226687086456E-001,145[&rate=NA,branch_length=3.2569456496105821E-003]:8.9708226687086456E-001)[&rate=NA,branch_length=1.1648802863178197E-002,reltime=2.4927058204622290E-003,reltime_stderr=2.3888421334221437E-003,divtime=8.9708226687086462E-001,divtime_95%_CI={2.2391936655958867E-001,3.5939570832968128E+000},data_coverage=20%]:3.8503634701504982E+000,57[&rate=NA,branch_length=7.3824774518401817E-003]:4.7474457370213630E+000)[&rate=NA,branch_length=3.0364549806339240E-002,reltime=1.3191639226444830E-002,reltime_stderr=6.3703096929131111E-003,divtime=4.7474457370213628E+000,divtime_95%_CI={2.0433244869563733E+000,1.1030182024360735E+001},data_coverage=21%]:1.1853501013689121E+001,(125[&rate=NA,branch_length=1.7865054703055253E-003]:1.1131844108671287E+000,239[&rate=NA,branch_length=1.2728693190027546E-003]:1.1131844108671287E+000)[&rate=NA,branch_length=2.0980490841541081E-002,reltime=3.0931848311920189E-003,reltime_stderr=2.4129226776760153E-003,divtime=1.1131844108671287E+000,divtime_95%_CI={3.3171101787081730E-001,3.7357201474694062E+000},data_coverage=23%]:1.5487762339843355E+001)[&rate=NA,branch_length=3.2845257593259340E-002,reltime=4.6128742166560298E-002,reltime_stderr=1.3008602734413385E-002,divtime=1.6600946750710484E+001,divtime_95%_CI={9.7922012681273640E+000,2.8143971459915508E+001},data_coverage=23%]:1.7631898830382180E+001,44[&rate=NA,branch_length=1.0426624341249996E-001]:3.4232845581092661E+001)[&rate=NA,branch_length=7.8788890518596694E-003,reltime=9.5122171714111049E-002,reltime_stderr=9.6949906747022347E-003,divtime=3.4232845581092664E+001,divtime_95%_CI={2.8070659065622409E+001,4.1747780621728389E+001},data_coverage=19%]:3.8189329507783351E+000)[&rate=NA,branch_length=3.1205218036300451E-003,reltime=1.0573376972012813E-001,reltime_stderr=7.1519082542013502E-003,divtime=3.8051778531870999E+001,divtime_95%_CI={3.3339982134338480E+001,4.3429472865471532E+001},data_coverage=25%]:1.6761232178387064E+000,(((19[&rate=NA,branch_length=1.4580639711561781E-002]:3.5238904171299090E+000,27[&rate=NA,branch_length=1.2990118706938593E-002]:3.5238904171299090E+000)[&rate=NA,branch_length=5.3534539369761956E-002,reltime=9.7917688018631410E-003,reltime_stderr=5.5375302098731270E-003,divtime=3.5238904171299092E+000,divtime_95%_CI={1.3546663833596539E+000,9.1666876985188833E+000},data_coverage=24%]:1.3707606084769357E+001,30[&rate=NA,branch_length=7.5120157517543112E-002]:1.7231496501899265E+001)[&rate=NA,branch_length=9.9521528230592845E-003,reltime=4.7880839039862493E-002,reltime_stderr=1.6637943457371227E-002,divtime=1.7231496501899266E+001,divtime_95%_CI={9.1124943054840204E+000,3.0756641732467001E+001},data_coverage=23%]:2.4791586630878000E+000,61[&rate=NA,branch_length=6.6322113517822689E-002]:1.9710655164987067E+001)[&rate=NA,branch_length=7.7417343386444126E-002,reltime=5.4769631135691430E-002,reltime_stderr=1.2847787054483410E-002,divtime=1.9710655164987066E+001,divtime_95%_CI={1.2631740825686979E+001,3.0756641732467001E+001},data_coverage=20%]:2.0017246584722639E+001)[&rate=NA,branch_length=5.7154233816405940E-003,reltime=1.1039118215064256E-001,reltime_stderr=7.0205987834563806E-003,divtime=3.9727901749709706E+001,divtime_95%_CI={3.5083232152606656E+001,4.4987479219964647E+001},data_coverage=25%]:2.1299568480461306E+000)[&rate=NA,branch_length=2.5243576968433955E-002,reltime=1.1630965365379429E-001,reltime_stderr=7.6263195289567566E-003,divtime=4.1857858597755836E+001,divtime_95%_CI={4.1857858597755836E+001,4.7581490852015788E+001},data_coverage=32%]:9.7620218628537536E+000,((((((((((((((((((157[&rate=NA,branch_length=1.9727114820602201E-003]:1.5302043763606603E+000,234[&rate=NA,branch_length=2.5458891234857051E-003]:1.5302043763606603E+000)[&rate=NA,branch_length=4.7630592862648745E-004,reltime=4.2519504579618120E-003,reltime_stderr=3.6715641685252959E-003,divtime=1.5302043763606604E+000,divtime_95%_CI={4.1828551072988693E-001,5.5979118888136354E+000},data_coverage=20%]:3.2522498170259688E-001,235[&rate=NA,branch_length=2.2683828836205381E-003]:1.8554293580632573E+000)[&rate=NA,branch_length=3.5516740621430838E-004,reltime=5.1556470695084589E-003,reltime_stderr=3.7777611360733034E-003,divtime=1.8554293580632572E+000,divtime_95%_CI={5.8233237860310857E-001,5.9117751807329328E+000},data_coverage=23%]:2.5371056488424936E-001,167[&rate=NA,branch_length=2.6217684170034192E-003]:2.1091399229475067E+000)[&rate=NA,branch_length=1.2473734495544966E-002,reltime=5.8606279003142096E-003,reltime_stderr=3.7640030225695195E-003,divtime=2.1091399229475066E+000,divtime_95%_CI={7.3579215570107696E-001,6.0458258220114142E+000},data_coverage=21%]:9.2833608695613636E+000,318[&rate=NA,branch_length=2.0193402886623121E-002]:1.1392500792508871E+001)[&rate=NA,branch_length=1.8061627261118020E-002,reltime=3.1656130194350774E-002,reltime_stderr=1.4838004989662834E-002,divtime=1.1392500792508870E+001,divtime_95%_CI={5.0040779719913433E+000,2.5936661065987835E+001},data_coverage=20%]:1.2671897163468678E+001,79[&rate=NA,branch_length=4.7230924167696975E-002]:2.4064397955977547E+001)[&rate=NA,branch_length=3.1567487720019216E-003,reltime=6.6867295303942882E-002,reltime_stderr=2.0896995842090752E-002,divtime=2.4064397955977549E+001,divtime_95%_CI={1.3479841853274097E+001,4.1158610074745521E+001},data_coverage=16%]:2.0145810274374391E+000,123[&rate=NA,branch_length=2.9378327895378056E-002]:2.6078978983414988E+001)[&rate=NA,branch_length=8.1304235244579783E-003,reltime=7.2465174158914123E-002,reltime_stderr=1.7462034354067583E-002,divtime=2.6078978983414988E+001,divtime_95%_CI={1.6524200977202355E+001,4.1158610074745521E+001},data_coverage=20%]:5.5030388032683814E+000,(((151[&rate=NA,branch_length=3.0399470213414771E-003]:3.7669983331279742E+000,159[&rate=NA,branch_length=3.5901132734338752E-003]:3.7669983331279742E+000)[&rate=NA,branch_length=7.5565346901211269E-004,reltime=1.0467288249285295E-002,reltime_stderr=6.5362480221704985E-003,divtime=3.7669983331279743E+000,divtime_95%_CI={1.3432424431800811E+000,1.0155759007505945E+001},data_coverage=18%]:8.6165026364496963E-001,142[&rate=NA,branch_length=1.0987202611821484E-002]:4.6286485967729440E+000)[&rate=NA,branch_length=2.6281657127422690E-002,reltime=1.2861539820975110E-002,reltime_stderr=5.7035121358384580E-003,divtime=4.6286485967729440E+000,divtime_95%_CI={2.1095801718585239E+000,1.0155759007505945E+001},data_coverage=17%]:2.3364192357445072E+001,249[&rate=NA,branch_length=2.7377367464549756E-002]:2.7992840954218018E+001)[&rate=NA,branch_length=4.1489202901241933E-003,reltime=7.7783186843328011E-002,reltime_stderr=1.9118491727415930E-002,divtime=2.7992840954218016E+001,divtime_95%_CI={1.7586249338526933E+001,4.2501552669785063E+001},data_coverage=18%]:3.5891768324653527E+000)[&rate=NA,branch_length=3.7830928015103998E-003,reltime=8.7756365793974308E-002,reltime_stderr=1.3491925608543919E-002,divtime=3.1582017786683369E+001,divtime_95%_CI={2.3467939047494304E+001,4.2501552669785063E+001},data_coverage=23%]:2.8948201051459244E+000,(128[&rate=NA,branch_length=3.3923049795396468E-002]:3.0489998288472833E+001,267[&rate=NA,branch_length=2.9526193574916638E-002]:3.0489998288472833E+001)[&rate=NA,branch_length=4.1383054214534781E-003,reltime=8.4721991512178938E-002,reltime_stderr=1.8744396150291784E-002,divtime=3.0489998288472834E+001,divtime_95%_CI={2.0011589851909204E+001,4.3701035707664128E+001},data_coverage=22%]:3.9868396033564591E+000)[&rate=NA,branch_length=9.2675020896347479E-003,reltime=9.5800148612754588E-002,reltime_stderr=1.1696971204051913E-002,divtime=3.4476837891829293E+001,divtime_95%_CI={2.7199637989609812E+001,4.3701035707664128E+001},data_coverage=24%]:7.9570685064267481E+000,(((293[&rate=NA,branch_length=2.9778243601663357E-002]:7.3783197194398964E+000,323[&rate=NA,branch_length=2.7653988376096873E-002]:7.3783197194398964E+000)[&rate=NA,branch_length=1.3600360405183285E-002,reltime=2.0501999860093772E-002,reltime_stderr=1.1293882951497607E-002,divtime=7.3783197194398966E+000,divtime_95%_CI={2.8919281935987315E+000,1.8824672757358713E+001},data_coverage=22%]:3.4968697831495508E+000,299[&rate=NA,branch_length=2.3013277187413823E-002]:1.0875189502589448E+001)[&rate=NA,branch_length=7.3501167467554945E-002,reltime=3.0218686928560979E-002,reltime_stderr=1.1038087742653298E-002,divtime=1.0875189502589447E+001,divtime_95%_CI={5.5890585946764921E+000,2.1160942350807014E+001},data_coverage=22%]:2.2004201379201750E+001,364[&rate=NA,branch_length=1.0300317232589827E-001]:3.2879390881791196E+001)[&rate=NA,branch_length=3.0235090060070826E-002,reltime=9.1361352298463881E-002,reltime_stderr=1.5818505971187195E-002,divtime=3.2879390881791197E+001,divtime_95%_CI={2.3563169939758196E+001,4.5878986041413231E+001},data_coverage=23%]:9.5545155164648443E+000)[&rate=NA,branch_length=7.7795729703239360E-003,reltime=1.1791030696977164E-001,reltime_stderr=1.1057509729461907E-002,divtime=4.2433906398256041E+001,divtime_95%_CI={3.5345124282414783E+001,5.0944407433073406E+001},data_coverage=26%]:4.0522820210059755E+000,(((((2[&rate=NA,branch_length=2.0635912124735648E-003]:8.4399301481745914E-001,320[&rate=NA,branch_length=1.2255307020597121E-003]:8.4399301481745914E-001)[&rate=NA,branch_length=6.7546361877014564E-003,reltime=2.3451877025764366E-003,reltime_stderr=2.3539983724626295E-003,divtime=8.4399301481745920E-001,divtime_95%_CI={2.0218845448771061E-001,3.5230706464693823E+000},data_coverage=20%]:3.5848161042251826E+000,143[&rate=NA,branch_length=3.9570851273595760E-003]:4.4288091190426417E+000)[&rate=NA,branch_length=3.4084504040584218E-002,reltime=1.2306249578716689E-002,reltime_stderr=5.9697535365028758E-003,divtime=4.4288091190426418E+000,divtime_95%_CI={1.9002433995496001E+000,1.0322019914693190E+001},data_coverage=21%]:2.1798848898090399E+001,164[&rate=NA,branch_length=3.5480745112015773E-002]:2.6227658017133042E+001)[&rate=NA,branch_length=7.8729279075239866E-003,reltime=7.2878305826339049E-002,reltime_stderr=1.8681054139576799E-002,divtime=2.6227658017133041E+001,divtime_95%_CI={1.6174682493966078E+001,4.1945883610802523E+001},data_coverage=14%]:5.4700125393240415E+000,(169[&rate=NA,branch_length=2.1874672215150194E-002]:2.3992037592809151E+001,9[&rate=NA,branch_length=5.6790442191794605E-002]:2.3992037592809151E+001)[&rate=NA,branch_length=1.1320082387307397E-002,reltime=6.6666228907803103E-002,reltime_stderr=1.9579591147239983E-002,divtime=2.3992037592809150E+001,divtime_95%_CI={1.3872303390811293E+001,4.1494036832848108E+001},data_coverage=13%]:7.7056329636479328E+000)[&rate=NA,branch_length=1.4397646686048775E-002,reltime=8.8077727995651864E-002,reltime_stderr=1.2753994553283109E-002,divtime=3.1697670556457083E+001,divtime_95%_CI={2.3953299637891767E+001,4.1945883610802523E+001},data_coverage=22%]:9.9014067361679694E+000,((149[&rate=NA,branch_length=1.0868424607762198E-002]:7.5976230009997874E+000,251[&rate=NA,branch_length=7.4426936886950266E-003]:7.5976230009997874E+000)[&rate=NA,branch_length=2.7506714513383951E-003,reltime=2.1111373812270555E-002,reltime_stderr=1.1396284880609920E-002,divtime=7.5976230009997871E+000,divtime_95%_CI={3.0222744478889735E+000,1.8985607555945739E+001},data_coverage=17%]:2.3236359577823968E+000,228[&rate=NA,branch_length=6.3900186603468440E-003]:9.9212589587821842E+000)[&rate=NA,branch_length=3.2206391861522528E-002,reltime=2.7568017857641354E-002,reltime_stderr=9.7828592615467603E-003,divtime=9.9212589587821839E+000,divtime_95%_CI={5.1845261752705884E+000,1.8985607555945739E+001},data_coverage=23%]:3.1677818333842868E+001)[&rate=NA,branch_length=5.9421406086993837E-003,reltime=1.1559058285131774E-001,reltime_stderr=1.1627509416814267E-002,divtime=4.1599077292625052E+001,divtime_95%_CI={3.4198193152387540E+001,5.0601598274117587E+001},data_coverage=23%]:4.8871111266369648E+000)[&rate=NA,branch_length=1.5676261543293298E-003,reltime=1.2917030769986087E-001,reltime_stderr=1.1460272710431926E-002,divtime=4.6486188419262017E+001,divtime_95%_CI={3.9100077846673334E+001,5.5125208439424395E+001},data_coverage=26%]:1.0260513538006292E+000,((((((((((321[&rate=NA,branch_length=1.2150140164885808E-003]:2.8039627305930670E-001,385[&rate=NA,branch_length=7.6662024959055219E-004]:2.8039627305930670E-001)[&rate=NA,branch_length=2.1730301811810665E-003,reltime=7.7913191209191939E-004,reltime_stderr=1.8879972042371293E-003,divtime=2.8039627305930669E-001,divtime_95%_CI={2.9198513525539057E-002,2.6926737169952480E+000},data_coverage=23%]:6.3133113513423652E-001,259[&rate=NA,branch_length=5.6567909876293074E-003]:9.1172740819354325E-001)[&rate=NA,branch_length=3.6861600629585676E-003,reltime=2.5334000024393964E-003,reltime_stderr=2.7984932838417173E-003,divtime=9.1172740819354321E-001,divtime_95%_CI={2.0038106182020852E-001,4.1483304824342644E+000},data_coverage=16%]:9.2425433511856702E-001,52[&rate=NA,branch_length=1.0044460971251870E-002]:1.8359817433121102E+000)[&rate=NA,branch_length=2.1592515522684428E-003,reltime=5.1016083438814484E-003,reltime_stderr=3.8764940995454883E-003,divtime=1.8359817433121102E+000,divtime_95%_CI={5.5920164166559785E-001,6.0279310907158039E+000},data_coverage=19%]:4.8217880413359589E-001,328[&rate=NA,branch_length=2.1100079168801456E-002]:2.3181605474457063E+000)[&rate=NA,branch_length=3.9864003972348377E-002,reltime=6.4414296244422756E-003,reltime_stderr=4.1463825321669321E-003,divtime=2.3181605474457061E+000,divtime_95%_CI={8.0728073030863638E-001,6.6567528766346991E+000},data_coverage=11%]:7.2426303828647155E+000,((258[&rate=NA,branch_length=5.8470177968155462E-003]:1.1481712802242134E+000,255[&rate=NA,branch_length=5.2448716393706640E-003]:1.1481712802242134E+000)[&rate=NA,branch_length=3.2737600551200507E-002,reltime=3.1904021947570832E-003,reltime_stderr=3.1969068173576620E-003,divtime=1.1481712802242135E+000,divtime_95%_CI={2.7547824569097952E-001,4.7854860024429029E+000},data_coverage=5%]:6.7876413227050764E+000,277[&rate=NA,branch_length=1.8498723787222966E-002]:7.9358126029292899E+000)[&rate=NA,branch_length=6.5347824553455827E-003,reltime=2.2051094973062185E-002,reltime_stderr=1.3803828834887039E-002,divtime=7.9358126029292899E+000,divtime_95%_CI={2.8243430983868529E+000,2.2297971413169051E+001},data_coverage=21%]:1.6249783273811318E+000)[&rate=NA,branch_length=4.3589570342821684E-003,reltime=2.6566392047116386E-002,reltime_stderr=1.3373963135524000E-002,divtime=9.5607909303104217E+000,divtime_95%_CI={3.9977638810602655E+000,2.2696422700444804E+001},data_coverage=23%]:9.2650658421201197E-001,53[&rate=NA,branch_length=3.3970445396183623E-002]:1.0487297514522433E+001)[&rate=NA,branch_length=9.9785711247704616E-003,reltime=2.9140858671250775E-002,reltime_stderr=1.2653331832447535E-002,divtime=1.0487297514522434E+001,divtime_95%_CI={4.8458477624296696E+000,2.2696422700444804E+001},data_coverage=18%]:2.3212811863149672E+000,283[&rate=NA,branch_length=2.0170861217908922E-002]:1.2808578700837401E+001)[&rate=NA,branch_length=6.9361069070597345E-002,reltime=3.5590959556914278E-002,reltime_stderr=1.1508138283466747E-002,divtime=1.2808578700837401E+001,divtime_95%_CI={7.0467167915921300E+000,2.3281720152468054E+001},data_coverage=24%]:2.1213035422536982E+001,((150[&rate=NA,branch_length=2.6266279439876212E-002]:1.1551866386548115E+001,296[&rate=NA,branch_length=2.5962628542055353E-002]:1.1551866386548115E+001)[&rate=NA,branch_length=3.4739047491981152E-002,reltime=3.2098956408304048E-002,reltime_stderr=1.4011613101689905E-002,divtime=1.1551866386548115E+001,divtime_95%_CI={5.3194758918072833E+000,2.5086234006283327E+001},data_coverage=21%]:1.5367260501901025E+001,(345[&rate=NA,branch_length=2.3190378135478945E-002]:7.7618019663917170E+000,363[&rate=NA,branch_length=3.2192810818456381E-002]:7.7618019663917170E+000)[&rate=NA,branch_length=6.7438153583059518E-002,reltime=2.1567574851733129E-002,reltime_stderr=1.0140134799141510E-002,divtime=7.7618019663917171E+000,divtime_95%_CI={3.4022842206798706E+000,1.7707388876947968E+001},data_coverage=23%]:1.9157324922057423E+001)[&rate=NA,branch_length=2.0035795543261667E-002,reltime=7.4799677526406557E-002,reltime_stderr=1.5358272425933313E-002,divtime=2.6919126888449140E+001,divtime_95%_CI={1.8183949491715763E+001,3.9850495227483801E+001},data_coverage=24%]:7.1024872349252428E+000)[&rate=NA,branch_length=2.5285179299519473E-002,reltime=9.4535226788808144E-002,reltime_stderr=1.2638348696524302E-002,divtime=3.4021614123374383E+001,divtime_95%_CI={2.6255473671865284E+001,4.4084911284617339E+001},data_coverage=26%]:8.3255223747393137E+000,(((168[&rate=NA,branch_length=9.1718648817589983E-004]:5.9078361000946167E-001,230[&rate=NA,branch_length=8.8973128364889251E-004]:5.9078361000946167E-001)[&rate=NA,branch_length=2.8406118524597013E-002,reltime=1.6415994359592677E-003,reltime_stderr=2.0741926508941177E-003,divtime=5.9078361000946166E-001,divtime_95%_CI={1.1477602937588189E-001,3.0409247972221024E+000},data_coverage=21%]:1.8577277929623713E+001,138[&rate=NA,branch_length=1.8784959497132731E-002]:1.9168061539633175E+001)[&rate=NA,branch_length=5.0618983317400959E-003,reltime=5.3261936314364588E-002,reltime_stderr=2.0398741468731314E-002,divtime=1.9168061539633175E+001,divtime_95%_CI={9.5789828705497139E+000,3.6685591749089689E+001},data_coverage=23%]:3.6998408137791350E+000,126[&rate=NA,branch_length=2.5900191043050195E-002]:2.2867902353412308E+001)[&rate=NA,branch_length=2.4723728322468271E-002,reltime=6.3542615212923798E-002,reltime_stderr=1.5900099189099468E-002,divtime=2.2867902353412310E+001,divtime_95%_CI={1.4254668743572235E+001,3.6685591749089689E+001},data_coverage=18%]:1.9479234144701387E+001)[&rate=NA,branch_length=3.0481204091524568E-003,reltime=1.1766920106107923E-001,reltime_stderr=1.1916514880035028E-002,divtime=4.2347136498113697E+001,divtime_95%_CI={3.4767736293329079E+001,5.1578853292612888E+001},data_coverage=25%]:1.5525078465083733E+000,(92[&rate=NA,branch_length=1.1514899150811635E-003]:9.0612251237902786E-001,386[&rate=NA,branch_length=1.2263859801329544E-003]:9.0612251237902786E-001)[&rate=NA,branch_length=5.6384503350563921E-002,reltime=2.5178257826204486E-003,reltime_stderr=2.1109777141607852E-003,divtime=9.0612251237902786E-001,divtime_95%_CI={2.5403416266759940E-001,3.2320771301709757E+000},data_coverage=24%]:4.2993521832243042E+001)[&rate=NA,branch_length=5.7969139570299933E-003,reltime=1.2198312575697536E-001,reltime_stderr=1.1761597303274873E-002,divtime=4.3899644344622070E+001,divtime_95%_CI={3.6380411120078182E+001,5.2972979530753773E+001},data_coverage=25%]:3.6125954284405763E+000)[&rate=NA,branch_length=2.1774739616464821E-003,reltime=1.3202137752496550E-001,reltime_stderr=1.1655294894379488E-002,divtime=4.7512239773062646E+001,divtime_95%_CI={3.9996980480593381E+001,5.5125208439424395E+001},data_coverage=29%]:1.3906809507561773E+000,(336[&rate=NA,branch_length=4.8875593444648320E-002]:2.1306043006069125E+001,341[&rate=NA,branch_length=5.7096398581291036E-002]:2.1306043006069125E+001)[&rate=NA,branch_length=6.8423853547192340E-002,reltime=5.9202705675478738E-002,reltime_stderr=1.7928994882058648E-002,divtime=2.1306043006069123E+001,divtime_95%_CI={1.2130089249646735E+001,3.7423258743927817E+001},data_coverage=12%]:2.7596877717749700E+001)[&rate=NA,branch_length=9.6812819342284653E-003,reltime=1.3588563683358795E-001,reltime_stderr=8.3234489710415156E-003,divtime=4.8902920723818823E+001,divtime_95%_CI={4.8902920723818823E+001,5.5125208439424395E+001},data_coverage=24%]:1.7423364680602968E-001,((((((((60[&rate=NA,branch_length=2.6933787004067185E-002]:1.2894631678323865E+001,98[&rate=NA,branch_length=1.9678515144848811E-002]:1.2894631678323865E+001)[&rate=NA,branch_length=3.9629766508328373E-003,reltime=3.5830073365948576E-002,reltime_stderr=2.8021553080838721E-002,divtime=1.2894631678323865E+001,divtime_95%_CI={3.8342016648573196E+000,4.2113528098877916E+001},data_coverage=15%]:2.2196555325182189E+000,139[&rate=NA,branch_length=1.7016885785216714E-002]:1.5114287210842084E+001)[&rate=NA,branch_length=1.4334019776658692E-003,reltime=4.1997788936371086E-002,reltime_stderr=2.8357329357568362E-002,divtime=1.5114287210842084E+001,divtime_95%_CI={5.0682488534229129E+000,4.2113528098877916E+001},data_coverage=23%]:9.0093393821268078E-001,99[&rate=NA,branch_length=2.2778051160113010E-002]:1.6015221149054764E+001)[&rate=NA,branch_length=1.7603344861737331E-003,reltime=4.4501197324397984E-002,reltime_stderr=2.6706239786025663E-002,divtime=1.6015221149054765E+001,divtime_95%_CI={5.8876945294349264E+000,4.2113528098877916E+001},data_coverage=21%]:1.1711384022165235E+000,238[&rate=NA,branch_length=2.2266261654105262E-002]:1.7186359551271288E+001)[&rate=NA,branch_length=1.1920423350454831E-002,reltime=4.7755417834134354E-002,reltime_stderr=2.4880430085798612E-002,divtime=1.7186359551271289E+001,divtime_95%_CI={7.0136834399643613E+000,4.2113528098877916E+001},data_coverage=22%]:8.3484838930338214E+000,80[&rate=NA,branch_length=5.1472778529118489E-002]:2.5534843444305110E+001)[&rate=NA,branch_length=6.9896364031499887E-003,reltime=7.0953194850493801E-002,reltime_stderr=3.0137499790253374E-002,divtime=2.5534843444305110E+001,divtime_95%_CI={1.1967416396121701E+001,5.3133514766331759E+001},data_coverage=17%]:4.5488975865224156E+000,(85[&rate=NA,branch_length=1.7216217377335038E-003]:1.1055246317193910E+000,86[&rate=NA,branch_length=1.8785017882747359E-003]:1.1055246317193910E+000)[&rate=NA,branch_length=4.7138732758123483E-002,reltime=3.0719007452501336E-003,reltime_stderr=3.0188432754887293E-003,divtime=1.1055246317193911E+000,divtime_95%_CI={2.6987643194741056E-001,4.5286826364165662E+000},data_coverage=11%]:2.8978216399108134E+001)[&rate=NA,branch_length=3.7195758488982088E-003,reltime=8.3593132021655467E-002,reltime_stderr=2.8537715339882376E-002,divtime=3.0083741030827525E+001,divtime_95%_CI={1.6067502467049428E+001,5.3133514766331759E+001},data_coverage=23%]:2.3526974437130651E+000,(1[&rate=NA,branch_length=5.4276257508663259E-002]:2.3601192753684668E+001,302[&rate=NA,branch_length=3.1357125350139806E-002]:2.3601192753684668E+001)[&rate=NA,branch_length=1.5443927304520072E-002,reltime=6.5580195618145553E-002,reltime_stderr=2.8181981904017759E-002,divtime=2.3601192753684669E+001,divtime_95%_CI={1.0978683900733587E+001,5.0736163317295102E+001},data_coverage=22%]:8.8352457208559217E+000)[&rate=NA,branch_length=2.0125497510420042E-002,reltime=9.0130528677802248E-002,reltime_stderr=2.3627318669918850E-002,divtime=3.2436438474540591E+001,divtime_95%_CI={1.9801485852001989E+001,5.3133514766331759E+001},data_coverage=25%]:1.2106354801350008E+001,343[&rate=NA,branch_length=9.4555903550351400E-002]:4.4542793275890595E+001)[&rate=NA,branch_length=8.0498047312677051E-003,reltime=1.2377023173777823E-001,reltime_stderr=2.6292445119740945E-002,divtime=4.4542793275890599E+001,divtime_95%_CI={2.9703554725048708E+001,6.6795386989341939E+001},data_coverage=11%]:4.5343610947342547E+000)[&rate=NA,branch_length=5.2089493975881586E-003,reltime=1.3636977662940477E-001,reltime_stderr=3.0680354939158831E-002,divtime=4.9077154370624853E+001,divtime_95%_CI={4.8902920723818823E+001,7.3956614903277287E+001},data_coverage=31%]:1.2895060862388762E-001,(((((356[&rate=NA,branch_length=2.0492355997092870E-002]:7.1667565815495466E+000,367[&rate=NA,branch_length=2.2704256583418462E-002]:7.1667565815495466E+000)[&rate=NA,branch_length=7.5549970128914568E-002,reltime=1.9914133301261834E-002,reltime_stderr=1.2531212224721010E-002,divtime=7.1667565815495462E+000,divtime_95%_CI={2.5403483770301374E+000,2.0218644168494061E+001},data_coverage=20%]:2.5101944317329636E+001,103[&rate=NA,branch_length=9.2848745933806320E-002]:3.2268700898879182E+001)[&rate=NA,branch_length=1.0943131120384232E-002,reltime=8.9664439394129443E-002,reltime_stderr=4.0051859153558101E-002,divtime=3.2268700898879182E+001,divtime_95%_CI={1.4636950618230569E+001,6.7840393179051176E+001},data_coverage=16%]:3.6770349806431773E+000,21[&rate=NA,branch_length=1.1637121743959764E-001]:3.5945735879522360E+001)[&rate=NA,branch_length=6.6762735713508875E-003,reltime=9.9881748148056561E-002,reltime_stderr=3.7057363789246099E-002,divtime=3.5945735879522359E+001,divtime_95%_CI={1.8305762683312631E+001,6.7840393179051176E+001},data_coverage=23%]:2.2027868076037836E+000,88[&rate=NA,branch_length=7.1778404719153130E-002]:3.8148522687126146E+001)[&rate=NA,branch_length=1.5870816928658788E-002,reltime=1.0600259090610629E-001,reltime_stderr=3.2882311574041642E-002,divtime=3.8148522687126143E+001,divtime_95%_CI={2.1451965636006536E+001,6.7840393179051176E+001},data_coverage=12%]:5.8724532163817512E+000,(76[&rate=NA,branch_length=6.8466076182772409E-002]:3.1587911116944451E+001,326[&rate=NA,branch_length=1.0452011667689097E-001]:3.1587911116944451E+001)[&rate=NA,branch_length=3.3296221486719742E-002,reltime=8.7772741481228666E-002,reltime_stderr=3.3327966393901681E-002,divtime=3.1587911116944452E+001,divtime_95%_CI={1.5867172956287271E+001,6.2884304058500367E+001},data_coverage=6%]:1.2433064786563442E+001)[&rate=NA,branch_length=1.3949473228314654E-002,reltime=1.2232026750440440E-001,reltime_stderr=2.9377709630285288E-002,divtime=4.4020975903507894E+001,divtime_95%_CI={2.7932270736546659E+001,6.9376612369782714E+001},data_coverage=16%]:5.1851290757408469E+000)[&rate=NA,branch_length=8.8534434885213145E-003,reltime=1.3672808928872210E-001,reltime_stderr=3.3582175544576222E-002,divtime=4.9206104979248741E+001,divtime_95%_CI={4.8902920723818823E+001,7.3956614903277287E+001},data_coverage=31%]:1.8907419028967207E-001,((((102[&rate=NA,branch_length=1.8103646716640512E-002]:9.5513455488635124E+000,147[&rate=NA,branch_length=1.1036795680886636E-002]:9.5513455488635124E+000)[&rate=NA,branch_length=2.8025034450761200E-002,reltime=2.6540146341255626E-002,reltime_stderr=1.6322725102737132E-002,divtime=9.5513455488635127E+000,divtime_95%_CI={3.4460590153868845E+000,2.6473197756177360E+001},data_coverage=21%]:1.8936781931682651E+001,(116[&rate=NA,branch_length=2.4841585224402271E-003]:1.7873026619176287E+000,141[&rate=NA,branch_length=1.8051389690490667E-003]:1.7873026619176287E+000)[&rate=NA,branch_length=3.1635270276755750E-002,reltime=4.9663446852316823E-003,reltime_stderr=4.1161503226118273E-003,divtime=1.7873026619176286E+000,divtime_95%_CI={5.0602386152414003E-001,6.3128461880753594E+000},data_coverage=21%]:2.6700824818628535E+001)[&rate=NA,branch_length=8.5171154253248244E-003,reltime=7.9159430307911414E-002,reltime_stderr=3.4950048203033862E-002,divtime=2.8488127480546164E+001,divtime_95%_CI={1.3021271548231208E+001,6.2326740083850915E+001},data_coverage=22%]:6.4320455079442844E+000,(133[&rate=NA,branch_length=4.1711484746272233E-003]:3.6824865212787046E+000,152[&rate=NA,branch_length=2.0144513686498871E-003]:3.6824865212787046E+000)[&rate=NA,branch_length=2.4589172516209411E-002,reltime=1.0232456848560696E-002,reltime_stderr=6.0397735922731026E-003,divtime=3.6824865212787047E+000,divtime_95%_CI={1.3709451956483163E+000,9.8915018794653667E+000},data_coverage=16%]:3.1237686467211744E+001)[&rate=NA,branch_length=9.6256270377020111E-003,reltime=9.7032035605368083E-002,reltime_stderr=3.5113184983495623E-002,divtime=3.4920172988490448E+001,divtime_95%_CI={1.8044139649807820E+001,6.7579751942292543E+001},data_coverage=24%]:9.4281132744966823E+000,286[&rate=NA,branch_length=9.5524046139576296E-002]:4.4348286262987131E+001)[&rate=NA,branch_length=6.2099232825283427E-003,reltime=1.2322975871641709E-001,reltime_stderr=3.7495387938243601E-002,divtime=4.4348286262987130E+001,divtime_95%_CI={2.5187840740386526E+001,7.3956614903277287E+001},data_coverage=23%]:5.0468929065512824E+000)[&rate=NA,branch_length=7.6455650467727723E-003,reltime=1.3725346622686872E-001,reltime_stderr=4.2676815595190644E-002,divtime=4.9395179169538413E+001,divtime_95%_CI={4.8902920723818823E+001,7.3956614903277287E+001},data_coverage=29%]:3.6784167887446740E-001,(115[&rate=NA,branch_length=1.0296549810313834E-002]:5.3730949416121039E+000,118[&rate=NA,branch_length=2.5497296673012977E-003]:5.3730949416121039E+000)[&rate=NA,branch_length=4.2330445247766225E-002,reltime=1.4930119042003825E-002,reltime_stderr=8.3801820219388518E-003,divtime=5.3730949416121043E+000,divtime_95%_CI={2.0770858595899069E+000,1.3899352844892802E+001},data_coverage=19%]:4.4389925906800776E+001)[&rate=NA,branch_length=2.5619209587087804E-003,reltime=1.3827558106271016E-001,reltime_stderr=5.8693812346845625E-002,divtime=4.9763020848412880E+001,divtime_95%_CI={4.8902920723818823E+001,7.3956614903277287E+001},data_coverage=24%]:3.9206694155332487E-001,269[&rate=NA,branch_length=8.2951405607259235E-002]:5.0155087789966203E+001)[&rate=NA,branch_length=3.0554333802198688E-003,reltime=1.3936501018567095E-001,reltime_stderr=5.7054556560145454E-002,divtime=5.0155087789966205E+001,divtime_95%_CI={4.8902920723818823E+001,7.3956614903277287E+001},data_coverage=14%]:4.8930188872450808E-001,((((((((((((275[&rate=NA,branch_length=3.9056165415179756E-003]:7.8090294492599299E-001,279[&rate=NA,branch_length=4.0901237877994353E-003]:7.8090294492599299E-001)[&rate=NA,branch_length=2.5821598949346790E-002,reltime=2.1698804980539499E-003,reltime_stderr=3.4780614439393538E-003,divtime=7.8090294492599296E-001,divtime_95%_CI={1.2128442205975417E-001,5.0279285586540428E+000},data_coverage=23%]:5.0450696395098263E+000,273[&rate=NA,branch_length=3.1315671793820325E-002]:5.8259725844358190E+000)[&rate=NA,branch_length=8.0322520712245889E-003,reltime=1.6188521730267412E-002,reltime_stderr=1.4791239161759638E-002,divtime=5.8259725844358193E+000,divtime_95%_CI={1.5164151586775329E+000,2.2383023778394957E+001},data_coverage=22%]:1.5502510370764593E+000,346[&rate=NA,branch_length=5.9549590558204336E-002]:7.3762236215122785E+000)[&rate=NA,branch_length=6.3036120550439946E-003,reltime=2.0496175471743462E-002,reltime_stderr=1.6709128434827843E-002,divtime=7.3762236215122785E+000,divtime_95%_CI={2.1178819547657158E+000,2.5690135747237389E+001},data_coverage=20%]:1.0856053976349275E+000,87[&rate=NA,branch_length=4.3563406470897202E-002]:8.4618290191472063E+000)[&rate=NA,branch_length=3.6811128565376258E-002,reltime=2.3512727011491310E-002,reltime_stderr=1.7372709007275384E-002,divtime=8.4618290191472061E+000,divtime_95%_CI={2.6376764226792686E+000,2.7146070584560237E+001},data_coverage=16%]:6.3497419612219141E+000,97[&rate=NA,branch_length=4.7347800430498986E-002]:1.4811570980369121E+001)[&rate=NA,branch_length=3.7809441991637889E-002,reltime=4.1156636973485428E-002,reltime_stderr=2.7115371376373370E-002,divtime=1.4811570980369120E+001,divtime_95%_CI={5.0645481675821392E+000,4.3317316302916693E+001},data_coverage=21%]:7.5714997484610550E+000,34[&rate=NA,branch_length=1.0680668624734602E-001]:2.2383070728830177E+001)[&rate=NA,branch_length=2.2388154481202335E-002,reltime=6.2195422589491842E-002,reltime_stderr=3.6090699702266465E-002,divtime=2.2383070728830175E+001,divtime_95%_CI={8.4407191837901436E+000,5.9355351640409494E+001},data_coverage=16%]:4.7069112501487337E+000,353[&rate=NA,branch_length=1.5346308201740608E-001]:2.7089981978978908E+001)[&rate=NA,branch_length=1.3064942428068329E-002,reltime=7.5274429390697353E-002,reltime_stderr=3.8708383589975671E-002,divtime=2.7089981978978909E+001,divtime_95%_CI={1.1158722796734608E+001,6.4391828976667361E+001},data_coverage=22%]:2.6615277828547587E+000,303[&rate=NA,branch_length=8.0500253372096819E-002]:2.9751509761833667E+001)[&rate=NA,branch_length=8.0509241462007053E-003,reltime=8.2669967169841764E-002,reltime_stderr=3.7586875037351614E-002,divtime=2.9751509761833668E+001,divtime_95%_CI={1.3337974798504890E+001,6.4391828976667361E+001},data_coverage=22%]:1.8885033098919730E+000,(365[&rate=NA,branch_length=1.1848915026360966E-001]:2.6890888420842089E+001,41[&rate=NA,branch_length=1.3486351672731500E-001]:2.6890888420842089E+001)[&rate=NA,branch_length=2.2325179049374779E-002,reltime=7.4721211821348578E-002,reltime_stderr=3.7552087758007888E-002,divtime=2.6890888420842088E+001,divtime_95%_CI={1.1257608421448754E+001,6.4233881033243469E+001},data_coverage=17%]:4.7491246508835525E+000)[&rate=NA,branch_length=8.1861292694174314E-003,reltime=8.7917516214535510E-002,reltime_stderr=3.4623627890839779E-002,divtime=3.1640013071725641E+001,divtime_95%_CI={1.5546854982822721E+001,6.4391828976667361E+001},data_coverage=25%]:1.8286218938102190E+000,297[&rate=NA,branch_length=7.9272004682538533E-002]:3.3468634965535863E+001)[&rate=NA,branch_length=4.0566929229420241E-002,reltime=9.2998673881407052E-002,reltime_stderr=3.3549922290158773E-002,divtime=3.3468634965535860E+001,divtime_95%_CI={1.7324966592825533E+001,6.4655219994487970E+001},data_coverage=23%]:1.0814133476231635E+001,49[&rate=NA,branch_length=4.2915152283191420E-002]:4.4282768441767494E+001)[&rate=NA,branch_length=8.5513531034527423E-003,reltime=1.2304770556440478E-001,reltime_stderr=3.5969107124990510E-002,divtime=4.4282768441767495E+001,divtime_95%_CI={2.5664507959523155E+001,7.3956614903277287E+001},data_coverage=12%]:3.3419436924793122E+000,(272[&rate=NA,branch_length=1.0218299928427756E-001]:2.4643501538513672E+001,311[&rate=NA,branch_length=3.8940648954113720E-002]:2.4643501538513672E+001)[&rate=NA,branch_length=5.8824927717031704E-002,reltime=6.8476439664664169E-002,reltime_stderr=2.9040473159757802E-002,divtime=2.4643501538513671E+001,divtime_95%_CI={1.1561118548037809E+001,5.2529706840675810E+001},data_coverage=15%]:2.2981210595733136E+001)[&rate=NA,branch_length=7.7280989645500068E-003,reltime=1.3233390238441102E-001,reltime_stderr=3.2618202601237468E-002,divtime=4.7624712134246807E+001,divtime_95%_CI={2.9883266821329450E+001,7.3956614903277287E+001},data_coverage=23%]:3.0196775444439063E+000)[&rate=NA,branch_length=6.4537361865175903E-003,reltime=1.4072462424898440E-001,reltime_stderr=3.6037256505737809E-002,divtime=5.0644389678690713E+001,divtime_95%_CI={4.8902920723818823E+001,7.3956614903277287E+001},data_coverage=32%]:9.7549078191887659E-001)[&rate=NA,branch_length=8.3286761438818389E-003,reltime=1.4343520235279444E-001,reltime_stderr=2.8944973336057422E-002,divtime=5.1619880460609590E+001,divtime_95%_CI={4.8902920723818823E+001,7.3956614903277287E+001},data_coverage=45%]:9.4833221679284910E-001,(((((((((((((((((((((((((((197[&rate=NA,branch_length=8.9654804956906097E-003]:3.2506037435890796E+000,190[&rate=NA,branch_length=7.4892511037286816E-003]:3.2506037435890796E+000)[&rate=NA,branch_length=1.5139940968141735E-003,reltime=9.0323922018037294E-003,reltime_stderr=1.0837971901562492E-002,divtime=3.2506037435890796E+000,divtime_95%_CI={6.6239027141950619E-001,1.5951962390980516E+001},data_coverage=14%]:6.0059571851849049E-001,188[&rate=NA,branch_length=8.2730535181016994E-003]:3.8511994621075702E+000)[&rate=NA,branch_length=6.3252373189918759E-004,reltime=1.0701256361294740E-002,reltime_stderr=1.1892766499247750E-002,divtime=3.8511994621075701E+000,divtime_95%_CI={8.4178453175368311E-001,1.7619398714821708E+001},data_coverage=19%]:2.6115774309347466E-001,177[&rate=NA,branch_length=7.5199320719111680E-003]:4.1123572052010449E+000)[&rate=NA,branch_length=5.5669908196370797E-004,reltime=1.1426930527766246E-002,reltime_stderr=1.1994422778355619E-002,divtime=4.1123572052010448E+000,divtime_95%_CI={9.4649306327665728E-001,1.7867517934704366E+001},data_coverage=18%]:2.4905846272929533E-001,(182[&rate=NA,branch_length=6.2116064258167557E-003]:2.9261859281273890E+000,211[&rate=NA,branch_length=5.5784647355762744E-003]:2.9261859281273890E+000)[&rate=NA,branch_length=2.8872129615900555E-003,reltime=8.1309384480875081E-003,reltime_stderr=8.8715140278310428E-003,divtime=2.9261859281273889E+000,divtime_95%_CI={6.5036538584306248E-001,1.3165774612791204E+001},data_coverage=15%]:1.4352297398029512E+000)[&rate=NA,branch_length=7.5504655280522477E-004,reltime=1.2118984648784846E-002,reltime_stderr=1.1978380044949376E-002,divtime=4.3614156679303401E+000,divtime_95%_CI={1.0592664889219954E+000,1.7957659217395515E+001},data_coverage=22%]:3.5607003826541347E-001,184[&rate=NA,branch_length=7.1348939769297808E-003]:4.7174857061957534E+000)[&rate=NA,branch_length=6.0973991538780471E-004,reltime=1.3108389845670955E-002,reltime_stderr=1.2553679661679646E-002,divtime=4.7174857061957536E+000,divtime_95%_CI={1.1782301065304715E+000,1.8692816411543026E+001},data_coverage=21%]:3.1604833699641174E-001,180[&rate=NA,branch_length=8.4127571509744897E-003]:5.0335340431921649E+000)[&rate=NA,branch_length=4.3025221582284001E-004,reltime=1.3986587485143155E-002,reltime_stderr=1.2586164247099720E-002,divtime=5.0335340431921653E+000,divtime_95%_CI={1.3276645765216047E+000,1.8692816411543026E+001},data_coverage=18%]:2.3668745389896595E-001,199[&rate=NA,branch_length=8.4671835779564237E-003]:5.2702214970911312E+000)[&rate=NA,branch_length=9.6192633445282708E-004,reltime=1.4644266513870704E-002,reltime_stderr=1.2197092199602996E-002,divtime=5.2702214970911313E+000,divtime_95%_CI={1.4858774631333758E+000,1.8692816411543026E+001},data_coverage=22%]:5.5394186513118462E-001,(((179[&rate=NA,branch_length=1.3025608956087648E-002]:4.0014282877989968E+000,189[&rate=NA,branch_length=8.2621458648494787E-003]:4.0014282877989968E+000)[&rate=NA,branch_length=2.0248542114020265E-003,reltime=1.1118694406869360E-002,reltime_stderr=1.1275436417903617E-002,divtime=4.0014282877989964E+000,divtime_95%_CI={9.4986202436200695E-001,1.6856583305509441E+001},data_coverage=6%]:7.8102214986815661E-001,212[&rate=NA,branch_length=6.7685130114768944E-003]:4.7824504376671531E+000)[&rate=NA,branch_length=7.9277687937455031E-004,reltime=1.3288906137480382E-002,reltime_stderr=1.2085058817267479E-002,divtime=4.7824504376671530E+000,divtime_95%_CI={1.2499090031446841E+000,1.8260363979168671E+001},data_coverage=14%]:3.5574800360619493E-001,171[&rate=NA,branch_length=7.8793975946929457E-003]:5.1381984412733477E+000)[&rate=NA,branch_length=1.3405973138487382E-003,reltime=1.4277416502644730E-002,reltime_stderr=1.1918948597254128E-002,divtime=5.1381984412733479E+000,divtime_95%_CI={1.4458136350415623E+000,1.8260363979168671E+001},data_coverage=11%]:6.8596492094896795E-001)[&rate=NA,branch_length=7.7502127936189243E-004,reltime=1.6183494478131618E-002,reltime_stderr=1.2243262799814474E-002,divtime=5.8241633622223159E+000,divtime_95%_CI={1.7803930242732882E+000,1.9052466734808963E+001},data_coverage=23%]:4.2070395546588576E-001,195[&rate=NA,branch_length=1.3137056818917105E-002]:6.2448673176882012E+000)[&rate=NA,branch_length=1.7076765607883513E-003,reltime=1.7352496739361529E-002,reltime_stderr=1.2549991710377477E-002,divtime=6.2448673176882016E+000,divtime_95%_CI={1.9810378567647150E+000,1.9685826639991370E+001},data_coverage=17%]:9.1678905084458069E-001,194[&rate=NA,branch_length=9.4548932807984893E-003]:7.1616563685327828E+000)[&rate=NA,branch_length=1.3028603764650693E-003,reltime=1.9899961434152221E-002,reltime_stderr=1.2881981267934148E-002,divtime=7.1616563685327823E+000,divtime_95%_CI={2.4830054497250734E+000,2.0347981762365325E+001},data_coverage=22%]:7.6021274530336654E-001,(((192[&rate=NA,branch_length=8.8075037657179434E-003]:5.8885675011397494E+000,203[&rate=NA,branch_length=1.0065088683725574E-002]:5.8885675011397494E+000)[&rate=NA,branch_length=1.0581805330281693E-003,reltime=1.6362453061831337E-002,reltime_stderr=1.3497661193879120E-002,divtime=5.8885675011397492E+000,divtime_95%_CI={1.6738721264350776E+000,1.9379884822236838E+001},data_coverage=11%]:6.6181133903598200E-001,243[&rate=NA,branch_length=7.9134215143931985E-003]:6.5503788401757310E+000)[&rate=NA,branch_length=7.8687577855213349E-004,reltime=1.8201415928210647E-002,reltime_stderr=1.2792901442481272E-002,divtime=6.5503788401757312E+000,divtime_95%_CI={2.1268368718004859E+000,1.9379884822236838E+001},data_coverage=13%]:5.2785244057760074E-001,(175[&rate=NA,branch_length=6.3066783594121854E-003]:4.7009231574035049E+000,247[&rate=NA,branch_length=6.2907577313723820E-003]:4.7009231574035049E+000)[&rate=NA,branch_length=3.1853278848584720E-003,reltime=1.3062367799197851E-002,reltime_stderr=9.8690558116398121E-003,divtime=4.7009231574035048E+000,divtime_95%_CI={1.4385962904101792E+000,1.5361278684732086E+001},data_coverage=13%]:2.3773081233498271E+000)[&rate=NA,branch_length=1.1923045566546325E-003,reltime=1.9668149693400975E-002,reltime_stderr=1.1904849425555905E-002,divtime=7.0782312807533319E+000,divtime_95%_CI={2.5852247587327108E+000,1.9379884822236838E+001},data_coverage=22%]:8.4363783308281698E-001)[&rate=NA,branch_length=3.0618447403764531E-003,reltime=2.2012350459093292E-002,reltime_stderr=1.2237428100813634E-002,divtime=7.9218691138361489E+000,divtime_95%_CI={3.0841393013641143E+000,2.0347981762365325E+001},data_coverage=26%]:1.9673708025685396E+000,(((((((209[&rate=NA,branch_length=4.9707693454163256E-003]:2.6286081288544114E+000,213[&rate=NA,branch_length=4.4133279587850469E-003]:2.6286081288544114E+000)[&rate=NA,branch_length=2.0430578119173897E-003,reltime=7.3040645484668052E-003,reltime_stderr=7.5217994022453944E-003,divtime=2.6286081288544113E+000,divtime_95%_CI={6.1545594584853725E-001,1.1226767312407973E+001},data_coverage=19%]:1.1465990987840732E+000,214[&rate=NA,branch_length=6.1213374111685342E-003]:3.7752072276384845E+000)[&rate=NA,branch_length=7.2266723278164311E-004,reltime=1.0490098151879050E-002,reltime_stderr=9.6471363529619253E-003,divtime=3.7752072276384846E+000,divtime_95%_CI={9.7706876119321507E-001,1.4586680260055399E+001},data_coverage=16%]:4.1525052265811028E-001,173[&rate=NA,branch_length=7.1911748779411389E-003]:4.1904577502965950E+000)[&rate=NA,branch_length=7.6955793952594969E-004,reltime=1.1643947060731527E-002,reltime_stderr=9.8413974394641913E-003,divtime=4.1904577502965949E+000,divtime_95%_CI={1.1667417431751931E+000,1.5050405335831094E+001},data_coverage=11%]:4.4637084077753186E-001,174[&rate=NA,branch_length=5.8462652714419954E-003]:4.6368285910741269E+000)[&rate=NA,branch_length=1.3719486363516894E-003,reltime=1.2884269419094389E-002,reltime_stderr=9.8947028621533775E-003,divtime=4.6368285910741267E+000,divtime_95%_CI={1.3998669436421946E+000,1.5358730685548574E+001},data_coverage=21%]:8.6255147210220008E-001,((((241[&rate=NA,branch_length=5.9632347944024956E-003]:1.8152840200488789E+000,242[&rate=NA,branch_length=2.9288803735219790E-003]:1.8152840200488789E+000)[&rate=NA,branch_length=1.0851633698993155E-003,reltime=5.0440959649682664E-003,reltime_stderr=5.4482334090049754E-003,divtime=1.8152840200488788E+000,divtime_95%_CI={4.0716306500387197E-001,8.0932097154084484E+000},data_coverage=20%]:4.7135480483997642E-001,246[&rate=NA,branch_length=5.3758177590824564E-003]:2.2866388248888554E+000)[&rate=NA,branch_length=1.5264189308007970E-003,reltime=6.3538407998827009E-003,reltime_stderr=6.0098372580081805E-003,divtime=2.2866388248888552E+000,divtime_95%_CI={5.7739397115816266E-001,9.0557182386249895E+000},data_coverage=23%]:6.5955590377809673E-001,244[&rate=NA,branch_length=4.2177035922501549E-003]:2.9461947286669519E+000)[&rate=NA,branch_length=1.6159989816715049E-003,reltime=8.1865365302337651E-003,reltime_stderr=6.9468266951698180E-003,divtime=2.9461947286669520E+000,divtime_95%_CI={8.1751006426473291E-001,1.0617683816567773E+001},data_coverage=24%]:7.8632502287416982E-001,206[&rate=NA,branch_length=5.3481476399385944E-003]:3.7325197515411217E+000)[&rate=NA,branch_length=3.2209648646196105E-003,reltime=1.0371483255499590E-002,reltime_stderr=7.9693085717699099E-003,divtime=3.7325197515411218E+000,divtime_95%_CI={1.1263427398406377E+000,1.2368973672805620E+001},data_coverage=18%]:1.7668603116352050E+000)[&rate=NA,branch_length=2.9156138728013451E-003,reltime=1.5281025161973123E-002,reltime_stderr=1.0423125477081806E-002,divtime=5.4993800631763268E+000,divtime_95%_CI={1.8292024917233697E+000,1.6533533720899248E+001},data_coverage=25%]:1.7122284392020922E+000,170[&rate=NA,branch_length=1.0558052230310793E-002]:7.2116085023784189E+000)[&rate=NA,branch_length=2.2388424738008011E-003,reltime=2.0038762499985184E-002,reltime_stderr=1.3000584394031334E-002,divtime=7.2116085023784190E+000,divtime_95%_CI={2.4959784442133314E+000,2.0836436833879819E+001},data_coverage=20%]:1.4000397980955639E+000,((250[&rate=NA,branch_length=5.0506528421762481E-003]:3.8431972443305433E+000,200[&rate=NA,branch_length=5.4021937460692034E-003]:3.8431972443305433E+000)[&rate=NA,branch_length=2.0230286651395776E-003,reltime=1.0679020747498718E-002,reltime_stderr=8.6469806036229147E-003,divtime=3.8431972443305435E+000,divtime_95%_CI={1.1098309654581075E+000,1.3308481668407195E+001},data_coverage=12%]:1.4884555639240507E+000,245[&rate=NA,branch_length=1.3937177779796854E-002]:5.3316528082545940E+000)[&rate=NA,branch_length=5.2499009980349863E-003,reltime=1.4814964556347820E-002,reltime_stderr=9.9118184402748112E-003,divtime=5.3316528082545942E+000,divtime_95%_CI={1.8009727468952017E+000,1.5783982137861431E+001},data_coverage=11%]:3.2799954922193887E+000)[&rate=NA,branch_length=2.0439608100886737E-003,reltime=2.3929027063752273E-002,reltime_stderr=1.3494141001824471E-002,divtime=8.6116483004739828E+000,divtime_95%_CI={3.3175116342969848E+000,2.2354250602883512E+001},data_coverage=21%]:1.2775916159307056E+000)[&rate=NA,branch_length=3.4383164264368258E-003,reltime=2.7479047139740073E-002,reltime_stderr=1.4428198031645507E-002,divtime=9.8892399164046885E+000,divtime_95%_CI={4.0133693659829223E+000,2.4367820951924801E+001},data_coverage=28%]:2.1789994210939728E+000,176[&rate=NA,branch_length=1.1354419978501526E-002]:1.2068239337498662E+001)[&rate=NA,branch_length=2.3861895929051615E-003,reltime=3.3533792329042377E-002,reltime_stderr=1.7098304807433650E-002,divtime=1.2068239337498661E+001,divtime_95%_CI={5.0010549182746580E+000,2.9122335804581829E+001},data_coverage=24%]:1.7228087604154474E+000,172[&rate=NA,branch_length=1.4872415357636545E-002]:1.3791048097914109E+001)[&rate=NA,branch_length=1.2464997162268822E-002,reltime=3.8320929008948561E-002,reltime_stderr=1.6085551899450542E-002,divtime=1.3791048097914109E+001,divtime_95%_CI={6.5123635842146322E+000,2.9204912345494751E+001},data_coverage=6%]:9.8980679701612638E+000,(((((((202[&rate=NA,branch_length=1.0633382704332383E-002]:3.8293372216487800E+000,196[&rate=NA,branch_length=5.6025167971939880E-003]:3.8293372216487800E+000)[&rate=NA,branch_length=2.0181139391036813E-003,reltime=1.0640508160095690E-002,reltime_stderr=8.6230963543715245E-003,divtime=3.8293372216487800E+000,divtime_95%_CI={1.1050363091239968E+000,1.3269992520634326E+001},data_coverage=7%]:1.0012487553224270E+000,183[&rate=NA,branch_length=4.8096719683593976E-003]:4.8305859769712072E+000)[&rate=NA,branch_length=1.3598309547888127E-003,reltime=1.3422659465826550E-002,reltime_stderr=9.0198840278654475E-003,divtime=4.8305859769712070E+000,divtime_95%_CI={1.6260180718864310E+000,1.4350738952021112E+001},data_coverage=12%]:8.0473565380256290E-001,(204[&rate=NA,branch_length=4.5247758729378990E-003]:4.2243283341118429E+000,218[&rate=NA,branch_length=4.4884826875021613E-003]:4.2243283341118429E+000)[&rate=NA,branch_length=1.5052741291021324E-003,reltime=1.1738062622410418E-002,reltime_stderr=8.5001270583729369E-003,divtime=4.2243283341118433E+000,divtime_95%_CI={1.3386890982733851E+000,1.3330167473087072E+001},data_coverage=19%]:1.4109932966619266E+000)[&rate=NA,branch_length=5.5037757164362600E-003,reltime=1.5658763469046007E-002,reltime_stderr=8.8499272757045265E-003,divtime=5.6353216307737699E+000,divtime_95%_CI={2.1673603848815657E+000,1.4652316293952230E+001},data_coverage=22%]:4.0992043056573798E+000,((185[&rate=NA,branch_length=8.3750083438407213E-003]:5.4227761389174587E+000,210[&rate=NA,branch_length=6.2689863668732625E-003]:5.4227761389174587E+000)[&rate=NA,branch_length=1.5896329911987183E-003,reltime=1.5068167261508331E-002,reltime_stderr=1.0970990074519674E-002,divtime=5.4227761389174588E+000,divtime_95%_CI={1.7108648516893103E+000,1.7188091171419252E+001},data_coverage=13%]:1.1896720462094732E+000,(198[&rate=NA,branch_length=8.9091191632990480E-003]:5.3004967142989674E+000,181[&rate=NA,branch_length=5.7711124353884650E-003]:5.3004967142989674E+000)[&rate=NA,branch_length=1.7747956385811359E-003,reltime=1.4728391697186354E-002,reltime_stderr=1.0742404086566446E-002,divtime=5.3004967142989672E+000,divtime_95%_CI={1.6698881722797465E+000,1.6824638849880730E+001},data_coverage=10%]:1.3119514708279648E+000)[&rate=NA,branch_length=4.1975300184577628E-003,reltime=1.8373886863314315E-002,reltime_stderr=1.0636017733441442E-002,divtime=6.6124481851269320E+000,divtime_95%_CI={2.4981404261448029E+000,1.7502807505687432E+001},data_coverage=18%]:3.1220777513042176E+000)[&rate=NA,branch_length=3.1303673512510506E-003,reltime=2.7049146279329428E-002,reltime_stderr=1.4076834085907555E-002,divtime=9.7345259364311496E+000,divtime_95%_CI={3.9757827262280328E+000,2.3834550762021620E+001},data_coverage=23%]:2.3299128439534285E+000,((186[&rate=NA,branch_length=4.1423869651543849E-003]:3.5673635477032475E+000,216[&rate=NA,branch_length=7.2589384376311704E-003]:3.5673635477032475E+000)[&rate=NA,branch_length=1.7902883323622184E-003,reltime=9.9125667817316628E-003,reltime_stderr=6.9574533898636314E-003,divtime=3.5673635477032474E+000,divtime_95%_CI={1.1595789752036136E+000,1.0974744242191259E+001},data_coverage=13%]:1.1646849449867921E+000,(201[&rate=NA,branch_length=5.7799444809408232E-003]:3.7743818835340197E+000,232[&rate=NA,branch_length=4.8307042053366200E-003]:3.7743818835340197E+000)[&rate=NA,branch_length=1.3407122032030514E-003,reltime=1.0487804783557034E-002,reltime_stderr=7.3381649234120498E-003,divtime=3.7743818835340196E+000,divtime_95%_CI={1.2299836316755814E+000,1.1582234296356316E+001},data_coverage=11%]:9.5766660915601986E-001)[&rate=NA,branch_length=1.0756313260374056E-002,reltime=1.3148855189817236E-002,reltime_stderr=7.0112253186513342E-003,divtime=4.7320484926900395E+000,divtime_95%_CI={1.8992212133109869E+000,1.1790244748863525E+001},data_coverage=19%]:7.3323902876945387E+000)[&rate=NA,branch_length=1.8229863509193285E-003,reltime=3.3523231791632225E-002,reltime_stderr=1.6336809230370994E-002,divtime=1.2064438780384578E+001,divtime_95%_CI={5.1600756088641433E+000,2.8207083406998087E+001},data_coverage=25%]:1.2985140942663682E+000,(205[&rate=NA,branch_length=8.4813185595521861E-004]:3.3734897171495787E-001,208[&rate=NA,branch_length=2.4347275188052345E-004]:3.3734897171495787E-001)[&rate=NA,branch_length=1.7545887760333868E-002,reltime=9.3738531723966502E-004,reltime_stderr=2.2671861348220858E-003,divtime=3.3734897171495785E-001,divtime_95%_CI={3.5194237990769319E-002,3.2336068406137341E+000},data_coverage=25%]:1.3025603902935989E+001)[&rate=NA,branch_length=9.9386686309135466E-003,reltime=3.7131388769275343E-002,reltime_stderr=1.6565574586549979E-002,divtime=1.3362952874650946E+001,divtime_95%_CI={6.0663191935726178E+000,2.9436055675958952E+001},data_coverage=25%]:7.2272170306903099E+000,((217[&rate=NA,branch_length=3.6649066628295511E-003]:3.9928107963803900E+000,304[&rate=NA,branch_length=4.3565968965392568E-003]:3.9928107963803900E+000)[&rate=NA,branch_length=5.5908387168322887E-003,reltime=1.1094749143641862E-002,reltime_stderr=7.3814788640861781E-003,divtime=3.9928107963803899E+000,divtime_95%_CI={1.3547269286187742E+000,1.1768082348481979E+001},data_coverage=23%]:5.5866382048386037E+000,207[&rate=NA,branch_length=1.3029297889478491E-002]:9.5794490012189932E+000)[&rate=NA,branch_length=1.1897499306029378E-002,reltime=2.6618236881943657E-002,reltime_stderr=1.3051768504736561E-002,divtime=9.5794490012189936E+000,divtime_95%_CI={4.0798406708727145E+000,2.2492506587843303E+001},data_coverage=12%]:1.1010720904122263E+001)[&rate=NA,branch_length=3.7775703012325615E-003,reltime=5.7213522396757689E-002,reltime_stderr=1.9565187492141010E-002,divtime=2.0590169905341256E+001,divtime_95%_CI={1.0986681217995382E+001,3.8588094832169451E+001},data_coverage=26%]:3.0989461627341162E+000)[&rate=NA,branch_length=7.0776731117303442E-003,reltime=6.5824506497570824E-002,reltime_stderr=1.8795201538711666E-002,divtime=2.3689116068075372E+001,divtime_95%_CI={1.3889014788438801E+001,4.0404177591766087E+001},data_coverage=29%]:5.7124230439716921E+000,((215[&rate=NA,branch_length=4.0284447469511545E-003]:3.1740402044378766E+000,191[&rate=NA,branch_length=3.7650269470627393E-003]:3.1740402044378766E+000)[&rate=NA,branch_length=2.6634355815844304E-003,reltime=8.8196465186869493E-003,reltime_stderr=5.5539146882479794E-003,divtime=3.1740402044378765E+000,divtime_95%_CI={1.1244425846302740E+000,8.9595781564077159E+000},data_coverage=18%]:2.1707103185856120E+000,187[&rate=NA,branch_length=7.1791937543248096E-003]:5.3447505230234889E+000)[&rate=NA,branch_length=3.0192908826759058E-002,reltime=1.4851358932922735E-002,reltime_stderr=6.3763766966117104E-003,divtime=5.3447505230234885E+000,divtime_95%_CI={2.4876863439933280E+000,1.1483102852710948E+001},data_coverage=18%]:2.4056788589023576E+001)[&rate=NA,branch_length=2.0558603081187118E-002,reltime=8.1697510230349511E-002,reltime_stderr=2.0042950903774213E-002,divtime=2.9401539112047065E+001,divtime_95%_CI={1.8486291219844749E+001,4.6761705302427510E+001},data_coverage=24%]:1.6486363866370743E+001,((((301[&rate=NA,branch_length=2.9826157363220845E-002]:2.8332543356276080E+001,312[&rate=NA,branch_length=1.7533581171171868E-002]:2.8332543356276080E+001)[&rate=NA,branch_length=6.5073614229517419E-003,reltime=7.8727111593717746E-002,reltime_stderr=1.9387775334629271E-002,divtime=2.8332543356276081E+001,divtime_95%_CI={1.7784792171858298E+001,4.5135923168417204E+001},data_coverage=6%]:8.0622548808488475E+000,193[&rate=NA,branch_length=3.1122991439172416E-002]:3.6394798237124931E+001)[&rate=NA,branch_length=5.3730213580786964E-003,reltime=1.0112954937419266E-001,reltime_stderr=1.5192902845143199E-002,divtime=3.6394798237124929E+001,divtime_95%_CI={2.7223160629371158E+001,4.8656412705141101E+001},data_coverage=22%]:6.5614037006324619E+000,287[&rate=NA,branch_length=4.9881631675971407E-002]:4.2956201937757392E+001)[&rate=NA,branch_length=2.6174346712176427E-003,reltime=1.1936159987723013E-001,reltime_stderr=1.4520187935768626E-002,divtime=4.2956201937757390E+001,divtime_95%_CI={3.3918233237688682E+001,5.2088928654845143E+001},data_coverage=22%]:2.9185184985639779E+000,(266[&rate=NA,branch_length=8.4572280158925778E-003]:4.3859652874693955E+000,280[&rate=NA,branch_length=6.6982791664181602E-003]:4.3859652874693955E+000)[&rate=NA,branch_length=7.1196862546122508E-002,reltime=1.2187200220282644E-002,reltime_stderr=5.8726065558399121E-003,divtime=4.3859652874693955E+000,divtime_95%_CI={1.8905351682161718E+000,1.0175262447530885E+001},data_coverage=23%]:4.1488755148851973E+001)[&rate=NA,branch_length=5.1236183127655235E-003,reltime=1.2747123298130793E-001,reltime_stderr=8.2843419875742691E-003,divtime=4.5874720436321368E+001,divtime_95%_CI={4.5874720436321368E+001,5.2088928654845143E+001},data_coverage=23%]:1.3182542096439283E-002)[&rate=NA,branch_length=4.7855277643104547E-003,reltime=1.2750786306600117E-001,reltime_stderr=2.7927746713513477E-002,divtime=4.5887902978417808E+001,divtime_95%_CI={4.5874720436321368E+001,6.9637034609982237E+001},data_coverage=27%]:2.3526962480621743E-002,264[&rate=NA,branch_length=6.8681699525656115E-002]:4.5911429940898429E+001)[&rate=NA,branch_length=7.0685907611292374E-003,reltime=1.2757323699933931E-001,reltime_stderr=5.0437393015773365E-002,divtime=4.5911429940898429E+001,divtime_95%_CI={4.5874720436321368E+001,7.3956614903277287E+001},data_coverage=16%]:4.0925557466280537E-002,(131[&rate=NA,branch_length=3.9285471319047423E-002]:3.7894397223507369E+001,330[&rate=NA,branch_length=6.0411543905731911E-002]:3.7894397223507369E+001)[&rate=NA,branch_length=1.0359193905701086E-002,reltime=1.0529645720389882E-001,reltime_stderr=3.5063092901674721E-002,divtime=3.7894397223507366E+001,divtime_95%_CI={2.0518831680307148E+001,6.9983777015488797E+001},data_coverage=21%]:8.0579582748573443E+000)[&rate=NA,branch_length=3.5151693709271216E-002,reltime=1.2768695608516819E-001,reltime_stderr=3.8567372822731910E-002,divtime=4.5952355498364710E+001,divtime_95%_CI={4.5874720436321368E+001,7.3956614903277287E+001},data_coverage=25%]:4.4635155805490394E-001,66[&rate=NA,branch_length=1.2545439097825686E-001]:4.6398707056419617E+001)[&rate=NA,branch_length=3.1551043528446079E-002,reltime=1.2892722486298810E-001,reltime_stderr=6.2777418259595230E-002,divtime=4.6398707056419614E+001,divtime_95%_CI={4.5874720436321368E+001,7.3956614903277287E+001},data_coverage=13%]:3.9098807538847699E-001,5[&rate=NA,branch_length=1.4409015101272737E-001]:4.6789695131808088E+001)[&rate=NA,branch_length=2.4480375138386724E-002,reltime=1.3001365616059002E-001,reltime_stderr=6.9861920124962775E-002,divtime=4.6789695131808091E+001,divtime_95%_CI={4.5874720436321368E+001,7.3956614903277287E+001},data_coverage=13%]:3.4024307930571355E-001,51[&rate=NA,branch_length=1.2634836261545937E-001]:4.7129938211113803E+001)[&rate=NA,branch_length=1.0385437215547058E-002,reltime=1.3095908328079797E-001,reltime_stderr=6.7812142976227522E-002,divtime=4.7129938211113804E+001,divtime_95%_CI={4.5874720436321368E+001,7.3956614903277287E+001},data_coverage=9%]:1.8275628736288682E-001,(329[&rate=NA,branch_length=3.0872151579291036E-002]:1.4156424687770606E+001,333[&rate=NA,branch_length=3.2797265917512072E-002]:1.4156424687770606E+001)[&rate=NA,branch_length=7.4527122212306243E-002,reltime=3.9336194147755542E-002,reltime_stderr=2.1158403528073136E-002,divtime=1.4156424687770605E+001,divtime_95%_CI={5.6459860645756221E+000,3.5495014980272429E+001},data_coverage=8%]:3.3156269810706086E+001)[&rate=NA,branch_length=1.1478963957526468E-002,reltime=1.3146690477951578E-001,reltime_stderr=5.4778694669086287E-002,divtime=4.7312694498476691E+001,divtime_95%_CI={4.5874720436321368E+001,7.3956614903277287E+001},data_coverage=21%]:3.4036604675379035E-001,(342[&rate=NA,branch_length=7.2255076625657194E-002]:2.2007157922166204E+001,55[&rate=NA,branch_length=5.8990242126623300E-002]:2.2007157922166204E+001)[&rate=NA,branch_length=7.6081365966370468E-002,reltime=6.1150880660883573E-002,reltime_stderr=2.8474753721096802E-002,divtime=2.2007157922166205E+001,divtime_95%_CI={9.7095854967834239E+000,4.9880090140985510E+001},data_coverage=17%]:2.5645902623064277E+001)[&rate=NA,branch_length=1.1349188617676236E-002,reltime=1.3241267358708605E-001,reltime_stderr=4.6932322986191260E-002,divtime=4.7653060545230482E+001,divtime_95%_CI={4.5874720436321368E+001,7.3956614903277287E+001},data_coverage=25%]:3.7826159305849097E-001,((81[&rate=NA,branch_length=4.8745541400431233E-002]:3.0362435291291739E+001,226[&rate=NA,branch_length=2.3304403507648872E-002]:3.0362435291291739E+001)[&rate=NA,branch_length=3.2548630451505545E-003,reltime=8.4367534582985517E-002,reltime_stderr=3.8195168050482505E-002,divtime=3.0362435291291740E+001,divtime_95%_CI={1.3650558060807894E+001,6.3352362146464072E+001},data_coverage=12%]:2.9321276738329818E+000,298[&rate=NA,branch_length=3.6524395456467219E-002]:3.3294562965124719E+001)[&rate=NA,branch_length=1.6310482091901477E-002,reltime=9.2514983249423122E-002,reltime_stderr=3.2503871780657697E-002,divtime=3.3294562965124722E+001,divtime_95%_CI={1.7497815163953216E+001,6.3352362146464072E+001},data_coverage=18%]:1.4736759173164250E+001)[&rate=NA,branch_length=8.8943322865541134E-003,reltime=1.3346374204479078E-001,reltime_stderr=4.0558077446142783E-002,divtime=4.8031322138288972E+001,divtime_95%_CI={4.5874720436321368E+001,7.3956614903277287E+001},data_coverage=25%]:9.6686846354728042E-001,(((45[&rate=NA,branch_length=9.6578516324212521E-002]:2.6209146595445471E+001,354[&rate=NA,branch_length=6.1661430475183132E-002]:2.6209146595445471E+001)[&rate=NA,branch_length=3.7532573271007452E-002,reltime=7.2826868482976342E-002,reltime_stderr=3.6196088192741243E-002,divtime=2.6209146595445473E+001,divtime_95%_CI={1.1057753177500362E+001,6.2121061506351258E+001},data_coverage=15%]:1.2747181178925291E+001,348[&rate=NA,branch_length=1.2407926743106126E-001]:3.8956327774370763E+001)[&rate=NA,branch_length=1.2875269588464876E-002,reltime=1.0824722388697818E-001,reltime_stderr=4.0395425697723584E-002,divtime=3.8956327774370764E+001,divtime_95%_CI={1.9771035661660612E+001,7.3956614903277287E+001},data_coverage=22%]:4.2877592452336782E+000,355[&rate=NA,branch_length=1.1765537796694088E-001]:4.3244087019604443E+001)[&rate=NA,branch_length=1.6940504190963702E-002,reltime=1.2016154080310253E-001,reltime_stderr=3.8431421038142998E-002,divtime=4.3244087019604442E+001,divtime_95%_CI={2.3929985467274112E+001,7.3956614903277287E+001},data_coverage=22%]:5.7541035822318107E+000)[&rate=NA,branch_length=1.4452990698338400E-002,reltime=1.3615036147280876E-001,reltime_stderr=4.2622468905500706E-002,divtime=4.8998190601836253E+001,divtime_95%_CI={4.5874720436321368E+001,7.3956614903277287E+001},data_coverage=28%]:1.3109640287854463E+000,29[&rate=NA,branch_length=1.5497791475786532E-001]:5.0309154630621698E+001)[&rate=NA,branch_length=2.6688825198462690E-002,reltime=1.3979311285208723E-001,reltime_stderr=4.8266033556435849E-002,divtime=5.0309154630621699E+001,divtime_95%_CI={4.5874720436321368E+001,7.3956614903277287E+001},data_coverage=24%]:2.2590580467807397E+000)[&rate=NA,branch_length=7.5737009795224909E-003,reltime=1.4607031545649786E-001,reltime_stderr=3.1595841107048249E-002,divtime=5.2568212677402439E+001,divtime_95%_CI={4.8902920723818823E+001,7.3956614903277287E+001},data_coverage=44%]:5.7428962077646493E-001,((((((((((((220[&rate=NA,branch_length=2.1308532321091658E-002]:5.6919110116406699E+000,331[&rate=NA,branch_length=4.4809349973219677E-002]:5.6919110116406699E+000)[&rate=NA,branch_length=1.5141589058954142E-002,reltime=1.5816007329807308E-002,reltime_stderr=1.2898193106581919E-002,divtime=5.6919110116406695E+000,divtime_95%_CI={1.6337956245848295E+000,1.9829806419434537E+001},data_coverage=10%]:2.7891281324002243E+000,265[&rate=NA,branch_length=5.2770357756668322E-002]:8.4810391440408939E+000)[&rate=NA,branch_length=1.7500835513546163E-002,reltime=2.3566105828465735E-002,reltime_stderr=1.6089394498639957E-002,divtime=8.4810391440408939E+000,divtime_95%_CI={2.8188478057795413E+000,2.5516817479566792E+001},data_coverage=21%]:3.1156330238360681E+000,(332[&rate=NA,branch_length=6.8182854976661820E-003]:7.9871017662512467E-001,95[&rate=NA,branch_length=5.6910456360023433E-003]:7.9871017662512467E-001)[&rate=NA,branch_length=8.4214369532611424E-002,reltime=2.2193611217849001E-003,reltime_stderr=2.8329061948531369E-003,divtime=7.9871017662512467E-001,divtime_95%_CI={1.5371223253562114E-001,4.1502093601867546E+000},data_coverage=11%]:1.0797961991251837E+001)[&rate=NA,branch_length=5.4671935226166535E-003,reltime=3.2223457400056294E-002,reltime_stderr=1.8961417007463940E-002,divtime=1.1596672167876962E+001,divtime_95%_CI={4.3273994378777118E+000,2.9961040272165813E+001},data_coverage=22%]:8.2601132363833321E-001,((227[&rate=NA,branch_length=2.0497571491610981E-003]:1.2820622488554259E+000,231[&rate=NA,branch_length=1.1855188698759499E-002]:1.2820622488554259E+000)[&rate=NA,branch_length=8.1831188832810538E-003,reltime=3.5624425405979537E-003,reltime_stderr=3.5468589292755935E-003,divtime=1.2820622488554258E+000,divtime_95%_CI={3.0936631397145288E-001,5.3130658889122120E+000},data_coverage=10%]:2.1282494629198670E+000,313[&rate=NA,branch_length=8.5933997905952367E-003]:3.4103117117752930E+000)[&rate=NA,branch_length=3.1178418358734944E-002,reltime=9.4761697644353151E-003,reltime_stderr=5.9145929006162607E-003,divtime=3.4103117117752928E+000,divtime_95%_CI={1.2164932659193209E+000,9.5604524063539344E+000},data_coverage=12%]:9.0123717797400024E+000)[&rate=NA,branch_length=6.5206597554531990E-003,reltime=3.4518679711587481E-002,reltime_stderr=1.7586677984738444E-002,divtime=1.2422683491515295E+001,divtime_95%_CI={5.1507912852323334E+000,2.9961040272165813E+001},data_coverage=23%]:1.3626829624633552E+000,(((6[&rate=NA,branch_length=5.6757830998007529E-003]:1.0161906929758340E+000,94[&rate=NA,branch_length=6.7860314487625840E-003]:1.0161906929758340E+000)[&rate=NA,branch_length=2.6579599278522711E-002,reltime=2.8236701901555288E-003,reltime_stderr=3.1999550313297221E-003,divtime=1.0161906929758339E+000,divtime_95%_CI={2.1820207636014006E-001,4.7325100737645555E+000},data_coverage=2%]:4.3521395542987840E+000,(257[&rate=NA,branch_length=1.4683767021211516E-002]:1.8067140234273393E+000,63[&rate=NA,branch_length=9.4738140394539875E-003]:1.8067140234273393E+000)[&rate=NA,branch_length=2.3250852225020498E-002,reltime=5.0202826746505698E-003,reltime_stderr=4.4015869160031370E-003,divtime=1.8067140234273393E+000,divtime_95%_CI={4.8742042909179577E-001,6.6969198819408847E+000},data_coverage=6%]:3.5616162238472786E+000)[&rate=NA,branch_length=3.9407799932259353E-002,reltime=1.4916879474411876E-002,reltime_stderr=9.5719578026607765E-003,divtime=5.3683302472746179E+000,divtime_95%_CI={1.8740830872707612E+000,1.5377637117345104E+001},data_coverage=9%]:6.2411339548027609E+000,335[&rate=NA,branch_length=7.9102754810902884E-002]:1.1609464202077378E+001)[&rate=NA,branch_length=1.4003069805142194E-002,reltime=3.2259002387717410E-002,reltime_stderr=1.7883089633925275E-002,divtime=1.1609464202077379E+001,divtime_95%_CI={4.5292436329281675E+000,2.9757652708158859E+001},data_coverage=8%]:2.1759022519012716E+000)[&rate=NA,branch_length=9.7977302763479594E-003,reltime=3.8305141530552502E-002,reltime_stderr=1.7055411666155855E-002,divtime=1.3785366453978650E+001,divtime_95%_CI={6.2662401795025595E+000,3.0327009949619549E+001},data_coverage=22%]:1.7655709994587339E+000,((((119[&rate=NA,branch_length=1.1650656056007166E-003]:7.4511671542179125E-001,135[&rate=NA,branch_length=2.2640646714033276E-003]:7.4511671542179125E-001)[&rate=NA,branch_length=1.8190355095865050E-004,reltime=2.0704419673061764E-003,reltime_stderr=2.7125207119149308E-003,divtime=7.4511671542179125E-001,divtime_95%_CI={1.3996734698625517E-001,3.9283608526375841E+000},data_coverage=19%]:8.3453754223690478E-002,(160[&rate=NA,branch_length=1.5679995006358226E-003]:7.2887927880288716E-001,162[&rate=NA,branch_length=2.4608169482496218E-003]:7.2887927880288716E-001)[&rate=NA,branch_length=2.6866667127296981E-004,reltime=2.0253233039861320E-003,reltime_stderr=2.6889983185150984E-003,divtime=7.2887927880288713E-001,divtime_95%_CI={1.3522643177778949E-001,3.9283608526375841E+000},data_coverage=16%]:9.9691190842594595E-002)[&rate=NA,branch_length=3.9243873801581026E-003,reltime=2.3023333629731950E-003,reltime_stderr=2.6607282599937090E-003,divtime=8.2857046964548173E-001,divtime_95%_CI={1.7476220971593893E-001,3.9283608526375841E+000},data_coverage=21%]:1.6191821810599416E+000,(((132[&rate=NA,branch_length=2.1190115688967913E-003]:1.0097229944218393E+000,134[&rate=NA,branch_length=3.8644116247644024E-003]:1.0097229944218393E+000)[&rate=NA,branch_length=1.2859942062795381E-003,reltime=2.8056985164017120E-003,reltime_stderr=3.3048741213084949E-003,divtime=1.0097229944218393E+000,divtime_95%_CI={2.0928230837361581E-001,4.8716039754497424E+000},data_coverage=19%]:4.5376699571557431E-001,154[&rate=NA,branch_length=3.2445645337057598E-003]:1.4634899901374137E+000)[&rate=NA,branch_length=8.1098539143021990E-004,reltime=4.0665724330150863E-003,reltime_stderr=3.7946536395595966E-003,divtime=1.4634899901374136E+000,divtime_95%_CI={3.7396764076455310E-001,5.7272413914038840E+000},data_coverage=18%]:3.0427536051587519E-001,165[&rate=NA,branch_length=9.8138688253926604E-003]:1.7677653506532889E+000)[&rate=NA,branch_length=2.1441216801167465E-003,reltime=4.9120567215706945E-003,reltime_stderr=4.0017848297965590E-003,divtime=1.7677653506532888E+000,divtime_95%_CI={5.0785368744831895E-001,6.1533359158455572E+000},data_coverage=21%]:6.7998730005213451E-001)[&rate=NA,branch_length=2.3275948716785760E-002,reltime=6.8015247929804139E-003,reltime_stderr=4.5346540010965997E-003,divtime=2.4477526507054233E+000,divtime_95%_CI={8.2911848756128236E-001,7.2263411429389683E+000},data_coverage=23%]:8.4196686605156424E+000,163[&rate=NA,branch_length=3.7656313091979157E-002]:1.0867421311221065E+001)[&rate=NA,branch_length=1.3990538631249449E-002,reltime=3.0197101599596699E-002,reltime_stderr=1.6650678281840549E-002,divtime=1.0867421311221066E+001,divtime_95%_CI={4.2564605674407731E+000,2.7746256328316170E+001},data_coverage=14%]:4.6835161422163186E+000)[&rate=NA,branch_length=2.2249206660284574E-002,reltime=4.3211100849246329E-002,reltime_stderr=1.7632788351567181E-002,divtime=1.5550937453437384E+001,divtime_95%_CI={7.4753307502007869E+000,3.2350629525553236E+001},data_coverage=24%]:5.4646603841607653E+000,(((14[&rate=NA,branch_length=9.9682108892246574E-003]:1.7645587121578237E+000,384[&rate=NA,branch_length=1.2182747035171191E-002]:1.7645587121578237E+000)[&rate=NA,branch_length=6.6962520286003120E-003,reltime=4.9031464947866500E-003,reltime_stderr=4.1679421140686849E-003,divtime=1.7645587121578237E+000,divtime_95%_CI={4.8889524895090334E-001,6.3687823830023825E+000},data_coverage=21%]:1.0722268594916465E+000,35[&rate=NA,branch_length=1.5206511147117730E-002]:2.8367855716494703E+000)[&rate=NA,branch_length=6.5206836254330450E-002,reltime=7.8825233392689707E-003,reltime_stderr=4.8767776239049768E-003,divtime=2.8367855716494702E+000,divtime_95%_CI={1.0188209556287034E+000,7.8986914580616153E+000},data_coverage=22%]:1.0847596666542463E+001,20[&rate=NA,branch_length=7.0394869840723656E-002]:1.3684382238191933E+001)[&rate=NA,branch_length=4.1983463945400368E-002,reltime=3.8024538567187271E-002,reltime_stderr=1.9838051705549738E-002,divtime=1.3684382238191933E+001,divtime_95%_CI={5.5790307891900847E+000,3.3565385156823624E+001},data_coverage=23%]:7.3312155994062165E+000)[&rate=NA,branch_length=1.1282816801814970E-002,reltime=5.8395651084489985E-002,reltime_stderr=2.1971825929402294E-002,divtime=2.1015597837598150E+001,divtime_95%_CI={1.0614017179799518E+001,4.1610574487500706E+001},data_coverage=26%]:2.3366341609839073E+000,17[&rate=NA,branch_length=1.0553590177573599E-001]:2.3352231998582056E+001)[&rate=NA,branch_length=2.7840067399152957E-002,reltime=6.4888412995493079E-002,reltime_stderr=2.2265336977163309E-002,divtime=2.3352231998582057E+001,divtime_95%_CI={1.2436890240422642E+001,4.3847515638850562E+001},data_coverage=23%]:5.8735972357079658E+000,((((((112[&rate=NA,branch_length=2.9889905702330248E-003]:1.3641398382309007E+000,110[&rate=NA,branch_length=1.3426093196756488E-002]:1.3641398382309007E+000)[&rate=NA,branch_length=9.2009345865184701E-003,reltime=3.7905100125806619E-003,reltime_stderr=3.8657941798553382E-003,divtime=1.3641398382309008E+000,divtime_95%_CI={3.2218418823223001E-001,5.7758188210878605E+000},data_coverage=10%]:1.9813159427779424E+000,106[&rate=NA,branch_length=1.4232479057348367E-002]:3.3454557810088432E+000)[&rate=NA,branch_length=1.9920262992412202E-002,reltime=9.2959557951224023E-003,reltime_stderr=6.8057660579748594E-003,divtime=3.3454557810088432E+000,divtime_95%_CI={1.0507128747357535E+000,1.0651886592234070E+001},data_coverage=15%]:4.3846011776107556E+000,(15[&rate=NA,branch_length=6.4470695340538274E-004]:1.2735767493271724E-001,47[&rate=NA,branch_length=7.5931728086029284E-004]:1.2735767493271724E-001)[&rate=NA,branch_length=4.1767214238250472E-002,reltime=3.5388640407827837E-004,reltime_stderr=1.7811642626531666E-003,divtime=1.2735767493271723E-001,divtime_95%_CI={6.4385426105056337E-003,2.5192001273396679E+000},data_coverage=24%]:7.6026992836868816E+000)[&rate=NA,branch_length=1.3130784523095063E-002,reltime=2.1479365588696199E-002,reltime_stderr=1.3568845834523583E-002,divtime=7.7300569586195988E+000,divtime_95%_CI={2.7317424392184173E+000,2.1873870583714152E+001},data_coverage=21%]:2.6282964000314380E+000,113[&rate=NA,branch_length=3.5611791056501585E-002]:1.0358353358651037E+001)[&rate=NA,branch_length=6.1073877431028413E-002,reltime=2.8782563942076859E-002,reltime_stderr=1.5084749528794135E-002,divtime=1.0358353358651037E+001,divtime_95%_CI={4.2093178245895165E+000,2.5489993574704813E+001},data_coverage=22%]:1.3458808799822706E+001,111[&rate=NA,branch_length=1.1941684012086748E-001]:2.3817162158473742E+001)[&rate=NA,branch_length=1.3403454847434571E-002,reltime=6.6180305788907609E-002,reltime_stderr=2.7349845633049026E-002,divtime=2.3817162158473743E+001,divtime_95%_CI={1.1358343908718783E+001,4.5851274990158635E+001},data_coverage=10%]:2.9510602691510048E+000,(344[&rate=NA,branch_length=3.1161601817477718E-002]:6.6819924107809863E+000,366[&rate=NA,branch_length=3.6681326946653832E-002]:6.6819924107809863E+000)[&rate=NA,branch_length=1.0163068657950110E-001,reltime=1.8567128110487864E-002,reltime_stderr=1.0024340025235517E-002,divtime=6.6819924107809866E+000,divtime_95%_CI={2.6577580280213312E+000,1.6799506240594581E+001},data_coverage=19%]:2.0086230016843761E+001)[&rate=NA,branch_length=1.1781347156402075E-002,reltime=7.4380362106046312E-002,reltime_stderr=2.3224520838108942E-002,divtime=2.6768222427624747E+001,divtime_95%_CI={1.5001289728514055E+001,4.5851274990158635E+001},data_coverage=22%]:2.4576068066652753E+000)[&rate=NA,branch_length=4.4878400372030440E-002,reltime=8.1209268459028515E-002,reltime_stderr=1.9296657290114925E-002,divtime=2.9225829234290023E+001,divtime_95%_CI={1.8628687961571691E+001,4.5851274990158635E+001},data_coverage=29%]:9.4148419295350637E+000,(((((((((278[&rate=NA,branch_length=3.9721911537455704E-002]:4.6696654993155695E+000,334[&rate=NA,branch_length=3.4139523623198970E-002]:4.6696654993155695E+000)[&rate=NA,branch_length=4.9357764322071410E-003,reltime=1.2975512725669761E-002,reltime_stderr=1.1986899885448361E-002,divtime=4.6696654993155695E+000,divtime_95%_CI={1.2037941737745931E+000,1.7828462048724041E+001},data_coverage=11%]:6.2588919417267512E-001,290[&rate=NA,branch_length=2.1505380392533035E-002]:5.2955546934882447E+000)[&rate=NA,branch_length=2.2106368124115796E-003,reltime=1.4714659395819275E-002,reltime_stderr=1.1949295400931171E-002,divtime=5.2955546934882446E+000,divtime_95%_CI={1.5254921538136020E+000,1.7828462048724041E+001},data_coverage=24%]:3.3091386211128044E-001,347[&rate=NA,branch_length=4.5527921170033792E-002]:5.6264685555995246E+000)[&rate=NA,branch_length=6.1453831036195729E-003,reltime=1.5634163593615623E-002,reltime_stderr=1.1378990882684914E-002,divtime=5.6264685555995250E+000,divtime_95%_CI={1.7756522307214864E+000,1.7828462048724041E+001},data_coverage=21%]:9.1400916381373479E-001,289[&rate=NA,branch_length=2.2982567346253771E-002]:6.5404777194132597E+000)[&rate=NA,branch_length=2.3977423326597538E-002,reltime=1.8173903867984776E-002,reltime_stderr=1.1568342614938761E-002,divtime=6.5404777194132598E+000,divtime_95%_CI={2.2977050856295969E+000,1.8617641169741184E+001},data_coverage=24%]:4.1875252668887354E+000,(292[&rate=NA,branch_length=4.0659758365050341E-002]:8.6739034866374993E+000,74[&rate=NA,branch_length=4.4430449958131689E-002]:8.6739034866374993E+000)[&rate=NA,branch_length=1.0065367674510977E-002,reltime=2.4102014392378285E-002,reltime_stderr=1.6461356527464605E-002,divtime=8.6739034866374996E+000,divtime_95%_CI={2.8820973659722437E+000,2.6104809151762274E+001},data_coverage=18%]:2.0540994996644957E+000)[&rate=NA,branch_length=4.1071564863609134E-002,reltime=2.9809702491578339E-002,reltime_stderr=1.5988628617978391E-002,divtime=1.0728002986301995E+001,divtime_95%_CI={4.2874786241385077E+000,2.6843293731226431E+001},data_coverage=25%]:7.7538006573828640E+000,39[&rate=NA,branch_length=8.2394152194499970E-002]:1.8481803643684859E+001)[&rate=NA,branch_length=4.4100359421231958E-002,reltime=5.1355044254692678E-002,reltime_stderr=2.5240238069989631E-002,divtime=1.8481803643684859E+001,divtime_95%_CI={7.8584994549496609E+000,4.3465940015887038E+001},data_coverage=23%]:8.8685643858907370E+000,339[&rate=NA,branch_length=1.1872909599557738E-001]:2.7350368029575595E+001)[&rate=NA,branch_length=2.4881805505885191E-002,reltime=7.5997959269571849E-002,reltime_stderr=3.0246481485818856E-002,divtime=2.7350368029575596E+001,divtime_95%_CI={1.3352540610307053E+001,5.6022494384012888E+001},data_coverage=19%]:5.2589766602883742E+000,(25[&rate=NA,branch_length=1.2011871943071667E-001]:2.7557114793842448E+001,358[&rate=NA,branch_length=1.1810162780074868E-001]:2.7557114793842448E+001)[&rate=NA,branch_length=2.1836480775412927E-002,reltime=7.6572442660540385E-002,reltime_stderr=3.3735814608309945E-002,divtime=2.7557114793842449E+001,divtime_95%_CI={1.2613310533901548E+001,5.6410095691657406E+001},data_coverage=17%]:5.0522298960215216E+000)[&rate=NA,branch_length=1.2810294279721524E-002,reltime=9.0610979964431825E-002,reltime_stderr=2.8482500600184067E-002,divtime=3.2609344689863970E+001,divtime_95%_CI={1.8210800986367267E+001,5.6410095691657406E+001},data_coverage=24%]:2.8328202034220687E+000,236[&rate=NA,branch_length=6.2063029314994293E-002]:3.5442164893286041E+001)[&rate=NA,branch_length=1.1339122321100644E-002,reltime=9.8482484808713488E-002,reltime_stderr=2.7140366766145674E-002,divtime=3.5442164893286039E+001,divtime_95%_CI={2.1137995368103590E+001,5.6410095691657406E+001},data_coverage=23%]:3.1985062705390472E+000)[&rate=NA,branch_length=1.0188199647241762E-002,reltime=1.0737011473051343E-001,reltime_stderr=2.1223882894263655E-002,divtime=3.8640671163825086E+001,divtime_95%_CI={2.6468692344581169E+001,5.6410095691657406E+001},data_coverage=31%]:2.4783872256365908E+000,(((((((10[&rate=NA,branch_length=7.1630608371290559E-003]:1.4671921151272393E+000,262[&rate=NA,branch_length=9.3392093525237786E-003]:1.4671921151272393E+000)[&rate=NA,branch_length=3.2907364098961937E-002,reltime=4.0768594589111690E-003,reltime_stderr=3.5416777301026523E-003,divtime=1.4671921151272393E+000,divtime_95%_CI={3.9898136038668322E-001,5.3953716048419966E+000},data_coverage=11%]:5.9030397202573204E+000,(268[&rate=NA,branch_length=3.1623056420950167E-002]:5.7665863651112277E+000,308[&rate=NA,branch_length=2.3830003276191572E-002]:5.7665863651112277E+000)[&rate=NA,branch_length=7.6340242221310814E-003,reltime=1.6023506346469879E-002,reltime_stderr=1.0877588830154510E-002,divtime=5.7665863651112276E+000,divtime_95%_CI={1.9254105159453977E+000,1.7270871863893855E+001},data_coverage=22%]:1.6036454702733321E+000)[&rate=NA,branch_length=8.4960711449805465E-002,reltime=2.0479526207002529E-002,reltime_stderr=1.0560721867364006E-002,divtime=7.3702318353845596E+000,divtime_95%_CI={3.0298631405857999E+000,1.7928307249156361E+001},data_coverage=21%]:1.6492513914448585E+001,(65[&rate=NA,branch_length=3.4161945669277730E-002]:5.1105807127335527E+000,3[&rate=NA,branch_length=3.2813878770692896E-002]:5.1105807127335527E+000)[&rate=NA,branch_length=1.2285172203058513E-001,reltime=1.4200675633694967E-002,reltime_stderr=8.7789097616283279E-003,divtime=5.1105807127335527E+000,divtime_95%_CI={1.8365420645774693E+000,1.4221310649572912E+001},data_coverage=12%]:1.8752165037099592E+001)[&rate=NA,branch_length=3.5084745002207450E-002,reltime=6.6306968066934236E-002,reltime_stderr=2.8509717365586525E-002,divtime=2.3862745749833145E+001,divtime_95%_CI={1.1096483764791932E+001,5.1316313058369722E+001},data_coverage=21%]:6.0393161900510767E+000,178[&rate=NA,branch_length=1.0886186624558980E-001]:2.9902061939884220E+001)[&rate=NA,branch_length=2.0750562400898218E-002,reltime=8.3088303708606390E-002,reltime_stderr=2.9011479906280960E-002,divtime=2.9902061939884222E+001,divtime_95%_CI={1.5770148962702650E+001,5.3090203451774190E+001},data_coverage=18%]:4.0145631586150372E+000,(322[&rate=NA,branch_length=2.8178681564867129E-002]:2.9684139612602618E+001,380[&rate=NA,branch_length=7.2555814233540072E-002]:2.9684139612602618E+001)[&rate=NA,branch_length=6.4471452800789796E-003,reltime=8.2482766988414233E-002,reltime_stderr=3.2608393190323203E-002,divtime=2.9684139612602618E+001,divtime_95%_CI={1.4551551856702218E+001,5.3090203451774190E+001},data_coverage=19%]:4.2324854858966410E+000)[&rate=NA,branch_length=4.1612286960012604E-003,reltime=9.4243495736868235E-002,reltime_stderr=2.4977319649523618E-002,divtime=3.3916625098499259E+001,divtime_95%_CI={2.0601372678970678E+001,5.3090203451774190E+001},data_coverage=24%]:1.4829954091118573E+000,(((((233[&rate=NA,branch_length=2.0456449322346286E-003]:1.2304948241141960E+000,285[&rate=NA,branch_length=5.7890354101961545E-003]:1.2304948241141960E+000)[&rate=NA,branch_length=4.6258428324080336E-002,reltime=3.4191530959775807E-003,reltime_stderr=3.3873754434571047E-003,divtime=1.2304948241141960E+000,divtime_95%_CI={2.9823405458970430E-001,5.0769437254738543E+000},data_coverage=13%]:1.6540644747285017E+001,(325[&rate=NA,branch_length=9.3739158064114279E-004]:9.9233585389560586E-001,324[&rate=NA,branch_length=1.3898764164112102E-002]:9.9233585389560586E-001)[&rate=NA,branch_length=6.1031062076063854E-002,reltime=2.7573851922044612E-003,reltime_stderr=3.0516837516667919E-003,divtime=9.9233585389560587E-001,divtime_95%_CI={2.1772302132788647E-001,4.5228586344286353E+000},data_coverage=14%]:1.6778803717503608E+001)[&rate=NA,branch_length=6.6546185023066235E-003,reltime=4.9380335206481357E-002,reltime_stderr=2.7742741735684991E-002,divtime=1.7771139571399213E+001,divtime_95%_CI={6.8650757773440824E+000,4.3845843803521291E+001},data_coverage=21%]:2.0864547800967713E+000,((127[&rate=NA,branch_length=2.3623125203896464E-003]:1.3740684344746603E+000,155[&rate=NA,branch_length=3.9029103199497987E-003]:1.3740684344746603E+000)[&rate=NA,branch_length=3.5582215362733580E-002,reltime=3.8180984184156882E-003,reltime_stderr=3.6008631511389214E-003,divtime=1.3740684344746603E+000,divtime_95%_CI={3.4785454532581223E-001,5.4277400942144356E+000},data_coverage=19%]:1.6101946706419469E+001,310[&rate=NA,branch_length=4.5517266856235125E-002]:1.7476015140894130E+001)[&rate=NA,branch_length=5.4835829938714928E-003,reltime=4.8560278437054076E-002,reltime_stderr=2.7630958339165145E-002,divtime=1.7476015140894130E+001,divtime_95%_CI={6.6876689230913843E+000,4.3845843803521291E+001},data_coverage=22%]:2.3815792106018550E+000)[&rate=NA,branch_length=1.4723401757381885E-002,reltime=5.5177928322015694E-002,reltime_stderr=2.4705047048987090E-002,divtime=1.9857594351495985E+001,divtime_95%_CI={8.9934191983071561E+000,4.3845843803521291E+001},data_coverage=23%]:5.4331459854159589E+000,32[&rate=NA,branch_length=1.1153657612995492E-001]:2.5290740336911945E+001)[&rate=NA,branch_length=2.2317697585737872E-002,reltime=7.0274910083240172E-002,reltime_stderr=2.7651203542555468E-002,divtime=2.5290740336911944E+001,divtime_95%_CI={1.2433736318590243E+001,5.1442424899487187E+001},data_coverage=23%]:7.2541621112622680E+000,24[&rate=NA,branch_length=1.5956146196434351E-001]:3.2544902448174213E+001)[&rate=NA,branch_length=1.0185853258778375E-002,reltime=9.0431915505266878E-002,reltime_stderr=2.7667689817931673E-002,divtime=3.2544902448174212E+001,divtime_95%_CI={1.8431936945922928E+001,5.3090203451774190E+001},data_coverage=23%]:2.8547180594369045E+000)[&rate=NA,branch_length=5.0186872124120471E-003,reltime=9.8364267515031171E-002,reltime_stderr=2.1661954676749187E-002,divtime=3.5399620507611116E+001,divtime_95%_CI={2.3276779999274272E+001,5.3090203451774190E+001},data_coverage=27%]:1.5861057656291416E+000,((((158[&rate=NA,branch_length=3.4740880089674513E-002]:1.5350451227649184E+001,338[&rate=NA,branch_length=6.9219093884567068E-002]:1.5350451227649184E+001)[&rate=NA,branch_length=2.1544546721195552E-002,reltime=4.2654013500180837E-002,reltime_stderr=2.3725684211122092E-002,divtime=1.5350451227649184E+001,divtime_95%_CI={5.9738488347467366E+000,3.9444646058310616E+001},data_coverage=9%]:6.7441177516590894E+000,(307[&rate=NA,branch_length=2.7681391159921437E-002]:7.5782857111692916E+000,337[&rate=NA,branch_length=4.0597960469672893E-002]:7.5782857111692916E+000)[&rate=NA,branch_length=6.4214118326248432E-002,reltime=2.1057641644449898E-002,reltime_stderr=1.2383497748730671E-002,divtime=7.5782857111692918E+000,divtime_95%_CI={2.8292075830653004E+000,2.0299116496036593E+001},data_coverage=15%]:1.4516283268138981E+001)[&rate=NA,branch_length=2.0279755502884717E-002,reltime=6.1393768140613629E-002,reltime_stderr=2.4339926931960013E-002,divtime=2.2094568979308273E+001,divtime_95%_CI={1.0812274689134744E+001,4.5149609348343093E+001},data_coverage=19%]:5.3947218991505610E+000,327[&rate=NA,branch_length=9.2121189211025814E-002]:2.7489290878458835E+001)[&rate=NA,branch_length=2.4274439636835701E-002,reltime=7.6383981607539088E-002,reltime_stderr=2.5279248300401495E-002,divtime=2.7489290878458834E+001,divtime_95%_CI={1.4934814448330235E+001,5.0597288343612841E+001},data_coverage=19%]:6.6455353658086089E+000,((240[&rate=NA,branch_length=2.1995148134732221E-002]:1.7462627072320203E+001,300[&rate=NA,branch_length=3.2194557802708051E-002]:1.7462627072320203E+001)[&rate=NA,branch_length=2.0646369063382370E-002,reltime=4.8523077259758060E-002,reltime_stderr=2.4415200793282837E-002,divtime=1.7462627072320203E+001,divtime_95%_CI={7.3043957046602714E+000,4.1747922291829536E+001},data_coverage=18%]:1.3548729990215075E+001,153[&rate=NA,branch_length=2.5027823086258227E-002]:3.1011357062535279E+001)[&rate=NA,branch_length=4.0604262363347649E-003,reltime=8.6170681446924444E-002,reltime_stderr=2.8131875953153961E-002,divtime=3.1011357062535277E+001,divtime_95%_CI={1.6973239051360648E+001,5.2854319572196706E+001},data_coverage=20%]:3.1234691817321658E+000)[&rate=NA,branch_length=6.2123913775733166E-003,reltime=9.4849807204806522E-002,reltime_stderr=2.1838930124191412E-002,divtime=3.4134826244267443E+001,divtime_95%_CI={2.2045243835458622E+001,5.2854319572196706E+001},data_coverage=23%]:2.8509000289728146E+000)[&rate=NA,branch_length=1.0853447384827960E-002,reltime=1.0277155012428778E-001,reltime_stderr=1.9368397205369288E-002,divtime=3.6985726273240258E+001,divtime_95%_CI={2.5766409978098138E+001,5.3090203451774190E+001},data_coverage=28%]:4.1333321162214196E+000)[&rate=NA,branch_length=3.4137735099091321E-002,reltime=1.1425676324743577E-001,reltime_stderr=1.9544942331376504E-002,divtime=4.1119058389461677E+001,divtime_95%_CI={2.9582254831329039E+001,5.7155107765664439E+001},data_coverage=35%]:1.0390509895399028E+001,((((((4[&rate=NA,branch_length=1.0983238906110485E-002]:3.1844756471863529E+000,256[&rate=NA,branch_length=1.4992926821839669E-002]:3.1844756471863529E+000)[&rate=NA,branch_length=6.6796170105758612E-002,reltime=8.8486432894836375E-003,reltime_stderr=4.9786288186166957E-003,divtime=3.1844756471863531E+000,divtime_95%_CI={1.2288411224905734E+000,8.2523972887314685E+000},data_coverage=5%]:1.6576050768690461E+001,271[&rate=NA,branch_length=4.5154522996485140E-002]:1.9760526415876814E+001)[&rate=NA,branch_length=8.1067402767574619E-003,reltime=5.4908207453558276E-002,reltime_stderr=1.8079981454708707E-002,divtime=1.9760526415876814E+001,divtime_95%_CI={1.0765408889538010E+001,3.4846862351775251E+001},data_coverage=14%]:2.3182896790008043E+000,70[&rate=NA,branch_length=4.7807000130161592E-002]:2.2078816094877620E+001)[&rate=NA,branch_length=2.0352290702022359E-002,reltime=6.1349995893452474E-002,reltime_stderr=1.4785011673351205E-002,divtime=2.2078816094877619E+001,divtime_95%_CI={1.3989039105742986E+001,3.4846862351775251E+001},data_coverage=20%]:6.7978790849137122E+000,(261[&rate=NA,branch_length=2.2892765271431418E-002]:9.1957053598252845E+000,294[&rate=NA,branch_length=3.8229049234454845E-002]:9.1957053598252845E+000)[&rate=NA,branch_length=6.3315168262488036E-002,reltime=2.5551935558427286E-002,reltime_stderr=1.0860526032325847E-002,divtime=9.1957053598252844E+000,divtime_95%_CI={4.3078990805997762E+000,1.9629289238815289E+001},data_coverage=23%]:1.9680989819966047E+001)[&rate=NA,branch_length=4.2951161128741448E-003,reltime=8.0239136151312590E-002,reltime_stderr=1.2327232057483190E-002,divtime=2.8876695179791331E+001,divtime_95%_CI={2.1462173590046042E+001,3.8852706181321825E+001},data_coverage=24%]:1.3839632682587274E+000,((54[&rate=NA,branch_length=5.9196161050569289E-002]:2.4807984640381168E+001,263[&rate=NA,branch_length=5.4485373788574737E-002]:2.4807984640381168E+001)[&rate=NA,branch_length=8.0083593661427494E-003,reltime=6.8933485802498276E-002,reltime_stderr=1.7402766442218479E-002,divtime=2.4807984640381169E+001,divtime_95%_CI={1.5403501474218042E+001,3.8950264179785230E+001},data_coverage=10%]:3.4982295086006466E+000,(229[&rate=NA,branch_length=3.4578562523765511E-003]:2.6165972161907449E+000,276[&rate=NA,branch_length=3.3615262804275645E-003]:2.6165972161907449E+000)[&rate=NA,branch_length=3.3472833433845092E-002,reltime=7.2706900487007824E-003,reltime_stderr=3.7977246745992389E-003,divtime=2.6165972161907449E+000,divtime_95%_CI={1.0658687221181540E+000,6.4234749080273660E+000},data_coverage=23%]:2.5689616932791071E+001)[&rate=NA,branch_length=3.3755018393685039E-003,reltime=7.8653951114802583E-002,reltime_stderr=1.3399895845254538E-002,divtime=2.8306214148981815E+001,divtime_95%_CI={2.0390695571064200E+001,3.8950264179785230E+001},data_coverage=24%]:1.9544442990682429E+000)[&rate=NA,branch_length=2.2412432780635191E-002,reltime=8.4084729160444116E-002,reltime_stderr=1.0945030898336475E-002,divtime=3.0260658448050058E+001,divtime_95%_CI={2.3509659536142138E+001,3.8950264179785230E+001},data_coverage=26%]:9.6806897467223369E+000,281[&rate=NA,branch_length=7.6267955901178353E-002]:3.9941348194772395E+001)[&rate=NA,branch_length=9.6580921692028282E-002,reltime=1.1098428182010835E-001,reltime_stderr=8.2469163927743313E-003,divtime=3.9941348194772395E+001,divtime_95%_CI={3.9941348194772395E+001,4.6179866123648809E+001},data_coverage=23%]:1.1568220090088310E+001)[&rate=NA,branch_length=1.1593594863121576E-002,reltime=1.4312867996046553E-001,reltime_stderr=2.4475522280850957E-002,divtime=5.1509568284860705E+001,divtime_95%_CI={3.9941348194772395E+001,7.1590108227690032E+001},data_coverage=31%]:1.6329340133181989E+000)[&rate=NA,branch_length=6.4497922019733131E-002,reltime=1.4766608335115697E-001,reltime_stderr=2.5355728805649597E-002,divtime=5.3142502298178904E+001,divtime_95%_CI={4.8902920723818823E+001,7.3956614903277287E+001},data_coverage=51%]:4.3887176578094881E+000,219[&rate=NA,branch_length=8.6303550936416076E-002]:5.7531219955988391E+001)[&rate=NA,branch_length=4.4764808490451870E-002,reltime=1.5986093153174402E-001,reltime_stderr=4.2854905641390001E-002,divtime=5.7531219955988392E+001,divtime_95%_CI={4.8902920723818823E+001,7.6730507861773049E+001},data_coverage=25%]:5.5917421003934779E+000,(((((((69[&rate=NA,branch_length=1.7157060667063333E-002]:6.5793090863849431E+000,91[&rate=NA,branch_length=1.6826560244734022E-002]:6.5793090863849431E+000)[&rate=NA,branch_length=6.6629304872138553E-003,reltime=1.8281803865612031E-002,reltime_stderr=1.4540463532317222E-002,divtime=6.5793090863849427E+000,divtime_95%_CI={1.9288777074946667E+000,2.2441706846418701E+001},data_coverage=22%]:2.5800400997657439E+000,137[&rate=NA,branch_length=3.6693437416205350E-002]:9.1593491861506866E+000)[&rate=NA,branch_length=6.1541625477416519E-003,reltime=2.5450913334407055E-002,reltime_stderr=1.6867303370501546E-002,divtime=9.1593491861506866E+000,divtime_95%_CI={3.1172575445169366E+000,2.6912655215608682E+001},data_coverage=21%]:2.1352999879738475E+000,309[&rate=NA,branch_length=3.5258112381186826E-002]:1.1294649174124535E+001)[&rate=NA,branch_length=3.3774034416836220E-002,reltime=3.1384231721160472E-002,reltime_stderr=1.7823452036541467E-002,divtime=1.1294649174124534E+001,divtime_95%_CI={4.3283872709213064E+000,2.9472663137972556E+001},data_coverage=23%]:1.1175990010258106E+001,100[&rate=NA,branch_length=4.5049443873696096E-002]:2.2470639184382641E+001)[&rate=NA,branch_length=7.8584040798396915E-003,reltime=6.2438747429259230E-002,reltime_stderr=2.9268237120916714E-002,divtime=2.2470639184382640E+001,divtime_95%_CI={9.8696947420789472E+000,5.0553297474104849E+001},data_coverage=10%]:2.8473865823011851E+000,(140[&rate=NA,branch_length=2.5771949850909802E-003]:1.3233810835686648E+000,148[&rate=NA,branch_length=3.9225453798919837E-003]:1.3233810835686648E+000)[&rate=NA,branch_length=5.7648369415480738E-002,reltime=3.6772544186029325E-003,reltime_stderr=3.1523470210006023E-003,divtime=1.3233810835686648E+000,divtime_95%_CI={3.6401556643700270E-001,4.8111609882223633E+000},data_coverage=11%]:2.3994644683115161E+001)[&rate=NA,branch_length=1.1348453993556511E-002,reltime=7.0350727599780128E-002,reltime_stderr=2.6846572280065499E-002,divtime=2.5318025766683825E+001,divtime_95%_CI={1.2679735264565279E+001,5.0553297474104849E+001},data_coverage=21%]:4.4071353433602281E+000,(351[&rate=NA,branch_length=3.8671762377117919E-002]:1.0216210258182880E+001,360[&rate=NA,branch_length=3.0958278767679544E-002]:1.0216210258182880E+001)[&rate=NA,branch_length=6.6073829400503922E-002,reltime=2.8387593550886941E-002,reltime_stderr=1.4650224737165209E-002,divtime=1.0216210258182879E+001,divtime_95%_CI={4.1974788423427662E+000,2.4865152621269165E+001},data_coverage=18%]:1.9508950851861174E+001)[&rate=NA,branch_length=1.7706920084007642E-002,reltime=8.2596752660868801E-002,reltime_stderr=2.4150036540115120E-002,divtime=2.9725161110044054E+001,divtime_95%_CI={1.7225559367756701E+001,5.1295007851646066E+001},data_coverage=24%]:5.9959097734862936E+000,59[&rate=NA,branch_length=1.1667401786283706E-001]:3.5721070883530345E+001)[&rate=NA,branch_length=8.2517459439663265E-002,reltime=9.9257475699647961E-002,reltime_stderr=2.3114230273060583E-002,divtime=3.5721070883530347E+001,divtime_95%_CI={2.2961899525893965E+001,5.5570093564222310E+001},data_coverage=22%]:2.7401891172851523E+001)[&rate=NA,branch_length=7.3142367786862839E-002,reltime=1.7539860136975562E-001,reltime_stderr=2.3707651454102498E-002,divtime=6.3122962056381870E+001,divtime_95%_CI={4.8902920723818823E+001,7.6730507861773049E+001},data_coverage=30%]:1.3607545805391179E+001,(315[&rate=NA,branch_length=2.8456925394042081E-002]:2.4473448847515439E+001,316[&rate=NA,branch_length=4.3428914890156163E-002]:2.4473448847515439E+001)[&rate=NA,branch_length=7.5064270060058780E-002,reltime=6.8003917413037076E-002,reltime_stderr=2.4353799081447061E-002,divtime=2.4473448847515439E+001,divtime_95%_CI={1.2722198546115353E+001,4.7079103216388685E+001},data_coverage=21%]:5.2257059014257610E+001)[&rate=NA,branch_length=0.0000000000000000E+000,reltime=2.1320963596931451E-001,reltime_stderr=8.1134404655215164E-003,divtime=7.6730507861773049E+001,divtime_95%_CI={7.1220655683418460E+001,7.6730507861773049E+001},data_coverage=23%];
+End;
