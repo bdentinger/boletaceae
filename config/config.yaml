@@ -4,8 +4,9 @@ update_window_days: 8
 backbone_loci: [RPB1, RPB2, TEF1]
 constraint_tree: ""
 python_bin: "python3.11"
+iqtree_bin: "iqtree3"
 threads:
   align: 48          # MAFFT per-locus
   iqtree: 72         # IQ-TREE ML + UFBoot
-  epa: 48            # if/when you place queries
-speed_mode: accurate # or "fast" (see below)
+  epa: 48            # for placing queries
+speed_mode: accurate # or "fast"

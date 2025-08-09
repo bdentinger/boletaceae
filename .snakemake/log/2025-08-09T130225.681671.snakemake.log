@@ -19,3 +19,7 @@ rule build_backbone_constrained:
     threads: 64
     resources: tmpdir=/tmp
 
+[Sat Aug  9 14:00:29 2025]
+Finished job 0.
+1 of 1 steps (100%) done
+Complete log: .snakemake/log/2025-08-09T130225.681671.snakemake.log
