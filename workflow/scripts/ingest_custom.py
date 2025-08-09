@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python3.11
 import argparse, sys, re
 from pathlib import Path
 from Bio import SeqIO

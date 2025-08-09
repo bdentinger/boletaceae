@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python3.11
 """
 Create a specimen × locus presence/absence table from specimen_loci.tsv.
 Input:  data/staging/specimens/specimen_loci.tsv

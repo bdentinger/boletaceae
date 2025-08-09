@@ -4,4 +4,4 @@ rule site_build:
     output:
         directory("site")
     shell:
-        "python3 workflow/scripts/build_site.py"
+        "{config[python_bin]} workflow/scripts/build_site.py"

@@ -28,7 +28,7 @@ rule fetch_locus:
     shell:
         (
             "mkdir -p data/staging && "
-            "python3 workflow/scripts/fetch_ncbi.py "
+            "{config[python_bin]} workflow/scripts/fetch_ncbi.py "
             "--taxon '{params.taxon}' "
             "--locus {params.locus} "
             "--days {params.days} "
@@ -50,7 +50,7 @@ rule qc_locus:
     shell:
         (
             "mkdir -p data/qc && "
-            "python3 workflow/scripts/normalize_ids.py "
+            "{config[python_bin]} workflow/scripts/normalize_ids.py "
             "--in {input} --locus {params.locus} --out {output}"
         )
 
@@ -67,7 +67,7 @@ rule ingest_custom_locus:
         r"""
         mkdir -p data/qc
         if [ -s {input.fasta} ] && [ -s {input.meta} ]; then
-          python3 workflow/scripts/ingest_custom.py \
+          {config[python_bin]} workflow/scripts/ingest_custom.py \
             --locus {wildcards.locus} \
             --fasta {input.fasta} \
             --meta {input.meta} \
@@ -87,7 +87,7 @@ rule merge_locus:
         "data/qc/{locus}.merged.fasta"
     shell:
         (
-            "python3 workflow/scripts/merge_locus.py "
+            "{config[python_bin]} workflow/scripts/merge_locus.py "
             "--gb {input.gb} --cust {input.cust} --out {output}"
         )
 
@@ -100,7 +100,7 @@ rule link_specimens:
         directory("data/staging/specimens")
     shell:
         (
-            "python3 workflow/scripts/link_specimens.py "
+            "{config[python_bin]} workflow/scripts/link_specimens.py "
             "--inputs {input} --outdir {output}"
         )
 
@@ -113,7 +113,7 @@ rule loci_table:
         "data/staging/loci_table.tsv"
     shell:
         (
-            "python3 workflow/scripts/loci_table.py "
+            "{config[python_bin]} workflow/scripts/loci_table.py "
             "--specimen_loci {input} --out {output}"
         )
 

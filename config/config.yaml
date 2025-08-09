@@ -3,3 +3,4 @@ taxon_query: "Boletaceae[Organism]"
 update_window_days: 8
 backbone_loci: [RPB1, RPB2, TEF1]
 constraint_tree: "constraints/boletaceae_constraint.nwk"
+python_bin: "python3.11"

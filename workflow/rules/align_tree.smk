@@ -27,7 +27,7 @@ rule concat_supermatrix:
         parts="data/align/partitions.txt",
         taxa ="data/align/taxa.txt"
     shell:
-        "python3 workflow/scripts/concat_supermatrix.py "
+        "{config[python_bin]} workflow/scripts/concat_supermatrix.py "
         "--inputs {input} "
         "--out-matrix {output.matrix} --out-parts {output.parts} --out-taxa {output.taxa}"
 

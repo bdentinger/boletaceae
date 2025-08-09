@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python3.11
 """
 Read a GenBank flatfile and emit FASTA with normalized headers that carry a specimen key.
 Header format: {specimen_key}|{locus}|{genbank_acc}

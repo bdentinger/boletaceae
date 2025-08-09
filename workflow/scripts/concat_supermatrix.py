@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python3.11
 """
 Concatenate multiple masked FASTA alignments by taxon name and write:
   - supermatrix FASTA

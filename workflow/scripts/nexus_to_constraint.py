@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python3.11
 """
 Robust NEXUS→NEWICK constraint converter that:
 - handles TRANSLATE blocks

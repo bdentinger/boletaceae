@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python3.11
 """
 Link loci across the same specimen by parsing normalized FASTA headers.
 Input: one or more FASTA files whose headers are:
