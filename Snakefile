@@ -1,16 +1,20 @@
-# Minimal Snakefile so `snakemake site` works now
+# Use central config
 configfile: "config/config.yaml"
 
+# Include rule modules
 include: "workflow/rules/fetch.smk"
-include: "workflow/rules/qc_align.smk"
-include: "workflow/rules/release.smk"
 include: "workflow/rules/align_tree.smk"
+include: "workflow/rules/release.smk"
 
+# Default target(s)
 rule all:
     input:
-        # fetch/normalize/link table (nice for debugging)
+        # GenBank pulls for backbone loci + ITS
         expand("data/staging/{locus}.gb", locus=config.get("backbone_loci", []) + ["ITS"]),
+        # Specimen linkage tables
         "data/staging/specimens/specimen_loci.tsv",
         "data/staging/loci_table.tsv",
-	"data/trees/backbone.treefile",
+        # Backbone tree (constraint-aware)
+        "data/trees/backbone.treefile",
+        # Static site directory (as a plain path here)
         "site"
