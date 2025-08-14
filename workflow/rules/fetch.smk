@@ -14,29 +14,25 @@ TOOLNAME    = config.get("toolname", "BoletaceaeBackbone")
 # Path to optional custom metadata table
 CUSTOM_META = "data/custom/metadata.tsv"
 
-
-# 1) Fetch GenBank flatfiles for each locus (delta window with fallback)
+# 1) Fetch loci
 rule fetch_locus:
     output:
         "data/staging/{locus}.gb"
     params:
-        locus = "{locus}",
-        taxon = TAXON,
-        days  = DAYS,
-        email = EMAIL,
-        tool  = TOOLNAME
+        taxon=lambda wildcards: config.get("taxon", "Boletaceae[Organism]"),
+        email=config["email"],
+        tool=config.get("tool", "BoletaceaeBackbone")
+    threads: 24
     shell:
-        (
-            "mkdir -p data/staging && "
-            "{config[python_bin]} workflow/scripts/fetch_ncbi.py "
-            "--taxon '{params.taxon}' "
-            "--locus {params.locus} "
-            "--days {params.days} "
-            "--email {params.email} "
-            "--tool {params.tool} "
-            "--out {output}"
-        )
-
+        """
+        python3.11 workflow/scripts/fetch_ncbi.py \
+            --taxon "{params.taxon}" \
+            --locus {wildcards.locus} \
+            --days 0 \
+            --email "{params.email}" \
+            --tool "{params.tool}" \
+            --out {output}
+        """
 
 # 2) Normalize GenBank records to FASTA with specimen keys in headers
 #    Header: {specimen_key}|{locus}|{genbank_acc}

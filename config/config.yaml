@@ -1,4 +1,6 @@
 version: "v2025.08.09"
+email: "bryn.dentinger@gmail.com"
+tool: "BoletaceaeBackbone"
 taxon_query: "Boletaceae[Organism]"
 update_window_days: 8
 backbone_loci: [RPB1, RPB2, TEF1]

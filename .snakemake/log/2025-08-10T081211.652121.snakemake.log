@@ -1,0 +1,82 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 64
+Rules claiming more threads will be scaled down.
+Job stats:
+job                           count
+--------------------------  -------
+align_locus                       3
+build_backbone_constrained        1
+concat_supermatrix                1
+mask_locus                        3
+qc_locus                          2
+total                            10
+
+Select jobs to execute...
+
+[Sun Aug 10 08:12:12 2025]
+rule align_locus:
+    input: data/qc/RPB1.cleaned.fasta
+    output: data/align/RPB1.aln.fasta
+    jobid: 2
+    reason: Code has changed since last execution
+    wildcards: locus=RPB1
+    threads: 48
+    resources: tmpdir=/tmp
+
+
+[Sun Aug 10 08:12:13 2025]
+rule qc_locus:
+    input: data/staging/TEF1.gb
+    output: data/qc/TEF1.cleaned.fasta
+    jobid: 11
+    reason: Missing output files: data/qc/TEF1.cleaned.fasta; Updated input files: data/staging/TEF1.gb
+    wildcards: locus=TEF1
+    resources: tmpdir=/tmp
+
+
+[Sun Aug 10 08:12:13 2025]
+rule qc_locus:
+    input: data/staging/RPB2.gb
+    output: data/qc/RPB2.cleaned.fasta
+    jobid: 7
+    reason: Updated input files: data/staging/RPB2.gb
+    wildcards: locus=RPB2
+    resources: tmpdir=/tmp
+
+[Sun Aug 10 08:12:13 2025]
+Error in rule qc_locus:
+    jobid: 7
+    input: data/staging/RPB2.gb
+    output: data/qc/RPB2.cleaned.fasta
+    shell:
+        mkdir -p data/qc && python3.11 workflow/scripts/normalize_ids.py --in data/staging/RPB2.gb --locus RPB2 --out data/qc/RPB2.cleaned.fasta
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Aug 10 08:12:13 2025]
+Error in rule qc_locus:
+    jobid: 11
+    input: data/staging/TEF1.gb
+    output: data/qc/TEF1.cleaned.fasta
+    shell:
+        mkdir -p data/qc && python3.11 workflow/scripts/normalize_ids.py --in data/staging/TEF1.gb --locus TEF1 --out data/qc/TEF1.cleaned.fasta
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Terminating processes on user request, this might take some time.
+[Sun Aug 10 08:12:21 2025]
+Error in rule align_locus:
+    jobid: 2
+    input: data/qc/RPB1.cleaned.fasta
+    output: data/align/RPB1.aln.fasta
+    shell:
+        
+        mkdir -p data/align
+        if [ "accurate" = "fast" ]; then
+          mafft --thread 48 --adjustdirection --retree 2 --maxiterate 0 --fft --anysymbol data/qc/RPB1.cleaned.fasta > data/align/RPB1.aln.fasta
+        else
+          mafft --thread 48 --adjustdirection --maxiterate 1000 --localpair --anysymbol data/qc/RPB1.cleaned.fasta > data/align/RPB1.aln.fasta
+        fi
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Complete log: .snakemake/log/2025-08-10T081211.652121.snakemake.log

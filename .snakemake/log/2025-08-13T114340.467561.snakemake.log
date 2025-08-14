@@ -1,0 +1,25 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 64
+Rules claiming more threads will be scaled down.
+Job stats:
+job                           count
+--------------------------  -------
+build_backbone_constrained        1
+total                             1
+
+Select jobs to execute...
+
+[Wed Aug 13 11:43:41 2025]
+rule build_backbone_constrained:
+    input: data/align/concat.fasta, data/align/partitions.txt
+    output: data/trees/backbone.treefile
+    jobid: 1
+    reason: Forced execution
+    threads: 64
+    resources: tmpdir=/tmp
+
+[Thu Aug 14 00:02:06 2025]
+Finished job 1.
+1 of 1 steps (100%) done
+Complete log: .snakemake/log/2025-08-13T114340.467561.snakemake.log

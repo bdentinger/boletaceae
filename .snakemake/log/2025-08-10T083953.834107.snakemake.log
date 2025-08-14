@@ -1,0 +1,172 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 64
+Rules claiming more threads will be scaled down.
+Job stats:
+job                           count
+--------------------------  -------
+align_locus                       3
+build_backbone_constrained        1
+concat_supermatrix                1
+mask_locus                        3
+qc_locus                          2
+total                            10
+
+Select jobs to execute...
+
+[Sun Aug 10 08:39:54 2025]
+rule align_locus:
+    input: data/qc/RPB1.cleaned.fasta
+    output: data/align/RPB1.aln.fasta
+    jobid: 3
+    reason: Forced execution
+    wildcards: locus=RPB1
+    threads: 48
+    resources: tmpdir=/tmp
+
+
+[Sun Aug 10 08:39:55 2025]
+rule qc_locus:
+    input: data/staging/TEF1.gb
+    output: data/qc/TEF1.cleaned.fasta
+    jobid: 12
+    reason: Missing output files: data/qc/TEF1.cleaned.fasta; Updated input files: data/staging/TEF1.gb
+    wildcards: locus=TEF1
+    resources: tmpdir=/tmp
+
+
+[Sun Aug 10 08:39:55 2025]
+rule qc_locus:
+    input: data/staging/RPB2.gb
+    output: data/qc/RPB2.cleaned.fasta
+    jobid: 8
+    reason: Missing output files: data/qc/RPB2.cleaned.fasta; Updated input files: data/staging/RPB2.gb
+    wildcards: locus=RPB2
+    resources: tmpdir=/tmp
+
+[Sun Aug 10 08:39:56 2025]
+Finished job 8.
+1 of 10 steps (10%) done
+Select jobs to execute...
+[Sun Aug 10 08:39:56 2025]
+Finished job 12.
+2 of 10 steps (20%) done
+[Sun Aug 10 09:00:51 2025]
+Finished job 3.
+3 of 10 steps (30%) done
+
+[Sun Aug 10 09:00:51 2025]
+rule mask_locus:
+    input: data/align/RPB1.aln.fasta
+    output: data/align/RPB1.masked.fasta
+    jobid: 2
+    reason: Input files updated by another job: data/align/RPB1.aln.fasta
+    wildcards: locus=RPB1
+    resources: tmpdir=/tmp
+
+
+[Sun Aug 10 09:00:51 2025]
+rule align_locus:
+    input: data/qc/TEF1.cleaned.fasta
+    output: data/align/TEF1.aln.fasta
+    jobid: 11
+    reason: Input files updated by another job: data/qc/TEF1.cleaned.fasta
+    wildcards: locus=TEF1
+    threads: 48
+    resources: tmpdir=/tmp
+
+[Sun Aug 10 09:00:51 2025]
+Finished job 2.
+4 of 10 steps (40%) done
+Select jobs to execute...
+[Sun Aug 10 09:57:34 2025]
+Finished job 11.
+5 of 10 steps (50%) done
+
+[Sun Aug 10 09:57:34 2025]
+rule align_locus:
+    input: data/qc/RPB2.cleaned.fasta
+    output: data/align/RPB2.aln.fasta
+    jobid: 7
+    reason: Input files updated by another job: data/qc/RPB2.cleaned.fasta
+    wildcards: locus=RPB2
+    threads: 48
+    resources: tmpdir=/tmp
+
+
+[Sun Aug 10 09:57:34 2025]
+rule mask_locus:
+    input: data/align/TEF1.aln.fasta
+    output: data/align/TEF1.masked.fasta
+    jobid: 10
+    reason: Input files updated by another job: data/align/TEF1.aln.fasta
+    wildcards: locus=TEF1
+    resources: tmpdir=/tmp
+
+[Sun Aug 10 09:57:34 2025]
+Finished job 10.
+6 of 10 steps (60%) done
+[Sun Aug 10 10:17:00 2025]
+Finished job 7.
+7 of 10 steps (70%) done
+Select jobs to execute...
+
+[Sun Aug 10 10:17:00 2025]
+rule mask_locus:
+    input: data/align/RPB2.aln.fasta
+    output: data/align/RPB2.masked.fasta
+    jobid: 6
+    reason: Input files updated by another job: data/align/RPB2.aln.fasta
+    wildcards: locus=RPB2
+    resources: tmpdir=/tmp
+
+[Sun Aug 10 10:17:01 2025]
+Finished job 6.
+8 of 10 steps (80%) done
+Select jobs to execute...
+
+[Sun Aug 10 10:17:01 2025]
+rule concat_supermatrix:
+    input: data/align/RPB1.masked.fasta, data/align/RPB2.masked.fasta, data/align/TEF1.masked.fasta
+    output: data/align/concat.fasta, data/align/partitions.txt, data/align/taxa.txt
+    jobid: 1
+    reason: Input files updated by another job: data/align/RPB2.masked.fasta, data/align/RPB1.masked.fasta, data/align/TEF1.masked.fasta
+    resources: tmpdir=/tmp
+
+[Sun Aug 10 10:17:01 2025]
+Finished job 1.
+9 of 10 steps (90%) done
+Select jobs to execute...
+
+[Sun Aug 10 10:17:01 2025]
+rule build_backbone_constrained:
+    input: data/align/concat.fasta, data/align/partitions.txt
+    output: data/trees/backbone.treefile
+    jobid: 0
+    reason: Input files updated by another job: data/align/concat.fasta, data/align/partitions.txt
+    threads: 64
+    resources: tmpdir=/tmp
+
+[Sun Aug 10 10:17:01 2025]
+Error in rule build_backbone_constrained:
+    jobid: 0
+    input: data/align/concat.fasta, data/align/partitions.txt
+    output: data/trees/backbone.treefile
+    shell:
+        
+        mkdir -p data/trees
+        if [ -n "" ] && [ -s "" ]; then
+          iqtree3 -s data/align/concat.fasta -p data/align/partitions.txt -m MFP+MERGE -T AUTO \
+                  -g  -B 1000 --alrt 1000 \
+                  -pre data/trees/backbone
+        else
+          iqtree3 -s data/align/concat.fasta -p data/align/partitions.txt -m MFP+MERGE -T AUTO \
+                  -B 1000 --alrt 1000 \
+                  -pre data/trees/backbone
+        fi
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2025-08-10T083953.834107.snakemake.log

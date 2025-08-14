@@ -1,0 +1,65 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 64
+Rules claiming more threads will be scaled down.
+Job stats:
+job                           count
+--------------------------  -------
+align_locus                       3
+build_backbone_constrained        1
+concat_supermatrix                1
+fetch_locus                       2
+mask_locus                        3
+qc_locus                          2
+total                            12
+
+Select jobs to execute...
+
+[Sun Aug 10 08:01:44 2025]
+rule fetch_locus:
+    output: data/staging/TEF1.gb
+    jobid: 13
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: locus=TEF1
+    threads: 24
+    resources: tmpdir=/tmp
+
+
+[Sun Aug 10 08:01:45 2025]
+rule fetch_locus:
+    output: data/staging/RPB2.gb
+    jobid: 9
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: locus=RPB2
+    threads: 24
+    resources: tmpdir=/tmp
+
+[Sun Aug 10 08:02:14 2025]
+Finished job 13.
+1 of 12 steps (8%) done
+Select jobs to execute...
+
+[Sun Aug 10 08:02:14 2025]
+rule qc_locus:
+    input: data/staging/TEF1.gb
+    output: data/qc/TEF1.cleaned.fasta
+    jobid: 12
+    reason: Input files updated by another job: data/staging/TEF1.gb
+    wildcards: locus=TEF1
+    resources: tmpdir=/tmp
+
+[Sun Aug 10 08:02:14 2025]
+Error in rule qc_locus:
+    jobid: 12
+    input: data/staging/TEF1.gb
+    output: data/qc/TEF1.cleaned.fasta
+    shell:
+        mkdir -p data/qc && python3.11 workflow/scripts/normalize_ids.py --in data/staging/TEF1.gb --locus TEF1 --out data/qc/TEF1.cleaned.fasta
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Aug 10 08:02:17 2025]
+Finished job 9.
+2 of 12 steps (17%) done
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2025-08-10T080144.040851.snakemake.log

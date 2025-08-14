@@ -1,0 +1,3 @@
+SyntaxError in file /home/bdentinger/boletaceae/workflow/rules/align_tree.smk, line 13:
+invalid syntax. Perhaps you forgot a comma?
+  File "/home/bdentinger/boletaceae/Snakefile", line 6, in <module>

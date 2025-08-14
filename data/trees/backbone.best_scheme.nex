@@ -1,6 +1,10 @@
 #nexus
 begin sets;
-  charset RPB1_RPB2_TEF1 = 1-748  749-1466  1467-1997;
+  charset RPB1 = 1-752;
+  charset RPB2 = 753-1397;
+  charset TEF1 = 1398-1939;
   charpartition mymodels =
-    SYM+R7: RPB1_RPB2_TEF1;
+    GTR+R7: RPB1,
+    GTR+R7: RPB2,
+    GTR+R8: TEF1;
 end;

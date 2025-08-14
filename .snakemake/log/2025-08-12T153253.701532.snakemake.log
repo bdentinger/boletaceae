@@ -1,0 +1,43 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 64
+Rules claiming more threads will be scaled down.
+Job stats:
+job                           count
+--------------------------  -------
+build_backbone_constrained        1
+total                             1
+
+Select jobs to execute...
+
+[Tue Aug 12 15:32:54 2025]
+rule build_backbone_constrained:
+    input: data/align/concat.fasta, data/align/partitions.txt
+    output: data/trees/backbone.treefile
+    jobid: 0
+    reason: Missing output files: data/trees/backbone.treefile
+    threads: 64
+    resources: tmpdir=/tmp
+
+Terminating processes on user request, this might take some time.
+[Tue Aug 12 15:37:35 2025]
+Error in rule build_backbone_constrained:
+    jobid: 0
+    input: data/align/concat.fasta, data/align/partitions.txt
+    output: data/trees/backbone.treefile
+    shell:
+        
+        mkdir -p data/trees
+        if [ -n "" ] && [ -s "" ]; then
+          iqtree3 -s data/align/concat.fasta -p data/align/partitions.txt -m MFP+MERGE -T AUTO \
+                  -g  -B 1000 --alrt 1000 \
+                  -pre data/trees/backbone
+        else
+          iqtree3 -s data/align/concat.fasta -p data/align/partitions.txt -m MFP+MERGE -T AUTO \
+                  -B 1000 --alrt 1000 \
+                  -pre data/trees/backbone
+        fi
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Complete log: .snakemake/log/2025-08-12T153253.701532.snakemake.log

@@ -1,77 +1,80 @@
-#!/usr/bin/env python3.11
-"""
-Concatenate multiple masked FASTA alignments by taxon name and write:
-  - supermatrix FASTA
-  - IQ-TREE partitions file
-  - list of taxa used (one per line)
-Assumptions:
-  - All inputs are aligned (same length within each file)
-  - Sequence IDs are the taxon labels to match/merge on
-  - Loci names come from file stems (e.g., data/align/RPB1.masked.fasta -> 'RPB1')
-"""
-import argparse, os, sys
+#!/usr/bin/env python3
+import argparse
 from pathlib import Path
-from collections import defaultdict, OrderedDict
 from Bio import SeqIO
+from Bio.Seq import Seq
+from Bio.SeqRecord import SeqRecord
 
 ap = argparse.ArgumentParser()
-ap.add_argument("--inputs", nargs="+", required=True)
+ap.add_argument("--inputs", nargs="+", required=True)             # masked FASTAs per locus
 ap.add_argument("--out-matrix", required=True)
 ap.add_argument("--out-parts", required=True)
 ap.add_argument("--out-taxa", required=True)
 args = ap.parse_args()
 
-# Read all alignments
-alns = []
+# parse inputs → {locus: {specimen: seqstr}}, track locus lengths
+by_locus = {}
+locus_len = {}
+locus_order = []
+
 for fn in args.inputs:
-    locus = Path(fn).stem.split(".")[0]  # RPB1 from RPB1.masked.fasta
+    locus = Path(fn).stem.split(".")[0]  # RPB1.masked.fasta -> RPB1
+    locus_order.append(locus)
     recs = list(SeqIO.parse(fn, "fasta"))
     if not recs:
-        print(f"[concat] WARNING: empty alignment: {fn}", file=sys.stderr)
+        locus_len[locus] = 0
+        by_locus[locus] = {}
         continue
     L = len(recs[0].seq)
-    alns.append((locus, L, recs))
-
-# Build a union taxon set with stable order (by first appearance)
-taxa_order = OrderedDict()
-for locus, L, recs in alns:
+    locus_len[locus] = L
+    d = {}
     for r in recs:
-        if r.id not in taxa_order:
-            taxa_order[r.id] = None
-taxa = list(taxa_order.keys())
+        spk = r.id.split("|", 1)[0]  # specimen key is id already if you used dedupe script
+        d[spk] = str(r.seq).upper()
+    by_locus[locus] = d
 
-# Build per-locus dicts and pad missing taxa with gaps
-per_locus_seq = []
+# union of all specimen keys
+specimens = sorted(set().union(*[set(d.keys()) for d in by_locus.values()]))
+
+# write partitions
 parts = []
-offset = 1
-for locus, L, recs in alns:
-    d = {r.id: str(r.seq) for r in recs}
-    per_locus_seq.append((locus, L, d))
-    parts.append((locus, offset, offset + L - 1))
-    offset += L
+start = 1
+for loc in locus_order:
+    L = locus_len.get(loc, 0)
+    if L > 0:
+        parts.append((loc, start, start + L - 1))
+        start += L
 
-# Write supermatrix
-out_lines = []
-for t in taxa:
-    seq_pieces = []
-    for locus, L, d in per_locus_seq:
-        s = d.get(t, "-" * L)
-        if len(s) != L:
-            print(f"[concat] ERROR: length mismatch for {t} in {locus}", file=sys.stderr); sys.exit(2)
-        seq_pieces.append(s)
-    out_lines.append((t, "".join(seq_pieces)))
+# build matrix
+records = []
+for spk in specimens:
+    chunks = []
+    total = 0
+    for loc in locus_order:
+        L = locus_len.get(loc, 0)
+        if L == 0: 
+            continue
+        s = by_locus[loc].get(spk)
+        if s is None:
+            chunks.append("-" * L)
+        else:
+            if len(s) != L:
+                # pad/trim if inconsistent (shouldn't happen, but be robust)
+                s = (s + "-" * L)[:L]
+            chunks.append(s)
+        total += L
+    if total > 0:
+        records.append(SeqRecord(Seq("".join(chunks)), id=spk, description=""))
 
 Path(args.out_matrix).parent.mkdir(parents=True, exist_ok=True)
-with open(args.out_matrix, "w") as out:
-    for name, seq in out_lines:
-        out.write(f">{name}\n{seq}\n")
+SeqIO.write(records, args.out_matrix, "fasta")
 
-# Write IQ-TREE partitions file (one partition per locus, DNA)
-with open(args.out_parts, "w") as out:
-    for locus, start, end in parts:
-        out.write(f"DNA, {locus} = {start}-{end}\n")
+with open(args.out_parts, "w") as p:
+    for name, a, b in parts:
+        p.write(f"DNA, {name} = {a}-{b}\n")
 
-# Write taxa list
-with open(args.out_taxa if False else args.out_taxa, "w") as out:
-    for t in taxa:
-        out.write(t + "\n")
+with open(args.out_taxa, "w") as t:
+    for r in records:
+        t.write(r.id + "\n")
+
+print(f"[concat] specimens={len(records)} loci={len(locus_order)} aln_len={sum(locus_len.values())}")

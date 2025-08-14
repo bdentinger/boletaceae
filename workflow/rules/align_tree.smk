@@ -5,9 +5,18 @@ CONSTR = config.get("constraint_tree", "")     # path set in config/config.yaml
 T_ALIGN    = int(config.get("threads", {}).get("align", 8))
 T_IQTREE   = int(config.get("threads", {}).get("iqtree", 8))
 
+# first, dedupe datasets to avoid multiple sequence entries from same specimen
+rule dedupe_locus:
+    input:  "data/qc/{locus}.cleaned.fasta"
+    output: "data/qc/{locus}.merged.fasta"
+    params:
+        minlen=lambda wc: int(config.get("min_seq_len", {}).get(wc.locus, 0))
+    shell:
+        "python3.11 workflow/scripts/dedupe_by_specimen.py --in {input} --out {output} --minlen {params.minlen}"
+
 # 1) MAFFT align each locus
 rule align_locus:
-    input:  "data/qc/{locus}.cleaned.fasta"
+    input:  "data/qc/{locus}.merged.fasta"
     output: "data/align/{locus}.aln.fasta"
     threads: T_ALIGN
     shell:
