@@ -38,147 +38,176 @@
 
   <!-- Pure D3 (no eval), works with strict CSPs -->
   <script type="module">
-    import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
+  import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 
-    const TREE_URL = "latest/backbone.newick";   // build_site.py writes this
+  const TREE_URL = "latest/backbone.newick";
 
-    async function fetchText(url) {
-      const r = await fetch(url, {cache: "no-store"});
-      if (!r.ok) throw new Error(`${r.status} ${r.statusText}`);
-      return r.text();
+  // Tunables
+  let BRANCH_PX_PER_UNIT = 180;  // horizontal scale by branch length
+  let TIP_SPACING_PX     = 14;   // vertical pixels per tip
+  let BASE_FONT_PX       = 10;   // label font size at scale=1
+  let SHOW_LABELS_AT_K   = 0.3;  // hide labels when zoomed out below this
+  let LABEL_MODE         = "auto"; // "auto" | "genus" | "species" | "off"
+
+  // Optional: little UI knobs (add as needed)
+  const meta = document.getElementById("meta");
+  const spacingInp = document.createElement("input");
+  spacingInp.type = "range"; spacingInp.min = 8; spacingInp.max = 24; spacingInp.value = TIP_SPACING_PX;
+  spacingInp.title = "Tip spacing";
+  meta.appendChild(spacingInp);
+
+  const fontInp = document.createElement("input");
+  fontInp.type = "range"; fontInp.min = 8; fontInp.max = 18; fontInp.value = BASE_FONT_PX;
+  fontInp.title = "Font size";
+  meta.appendChild(fontInp);
+
+  const modeSel = document.createElement("select");
+  ["auto","species","genus","off"].forEach(m => { const o=document.createElement("option"); o.value=m; o.textContent=m; modeSel.appendChild(o); });
+  modeSel.title = "Label mode";
+  meta.appendChild(modeSel);
+
+  async function fetchText(u){ const r=await fetch(u,{cache:"no-store"}); if(!r.ok) throw new Error(r.statusText); return r.text(); }
+
+  function parseNewick(str){
+    const s=str.trim().replace(/;+$/,"");
+    const toks=s.split(/\s*(;|\(|\)|,|:)\s*/).filter(Boolean);
+    let stack=[], node={}, root=node, expectLen=false;
+    for(const t of toks){
+      if(t==="("){ const n={children:[]}; (node.children||(node.children=[])).push(n); stack.push(node); node=n; expectLen=false; }
+      else if(t===","){ const n={}; stack[stack.length-1].children.push(n); node=n; expectLen=false; }
+      else if(t===")"){ node=stack.pop(); expectLen=true; }
+      else if(t===":"){ expectLen=true; }
+      else{ if(expectLen && !isNaN(+t)){ node.length=+t; expectLen=false; } else { node.name=node.name||t; expectLen=false; } }
     }
+    return root.children?.[0] ?? root;
+  }
 
-    // Tiny Newick parser (names + branch lengths), no eval
-    function parseNewick(str) {
-      const s = str.trim().replace(/;+$/, "");
-      const toks = s.split(/\s*(;|\(|\)|,|:)\s*/).filter(Boolean);
-      let stack = [], node = {}, root = node, expectLen = false;
-      for (const t of toks) {
-        if (t === "(") {
-          const n = {children: []};
-          if (!node.children) node.children = [];
-          node.children.push(n);
-          stack.push(node);
-          node = n;
-          expectLen = false;
-        } else if (t === ",") {
-          const n = {};
-          stack[stack.length-1].children.push(n);
-          node = n;
-          expectLen = false;
-        } else if (t === ")") {
-          node = stack.pop();
-          expectLen = true;
-        } else if (t === ":") {
-          expectLen = true;
-        } else {
-          if (expectLen && !isNaN(+t)) {
-            node.length = +t;
-            expectLen = false;
-          } else {
-            node.name = (node.name ? node.name : t);
-            expectLen = false;
-          }
+  function toHierarchy(r){ return d3.hierarchy(r, d=>d.children); }
+
+  function layout(h){
+    // x = tip index (later scaled by TIP_SPACING_PX), y = cumulative branch length * BRANCH_PX_PER_UNIT
+    h.each(d=>{ d.data._len = +d.data.length || 0; });
+    h.eachBefore(d=>{ d.cum=(d.parent?.cum||0)+d.data._len; });
+    let i=0;
+    h.eachAfter(d=>{ d.x = d.children ? d.children.reduce((a,c)=>a+c.x,0)/d.children.length : (i++); });
+    h.each(d=>{ d.y = d.cum * BRANCH_PX_PER_UNIT; d.X = d.x * TIP_SPACING_PX; }); // X is pixel y-position
+    return h;
+  }
+
+  function genusOf(s){ return (s||"").split(/[_\s|]/)[0]; }
+  function speciesOf(s){
+    // assumes Genus_species or Genus_sp.; keeps as-is if already short
+    if(!s) return "";
+    const parts = s.split(/[|]/)[0]; // strip pipe metadata if any
+    return parts;
+  }
+
+  function labelText(d, k){
+    if(LABEL_MODE==="off") return "";
+    if(LABEL_MODE==="genus") return genusOf(d.data.name);
+    if(LABEL_MODE==="species") return speciesOf(d.data.name);
+    // auto: show genus when zoomed far out; species when zoomed in
+    return k < 1 ? genusOf(d.data.name) : speciesOf(d.data.name);
+  }
+
+  function render(url){
+    const svg=d3.select("#svg"); svg.selectAll("*").remove();
+    const gZoom=svg.append("g").attr("id","gZoom");
+    const g=gZoom.append("g").attr("id","gTree");
+
+    fetchText(url).then(nw=>{
+      const h = layout(toHierarchy(parseNewick(nw)));
+
+      // edges
+      const edges = g.selectAll("path.edge")
+        .data(h.links())
+        .enter().append("path")
+        .attr("class","edge")
+        .attr("d",d=>`M${d.source.y},${d.source.X}H${d.target.y}V${d.target.X}`);
+
+      // nodes
+      g.selectAll("circle.node")
+        .data(h.descendants())
+        .enter().append("circle")
+        .attr("class","node")
+        .attr("r",1.5)
+        .attr("cx",d=>d.y)
+        .attr("cy",d=>d.X);
+
+      // labels (tips only), content set in zoom handler for dynamic mode
+      const tips = g.selectAll("text.tip")
+        .data(h.leaves())
+        .enter().append("text")
+        .attr("class","tip")
+        .attr("x",d=>d.y+4)
+        .attr("y",d=>d.X+3)
+        .text("")  // filled later
+        .attr("font-size", `${BASE_FONT_PX}px`)
+        .attr("fill","#111");
+
+      // zoom/pan
+      const zoom = d3.zoom().scaleExtent([0.03, 40]).on("zoom", (ev)=>{
+        gZoom.attr("transform", ev.transform);
+        updateLabels(ev.transform.k);
+      });
+      svg.call(zoom);
+
+      function updateLabels(k){
+        // Hide labels when too zoomed out
+        if(LABEL_MODE==="off" || k < SHOW_LABELS_AT_K){
+          tips.text("");
+          return;
         }
+        tips.text(d => labelText(d, k))
+            .attr("font-size", `${BASE_FONT_PX * Math.min(1.5, Math.max(0.6, k))}px`);
       }
-      return root.children?.[0] ? root.children[0] : root;
-    }
 
-    function toHierarchy(root) {
-      return d3.hierarchy(root, d => d.children);
-    }
+      function fit(){
+        const b=g.node().getBBox();
+        const vw=svg.node().clientWidth, vh=svg.node().clientHeight;
+        if(b.width===0||b.height===0) return;
+        const s=0.95*Math.min(vw/b.width, vh/b.height);
+        const tx=(vw-b.width*s)/2 - b.x*s, ty=(vh-b.height*s)/2 - b.y*s;
+        svg.transition().duration(350).call(zoom.transform, d3.zoomIdentity.translate(tx,ty).scale(s));
+        setTimeout(()=>{ svg.call(zoom.transform, d3.zoomIdentity.translate(tx,ty).scale(s)); updateLabels(s); }, 360);
+      }
 
-    function layout(h) {
-      // Compute cumulative branch lengths (y) and tidy x spacing
-      const k = 180; // pixels per unit branch length (tune for density)
-      h.each(d => { d.data._len = +d.data.length || 0; });
-      // assign cum length from root
-      h.eachBefore(d => {
-        d.cum = (d.parent?.cum || 0) + (d.data._len || 0);
-      });
-      // compute tip order (simple tidy layout)
-      let i = 0;
-      h.eachAfter(d => {
-        if (d.children) d.x = d.children.reduce((a,c)=>a+c.x,0)/d.children.length;
-        else d.x = i++;
-      });
-      h.each(d => { d.y = d.cum * k; });
-      return h;
-    }
+      // buttons you already have in the header
+      document.getElementById("zoomIn").onclick  = ()=> svg.transition().duration(150).call(zoom.scaleBy, 1.25);
+      document.getElementById("zoomOut").onclick = ()=> svg.transition().duration(150).call(zoom.scaleBy, 0.8);
+      document.getElementById("zoomFit").onclick = fit;
 
-    function render(url) {
-      const svg = d3.select("#svg");
-      svg.selectAll("*").remove();
+      // live knobs
+      spacingInp.oninput = (e)=>{ TIP_SPACING_PX=+e.target.value; layout(h); redraw(); };
+      fontInp.oninput    = (e)=>{ BASE_FONT_PX=+e.target.value; updateLabels(currentK); };
+      modeSel.onchange   = (e)=>{ LABEL_MODE=e.target.value; updateLabels(currentK); };
 
-      const gZoom = svg.append("g").attr("id","gZoom");
-      const g = gZoom.append("g").attr("id","gTree");
+      let currentK = 1;
+      function redraw(){
+        // recompute coordinates from stored h (x->X, y stays)
+        h.each(d=>{ d.X = d.x * TIP_SPACING_PX; });
+        edges.attr("d", d=>`M${d.source.y},${d.source.X}H${d.target.y}V${d.target.X}`);
+        g.selectAll("circle.node").attr("cy", d=>d.X).attr("cx", d=>d.y);
+        tips.attr("x", d=>d.y+4).attr("y", d=>d.X+3);
+        updateLabels(currentK);
+      }
 
-      fetchText(url).then(nw => {
-        const root = parseNewick(nw);
-        const h = layout(toHierarchy(root));
+      svg.on("wheel.zoom", null); // ensure default zoom binding only from d3.zoom
+      svg.call(zoom);
+      fit();
 
-        // edges (elbow lines)
-        g.selectAll("path.edge")
-          .data(h.links())
-          .enter().append("path")
-          .attr("class","edge")
-          .attr("d", d => `M${d.source.y},${d.source.x}H${d.target.y}V${d.target.x}`);
+      // track current zoom scale for label mode
+      svg.on("zoom", (ev)=>{ currentK = ev?.transform?.k ?? currentK; });
 
-        // nodes
-        g.selectAll("circle.node")
-          .data(h.descendants())
-          .enter().append("circle")
-          .attr("class","node")
-          .attr("r", 1.5)
-          .attr("cx", d => d.y)
-          .attr("cy", d => d.x);
+      // initial label update
+      updateLabels(1);
+    }).catch(e=>{
+      console.error(e);
+      const s=document.getElementById("status"); if(s) s.textContent="Failed to load tree.";
+    });
+  }
 
-        // labels (tips only)
-        g.selectAll("text.tip")
-          .data(h.leaves())
-          .enter().append("text")
-          .attr("class","tip")
-          .attr("x", d => d.y + 4)
-          .attr("y", d => d.x + 3)
-          .text(d => d.data.name || "");
-
-        // zoom / pan
-        const zoom = d3.zoom().scaleExtent([0.05, 20]).on("zoom", ev => gZoom.attr("transform", ev.transform));
-        svg.call(zoom);
-
-        // fit-to-viewBox
-        function fit() {
-          const b = g.node().getBBox();
-          const vw = svg.node().clientWidth, vh = svg.node().clientHeight;
-          if (b.width === 0 || b.height === 0) return;
-          const s = 0.95 * Math.min(vw / b.width, vh / b.height);
-          const tx = (vw - b.width * s)/2 - b.x * s;
-          const ty = (vh - b.height * s)/2 - b.y * s;
-          svg.transition().duration(350).call(zoom.transform, d3.zoomIdentity.translate(tx, ty).scale(s));
-        }
-
-        document.getElementById("zoomIn").onclick  = () => svg.transition().duration(150).call(zoom.scaleBy, 1.25);
-        document.getElementById("zoomOut").onclick = () => svg.transition().duration(150).call(zoom.scaleBy, 0.8);
-        document.getElementById("zoomFit").onclick = fit;
-        fit();
-
-        // simple search/highlight
-        const status = document.getElementById("status");
-        const input = document.getElementById("search");
-        input.addEventListener("input", () => {
-          const q = input.value.trim().toLowerCase();
-          const tips = g.selectAll("text.tip");
-          tips.classed("hit", d => q && (d.data.name || "").toLowerCase().includes(q));
-          const hits = q ? tips.filter(function(){ return d3.select(this).classed("hit"); }).size() : 0;
-          status.textContent = q ? `matches: ${hits}` : "";
-        });
-      }).catch(e => {
-        console.error(e);
-        document.getElementById("status").textContent = "Failed to load tree.";
-      });
-    }
-
-    render(TREE_URL);
-  </script>
+  render(TREE_URL);
+</script>
 </body>
 </html>
