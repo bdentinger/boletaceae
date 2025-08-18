@@ -8,7 +8,7 @@ ROOT = Path(".")
 SITE = ROOT / "site"
 LATEST = SITE / "latest"
 #TREE_SRC = ROOT / "data/trees/backbone.treefile"
-TREE_SRC = ROOT / "data/trees/backbone.pretty.newick"   # (was backbone.treefile)
+TREE_SRC = ROOT / "data/trees/backbone.rooted.pretty.newick"   # (was backbone.treefile)
 TREE_DST = LATEST / "backbone.newick"
 
 VIEWER_HTML = """<!doctype html>

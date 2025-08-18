@@ -12,3 +12,6 @@ threads:
   iqtree: 72         # IQ-TREE ML + UFBoot
   epa: 48            # for placing queries
 speed_mode: accurate # or "fast"
+outgroup:
+  prefer_single: ["Paxillus"]                # try this first
+  fallback_clade: ["Chalciporus","Buchwaldoboletus","Rubinoboletus"]  # MRCA of any matches
