@@ -35,10 +35,24 @@ rule pretty_tree:
         "{config[python_bin]} workflow/scripts/rename_tree_tips.py "
         "--in {input.tree} --map {input.map} --out {output.pretty}"
 
+#reroot tree with outgroup
+rule reroot_pretty_for_site:
+    input:
+        pretty = "data/trees/backbone.pretty.newick"
+    output:
+        rooted = "data/trees/backbone.rooted.pretty.newick"
+    params:
+        prefer = " ".join(config.get("outgroup", {}).get("prefer_single", ["Paxillus"])),
+        fb     = " ".join(config.get("outgroup", {}).get("fallback_clade", ["Chalciporus","Buchwaldoboletus","Rubinoboletus"]))
+    shell:
+        r"""{config[python_bin]} workflow/scripts/reroot_tree.py \
+             --in {input.pretty} --out {output.rooted} \
+             --prefer {params.prefer} --fallback {params.fb}"""
+
 # 3) Build the static website whenever the pretty tree or the builder changes
 rule site_build:
     input:
-        tree   = "data/trees/backbone.pretty.newick",
+        tree   = "data/trees/backbone.rooted.pretty.newick",
         script = "workflow/scripts/build_site.py"
     output:
         html   = "site/index.html",
