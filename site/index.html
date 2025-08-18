@@ -6,17 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <style>
     :root { --bg:#fff; --fg:#111; --muted:#666; --line:#555; }
-    html, body { margin:0; height:100%; background:var(--bg); color:var(--fg); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+    html, body { margin:0; height:100%; background:var(--bg); color:var(--fg);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
     header { padding: 12px 16px; border-bottom: 1px solid #ddd; display:flex; gap:12px; align-items:center; flex-wrap:wrap; }
     header h1 { font-size:16px; margin:0 8px 0 0; font-weight:600; }
     #meta { display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
     button, input, select { font-size:14px; padding:6px 10px; }
-    input[type="range"] { padding:0; }
     #viewer { width: 100vw; height: calc(100vh - 68px); }
     #svg { width:100%; height:100%; display:block; }
-    .edge { stroke: var(--line); stroke-width: 1; fill: none; }
-    .tip { font-size: 10px; fill: var(--fg); }
-    .node { fill: var(--muted); }
+    .edge { stroke: #555; stroke-width: 1; fill: none; }
+    .tip { font-size: 10px; fill: #111; }
+    .node { fill: #666; }
     .hit { fill: crimson !important; }
     #status { font-size:12px; color:#555; margin-left:6px; }
     .knob { display:flex; align-items:center; gap:6px; }
@@ -32,7 +32,6 @@
       <button id="zoomFit" title="Fit to screen">Fit</button>
       <input id="search" placeholder="Search tip…" />
       <span id="status"></span>
-
       <div class="knob"><label>Tip spacing</label><input id="kSpacing" type="range" min="8" max="24" value="14"/></div>
       <div class="knob"><label>Font</label><input id="kFont" type="range" min="8" max="18" value="10"/></div>
       <div class="knob"><label>Branch scale</label><input id="kBranch" type="range" min="80" max="500" value="220"/></div>
@@ -49,19 +48,16 @@
 
   <div id="viewer"><svg id="svg" aria-label="Phylogeny"></svg></div>
 
-  <!-- Pure D3 (no eval), CSP-friendly -->
   <script type="module">
     import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
-
     const TREE_URL = "latest/backbone.newick";
 
-    // Tunables (can be changed live via the sliders)
-    let BRANCH_PX_PER_UNIT = 220; // horizontal pixels per branch-length unit  (x-axis scale)
-    let TIP_SPACING_PX     = 14;  // vertical pixels per tip
-    let BASE_FONT_PX       = 10;  // label font size at scale=1
-    let SHOW_LABELS_AT_K   = 0.3; // hide labels when zoomed out below this factor
-    let LABEL_MODE         = "auto"; // "auto"|"genus"|"species"|"off"
-    let currentK           = 1;   // current zoom scale
+    let BRANCH_PX_PER_UNIT = 220;
+    let TIP_SPACING_PX     = 14;
+    let BASE_FONT_PX       = 10;
+    let SHOW_LABELS_AT_K   = 0.3;
+    let LABEL_MODE         = "auto";
+    let currentK           = 1;
 
     const spacingInp = document.getElementById("kSpacing");
     const fontInp    = document.getElementById("kFont");
@@ -90,26 +86,21 @@
     function toHierarchy(r){ return d3.hierarchy(r, d=>d.children); }
 
     function genusOf(s){ return (s||"").split(/[_\s|]/)[0]; }
-    function speciesOf(s){
-      if(!s) return "";
-      const parts = s.split(/[|]/)[0]; // strip pipe metadata if present
-      return parts;
-    }
+    function speciesOf(s){ if(!s) return ""; return (s.split(/[|]/)[0]); }
+
     function labelText(d, k){
       if(LABEL_MODE==="off") return "";
       if(LABEL_MODE==="genus") return genusOf(d.data.name);
       if(LABEL_MODE==="species") return speciesOf(d.data.name);
-      // auto: genus when zoomed out, species when zoomed in
       return k < 1 ? genusOf(d.data.name) : speciesOf(d.data.name);
     }
 
     function layout(h){
-      // x (vertical) := tip index * spacing; y (horizontal) := cumulative branch length * scale
       h.each(d=>{ d.data._len = +d.data.length || 0; });
       h.eachBefore(d=>{ d.cum=(d.parent?.cum||0)+d.data._len; });
       let i=0;
       h.eachAfter(d=>{ d.x = d.children ? d.children.reduce((a,c)=>a+c.x,0)/d.children.length : (i++); });
-      h.each(d=>{ d.y = d.cum * BRANCH_PX_PER_UNIT; d.X = d.x * TIP_SPACING_PX; }); // X is pixel y-position
+      h.each(d=>{ d.y = d.cum * BRANCH_PX_PER_UNIT; d.X = d.x * TIP_SPACING_PX; });
       return h;
     }
 
@@ -121,14 +112,12 @@
       fetchText(url).then(nw=>{
         const h = layout(toHierarchy(parseNewick(nw)));
 
-        // edges
         const edges = g.selectAll("path.edge")
           .data(h.links())
           .enter().append("path")
           .attr("class","edge")
           .attr("d",d=>`M${d.source.y},${d.source.X}H${d.target.y}V${d.target.X}`);
 
-        // nodes
         const nodes = g.selectAll("circle.node")
           .data(h.descendants())
           .enter().append("circle")
@@ -137,18 +126,16 @@
           .attr("cx",d=>d.y)
           .attr("cy",d=>d.X);
 
-        // labels (tips only)
         const tips = g.selectAll("text.tip")
           .data(h.leaves())
           .enter().append("text")
           .attr("class","tip")
           .attr("x",d=>d.y+4)
           .attr("y",d=>d.X+3)
-          .text("")  // filled in updateLabels()
+          .text("")
           .attr("font-size", `${BASE_FONT_PX}px`)
           .attr("fill","#111");
 
-        // zoom/pan
         const zoom = d3.zoom().scaleExtent([0.03, 40]).on("zoom", (ev)=>{
           currentK = ev.transform.k;
           gZoom.attr("transform", ev.transform);
@@ -166,19 +153,17 @@
         }
 
         function recomputeXscale(){
-          // Recompute horizontal positions from cumulative lengths
           h.each(d=>{ d.y = d.cum * BRANCH_PX_PER_UNIT; });
           edges.attr("d",d=>`M${d.source.y},${d.source.X}H${d.target.y}V${d.target.X}`);
           nodes.attr("cx",d=>d.y);
-          tips.attr("x",d=>d.y+4);
+          tips .attr("x",d=>d.y+4);
         }
 
         function recomputeYspacing(){
-          // Recompute vertical spacing
           h.each(d=>{ d.X = d.x * TIP_SPACING_PX; });
           edges.attr("d",d=>`M${d.source.y},${d.source.X}H${d.target.y}V${d.target.X}`);
           nodes.attr("cy",d=>d.X);
-          tips.attr("y",d=>d.X+3);
+          tips .attr("y",d=>d.X+3);
         }
 
         function fit(){
@@ -191,18 +176,15 @@
           setTimeout(()=>{ svg.call(zoom.transform, d3.zoomIdentity.translate(tx,ty).scale(s)); updateLabels(s); }, 360);
         }
 
-        // Buttons
         document.getElementById("zoomIn").onclick  = ()=> svg.transition().duration(150).call(zoom.scaleBy, 1.25);
         document.getElementById("zoomOut").onclick = ()=> svg.transition().duration(150).call(zoom.scaleBy, 0.8);
         document.getElementById("zoomFit").onclick = fit;
 
-        // Live controls
         spacingInp.oninput = (e)=>{ TIP_SPACING_PX=+e.target.value; recomputeYspacing(); updateLabels(currentK); };
         fontInp.oninput    = (e)=>{ BASE_FONT_PX=+e.target.value; updateLabels(currentK); };
         branchInp.oninput  = (e)=>{ BRANCH_PX_PER_UNIT=+e.target.value; recomputeXscale(); updateLabels(currentK); };
         modeSel.onchange   = (e)=>{ LABEL_MODE=e.target.value; updateLabels(currentK); };
 
-        // Search highlight
         const status=document.getElementById("status");
         const input=document.getElementById("search");
         input.addEventListener("input", ()=>{
@@ -213,7 +195,6 @@
           status.textContent = q ? `matches: ${hits}` : "";
         });
 
-        // Initial fit & labels
         fit();
         updateLabels(1);
       }).catch(e=>{
@@ -221,6 +202,9 @@
         const s=document.getElementById("status"); if(s) s.textContent="Failed to load tree.";
       });
     }
+
+    // Write a console marker so we can tell this version is live
+    console.log("viewer: zoomable v2 (builder)");
 
     render(TREE_URL);
   </script>
