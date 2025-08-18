@@ -1,26 +1,20 @@
 #!/usr/bin/env python3.11
-"""
-Read a GenBank flatfile and emit FASTA with normalized headers that carry a specimen key.
-Header format: {specimen_key}|{locus}|{genbank_acc}
-Priority for specimen_key:
-  1) BioSample
-  2) /specimen_voucher
-  3) /culture_collection
-  4) /isolate
-  5) /strain
-If none present, fall back to the GenBank accession as the key (unique but not linkable).
-"""
 import argparse, re
 from Bio import SeqIO
 from pathlib import Path
 
-def norm(s: str | None) -> str | None:
-    if not s:
-        return None
+SAFE = re.compile(r"[^A-Za-z0-9]+")  # anything not [A-Za-z0-9] -> "_"
+
+def canon(s: str | None) -> str | None:
+    if not s: return None
     s = s.strip().lower()
-    s = re.sub(r"[^\w\s:/.-]+", "", s)          # drop weird punctuation
-    s = re.sub(r"[\s\-]+", "_", s)              # normalize spaces/hyphens to underscores
-    return s
+    s = SAFE.sub("_", s)       # convert / : - . space etc. to "_"
+    s = re.sub(r"_+", "_", s).strip("_")
+    return s or None
+
+def too_generic(k: str) -> bool:
+    # e.g., "cfmr", "hkas" → too short or no digits
+    return (len(k) < 6) or (k.isalpha() and not any(ch.isdigit() for ch in k))
 
 def main():
     ap = argparse.ArgumentParser()
@@ -31,36 +25,57 @@ def main():
 
     out_recs = []
     for rec in SeqIO.parse(args.inp, "genbank"):
-        gb_acc = rec.id
+        gb_acc_raw = rec.id
+        gb_acc = canon(gb_acc_raw) or gb_acc_raw.lower()
+
         src = next((f for f in rec.features if f.type == 'source'), None)
         biosample = voucher = culture = isolate = strain = None
         if src:
-            # BioSample via db_xref
             for x in src.qualifiers.get("db_xref", []):
                 if x.startswith("BioSample:"):
                     biosample = x.split(":", 1)[1]
                     break
-            voucher  = (src.qualifiers.get("specimen_voucher", [None])[0])
-            culture  = (src.qualifiers.get("culture_collection", [None])[0])
-            isolate  = (src.qualifiers.get("isolate", [None])[0])
-            strain   = (src.qualifiers.get("strain", [None])[0])
+            voucher = (src.qualifiers.get("specimen_voucher", [None])[0])
+            culture = (src.qualifiers.get("culture_collection", [None])[0])
+            isolate = (src.qualifiers.get("isolate", [None])[0])
+            strain  = (src.qualifiers.get("strain", [None])[0])
 
-        key = norm(biosample) or norm(voucher) or norm(culture) or norm(isolate) or norm(strain) or gb_acc
+        key = canon(biosample) or canon(voucher) or canon(culture) or canon(isolate) or canon(strain) or gb_acc
+        # If key still too generic, append sanitized accession to make unique & stable
+        if too_generic(key):
+            key = f"{key}_{gb_acc}"
+
+        rec = rec[:]  # shallow copy to avoid mutating original
         rec.id = f"{key}|{args.locus}|{gb_acc}"
         rec.description = ""
         out_recs.append(rec)
 
     # Write FASTA
+    Path(args.out).parent.mkdir(parents=True, exist_ok=True)
     SeqIO.write(out_recs, args.out, "fasta")
 
-    # Append to taxon map
+    # Build/append a de-duplicated taxon map (specimen_key \t species)
     map_path = Path("data/staging/taxon_map.tsv")
     map_path.parent.mkdir(parents=True, exist_ok=True)
-    with map_path.open("a") as M:
-        for rec in out_recs:
-            specimen = rec.id.split("|", 1)[0]
-            sp = (rec.annotations.get("organism") or "").strip()
-            M.write(f"{specimen}\t{sp}\n")
+    existing = {}
+    if map_path.exists():
+        for line in map_path.read_text().splitlines():
+            if not line.strip(): continue
+            k, v = line.split("\t", 1)
+            existing[k] = v
+
+    with map_path.open("w") as M:
+        # rewrite everything we know (existing first)
+        for k in sorted(existing):
+            M.write(f"{k}\t{existing[k]}\n")
+        # add/update from current batch
+        added = set(existing.keys())
+        for r in out_recs:
+            specimen = r.id.split("|", 1)[0]
+            sp = (r.annotations.get("organism") or "").strip()
+            if specimen not in added and sp:
+                M.write(f"{specimen}\t{sp}\n")
+                added.add(specimen)
 
 if __name__ == "__main__":
     main()

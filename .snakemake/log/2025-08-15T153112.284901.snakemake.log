@@ -1,0 +1,53 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 64
+Rules claiming more threads will be scaled down.
+Job stats:
+job                           count
+--------------------------  -------
+build_backbone_constrained        1
+pretty_tree                       1
+site_build                        1
+total                             3
+
+Select jobs to execute...
+
+[Fri Aug 15 15:31:12 2025]
+rule build_backbone_constrained:
+    input: data/align/concat.fasta, data/align/partitions.txt
+    output: data/trees/backbone.treefile
+    jobid: 2
+    reason: Forced execution
+    threads: 64
+    resources: tmpdir=/tmp
+
+[Mon Aug 18 01:15:47 2025]
+Finished job 2.
+1 of 3 steps (33%) done
+Select jobs to execute...
+
+[Mon Aug 18 01:15:47 2025]
+rule pretty_tree:
+    input: data/trees/backbone.treefile, data/staging/taxon_map.tsv
+    output: data/trees/backbone.pretty.newick
+    jobid: 1
+    reason: Missing output files: data/trees/backbone.pretty.newick; Input files updated by another job: data/trees/backbone.treefile
+    resources: tmpdir=/tmp
+
+[Mon Aug 18 01:15:47 2025]
+Finished job 1.
+2 of 3 steps (67%) done
+Select jobs to execute...
+
+[Mon Aug 18 01:15:47 2025]
+rule site_build:
+    input: data/trees/backbone.pretty.newick, workflow/scripts/build_site.py
+    output: site/index.html, site/latest/backbone.newick, site/build.txt, site/.nojekyll
+    jobid: 0
+    reason: Input files updated by another job: data/trees/backbone.pretty.newick
+    resources: tmpdir=/tmp
+
+[Mon Aug 18 01:15:47 2025]
+Finished job 0.
+3 of 3 steps (100%) done
+Complete log: .snakemake/log/2025-08-15T153112.284901.snakemake.log

@@ -1,0 +1,208 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 64
+Rules claiming more threads will be scaled down.
+Job stats:
+job                           count
+--------------------------  -------
+build_backbone_constrained        1
+concat_supermatrix                1
+filter_locus_by_keep              3
+pretty_tree                       1
+realign_locus_refined             3
+remask_locus_refined              3
+site_build                        1
+treeshrink_locus                  3
+total                            16
+
+Select jobs to execute...
+
+[Fri Aug 15 09:46:16 2025]
+rule treeshrink_locus:
+    input: data/trees/loci/RPB2.firstpass.treefile
+    output: data/trees/loci/RPB2.treeshrink.keep.txt, data/trees/loci/RPB2.treeshrink.removed.txt
+    jobid: 20
+    reason: Missing output files: data/trees/loci/RPB2.treeshrink.keep.txt; Updated input files: data/trees/loci/RPB2.firstpass.treefile
+    wildcards: locus=RPB2
+    resources: tmpdir=/tmp
+
+
+[Fri Aug 15 09:46:17 2025]
+rule treeshrink_locus:
+    input: data/trees/loci/RPB1.firstpass.treefile
+    output: data/trees/loci/RPB1.treeshrink.keep.txt, data/trees/loci/RPB1.treeshrink.removed.txt
+    jobid: 10
+    reason: Missing output files: data/trees/loci/RPB1.treeshrink.keep.txt; Updated input files: data/trees/loci/RPB1.firstpass.treefile
+    wildcards: locus=RPB1
+    resources: tmpdir=/tmp
+
+
+[Fri Aug 15 09:46:17 2025]
+rule treeshrink_locus:
+    input: data/trees/loci/TEF1.firstpass.treefile
+    output: data/trees/loci/TEF1.treeshrink.keep.txt, data/trees/loci/TEF1.treeshrink.removed.txt
+    jobid: 30
+    reason: Missing output files: data/trees/loci/TEF1.treeshrink.keep.txt; Updated input files: data/trees/loci/TEF1.firstpass.treefile
+    wildcards: locus=TEF1
+    resources: tmpdir=/tmp
+
+[Fri Aug 15 09:46:18 2025]
+Finished job 10.
+1 of 16 steps (6%) done
+Select jobs to execute...
+
+[Fri Aug 15 09:46:18 2025]
+rule filter_locus_by_keep:
+    input: data/qc/RPB1.merged.fasta, data/trees/loci/RPB1.treeshrink.keep.txt
+    output: data/qc/RPB1.kept.fasta
+    jobid: 6
+    reason: Missing output files: data/qc/RPB1.kept.fasta; Input files updated by another job: data/trees/loci/RPB1.treeshrink.keep.txt
+    wildcards: locus=RPB1
+    resources: tmpdir=/tmp
+
+[Fri Aug 15 09:46:18 2025]
+Finished job 20.
+2 of 16 steps (12%) done
+Select jobs to execute...
+
+[Fri Aug 15 09:46:18 2025]
+rule filter_locus_by_keep:
+    input: data/qc/RPB2.merged.fasta, data/trees/loci/RPB2.treeshrink.keep.txt
+    output: data/qc/RPB2.kept.fasta
+    jobid: 16
+    reason: Missing output files: data/qc/RPB2.kept.fasta; Input files updated by another job: data/trees/loci/RPB2.treeshrink.keep.txt
+    wildcards: locus=RPB2
+    resources: tmpdir=/tmp
+
+[Fri Aug 15 09:46:18 2025]
+Finished job 6.
+3 of 16 steps (19%) done
+Select jobs to execute...
+
+[Fri Aug 15 09:46:18 2025]
+rule realign_locus_refined:
+    input: data/qc/RPB1.kept.fasta
+    output: data/align/RPB1.aln.refined.fasta
+    jobid: 5
+    reason: Missing output files: data/align/RPB1.aln.refined.fasta; Input files updated by another job: data/qc/RPB1.kept.fasta
+    wildcards: locus=RPB1
+    threads: 48
+    resources: tmpdir=/tmp
+
+[Fri Aug 15 09:46:18 2025]
+Finished job 30.
+4 of 16 steps (25%) done
+Select jobs to execute...
+
+[Fri Aug 15 09:46:18 2025]
+rule filter_locus_by_keep:
+    input: data/qc/TEF1.merged.fasta, data/trees/loci/TEF1.treeshrink.keep.txt
+    output: data/qc/TEF1.kept.fasta
+    jobid: 26
+    reason: Missing output files: data/qc/TEF1.kept.fasta; Input files updated by another job: data/trees/loci/TEF1.treeshrink.keep.txt
+    wildcards: locus=TEF1
+    resources: tmpdir=/tmp
+
+[Fri Aug 15 09:46:18 2025]
+Finished job 16.
+5 of 16 steps (31%) done
+Select jobs to execute...
+[Fri Aug 15 09:46:18 2025]
+Finished job 26.
+6 of 16 steps (38%) done
+[Fri Aug 15 10:02:40 2025]
+Finished job 5.
+7 of 16 steps (44%) done
+
+[Fri Aug 15 10:02:40 2025]
+rule realign_locus_refined:
+    input: data/qc/RPB2.kept.fasta
+    output: data/align/RPB2.aln.refined.fasta
+    jobid: 15
+    reason: Missing output files: data/align/RPB2.aln.refined.fasta; Input files updated by another job: data/qc/RPB2.kept.fasta
+    wildcards: locus=RPB2
+    threads: 48
+    resources: tmpdir=/tmp
+
+
+[Fri Aug 15 10:02:40 2025]
+rule remask_locus_refined:
+    input: data/align/RPB1.aln.refined.fasta
+    output: data/align/RPB1.masked.refined.fasta
+    jobid: 4
+    reason: Missing output files: data/align/RPB1.masked.refined.fasta; Input files updated by another job: data/align/RPB1.aln.refined.fasta
+    wildcards: locus=RPB1
+    resources: tmpdir=/tmp
+
+[Fri Aug 15 10:02:40 2025]
+Finished job 4.
+8 of 16 steps (50%) done
+Select jobs to execute...
+[Fri Aug 15 10:19:36 2025]
+Finished job 15.
+9 of 16 steps (56%) done
+
+[Fri Aug 15 10:19:36 2025]
+rule remask_locus_refined:
+    input: data/align/RPB2.aln.refined.fasta
+    output: data/align/RPB2.masked.refined.fasta
+    jobid: 14
+    reason: Missing output files: data/align/RPB2.masked.refined.fasta; Input files updated by another job: data/align/RPB2.aln.refined.fasta
+    wildcards: locus=RPB2
+    resources: tmpdir=/tmp
+
+
+[Fri Aug 15 10:19:36 2025]
+rule realign_locus_refined:
+    input: data/qc/TEF1.kept.fasta
+    output: data/align/TEF1.aln.refined.fasta
+    jobid: 25
+    reason: Missing output files: data/align/TEF1.aln.refined.fasta; Input files updated by another job: data/qc/TEF1.kept.fasta
+    wildcards: locus=TEF1
+    threads: 48
+    resources: tmpdir=/tmp
+
+[Fri Aug 15 10:19:37 2025]
+Finished job 14.
+10 of 16 steps (62%) done
+[Fri Aug 15 10:51:34 2025]
+Finished job 25.
+11 of 16 steps (69%) done
+Select jobs to execute...
+
+[Fri Aug 15 10:51:34 2025]
+rule remask_locus_refined:
+    input: data/align/TEF1.aln.refined.fasta
+    output: data/align/TEF1.masked.refined.fasta
+    jobid: 24
+    reason: Missing output files: data/align/TEF1.masked.refined.fasta; Input files updated by another job: data/align/TEF1.aln.refined.fasta
+    wildcards: locus=TEF1
+    resources: tmpdir=/tmp
+
+[Fri Aug 15 10:51:35 2025]
+Finished job 24.
+12 of 16 steps (75%) done
+Select jobs to execute...
+
+[Fri Aug 15 10:51:35 2025]
+rule concat_supermatrix:
+    input: data/align/RPB1.masked.refined.fasta, data/align/RPB2.masked.refined.fasta, data/align/TEF1.masked.refined.fasta
+    output: data/align/concat.fasta, data/align/partitions.txt, data/align/taxa.txt
+    jobid: 3
+    reason: Missing output files: data/align/concat.fasta; Input files updated by another job: data/align/RPB2.masked.refined.fasta, data/align/TEF1.masked.refined.fasta, data/align/RPB1.masked.refined.fasta
+    resources: tmpdir=/tmp
+
+[Fri Aug 15 10:51:35 2025]
+Finished job 3.
+13 of 16 steps (81%) done
+Select jobs to execute...
+
+[Fri Aug 15 10:51:35 2025]
+rule build_backbone_constrained:
+    input: data/align/concat.fasta, data/align/partitions.txt
+    output: data/trees/backbone.treefile
+    jobid: 2
+    reason: Missing output files: data/trees/backbone.treefile; Input files updated by another job: data/align/concat.fasta, data/align/partitions.txt
+    threads: 64
+    resources: tmpdir=/tmp
+

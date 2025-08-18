@@ -1,0 +1,122 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 64
+Rules claiming more threads will be scaled down.
+Job stats:
+job                           count
+--------------------------  -------
+build_backbone_constrained        1
+concat_supermatrix                1
+enrich_taxon_names                1
+filter_locus_by_keep              3
+locus_tree_firstpass              1
+pretty_tree                       1
+realign_locus_refined             3
+remask_locus_refined              3
+site_build                        1
+treeshrink_locus                  3
+total                            18
+
+Select jobs to execute...
+
+[Fri Aug 15 08:47:03 2025]
+rule locus_tree_firstpass:
+    input: data/align/RPB1.masked.fasta
+    output: data/trees/loci/RPB1.firstpass.treefile
+    jobid: 11
+    reason: Missing output files: data/trees/loci/RPB1.firstpass.treefile; Updated input files: data/align/RPB1.masked.fasta
+    wildcards: locus=RPB1
+    threads: 64
+    resources: tmpdir=/tmp
+
+[Fri Aug 15 08:57:19 2025]
+Finished job 11.
+1 of 18 steps (6%) done
+Select jobs to execute...
+
+[Fri Aug 15 08:57:19 2025]
+rule treeshrink_locus:
+    input: data/trees/loci/RPB2.firstpass.treefile
+    output: data/trees/loci/RPB2.treeshrink.keep.txt, data/trees/loci/RPB2.treeshrink.removed.txt
+    jobid: 20
+    reason: Missing output files: data/trees/loci/RPB2.treeshrink.keep.txt; Updated input files: data/trees/loci/RPB2.firstpass.treefile
+    wildcards: locus=RPB2
+    resources: tmpdir=/tmp
+
+
+[Fri Aug 15 08:57:19 2025]
+rule treeshrink_locus:
+    input: data/trees/loci/RPB1.firstpass.treefile
+    output: data/trees/loci/RPB1.treeshrink.keep.txt, data/trees/loci/RPB1.treeshrink.removed.txt
+    jobid: 10
+    reason: Missing output files: data/trees/loci/RPB1.treeshrink.keep.txt; Input files updated by another job: data/trees/loci/RPB1.firstpass.treefile
+    wildcards: locus=RPB1
+    resources: tmpdir=/tmp
+
+
+[Fri Aug 15 08:57:19 2025]
+rule treeshrink_locus:
+    input: data/trees/loci/TEF1.firstpass.treefile
+    output: data/trees/loci/TEF1.treeshrink.keep.txt, data/trees/loci/TEF1.treeshrink.removed.txt
+    jobid: 30
+    reason: Missing output files: data/trees/loci/TEF1.treeshrink.keep.txt; Updated input files: data/trees/loci/TEF1.firstpass.treefile
+    wildcards: locus=TEF1
+    resources: tmpdir=/tmp
+
+
+[Fri Aug 15 08:57:19 2025]
+rule enrich_taxon_names:
+    input: data/staging/RPB1.gb, data/staging/RPB2.gb, data/staging/TEF1.gb, data/staging/ITS.gb, data/qc/RPB1.merged.fasta, data/qc/RPB2.merged.fasta, data/qc/TEF1.merged.fasta
+    output: data/staging/taxon_map.tsv
+    jobid: 34
+    reason: Updated input files: data/qc/TEF1.merged.fasta, data/staging/ITS.gb, data/qc/RPB1.merged.fasta, data/qc/RPB2.merged.fasta
+    resources: tmpdir=/tmp
+
+[Fri Aug 15 08:57:20 2025]
+Error in rule treeshrink_locus:
+    jobid: 10
+    input: data/trees/loci/RPB1.firstpass.treefile
+    output: data/trees/loci/RPB1.treeshrink.keep.txt, data/trees/loci/RPB1.treeshrink.removed.txt
+    shell:
+        
+        mkdir -p data/trees/loci/RPB1.treeshrink
+        run_treeshrink.py -t data/trees/loci/RPB1.firstpass.treefile -o data/trees/loci/RPB1.treeshrink -q 0.02 >/dev/null 2>&1 || true
+        cp data/trees/loci/RPB1.treeshrink/TS_keep.txt data/trees/loci/RPB1.treeshrink.keep.txt
+        cp data/trees/loci/RPB1.treeshrink/TS_outliers.txt data/trees/loci/RPB1.treeshrink.removed.txt || true
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Fri Aug 15 08:57:20 2025]
+Error in rule treeshrink_locus:
+    jobid: 20
+    input: data/trees/loci/RPB2.firstpass.treefile
+    output: data/trees/loci/RPB2.treeshrink.keep.txt, data/trees/loci/RPB2.treeshrink.removed.txt
+    shell:
+        
+        mkdir -p data/trees/loci/RPB2.treeshrink
+        run_treeshrink.py -t data/trees/loci/RPB2.firstpass.treefile -o data/trees/loci/RPB2.treeshrink -q 0.02 >/dev/null 2>&1 || true
+        cp data/trees/loci/RPB2.treeshrink/TS_keep.txt data/trees/loci/RPB2.treeshrink.keep.txt
+        cp data/trees/loci/RPB2.treeshrink/TS_outliers.txt data/trees/loci/RPB2.treeshrink.removed.txt || true
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Fri Aug 15 08:57:20 2025]
+Error in rule treeshrink_locus:
+    jobid: 30
+    input: data/trees/loci/TEF1.firstpass.treefile
+    output: data/trees/loci/TEF1.treeshrink.keep.txt, data/trees/loci/TEF1.treeshrink.removed.txt
+    shell:
+        
+        mkdir -p data/trees/loci/TEF1.treeshrink
+        run_treeshrink.py -t data/trees/loci/TEF1.firstpass.treefile -o data/trees/loci/TEF1.treeshrink -q 0.02 >/dev/null 2>&1 || true
+        cp data/trees/loci/TEF1.treeshrink/TS_keep.txt data/trees/loci/TEF1.treeshrink.keep.txt
+        cp data/trees/loci/TEF1.treeshrink/TS_outliers.txt data/trees/loci/TEF1.treeshrink.removed.txt || true
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Fri Aug 15 08:57:23 2025]
+Finished job 34.
+2 of 18 steps (11%) done
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2025-08-15T084702.896104.snakemake.log

@@ -1,0 +1,135 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 64
+Rules claiming more threads will be scaled down.
+Job stats:
+job                           count
+--------------------------  -------
+align_locus                       3
+build_backbone_constrained        1
+concat_supermatrix                1
+enrich_taxon_names                1
+fetch_locus                       1
+filter_locus_by_keep              3
+locus_tree_firstpass              3
+mask_locus                        3
+pretty_tree                       1
+realign_locus_refined             3
+remask_locus_refined              3
+site_build                        1
+treeshrink_locus                  3
+total                            27
+
+Select jobs to execute...
+
+[Thu Aug 14 16:19:49 2025]
+rule align_locus:
+    input: data/qc/TEF1.merged.fasta
+    output: data/align/TEF1.aln.fasta
+    jobid: 33
+    reason: Missing output files: data/align/TEF1.aln.fasta; Updated input files: data/qc/TEF1.merged.fasta
+    wildcards: locus=TEF1
+    threads: 48
+    resources: tmpdir=/tmp
+
+[Thu Aug 14 17:25:52 2025]
+Finished job 33.
+1 of 27 steps (4%) done
+Select jobs to execute...
+
+[Thu Aug 14 17:25:52 2025]
+rule align_locus:
+    input: data/qc/RPB2.merged.fasta
+    output: data/align/RPB2.aln.fasta
+    jobid: 23
+    reason: Missing output files: data/align/RPB2.aln.fasta; Updated input files: data/qc/RPB2.merged.fasta
+    wildcards: locus=RPB2
+    threads: 48
+    resources: tmpdir=/tmp
+
+
+[Thu Aug 14 17:25:52 2025]
+rule mask_locus:
+    input: data/align/TEF1.aln.fasta
+    output: data/align/TEF1.masked.fasta
+    jobid: 32
+    reason: Missing output files: data/align/TEF1.masked.fasta; Input files updated by another job: data/align/TEF1.aln.fasta
+    wildcards: locus=TEF1
+    resources: tmpdir=/tmp
+
+[Thu Aug 14 17:25:53 2025]
+Finished job 32.
+2 of 27 steps (7%) done
+Select jobs to execute...
+[Thu Aug 14 17:42:27 2025]
+Finished job 23.
+3 of 27 steps (11%) done
+
+[Thu Aug 14 17:42:27 2025]
+rule locus_tree_firstpass:
+    input: data/align/TEF1.masked.fasta
+    output: data/trees/loci/TEF1.firstpass.treefile
+    jobid: 31
+    reason: Missing output files: data/trees/loci/TEF1.firstpass.treefile; Input files updated by another job: data/align/TEF1.masked.fasta
+    wildcards: locus=TEF1
+    threads: 64
+    resources: tmpdir=/tmp
+
+[Thu Aug 14 18:05:41 2025]
+Finished job 31.
+4 of 27 steps (15%) done
+Select jobs to execute...
+
+[Thu Aug 14 18:05:41 2025]
+rule mask_locus:
+    input: data/align/RPB2.aln.fasta
+    output: data/align/RPB2.masked.fasta
+    jobid: 22
+    reason: Missing output files: data/align/RPB2.masked.fasta; Input files updated by another job: data/align/RPB2.aln.fasta
+    wildcards: locus=RPB2
+    resources: tmpdir=/tmp
+
+
+[Thu Aug 14 18:05:41 2025]
+rule align_locus:
+    input: data/qc/RPB1.merged.fasta
+    output: data/align/RPB1.aln.fasta
+    jobid: 13
+    reason: Missing output files: data/align/RPB1.aln.fasta; Updated input files: data/qc/RPB1.merged.fasta
+    wildcards: locus=RPB1
+    threads: 48
+    resources: tmpdir=/tmp
+
+
+[Thu Aug 14 18:05:41 2025]
+rule treeshrink_locus:
+    input: data/trees/loci/TEF1.firstpass.treefile
+    output: data/trees/loci/TEF1.treeshrink.keep.txt, data/trees/loci/TEF1.treeshrink.removed.txt
+    jobid: 30
+    reason: Missing output files: data/trees/loci/TEF1.treeshrink.keep.txt; Input files updated by another job: data/trees/loci/TEF1.firstpass.treefile
+    wildcards: locus=TEF1
+    resources: tmpdir=/tmp
+
+[Thu Aug 14 18:05:41 2025]
+Error in rule treeshrink_locus:
+    jobid: 30
+    input: data/trees/loci/TEF1.firstpass.treefile
+    output: data/trees/loci/TEF1.treeshrink.keep.txt, data/trees/loci/TEF1.treeshrink.removed.txt
+    shell:
+        
+        mkdir -p data/trees/loci/TEF1.treeshrink
+        TreeShrink.py -t data/trees/loci/TEF1.firstpass.treefile -o data/trees/loci/TEF1.treeshrink -q 0.02 >/dev/null 2>&1 || true
+        cp data/trees/loci/TEF1.treeshrink/TS_keep.txt data/trees/loci/TEF1.treeshrink.keep.txt
+        cp data/trees/loci/TEF1.treeshrink/TS_outliers.txt data/trees/loci/TEF1.treeshrink.removed.txt || true
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Thu Aug 14 18:05:42 2025]
+Finished job 22.
+5 of 27 steps (19%) done
+[Thu Aug 14 18:28:00 2025]
+Finished job 13.
+6 of 27 steps (22%) done
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2025-08-14T161949.229191.snakemake.log

@@ -1,0 +1,45 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 64
+Rules claiming more threads will be scaled down.
+Job stats:
+job                           count
+--------------------------  -------
+build_backbone_constrained        1
+concat_supermatrix                1
+filter_locus_by_keep              3
+locus_tree_firstpass              3
+pretty_tree                       1
+realign_locus_refined             3
+remask_locus_refined              3
+site_build                        1
+treeshrink_locus                  3
+total                            19
+
+Select jobs to execute...
+
+[Thu Aug 14 12:00:28 2025]
+rule locus_tree_firstpass:
+    input: data/align/TEF1.masked.fasta
+    output: data/trees/loci/TEF1.firstpass.treefile
+    jobid: 31
+    reason: Missing output files: data/trees/loci/TEF1.firstpass.treefile
+    wildcards: locus=TEF1
+    threads: 64
+    resources: tmpdir=/tmp
+
+[Thu Aug 14 12:00:29 2025]
+Error in rule locus_tree_firstpass:
+    jobid: 31
+    input: data/align/TEF1.masked.fasta
+    output: data/trees/loci/TEF1.firstpass.treefile
+    shell:
+        
+        mkdir -p data/trees/loci
+        iqtree3 -s data/align/TEF1.masked.fasta -m MFP -T 64 -fast -pre data/trees/loci/TEF1.firstpass
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2025-08-14T120027.758011.snakemake.log

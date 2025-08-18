@@ -16,5 +16,7 @@ rule all:
         "data/staging/loci_table.tsv",
         # Backbone tree (constraint-aware)
         "data/trees/backbone.treefile",
-        # Static site directory (as a plain path here)
-        "site"
+        "data/trees/backbone.pretty.newick",
+        "site/index.html",
+        "site/latest/backbone.newick"
+

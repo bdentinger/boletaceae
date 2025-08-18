@@ -3,30 +3,25 @@ import argparse, re
 from pathlib import Path
 
 ap = argparse.ArgumentParser()
-ap.add_argument("--in", dest="inp", required=True)   # input newick
-ap.add_argument("--map", required=True)              # specimen\tSpecies name
+ap.add_argument("--in", dest="inp", required=True)    # input newick (backbone.treefile)
+ap.add_argument("--map", required=True)               # TSV: specimen_key \t Species name
 ap.add_argument("--out", required=True)
 a = ap.parse_args()
 
 m = {}
 for line in Path(a.map).read_text().splitlines():
     if not line.strip(): continue
-    spk, name = line.split("\t",1)
-    spk = spk.strip()
-    name = name.strip() or spk
-    m[spk] = name
+    spk, name = line.split("\t", 1)
+    m[spk.strip()] = (name.strip() or spk).replace(" ", "_")
 
 nwk = Path(a.inp).read_text().strip()
+# Replace labels that appear right after '(' or ',' and before ':' or ')' or ','
 def repl(match):
-    label = match.group(1)
-    key = label.split("|",1)[0]
-    pretty = m.get(key, key)
-    # sanitize spaces
-    pretty = pretty.replace(" ", "_")
-    return pretty
+    old = match.group(1)
+    key = old.split("|", 1)[0]  # specimen key is before first '|'
+    return m.get(key, old)
 
 out = re.sub(r"(?<=[(,])\s*([^:,()\s]+)\s*(?=[:),])", repl, nwk)
 if not out.endswith(";"): out += ";"
 Path(a.out).parent.mkdir(parents=True, exist_ok=True)
 Path(a.out).write_text(out)
-print(f"Renamed tips -> {a.out}")

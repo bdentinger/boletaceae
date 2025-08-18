@@ -1,0 +1,115 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 64
+Rules claiming more threads will be scaled down.
+Job stats:
+job                           count
+--------------------------  -------
+build_backbone_constrained        1
+concat_supermatrix                1
+enrich_taxon_names                1
+fetch_locus                       1
+filter_locus_by_keep              3
+locus_tree_firstpass              2
+mask_locus                        1
+pretty_tree                       1
+realign_locus_refined             3
+remask_locus_refined              3
+site_build                        1
+treeshrink_locus                  3
+total                            21
+
+Select jobs to execute...
+
+[Thu Aug 14 19:15:03 2025]
+rule locus_tree_firstpass:
+    input: data/align/RPB2.masked.fasta
+    output: data/trees/loci/RPB2.firstpass.treefile
+    jobid: 20
+    reason: Missing output files: data/trees/loci/RPB2.firstpass.treefile; Updated input files: data/align/RPB2.masked.fasta
+    wildcards: locus=RPB2
+    threads: 64
+    resources: tmpdir=/tmp
+
+[Thu Aug 14 19:29:47 2025]
+Finished job 20.
+1 of 21 steps (5%) done
+Select jobs to execute...
+
+[Thu Aug 14 19:29:47 2025]
+rule treeshrink_locus:
+    input: data/trees/loci/TEF1.firstpass.treefile
+    output: data/trees/loci/TEF1.treeshrink.keep.txt, data/trees/loci/TEF1.treeshrink.removed.txt
+    jobid: 29
+    reason: Missing output files: data/trees/loci/TEF1.treeshrink.keep.txt; Updated input files: data/trees/loci/TEF1.firstpass.treefile
+    wildcards: locus=TEF1
+    resources: tmpdir=/tmp
+
+
+[Thu Aug 14 19:29:47 2025]
+rule treeshrink_locus:
+    input: data/trees/loci/RPB2.firstpass.treefile
+    output: data/trees/loci/RPB2.treeshrink.keep.txt, data/trees/loci/RPB2.treeshrink.removed.txt
+    jobid: 19
+    reason: Missing output files: data/trees/loci/RPB2.treeshrink.keep.txt; Input files updated by another job: data/trees/loci/RPB2.firstpass.treefile
+    wildcards: locus=RPB2
+    resources: tmpdir=/tmp
+
+
+[Thu Aug 14 19:29:47 2025]
+rule fetch_locus:
+    output: data/staging/ITS.gb
+    jobid: 34
+    reason: Missing output files: data/staging/ITS.gb
+    wildcards: locus=ITS
+    threads: 24
+    resources: tmpdir=/tmp
+
+
+[Thu Aug 14 19:29:47 2025]
+rule mask_locus:
+    input: data/align/RPB1.aln.fasta
+    output: data/align/RPB1.masked.fasta
+    jobid: 11
+    reason: Missing output files: data/align/RPB1.masked.fasta; Updated input files: data/align/RPB1.aln.fasta
+    wildcards: locus=RPB1
+    resources: tmpdir=/tmp
+
+[Thu Aug 14 19:29:47 2025]
+Finished job 11.
+2 of 21 steps (10%) done
+Select jobs to execute...
+[Thu Aug 14 19:29:48 2025]
+Error in rule treeshrink_locus:
+    jobid: 19
+    input: data/trees/loci/RPB2.firstpass.treefile
+    output: data/trees/loci/RPB2.treeshrink.keep.txt, data/trees/loci/RPB2.treeshrink.removed.txt
+    shell:
+        
+        mkdir -p data/trees/loci/RPB2.treeshrink
+        run_treeshrink.py -t data/trees/loci/RPB2.firstpass.treefile -o data/trees/loci/RPB2.treeshrink -q 0.02 >/dev/null 2>&1 || true
+        cp data/trees/loci/RPB2.treeshrink/TS_keep.txt data/trees/loci/RPB2.treeshrink.keep.txt
+        cp data/trees/loci/RPB2.treeshrink/TS_outliers.txt data/trees/loci/RPB2.treeshrink.removed.txt || true
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Thu Aug 14 19:29:48 2025]
+Error in rule treeshrink_locus:
+    jobid: 29
+    input: data/trees/loci/TEF1.firstpass.treefile
+    output: data/trees/loci/TEF1.treeshrink.keep.txt, data/trees/loci/TEF1.treeshrink.removed.txt
+    shell:
+        
+        mkdir -p data/trees/loci/TEF1.treeshrink
+        run_treeshrink.py -t data/trees/loci/TEF1.firstpass.treefile -o data/trees/loci/TEF1.treeshrink -q 0.02 >/dev/null 2>&1 || true
+        cp data/trees/loci/TEF1.treeshrink/TS_keep.txt data/trees/loci/TEF1.treeshrink.keep.txt
+        cp data/trees/loci/TEF1.treeshrink/TS_outliers.txt data/trees/loci/TEF1.treeshrink.removed.txt || true
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Thu Aug 14 19:31:42 2025]
+Finished job 34.
+3 of 21 steps (14%) done
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2025-08-14T191503.275275.snakemake.log

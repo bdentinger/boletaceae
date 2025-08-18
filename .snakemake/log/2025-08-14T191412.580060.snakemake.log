@@ -1,0 +1,47 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 64
+Rules claiming more threads will be scaled down.
+Job stats:
+job                           count
+--------------------------  -------
+build_backbone_constrained        1
+concat_supermatrix                1
+enrich_taxon_names                1
+fetch_locus                       1
+filter_locus_by_keep              3
+locus_tree_firstpass              2
+mask_locus                        1
+pretty_tree                       1
+realign_locus_refined             3
+remask_locus_refined              3
+site_build                        1
+treeshrink_locus                  3
+total                            21
+
+Select jobs to execute...
+
+[Thu Aug 14 19:14:13 2025]
+rule locus_tree_firstpass:
+    input: data/align/RPB2.masked.fasta
+    output: data/trees/loci/RPB2.firstpass.treefile
+    jobid: 21
+    reason: Missing output files: data/trees/loci/RPB2.firstpass.treefile; Updated input files: data/align/RPB2.masked.fasta
+    wildcards: locus=RPB2
+    threads: 64
+    resources: tmpdir=/tmp
+
+Terminating processes on user request, this might take some time.
+[Thu Aug 14 19:14:36 2025]
+Error in rule locus_tree_firstpass:
+    jobid: 21
+    input: data/align/RPB2.masked.fasta
+    output: data/trees/loci/RPB2.firstpass.treefile
+    shell:
+        
+        mkdir -p data/trees/loci
+        iqtree3 -s data/align/RPB2.masked.fasta -m MFP -T 64 -fast -pre data/trees/loci/RPB2.firstpass
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Complete log: .snakemake/log/2025-08-14T191412.580060.snakemake.log
