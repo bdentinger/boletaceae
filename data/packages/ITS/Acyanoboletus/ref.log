@@ -1,0 +1,148 @@
+IQ-TREE version 3.0.1 for Linux x86 64-bit built May  5 2025
+Developed by Bui Quang Minh, Thomas Wong, Nhan Ly-Trong, Huaiyan Ren
+Contributed by Lam-Tung Nguyen, Dominik Schrempf, Chris Bielow,
+Olga Chernomor, Michael Woodhams, Diep Thi Hoang, Heiko Schmidt
+
+Host:    lnx820.umnh.utah.edu (AVX2, FMA3, 865 GB RAM)
+Command: /home/bdentinger/iqtree-3.0.1-Linux/bin/iqtree3_intel -s data/packages/ITS/Acyanoboletus/aln.masked.fasta -m MFP -bb 1000 -nt AUTO -pre data/packages/ITS/Acyanoboletus/ref
+Seed:    806874 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Mon Aug 18 18:01:56 2025
+Kernel:  AVX+FMA - auto-detect threads (72 CPU cores detected)
+
+Reading alignment file data/packages/ITS/Acyanoboletus/aln.masked.fasta ... Fasta format detected
+Reading fasta file: done in 7.89575e-05 secs using 32.93% CPU
+Alignment most likely contains DNA/RNA sequences
+Constructing alignment: done in 0.000743099 secs using 64.19% CPU
+Alignment has 3 sequences with 667 columns, 4 distinct patterns
+0 parsimony-informative, 0 singleton sites, 667 constant sites
+                           Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 1.14925e-05 secs using 87.01% CPU
+   1  mrc2|ITS|PP582897.1          0.00%    passed    100.00%
+   2  hkas                         0.00%    passed    100.00%
+   3  hkas126560|ITS|OQ888701.1    0.00%    passed    100.00%
+****  TOTAL                        0.00%  0 sequences failed composition chi2 test (p-value<5%; df=3)
+NOTE: hkas is identical to mrc2|ITS|PP582897.1 but kept for subsequent analysis
+NOTE: hkas126560|ITS|OQ888701.1 is identical to mrc2|ITS|PP582897.1 but kept for subsequent analysis
+Checking for duplicate sequences: done in 5.5097e-05 secs using 98.01% CPU
+
+NOTE: Restoring information from model checkpoint file data/packages/ITS/Acyanoboletus/ref.model.gz
+
+CHECKPOINT: Initial tree restored
+Measuring multi-threading efficiency up to 72 CPU cores
+Increase to 10 rounds for branch lengths
+2178389 trees examined
+Threads: 1 / Time: 72.000 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -903
+WARNING: 2 threads for alignment length 4 will slow down analysis
+Threads: 2 / Time: 36.558 sec / Speedup: 1.969 / Efficiency: 98% / LogL: -903
+WARNING: 3 threads for alignment length 4 will slow down analysis
+Threads: 3 / Time: 36.590 sec / Speedup: 1.968 / Efficiency: 66% / LogL: -903
+WARNING: 4 threads for alignment length 4 will slow down analysis
+Threads: 4 / Time: 36.639 sec / Speedup: 1.965 / Efficiency: 49% / LogL: -903
+Determining AUTO threadcount: done in 181.788 secs using 91.19% CPU
+BEST NUMBER OF THREADS: 2
+
+WARNING: 2 threads for alignment length 4 will slow down analysis
+Perform fast likelihood tree search using GTR model...
+CHECKPOINT: Tree restored, LogL: -903.832
+NOTE: ModelFinder requires 0 MB RAM!
+ModelFinder will test up to 44 DNA models (sample size: 667 epsilon: 0.100) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+WARNING: 2 threads for alignment length 4 will slow down analysis
+  1  JC            924.660      3   1855.321     1855.357     1868.829
+WARNING: 2 threads for alignment length 4 will slow down analysis
+  2  JC            924.660      3   1855.321     1855.357     1868.829
+WARNING: 2 threads for alignment length 4 will slow down analysis
+  3  F81           924.660      3   1855.321     1855.357     1868.829
+WARNING: 2 threads for alignment length 4 will slow down analysis
+  4  F81+F         903.832      6   1819.664     1819.791     1846.680
+WARNING: 2 threads for alignment length 4 will slow down analysis
+  5  K2P           924.660      4   1857.321     1857.381     1875.332
+WARNING: 2 threads for alignment length 4 will slow down analysis
+  6  K2P           924.660      4   1857.321     1857.381     1875.332
+WARNING: 2 threads for alignment length 4 will slow down analysis
+  7  HKY           924.660      4   1857.321     1857.381     1875.332
+WARNING: 2 threads for alignment length 4 will slow down analysis
+  8  HKY+F         903.832      7   1821.664     1821.834     1853.183
+WARNING: 2 threads for alignment length 4 will slow down analysis
+  9  TNe           924.660      5   1859.321     1859.411     1881.835
+WARNING: 2 threads for alignment length 4 will slow down analysis
+ 10  TNe           924.660      5   1859.321     1859.411     1881.835
+WARNING: 2 threads for alignment length 4 will slow down analysis
+ 11  TN            924.660      5   1859.321     1859.411     1881.835
+WARNING: 2 threads for alignment length 4 will slow down analysis
+ 12  TN+F          903.832      8   1823.664     1823.883     1859.686
+WARNING: 2 threads for alignment length 4 will slow down analysis
+ 13  K3P           924.660      5   1859.321     1859.411     1881.835
+WARNING: 2 threads for alignment length 4 will slow down analysis
+ 14  K3P           924.660      5   1859.321     1859.411     1881.835
+WARNING: 2 threads for alignment length 4 will slow down analysis
+ 15  K3Pu          924.660      5   1859.321     1859.411     1881.835
+WARNING: 2 threads for alignment length 4 will slow down analysis
+ 16  K3Pu+F        903.832      8   1823.664     1823.883     1859.686
+WARNING: 2 threads for alignment length 4 will slow down analysis
+ 17  TPM2          924.660      5   1859.321     1859.411     1881.835
+WARNING: 2 threads for alignment length 4 will slow down analysis
+ 18  TPM2          924.660      5   1859.321     1859.411     1881.835
+WARNING: 2 threads for alignment length 4 will slow down analysis
+ 19  TPM2u         924.660      5   1859.321     1859.411     1881.835
+WARNING: 2 threads for alignment length 4 will slow down analysis
+ 20  TPM2u+F       903.832      8   1823.664     1823.883     1859.686
+WARNING: 2 threads for alignment length 4 will slow down analysis
+ 21  TPM3          924.660      5   1859.321     1859.411     1881.835
+WARNING: 2 threads for alignment length 4 will slow down analysis
+ 22  TPM3          924.660      5   1859.321     1859.411     1881.835
+WARNING: 2 threads for alignment length 4 will slow down analysis
+ 23  TPM3u         924.660      5   1859.321     1859.411     1881.835
+WARNING: 2 threads for alignment length 4 will slow down analysis
+ 24  TPM3u+F       903.832      8   1823.664     1823.883     1859.686
+WARNING: 2 threads for alignment length 4 will slow down analysis
+ 25  TIMe          924.660      6   1861.321     1861.448     1888.337
+WARNING: 2 threads for alignment length 4 will slow down analysis
+ 26  TIMe          924.660      6   1861.321     1861.448     1888.337
+WARNING: 2 threads for alignment length 4 will slow down analysis
+ 27  TIM           924.660      6   1861.321     1861.448     1888.337
+WARNING: 2 threads for alignment length 4 will slow down analysis
+ 28  TIM+F         903.832      9   1825.664     1825.938     1866.189
+WARNING: 2 threads for alignment length 4 will slow down analysis
+ 29  TIM2e         924.660      6   1861.321     1861.448     1888.337
+WARNING: 2 threads for alignment length 4 will slow down analysis
+ 30  TIM2e         924.660      6   1861.321     1861.448     1888.337
+WARNING: 2 threads for alignment length 4 will slow down analysis
+ 31  TIM2          924.660      6   1861.321     1861.448     1888.337
+WARNING: 2 threads for alignment length 4 will slow down analysis
+ 32  TIM2+F        903.832      9   1825.664     1825.938     1866.189
+WARNING: 2 threads for alignment length 4 will slow down analysis
+ 33  TIM3e         924.660      6   1861.321     1861.448     1888.337
+WARNING: 2 threads for alignment length 4 will slow down analysis
+ 34  TIM3e         924.660      6   1861.321     1861.448     1888.337
+WARNING: 2 threads for alignment length 4 will slow down analysis
+ 35  TIM3          924.660      6   1861.321     1861.448     1888.337
+WARNING: 2 threads for alignment length 4 will slow down analysis
+ 36  TIM3+F        903.832      9   1825.664     1825.938     1866.189
+WARNING: 2 threads for alignment length 4 will slow down analysis
+ 37  TVMe          924.660      7   1863.321     1863.491     1894.840
+WARNING: 2 threads for alignment length 4 will slow down analysis
+ 38  TVMe          924.660      7   1863.321     1863.491     1894.840
+WARNING: 2 threads for alignment length 4 will slow down analysis
+ 39  TVM           924.660      7   1863.321     1863.491     1894.840
+WARNING: 2 threads for alignment length 4 will slow down analysis
+ 40  TVM+F         903.832      10  1827.664     1827.999     1872.692
+WARNING: 2 threads for alignment length 4 will slow down analysis
+ 41  SYM           924.660      8   1865.321     1865.540     1901.343
+WARNING: 2 threads for alignment length 4 will slow down analysis
+ 42  SYM           924.660      8   1865.321     1865.540     1901.343
+WARNING: 2 threads for alignment length 4 will slow down analysis
+ 43  GTR           924.660      8   1865.321     1865.540     1901.343
+WARNING: 2 threads for alignment length 4 will slow down analysis
+ 44  GTR+F         903.832      11  1829.664     1830.067     1879.194
+Akaike Information Criterion:           F81+F
+Corrected Akaike Information Criterion: F81+F
+Bayesian Information Criterion:         F81+F
+Best-fit model: F81+F chosen according to BIC
+
+All model information printed to data/packages/ITS/Acyanoboletus/ref.model.gz
+CPU time for ModelFinder: 165.832 seconds (0h:2m:45s)
+Wall-clock time for ModelFinder: 181.861 seconds (0h:3m:1s)
+Generating 1000 samples for ultrafast bootstrap (seed: 806874)...
+WARNING: 2 threads for alignment length 4 will slow down analysis
+ERROR: It makes no sense to perform bootstrap with less than 4 sequences.

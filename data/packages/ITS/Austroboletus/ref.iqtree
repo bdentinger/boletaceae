@@ -1,0 +1,853 @@
+IQ-TREE 3.0.1 built May  5 2025
+
+Input file name: data/packages/ITS/Austroboletus/aln.masked.fasta
+Type of analysis: ModelFinder + tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 174536
+
+REFERENCES
+----------
+
+To cite IQ-TREE 3 please use:
+
+Thomas K.F. Wong, Nhan Ly-Trong, Huaiyan Ren, Hector Banos, Andrew J. Roger,
+Edward Susko, Chris Bielow, Nicola De Maio, Nick Goldman, Matthew W. Hahn,
+Gavin Huttley, Robert Lanfear, Bui Quang Minh (2025)
+IQ-TREE 3: Phylogenomic Inference Software using Complex Evolutionary Models.
+Submitted.
+
+Please also cite the following paper(s) for the feature(s) that you used:
+
+To cite ModelFinder please use: 
+
+Subha Kalyaanamoorthy, Bui Quang Minh, Thomas KF Wong, Arndt von Haeseler,
+and Lars S Jermiin (2017) ModelFinder: Fast model selection for
+accurate phylogenetic estimates. Nature Methods, 14:587–589.
+https://doi.org/10.1038/nmeth.4285
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2018) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol. Biol. Evol., 35:518–522.
+https://doi.org/10.1093/molbev/msx281
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 169 sequences with 487 nucleotide sites
+Number of constant sites: 138 (= 28.3368% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 138 (= 28.3368% of all sites)
+Number of parsimony informative sites: 315
+Number of distinct site patterns: 386
+
+ModelFinder
+-----------
+
+Best-fit model according to BIC: TIM2+F+I+G4
+
+List of models sorted by BIC scores: 
+
+Model                  LogL         AIC      w-AIC        AICc     w-AICc         BIC      w-BIC
+TIM2+F+I+G4       -9279.407   19172.814 +    0.826   20229.306 +    0.676   20458.612 +     0.99
+TPM2u+F+I+G4      -9288.121   19188.243 - 0.000369   20232.043 +    0.172   20469.852 -  0.00359
+GTR+F+I+G4        -9278.973   19175.946 +    0.173   20258.319 - 3.39e-07   20470.119 -  0.00314
+TN+F+I+G4         -9288.500   19188.999 - 0.000253   20232.799 +    0.118   20470.608 -  0.00246
+TIM+F+I+G4        -9287.589   19189.178 - 0.000231   20245.669 - 0.000189   20474.975 - 0.000277
+TIM3+F+I+G4       -9288.147   19190.293 - 0.000132   20246.785 - 0.000108   20476.090 - 0.000159
+TVM+F+I+G4        -9287.517   19191.033 - 9.14e-05   20260.382 - 1.21e-07   20481.019 - 1.35e-05
+HKY+F+I+G4        -9297.032   19204.064 - 1.35e-07   20235.335 -   0.0332   20481.485 - 1.07e-05
+K3Pu+F+I+G4       -9296.142   19204.283 - 1.21e-07   20248.083 - 5.66e-05   20485.892 - 1.18e-06
+TPM3u+F+I+G4      -9296.483   19204.966 - 8.62e-08   20248.766 - 4.02e-05   20486.575 - 8.39e-07
+GTR+I+G4          -9299.384   19210.768 - 4.74e-09   20254.568 - 2.21e-06   20492.377 - 4.61e-08
+SYM+I+G4          -9299.390   19210.780 - 4.71e-09   20254.580 -  2.2e-06   20492.389 - 4.58e-08
+SYM+I+G4          -9299.390   19210.780 - 4.71e-09   20254.580 -  2.2e-06   20492.389 - 4.58e-08
+TIM2+I+G4         -9311.624   19231.247 - 1.69e-13   20250.148 - 2.02e-05   20504.480 - 1.09e-10
+TIM2e+I+G4        -9311.626   19231.251 - 1.69e-13   20250.153 - 2.01e-05   20504.484 - 1.08e-10
+TIM2e+I+G4        -9311.626   19231.251 - 1.69e-13   20250.153 - 2.01e-05   20504.484 - 1.08e-10
+TVM+I+G4          -9312.474   19234.948 - 2.66e-14   20266.219 - 6.53e-09   20512.368 -  2.1e-12
+TVMe+I+G4         -9312.475   19234.951 - 2.66e-14   20266.222 - 6.52e-09   20512.371 -  2.1e-12
+TVMe+I+G4         -9312.475   19234.951 - 2.66e-14   20266.222 - 6.52e-09   20512.371 -  2.1e-12
+TPM2u+I+G4        -9324.881   19255.763 - 8.04e-19   20262.451 - 4.29e-08   20524.807 - 4.18e-15
+TPM2+I+G4         -9324.882   19255.765 - 8.03e-19   20262.453 - 4.29e-08   20524.809 - 4.18e-15
+TPM2+I+G4         -9324.882   19255.765 - 8.03e-19   20262.453 - 4.29e-08   20524.809 - 4.18e-15
+TIM3+I+G4         -9324.513   19257.025 - 4.28e-19   20275.926 - 5.09e-11   20530.258 - 2.74e-16
+TIM3e+I+G4        -9324.528   19257.055 - 4.21e-19   20275.956 - 5.01e-11   20530.287 -  2.7e-16
+TIM3e+I+G4        -9324.528   19257.055 - 4.21e-19   20275.956 - 5.01e-11   20530.287 -  2.7e-16
+TIM+I+G4          -9332.578   19273.156 - 1.34e-22   20292.058 -  1.6e-14   20546.389 - 8.61e-20
+TIMe+I+G4         -9332.583   19273.167 - 1.34e-22   20292.068 - 1.59e-14   20546.399 - 8.57e-20
+TIMe+I+G4         -9332.583   19273.167 - 1.34e-22   20292.068 - 1.59e-14   20546.399 - 8.57e-20
+TN+I+G4           -9336.193   19278.386 - 9.83e-24   20285.075 - 5.25e-13   20547.430 - 5.12e-20
+TNe+I+G4          -9336.197   19278.394 - 9.79e-24   20285.082 - 5.23e-13   20547.438 -  5.1e-20
+TNe+I+G4          -9336.197   19278.394 - 9.79e-24   20285.082 - 5.23e-13   20547.438 -  5.1e-20
+TPM3u+I+G4        -9338.503   19283.006 - 9.75e-25   20289.695 - 5.21e-14   20552.051 - 5.08e-21
+TPM3+I+G4         -9338.505   19283.011 - 9.73e-25   20289.699 -  5.2e-14   20552.055 - 5.07e-21
+TPM3+I+G4         -9338.505   19283.011 - 9.73e-25   20289.699 -  5.2e-14   20552.055 - 5.07e-21
+K3Pu+I+G4         -9346.829   19299.658 - 2.36e-28   20306.346 - 1.26e-17   20568.702 - 1.23e-24
+K3P+I+G4          -9346.832   19299.664 - 2.36e-28   20306.352 - 1.26e-17   20568.708 - 1.23e-24
+K3P+I+G4          -9346.832   19299.664 - 2.36e-28   20306.352 - 1.26e-17   20568.708 - 1.23e-24
+HKY+I+G4          -9350.429   19304.857 - 1.76e-29   20299.488 - 3.89e-16   20569.713 - 7.42e-25
+K2P+I+G4          -9350.437   19304.874 - 1.74e-29   20299.504 - 3.86e-16   20569.729 - 7.36e-25
+K2P+I+G4          -9350.437   19304.874 - 1.74e-29   20299.504 - 3.86e-16   20569.729 - 7.36e-25
+F81+F+I+G4        -9388.233   19384.465 - 9.07e-47   20403.367 - 1.08e-38   20657.698 - 5.82e-44
+F81+I+G4          -9433.756   19469.512 - 3.09e-65   20452.237 - 2.64e-49   20730.180 - 1.06e-59
+JC+I+G4           -9433.757   19469.515 - 3.09e-65   20452.239 - 2.64e-49   20730.182 - 1.06e-59
+JC+I+G4           -9433.757   19469.515 - 3.09e-65   20452.239 - 2.64e-49   20730.182 - 1.06e-59
+JC+R3             -9435.054   19476.109 - 1.14e-66   20482.797 -  6.1e-56   20745.153 - 5.94e-63
+JC+I+R3           -9432.445   19472.891 - 5.71e-66   20491.792 - 6.79e-58   20746.123 - 3.66e-63
+JC+G4             -9445.902   19491.803 - 4.46e-70   20462.771 - 1.36e-51   20748.282 - 1.24e-63
+JC+R4             -9430.931   19471.862 - 9.54e-66   20503.133 - 2.34e-60   20749.283 - 7.54e-64
+JC+I+R4           -9432.110   19476.220 - 1.08e-66   20520.020 - 5.04e-64   20757.829 - 1.05e-65
+JC+I+R2           -9468.746   19541.493 - 7.24e-81   20536.123 - 1.61e-67   20806.348 - 3.06e-76
+JC+R2             -9522.631   19647.262 - 7.8e-104   20629.986 - 6.66e-88   20907.930 - 2.68e-98
+JC+I              -9745.906   20091.812 - 2.29e-200   21062.780 - 6.97e-182   21348.292 - 6.37e-194
+JC               -10219.571   21037.141 -        0   21996.500 -        0   22289.432 -        0
+
+AIC, w-AIC   : Akaike information criterion scores and weights.
+AICc, w-AICc : Corrected AIC scores and weights.
+BIC, w-BIC   : Bayesian information criterion scores and weights.
+
+Plus signs denote the 95% confidence sets.
+Minus signs denote significant exclusion.
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: TIM2+F+I+G4
+
+Rate parameter R:
+
+  A-C: 1.4818
+  A-G: 2.1309
+  A-T: 1.4818
+  C-G: 1.0000
+  C-T: 3.1163
+  G-T: 1.0000
+
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.2716
+  pi(C) = 0.2117
+  pi(G) = 0.2123
+  pi(T) = 0.3043
+
+Rate matrix Q:
+
+  A   -0.9494    0.2447    0.3529    0.3518
+  C     0.314    -1.219    0.1656    0.7398
+  G    0.4515    0.1652   -0.8541    0.2374
+  T     0.314    0.5147    0.1656   -0.9943
+
+Model of rate heterogeneity: Invar+Gamma with 4 categories
+Proportion of invariable sites: 0.1896
+Gamma shape alpha: 0.8653
+
+ Category  Relative_rate  Proportion
+  0         0              0.1896
+  1         0.1349         0.2026
+  2         0.5333         0.2026
+  3         1.201          0.2026
+  4         3.067          0.2026
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -9249.0699 (s.e. 337.3603)
+Unconstrained log-likelihood (without tree): -2773.9230
+Number of free parameters (#branches + #model parameters): 307
+Akaike information criterion (AIC) score: 19112.1398
+Corrected Akaike information criterion (AICc) score: 20168.6315
+Bayesian information criterion (BIC) score: 20397.9369
+
+Total tree length (sum of branch lengths): 6.5489
+Sum of internal branch lengths: 3.9451 (60.2400% of tree length)
+
+WARNING: 58 near-zero internal branches (<0.0021) should be treated with caution
+         Such branches are denoted by '**' in the figure below
+
+NOTE: Tree is UNROOTED although outgroup taxon 'Austroboletus_001' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
++**Austroboletus_001
+|
+|                  +**Austroboletus_002
+|               +**| (90)
+|               |  +**Austroboletus_014
+|           +---| (100)
+|           |   |  +**Austroboletus_015
+|           |   +**| (73)
+|           |      +**Austroboletus_020
+|     +-----| (100)
+|     |     |                                              +**Austroboletus_003
+|     |     |                                           +**| (21)
+|     |     |                                           |  |        +**Austroboletus_025
+|     |     |                                           |  |     +**| (15)
+|     |     |                                           |  |     |  |        +**Austroboletus_026
+|     |     |                                           |  |     |  |     +**| (75)
+|     |     |                                           |  |     |  |     |  +**Austroboletus_102
+|     |     |                                           |  |     |  |  +**| (76)
+|     |     |                                           |  |     |  |  |  |     +--Austroboletus_033
+|     |     |                                           |  |     |  |  |  |  +**| (35)
+|     |     |                                           |  |     |  |  |  |  |  +--Austroboletus_045
+|     |     |                                           |  |     |  |  |  +**| (59)
+|     |     |                                           |  |     |  |  |     |  +**Austroboletus_134
+|     |     |                                           |  |     |  |  |     +**| (41)
+|     |     |                                           |  |     |  |  |        +--Austroboletus_136
+|     |     |                                           |  |     |  +**| (9)
+|     |     |                                           |  |     |     +**Austroboletus_133
+|     |     |                                           |  |  +**| (6)
+|     |     |                                           |  |  |  +--Austroboletus_167
+|     |     |                                           |  +**| (31)
+|     |     |                                           |     +**Austroboletus_032
+|     |     |                                      +----| (100)
+|     |     |                                      |    +**Austroboletus_027
+|     |     |                                   +--| (49)
+|     |     |                                   |  |            +**Austroboletus_042
+|     |     |                                   |  |         +**| (34)
+|     |     |                                   |  |         |  +**Austroboletus_112
+|     |     |                                   |  |      +--| (100)
+|     |     |                                   |  |      |  +**Austroboletus_060
+|     |     |                                   |  |  +---| (100)
+|     |     |                                   |  |  |   |  +--Austroboletus_091
+|     |     |                                   |  |  |   +--| (100)
+|     |     |                                   |  |  |      +--Austroboletus_119
+|     |     |                                   |  +--| (65)
+|     |     |                                   |     |            +**Austroboletus_057
+|     |     |                                   |     |         +**| (78)
+|     |     |                                   |     |         |  +**Austroboletus_065
+|     |     |                                   |     |     +---| (100)
+|     |     |                                   |     |     |   +**Austroboletus_097
+|     |     |                                   |     |  +--| (79)
+|     |     |                                   |     |  |  |        +**Austroboletus_059
+|     |     |                                   |     |  |  |     +**| (64)
+|     |     |                                   |     |  |  |     |  |  +**Austroboletus_131
+|     |     |                                   |     |  |  |     |  +**| (77)
+|     |     |                                   |     |  |  |     |     +**Austroboletus_158
+|     |     |                                   |     |  |  |  +**| (66)
+|     |     |                                   |     |  |  |  |  +--Austroboletus_088
+|     |     |                                   |     |  |  +--| (100)
+|     |     |                                   |     |  |     +--Austroboletus_124
+|     |     |                                   |     +--| (66)
+|     |     |                                   |        |        +**Austroboletus_075
+|     |     |                                   |        |     +**| (50)
+|     |     |                                   |        |     |  +**Austroboletus_126
+|     |     |                                   |        +-----| (100)
+|     |     |                                   |              +**Austroboletus_144
+|     |     |                                +--| (50)
+|     |     |                                |  |                   +--Austroboletus_040
+|     |     |                                |  |                +--| (99)
+|     |     |                                |  |                |  +**Austroboletus_166
+|     |     |                                |  |            +---| (100)
+|     |     |                                |  |            |   |     +**Austroboletus_041
+|     |     |                                |  |            |   |  +**| (86)
+|     |     |                                |  |            |   |  |  +**Austroboletus_056
+|     |     |                                |  |            |   +--| (100)
+|     |     |                                |  |            |      +**Austroboletus_169
+|     |     |                                |  |        +---| (96)
+|     |     |                                |  |        |   |          +--Austroboletus_156
+|     |     |                                |  |        |   +----------| (100)
+|     |     |                                |  |        |              +**Austroboletus_157
+|     |     |                                |  |     +--| (53)
+|     |     |                                |  |     |  |             +--Austroboletus_099
+|     |     |                                |  |     |  |          +--| (94)
+|     |     |                                |  |     |  |          |  +--Austroboletus_100
+|     |     |                                |  |     |  |       +--| (99)
+|     |     |                                |  |     |  |       |  +--Austroboletus_115
+|     |     |                                |  |     |  |    +**| (66)
+|     |     |                                |  |     |  |    |  +--Austroboletus_116
+|     |     |                                |  |     |  +----| (100)
+|     |     |                                |  |     |       +--Austroboletus_101
+|     |     |                                |  |  +--| (56)
+|     |     |                                |  |  |  |           +--Austroboletus_079
+|     |     |                                |  |  |  |        +**| (59)
+|     |     |                                |  |  |  |        |  +--Austroboletus_117
+|     |     |                                |  |  |  |     +--| (97)
+|     |     |                                |  |  |  |     |  +**Austroboletus_098
+|     |     |                                |  |  |  |  +--| (100)
+|     |     |                                |  |  |  |  |  +--Austroboletus_114
+|     |     |                                |  |  |  +--| (100)
+|     |     |                                |  |  |     +--Austroboletus_145
+|     |     |                                |  +--| (39)
+|     |     |                                |     |    +--Austroboletus_077
+|     |     |                                |     +----| (100)
+|     |     |                                |          +--Austroboletus_118
+|     |     |                             +--| (63)
+|     |     |                             |  |                                +**Austroboletus_028
+|     |     |                             |  |                             +**| (68)
+|     |     |                             |  |                             |  +**Austroboletus_029
+|     |     |                             |  |                          +**| (57)
+|     |     |                             |  |                          |  +**Austroboletus_044
+|     |     |                             |  |                       +--| (91)
+|     |     |                             |  |                       |  |  +**Austroboletus_137
+|     |     |                             |  |                       |  +--| (99)
+|     |     |                             |  |                       |     +**Austroboletus_138
+|     |     |                             |  |                    +**| (29)
+|     |     |                             |  |                    |  |        +**Austroboletus_058
+|     |     |                             |  |                    |  |     +**| (68)
+|     |     |                             |  |                    |  |     |  +**Austroboletus_121
+|     |     |                             |  |                    |  |  +**| (13)
+|     |     |                             |  |                    |  |  |  |        +**Austroboletus_080
+|     |     |                             |  |                    |  |  |  |     +--| (62)
+|     |     |                             |  |                    |  |  |  |     |  +--Austroboletus_120
+|     |     |                             |  |                    |  |  |  |  +--| (99)
+|     |     |                             |  |                    |  |  |  |  |  +--Austroboletus_123
+|     |     |                             |  |                    |  |  |  +**| (23)
+|     |     |                             |  |                    |  |  |     +--Austroboletus_128
+|     |     |                             |  |                    |  +**| (17)
+|     |     |                             |  |                    |     +**Austroboletus_127
+|     |     |                             |  |                 +--| (99)
+|     |     |                             |  |                 |  +--Austroboletus_089
+|     |     |                             |  |              +--| (99)
+|     |     |                             |  |              |  +**Austroboletus_061
+|     |     |                             |  |           +--| (100)
+|     |     |                             |  |           |  +--Austroboletus_122
+|     |     |                             |  |        +--| (35)
+|     |     |                             |  |        |  |              +--Austroboletus_078
+|     |     |                             |  |        |  +--------------| (100)
+|     |     |                             |  |        |                 +**Austroboletus_081
+|     |     |                             |  |     +--| (38)
+|     |     |                             |  |     |  |                +--Austroboletus_036
+|     |     |                             |  |     |  |  +-------------| (100)
+|     |     |                             |  |     |  |  |             +---Austroboletus_037
+|     |     |                             |  |     |  +--| (76)
+|     |     |                             |  |     |     +-----Austroboletus_055
+|     |     |                             |  |  +--| (35)
+|     |     |                             |  |  |  |     +**Austroboletus_063
+|     |     |                             |  |  |  |  +--| (74)
+|     |     |                             |  |  |  |  |  |        +--Austroboletus_072
+|     |     |                             |  |  |  |  |  |     +--| (100)
+|     |     |                             |  |  |  |  |  |     |  +--Austroboletus_073
+|     |     |                             |  |  |  |  |  |  +--| (100)
+|     |     |                             |  |  |  |  |  |  |  |  +--Austroboletus_093
+|     |     |                             |  |  |  |  |  |  |  +--| (98)
+|     |     |                             |  |  |  |  |  |  |     +--Austroboletus_096
+|     |     |                             |  |  |  |  |  +--| (92)
+|     |     |                             |  |  |  |  |     |     +--Austroboletus_092
+|     |     |                             |  |  |  |  |     |  +--| (99)
+|     |     |                             |  |  |  |  |     |  |  +--Austroboletus_094
+|     |     |                             |  |  |  |  |     +--| (99)
+|     |     |                             |  |  |  |  |        +--Austroboletus_095
+|     |     |                             |  |  |  +--| (98)
+|     |     |                             |  |  |     +--Austroboletus_129
+|     |     |                             |  +--| (12)
+|     |     |                             |     +----Austroboletus_143
+|     |     |                          +--| (99)
+|     |     |                          |  |      +--Austroboletus_009
+|     |     |                          |  |  +---| (100)
+|     |     |                          |  |  |   +**Austroboletus_160
+|     |     |                          |  +--| (94)
+|     |     |                          |     |           +**Austroboletus_150
+|     |     |                          |     |        +**| (75)
+|     |     |                          |     |        |  +**Austroboletus_161
+|     |     |                          |     +--------| (100)
+|     |     |                          |              +**Austroboletus_162
+|     |     |                       +--| (43)
+|     |     |                       |  |       +--Austroboletus_154
+|     |     |                       |  +-------| (100)
+|     |     |                       |          +**Austroboletus_155
+|     |     |                    +--| (40)
+|     |     |                    |  |                 +**Austroboletus_005
+|     |     |                    |  |              +**| (2)
+|     |     |                    |  |              |  +--Austroboletus_019
+|     |     |                    |  |           +**| (6)
+|     |     |                    |  |           |  +**Austroboletus_007
+|     |     |                    |  |        +**| (32)
+|     |     |                    |  |        |  |                    +--Austroboletus_006
+|     |     |                    |  |        |  |                 +**| (35)
+|     |     |                    |  |        |  |                 |  |        +--Austroboletus_022
+|     |     |                    |  |        |  |                 |  |     +--| (98)
+|     |     |                    |  |        |  |                 |  |     |  +--Austroboletus_054
+|     |     |                    |  |        |  |                 |  |  +**| (41)
+|     |     |                    |  |        |  |                 |  |  |  +**Austroboletus_034
+|     |     |                    |  |        |  |                 |  +**| (58)
+|     |     |                    |  |        |  |                 |     +**Austroboletus_035
+|     |     |                    |  |        |  |              +**| (14)
+|     |     |                    |  |        |  |              |  |  +**Austroboletus_018
+|     |     |                    |  |        |  |              |  +**| (19)
+|     |     |                    |  |        |  |              |     +**Austroboletus_021
+|     |     |                    |  |        |  |           +**| (15)
+|     |     |                    |  |        |  |           |  +**Austroboletus_046
+|     |     |                    |  |        |  |        +**| (46)
+|     |     |                    |  |        |  |        |  +**Austroboletus_039
+|     |     |                    |  |        |  |     +**| (39)
+|     |     |                    |  |        |  |     |  |  +**Austroboletus_008
+|     |     |                    |  |        |  |     |  +**| (22)
+|     |     |                    |  |        |  |     |     +**Austroboletus_140
+|     |     |                    |  |        |  |  +**| (80)
+|     |     |                    |  |        |  |  |  +--Austroboletus_043
+|     |     |                    |  |        |  +--| (80)
+|     |     |                    |  |        |     +**Austroboletus_142
+|     |     |                    |  |   +----| (100)
+|     |     |                    |  |   |    +**Austroboletus_146
+|     |     |                    |  +---| (99)
+|     |     |                    |      |  +------------------------Austroboletus_010
+|     |     |                    |      +--| (98)
+|     |     |                    |         |     +--Austroboletus_149
+|     |     |                    |         +-----| (100)
+|     |     |                    |               +--Austroboletus_152
+|     |     |                 +--| (48)
+|     |     |                 |  |                +**Austroboletus_017
+|     |     |                 |  |             +**| (78)
+|     |     |                 |  |             |  +--Austroboletus_148
+|     |     |                 |  |        +----| (100)
+|     |     |                 |  |        |    +--Austroboletus_147
+|     |     |                 |  +--------| (100)
+|     |     |                 |           |  +--Austroboletus_151
+|     |     |                 |           +--| (100)
+|     |     |                 |              +**Austroboletus_159
+|     |     |          +------| (99)
+|     |     |          |      |                   +**Austroboletus_011
+|     |     |          |      |     +-------------| (100)
+|     |     |          |      |     |             +**Austroboletus_012
+|     |     |          |      +-----| (96)
+|     |     |          |            |                           +--Austroboletus_076
+|     |     |          |            |                        +**| (33)
+|     |     |          |            |                        |  |     +**Austroboletus_082
+|     |     |          |            |                        |  |  +**| (22)
+|     |     |          |            |                        |  |  |  |              +--Austroboletus_083
+|     |     |          |            |                        |  |  |  |           +--| (99)
+|     |     |          |            |                        |  |  |  |           |  +--Austroboletus_084
+|     |     |          |            |                        |  |  |  |        +--| (100)
+|     |     |          |            |                        |  |  |  |        |  +**Austroboletus_087
+|     |     |          |            |                        |  |  |  |     +**| (70)
+|     |     |          |            |                        |  |  |  |     |  |     +**Austroboletus_105
+|     |     |          |            |                        |  |  |  |     |  |  +**| (91)
+|     |     |          |            |                        |  |  |  |     |  |  |  +**Austroboletus_110
+|     |     |          |            |                        |  |  |  |     |  +--| (87)
+|     |     |          |            |                        |  |  |  |     |     +--Austroboletus_107
+|     |     |          |            |                        |  |  |  |  +**| (87)
+|     |     |          |            |                        |  |  |  |  |  +**Austroboletus_106
+|     |     |          |            |                        |  |  |  +**| (40)
+|     |     |          |            |                        |  |  |     +**Austroboletus_086
+|     |     |          |            |                        |  +**| (36)
+|     |     |          |            |                        |     +**Austroboletus_085
+|     |     |          |            +------------------------| (100)
+|     |     |          |                                     +--Austroboletus_109
+|     |     |  +-------| (98)
+|     |     |  |       |     +----------------------Austroboletus_013
+|     |     |  |       +-----| (93)
+|     |     |  |             |             +**Austroboletus_064
+|     |     |  |             |          +**| (88)
+|     |     |  |             |          |  +**Austroboletus_164
+|     |     |  |             +----------| (100)
+|     |     |  |                        |  +**Austroboletus_066
+|     |     |  |                        +--| (98)
+|     |     |  |                           |     +**Austroboletus_067
+|     |     |  |                           |  +**| (22)
+|     |     |  |                           |  |  |  +**Austroboletus_068
+|     |     |  |                           |  |  +**| (28)
+|     |     |  |                           |  |     |  +**Austroboletus_069
+|     |     |  |                           |  |     +**| (25)
+|     |     |  |                           |  |        +**Austroboletus_071
+|     |     |  |                           +--| (92)
+|     |     |  |                              +**Austroboletus_070
+|     |     +--| (96)
+|     |        |                    +**Austroboletus_016
+|     |        |                 +**| (96)
+|     |        |                 |  +**Austroboletus_023
+|     |        |              +--| (99)
+|     |        |              |  +**Austroboletus_168
+|     |        |           +--| (98)
+|     |        |           |  +--Austroboletus_024
+|     |        |     +-----| (100)
+|     |        |     |     +--Austroboletus_153
+|     |        |  +--| (99)
+|     |        |  |  +-----------Austroboletus_141
+|     |        +--| (95)
+|     |           +---Austroboletus_132
+|  +--| (97)
+|  |  |     +**Austroboletus_048
+|  |  |  +**| (81)
+|  |  |  |  +**Austroboletus_050
+|  |  +--| (90)
+|  |     |  +**Austroboletus_049
+|  |     +**| (40)
+|  |        +**Austroboletus_051
++**| (94)
+|  +**Austroboletus_052
+|
+|  +**Austroboletus_004
++--| (100)
+   +**Austroboletus_053
+
+Tree in newick format:
+
+(Austroboletus_001:0.0000010023,(((((Austroboletus_002:0.0000010023,Austroboletus_014:0.0000010023)90:0.0000027978,(Austroboletus_015:0.0000010023,Austroboletus_020:0.0000010023)73:0.0000010023)100:0.0621849477,((((((((((((Austroboletus_003:0.0000020095,(((Austroboletus_025:0.0000010023,(((Austroboletus_026:0.0000010023,Austroboletus_102:0.0000010023)75:0.0000010023,((Austroboletus_033:0.0022133636,Austroboletus_045:0.0047403123)35:0.0000027475,(Austroboletus_134:0.0000010023,Austroboletus_136:0.0022150033)41:0.0000020919)59:0.0000010023)76:0.0000010023,Austroboletus_133:0.0000010023)9:0.0000010023)15:0.0000010023,Austroboletus_167:0.0022365676)6:0.0000010023,Austroboletus_032:0.0000010023)31:0.0000010023)21:0.0000020619,Austroboletus_027:0.0000010023)100:0.0854548229,((((Austroboletus_042:0.0000010023,Austroboletus_112:0.0000010023)34:0.0000010023,Austroboletus_060:0.0000010023)100:0.0438808213,(Austroboletus_091:0.0040391384,Austroboletus_119:0.0140242195)100:0.0340826854)100:0.0776145242,((((Austroboletus_057:0.0000010023,Austroboletus_065:0.0000010023)78:0.0000022788,Austroboletus_097:0.0000010023)100:0.0733267508,(((Austroboletus_059:0.0000010023,(Austroboletus_131:0.0000010023,Austroboletus_158:0.0000010023)77:0.0000010023)64:0.0000010023,Austroboletus_088:0.0075530908)66:0.0000026892,Austroboletus_124:0.0222324049)100:0.0480576781)79:0.0228889029,((Austroboletus_075:0.0000010023,Austroboletus_126:0.0000010023)50:0.0000010023,Austroboletus_144:0.0000010023)100:0.0963586756)66:0.0063553553)65:0.0144591473)49:0.0165715415,((((((Austroboletus_040:0.0044247922,Austroboletus_166:0.0000010023)99:0.0174371109,((Austroboletus_041:0.0000010023,Austroboletus_056:0.0000010023)86:0.0000029649,Austroboletus_169:0.0000010023)100:0.0325943305)100:0.0710400649,(Austroboletus_156:0.0072909303,Austroboletus_157:0.0000020096)100:0.1791047591)96:0.0641995159,((((Austroboletus_099:0.0357762258,Austroboletus_100:0.0037275133)94:0.0030695141,Austroboletus_115:0.0024221809)99:0.0123305052,Austroboletus_116:0.0022155795)66:0.0000010023,Austroboletus_101:0.0044298220)100:0.0868949023)53:0.0136700783,((((Austroboletus_079:0.0026731068,Austroboletus_117:0.0095406339)59:0.0000021335,Austroboletus_098:0.0000010023)97:0.0031569907,Austroboletus_114:0.0072638158)100:0.0218215094,Austroboletus_145:0.0130493743)100:0.0510859135)56:0.0165389151,(Austroboletus_077:0.0304029185,Austroboletus_118:0.0106023503)100:0.0849864537)39:0.0048956028)50:0.0176612000,(((((((((((Austroboletus_028:0.0000010023,Austroboletus_029:0.0000010023)68:0.0000010023,Austroboletus_044:0.0000024830)57:0.0000026050,(Austroboletus_137:0.0000020585,Austroboletus_138:0.0000022528)99:0.0021809980)91:0.0021809901,(((Austroboletus_058:0.0000010023,Austroboletus_121:0.0000010023)68:0.0000010023,(((Austroboletus_080:0.0000010023,Austroboletus_120:0.0336291983)62:0.0031409257,Austroboletus_123:0.0125483891)99:0.0094937557,Austroboletus_128:0.0022135416)23:0.0000010023)13:0.0000020766,Austroboletus_127:0.0000010023)17:0.0000020704)29:0.0000020752,Austroboletus_089:0.0088446613)99:0.0065686680,Austroboletus_061:0.0000023889)99:0.0043139566,Austroboletus_122:0.0023664562)100:0.0553024736,(Austroboletus_078:0.0124619433,Austroboletus_081:0.0000030000)100:0.2371441662)35:0.0077946242,((Austroboletus_036:0.0408379643,Austroboletus_037:0.0710646575)100:0.2197154936,Austroboletus_055:0.1008039904)76:0.0394110648)38:0.0119372686,((Austroboletus_063:0.0000020954,(((Austroboletus_072:0.0111664959,Austroboletus_073:0.0189264478)100:0.0096446348,(Austroboletus_093:0.0062772276,Austroboletus_096:0.0068447322)98:0.0064783600)100:0.0025172614,((Austroboletus_092:0.0043768815,Austroboletus_094:0.0044112380)99:0.0021589410,Austroboletus_095:0.0043710762)99:0.0021535539)92:0.0022946862)74:0.0101431340,Austroboletus_129:0.0060404336)98:0.0264498976)35:0.0092025897,Austroboletus_143:0.0895073246)12:0.0057280683)63:0.0287655429,((Austroboletus_009:0.0026480948,Austroboletus_160:0.0000026540)100:0.0652757495,((Austroboletus_150:0.0000010023,Austroboletus_161:0.0000010023)75:0.0000021681,Austroboletus_162:0.0000010023)100:0.1535369132)94:0.0329047254)99:0.0522791986,(Austroboletus_154:0.0104656572,Austroboletus_155:0.0000020096)100:0.1309561862)43:0.0267365746,(((((Austroboletus_005:0.0000010023,Austroboletus_019:0.0023361153)2:0.0000010023,Austroboletus_007:0.0000010023)6:0.0000021512,(((((((Austroboletus_006:0.0023373632,(((Austroboletus_022:0.0023451827,Austroboletus_054:0.0025477398)98:0.0023364487,Austroboletus_034:0.0000010023)41:0.0000020526,Austroboletus_035:0.0000010023)58:0.0000018566)35:0.0000010023,(Austroboletus_018:0.0000010023,Austroboletus_021:0.0000010023)19:0.0000010023)14:0.0000010023,Austroboletus_046:0.0000010023)15:0.0000010023,Austroboletus_039:0.0000010023)46:0.0000010023,(Austroboletus_008:0.0000010023,Austroboletus_140:0.0000010023)22:0.0000010023)39:0.0000021897,Austroboletus_043:0.0339979704)80:0.0000026524,Austroboletus_142:0.0000010023)80:0.0023249170)32:0.0000023312,Austroboletus_146:0.0000010023)100:0.0838495976,(Austroboletus_010:0.3889983093,(Austroboletus_149:0.0470055604,Austroboletus_152:0.0474177431)100:0.1073900822)98:0.0401952622)99:0.0727661330)40:0.0118603793,(((Austroboletus_017:0.0000010023,Austroboletus_148:0.0021259629)78:0.0000648545,Austroboletus_147:0.0070628252)100:0.0863321963,(Austroboletus_151:0.0029307971,Austroboletus_159:0.0015782173)100:0.0524490618)100:0.1481707530)48:0.0293318310,((Austroboletus_011:0.0000010023,Austroboletus_012:0.0000022903)100:0.2292541384,((Austroboletus_076:0.0084854053,((Austroboletus_082:0.0000010023,(((((Austroboletus_083:0.0023344857,Austroboletus_084:0.0229489473)99:0.0179614045,Austroboletus_087:0.0000010023)100:0.0098943406,((Austroboletus_105:0.0000025752,Austroboletus_110:0.0000010023)91:0.0000022774,Austroboletus_107:0.0049206726)87:0.0024520004)70:0.0000020768,Austroboletus_106:0.0000010023)87:0.0000014019,Austroboletus_086:0.0000010023)40:0.0000023502)22:0.0000029029,Austroboletus_085:0.0000010023)36:0.0000024256)33:0.0012695122,Austroboletus_109:0.0036495841)100:0.3949200472)96:0.1019974596)99:0.1190672492,(Austroboletus_013:0.3710707155,((Austroboletus_064:0.0000010023,Austroboletus_164:0.0000010023)88:0.0000021780,(Austroboletus_066:0.0000010023,((Austroboletus_067:0.0000010023,(Austroboletus_068:0.0000010023,(Austroboletus_069:0.0000021414,Austroboletus_071:0.0000010023)25:0.0000010023)28:0.0000012623)22:0.0000024816,Austroboletus_070:0.0000010023)92:0.0076400080)98:0.0037941850)100:0.1740537165)93:0.0988070805)98:0.1291044504,((((((Austroboletus_016:0.0000010023,Austroboletus_023:0.0000010023)96:0.0000022953,Austroboletus_168:0.0000010023)99:0.0026366034,Austroboletus_024:0.0027444018)98:0.0024997432,Austroboletus_153:0.0288105953)100:0.0958425188,Austroboletus_141:0.1875176005)99:0.0420135904,Austroboletus_132:0.0731394988)95:0.0146981105)96:0.0181763933)100:0.1085864367,((Austroboletus_048:0.0000010023,Austroboletus_050:0.0000010023)81:0.0000020580,(Austroboletus_049:0.0000010023,Austroboletus_051:0.0000010023)40:0.0000027897)90:0.0084861433)97:0.0084733776,Austroboletus_052:0.0000027480)94:0.0002583671,(Austroboletus_004:0.0000010023,Austroboletus_053:0.0000010023)100:0.0024327068);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000 bootstrap trees
+Log-likelihood of consensus tree: -9249.303974
+Robinson-Foulds distance between ML tree and consensus tree: 34
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++--Austroboletus_001
+|
+|                  +--Austroboletus_002
+|               +--| (90)
+|               |  +--Austroboletus_014
+|           +---| (100)
+|           |   |  +--Austroboletus_015
+|           |   +--| (73)
+|           |      +--Austroboletus_020
+|     +-----| (100)
+|     |     |                                                    +**Austroboletus_003
+|     |     |                                                 +**|
+|     |     |                                                 |  +**Austroboletus_135
+|     |     |                                              +--|
+|     |     |                                              |  +**Austroboletus_030
+|     |     |                                         +----| (100)
+|     |     |                                         |    |           +--Austroboletus_025
+|     |     |                                         |    |        +--| (18)
+|     |     |                                         |    |        |  |        +--Austroboletus_026
+|     |     |                                         |    |        |  |     +--| (75)
+|     |     |                                         |    |        |  |     |  +--Austroboletus_102
+|     |     |                                         |    |        |  |  +--| (76)
+|     |     |                                         |    |        |  |  |  |     +--Austroboletus_033
+|     |     |                                         |    |        |  |  |  |  +--| (35)
+|     |     |                                         |    |        |  |  |  |  |  +--Austroboletus_045
+|     |     |                                         |    |        |  |  |  +--| (59)
+|     |     |                                         |    |        |  |  |     |  +--Austroboletus_134
+|     |     |                                         |    |        |  |  |     +--| (41)
+|     |     |                                         |    |        |  |  |        +--Austroboletus_136
+|     |     |                                         |    |        |  +--| (25)
+|     |     |                                         |    |        |     +--Austroboletus_032
+|     |     |                                         |    |     +--| (31)
+|     |     |                                         |    |     |  +--Austroboletus_133
+|     |     |                                         |    |  +--| (31)
+|     |     |                                         |    |  |  +--Austroboletus_167
+|     |     |                                         |    +--| (23)
+|     |     |                                         |       +--Austroboletus_027
+|     |     |                                      +--| (49)
+|     |     |                                      |  |                                       +**Austroboletus_042
+|     |     |                                      |  |                                    +**|
+|     |     |                                      |  |                                    |  +**Austroboletus_125
+|     |     |                                      |  |                                 +**|
+|     |     |                                      |  |                                 |  +**Austroboletus_062
+|     |     |                                      |  |                              +**|
+|     |     |                                      |  |                              |  +**Austroboletus_104
+|     |     |                                      |  |                           +**|
+|     |     |                                      |  |                           |  +**Austroboletus_130
+|     |     |                                      |  |                        +**|
+|     |     |                                      |  |                        |  +**Austroboletus_090
+|     |     |                                      |  |                     +**|
+|     |     |                                      |  |                     |  +**Austroboletus_111
+|     |     |                                      |  |                  +**|
+|     |     |                                      |  |                  |  +**Austroboletus_113
+|     |     |                                      |  |               +**|
+|     |     |                                      |  |               |  +**Austroboletus_074
+|     |     |                                      |  |            +--|
+|     |     |                                      |  |            |  +**Austroboletus_103
+|     |     |                                      |  |         +--| (57)
+|     |     |                                      |  |         |  +--Austroboletus_060
+|     |     |                                      |  |      +--| (100)
+|     |     |                                      |  |      |  +--Austroboletus_112
+|     |     |                                      |  |  +---| (100)
+|     |     |                                      |  |  |   |  +--Austroboletus_091
+|     |     |                                      |  |  |   +--| (100)
+|     |     |                                      |  |  |      +--Austroboletus_119
+|     |     |                                      |  +--| (65)
+|     |     |                                      |     |               +**Austroboletus_057
+|     |     |                                      |     |            +--|
+|     |     |                                      |     |            |  +**Austroboletus_165
+|     |     |                                      |     |         +--| (78)
+|     |     |                                      |     |         |  +--Austroboletus_065
+|     |     |                                      |     |     +---| (100)
+|     |     |                                      |     |     |   +--Austroboletus_097
+|     |     |                                      |     |  +--| (79)
+|     |     |                                      |     |  |  |        +--Austroboletus_059
+|     |     |                                      |     |  |  |     +--| (64)
+|     |     |                                      |     |  |  |     |  |  +--Austroboletus_131
+|     |     |                                      |     |  |  |     |  +--| (77)
+|     |     |                                      |     |  |  |     |     +--Austroboletus_158
+|     |     |                                      |     |  |  |  +--| (66)
+|     |     |                                      |     |  |  |  |  +--Austroboletus_088
+|     |     |                                      |     |  |  +--| (100)
+|     |     |                                      |     |  |     +--Austroboletus_124
+|     |     |                                      |     +--| (66)
+|     |     |                                      |        |        +--Austroboletus_075
+|     |     |                                      |        |     +--| (50)
+|     |     |                                      |        |     |  +--Austroboletus_126
+|     |     |                                      |        +-----| (100)
+|     |     |                                      |              +--Austroboletus_144
+|     |     |                                   +--| (50)
+|     |     |                                   |  |                   +--Austroboletus_040
+|     |     |                                   |  |                +--| (99)
+|     |     |                                   |  |                |  +--Austroboletus_166
+|     |     |                                   |  |            +---| (100)
+|     |     |                                   |  |            |   |     +--Austroboletus_041
+|     |     |                                   |  |            |   |  +--| (86)
+|     |     |                                   |  |            |   |  |  +--Austroboletus_056
+|     |     |                                   |  |            |   +--| (100)
+|     |     |                                   |  |            |      +--Austroboletus_169
+|     |     |                                   |  |        +---| (96)
+|     |     |                                   |  |        |   |          +--Austroboletus_156
+|     |     |                                   |  |        |   +----------| (100)
+|     |     |                                   |  |        |              +--Austroboletus_157
+|     |     |                                   |  |     +--| (53)
+|     |     |                                   |  |     |  |             +--Austroboletus_099
+|     |     |                                   |  |     |  |          +--| (94)
+|     |     |                                   |  |     |  |          |  +--Austroboletus_100
+|     |     |                                   |  |     |  |       +--| (99)
+|     |     |                                   |  |     |  |       |  +--Austroboletus_115
+|     |     |                                   |  |     |  |    +--| (66)
+|     |     |                                   |  |     |  |    |  +--Austroboletus_116
+|     |     |                                   |  |     |  +----| (100)
+|     |     |                                   |  |     |       +--Austroboletus_101
+|     |     |                                   |  |  +--| (56)
+|     |     |                                   |  |  |  |           +--Austroboletus_079
+|     |     |                                   |  |  |  |        +--| (59)
+|     |     |                                   |  |  |  |        |  +--Austroboletus_117
+|     |     |                                   |  |  |  |     +--| (97)
+|     |     |                                   |  |  |  |     |  +--Austroboletus_098
+|     |     |                                   |  |  |  |  +--| (100)
+|     |     |                                   |  |  |  |  |  +--Austroboletus_114
+|     |     |                                   |  |  |  +--| (100)
+|     |     |                                   |  |  |     +--Austroboletus_145
+|     |     |                                   |  +--| (39)
+|     |     |                                   |     |    +--Austroboletus_077
+|     |     |                                   |     +----| (100)
+|     |     |                                   |          +--Austroboletus_118
+|     |     |                                +--| (33)
+|     |     |                                |  |                                   +**Austroboletus_028
+|     |     |                                |  |                                +--|
+|     |     |                                |  |                                |  +**Austroboletus_031
+|     |     |                                |  |                             +--| (68)
+|     |     |                                |  |                             |  +--Austroboletus_029
+|     |     |                                |  |                          +--| (57)
+|     |     |                                |  |                          |  +--Austroboletus_044
+|     |     |                                |  |                       +--| (91)
+|     |     |                                |  |                       |  |  +--Austroboletus_137
+|     |     |                                |  |                       |  +--| (99)
+|     |     |                                |  |                       |     +--Austroboletus_138
+|     |     |                                |  |                    +--| (45)
+|     |     |                                |  |                    |  |     +--Austroboletus_080
+|     |     |                                |  |                    |  |  +--| (62)
+|     |     |                                |  |                    |  |  |  +--Austroboletus_120
+|     |     |                                |  |                    |  +--| (99)
+|     |     |                                |  |                    |     +--Austroboletus_123
+|     |     |                                |  |                 +--| (29)
+|     |     |                                |  |                 |  |        +--Austroboletus_058
+|     |     |                                |  |                 |  |     +--| (68)
+|     |     |                                |  |                 |  |     |  +--Austroboletus_121
+|     |     |                                |  |                 |  |  +--| (26)
+|     |     |                                |  |                 |  |  |  +--Austroboletus_127
+|     |     |                                |  |                 |  +--| (11)
+|     |     |                                |  |                 |     +--Austroboletus_128
+|     |     |                                |  |              +--| (99)
+|     |     |                                |  |              |  +--Austroboletus_089
+|     |     |                                |  |           +--| (99)
+|     |     |                                |  |           |  +--Austroboletus_061
+|     |     |                                |  |        +--| (100)
+|     |     |                                |  |        |  +--Austroboletus_122
+|     |     |                                |  |     +--| (35)
+|     |     |                                |  |     |  |              +--Austroboletus_078
+|     |     |                                |  |     |  +--------------| (100)
+|     |     |                                |  |     |                 +--Austroboletus_081
+|     |     |                                |  |  +--| (38)
+|     |     |                                |  |  |  |                +--Austroboletus_036
+|     |     |                                |  |  |  |  +-------------| (100)
+|     |     |                                |  |  |  |  |             +---Austroboletus_037
+|     |     |                                |  |  |  +--| (76)
+|     |     |                                |  |  |     +-----Austroboletus_055
+|     |     |                                |  +--| (35)
+|     |     |                                |     |     +--Austroboletus_063
+|     |     |                                |     |  +--| (74)
+|     |     |                                |     |  |  |        +--Austroboletus_072
+|     |     |                                |     |  |  |     +--| (100)
+|     |     |                                |     |  |  |     |  +--Austroboletus_073
+|     |     |                                |     |  |  |  +--| (100)
+|     |     |                                |     |  |  |  |  |  +--Austroboletus_093
+|     |     |                                |     |  |  |  |  +--| (98)
+|     |     |                                |     |  |  |  |     +--Austroboletus_096
+|     |     |                                |     |  |  +--| (92)
+|     |     |                                |     |  |     |     +--Austroboletus_092
+|     |     |                                |     |  |     |  +--| (99)
+|     |     |                                |     |  |     |  |  +--Austroboletus_094
+|     |     |                                |     |  |     +--| (99)
+|     |     |                                |     |  |        +--Austroboletus_095
+|     |     |                                |     +--| (98)
+|     |     |                                |        +--Austroboletus_129
+|     |     |                             +--| (63)
+|     |     |                             |  +----Austroboletus_143
+|     |     |                          +--| (99)
+|     |     |                          |  |      +--Austroboletus_009
+|     |     |                          |  |  +---| (100)
+|     |     |                          |  |  |   +--Austroboletus_160
+|     |     |                          |  +--| (94)
+|     |     |                          |     |              +**Austroboletus_150
+|     |     |                          |     |           +--|
+|     |     |                          |     |           |  +**Austroboletus_163
+|     |     |                          |     |        +--| (75)
+|     |     |                          |     |        |  +--Austroboletus_161
+|     |     |                          |     +--------| (100)
+|     |     |                          |              +--Austroboletus_162
+|     |     |                       +--| (43)
+|     |     |                       |  |       +--Austroboletus_154
+|     |     |                       |  +-------| (100)
+|     |     |                       |          +--Austroboletus_155
+|     |     |                    +--| (40)
+|     |     |                    |  |                    +**Austroboletus_005
+|     |     |                    |  |                 +--|
+|     |     |                    |  |                 |  +**Austroboletus_038
+|     |     |                    |  |              +--| (88)
+|     |     |                    |  |              |  +--Austroboletus_007
+|     |     |                    |  |           +--| (53)
+|     |     |                    |  |           |  +--Austroboletus_146
+|     |     |                    |  |        +--| (45)
+|     |     |                    |  |        |  |                 +--Austroboletus_006
+|     |     |                    |  |        |  |              +--| (35)
+|     |     |                    |  |        |  |              |  |        +--Austroboletus_022
+|     |     |                    |  |        |  |              |  |     +--| (98)
+|     |     |                    |  |        |  |              |  |     |  +--Austroboletus_054
+|     |     |                    |  |        |  |              |  |  +--| (41)
+|     |     |                    |  |        |  |              |  |  |  +--Austroboletus_034
+|     |     |                    |  |        |  |              |  +--| (58)
+|     |     |                    |  |        |  |              |     +--Austroboletus_035
+|     |     |                    |  |        |  |           +--| (14)
+|     |     |                    |  |        |  |           |  |        +**Austroboletus_018
+|     |     |                    |  |        |  |           |  |     +**|
+|     |     |                    |  |        |  |           |  |     |  +**Austroboletus_047
+|     |     |                    |  |        |  |           |  |  +--|
+|     |     |                    |  |        |  |           |  |  |  +**Austroboletus_139
+|     |     |                    |  |        |  |           |  +--| (19)
+|     |     |                    |  |        |  |           |     +--Austroboletus_021
+|     |     |                    |  |        |  |        +--| (15)
+|     |     |                    |  |        |  |        |  +--Austroboletus_046
+|     |     |                    |  |        |  |     +--| (46)
+|     |     |                    |  |        |  |     |  +--Austroboletus_039
+|     |     |                    |  |        |  |  +--| (80)
+|     |     |                    |  |        |  |  |  |     +--Austroboletus_008
+|     |     |                    |  |        |  |  |  |  +--| (38)
+|     |     |                    |  |        |  |  |  |  |  +--Austroboletus_043
+|     |     |                    |  |        |  |  |  +--| (40)
+|     |     |                    |  |        |  |  |     +--Austroboletus_140
+|     |     |                    |  |        |  +--| (80)
+|     |     |                    |  |        |     +--Austroboletus_142
+|     |     |                    |  |   +----| (100)
+|     |     |                    |  |   |    +--Austroboletus_019
+|     |     |                    |  +---| (99)
+|     |     |                    |      |  +------------------------Austroboletus_010
+|     |     |                    |      +--| (98)
+|     |     |                    |         |     +--Austroboletus_149
+|     |     |                    |         +-----| (100)
+|     |     |                    |               +--Austroboletus_152
+|     |     |                 +--| (48)
+|     |     |                 |  |                +--Austroboletus_017
+|     |     |                 |  |             +--| (78)
+|     |     |                 |  |             |  +--Austroboletus_148
+|     |     |                 |  |        +----| (100)
+|     |     |                 |  |        |    +--Austroboletus_147
+|     |     |                 |  +--------| (100)
+|     |     |                 |           |  +--Austroboletus_151
+|     |     |                 |           +--| (100)
+|     |     |                 |              +--Austroboletus_159
+|     |     |          +------| (99)
+|     |     |          |      |                   +--Austroboletus_011
+|     |     |          |      |     +-------------| (100)
+|     |     |          |      |     |             +--Austroboletus_012
+|     |     |          |      +-----| (96)
+|     |     |          |            |                           +--Austroboletus_076
+|     |     |          |            |                        +--| (33)
+|     |     |          |            |                        |  |     +**Austroboletus_082
+|     |     |          |            |                        |  |  +--|
+|     |     |          |            |                        |  |  |  +**Austroboletus_108
+|     |     |          |            |                        |  +--| (36)
+|     |     |          |            |                        |     |                 +--Austroboletus_083
+|     |     |          |            |                        |     |              +--| (99)
+|     |     |          |            |                        |     |              |  +--Austroboletus_084
+|     |     |          |            |                        |     |           +--| (100)
+|     |     |          |            |                        |     |           |  +--Austroboletus_087
+|     |     |          |            |                        |     |        +--| (70)
+|     |     |          |            |                        |     |        |  |     +--Austroboletus_105
+|     |     |          |            |                        |     |        |  |  +--| (91)
+|     |     |          |            |                        |     |        |  |  |  +--Austroboletus_110
+|     |     |          |            |                        |     |        |  +--| (87)
+|     |     |          |            |                        |     |        |     +--Austroboletus_107
+|     |     |          |            |                        |     |     +--| (87)
+|     |     |          |            |                        |     |     |  +--Austroboletus_106
+|     |     |          |            |                        |     |  +--| (40)
+|     |     |          |            |                        |     |  |  +--Austroboletus_086
+|     |     |          |            |                        |     +--| (22)
+|     |     |          |            |                        |        +--Austroboletus_085
+|     |     |          |            +------------------------| (100)
+|     |     |          |                                     +--Austroboletus_109
+|     |     |  +-------| (98)
+|     |     |  |       |     +----------------------Austroboletus_013
+|     |     |  |       +-----| (93)
+|     |     |  |             |             +--Austroboletus_064
+|     |     |  |             |          +--| (88)
+|     |     |  |             |          |  +--Austroboletus_164
+|     |     |  |             +----------| (100)
+|     |     |  |                        |  +--Austroboletus_066
+|     |     |  |                        +--| (98)
+|     |     |  |                           |  +--Austroboletus_067
+|     |     |  |                           +--| (92)
+|     |     |  |                              |        +--Austroboletus_068
+|     |     |  |                              |     +--| (27)
+|     |     |  |                              |     |  +--Austroboletus_069
+|     |     |  |                              |  +--| (28)
+|     |     |  |                              |  |  +--Austroboletus_071
+|     |     |  |                              +--| (39)
+|     |     |  |                                 +--Austroboletus_070
+|     |     +--| (96)
+|     |        |                    +--Austroboletus_016
+|     |        |                 +--| (96)
+|     |        |                 |  +--Austroboletus_023
+|     |        |              +--| (99)
+|     |        |              |  +--Austroboletus_168
+|     |        |           +--| (98)
+|     |        |           |  +--Austroboletus_024
+|     |        |     +-----| (100)
+|     |        |     |     +--Austroboletus_153
+|     |        |  +--| (99)
+|     |        |  |  +-----------Austroboletus_141
+|     |        +--| (95)
+|     |           +---Austroboletus_132
+|  +--| (97)
+|  |  |     +--Austroboletus_048
+|  |  |  +--| (81)
+|  |  |  |  +--Austroboletus_050
+|  |  +--| (90)
+|  |     |  +--Austroboletus_049
+|  |     +--| (40)
+|  |        +--Austroboletus_051
++--| (94)
+|  +--Austroboletus_052
+|
+|  +--Austroboletus_004
++--| (100)
+   +--Austroboletus_053
+
+
+Consensus tree in newick format: 
+
+(Austroboletus_001:0.0000020051,(((((Austroboletus_002:0.0000020051,Austroboletus_014:0.0000020051)90:0.0000020051,(Austroboletus_015:0.0000020051,Austroboletus_020:0.0000020051)73:0.0000020051)100:0.0622613502,((((((((((((((Austroboletus_003:0.0000000000,Austroboletus_135:0.0000000000):0.0000000000,Austroboletus_030:0.0000000000):0.0000020051,((((Austroboletus_025:0.0000020051,(((Austroboletus_026:0.0000020051,Austroboletus_102:0.0000020051)75:0.0000020051,((Austroboletus_033:0.0002665867,Austroboletus_045:0.0047492223)35:0.0019379676,(Austroboletus_134:0.0000020051,Austroboletus_136:0.0020919142)41:0.0001285471)59:0.0000020051)76:0.0000020084,Austroboletus_032:0.0000020051)25:0.0000020084)18:0.0000020084,Austroboletus_133:0.0000020051)31:0.0000020084,Austroboletus_167:0.0022411660)31:0.0000020084,Austroboletus_027:0.0000020051)23:0.0000020084)100:0.0864695528,(((((((((((((Austroboletus_042:0.0000000000,Austroboletus_125:0.0000000000):0.0000000000,Austroboletus_062:0.0000000000):0.0000000000,Austroboletus_104:0.0000000000):0.0000000000,Austroboletus_130:0.0000000000):0.0000000000,Austroboletus_090:0.0000000000):0.0000000000,Austroboletus_111:0.0000000000):0.0000000000,Austroboletus_113:0.0000000000):0.0000000000,Austroboletus_074:0.0000000000):0.0000000000,Austroboletus_103:0.0000000000):0.0000020051,Austroboletus_060:0.0000020051)57:0.0000020051,Austroboletus_112:0.0000020051)100:0.0436656318,(Austroboletus_091:0.0040448190,Austroboletus_119:0.0140555414)100:0.0343884151)100:0.0773102450,(((((Austroboletus_057:0.0000000000,Austroboletus_165:0.0000000000):0.0000020051,Austroboletus_065:0.0000020051)78:0.0000028307,Austroboletus_097:0.0000020051)100:0.0736516574,(((Austroboletus_059:0.0000020051,(Austroboletus_131:0.0000020051,Austroboletus_158:0.0000020051)77:0.0000020051)64:0.0000027918,Austroboletus_088:0.0075694786)66:0.0000024252,Austroboletus_124:0.0222764095)100:0.0479499146)79:0.0233768672,((Austroboletus_075:0.0000020051,Austroboletus_126:0.0000020051)50:0.0000020051,Austroboletus_144:0.0000020051)100:0.0964074716)66:0.0067366335)65:0.0141617141)49:0.0162103725,((((((Austroboletus_040:0.0044335300,Austroboletus_166:0.0000020051)99:0.0173927116,((Austroboletus_041:0.0000020051,Austroboletus_056:0.0000020051)86:0.0000022884,Austroboletus_169:0.0000020051)100:0.0327463781)100:0.0708745287,(Austroboletus_156:0.0072999747,Austroboletus_157:0.0000020051)100:0.1801092945)96:0.0644646362,((((Austroboletus_099:0.0358462028,Austroboletus_100:0.0037351253)94:0.0030765523,Austroboletus_115:0.0024271062)99:0.0123542100,Austroboletus_116:0.0022199874)66:0.0000020051,Austroboletus_101:0.0044380978)100:0.0866930490)53:0.0135470576,((((Austroboletus_079:0.0026775668,Austroboletus_117:0.0095700472)59:0.0000020270,Austroboletus_098:0.0000020051)97:0.0031666624,Austroboletus_114:0.0072785536)100:0.0217496414,Austroboletus_145:0.0131620978)100:0.0520610740)56:0.0164689475,(Austroboletus_077:0.0303661822,Austroboletus_118:0.0107063336)100:0.0856697785)39:0.0049729407)50:0.0209231334,((((((((((((Austroboletus_028:0.0000000000,Austroboletus_031:0.0000000000):0.0000020051,Austroboletus_029:0.0000020051)68:0.0000020051,Austroboletus_044:0.0000020051)57:0.0000020051,(Austroboletus_137:0.0000020051,Austroboletus_138:0.0000020051)99:0.0021850569)91:0.0021849111,((Austroboletus_080:0.0000020051,Austroboletus_120:0.0336825181)62:0.0031475632,Austroboletus_123:0.0125733240)99:0.0095111081)45:0.0000020051,(((Austroboletus_058:0.0000020051,Austroboletus_121:0.0000020051)68:0.0000020051,Austroboletus_127:0.0000020051)26:0.0000020051,Austroboletus_128:0.0022177444)11:0.0000020051)29:0.0000020051,Austroboletus_089:0.0088616346)99:0.0065808832,Austroboletus_061:0.0000020051)99:0.0043295446,Austroboletus_122:0.0023640814)100:0.0549626507,(Austroboletus_078:0.0124884231,Austroboletus_081:0.0000024812)100:0.2386433944)35:0.0085916956,((Austroboletus_036:0.0409172611,Austroboletus_037:0.0712217533)100:0.2207086565,Austroboletus_055:0.1004105722)76:0.0393640857)38:0.0118401132,((Austroboletus_063:0.0000020051,(((Austroboletus_072:0.0111874396,Austroboletus_073:0.0189553263)100:0.0096629252,(Austroboletus_093:0.0062890437,Austroboletus_096:0.0068575624)98:0.0064903195)100:0.0025226600,((Austroboletus_092:0.0043851034,Austroboletus_094:0.0044188969)99:0.0021630437,Austroboletus_095:0.0043793177)99:0.0021575615)92:0.0023001492)74:0.0101221686,Austroboletus_129:0.0060982741)98:0.0262578731)35:0.0100542927)33:0.0046484201,Austroboletus_143:0.0875418131)63:0.0271066445,((Austroboletus_009:0.0026538967,Austroboletus_160:0.0000025114)100:0.0647614188,(((Austroboletus_150:0.0000000000,Austroboletus_163:0.0000000000):0.0000020051,Austroboletus_161:0.0000020051)75:0.0000028394,Austroboletus_162:0.0000020051)100:0.1546671348)94:0.0355073268)99:0.0520010085,(Austroboletus_154:0.0104865356,Austroboletus_155:0.0000020051)100:0.1317931924)43:0.0264727743,((((((Austroboletus_005:0.0000000000,Austroboletus_038:0.0000000000):0.0000020051,Austroboletus_007:0.0000020051)88:0.0000020051,Austroboletus_146:0.0000020051)53:0.0000020051,((((((Austroboletus_006:0.0023423057,(((Austroboletus_022:0.0023500627,Austroboletus_054:0.0025532288)98:0.0022130274,Austroboletus_034:0.0000020051)41:0.0001291172,Austroboletus_035:0.0000020051)58:0.0000020051)35:0.0000020051,(((Austroboletus_018:0.0000000000,Austroboletus_047:0.0000000000):0.0000000000,Austroboletus_139:0.0000000000):0.0000020051,Austroboletus_021:0.0000020051)19:0.0000020051)14:0.0000020051,Austroboletus_046:0.0000020051)15:0.0000020051,Austroboletus_039:0.0000020051)46:0.0000020051,((Austroboletus_008:0.0000020051,Austroboletus_043:0.0340677305)38:0.0000020051,Austroboletus_140:0.0000020051)40:0.0000020051)80:0.0021236731,Austroboletus_142:0.0000020051)80:0.0002132222)45:0.0000020051,Austroboletus_019:0.0023402218)100:0.0836868549,(Austroboletus_010:0.3897012049,(Austroboletus_149:0.0471571401,Austroboletus_152:0.0474773443)100:0.1075479820)98:0.0401447133)99:0.0720405715)40:0.0120309211,(((Austroboletus_017:0.0000020051,Austroboletus_148:0.0019976475)78:0.0001958123,Austroboletus_147:0.0070772587)100:0.0872014013,(Austroboletus_151:0.0031001248,Austroboletus_159:0.0014169062)100:0.0523835706)100:0.1501115915)48:0.0291662260,((Austroboletus_011:0.0000020051,Austroboletus_012:0.0000025470)100:0.2299112952,((Austroboletus_076:0.0085024762,((Austroboletus_082:0.0000000000,Austroboletus_108:0.0000000000):0.0000020051,((((((Austroboletus_083:0.0023387612,Austroboletus_084:0.0229958775)99:0.0179980851,Austroboletus_087:0.0000020084)100:0.0099141374,((Austroboletus_105:0.0000020051,Austroboletus_110:0.0000020051)91:0.0000020051,Austroboletus_107:0.0049305392)87:0.0024571253)70:0.0000020051,Austroboletus_106:0.0000020051)87:0.0012519948,Austroboletus_086:0.0000020051)40:0.0000028508,Austroboletus_085:0.0000020051)22:0.0000020051)36:0.0000020051)33:0.0000125831,Austroboletus_109:0.0036597451)100:0.3960010523)96:0.1021613849)99:0.1178251780,(Austroboletus_013:0.3716133113,((Austroboletus_064:0.0000020051,Austroboletus_164:0.0000020051)88:0.0000025595,(Austroboletus_066:0.0000020051,(Austroboletus_067:0.0000020051,(((Austroboletus_068:0.0000020051,Austroboletus_069:0.0064733442)27:0.0011716738,Austroboletus_071:0.0000020051)28:0.0000025172,Austroboletus_070:0.0000020051)39:0.0000025172)92:0.0000025172)98:0.0038016470)100:0.1745927648)93:0.0992007262)98:0.1294690103,((((((Austroboletus_016:0.0000020051,Austroboletus_023:0.0000020051)96:0.0000020051,Austroboletus_168:0.0000020051)99:0.0026410329,Austroboletus_024:0.0027492901)98:0.0025067735,Austroboletus_153:0.0288552787)100:0.0960160848,Austroboletus_141:0.1878380378)99:0.0420736309,Austroboletus_132:0.0732975669)95:0.0147415285)96:0.0181849862)100:0.1088043252,((Austroboletus_048:0.0000020051,Austroboletus_050:0.0000020051)81:0.0000020051,(Austroboletus_049:0.0000020051,Austroboletus_051:0.0000020051)40:0.0000020051)90:0.0085043496)97:0.0084832931,Austroboletus_052:0.0000020051)94:0.0006211353,(Austroboletus_004:0.0000020051,Austroboletus_053:0.0000020051)100:0.0020741551);
+
+ALISIM COMMAND
+--------------
+To simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis, you can use the following command:
+
+--alisim simulated_MSA -t data/packages/ITS/Austroboletus/ref.treefile -m "TIM2{1.48183,2.13087,3.11628}+F{0.27164,0.211729,0.212304,0.304328}+I{0.189644}+G4{0.865279}" --length 487
+
+To mimic the alignment used to produce this analysis, i.e. simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis *and* copying the same gap positions as the original alignment, you can use the following command:
+
+iqtree -s data/packages/ITS/Austroboletus/aln.masked.fasta --alisim mimicked_MSA
+
+To simulate any number of alignments in either of the two commandlines above, use the --num-alignments options, for example mimic 100 alignments you would use the command line:
+
+iqtree -s data/packages/ITS/Austroboletus/aln.masked.fasta --alisim mimicked_MSA --num-alignments 100
+
+For more information on using AliSim, please visit: www.iqtree.org/doc/AliSim
+
+TIME STAMP
+----------
+
+Date and time: Mon Aug 18 18:37:53 2025
+Total CPU time used: 963.269547 seconds (0h:16m:3s)
+Total wall-clock time used: 382.1984954 seconds (0h:6m:22s)
+

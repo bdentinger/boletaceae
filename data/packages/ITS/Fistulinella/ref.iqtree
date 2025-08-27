@@ -1,0 +1,468 @@
+IQ-TREE 3.0.1 built May  5 2025
+
+Input file name: data/packages/ITS/Fistulinella/aln.masked.fasta
+Type of analysis: ModelFinder + tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 632903
+
+REFERENCES
+----------
+
+To cite IQ-TREE 3 please use:
+
+Thomas K.F. Wong, Nhan Ly-Trong, Huaiyan Ren, Hector Banos, Andrew J. Roger,
+Edward Susko, Chris Bielow, Nicola De Maio, Nick Goldman, Matthew W. Hahn,
+Gavin Huttley, Robert Lanfear, Bui Quang Minh (2025)
+IQ-TREE 3: Phylogenomic Inference Software using Complex Evolutionary Models.
+Submitted.
+
+Please also cite the following paper(s) for the feature(s) that you used:
+
+To cite ModelFinder please use: 
+
+Subha Kalyaanamoorthy, Bui Quang Minh, Thomas KF Wong, Arndt von Haeseler,
+and Lars S Jermiin (2017) ModelFinder: Fast model selection for
+accurate phylogenetic estimates. Nature Methods, 14:587–589.
+https://doi.org/10.1038/nmeth.4285
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2018) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol. Biol. Evol., 35:518–522.
+https://doi.org/10.1093/molbev/msx281
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 46 sequences with 591 nucleotide sites
+Number of constant sites: 122 (= 20.643% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 122 (= 20.643% of all sites)
+Number of parsimony informative sites: 358
+Number of distinct site patterns: 447
+
+ModelFinder
+-----------
+
+Best-fit model according to BIC: HKY+F+R2
+
+List of models sorted by BIC scores: 
+
+Model                  LogL         AIC      w-AIC        AICc     w-AICc         BIC      w-BIC
+HKY+F+R2          -5846.112   11866.223 -   0.0428   11896.665 +    0.112   12247.441 +    0.681
+TPM2u+F+R2        -5844.465   11864.930 +   0.0818   11896.134 +    0.146   12250.530 +    0.145
+K3Pu+F+R2         -5845.405   11866.809 -    0.032   11898.012 +    0.057   12252.409 +   0.0568
+TN+F+R2           -5845.781   11867.562 -   0.0219   11898.766 -   0.0391   12253.162 -    0.039
+TPM3u+F+R2        -5846.107   11868.213 -   0.0158   11899.417 -   0.0283   12253.813 -   0.0281
+HKY+F+I+R2        -5846.862   11869.724 -  0.00744   11900.928 -   0.0133   12255.324 -   0.0132
+HKY+F+R3          -5844.094   11866.189 -   0.0436   11898.165 +   0.0528   12256.171 -  0.00866
+TIM2+F+R2         -5844.132   11866.263 -    0.042   11898.239 +   0.0509   12256.245 -  0.00834
+TPM2u+F+I+R2      -5844.833   11867.666 -   0.0208   11899.642 -   0.0252   12257.648 -  0.00414
+TPM2u+F+R3        -5841.686   11863.371 +    0.178   11896.131 +    0.146   12257.734 -  0.00396
+TIM+F+R2          -5845.070   11868.140 -   0.0164   11900.116 -   0.0199   12258.122 -  0.00326
+TIM3+F+R2         -5845.714   11869.428 -  0.00863   11901.404 -   0.0105   12259.410 -  0.00171
+K3Pu+F+I+R2       -5845.894   11869.788 -  0.00721   11901.764 -  0.00874   12259.770 -  0.00143
+K3Pu+F+R3         -5842.829   11865.658 +   0.0568   11898.418 -   0.0466   12260.021 -  0.00126
+TPM3u+F+R3        -5843.111   11866.221 -   0.0429   11898.981 -   0.0351   12260.585 - 0.000952
+TN+F+I+R2         -5846.514   11871.027 -  0.00388   11903.003 -   0.0047   12261.009 - 0.000771
+TPM3u+F+I+R2      -5846.569   11871.137 -  0.00367   11903.113 -  0.00445   12261.119 - 0.000729
+TN+F+R3           -5843.578   11867.157 -   0.0269   11899.917 -    0.022   12261.520 - 0.000597
+TVM+F+R2          -5844.135   11868.270 -   0.0154   11901.030 -   0.0126   12262.634 - 0.000342
+TIM2+F+R3         -5840.993   11863.985 +    0.131   11897.541 +   0.0722   12262.731 - 0.000326
+TIM2+F+I+R2       -5844.536   11869.071 -   0.0103   11901.831 -  0.00845   12263.435 - 0.000229
+TIM+F+R3          -5842.059   11866.117 -   0.0452   11899.672 -   0.0249   12264.863 - 0.000112
+TIM+F+I+R2        -5845.582   11871.164 -  0.00362   11903.924 -  0.00297   12265.527 - 8.05e-05
+TIM3+F+R3         -5842.487   11866.973 -   0.0294   11900.528 -   0.0162   12265.718 - 7.31e-05
+TIM3+F+I+R2       -5846.381   11872.762 -  0.00163   11905.522 -  0.00133   12267.126 - 3.62e-05
+GTR+F+R2          -5843.792   11869.583 -  0.00798   11903.139 -  0.00439   12268.329 - 1.98e-05
+TVM+F+R3          -5840.698   11865.397 +   0.0648   11899.758 -   0.0238   12268.524 -  1.8e-05
+TVM+F+I+R2        -5844.488   11870.976 -  0.00398   11904.531 -  0.00219   12269.721 - 9.88e-06
+GTR+F+R3          -5840.413   11866.826 -   0.0317   11902.005 -  0.00774   12274.335 - 9.84e-07
+GTR+F+I+R2        -5844.202   11872.403 -  0.00195   11906.765 - 0.000717   12275.530 - 5.41e-07
+TPM3u+R2          -5866.630   11903.260 - 3.88e-10   11932.211 - 2.14e-09   12275.715 - 4.94e-07
+TPM3+R2           -5866.675   11903.350 - 3.72e-10   11932.300 - 2.04e-09   12275.804 - 4.72e-07
+TPM3+R2           -5866.675   11903.350 - 3.72e-10   11932.300 - 2.04e-09   12275.804 - 4.72e-07
+HKY+R2            -5871.433   11910.865 - 8.67e-12   11939.087 - 6.87e-11   12278.938 - 9.85e-08
+K2P+R2            -5871.630   11911.259 - 7.12e-12   11939.480 - 5.64e-11   12279.332 - 8.09e-08
+K2P+R2            -5871.630   11911.259 - 7.12e-12   11939.480 - 5.64e-11   12279.332 - 8.09e-08
+TPM2u+R2          -5869.001   11908.001 - 3.63e-11   11936.952 -    2e-10   12280.456 - 4.61e-08
+TPM2+R2           -5869.124   11908.249 - 3.21e-11   11937.199 - 1.76e-10   12280.703 - 4.08e-08
+TPM2+R2           -5869.124   11908.249 - 3.21e-11   11937.199 - 1.76e-10   12280.703 - 4.08e-08
+TIM3+R2           -5866.452   11904.903 - 1.71e-10   11934.594 - 6.49e-10   12281.739 - 2.43e-08
+TIM3e+R2          -5866.470   11904.941 - 1.68e-10   11934.631 - 6.37e-10   12281.777 - 2.38e-08
+TIM3e+R2          -5866.470   11904.941 - 1.68e-10   11934.631 - 6.37e-10   12281.777 - 2.38e-08
+TPM3u+R3          -5863.665   11901.331 - 1.02e-09   11931.772 - 2.66e-09   12282.549 - 1.62e-08
+TPM3+R3           -5863.735   11901.471 - 9.51e-10   11931.912 - 2.48e-09   12282.689 - 1.51e-08
+TPM3+R3           -5863.735   11901.471 - 9.51e-10   11931.912 - 2.48e-09   12282.689 - 1.51e-08
+TPM3u+I+R2        -5867.040   11906.081 - 9.48e-11   11935.771 -  3.6e-10   12282.917 - 1.35e-08
+TVM+R2            -5863.892   11901.785 - 8.12e-10   11932.226 - 2.12e-09   12283.003 - 1.29e-08
+TVMe+R2           -5863.907   11901.814 - 8.01e-10   11932.256 - 2.09e-09   12283.032 - 1.27e-08
+TVMe+R2           -5863.907   11901.814 - 8.01e-10   11932.256 - 2.09e-09   12283.032 - 1.27e-08
+TPM3+I+R2         -5867.122   11906.244 - 8.74e-11   11935.934 - 3.32e-10   12283.080 - 1.24e-08
+TPM3+I+R2         -5867.122   11906.244 - 8.74e-11   11935.934 - 3.32e-10   12283.080 - 1.24e-08
+K3Pu+R2           -5870.367   11910.734 - 9.25e-12   11939.685 - 5.09e-11   12283.189 - 1.18e-08
+K3P+R2            -5870.487   11910.974 - 8.21e-12   11939.925 - 4.52e-11   12283.429 - 1.04e-08
+K3P+R2            -5870.487   11910.974 - 8.21e-12   11939.925 - 4.52e-11   12283.429 - 1.04e-08
+TN+R2             -5871.157   11912.315 -  4.2e-12   11941.265 - 2.31e-11   12284.769 - 5.34e-09
+TNe+R2            -5871.202   11912.404 - 4.02e-12   11941.355 - 2.21e-11   12284.858 -  5.1e-09
+TNe+R2            -5871.202   11912.404 - 4.02e-12   11941.355 - 2.21e-11   12284.858 -  5.1e-09
+HKY+I+R2          -5871.925   11913.850 - 1.95e-12   11942.801 - 1.07e-11   12286.305 - 2.48e-09
+K2P+I+R2          -5872.081   11914.162 - 1.67e-12   11943.112 - 9.18e-12   12286.616 - 2.12e-09
+K2P+I+R2          -5872.081   11914.162 - 1.67e-12   11943.112 - 9.18e-12   12286.616 - 2.12e-09
+TIM2+R2           -5868.963   11909.927 - 1.39e-11   11939.617 - 5.27e-11   12286.763 - 1.97e-09
+TIM2e+R2          -5869.015   11910.031 - 1.32e-11   11939.721 -    5e-11   12286.867 - 1.87e-09
+TIM2e+R2          -5869.015   11910.031 - 1.32e-11   11939.721 -    5e-11   12286.867 - 1.87e-09
+TPM2u+I+R2        -5869.325   11910.650 - 9.65e-12   11940.341 - 3.67e-11   12287.486 - 1.37e-09
+TPM2+I+R2         -5869.389   11910.779 - 9.05e-12   11940.469 - 3.44e-11   12287.615 - 1.29e-09
+TPM2+I+R2         -5869.389   11910.779 - 9.05e-12   11940.469 - 3.44e-11   12287.615 - 1.29e-09
+HKY+R3            -5869.495   11910.990 - 8.14e-12   11940.681 -  3.1e-11   12287.826 - 1.16e-09
+TIM3+R3           -5863.244   11902.488 - 5.71e-10   11933.692 - 1.02e-09   12288.088 - 1.02e-09
+K2P+R3            -5869.631   11911.261 - 7.11e-12   11940.952 -  2.7e-11   12288.098 - 1.01e-09
+K2P+R3            -5869.631   11911.261 - 7.11e-12   11940.952 -  2.7e-11   12288.098 - 1.01e-09
+TIM3e+R3          -5863.289   11902.579 - 5.46e-10   11933.782 - 9.75e-10   12288.178 -  9.7e-10
+TIM3e+R3          -5863.289   11902.579 - 5.46e-10   11933.782 - 9.75e-10   12288.178 -  9.7e-10
+TPM2u+R3          -5866.501   11907.002 - 5.98e-11   11937.443 - 1.56e-10   12288.220 - 9.51e-10
+TPM2+R3           -5866.556   11907.113 - 5.66e-11   11937.554 - 1.48e-10   12288.331 - 8.99e-10
+TPM2+R3           -5866.556   11907.113 - 5.66e-11   11937.554 - 1.48e-10   12288.331 - 8.99e-10
+TIM3+I+R2         -5866.804   11907.607 - 4.42e-11   11938.048 - 1.15e-10   12288.825 - 7.02e-10
+TIM3e+I+R2        -5866.856   11907.711 -  4.2e-11   11938.152 -  1.1e-10   12288.929 - 6.67e-10
+TIM3e+I+R2        -5866.856   11907.711 -  4.2e-11   11938.152 -  1.1e-10   12288.929 - 6.67e-10
+TVM+R3            -5860.555   11899.110 - 3.09e-09   11931.086 - 3.75e-09   12289.092 - 6.15e-10
+TVMe+R3           -5860.585   11899.171 -    3e-09   11931.147 - 3.64e-09   12289.152 - 5.96e-10
+TVMe+R3           -5860.585   11899.171 -    3e-09   11931.147 - 3.64e-09   12289.152 - 5.96e-10
+GTR+R2            -5863.823   11903.647 -  3.2e-10   11934.850 - 5.71e-10   12289.246 - 5.69e-10
+SYM+R2            -5863.835   11903.670 - 3.17e-10   11934.873 - 5.65e-10   12289.270 - 5.62e-10
+SYM+R2            -5863.835   11903.670 - 3.17e-10   11934.873 - 5.65e-10   12289.270 - 5.62e-10
+TIM+R2            -5870.326   11912.652 - 3.55e-12   11942.343 - 1.35e-11   12289.488 - 5.04e-10
+TIMe+R2           -5870.369   11912.739 -  3.4e-12   11942.429 - 1.29e-11   12289.575 - 4.83e-10
+TIMe+R2           -5870.369   11912.739 -  3.4e-12   11942.429 - 1.29e-11   12289.575 - 4.83e-10
+TVM+I+R2          -5864.218   11904.437 - 2.16e-10   11935.640 - 3.85e-10   12290.036 - 3.83e-10
+TVMe+I+R2         -5864.274   11904.549 - 2.04e-10   11935.752 - 3.64e-10   12290.149 - 3.62e-10
+TVMe+I+R2         -5864.274   11904.549 - 2.04e-10   11935.752 - 3.64e-10   12290.149 - 3.62e-10
+K3Pu+I+R2         -5870.864   11913.729 - 2.07e-12   11943.419 - 7.87e-12   12290.565 - 2.94e-10
+K3P+I+R2          -5870.959   11913.918 - 1.88e-12   11943.609 - 7.16e-12   12290.754 - 2.68e-10
+K3P+I+R2          -5870.959   11913.918 - 1.88e-12   11943.609 - 7.16e-12   12290.754 - 2.68e-10
+K3Pu+R3           -5868.049   11910.098 - 1.27e-11   11940.539 - 3.32e-11   12291.316 - 2.02e-10
+K3P+R3            -5868.120   11910.240 - 1.19e-11   11940.681 - 3.09e-11   12291.458 - 1.88e-10
+K3P+R3            -5868.120   11910.240 - 1.19e-11   11940.681 - 3.09e-11   12291.458 - 1.88e-10
+TN+I+R2           -5871.706   11915.411 - 8.93e-13   11945.102 - 3.39e-12   12292.248 - 1.27e-10
+TNe+I+R2          -5871.806   11915.612 - 8.08e-13   11945.302 - 3.07e-12   12292.448 - 1.15e-10
+TNe+I+R2          -5871.806   11915.612 - 8.08e-13   11945.302 - 3.07e-12   12292.448 - 1.15e-10
+TIM2+I+R2         -5869.080   11912.160 - 4.54e-12   11942.601 - 1.19e-11   12293.378 - 7.21e-11
+TIM2e+I+R2        -5869.118   11912.236 - 4.37e-12   11942.677 - 1.14e-11   12293.454 - 6.94e-11
+TIM2e+I+R2        -5869.118   11912.236 - 4.37e-12   11942.677 - 1.14e-11   12293.454 - 6.94e-11
+TN+R3             -5869.196   11912.392 - 4.04e-12   11942.833 - 1.06e-11   12293.610 - 6.42e-11
+TIM2+R3           -5866.080   11908.160 - 3.35e-11   11939.363 - 5.98e-11   12293.760 - 5.96e-11
+TNe+R3            -5869.294   11912.589 - 3.66e-12   11943.030 - 9.56e-12   12293.807 - 5.82e-11
+TNe+R3            -5869.294   11912.589 - 3.66e-12   11943.030 - 9.56e-12   12293.807 - 5.82e-11
+TIM2e+R3          -5866.112   11908.224 - 3.25e-11   11939.427 - 5.79e-11   12293.824 - 5.77e-11
+TIM2e+R3          -5866.112   11908.224 - 3.25e-11   11939.427 - 5.79e-11   12293.824 - 5.77e-11
+GTR+R3            -5860.461   11900.922 - 1.25e-09   11933.682 - 1.02e-09   12295.286 - 2.78e-11
+SYM+R3            -5860.488   11900.977 - 1.22e-09   11933.737 - 9.97e-10   12295.340 -  2.7e-11
+SYM+R3            -5860.488   11900.977 - 1.22e-09   11933.737 - 9.97e-10   12295.340 -  2.7e-11
+GTR+I+R2          -5864.101   11906.203 - 8.92e-11   11938.179 - 1.08e-10   12296.184 - 1.77e-11
+SYM+I+R2          -5864.136   11906.271 - 8.62e-11   11938.247 - 1.05e-10   12296.253 - 1.71e-11
+SYM+I+R2          -5864.136   11906.271 - 8.62e-11   11938.247 - 1.05e-10   12296.253 - 1.71e-11
+TIM+I+R2          -5870.649   11915.297 - 9.45e-13   11945.739 - 2.47e-12   12296.515 -  1.5e-11
+TIMe+I+R2         -5870.715   11915.430 - 8.85e-13   11945.871 - 2.31e-12   12296.648 - 1.41e-11
+TIMe+I+R2         -5870.715   11915.430 - 8.85e-13   11945.871 - 2.31e-12   12296.648 - 1.41e-11
+TIM+R3            -5867.548   11911.096 - 7.72e-12   11942.299 - 1.38e-11   12296.696 - 1.37e-11
+TIMe+R3           -5867.615   11911.231 - 7.22e-12   11942.434 - 1.29e-11   12296.831 - 1.28e-11
+TIMe+R3           -5867.615   11911.231 - 7.22e-12   11942.434 - 1.29e-11   12296.831 - 1.28e-11
+F81+F+R2          -5942.243   12056.487 - 2.07e-43   12086.177 - 7.88e-43   12433.323 - 2.95e-41
+F81+F+I+R2        -5942.869   12059.738 - 4.08e-44   12090.179 - 1.07e-43   12440.956 - 6.48e-43
+F81+F+R3          -5940.252   12056.503 - 2.06e-43   12087.707 - 3.67e-43   12442.103 - 3.65e-43
+F81+R2            -5962.020   12090.040 - 1.07e-50   12117.543 - 1.22e-49   12453.730 - 1.09e-45
+JC+R2             -5963.011   12092.022 - 3.98e-51   12119.525 - 4.52e-50   12455.713 - 4.05e-46
+JC+R2             -5963.011   12092.022 - 3.98e-51   12119.525 - 4.52e-50   12455.713 - 4.05e-46
+F81+I+R2          -5962.195   12092.390 - 3.31e-51   12120.611 - 2.63e-50   12460.462 - 3.77e-47
+JC+I+R2           -5962.878   12093.755 - 1.67e-51   12121.977 - 1.33e-50   12461.828 -  1.9e-47
+JC+I+R2           -5962.878   12093.755 - 1.67e-51   12121.977 - 1.33e-50   12461.828 -  1.9e-47
+F81+R3            -5959.712   12089.424 - 1.46e-50   12118.375 - 8.04e-50   12461.878 - 1.86e-47
+JC+R3             -5959.880   12089.760 - 1.23e-50   12118.710 - 6.79e-50   12462.214 - 1.57e-47
+JC+R3             -5959.880   12089.760 - 1.23e-50   12118.710 - 6.79e-50   12462.214 - 1.57e-47
+JC+G4             -5973.397   12110.795 - 3.34e-55   12137.590 -  5.4e-54   12470.104 - 3.04e-49
+JC+I+R3           -5960.837   12093.675 - 1.74e-51   12123.365 - 6.63e-51   12470.511 - 2.48e-49
+JC+I+G4           -5972.675   12111.350 - 2.53e-55   12138.853 - 2.87e-54   12475.041 - 2.57e-50
+JC+I              -6106.846   12377.693 - 3.7e-113   12404.488 - 5.97e-112   12737.002 - 3.36e-107
+JC                -6199.986   12561.972 - 3.56e-153   12588.070 - 8.16e-152   12916.899 - 2.9e-146
+
+AIC, w-AIC   : Akaike information criterion scores and weights.
+AICc, w-AICc : Corrected AIC scores and weights.
+BIC, w-BIC   : Bayesian information criterion scores and weights.
+
+Plus signs denote the 95% confidence sets.
+Minus signs denote significant exclusion.
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: HKY+F+R2
+
+Rate parameter R:
+
+  A-C: 1.0000
+  A-G: 2.7339
+  A-T: 1.0000
+  C-G: 1.0000
+  C-T: 2.7339
+  G-T: 1.0000
+
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.2557
+  pi(C) = 0.1986
+  pi(G) = 0.2453
+  pi(T) = 0.3004
+
+Rate matrix Q:
+
+  A        -1    0.1699    0.5736    0.2569
+  C    0.2187    -1.131    0.2098    0.7024
+  G    0.5979    0.1699    -1.025    0.2569
+  T    0.2187    0.4644    0.2098   -0.8929
+
+Model of rate heterogeneity: FreeRate with 2 categories
+Site proportion and rates:  (0.5066,0.1329) (0.4934,1.89)
+
+ Category  Relative_rate  Proportion
+  1         0.1329         0.5066
+  2         1.89           0.4934
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -5842.9953 (s.e. 143.3468)
+Unconstrained log-likelihood (without tree): -3429.0116
+Number of free parameters (#branches + #model parameters): 87
+Akaike information criterion (AIC) score: 11859.9906
+Corrected Akaike information criterion (AICc) score: 11890.4320
+Bayesian information criterion (BIC) score: 12241.2086
+
+Total tree length (sum of branch lengths): 9.7330
+Sum of internal branch lengths: 2.0552 (21.1157% of tree length)
+
+WARNING: 16 near-zero internal branches (<0.0017) should be treated with caution
+         Such branches are denoted by '**' in the figure below
+
+NOTE: Tree is UNROOTED although outgroup taxon 'Fistulinella_01' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
++--Fistulinella_01
+|
+|                 +--Fistulinella_02
+|              +--| (99)
+|              |  +**Fistulinella_40
+|           +--| (100)
+|           |  +--Fistulinella_45
+|        +--| (43)
+|        |  |        +**Fistulinella_03
+|        |  |     +**| (60)
+|        |  |     |  +**Fistulinella_04
+|        |  |  +**| (52)
+|        |  |  |  +**Fistulinella_29
+|        |  +--| (96)
+|        |     +--Fistulinella_46
+|     +--| (99)
+|     |  |  +--Fistulinella_41
+|     |  +--| (82)
+|     |     +--Fistulinella_42
+|  +--| (98)
+|  |  |        +**Fistulinella_33
+|  |  |     +**| (29)
+|  |  |     |  |        +--Fistulinella_34
+|  |  |     |  |     +--| (95)
+|  |  |     |  |     |  +--Fistulinella_39
+|  |  |     |  |  +**| (21)
+|  |  |     |  |  |  +**Fistulinella_37
+|  |  |     |  +**| (20)
+|  |  |     |     +**Fistulinella_38
+|  |  |  +--| (81)
+|  |  |  |  +**Fistulinella_36
+|  |  +--| (100)
+|  |     +**Fistulinella_35
++--| (54)
+|  |                 +**Fistulinella_17
+|  |              +**| (46)
+|  |              |  +**Fistulinella_21
+|  |           +**| (70)
+|  |           |  +**Fistulinella_19
+|  |        +**| (63)
+|  |        |  +**Fistulinella_20
+|  |     +--| (100)
+|  |     |  +--Fistulinella_18
+|  |  +--| (62)
+|  |  |  |  +**Fistulinella_31
+|  |  |  +--| (99)
+|  |  |     +**Fistulinella_32
+|  +--| (80)
+|     |  +**Fistulinella_26
+|     +--| (100)
+|        +--Fistulinella_27
+|
+|              +**Fistulinella_05
+|           +**| (63)
+|           |  +**Fistulinella_08
+|        +**| (50)
+|        |  |  +--Fistulinella_11
+|        |  +**| (64)
+|        |     +**Fistulinella_15
+|     +--| (99)
+|     |  +--Fistulinella_28
+|  +--| (62)
+|  |  |                 +--Fistulinella_06
+|  |  |              +**| (20)
+|  |  |              |  +--Fistulinella_07
+|  |  |           +**| (17)
+|  |  |           |  |  +**Fistulinella_09
+|  |  |           |  +**| (37)
+|  |  |           |     +**Fistulinella_12
+|  |  |        +**| (21)
+|  |  |        |  +**Fistulinella_13
+|  |  |     +**| (70)
+|  |  |     |  +--Fistulinella_16
+|  |  |  +--| (99)
+|  |  |  |  +**Fistulinella_10
+|  |  +--| (41)
+|  |     |  +--Fistulinella_25
+|  |     +--| (65)
+|  |        |  +---------------------------------------------------------Fistulinella_43
+|  |        +--| (63)
+|  |           +**Fistulinella_44
++--| (30)
+   +---Fistulinella_30
+
+Tree in newick format:
+
+(Fistulinella_01:0.2500303969,((((((Fistulinella_02:0.0020716731,Fistulinella_40:0.0000029649)99:0.0409967750,Fistulinella_45:0.0209890099)100:0.1773208122,(((Fistulinella_03:0.0000010151,Fistulinella_04:0.0000010151)60:0.0000010151,Fistulinella_29:0.0000010151)52:0.0000010151,Fistulinella_46:0.0018581943)96:0.0703162567)43:0.0361978399,(Fistulinella_41:0.1628218091,Fistulinella_42:0.0940568962)82:0.0227809899)99:0.2145052591,(((Fistulinella_33:0.0000010151,(((Fistulinella_34:0.0017306424,Fistulinella_39:0.0109819031)95:0.0052999088,Fistulinella_37:0.0000010151)21:0.0000023138,Fistulinella_38:0.0000010151)20:0.0000023215)29:0.0000010151,Fistulinella_36:0.0000010151)81:0.0092319665,Fistulinella_35:0.0000029933)100:0.3063467559)98:0.2138434800,((((((Fistulinella_17:0.0000010151,Fistulinella_21:0.0000010151)46:0.0000010151,Fistulinella_19:0.0000010151)70:0.0000010151,Fistulinella_20:0.0000010151)63:0.0000023548,Fistulinella_18:0.0208220024)100:0.3399052275,(Fistulinella_31:0.0000010151,Fistulinella_32:0.0000010151)99:0.0810099907)62:0.0475220338,(Fistulinella_26:0.0000025033,Fistulinella_27:0.0017399395)100:0.0997061095)80:0.1222791499)54:0.0213980071,(((((Fistulinella_05:0.0000010151,Fistulinella_08:0.0000010151)63:0.0000020291,(Fistulinella_11:0.0016941756,Fistulinella_15:0.0000010151)64:0.0000010951)50:0.0000023372,Fistulinella_28:0.0017050433)99:0.0357323870,((((((Fistulinella_06:0.0017250904,Fistulinella_07:0.0017293209)20:0.0000024215,(Fistulinella_09:0.0000010151,Fistulinella_12:0.0000010151)37:0.0000010151)17:0.0000010151,Fistulinella_13:0.0000010151)21:0.0000010151,Fistulinella_16:0.0035161212)70:0.0011161858,Fistulinella_10:0.0006121927)99:0.0693419306,(Fistulinella_25:0.0243192770,(Fistulinella_43:6.4484284872,Fistulinella_44:0.0000028345)63:0.0395085820)65:0.0593760007)41:0.0175329034)62:0.0800081088,Fistulinella_30:0.5459591480)30:0.0249177517);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000 bootstrap trees
+Log-likelihood of consensus tree: -5843.215418
+Robinson-Foulds distance between ML tree and consensus tree: 14
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++--Fistulinella_01
+|
+|                 +--Fistulinella_02
+|              +--| (99)
+|              |  +--Fistulinella_40
+|           +--| (100)
+|           |  +--Fistulinella_45
+|        +--| (56)
+|        |  |  +--Fistulinella_41
+|        |  +--| (82)
+|        |     +--Fistulinella_42
+|     +--| (99)
+|     |  |        +--Fistulinella_03
+|     |  |     +--| (60)
+|     |  |     |  +--Fistulinella_04
+|     |  |  +--| (52)
+|     |  |  |  +--Fistulinella_29
+|     |  +--| (96)
+|     |     +--Fistulinella_46
+|  +--| (98)
+|  |  |           +--Fistulinella_33
+|  |  |        +--| (21)
+|  |  |        |  |     +--Fistulinella_34
+|  |  |        |  |  +--| (95)
+|  |  |        |  |  |  +--Fistulinella_39
+|  |  |        |  +--| (32)
+|  |  |        |     +--Fistulinella_36
+|  |  |     +--| (26)
+|  |  |     |  +--Fistulinella_38
+|  |  |  +--| (81)
+|  |  |  |  +--Fistulinella_37
+|  |  +--| (100)
+|  |     +--Fistulinella_35
++--| (54)
+|  |                 +--Fistulinella_17
+|  |              +--| (46)
+|  |              |  +--Fistulinella_21
+|  |           +--| (70)
+|  |           |  |        +**Fistulinella_19
+|  |           |  |     +**|
+|  |           |  |     |  +**Fistulinella_24
+|  |           |  |  +**|
+|  |           |  |  |  +**Fistulinella_23
+|  |           |  +--|
+|  |           |     +**Fistulinella_22
+|  |        +--| (63)
+|  |        |  +--Fistulinella_20
+|  |     +--| (100)
+|  |     |  +--Fistulinella_18
+|  |  +--| (62)
+|  |  |  |  +--Fistulinella_31
+|  |  |  +--| (99)
+|  |  |     +--Fistulinella_32
+|  +--| (80)
+|     |  +--Fistulinella_26
+|     +--| (100)
+|        +--Fistulinella_27
+|
+|                 +**Fistulinella_05
+|              +--|
+|              |  +**Fistulinella_14
+|           +--| (63)
+|           |  +--Fistulinella_08
+|        +--| (50)
+|        |  |  +--Fistulinella_11
+|        |  +**| (64)
+|        |     +--Fistulinella_15
+|     +--| (99)
+|     |  +--Fistulinella_28
+|  +--| (62)
+|  |  |              +--Fistulinella_06
+|  |  |           +--| (31)
+|  |  |           |  |  +--Fistulinella_13
+|  |  |           |  +--| (38)
+|  |  |           |     +--Fistulinella_16
+|  |  |        +--| (31)
+|  |  |        |  |  +--Fistulinella_09
+|  |  |        |  +--| (37)
+|  |  |        |     +--Fistulinella_12
+|  |  |     +--| (70)
+|  |  |     |  +--Fistulinella_07
+|  |  |  +--| (99)
+|  |  |  |  +--Fistulinella_10
+|  |  +--| (41)
+|  |     |  +--Fistulinella_25
+|  |     +--| (65)
+|  |        |  +---------------------------------------------------------Fistulinella_43
+|  |        +--| (63)
+|  |           +--Fistulinella_44
++--| (30)
+   +---Fistulinella_30
+
+
+Consensus tree in newick format: 
+
+(Fistulinella_01:0.2499054661,((((((Fistulinella_02:0.0020649196,Fistulinella_40:0.0000020100)99:0.0403333080,Fistulinella_45:0.0212058679)100:0.1677685927,(Fistulinella_41:0.1653975184,Fistulinella_42:0.0995036263)82:0.0330885524)56:0.0473755257,(((Fistulinella_03:0.0000026552,Fistulinella_04:0.0000026552)60:0.0000026552,Fistulinella_29:0.0000026552)52:0.0000026552,Fistulinella_46:0.0018519309)96:0.0440938148)99:0.2333881032,((((Fistulinella_33:0.0000026552,((Fistulinella_34:0.0017248402,Fistulinella_39:0.0109465944)95:0.0052828861,Fistulinella_36:0.0000026552)32:0.0000026594)21:0.0000026594,Fistulinella_38:0.0000026552)26:0.0000026594,Fistulinella_37:0.0000026552)81:0.0057955357,Fistulinella_35:0.0033860127)100:0.3036107510)98:0.2097076131,((((((Fistulinella_17:0.0000026552,Fistulinella_21:0.0000026552)46:0.0000026552,(((Fistulinella_19:0.0000000000,Fistulinella_24:0.0000000000):0.0000000000,Fistulinella_23:0.0000000000):0.0000000000,Fistulinella_22:0.0000000000):0.0000026552)70:0.0000026552,Fistulinella_20:0.0000026552)63:0.0000022563,Fistulinella_18:0.0207686219)100:0.3392646411,(Fistulinella_31:0.0000026552,Fistulinella_32:0.0000026552)99:0.0801239187)62:0.0479958275,(Fistulinella_26:0.0000026552,Fistulinella_27:0.0017351537)100:0.0992929764)80:0.1260369968)54:0.0214900655,((((((Fistulinella_05:0.0000000000,Fistulinella_14:0.0000000000):0.0000026552,Fistulinella_08:0.0000026552)63:0.0000026552,(Fistulinella_11:0.0016899383,Fistulinella_15:0.0000026552)64:0.0000010242)50:0.0000024034,Fistulinella_28:0.0017008586)99:0.0354349184,(((((Fistulinella_06:0.0017209115,(Fistulinella_13:0.0000026552,Fistulinella_16:0.0035088468)38:0.0000026552)31:0.0000026552,(Fistulinella_09:0.0000026552,Fistulinella_12:0.0000026552)37:0.0000026552)31:0.0000026552,Fistulinella_07:0.0017251325)70:0.0005277096,Fistulinella_10:0.0011948825)99:0.0692107037,(Fistulinella_25:0.0242547483,(Fistulinella_43:6.5113606479,Fistulinella_44:0.0000026120)63:0.0394426418)65:0.0592133801)41:0.0178409001)62:0.0764664594,Fistulinella_30:0.5462529306)30:0.0249398908);
+
+ALISIM COMMAND
+--------------
+To simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis, you can use the following command:
+
+--alisim simulated_MSA -t data/packages/ITS/Fistulinella/ref.treefile -m "HKY{2.73389}+F{0.255695,0.19859,0.245317,0.300398}+R2{0.506581,0.132924,0.493419,1.89021}" --length 591
+
+To mimic the alignment used to produce this analysis, i.e. simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis *and* copying the same gap positions as the original alignment, you can use the following command:
+
+iqtree -s data/packages/ITS/Fistulinella/aln.masked.fasta --alisim mimicked_MSA
+
+To simulate any number of alignments in either of the two commandlines above, use the --num-alignments options, for example mimic 100 alignments you would use the command line:
+
+iqtree -s data/packages/ITS/Fistulinella/aln.masked.fasta --alisim mimicked_MSA --num-alignments 100
+
+For more information on using AliSim, please visit: www.iqtree.org/doc/AliSim
+
+TIME STAMP
+----------
+
+Date and time: Mon Aug 18 18:33:01 2025
+Total CPU time used: 442.721581 seconds (0h:7m:22s)
+Total wall-clock time used: 280.7524095 seconds (0h:4m:40s)
+

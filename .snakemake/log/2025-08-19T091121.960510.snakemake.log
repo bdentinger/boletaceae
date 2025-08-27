@@ -1,0 +1,9 @@
+Building DAG of jobs...
+InputFunctionException in rule graft_its_clusters in file /home/bdentinger/boletaceae/workflow/rules/its_cluster.smk, line 101:
+Error:
+  AttributeError: 'Checkpoints' object has no attribute 'its_split_by_cluster'
+Wildcards:
+
+Traceback:
+  File "/home/bdentinger/boletaceae/workflow/rules/its_cluster.smk", line 65, in _jplaces_after_split
+  File "/home/bdentinger/boletaceae/workflow/rules/its_cluster.smk", line 52, in _cluster_ids_after_split

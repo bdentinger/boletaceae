@@ -1,0 +1,50 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 64
+Rules claiming more threads will be scaled down.
+Job stats:
+job           count
+----------  -------
+graft_its         1
+its_bridge        1
+qc_locus          1
+site_build        1
+total             4
+
+Select jobs to execute...
+
+[Mon Aug 18 17:02:09 2025]
+rule qc_locus:
+    input: data/staging/ITS.gb
+    output: data/qc/ITS.cleaned.fasta
+    jobid: 39
+    reason: Missing output files: data/qc/ITS.cleaned.fasta
+    wildcards: locus=ITS
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 17:02:09 2025]
+rule site_build:
+    input: data/trees/backbone.rooted.pretty.newick, workflow/scripts/build_site.py
+    output: site/index.html, site/latest/backbone.newick, site/build.txt, site/.nojekyll
+    jobid: 0
+    reason: Updated input files: workflow/scripts/build_site.py
+    resources: tmpdir=/tmp
+
+[Mon Aug 18 17:02:09 2025]
+Finished job 0.
+1 of 4 steps (25%) done
+[Mon Aug 18 17:02:12 2025]
+Error in rule qc_locus:
+    jobid: 39
+    input: data/staging/ITS.gb
+    output: data/qc/ITS.cleaned.fasta
+    shell:
+        mkdir -p data/qc && python3.11 workflow/scripts/normalize_ids.py --in data/staging/ITS.gb --locus ITS --out data/qc/ITS.cleaned.fasta
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job qc_locus since they might be corrupted:
+data/qc/ITS.cleaned.fasta
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2025-08-18T170208.628898.snakemake.log

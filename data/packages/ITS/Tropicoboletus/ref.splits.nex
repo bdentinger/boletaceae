@@ -1,0 +1,35 @@
+#nexus
+
+BEGIN Taxa;
+DIMENSIONS ntax=5;
+TAXLABELS
+[1] 'ny_577594_tjb_8253_holotype|ITS|OQ108299.1'
+[2] 'mo439745_komille277|ITS|OQ108298.1'
+[3] 'jbsd133074_ange1406|ITS|OQ108297.1'
+[4] 'jbsd133072_ange203|ITS|OQ108296.1'
+[5] 'jbsd133072_ange208|ITS|OQ108295.1'
+;
+END; [Taxa]
+
+BEGIN Splits;
+DIMENSIONS ntax=5 nsplits=15;
+FORMAT labels=no weights=yes confidences=no intervals=no;
+MATRIX
+	100	 2,
+	100	 3,
+	16	 2 3,
+	100	 5,
+	23	 1 4,
+	100	 4,
+	100	 1,
+	27	 2 5,
+	19	 3 4,
+	30	 1 3,
+	17	 1 5,
+	27	 2 4,
+	19	 3 5,
+	10	 1 2,
+	13	 4 5,
+;
+END; [Splits]
+

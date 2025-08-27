@@ -1,0 +1,930 @@
+IQ-TREE version 3.0.1 for Linux x86 64-bit built May  5 2025
+Developed by Bui Quang Minh, Thomas Wong, Nhan Ly-Trong, Huaiyan Ren
+Contributed by Lam-Tung Nguyen, Dominik Schrempf, Chris Bielow,
+Olga Chernomor, Michael Woodhams, Diep Thi Hoang, Heiko Schmidt
+
+Host:    lnx820.umnh.utah.edu (AVX2, FMA3, 865 GB RAM)
+Command: /home/bdentinger/iqtree-3.0.1-Linux/bin/iqtree3_intel -s data/packages/ITS/Hortiboletus/aln.masked.fasta -m MFP -bb 1000 -nt AUTO -pre data/packages/ITS/Hortiboletus/ref
+Seed:    709044 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Mon Aug 18 18:37:57 2025
+Kernel:  AVX+FMA - auto-detect threads (72 CPU cores detected)
+
+Reading alignment file data/packages/ITS/Hortiboletus/aln.masked.fasta ... Fasta format detected
+Reading fasta file: done in 0.0043053 secs using 97.86% CPU
+Alignment most likely contains DNA/RNA sequences
+Constructing alignment: done in 0.00386014 secs using 25.49% CPU
+Alignment has 281 sequences with 678 columns, 611 distinct patterns
+441 parsimony-informative, 108 singleton sites, 129 constant sites
+                  Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 0.000558635 secs using 89.86% CPU
+   1  Hortiboletus_001    0.29%    passed     90.82%
+   2  Hortiboletus_002    0.00%    passed     98.02%
+   3  Hortiboletus_003    0.00%    passed     93.22%
+   4  Hortiboletus_004    7.23%    passed     92.66%
+   5  Hortiboletus_005    0.00%    passed     93.22%
+   6  Hortiboletus_006   47.05%    passed     78.89%
+   7  Hortiboletus_007   47.79%    passed     79.67%
+   8  Hortiboletus_008    0.00%    passed     98.62%
+   9  Hortiboletus_009    0.00%    passed     98.10%
+  10  Hortiboletus_010    0.44%    passed     97.49%
+  11  Hortiboletus_011    0.00%    passed     93.22%
+  12  Hortiboletus_012    0.59%    passed     95.05%
+  13  Hortiboletus_013    0.00%    passed     93.22%
+  14  Hortiboletus_014    0.00%    passed     93.22%
+  15  Hortiboletus_015    0.00%    passed     94.82%
+  16  Hortiboletus_016    0.00%    passed     93.22%
+  17  Hortiboletus_017    0.00%    passed     94.94%
+  18  Hortiboletus_018   32.01%    passed     67.45%
+  19  Hortiboletus_019    0.00%    passed     95.87%
+  20  Hortiboletus_020   54.28%    passed     61.72%
+  21  Hortiboletus_021   11.65%    passed     94.77%
+  22  Hortiboletus_022   53.24%    passed     75.49%
+  23  Hortiboletus_023   80.68%    passed     95.39%
+  24  Hortiboletus_024    0.15%    passed     95.76%
+  25  Hortiboletus_025   28.91%    passed     86.41%
+  26  Hortiboletus_026    4.57%    passed     73.65%
+  27  Hortiboletus_027    0.29%    passed     92.37%
+  28  Hortiboletus_028   10.91%    passed     96.70%
+  29  Hortiboletus_029    6.78%    passed     96.56%
+  30  Hortiboletus_030    6.93%    passed     85.51%
+  31  Hortiboletus_031    0.44%    passed     92.84%
+  32  Hortiboletus_032    0.44%    passed     92.84%
+  33  Hortiboletus_033    0.44%    passed     92.84%
+  34  Hortiboletus_034    0.29%    passed     93.93%
+  35  Hortiboletus_035   14.75%    passed     94.82%
+  36  Hortiboletus_036    1.47%    passed     92.72%
+  37  Hortiboletus_037    0.59%    passed     99.03%
+  38  Hortiboletus_038    0.88%    passed     94.84%
+  39  Hortiboletus_039    0.29%    passed     94.86%
+  40  Hortiboletus_040    0.29%    passed     93.93%
+  41  Hortiboletus_041    0.15%    passed     93.54%
+  42  Hortiboletus_042    0.29%    passed     92.37%
+  43  Hortiboletus_043    0.29%    passed     92.37%
+  44  Hortiboletus_044    0.29%    passed     92.37%
+  45  Hortiboletus_045    6.19%    passed     91.38%
+  46  Hortiboletus_046    7.67%    passed     90.48%
+  47  Hortiboletus_047    1.47%    passed     88.41%
+  48  Hortiboletus_048    0.15%    passed     93.54%
+  49  Hortiboletus_049    0.15%    passed     93.54%
+  50  Hortiboletus_050   17.40%    passed     94.41%
+  51  Hortiboletus_051    0.29%    passed     94.75%
+  52  Hortiboletus_052    0.44%    passed     92.84%
+  53  Hortiboletus_053    0.29%    passed     92.37%
+  54  Hortiboletus_054    2.06%    passed     98.63%
+  55  Hortiboletus_055    0.59%    passed     97.41%
+  56  Hortiboletus_056    0.59%    passed     97.41%
+  57  Hortiboletus_057    5.46%    passed     99.27%
+  58  Hortiboletus_058    0.44%    passed     97.49%
+  59  Hortiboletus_059    0.44%    passed     97.23%
+  60  Hortiboletus_060    0.59%    passed     98.07%
+  61  Hortiboletus_061    0.59%    passed     98.07%
+  62  Hortiboletus_062   35.55%    passed     91.03%
+  63  Hortiboletus_063    2.80%    passed     99.87%
+  64  Hortiboletus_064    0.44%    passed     97.49%
+  65  Hortiboletus_065    0.44%    passed     97.49%
+  66  Hortiboletus_066    0.59%    passed     96.96%
+  67  Hortiboletus_067    4.87%    passed     98.61%
+  68  Hortiboletus_068    0.74%    passed     97.19%
+  69  Hortiboletus_069    0.44%    passed     97.49%
+  70  Hortiboletus_070    2.06%    passed     99.51%
+  71  Hortiboletus_071    0.59%    passed     94.78%
+  72  Hortiboletus_072    0.59%    passed     97.41%
+  73  Hortiboletus_073    1.03%    passed     98.26%
+  74  Hortiboletus_074    2.80%    passed     99.90%
+  75  Hortiboletus_075    0.44%    passed     98.65%
+  76  Hortiboletus_076   11.21%    passed     93.61%
+  77  Hortiboletus_077    0.44%    passed     97.49%
+  78  Hortiboletus_078   11.21%    passed     93.61%
+  79  Hortiboletus_079    0.44%    passed     96.55%
+  80  Hortiboletus_080    0.74%    passed     97.87%
+  81  Hortiboletus_081    0.74%    passed     97.19%
+  82  Hortiboletus_082    0.44%    passed     92.52%
+  83  Hortiboletus_083    0.88%    passed     95.55%
+  84  Hortiboletus_084    0.44%    passed     97.63%
+  85  Hortiboletus_085    0.44%    passed     98.65%
+  86  Hortiboletus_086    0.44%    passed     98.65%
+  87  Hortiboletus_087    0.44%    passed     97.23%
+  88  Hortiboletus_088   25.66%    passed     98.60%
+  89  Hortiboletus_089    1.62%    passed     93.91%
+  90  Hortiboletus_090   26.25%    passed     99.21%
+  91  Hortiboletus_091    0.00%    passed     82.37%
+  92  Hortiboletus_092    0.15%    passed     89.75%
+  93  Hortiboletus_093    0.74%    passed     86.36%
+  94  Hortiboletus_094   22.27%    passed     94.38%
+  95  Hortiboletus_095    0.00%    passed     88.47%
+  96  Hortiboletus_096    1.03%    passed     80.35%
+  97  Hortiboletus_097    7.08%    passed     90.29%
+  98  Hortiboletus_098   24.78%    passed     87.20%
+  99  Hortiboletus_099    0.59%    passed     92.63%
+ 100  Hortiboletus_100   10.62%    passed     93.61%
+ 101  Hortiboletus_101   35.10%    passed     35.11%
+ 102  Hortiboletus_102   55.31%    passed     44.57%
+ 103  Hortiboletus_103   55.60%    passed     39.93%
+ 104  Hortiboletus_104   21.39%    passed     86.95%
+ 105  Hortiboletus_105   37.02%    passed     87.90%
+ 106  Hortiboletus_106    0.15%    passed     82.00%
+ 107  Hortiboletus_107    0.00%    passed     88.47%
+ 108  Hortiboletus_108    6.19%    passed     91.43%
+ 109  Hortiboletus_109   25.96%    passed     88.29%
+ 110  Hortiboletus_110    0.15%    passed     84.02%
+ 111  Hortiboletus_111    0.15%    passed     81.44%
+ 112  Hortiboletus_112   62.83%    passed     54.48%
+ 113  Hortiboletus_113   62.83%    passed     44.54%
+ 114  Hortiboletus_114    0.00%    passed     86.55%
+ 115  Hortiboletus_115    2.95%    passed     85.77%
+ 116  Hortiboletus_116   37.76%    passed     85.98%
+ 117  Hortiboletus_117    0.00%    passed     88.47%
+ 118  Hortiboletus_118   14.75%    passed     89.02%
+ 119  Hortiboletus_119    1.47%    passed     91.97%
+ 120  Hortiboletus_120   40.27%    passed     62.09%
+ 121  Hortiboletus_121    0.29%    passed     89.07%
+ 122  Hortiboletus_122    3.39%    passed     93.83%
+ 123  Hortiboletus_123    0.15%    passed     89.41%
+ 124  Hortiboletus_124    0.00%    passed     86.21%
+ 125  Hortiboletus_125    0.59%    passed     86.00%
+ 126  Hortiboletus_126    0.29%    passed     78.80%
+ 127  Hortiboletus_127    1.33%    passed     83.74%
+ 128  Hortiboletus_128    0.15%    passed     92.79%
+ 129  Hortiboletus_129    0.44%    passed     96.62%
+ 130  Hortiboletus_130    0.44%    passed     97.66%
+ 131  Hortiboletus_131   11.65%    failed      0.46%
+ 132  Hortiboletus_132   11.65%    failed      0.51%
+ 133  Hortiboletus_133   11.65%    failed      0.46%
+ 134  Hortiboletus_134   11.65%    failed      0.58%
+ 135  Hortiboletus_135   11.65%    failed      0.58%
+ 136  Hortiboletus_136    0.15%    passed     96.85%
+ 137  Hortiboletus_137    0.00%    passed     96.32%
+ 138  Hortiboletus_138    0.00%    passed     95.59%
+ 139  Hortiboletus_139    2.80%    passed     98.01%
+ 140  Hortiboletus_140    2.36%    passed     98.09%
+ 141  Hortiboletus_141    0.15%    passed     92.25%
+ 142  Hortiboletus_142    0.44%    passed     97.66%
+ 143  Hortiboletus_143    0.44%    passed     97.66%
+ 144  Hortiboletus_144    0.44%    passed     97.66%
+ 145  Hortiboletus_145    0.44%    passed     97.66%
+ 146  Hortiboletus_146    0.44%    passed     97.66%
+ 147  Hortiboletus_147    0.44%    passed     96.69%
+ 148  Hortiboletus_148    0.44%    passed     97.49%
+ 149  Hortiboletus_149    0.44%    passed     96.55%
+ 150  Hortiboletus_150    2.21%    passed     91.40%
+ 151  Hortiboletus_151    0.00%    passed     96.32%
+ 152  Hortiboletus_152    0.00%    passed     96.32%
+ 153  Hortiboletus_153    0.00%    passed     96.32%
+ 154  Hortiboletus_154    0.00%    passed     82.37%
+ 155  Hortiboletus_155    0.00%    passed     96.32%
+ 156  Hortiboletus_156    0.00%    passed     96.32%
+ 157  Hortiboletus_157    0.15%    passed     91.43%
+ 158  Hortiboletus_158    4.13%    failed      0.01%
+ 159  Hortiboletus_159   24.19%    passed     73.43%
+ 160  Hortiboletus_160    0.00%    passed     96.32%
+ 161  Hortiboletus_161    0.00%    passed     96.32%
+ 162  Hortiboletus_162    2.65%    passed     92.02%
+ 163  Hortiboletus_163   12.39%    passed     77.38%
+ 164  Hortiboletus_164   10.47%    passed     72.62%
+ 165  Hortiboletus_165    0.00%    passed     97.58%
+ 166  Hortiboletus_166    0.00%    passed     96.31%
+ 167  Hortiboletus_167    0.00%    passed     94.91%
+ 168  Hortiboletus_168   28.61%    passed     85.22%
+ 169  Hortiboletus_169    0.29%    passed     93.93%
+ 170  Hortiboletus_170    0.59%    passed     86.19%
+ 171  Hortiboletus_171    0.29%    passed     68.77%
+ 172  Hortiboletus_172   34.51%    passed     90.50%
+ 173  Hortiboletus_173    9.44%    passed     67.82%
+ 174  Hortiboletus_174    9.00%    passed     68.54%
+ 175  Hortiboletus_175   26.25%    passed     91.88%
+ 176  Hortiboletus_176    1.62%    passed     87.06%
+ 177  Hortiboletus_177    1.62%    passed     87.06%
+ 178  Hortiboletus_178    1.62%    passed     87.06%
+ 179  Hortiboletus_179   18.44%    passed     97.11%
+ 180  Hortiboletus_180    1.62%    passed     87.06%
+ 181  Hortiboletus_181    8.11%    passed     98.66%
+ 182  Hortiboletus_182    0.00%    passed     86.21%
+ 183  Hortiboletus_183    0.15%    passed     82.00%
+ 184  Hortiboletus_184   14.31%    passed     83.03%
+ 185  Hortiboletus_185   16.08%    passed     91.24%
+ 186  Hortiboletus_186    3.98%    passed     90.60%
+ 187  Hortiboletus_187    6.93%    passed     92.27%
+ 188  Hortiboletus_188    6.93%    passed     92.27%
+ 189  Hortiboletus_189    6.93%    passed     92.27%
+ 190  Hortiboletus_190    6.93%    passed     92.27%
+ 191  Hortiboletus_191    6.93%    passed     92.27%
+ 192  Hortiboletus_192    6.93%    passed     92.27%
+ 193  Hortiboletus_193   15.49%    passed     83.34%
+ 194  Hortiboletus_194    0.44%    passed     97.23%
+ 195  Hortiboletus_195    0.44%    passed     98.61%
+ 196  Hortiboletus_196    0.44%    passed     96.52%
+ 197  Hortiboletus_197    0.74%    passed     99.60%
+ 198  Hortiboletus_198   14.01%    passed     99.50%
+ 199  Hortiboletus_199    0.00%    passed     96.60%
+ 200  Hortiboletus_200    0.00%    passed     94.52%
+ 201  Hortiboletus_201   11.65%    passed     92.96%
+ 202  Hortiboletus_202    1.77%    passed     93.21%
+ 203  Hortiboletus_203    0.00%    passed     96.32%
+ 204  Hortiboletus_204   22.86%    passed     99.11%
+ 205  Hortiboletus_205    0.00%    passed     96.32%
+ 206  Hortiboletus_206    0.00%    passed     94.20%
+ 207  Hortiboletus_207    0.00%    passed     93.22%
+ 208  Hortiboletus_208    0.00%    passed     94.52%
+ 209  Hortiboletus_209    0.00%    passed     96.32%
+ 210  Hortiboletus_210    0.00%    passed     92.11%
+ 211  Hortiboletus_211    0.00%    passed     95.88%
+ 212  Hortiboletus_212    0.00%    passed     91.01%
+ 213  Hortiboletus_213    0.00%    passed     94.52%
+ 214  Hortiboletus_214    2.36%    passed     97.88%
+ 215  Hortiboletus_215    0.00%    passed     96.32%
+ 216  Hortiboletus_216    0.00%    passed     98.10%
+ 217  Hortiboletus_217    0.15%    passed     98.69%
+ 218  Hortiboletus_218    0.00%    passed     96.31%
+ 219  Hortiboletus_219    0.00%    passed     96.31%
+ 220  Hortiboletus_220    0.00%    passed     96.31%
+ 221  Hortiboletus_221    0.00%    passed     96.31%
+ 222  Hortiboletus_222    0.00%    passed     96.31%
+ 223  Hortiboletus_223    0.29%    passed     90.82%
+ 224  Hortiboletus_224    0.00%    passed     93.22%
+ 225  Hortiboletus_225    0.00%    passed     96.60%
+ 226  Hortiboletus_226    2.36%    passed     99.21%
+ 227  Hortiboletus_227    0.00%    passed     96.32%
+ 228  Hortiboletus_228    0.00%    passed     82.37%
+ 229  Hortiboletus_229    0.00%    passed     82.37%
+ 230  Hortiboletus_230    5.31%    passed     23.67%
+ 231  Hortiboletus_231    0.00%    passed     96.32%
+ 232  Hortiboletus_232    3.10%    passed     89.25%
+ 233  Hortiboletus_233   30.09%    passed     97.07%
+ 234  Hortiboletus_234    0.00%    passed     93.22%
+ 235  Hortiboletus_235    0.00%    passed     96.60%
+ 236  Hortiboletus_236    0.74%    passed     90.57%
+ 237  Hortiboletus_237   35.25%    passed     95.12%
+ 238  Hortiboletus_238    0.00%    passed     96.32%
+ 239  Hortiboletus_239    4.42%    passed     93.98%
+ 240  Hortiboletus_240    4.57%    passed     93.72%
+ 241  Hortiboletus_241    3.24%    passed     92.24%
+ 242  Hortiboletus_242   14.31%    passed     92.95%
+ 243  Hortiboletus_243    4.72%    passed     99.44%
+ 244  Hortiboletus_244    2.36%    passed     97.88%
+ 245  Hortiboletus_245    0.44%    passed     98.25%
+ 246  Hortiboletus_246    3.98%    passed     95.52%
+ 247  Hortiboletus_247   18.44%    passed     97.11%
+ 248  Hortiboletus_248    0.00%    passed     97.47%
+ 249  Hortiboletus_249    4.28%    passed     84.48%
+ 250  Hortiboletus_250    0.00%    passed     89.11%
+ 251  Hortiboletus_251   14.60%    passed     78.38%
+ 252  Hortiboletus_252   10.47%    passed     97.39%
+ 253  Hortiboletus_253   11.65%    passed     92.96%
+ 254  Hortiboletus_254    0.00%    passed     89.11%
+ 255  Hortiboletus_255   11.65%    passed     92.96%
+ 256  Hortiboletus_256    2.21%    passed     99.46%
+ 257  Hortiboletus_257    1.47%    passed     96.36%
+ 258  Hortiboletus_258    3.69%    passed     84.89%
+ 259  Hortiboletus_259    2.06%    passed     87.63%
+ 260  Hortiboletus_260    2.06%    passed     87.63%
+ 261  Hortiboletus_261   17.85%    passed     99.47%
+ 262  Hortiboletus_262    6.93%    passed     92.15%
+ 263  Hortiboletus_263    0.00%    passed     97.18%
+ 264  Hortiboletus_264   35.55%    passed     61.74%
+ 265  Hortiboletus_265   23.45%    passed     71.47%
+ 266  Hortiboletus_266   30.97%    passed     87.68%
+ 267  Hortiboletus_267    1.77%    passed     88.77%
+ 268  Hortiboletus_268    1.33%    passed     94.12%
+ 269  Hortiboletus_269    3.83%    passed     91.37%
+ 270  Hortiboletus_270    3.83%    passed     91.37%
+ 271  Hortiboletus_271   43.22%    passed     33.96%
+ 272  Hortiboletus_272    0.74%    passed     99.82%
+ 273  Hortiboletus_273    0.44%    passed     97.49%
+ 274  Hortiboletus_274    1.47%    passed     99.43%
+ 275  Hortiboletus_275    1.33%    passed     99.83%
+ 276  Hortiboletus_276    1.18%    passed     89.64%
+ 277  Hortiboletus_277    0.00%    passed     96.46%
+ 278  Hortiboletus_278   22.86%    passed     94.17%
+ 279  Hortiboletus_279    0.00%    passed     96.32%
+ 280  Hortiboletus_280    0.00%    passed     91.01%
+ 281  Hortiboletus_281   25.81%    passed     88.94%
+WARNING: 7 sequences contain more than 50% gaps/ambiguity
+****  TOTAL               6.98%  6 sequences failed composition chi2 test (p-value<5%; df=3)
+NOTE: Hortiboletus_223 is identical to Hortiboletus_001 but kept for subsequent analysis
+NOTE: Hortiboletus_005 is identical to Hortiboletus_003 but kept for subsequent analysis
+NOTE: Hortiboletus_216 is identical to Hortiboletus_009 but kept for subsequent analysis
+NOTE: Hortiboletus_058 is identical to Hortiboletus_010 but kept for subsequent analysis
+NOTE: Hortiboletus_042 is identical to Hortiboletus_027 but kept for subsequent analysis
+NOTE: Hortiboletus_032 is identical to Hortiboletus_031 but kept for subsequent analysis
+NOTE: Hortiboletus_040 is identical to Hortiboletus_034 but kept for subsequent analysis
+NOTE: Hortiboletus_048 is identical to Hortiboletus_041 but kept for subsequent analysis
+NOTE: Hortiboletus_056 is identical to Hortiboletus_055 but kept for subsequent analysis
+NOTE: Hortiboletus_194 is identical to Hortiboletus_059 but kept for subsequent analysis
+NOTE: Hortiboletus_061 is identical to Hortiboletus_060 but kept for subsequent analysis
+NOTE: Hortiboletus_085 is identical to Hortiboletus_075 but kept for subsequent analysis
+NOTE: Hortiboletus_078 is identical to Hortiboletus_076 but kept for subsequent analysis
+NOTE: Hortiboletus_149 is identical to Hortiboletus_079 but kept for subsequent analysis
+NOTE: Hortiboletus_154 is identical to Hortiboletus_091 but kept for subsequent analysis
+NOTE: Hortiboletus_107 is identical to Hortiboletus_095 but kept for subsequent analysis
+NOTE: Hortiboletus_183 is identical to Hortiboletus_106 but kept for subsequent analysis
+NOTE: Hortiboletus_142 is identical to Hortiboletus_130 but kept for subsequent analysis
+NOTE: Hortiboletus_133 is identical to Hortiboletus_131 but kept for subsequent analysis
+NOTE: Hortiboletus_135 is identical to Hortiboletus_134 but kept for subsequent analysis
+NOTE: Hortiboletus_151 is identical to Hortiboletus_137 but kept for subsequent analysis
+NOTE: Hortiboletus_153 is identical to Hortiboletus_152 but kept for subsequent analysis
+NOTE: Hortiboletus_218 is identical to Hortiboletus_166 but kept for subsequent analysis
+NOTE: Hortiboletus_177 is identical to Hortiboletus_176 but kept for subsequent analysis
+NOTE: Hortiboletus_247 is identical to Hortiboletus_179 but kept for subsequent analysis
+NOTE: Hortiboletus_188 is identical to Hortiboletus_187 but kept for subsequent analysis
+NOTE: Hortiboletus_225 is identical to Hortiboletus_199 but kept for subsequent analysis
+NOTE: Hortiboletus_208 is identical to Hortiboletus_200 but kept for subsequent analysis
+NOTE: Hortiboletus_253 is identical to Hortiboletus_201 but kept for subsequent analysis
+NOTE: Hortiboletus_254 is identical to Hortiboletus_250 but kept for subsequent analysis
+NOTE: Hortiboletus_260 is identical to Hortiboletus_259 but kept for subsequent analysis
+NOTE: Hortiboletus_270 is identical to Hortiboletus_269 but kept for subsequent analysis
+Checking for duplicate sequences: done in 0.00195313 secs using 65.54% CPU
+Identifying sites to remove: done in 0.00245397 secs using 85.33% CPU
+NOTE: 47 identical sequences (see below) will be ignored for subsequent analysis
+NOTE: Hortiboletus_011 (identical to Hortiboletus_003) is ignored but added at the end
+NOTE: Hortiboletus_013 (identical to Hortiboletus_003) is ignored but added at the end
+NOTE: Hortiboletus_014 (identical to Hortiboletus_003) is ignored but added at the end
+NOTE: Hortiboletus_016 (identical to Hortiboletus_003) is ignored but added at the end
+NOTE: Hortiboletus_207 (identical to Hortiboletus_003) is ignored but added at the end
+NOTE: Hortiboletus_224 (identical to Hortiboletus_003) is ignored but added at the end
+NOTE: Hortiboletus_064 (identical to Hortiboletus_010) is ignored but added at the end
+NOTE: Hortiboletus_065 (identical to Hortiboletus_010) is ignored but added at the end
+NOTE: Hortiboletus_069 (identical to Hortiboletus_010) is ignored but added at the end
+NOTE: Hortiboletus_077 (identical to Hortiboletus_010) is ignored but added at the end
+NOTE: Hortiboletus_148 (identical to Hortiboletus_010) is ignored but added at the end
+NOTE: Hortiboletus_273 (identical to Hortiboletus_010) is ignored but added at the end
+NOTE: Hortiboletus_043 (identical to Hortiboletus_027) is ignored but added at the end
+NOTE: Hortiboletus_044 (identical to Hortiboletus_027) is ignored but added at the end
+NOTE: Hortiboletus_053 (identical to Hortiboletus_027) is ignored but added at the end
+NOTE: Hortiboletus_049 (identical to Hortiboletus_041) is ignored but added at the end
+NOTE: Hortiboletus_086 (identical to Hortiboletus_075) is ignored but added at the end
+NOTE: Hortiboletus_228 (identical to Hortiboletus_091) is ignored but added at the end
+NOTE: Hortiboletus_229 (identical to Hortiboletus_091) is ignored but added at the end
+NOTE: Hortiboletus_117 (identical to Hortiboletus_095) is ignored but added at the end
+NOTE: Hortiboletus_143 (identical to Hortiboletus_130) is ignored but added at the end
+NOTE: Hortiboletus_144 (identical to Hortiboletus_130) is ignored but added at the end
+NOTE: Hortiboletus_145 (identical to Hortiboletus_130) is ignored but added at the end
+NOTE: Hortiboletus_146 (identical to Hortiboletus_130) is ignored but added at the end
+NOTE: Hortiboletus_155 (identical to Hortiboletus_137) is ignored but added at the end
+NOTE: Hortiboletus_160 (identical to Hortiboletus_137) is ignored but added at the end
+NOTE: Hortiboletus_209 (identical to Hortiboletus_137) is ignored but added at the end
+NOTE: Hortiboletus_227 (identical to Hortiboletus_137) is ignored but added at the end
+NOTE: Hortiboletus_231 (identical to Hortiboletus_137) is ignored but added at the end
+NOTE: Hortiboletus_238 (identical to Hortiboletus_137) is ignored but added at the end
+NOTE: Hortiboletus_279 (identical to Hortiboletus_137) is ignored but added at the end
+NOTE: Hortiboletus_156 (identical to Hortiboletus_152) is ignored but added at the end
+NOTE: Hortiboletus_203 (identical to Hortiboletus_152) is ignored but added at the end
+NOTE: Hortiboletus_205 (identical to Hortiboletus_152) is ignored but added at the end
+NOTE: Hortiboletus_219 (identical to Hortiboletus_166) is ignored but added at the end
+NOTE: Hortiboletus_220 (identical to Hortiboletus_166) is ignored but added at the end
+NOTE: Hortiboletus_221 (identical to Hortiboletus_166) is ignored but added at the end
+NOTE: Hortiboletus_222 (identical to Hortiboletus_166) is ignored but added at the end
+NOTE: Hortiboletus_178 (identical to Hortiboletus_176) is ignored but added at the end
+NOTE: Hortiboletus_180 (identical to Hortiboletus_176) is ignored but added at the end
+NOTE: Hortiboletus_189 (identical to Hortiboletus_187) is ignored but added at the end
+NOTE: Hortiboletus_190 (identical to Hortiboletus_187) is ignored but added at the end
+NOTE: Hortiboletus_191 (identical to Hortiboletus_187) is ignored but added at the end
+NOTE: Hortiboletus_192 (identical to Hortiboletus_187) is ignored but added at the end
+NOTE: Hortiboletus_235 (identical to Hortiboletus_199) is ignored but added at the end
+NOTE: Hortiboletus_213 (identical to Hortiboletus_200) is ignored but added at the end
+NOTE: Hortiboletus_255 (identical to Hortiboletus_201) is ignored but added at the end
+Alignment was printed to data/packages/ITS/Hortiboletus/ref.uniqueseq.phy
+
+For your convenience alignment with unique sequences printed to data/packages/ITS/Hortiboletus/ref.uniqueseq.phy
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.046 seconds
+Measuring multi-threading efficiency up to 72 CPU cores
+Increase to 10 rounds for branch lengths
+194 trees examined
+Threads: 1 / Time: 72.018 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -34545
+Threads: 2 / Time: 52.545 sec / Speedup: 1.371 / Efficiency: 69% / LogL: -34545
+Threads: 3 / Time: 43.283 sec / Speedup: 1.664 / Efficiency: 55% / LogL: -34545
+Threads: 4 / Time: 43.995 sec / Speedup: 1.637 / Efficiency: 41% / LogL: -34545
+Determining AUTO threadcount: done in 211.845 secs using 225.2% CPU
+BEST NUMBER OF THREADS: 3
+
+Perform fast likelihood tree search using GTR+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Optimizing NNI: done in 0.4132 secs using 296% CPU
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -7826.026
+Optimal log-likelihood: -7825.137
+Rate parameters:  A-C: 1.73160  A-G: 3.45536  A-T: 0.94190  C-G: 0.93840  C-T: 4.85342  G-T: 1.00000
+Base frequencies:  A: 0.215  C: 0.236  G: 0.276  T: 0.273
+Proportion of invariable sites: 0.041
+Gamma shape alpha: 1.348
+Parameters optimization took 1 rounds (0.091 sec)
+Time for fast ML tree search: 1.181 seconds
+
+NOTE: ModelFinder requires 49 MB RAM!
+ModelFinder will test up to 968 DNA models (sample size: 678 epsilon: 0.100) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+  1  JC            8224.639     465 17379.277    19423.522    19480.681
+  2  JC+I          8179.076     466 17290.153    19352.921    19396.076
+  3  JC+G4         8068.813     466 17069.626    19132.394    19175.549
+  4  JC+I+G4       8069.475     467 17072.950    19154.435    19183.391
+  5  JC+R2         8049.672     467 17033.344    19114.830    19143.786
+  6  JC+R3         8047.701     469 17033.401    19152.921    19152.882
+ 14  JC+I+R2       8048.365     468 17032.731    19133.133    19147.692
+ 15  JC+I+R3       8047.909     470 17035.818    19174.659    19159.817
+ 27  JC+R2         8049.672     467 17033.344    19114.830    19143.786
+ 28  JC+R3         8047.701     469 17033.401    19152.921    19152.882
+ 36  JC+I+R2       8048.365     468 17032.731    19133.133    19147.692
+ 49  F81+R2        8049.708     467 17033.417    19114.903    19143.859
+ 50  F81+R3        8047.685     469 17033.369    19152.888    19152.849
+ 58  F81+I+R2      8048.388     468 17032.776    19133.178    19147.737
+ 71  F81+F+R2      8057.964     470 17055.928    19194.769    19179.928
+ 72  F81+F+R3      8056.138     472 17056.276    19234.384    19189.314
+ 80  F81+F+I+R2    8056.684     471 17055.368    19213.737    19183.887
+ 93  K2P+R2        7816.507     468 16569.014    18669.416    18683.975
+ 94  K2P+R3        7814.045     470 16568.091    18706.931    18692.090
+102  K2P+I+R2      7815.259     469 16568.519    18688.038    18687.999
+115  K2P+R2        7816.507     468 16569.014    18669.416    18683.975
+116  K2P+R3        7814.045     470 16568.091    18706.931    18692.090
+124  K2P+I+R2      7815.259     469 16568.519    18688.038    18687.999
+137  HKY+R2        7816.484     468 16568.968    18669.369    18683.928
+138  HKY+R3        7814.007     470 16568.014    18706.855    18692.013
+146  HKY+I+R2      7815.258     469 16568.516    18688.036    18687.996
+159  HKY+F+R2      7821.399     471 16584.798    18743.167    18713.316
+160  HKY+F+R3      7819.216     473 16584.432    18782.491    18721.989
+168  HKY+F+I+R2    7820.332     472 16584.664    18762.771    18717.701
+181  TNe+R2        7808.868     469 16555.736    18675.255    18675.216
+182  TNe+R3        7806.500     471 16554.999    18713.368    18683.518
+190  TNe+I+R2      7807.896     470 16555.792    18694.632    18679.791
+203  TNe+R2        7808.868     469 16555.736    18675.255    18675.216
+204  TNe+R3        7806.500     471 16554.999    18713.368    18683.518
+212  TNe+I+R2      7807.896     470 16555.791    18694.632    18679.791
+225  TN+R2         7808.783     469 16555.565    18675.085    18675.046
+226  TN+R3         7806.412     471 16554.824    18713.193    18683.342
+234  TN+I+R2       7807.843     470 16555.686    18694.526    18679.685
+247  TN+F+R2       7816.189     472 16576.378    18754.485    18709.415
+248  TN+F+R3       7814.129     474 16576.258    18794.484    18718.333
+256  TN+F+I+R2     7815.377     473 16576.755    18774.813    18714.311
+269  K3P+R2        7812.544     469 16563.089    18682.608    18682.569
+270  K3P+R3        7810.087     471 16562.174    18720.543    18690.692
+278  K3P+I+R2      7811.217     470 16562.434    18701.275    18686.434
+291  K3P+R2        7812.544     469 16563.089    18682.608    18682.569
+292  K3P+R3        7810.087     471 16562.174    18720.543    18690.692
+300  K3P+I+R2      7811.217     470 16562.434    18701.275    18686.434
+313  K3Pu+R2       7812.430     469 16562.859    18682.378    18682.339
+314  K3Pu+R3       7809.996     471 16561.992    18720.361    18690.510
+322  K3Pu+I+R2     7811.160     470 16562.320    18701.160    18686.319
+335  K3Pu+F+R2     7817.995     472 16579.990    18758.098    18713.028
+336  K3Pu+F+R3     7815.854     474 16579.709    18797.935    18721.784
+344  K3Pu+F+I+R2   7816.885     473 16579.770    18777.829    18717.327
+357  TPM2+R2       7816.334     469 16570.668    18690.188    18690.148
+358  TPM2+R3       7813.704     471 16569.408    18727.777    18697.926
+366  TPM2+I+R2     7815.107     470 16570.213    18709.054    18694.213
+379  TPM2+R2       7816.334     469 16570.668    18690.188    18690.148
+380  TPM2+R3       7813.704     471 16569.408    18727.777    18697.926
+388  TPM2+I+R2     7815.107     470 16570.213    18709.054    18694.213
+401  TPM2u+R2      7816.326     469 16570.651    18690.170    18690.131
+402  TPM2u+R3      7813.678     471 16569.356    18727.725    18697.875
+410  TPM2u+I+R2    7815.089     470 16570.178    18709.019    18694.177
+423  TPM2u+F+R2    7818.054     472 16580.108    18758.215    18713.145
+424  TPM2u+F+R3    7815.602     474 16579.204    18797.430    18721.280
+432  TPM2u+F+I+R2  7816.897     473 16579.794    18777.853    18717.351
+445  TPM3+R2       7815.724     469 16569.447    18688.966    18688.927
+446  TPM3+R3       7813.270     471 16568.539    18726.908    18697.058
+454  TPM3+I+R2     7814.626     470 16569.253    18708.093    18693.252
+467  TPM3+R2       7815.724     469 16569.447    18688.966    18688.927
+468  TPM3+R3       7813.270     471 16568.539    18726.908    18697.058
+476  TPM3+I+R2     7814.626     470 16569.253    18708.093    18693.252
+489  TPM3u+R2      7815.723     469 16569.445    18688.965    18688.926
+490  TPM3u+R3      7813.259     471 16568.519    18726.888    18697.037
+498  TPM3u+I+R2    7814.626     470 16569.251    18708.092    18693.251
+511  TPM3u+F+R2    7818.801     472 16581.603    18759.710    18714.640
+512  TPM3u+F+R3    7816.821     474 16581.641    18799.868    18723.717
+520  TPM3u+F+I+R2  7817.966     473 16581.931    18779.990    18719.488
+533  TIMe+R2       7804.606     470 16549.213    18688.054    18673.212
+534  TIMe+R3       7802.339     472 16548.677    18726.785    18681.715
+542  TIMe+I+R2     7803.654     471 16549.308    18707.677    18677.826
+555  TIMe+R2       7804.606     470 16549.213    18688.054    18673.212
+556  TIMe+R3       7802.339     472 16548.677    18726.785    18681.715
+564  TIMe+I+R2     7803.654     471 16549.308    18707.677    18677.826
+577  TIM+R2        7804.604     470 16549.208    18688.049    18673.207
+578  TIM+R3        7802.331     472 16548.662    18726.769    18681.699
+586  TIM+I+R2      7803.652     471 16549.304    18707.673    18677.822
+599  TIM+F+R2      7812.638     473 16571.275    18769.334    18708.832
+600  TIM+F+R3      7810.617     475 16571.235    18809.849    18717.830
+608  TIM+F+I+R2    7811.773     474 16571.547    18789.773    18713.623
+621  TIM2e+R2      7808.609     470 16557.218    18696.059    18681.217
+622  TIM2e+R3      7806.054     472 16556.108    18734.215    18689.145
+630  TIM2e+I+R2    7807.658     471 16557.316    18715.685    18685.834
+643  TIM2e+R2      7808.609     470 16557.218    18696.059    18681.217
+644  TIM2e+R3      7806.054     472 16556.108    18734.215    18689.145
+652  TIM2e+I+R2    7807.658     471 16557.316    18715.685    18685.834
+665  TIM2+R2       7808.568     470 16557.136    18695.976    18681.135
+666  TIM2+R3       7805.989     472 16555.978    18734.086    18689.016
+674  TIM2+I+R2     7807.588     471 16557.175    18715.544    18685.694
+687  TIM2+F+R2     7812.806     473 16571.612    18769.671    18709.169
+688  TIM2+F+R3     7810.470     475 16570.940    18809.554    18717.535
+696  TIM2+F+I+R2   7811.939     474 16571.879    18790.105    18713.954
+709  TIM3e+R2      7808.130     470 16556.261    18695.101    18680.260
+710  TIM3e+R3      7805.731     472 16555.462    18733.569    18688.499
+718  TIM3e+I+R2    7807.305     471 16556.610    18714.979    18685.128
+731  TIM3e+R2      7808.130     470 16556.261    18695.101    18680.260
+732  TIM3e+R3      7805.731     472 16555.462    18733.569    18688.499
+740  TIM3e+I+R2    7807.305     471 16556.610    18714.979    18685.128
+753  TIM3+R2       7808.129     470 16556.258    18695.099    18680.257
+754  TIM3+R3       7805.716     472 16555.431    18733.539    18688.469
+762  TIM3+I+R2     7807.302     471 16556.604    18714.973    18685.122
+775  TIM3+F+R2     7813.851     473 16573.702    18771.761    18711.259
+776  TIM3+F+R3     7811.742     475 16573.484    18812.098    18720.079
+784  TIM3+F+I+R2   7813.078     474 16574.156    18792.382    18716.232
+797  TVMe+R2       7811.091     471 16564.182    18722.551    18692.700
+798  TVMe+R3       7808.681     473 16563.362    18761.421    18700.918
+806  TVMe+I+R2     7809.971     472 16563.943    18742.050    18696.981
+819  TVMe+R2       7811.091     471 16564.182    18722.551    18692.700
+820  TVMe+R3       7808.681     473 16563.362    18761.421    18700.918
+828  TVMe+I+R2     7809.971     472 16563.943    18742.050    18696.981
+841  TVM+R2        7811.084     471 16564.168    18722.537    18692.686
+842  TVM+R3        7808.669     473 16563.338    18761.397    18700.895
+850  TVM+I+R2      7809.959     472 16563.918    18742.026    18696.956
+863  TVM+F+R2      7811.082     474 16570.163    18788.390    18712.239
+864  TVM+F+R3      7808.908     476 16569.817    18829.040    18720.931
+872  TVM+F+I+R2    7810.110     475 16570.220    18808.834    18716.815
+885  SYM+R2        7803.383     472 16550.765    18728.873    18683.803
+886  SYM+R3        7801.070     474 16550.140    18768.366    18692.215
+894  SYM+I+R2      7802.543     473 16551.086    18749.145    18688.643
+907  SYM+R2        7803.383     472 16550.765    18728.873    18683.803
+908  SYM+R3        7801.070     474 16550.140    18768.366    18692.215
+916  SYM+I+R2      7802.543     473 16551.086    18749.145    18688.643
+929  GTR+R2        7803.381     472 16550.761    18728.869    18683.799
+930  GTR+R3        7801.056     474 16550.112    18768.338    18692.187
+938  GTR+I+R2      7802.540     473 16551.080    18749.139    18688.637
+951  GTR+F+R2      7805.884     475 16561.768    18800.382    18708.363
+952  GTR+F+R3      7803.752     477 16561.503    18841.563    18717.137
+960  GTR+F+I+R2    7805.170     476 16562.340    18821.564    18713.454
+Akaike Information Criterion:           TIM+R3
+Corrected Akaike Information Criterion: HKY+R2
+Bayesian Information Criterion:         TIM+R2
+Best-fit model: TIM+R2 chosen according to BIC
+
+All model information printed to data/packages/ITS/Hortiboletus/ref.model.gz
+CPU time for ModelFinder: 532.513 seconds (0h:8m:52s)
+Wall-clock time for ModelFinder: 230.556 seconds (0h:3m:50s)
+Generating 1000 samples for ultrafast bootstrap (seed: 709044)...
+
+NOTE: 11 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -7813.029
+2. Current log-likelihood: -7812.642
+Optimal log-likelihood: -7812.636
+Rate parameters:  A-C: 1.00000  A-G: 2.75442  A-T: 0.74566  C-G: 0.74566  C-T: 3.67210  G-T: 1.00000
+Base frequencies:  A: 0.215  C: 0.236  G: 0.276  T: 0.273
+Site proportion and rates:  (0.779,0.501) (0.221,2.762)
+Parameters optimization took 2 rounds (0.149 sec)
+Wrote distance file to... 
+Computing ML distances based on estimated model parameters...
+Calculating distance matrix: done in 0.051788 secs using 300.5% CPU
+Computing ML distances took 0.052415 sec (of wall-clock time) 0.156590 sec (of CPU time)
+Setting up auxiliary I and S matrices: done in 0.00160602 secs using 223% CPU
+Constructing RapidNJ tree: done in 0.00449024 secs using 166.6% CPU
+Computing RapidNJ tree took 0.006250 sec (of wall-clock time) 0.011215 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -8043.350
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 3.563 second
+Computing log-likelihood of 98 initial trees ... 1.815 seconds
+Current best score: -7812.636
+
+Do NNI search on 20 best initial trees
+Optimizing NNI: done in 0.282566 secs using 295.8% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -7812.631
+Optimizing NNI: done in 0.967854 secs using 297.7% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 2: -7806.386
+Optimizing NNI: done in 0.979075 secs using 295.6% CPU
+Optimizing NNI: done in 1.41346 secs using 297% CPU
+Optimizing NNI: done in 1.29243 secs using 297.6% CPU
+Optimizing NNI: done in 0.942568 secs using 297.5% CPU
+Optimizing NNI: done in 1.4993 secs using 297.3% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 7: -7800.299
+Optimizing NNI: done in 1.14608 secs using 297.5% CPU
+Optimizing NNI: done in 0.578303 secs using 297.9% CPU
+Optimizing NNI: done in 1.21237 secs using 297% CPU
+Iteration 10 / LogL: -7807.896 / Time: 0h:4m:7s
+Optimizing NNI: done in 1.24596 secs using 297.8% CPU
+Optimizing NNI: done in 1.43563 secs using 297.3% CPU
+Optimizing NNI: done in 1.33722 secs using 297.3% CPU
+Optimizing NNI: done in 0.641628 secs using 296.7% CPU
+Optimizing NNI: done in 1.3036 secs using 297.8% CPU
+Optimizing NNI: done in 1.18107 secs using 297.3% CPU
+Optimizing NNI: done in 1.38272 secs using 298% CPU
+Optimizing NNI: done in 1.37466 secs using 297.9% CPU
+Optimizing NNI: done in 1.49431 secs using 298% CPU
+Optimizing NNI: done in 1.12131 secs using 297.9% CPU
+Iteration 20 / LogL: -7801.136 / Time: 0h:4m:19s
+Finish initializing candidate tree set (20)
+Current best tree score: -7800.299 / CPU time: 28.602
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Optimizing NNI: done in 1.13146 secs using 296.3% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 21: -7793.038
+Optimizing NNI: done in 0.830607 secs using 297.1% CPU
+Optimizing NNI: done in 0.966485 secs using 296.2% CPU
+Optimizing NNI: done in 0.493229 secs using 295.7% CPU
+Optimizing NNI: done in 0.860392 secs using 296.9% CPU
+Optimizing NNI: done in 1.20047 secs using 297.3% CPU
+Optimizing NNI: done in 1.33538 secs using 296.5% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 27: -7791.049
+Optimizing NNI: done in 0.956656 secs using 297.4% CPU
+Optimizing NNI: done in 0.830552 secs using 295.2% CPU
+Optimizing NNI: done in 1.35228 secs using 295.4% CPU
+Iteration 30 / LogL: -7797.476 / Time: 0h:4m:29s (0h:2m:11s left)
+Optimizing NNI: done in 1.41018 secs using 296.7% CPU
+Optimizing NNI: done in 0.972517 secs using 297% CPU
+Optimizing NNI: done in 1.03488 secs using 296.6% CPU
+Optimizing NNI: done in 0.983365 secs using 296.6% CPU
+Optimizing NNI: done in 1.49995 secs using 296.8% CPU
+Optimizing NNI: done in 0.921324 secs using 297.2% CPU
+Optimizing NNI: done in 1.20117 secs using 297.3% CPU
+Optimizing NNI: done in 1.27097 secs using 296.6% CPU
+Optimizing NNI: done in 1.07451 secs using 296.6% CPU
+Optimizing NNI: done in 1.42619 secs using 296.8% CPU
+Iteration 40 / LogL: -7807.986 / Time: 0h:4m:41s (0h:1m:54s left)
+Optimizing NNI: done in 0.805396 secs using 296.6% CPU
+Optimizing NNI: done in 0.531255 secs using 294.1% CPU
+Optimizing NNI: done in 1.01881 secs using 295.8% CPU
+Optimizing NNI: done in 1.17187 secs using 297% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 44: -7789.369
+Optimizing NNI: done in 0.880535 secs using 294.9% CPU
+BETTER TREE FOUND at iteration 45: -7789.362
+Optimizing NNI: done in 0.851329 secs using 296.3% CPU
+Optimizing NNI: done in 0.341497 secs using 290.3% CPU
+Optimizing NNI: done in 1.16872 secs using 297.3% CPU
+Optimizing NNI: done in 1.06793 secs using 298% CPU
+Optimizing NNI: done in 0.77524 secs using 296.8% CPU
+Iteration 50 / LogL: -7804.624 / Time: 0h:4m:50s (0h:1m:56s left)
+Log-likelihood cutoff on original alignment: -7878.731
+Optimizing NNI: done in 1.33978 secs using 295.7% CPU
+Optimizing NNI: done in 0.845178 secs using 296.9% CPU
+Optimizing NNI: done in 1.17878 secs using 296% CPU
+Optimizing NNI: done in 1.16488 secs using 296.7% CPU
+Optimizing NNI: done in 1.41279 secs using 297.2% CPU
+Optimizing NNI: done in 1.35855 secs using 295.9% CPU
+Optimizing NNI: done in 1.0448 secs using 296.5% CPU
+Optimizing NNI: done in 0.938325 secs using 296.3% CPU
+Optimizing NNI: done in 0.768499 secs using 297.7% CPU
+Optimizing NNI: done in 0.888789 secs using 295.9% CPU
+Iteration 60 / LogL: -7789.364 / Time: 0h:5m:2s (0h:1m:44s left)
+Optimizing NNI: done in 1.35003 secs using 297.2% CPU
+Optimizing NNI: done in 1.13468 secs using 296.9% CPU
+Optimizing NNI: done in 0.840397 secs using 296% CPU
+Optimizing NNI: done in 1.21791 secs using 296.3% CPU
+BETTER TREE FOUND at iteration 64: -7789.361
+Optimizing NNI: done in 0.923704 secs using 296.4% CPU
+Optimizing NNI: done in 1.09479 secs using 297.3% CPU
+Optimizing NNI: done in 1.17694 secs using 295.8% CPU
+Optimizing NNI: done in 1.37473 secs using 296.3% CPU
+Optimizing NNI: done in 0.992639 secs using 297.2% CPU
+Optimizing NNI: done in 1.07401 secs using 296.3% CPU
+Iteration 70 / LogL: -7796.156 / Time: 0h:5m:14s (0h:1m:54s left)
+Optimizing NNI: done in 1.04172 secs using 296.8% CPU
+Optimizing NNI: done in 1.19358 secs using 297% CPU
+Optimizing NNI: done in 1.14866 secs using 297.2% CPU
+Optimizing NNI: done in 0.880816 secs using 297.7% CPU
+Optimizing NNI: done in 0.948657 secs using 296% CPU
+Optimizing NNI: done in 1.14615 secs using 297.4% CPU
+Optimizing NNI: done in 1.03508 secs using 297.6% CPU
+Optimizing NNI: done in 1.11527 secs using 296% CPU
+Optimizing NNI: done in 0.995296 secs using 295.8% CPU
+Optimizing NNI: done in 0.435437 secs using 294% CPU
+Iteration 80 / LogL: -8474.248 / Time: 0h:5m:24s (0h:1m:39s left)
+Optimizing NNI: done in 1.07272 secs using 296.3% CPU
+Optimizing NNI: done in 1.08235 secs using 296.8% CPU
+Optimizing NNI: done in 1.07642 secs using 297% CPU
+Optimizing NNI: done in 1.17485 secs using 296.6% CPU
+Optimizing NNI: done in 1.34933 secs using 297.5% CPU
+Optimizing NNI: done in 1.03525 secs using 297% CPU
+Optimizing NNI: done in 1.11116 secs using 295.9% CPU
+Optimizing NNI: done in 1.14908 secs using 296.9% CPU
+Optimizing NNI: done in 1.26759 secs using 297.1% CPU
+Optimizing NNI: done in 0.984527 secs using 297% CPU
+Iteration 90 / LogL: -7789.367 / Time: 0h:5m:36s (0h:1m:27s left)
+Optimizing NNI: done in 0.976584 secs using 296.7% CPU
+Optimizing NNI: done in 1.21336 secs using 296.9% CPU
+Optimizing NNI: done in 0.827442 secs using 297.6% CPU
+Optimizing NNI: done in 1.21035 secs using 296.4% CPU
+Optimizing NNI: done in 0.845008 secs using 294.7% CPU
+Optimizing NNI: done in 1.12369 secs using 296.4% CPU
+Optimizing NNI: done in 1.25178 secs using 296.8% CPU
+Optimizing NNI: done in 1.14034 secs using 296.6% CPU
+Optimizing NNI: done in 1.07562 secs using 296.8% CPU
+Optimizing NNI: done in 1.28932 secs using 296.7% CPU
+Iteration 100 / LogL: -7793.202 / Time: 0h:5m:47s (0h:1m:15s left)
+Log-likelihood cutoff on original alignment: -7878.731
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.966
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Optimizing NNI: done in 1.69833 secs using 297.6% CPU
+Optimizing NNI: done in 1.47008 secs using 297.4% CPU
+Optimizing NNI: done in 1.00005 secs using 296.8% CPU
+Optimizing NNI: done in 0.942154 secs using 297% CPU
+Optimizing NNI: done in 1.22241 secs using 296.6% CPU
+Optimizing NNI: done in 1.28171 secs using 296.9% CPU
+Optimizing NNI: done in 1.42714 secs using 296.6% CPU
+Optimizing NNI: done in 0.68256 secs using 294.4% CPU
+Optimizing NNI: done in 0.821488 secs using 296.7% CPU
+Optimizing NNI: done in 0.914101 secs using 296.3% CPU
+Iteration 110 / LogL: -7832.243 / Time: 0h:6m:0s (0h:1m:47s left)
+Optimizing NNI: done in 1.57577 secs using 296% CPU
+Optimizing NNI: done in 1.30971 secs using 296.3% CPU
+Optimizing NNI: done in 1.2579 secs using 297.4% CPU
+Optimizing NNI: done in 1.13684 secs using 296.7% CPU
+Optimizing NNI: done in 1.22992 secs using 297% CPU
+Optimizing NNI: done in 1.02838 secs using 294.5% CPU
+Optimizing NNI: done in 0.580116 secs using 297.1% CPU
+Optimizing NNI: done in 1.05857 secs using 296.2% CPU
+Optimizing NNI: done in 1.21592 secs using 297.1% CPU
+Optimizing NNI: done in 0.883484 secs using 296.2% CPU
+Iteration 120 / LogL: -7793.203 / Time: 0h:6m:12s (0h:1m:35s left)
+Optimizing NNI: done in 1.42874 secs using 297% CPU
+Optimizing NNI: done in 0.981885 secs using 296.4% CPU
+Optimizing NNI: done in 1.17577 secs using 296.4% CPU
+Optimizing NNI: done in 1.01657 secs using 297.7% CPU
+Optimizing NNI: done in 1.14603 secs using 296.1% CPU
+Optimizing NNI: done in 1.02439 secs using 297.2% CPU
+Optimizing NNI: done in 1.0544 secs using 296.1% CPU
+Optimizing NNI: done in 0.876126 secs using 296.6% CPU
+Optimizing NNI: done in 1.27298 secs using 296.2% CPU
+Optimizing NNI: done in 0.43812 secs using 294.6% CPU
+Iteration 130 / LogL: -7908.632 / Time: 0h:6m:22s (0h:1m:22s left)
+Optimizing NNI: done in 0.906263 secs using 294.7% CPU
+Optimizing NNI: done in 0.85924 secs using 297.3% CPU
+Optimizing NNI: done in 1.11817 secs using 296.9% CPU
+Optimizing NNI: done in 0.899842 secs using 296.8% CPU
+Optimizing NNI: done in 1.24261 secs using 296.7% CPU
+Optimizing NNI: done in 1.0499 secs using 295.9% CPU
+Optimizing NNI: done in 0.820169 secs using 296.1% CPU
+BETTER TREE FOUND at iteration 137: -7789.361
+Optimizing NNI: done in 0.81945 secs using 296.2% CPU
+Optimizing NNI: done in 0.925207 secs using 297% CPU
+Optimizing NNI: done in 1.07969 secs using 296.1% CPU
+Iteration 140 / LogL: -7793.796 / Time: 0h:6m:33s (0h:1m:53s left)
+Optimizing NNI: done in 1.14375 secs using 297.1% CPU
+Optimizing NNI: done in 1.13797 secs using 296.9% CPU
+Optimizing NNI: done in 1.47083 secs using 296.8% CPU
+Optimizing NNI: done in 0.92041 secs using 297.1% CPU
+Optimizing NNI: done in 1.4464 secs using 296.7% CPU
+BETTER TREE FOUND at iteration 145: -7789.360
+Optimizing NNI: done in 0.572129 secs using 295.8% CPU
+Optimizing NNI: done in 1.1066 secs using 297.2% CPU
+Optimizing NNI: done in 1.346 secs using 297.4% CPU
+Optimizing NNI: done in 0.997806 secs using 295.7% CPU
+Optimizing NNI: done in 1.31653 secs using 297% CPU
+Iteration 150 / LogL: -7799.527 / Time: 0h:6m:45s (0h:1m:51s left)
+Log-likelihood cutoff on original alignment: -7861.276
+Optimizing NNI: done in 1.09713 secs using 295.5% CPU
+Optimizing NNI: done in 1.20361 secs using 297.9% CPU
+Optimizing NNI: done in 1.12242 secs using 297.3% CPU
+Optimizing NNI: done in 1.12134 secs using 296.8% CPU
+Optimizing NNI: done in 1.24156 secs using 296.1% CPU
+Optimizing NNI: done in 0.945621 secs using 297% CPU
+Optimizing NNI: done in 0.961085 secs using 295.8% CPU
+Optimizing NNI: done in 1.29719 secs using 297.6% CPU
+Optimizing NNI: done in 1.18028 secs using 296.6% CPU
+Optimizing NNI: done in 0.935693 secs using 296.7% CPU
+Iteration 160 / LogL: -7795.088 / Time: 0h:6m:57s (0h:1m:39s left)
+Optimizing NNI: done in 0.801285 secs using 296.9% CPU
+Optimizing NNI: done in 0.941945 secs using 297.1% CPU
+Optimizing NNI: done in 0.806368 secs using 293.9% CPU
+Optimizing NNI: done in 1.08186 secs using 296.9% CPU
+Optimizing NNI: done in 1.19285 secs using 297% CPU
+Optimizing NNI: done in 1.56577 secs using 297% CPU
+Optimizing NNI: done in 1.12771 secs using 296.9% CPU
+Optimizing NNI: done in 1.0185 secs using 296.5% CPU
+Optimizing NNI: done in 0.991423 secs using 297.4% CPU
+Optimizing NNI: done in 0.897486 secs using 297% CPU
+Iteration 170 / LogL: -7789.368 / Time: 0h:7m:8s (0h:1m:27s left)
+Optimizing NNI: done in 1.34581 secs using 297.6% CPU
+Optimizing NNI: done in 0.394553 secs using 293.9% CPU
+Optimizing NNI: done in 0.634992 secs using 294.7% CPU
+Optimizing NNI: done in 1.03229 secs using 296.8% CPU
+Optimizing NNI: done in 1.06686 secs using 295.6% CPU
+Optimizing NNI: done in 1.21231 secs using 296.5% CPU
+Optimizing NNI: done in 0.906444 secs using 296.9% CPU
+Optimizing NNI: done in 0.823623 secs using 297.5% CPU
+Optimizing NNI: done in 1.07076 secs using 297.4% CPU
+Optimizing NNI: done in 1.24335 secs using 297.2% CPU
+Iteration 180 / LogL: -7790.680 / Time: 0h:7m:19s (0h:1m:15s left)
+Optimizing NNI: done in 0.798125 secs using 297.7% CPU
+Optimizing NNI: done in 1.01058 secs using 296.6% CPU
+Optimizing NNI: done in 1.17675 secs using 297.2% CPU
+Optimizing NNI: done in 0.399852 secs using 294.8% CPU
+Optimizing NNI: done in 0.90109 secs using 297% CPU
+Optimizing NNI: done in 0.790138 secs using 297% CPU
+Optimizing NNI: done in 0.836011 secs using 297.2% CPU
+Optimizing NNI: done in 1.30424 secs using 296.6% CPU
+Optimizing NNI: done in 0.972831 secs using 296.8% CPU
+Optimizing NNI: done in 1.07218 secs using 297% CPU
+Iteration 190 / LogL: -7792.260 / Time: 0h:7m:28s (0h:1m:3s left)
+Optimizing NNI: done in 1.24264 secs using 296.3% CPU
+Optimizing NNI: done in 1.00168 secs using 296.8% CPU
+Optimizing NNI: done in 0.351699 secs using 293.6% CPU
+Optimizing NNI: done in 1.15194 secs using 297.6% CPU
+Optimizing NNI: done in 1.09872 secs using 296.7% CPU
+Optimizing NNI: done in 0.820371 secs using 296.8% CPU
+Optimizing NNI: done in 1.08495 secs using 295.4% CPU
+Optimizing NNI: done in 0.989437 secs using 297.1% CPU
+Optimizing NNI: done in 1.09657 secs using 296.2% CPU
+Optimizing NNI: done in 1.02369 secs using 296.3% CPU
+Iteration 200 / LogL: -7789.372 / Time: 0h:7m:39s (0h:0m:51s left)
+Log-likelihood cutoff on original alignment: -7861.276
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.991
+Optimizing NNI: done in 1.10375 secs using 297.3% CPU
+Optimizing NNI: done in 1.07938 secs using 296.6% CPU
+Optimizing NNI: done in 0.934333 secs using 295.7% CPU
+Optimizing NNI: done in 1.16718 secs using 295.3% CPU
+Optimizing NNI: done in 1.02882 secs using 296% CPU
+Optimizing NNI: done in 0.848306 secs using 295.9% CPU
+Optimizing NNI: done in 0.710862 secs using 295.5% CPU
+Optimizing NNI: done in 1.02531 secs using 297.7% CPU
+Optimizing NNI: done in 0.807745 secs using 296.2% CPU
+Optimizing NNI: done in 0.950471 secs using 297% CPU
+Iteration 210 / LogL: -7805.863 / Time: 0h:7m:50s (0h:1m:43s left)
+Optimizing NNI: done in 1.10048 secs using 297.3% CPU
+Optimizing NNI: done in 1.27671 secs using 297.6% CPU
+Optimizing NNI: done in 1.09851 secs using 297.6% CPU
+Optimizing NNI: done in 0.842774 secs using 296.1% CPU
+Optimizing NNI: done in 1.23537 secs using 296.6% CPU
+Optimizing NNI: done in 1.37161 secs using 296.6% CPU
+Optimizing NNI: done in 0.697392 secs using 296.6% CPU
+Optimizing NNI: done in 1.22344 secs using 296.3% CPU
+Optimizing NNI: done in 1.05028 secs using 297.1% CPU
+Optimizing NNI: done in 1.20633 secs using 296.4% CPU
+Iteration 220 / LogL: -7789.486 / Time: 0h:8m:2s (0h:1m:32s left)
+Optimizing NNI: done in 1.28313 secs using 296.8% CPU
+Optimizing NNI: done in 0.968255 secs using 297% CPU
+Optimizing NNI: done in 1.09259 secs using 297.3% CPU
+Optimizing NNI: done in 0.734342 secs using 296.3% CPU
+Optimizing NNI: done in 0.949967 secs using 295.8% CPU
+Optimizing NNI: done in 1.24374 secs using 296.4% CPU
+Optimizing NNI: done in 1.25734 secs using 297% CPU
+Optimizing NNI: done in 1.01531 secs using 296.9% CPU
+Optimizing NNI: done in 0.83329 secs using 297% CPU
+Optimizing NNI: done in 1.01419 secs using 297.4% CPU
+Iteration 230 / LogL: -7790.165 / Time: 0h:8m:13s (0h:1m:20s left)
+Optimizing NNI: done in 1.04523 secs using 297.6% CPU
+Optimizing NNI: done in 0.499668 secs using 293.8% CPU
+Optimizing NNI: done in 1.27897 secs using 295.2% CPU
+Optimizing NNI: done in 1.47564 secs using 296.5% CPU
+Optimizing NNI: done in 1.20957 secs using 297.1% CPU
+Optimizing NNI: done in 0.810247 secs using 294.6% CPU
+Optimizing NNI: done in 1.03871 secs using 295.8% CPU
+Optimizing NNI: done in 0.766739 secs using 297% CPU
+Optimizing NNI: done in 0.959886 secs using 296.4% CPU
+Optimizing NNI: done in 0.883488 secs using 296.8% CPU
+Iteration 240 / LogL: -7790.681 / Time: 0h:8m:24s (0h:1m:8s left)
+Optimizing NNI: done in 0.72862 secs using 295.1% CPU
+Optimizing NNI: done in 1.00551 secs using 296.7% CPU
+Optimizing NNI: done in 0.959374 secs using 296.4% CPU
+Optimizing NNI: done in 1.05145 secs using 296.8% CPU
+Optimizing NNI: done in 1.53332 secs using 296.5% CPU
+Optimizing NNI: done in 1.13385 secs using 297.1% CPU
+TREE SEARCH COMPLETED AFTER 246 ITERATIONS / Time: 0h:8m:31s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -7789.360
+Optimal log-likelihood: -7789.360
+Rate parameters:  A-C: 1.00000  A-G: 2.83477  A-T: 0.77600  C-G: 0.77600  C-T: 3.77072  G-T: 1.00000
+Base frequencies:  A: 0.215  C: 0.236  G: 0.276  T: 0.273
+Site proportion and rates:  (0.792,0.514) (0.208,2.854)
+Parameters optimization took 1 rounds (0.064 sec)
+BEST SCORE FOUND : -7789.360
+Creating bootstrap support values...
+Split supports printed to NEXUS file data/packages/ITS/Hortiboletus/ref.splits.nex
+Total tree length: 3.542
+
+Total number of iterations: 246
+CPU time used for tree search: 797.445 sec (0h:13m:17s)
+Wall-clock time used for tree search: 280.640 sec (0h:4m:40s)
+Total CPU time used: 1332.360 sec (0h:22m:12s)
+Total wall-clock time used: 512.576 sec (0h:8m:32s)
+
+Computing bootstrap consensus tree...
+Reading input file data/packages/ITS/Hortiboletus/ref.splits.nex...
+234 taxa and 6689 splits.
+Consensus tree written to data/packages/ITS/Hortiboletus/ref.contree
+Reading input trees file data/packages/ITS/Hortiboletus/ref.contree
+Log-likelihood of consensus tree: -7789.555
+
+Analysis results written to: 
+  IQ-TREE report:                data/packages/ITS/Hortiboletus/ref.iqtree
+  Maximum-likelihood tree:       data/packages/ITS/Hortiboletus/ref.treefile
+  Likelihood distances:          data/packages/ITS/Hortiboletus/ref.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          data/packages/ITS/Hortiboletus/ref.splits.nex
+  Consensus tree:                data/packages/ITS/Hortiboletus/ref.contree
+  Screen log file:               data/packages/ITS/Hortiboletus/ref.log
+
+Date and Time: Mon Aug 18 18:46:30 2025

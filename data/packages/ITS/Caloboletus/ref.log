@@ -1,0 +1,598 @@
+IQ-TREE version 3.0.1 for Linux x86 64-bit built May  5 2025
+Developed by Bui Quang Minh, Thomas Wong, Nhan Ly-Trong, Huaiyan Ren
+Contributed by Lam-Tung Nguyen, Dominik Schrempf, Chris Bielow,
+Olga Chernomor, Michael Woodhams, Diep Thi Hoang, Heiko Schmidt
+
+Host:    lnx820.umnh.utah.edu (AVX2, FMA3, 865 GB RAM)
+Command: /home/bdentinger/iqtree-3.0.1-Linux/bin/iqtree3_intel -s data/packages/ITS/Caloboletus/aln.masked.fasta -m MFP -bb 1000 -nt AUTO -pre data/packages/ITS/Caloboletus/ref
+Seed:    882648 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Mon Aug 18 18:30:06 2025
+Kernel:  AVX+FMA - auto-detect threads (72 CPU cores detected)
+
+Reading alignment file data/packages/ITS/Caloboletus/aln.masked.fasta ... Fasta format detected
+Reading fasta file: done in 0.00158906 secs using 94.33% CPU
+Alignment most likely contains DNA/RNA sequences
+Constructing alignment: done in 0.00159041 secs using 99.53% CPU
+Alignment has 150 sequences with 624 columns, 486 distinct patterns
+263 parsimony-informative, 181 singleton sites, 179 constant sites
+                 Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 0.000245994 secs using 99.6% CPU
+   1  Caloboletus_001    0.16%    passed     99.73%
+   2  Caloboletus_002    1.12%    passed     96.61%
+   3  Caloboletus_003    1.12%    passed     96.61%
+   4  Caloboletus_004    0.00%    passed     93.89%
+   5  Caloboletus_005    0.00%    passed     99.60%
+   6  Caloboletus_006    0.16%    passed     99.72%
+   7  Caloboletus_007    0.32%    passed     78.01%
+   8  Caloboletus_008    1.12%    passed     93.37%
+   9  Caloboletus_009    1.12%    passed     96.34%
+  10  Caloboletus_010    0.16%    passed     98.71%
+  11  Caloboletus_011    0.96%    passed     98.49%
+  12  Caloboletus_012    0.00%    passed     99.84%
+  13  Caloboletus_013    0.00%    passed     99.60%
+  14  Caloboletus_014   34.46%    passed     90.03%
+  15  Caloboletus_015   37.18%    passed     33.92%
+  16  Caloboletus_016    0.00%    passed     99.60%
+  17  Caloboletus_017    0.32%    passed     99.77%
+  18  Caloboletus_018    0.48%    passed     99.58%
+  19  Caloboletus_019    0.00%    passed     94.78%
+  20  Caloboletus_020    0.00%    passed     94.71%
+  21  Caloboletus_021    0.00%    passed     98.73%
+  22  Caloboletus_022   31.73%    passed     95.51%
+  23  Caloboletus_023    2.40%    passed     98.62%
+  24  Caloboletus_024    2.40%    passed     98.44%
+  25  Caloboletus_025    0.48%    passed     99.07%
+  26  Caloboletus_026   15.22%    passed     88.96%
+  27  Caloboletus_027    1.12%    passed     96.61%
+  28  Caloboletus_028    1.12%    passed     96.61%
+  29  Caloboletus_029    1.12%    passed     96.61%
+  30  Caloboletus_030    1.12%    passed     96.61%
+  31  Caloboletus_031   21.63%    passed     69.32%
+  32  Caloboletus_032    0.32%    passed     95.15%
+  33  Caloboletus_033    0.32%    passed     97.67%
+  34  Caloboletus_034    0.00%    passed     91.54%
+  35  Caloboletus_035    4.17%    passed     90.86%
+  36  Caloboletus_036    5.45%    passed     93.64%
+  37  Caloboletus_037    0.00%    passed     91.54%
+  38  Caloboletus_038    0.00%    passed     91.54%
+  39  Caloboletus_039    0.00%    passed     91.54%
+  40  Caloboletus_040    0.00%    passed     96.84%
+  41  Caloboletus_041    3.53%    passed     80.51%
+  42  Caloboletus_042   18.27%    passed     90.76%
+  43  Caloboletus_043   11.22%    passed     94.99%
+  44  Caloboletus_044   14.26%    passed     88.02%
+  45  Caloboletus_045    1.12%    passed     96.34%
+  46  Caloboletus_046    0.00%    passed     92.95%
+  47  Caloboletus_047   11.06%    passed     95.38%
+  48  Caloboletus_048    0.00%    passed     98.73%
+  49  Caloboletus_049    0.64%    passed     99.24%
+  50  Caloboletus_050    0.00%    passed     99.47%
+  51  Caloboletus_051    7.05%    passed     79.47%
+  52  Caloboletus_052    0.16%    passed     99.25%
+  53  Caloboletus_053    7.05%    passed     77.20%
+  54  Caloboletus_054    7.05%    passed     77.20%
+  55  Caloboletus_055    7.05%    passed     77.20%
+  56  Caloboletus_056    5.61%    passed     94.29%
+  57  Caloboletus_057    0.00%    passed     97.52%
+  58  Caloboletus_058    0.00%    passed     98.05%
+  59  Caloboletus_059    0.00%    passed     95.51%
+  60  Caloboletus_060    0.00%    passed     95.51%
+  61  Caloboletus_061    0.16%    passed     97.47%
+  62  Caloboletus_062    1.28%    passed     93.47%
+  63  Caloboletus_063    5.77%    passed     96.11%
+  64  Caloboletus_064   12.98%    passed     89.34%
+  65  Caloboletus_065    9.62%    passed     92.54%
+  66  Caloboletus_066    3.53%    passed     97.77%
+  67  Caloboletus_067    9.62%    passed     90.22%
+  68  Caloboletus_068    3.69%    passed     98.26%
+  69  Caloboletus_069   13.62%    passed     81.89%
+  70  Caloboletus_070    5.61%    passed     98.60%
+  71  Caloboletus_071    3.53%    passed     96.33%
+  72  Caloboletus_072    4.81%    passed     98.49%
+  73  Caloboletus_073    0.00%    passed     98.99%
+  74  Caloboletus_074    7.69%    passed     98.05%
+  75  Caloboletus_075    3.21%    passed     95.29%
+  76  Caloboletus_076   19.23%    passed     95.87%
+  77  Caloboletus_077    9.62%    passed     87.58%
+  78  Caloboletus_078   11.06%    passed     95.38%
+  79  Caloboletus_079   17.63%    passed     70.60%
+  80  Caloboletus_080   11.06%    passed     95.38%
+  81  Caloboletus_081    2.56%    passed     94.60%
+  82  Caloboletus_082   33.97%    failed      0.35%
+  83  Caloboletus_083   32.21%    passed     95.78%
+  84  Caloboletus_084    0.32%    passed     97.60%
+  85  Caloboletus_085    0.32%    passed     97.60%
+  86  Caloboletus_086    1.12%    passed     97.95%
+  87  Caloboletus_087    0.00%    passed     95.79%
+  88  Caloboletus_088    0.00%    passed     95.51%
+  89  Caloboletus_089    5.13%    failed      0.55%
+  90  Caloboletus_090    0.32%    passed     98.45%
+  91  Caloboletus_091   40.38%    passed     87.57%
+  92  Caloboletus_092    0.00%    passed     93.57%
+  93  Caloboletus_093    1.12%    passed     95.47%
+  94  Caloboletus_094    0.00%    passed     96.84%
+  95  Caloboletus_095    0.00%    passed     81.86%
+  96  Caloboletus_096    0.00%    passed     99.84%
+  97  Caloboletus_097    0.80%    passed     99.06%
+  98  Caloboletus_098    1.60%    passed     98.21%
+  99  Caloboletus_099   32.37%    passed     96.54%
+ 100  Caloboletus_100    0.00%    passed     99.47%
+ 101  Caloboletus_101    0.32%    passed     98.24%
+ 102  Caloboletus_102    0.00%    passed     99.84%
+ 103  Caloboletus_103    0.00%    passed     98.99%
+ 104  Caloboletus_104    1.12%    passed     96.61%
+ 105  Caloboletus_105    0.32%    passed     97.60%
+ 106  Caloboletus_106    0.16%    passed     99.59%
+ 107  Caloboletus_107    0.00%    passed     92.95%
+ 108  Caloboletus_108    0.48%    passed     93.25%
+ 109  Caloboletus_109    1.92%    passed     99.43%
+ 110  Caloboletus_110    8.01%    passed     84.68%
+ 111  Caloboletus_111   10.26%    passed     84.88%
+ 112  Caloboletus_112   25.96%    passed     88.93%
+ 113  Caloboletus_113    3.69%    passed     94.23%
+ 114  Caloboletus_114   15.54%    passed     88.51%
+ 115  Caloboletus_115    0.16%    passed     97.84%
+ 116  Caloboletus_116    0.16%    passed     94.67%
+ 117  Caloboletus_117    0.00%    passed     92.95%
+ 118  Caloboletus_118    0.00%    passed     81.86%
+ 119  Caloboletus_119    0.32%    passed     78.79%
+ 120  Caloboletus_120    0.00%    passed     95.11%
+ 121  Caloboletus_121    3.37%    passed     99.69%
+ 122  Caloboletus_122   35.74%    passed     50.64%
+ 123  Caloboletus_123    1.12%    passed     96.34%
+ 124  Caloboletus_124    3.69%    passed     97.72%
+ 125  Caloboletus_125    0.48%    passed     99.70%
+ 126  Caloboletus_126   32.69%    passed     94.17%
+ 127  Caloboletus_127   18.43%    passed     96.61%
+ 128  Caloboletus_128   12.66%    passed     95.81%
+ 129  Caloboletus_129   18.43%    passed     96.61%
+ 130  Caloboletus_130   13.62%    passed     97.98%
+ 131  Caloboletus_131   22.44%    passed     76.27%
+ 132  Caloboletus_132    0.00%    passed     98.05%
+ 133  Caloboletus_133    3.69%    passed     96.15%
+ 134  Caloboletus_134    1.12%    passed     95.32%
+ 135  Caloboletus_135    1.12%    passed     97.79%
+ 136  Caloboletus_136   37.34%    passed     70.23%
+ 137  Caloboletus_137    4.97%    failed      3.34%
+ 138  Caloboletus_138    1.12%    passed     94.58%
+ 139  Caloboletus_139    0.00%    passed     95.11%
+ 140  Caloboletus_140    8.01%    passed     90.12%
+ 141  Caloboletus_141    0.48%    passed     98.98%
+ 142  Caloboletus_142    1.12%    passed     97.95%
+ 143  Caloboletus_143    1.28%    passed     99.77%
+ 144  Caloboletus_144    0.00%    passed     96.55%
+ 145  Caloboletus_145    3.53%    passed     97.77%
+ 146  Caloboletus_146    1.76%    passed     82.63%
+ 147  Caloboletus_147    1.12%    passed     97.95%
+ 148  Caloboletus_148    1.12%    passed     97.95%
+ 149  Caloboletus_149   59.13%    passed     49.07%
+ 150  Caloboletus_150    1.44%    passed     98.04%
+WARNING: 1 sequences contain more than 50% gaps/ambiguity
+****  TOTAL              6.18%  3 sequences failed composition chi2 test (p-value<5%; df=3)
+NOTE: Caloboletus_003 is identical to Caloboletus_002 but kept for subsequent analysis
+NOTE: Caloboletus_045 is identical to Caloboletus_009 but kept for subsequent analysis
+NOTE: Caloboletus_096 is identical to Caloboletus_012 but kept for subsequent analysis
+NOTE: Caloboletus_048 is identical to Caloboletus_021 but kept for subsequent analysis
+NOTE: Caloboletus_037 is identical to Caloboletus_034 but kept for subsequent analysis
+NOTE: Caloboletus_094 is identical to Caloboletus_040 but kept for subsequent analysis
+NOTE: Caloboletus_107 is identical to Caloboletus_046 but kept for subsequent analysis
+NOTE: Caloboletus_078 is identical to Caloboletus_047 but kept for subsequent analysis
+NOTE: Caloboletus_100 is identical to Caloboletus_050 but kept for subsequent analysis
+NOTE: Caloboletus_054 is identical to Caloboletus_053 but kept for subsequent analysis
+NOTE: Caloboletus_132 is identical to Caloboletus_058 but kept for subsequent analysis
+NOTE: Caloboletus_060 is identical to Caloboletus_059 but kept for subsequent analysis
+NOTE: Caloboletus_145 is identical to Caloboletus_066 but kept for subsequent analysis
+NOTE: Caloboletus_103 is identical to Caloboletus_073 but kept for subsequent analysis
+NOTE: Caloboletus_085 is identical to Caloboletus_084 but kept for subsequent analysis
+NOTE: Caloboletus_142 is identical to Caloboletus_086 but kept for subsequent analysis
+NOTE: Caloboletus_118 is identical to Caloboletus_095 but kept for subsequent analysis
+NOTE: Caloboletus_139 is identical to Caloboletus_120 but kept for subsequent analysis
+NOTE: Caloboletus_129 is identical to Caloboletus_127 but kept for subsequent analysis
+Checking for duplicate sequences: done in 0.000771577 secs using 46.79% CPU
+Identifying sites to remove: done in 0.00107347 secs using 34.56% CPU
+NOTE: 16 identical sequences (see below) will be ignored for subsequent analysis
+NOTE: Caloboletus_027 (identical to Caloboletus_002) is ignored but added at the end
+NOTE: Caloboletus_028 (identical to Caloboletus_002) is ignored but added at the end
+NOTE: Caloboletus_029 (identical to Caloboletus_002) is ignored but added at the end
+NOTE: Caloboletus_030 (identical to Caloboletus_002) is ignored but added at the end
+NOTE: Caloboletus_104 (identical to Caloboletus_002) is ignored but added at the end
+NOTE: Caloboletus_123 (identical to Caloboletus_009) is ignored but added at the end
+NOTE: Caloboletus_102 (identical to Caloboletus_012) is ignored but added at the end
+NOTE: Caloboletus_038 (identical to Caloboletus_034) is ignored but added at the end
+NOTE: Caloboletus_039 (identical to Caloboletus_034) is ignored but added at the end
+NOTE: Caloboletus_117 (identical to Caloboletus_046) is ignored but added at the end
+NOTE: Caloboletus_080 (identical to Caloboletus_047) is ignored but added at the end
+NOTE: Caloboletus_055 (identical to Caloboletus_053) is ignored but added at the end
+NOTE: Caloboletus_088 (identical to Caloboletus_059) is ignored but added at the end
+NOTE: Caloboletus_105 (identical to Caloboletus_084) is ignored but added at the end
+NOTE: Caloboletus_147 (identical to Caloboletus_086) is ignored but added at the end
+NOTE: Caloboletus_148 (identical to Caloboletus_086) is ignored but added at the end
+Alignment was printed to data/packages/ITS/Caloboletus/ref.uniqueseq.phy
+
+For your convenience alignment with unique sequences printed to data/packages/ITS/Caloboletus/ref.uniqueseq.phy
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.013 seconds
+Measuring multi-threading efficiency up to 72 CPU cores
+Increase to 10 rounds for branch lengths
+397 trees examined
+Threads: 1 / Time: 72.070 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -16678
+Threads: 2 / Time: 70.783 sec / Speedup: 1.018 / Efficiency: 51% / LogL: -16678
+Threads: 3 / Time: 42.565 sec / Speedup: 1.693 / Efficiency: 56% / LogL: -16678
+Threads: 4 / Time: 55.093 sec / Speedup: 1.308 / Efficiency: 33% / LogL: -16678
+Determining AUTO threadcount: done in 240.515 secs using 230% CPU
+BEST NUMBER OF THREADS: 3
+
+Perform fast likelihood tree search using GTR+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Optimizing NNI: done in 0.211388 secs using 291.7% CPU
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -5437.003
+Optimal log-likelihood: -5436.050
+Rate parameters:  A-C: 1.29439  A-G: 3.95486  A-T: 1.09341  C-G: 1.09858  C-T: 5.25155  G-T: 1.00000
+Base frequencies:  A: 0.222  C: 0.243  G: 0.262  T: 0.274
+Proportion of invariable sites: 0.094
+Gamma shape alpha: 0.818
+Parameters optimization took 1 rounds (0.067 sec)
+Time for fast ML tree search: 0.486 seconds
+
+NOTE: ModelFinder requires 23 MB RAM!
+ModelFinder will test up to 968 DNA models (sample size: 624 epsilon: 0.100) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+  1  JC            5781.366     265 12092.733    12486.532    13268.313
+  2  JC+I          5716.467     266 11964.935    12362.817    13144.951
+  3  JC+G4         5615.332     266 11762.663    12160.546    12942.679
+  4  JC+I+G4       5616.513     267 11767.026    12169.026    12951.478
+  5  JC+R2         5600.872     267 11735.743    12137.743    12920.195
+  6  JC+R3         5600.398     269 11738.796    12149.135    12932.121
+ 14  JC+I+R2       5600.476     268 11736.952    12143.104    12925.840
+ 15  JC+I+R3       5600.558     270 11741.116    12155.677    12938.877
+ 27  JC+R2         5600.872     267 11735.743    12137.743    12920.196
+ 36  JC+I+R2       5600.476     268 11736.952    12143.104    12925.840
+ 49  F81+R2        5600.889     267 11735.779    12137.779    12920.231
+ 58  F81+I+R2      5600.452     268 11736.904    12143.056    12925.792
+ 71  F81+F+R2      5594.164     270 11728.327    12142.888    12926.088
+ 80  F81+F+I+R2    5593.704     271 11729.409    12148.227    12931.606
+ 93  K2P+R2        5429.174     268 11394.349    11800.501    12583.237
+102  K2P+I+R2      5427.857     269 11393.713    11804.052    12587.038
+115  K2P+R2        5429.174     268 11394.349    11800.501    12583.237
+124  K2P+I+R2      5427.857     269 11393.713    11804.052    12587.038
+137  HKY+R2        5429.175     268 11394.349    11800.502    12583.238
+146  HKY+I+R2      5427.854     269 11393.707    11804.046    12587.032
+159  HKY+F+R2      5422.151     271 11386.302    11805.120    12588.499
+168  HKY+F+I+R2    5420.949     272 11385.899    11809.010    12592.531
+181  TNe+R2        5424.262     269 11386.524    11796.863    12579.848
+190  TNe+I+R2      5422.952     270 11385.904    11800.465    12583.665
+203  TNe+R2        5424.262     269 11386.524    11796.863    12579.848
+212  TNe+I+R2      5422.952     270 11385.904    11800.465    12583.665
+225  TN+R2         5424.261     269 11386.521    11796.860    12579.846
+234  TN+I+R2       5422.951     270 11385.903    11800.464    12583.663
+247  TN+F+R2       5419.498     272 11382.996    11806.107    12589.628
+256  TN+F+I+R2     5418.364     273 11382.729    11810.169    12593.798
+269  K3P+R2        5429.161     269 11396.322    11806.661    12589.646
+278  K3P+I+R2      5427.846     270 11395.692    11810.253    12593.453
+291  K3P+R2        5429.161     269 11396.322    11806.661    12589.646
+300  K3P+I+R2      5427.846     270 11395.692    11810.253    12593.453
+313  K3Pu+R2       5429.161     269 11396.322    11806.661    12589.646
+322  K3Pu+I+R2     5427.846     270 11395.692    11810.252    12593.452
+335  K3Pu+F+R2     5422.148     272 11388.297    11811.408    12594.930
+344  K3Pu+F+I+R2   5420.946     273 11387.893    11815.333    12598.962
+357  TPM2+R2       5429.089     269 11396.178    11806.517    12589.503
+366  TPM2+I+R2     5427.775     270 11395.551    11810.112    12593.311
+379  TPM2+R2       5429.089     269 11396.178    11806.517    12589.503
+388  TPM2+I+R2     5427.775     270 11395.551    11810.112    12593.311
+401  TPM2u+R2      5429.088     269 11396.177    11806.516    12589.501
+410  TPM2u+I+R2    5427.775     270 11395.550    11810.110    12593.310
+423  TPM2u+F+R2    5421.975     272 11387.949    11811.061    12594.582
+432  TPM2u+F+I+R2  5420.743     273 11387.487    11814.927    12598.556
+445  TPM3+R2       5428.977     269 11395.954    11806.293    12589.278
+454  TPM3+I+R2     5427.726     270 11395.452    11810.013    12593.213
+467  TPM3+R2       5428.977     269 11395.954    11806.293    12589.278
+476  TPM3+I+R2     5427.726     270 11395.452    11810.013    12593.213
+489  TPM3u+R2      5428.977     269 11395.954    11806.293    12589.278
+498  TPM3u+I+R2    5427.726     270 11395.452    11810.013    12593.213
+511  TPM3u+F+R2    5421.288     272 11386.576    11809.687    12593.209
+520  TPM3u+F+I+R2  5420.230     273 11386.461    11813.901    12597.530
+533  TIMe+R2       5424.242     270 11388.485    11803.045    12586.245
+542  TIMe+I+R2     5422.935     271 11387.871    11806.689    12590.067
+555  TIMe+R2       5424.242     270 11388.485    11803.045    12586.245
+564  TIMe+I+R2     5422.935     271 11387.871    11806.689    12590.067
+577  TIM+R2        5424.241     270 11388.483    11803.043    12586.243
+586  TIM+I+R2      5422.935     271 11387.870    11806.688    12590.067
+599  TIM+F+R2      5419.493     273 11384.986    11812.426    12596.055
+608  TIM+F+I+R2    5418.360     274 11384.720    11816.525    12600.225
+621  TIM2e+R2      5424.153     270 11388.306    11802.867    12586.067
+630  TIM2e+I+R2    5422.860     271 11387.719    11806.537    12589.916
+643  TIM2e+R2      5424.153     270 11388.306    11802.867    12586.067
+652  TIM2e+I+R2    5422.860     271 11387.719    11806.537    12589.916
+665  TIM2+R2       5424.153     270 11388.306    11802.867    12586.066
+674  TIM2+I+R2     5422.856     271 11387.713    11806.531    12589.910
+687  TIM2+F+R2     5419.339     273 11384.678    11812.118    12595.747
+696  TIM2+F+I+R2   5418.182     274 11384.363    11816.169    12599.869
+709  TIM3e+R2      5424.036     270 11388.073    11802.634    12585.833
+718  TIM3e+I+R2    5422.818     271 11387.636    11806.455    12589.833
+731  TIM3e+R2      5424.036     270 11388.073    11802.634    12585.833
+740  TIM3e+I+R2    5422.818     271 11387.636    11806.455    12589.833
+753  TIM3+R2       5424.036     270 11388.072    11802.633    12585.833
+762  TIM3+I+R2     5422.818     271 11387.635    11806.453    12589.832
+775  TIM3+F+R2     5418.593     273 11383.186    11810.626    12594.255
+784  TIM3+F+I+R2   5417.620     274 11383.241    11815.046    12598.746
+797  TVMe+R2       5428.857     271 11399.713    11818.531    12601.910
+806  TVMe+I+R2     5427.625     272 11399.251    11822.362    12605.884
+819  TVMe+R2       5428.857     271 11399.713    11818.531    12601.910
+828  TVMe+I+R2     5427.625     272 11399.251    11822.362    12605.884
+841  TVM+R2        5428.856     271 11399.713    11818.531    12601.909
+850  TVM+I+R2      5427.624     272 11399.248    11822.359    12605.881
+863  TVM+F+R2      5421.101     274 11390.203    11822.008    12605.708
+872  TVM+F+I+R2    5420.015     275 11390.031    11826.237    12609.972
+885  SYM+R2        5423.902     272 11391.804    11814.915    12598.437
+894  SYM+I+R2      5422.702     273 11391.403    11818.843    12602.472
+907  SYM+R2        5423.902     272 11391.804    11814.915    12598.437
+916  SYM+I+R2      5422.702     273 11391.403    11818.843    12602.472
+929  GTR+R2        5423.902     272 11391.803    11814.914    12598.436
+938  GTR+I+R2      5422.701     273 11391.402    11818.842    12602.471
+951  GTR+F+R2      5418.435     275 11386.871    11823.077    12606.812
+960  GTR+F+I+R2    5417.431     276 11386.862    11827.508    12611.240
+Akaike Information Criterion:           TN+F+I+R2
+Corrected Akaike Information Criterion: TN+R2
+Bayesian Information Criterion:         TN+R2
+Best-fit model: TN+R2 chosen according to BIC
+
+All model information printed to data/packages/ITS/Caloboletus/ref.model.gz
+CPU time for ModelFinder: 571.391 seconds (0h:9m:31s)
+Wall-clock time for ModelFinder: 246.652 seconds (0h:4m:6s)
+Generating 1000 samples for ultrafast bootstrap (seed: 882648)...
+
+NOTE: 6 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -5419.536
+Optimal log-likelihood: -5419.492
+Rate parameters:  A-C: 1.00000  A-G: 3.45948  A-T: 1.00000  C-G: 1.00000  C-T: 4.45395  G-T: 1.00000
+Base frequencies:  A: 0.222  C: 0.243  G: 0.262  T: 0.274
+Site proportion and rates:  (0.753,0.325) (0.247,3.056)
+Parameters optimization took 1 rounds (0.042 sec)
+Wrote distance file to... 
+Computing ML distances based on estimated model parameters...
+Calculating distance matrix: done in 0.0179012 secs using 300.5% CPU
+Computing ML distances took 0.018158 sec (of wall-clock time) 0.054062 sec (of CPU time)
+Setting up auxiliary I and S matrices: done in 0.000602297 secs using 267% CPU
+Constructing RapidNJ tree: done in 0.00203009 secs using 148.7% CPU
+Computing RapidNJ tree took 0.002733 sec (of wall-clock time) 0.004730 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -5632.231
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 1.484 second
+Computing log-likelihood of 98 initial trees ... 0.899 seconds
+Current best score: -5419.492
+
+Do NNI search on 20 best initial trees
+Optimizing NNI: done in 0.0870414 secs using 298.4% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -5419.492
+Optimizing NNI: done in 0.403411 secs using 296.8% CPU
+Optimizing NNI: done in 0.428317 secs using 296.7% CPU
+Optimizing NNI: done in 0.385274 secs using 296.7% CPU
+Optimizing NNI: done in 0.517598 secs using 296% CPU
+Optimizing NNI: done in 0.423731 secs using 297.5% CPU
+Optimizing NNI: done in 0.447318 secs using 297.5% CPU
+Optimizing NNI: done in 0.417752 secs using 296.7% CPU
+Optimizing NNI: done in 0.419968 secs using 296.8% CPU
+Optimizing NNI: done in 0.412281 secs using 295.2% CPU
+Iteration 10 / LogL: -5429.743 / Time: 0h:4m:13s
+Optimizing NNI: done in 0.409126 secs using 296% CPU
+Optimizing NNI: done in 0.456986 secs using 296% CPU
+Optimizing NNI: done in 0.460375 secs using 298% CPU
+Optimizing NNI: done in 0.469535 secs using 296.5% CPU
+Optimizing NNI: done in 0.472141 secs using 296.7% CPU
+Optimizing NNI: done in 0.413014 secs using 296.5% CPU
+Optimizing NNI: done in 0.44072 secs using 295.5% CPU
+Optimizing NNI: done in 0.479647 secs using 295.7% CPU
+Optimizing NNI: done in 0.459583 secs using 297.7% CPU
+Optimizing NNI: done in 0.435489 secs using 297.4% CPU
+Iteration 20 / LogL: -5428.490 / Time: 0h:4m:17s
+Finish initializing candidate tree set (20)
+Current best tree score: -5419.492 / CPU time: 10.902
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Optimizing NNI: done in 0.507714 secs using 294.7% CPU
+Optimizing NNI: done in 0.209936 secs using 292.6% CPU
+Optimizing NNI: done in 0.390677 secs using 293.4% CPU
+Optimizing NNI: done in 0.362424 secs using 295.6% CPU
+Optimizing NNI: done in 0.37466 secs using 294.5% CPU
+Optimizing NNI: done in 0.543627 secs using 294.5% CPU
+Optimizing NNI: done in 0.38215 secs using 296.5% CPU
+Optimizing NNI: done in 0.394038 secs using 294.1% CPU
+Optimizing NNI: done in 0.333858 secs using 293.5% CPU
+Optimizing NNI: done in 0.282979 secs using 293.7% CPU
+Iteration 30 / LogL: -5472.041 / Time: 0h:4m:21s (0h:0m:36s left)
+Optimizing NNI: done in 0.352376 secs using 294.6% CPU
+Optimizing NNI: done in 0.413003 secs using 296.3% CPU
+Optimizing NNI: done in 0.481214 secs using 296.3% CPU
+Optimizing NNI: done in 0.352118 secs using 295.6% CPU
+Optimizing NNI: done in 0.435767 secs using 295.2% CPU
+Optimizing NNI: done in 0.467966 secs using 296.9% CPU
+Optimizing NNI: done in 0.353246 secs using 291.9% CPU
+Optimizing NNI: done in 0.390505 secs using 294.6% CPU
+Optimizing NNI: done in 0.368977 secs using 297.5% CPU
+Optimizing NNI: done in 0.432178 secs using 295% CPU
+Iteration 40 / LogL: -5419.504 / Time: 0h:4m:25s (0h:0m:29s left)
+Optimizing NNI: done in 0.41061 secs using 296.7% CPU
+Optimizing NNI: done in 0.33165 secs using 293.8% CPU
+Optimizing NNI: done in 0.342176 secs using 295.5% CPU
+Optimizing NNI: done in 0.378376 secs using 294.7% CPU
+Optimizing NNI: done in 0.351778 secs using 296.4% CPU
+Optimizing NNI: done in 0.331974 secs using 294.3% CPU
+Optimizing NNI: done in 0.343925 secs using 293% CPU
+Optimizing NNI: done in 0.498295 secs using 296.4% CPU
+Optimizing NNI: done in 0.48094 secs using 296.4% CPU
+Optimizing NNI: done in 0.53558 secs using 296.7% CPU
+Iteration 50 / LogL: -5419.503 / Time: 0h:4m:29s (0h:0m:24s left)
+Log-likelihood cutoff on original alignment: -5447.498
+Optimizing NNI: done in 0.404337 secs using 292.8% CPU
+Optimizing NNI: done in 0.41247 secs using 295.8% CPU
+Optimizing NNI: done in 0.551206 secs using 296.9% CPU
+Optimizing NNI: done in 0.388567 secs using 295% CPU
+Optimizing NNI: done in 0.363385 secs using 293.7% CPU
+Optimizing NNI: done in 0.414437 secs using 293% CPU
+Optimizing NNI: done in 0.349066 secs using 296.8% CPU
+BETTER TREE FOUND at iteration 57: -5419.491
+Optimizing NNI: done in 0.509619 secs using 295.3% CPU
+Optimizing NNI: done in 0.412814 secs using 294.7% CPU
+Optimizing NNI: done in 0.387968 secs using 294.5% CPU
+Iteration 60 / LogL: -5419.494 / Time: 0h:4m:34s (0h:0m:46s left)
+Optimizing NNI: done in 0.367068 secs using 294.5% CPU
+Optimizing NNI: done in 0.420119 secs using 295.3% CPU
+Optimizing NNI: done in 0.301255 secs using 295.2% CPU
+Optimizing NNI: done in 0.406745 secs using 296.6% CPU
+Optimizing NNI: done in 0.329193 secs using 296.2% CPU
+Optimizing NNI: done in 0.418464 secs using 294.9% CPU
+Optimizing NNI: done in 0.388792 secs using 295.4% CPU
+Optimizing NNI: done in 0.377961 secs using 294.9% CPU
+Optimizing NNI: done in 0.446413 secs using 293.7% CPU
+Optimizing NNI: done in 0.433163 secs using 295.7% CPU
+Iteration 70 / LogL: -5419.523 / Time: 0h:4m:38s (0h:0m:40s left)
+Optimizing NNI: done in 0.467959 secs using 294.1% CPU
+Optimizing NNI: done in 0.372277 secs using 294.7% CPU
+Optimizing NNI: done in 0.267941 secs using 291.9% CPU
+Optimizing NNI: done in 0.394296 secs using 296.2% CPU
+Optimizing NNI: done in 0.405436 secs using 296.5% CPU
+Optimizing NNI: done in 0.410965 secs using 296% CPU
+Optimizing NNI: done in 0.549052 secs using 296% CPU
+Optimizing NNI: done in 0.317005 secs using 291.8% CPU
+Optimizing NNI: done in 0.449027 secs using 295.7% CPU
+Optimizing NNI: done in 0.398242 secs using 295.5% CPU
+Iteration 80 / LogL: -5419.517 / Time: 0h:4m:42s (0h:0m:35s left)
+Optimizing NNI: done in 0.429156 secs using 295.2% CPU
+Optimizing NNI: done in 0.367271 secs using 296.5% CPU
+Optimizing NNI: done in 0.337576 secs using 296.1% CPU
+Optimizing NNI: done in 0.423408 secs using 295.5% CPU
+Optimizing NNI: done in 0.236867 secs using 293% CPU
+Optimizing NNI: done in 0.421541 secs using 296.8% CPU
+Optimizing NNI: done in 0.40113 secs using 294.9% CPU
+Optimizing NNI: done in 0.453577 secs using 295% CPU
+Optimizing NNI: done in 0.430351 secs using 296.5% CPU
+Optimizing NNI: done in 0.432251 secs using 295.6% CPU
+Iteration 90 / LogL: -5419.512 / Time: 0h:4m:46s (0h:0m:30s left)
+Optimizing NNI: done in 0.364416 secs using 294.5% CPU
+Optimizing NNI: done in 0.335326 secs using 292.6% CPU
+Optimizing NNI: done in 0.261333 secs using 293.7% CPU
+Optimizing NNI: done in 0.449844 secs using 294.2% CPU
+Optimizing NNI: done in 0.401202 secs using 295.3% CPU
+Optimizing NNI: done in 0.464063 secs using 296.6% CPU
+Optimizing NNI: done in 0.398287 secs using 293% CPU
+Optimizing NNI: done in 0.413899 secs using 293.9% CPU
+Optimizing NNI: done in 0.407776 secs using 292.9% CPU
+Optimizing NNI: done in 0.42522 secs using 293.9% CPU
+Iteration 100 / LogL: -5419.503 / Time: 0h:4m:50s (0h:0m:25s left)
+Log-likelihood cutoff on original alignment: -5447.498
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.991
+Optimizing NNI: done in 0.306644 secs using 293.4% CPU
+Optimizing NNI: done in 0.350777 secs using 294.1% CPU
+Optimizing NNI: done in 0.559858 secs using 294.6% CPU
+Optimizing NNI: done in 0.370302 secs using 294.1% CPU
+Optimizing NNI: done in 0.457465 secs using 296.2% CPU
+Optimizing NNI: done in 0.292273 secs using 293% CPU
+Optimizing NNI: done in 0.465908 secs using 295.9% CPU
+Optimizing NNI: done in 0.468492 secs using 295.6% CPU
+Optimizing NNI: done in 0.382465 secs using 293.9% CPU
+Optimizing NNI: done in 0.427958 secs using 293.4% CPU
+Iteration 110 / LogL: -5426.696 / Time: 0h:4m:55s (0h:0m:40s left)
+Optimizing NNI: done in 0.405721 secs using 295.1% CPU
+Optimizing NNI: done in 0.486038 secs using 294.7% CPU
+Optimizing NNI: done in 0.450748 secs using 295.8% CPU
+Optimizing NNI: done in 0.467104 secs using 293.9% CPU
+Optimizing NNI: done in 0.369273 secs using 293.8% CPU
+Optimizing NNI: done in 0.444729 secs using 295.1% CPU
+Optimizing NNI: done in 0.364846 secs using 295.9% CPU
+Optimizing NNI: done in 0.41504 secs using 295.8% CPU
+Optimizing NNI: done in 0.366347 secs using 297% CPU
+Optimizing NNI: done in 0.389494 secs using 295.1% CPU
+Iteration 120 / LogL: -5419.506 / Time: 0h:4m:59s (0h:0m:35s left)
+Optimizing NNI: done in 0.385155 secs using 293.4% CPU
+Optimizing NNI: done in 0.353905 secs using 294.4% CPU
+Optimizing NNI: done in 0.428516 secs using 295.5% CPU
+Optimizing NNI: done in 0.443052 secs using 294.2% CPU
+Optimizing NNI: done in 0.303348 secs using 294.8% CPU
+Optimizing NNI: done in 0.446326 secs using 296.6% CPU
+Optimizing NNI: done in 0.215859 secs using 293.3% CPU
+Optimizing NNI: done in 0.397444 secs using 295.2% CPU
+Optimizing NNI: done in 0.383548 secs using 295.5% CPU
+Optimizing NNI: done in 0.373188 secs using 296.4% CPU
+Iteration 130 / LogL: -5424.788 / Time: 0h:5m:3s (0h:0m:31s left)
+Optimizing NNI: done in 0.458544 secs using 294.2% CPU
+Optimizing NNI: done in 0.316508 secs using 294.3% CPU
+Optimizing NNI: done in 0.496396 secs using 295.5% CPU
+Optimizing NNI: done in 0.326179 secs using 294.4% CPU
+Optimizing NNI: done in 0.413402 secs using 295.9% CPU
+Optimizing NNI: done in 0.5048 secs using 293.6% CPU
+Optimizing NNI: done in 0.413282 secs using 295.4% CPU
+Optimizing NNI: done in 0.410962 secs using 295.1% CPU
+Optimizing NNI: done in 0.370635 secs using 293.4% CPU
+Optimizing NNI: done in 0.258295 secs using 293.6% CPU
+Iteration 140 / LogL: -5462.578 / Time: 0h:5m:8s (0h:0m:26s left)
+Optimizing NNI: done in 0.399008 secs using 292.6% CPU
+Optimizing NNI: done in 0.413024 secs using 295.3% CPU
+Optimizing NNI: done in 0.400884 secs using 296% CPU
+Optimizing NNI: done in 0.245187 secs using 295% CPU
+Optimizing NNI: done in 0.219775 secs using 294.9% CPU
+Optimizing NNI: done in 0.354644 secs using 296.5% CPU
+Optimizing NNI: done in 0.24625 secs using 295.8% CPU
+Optimizing NNI: done in 0.359153 secs using 294% CPU
+Optimizing NNI: done in 0.354308 secs using 293.6% CPU
+Optimizing NNI: done in 0.241693 secs using 291.7% CPU
+Iteration 150 / LogL: -5502.950 / Time: 0h:5m:11s (0h:0m:21s left)
+Log-likelihood cutoff on original alignment: -5448.646
+Optimizing NNI: done in 0.424133 secs using 295.4% CPU
+Optimizing NNI: done in 0.4012 secs using 292.6% CPU
+Optimizing NNI: done in 0.37671 secs using 293.2% CPU
+Optimizing NNI: done in 0.271286 secs using 292.5% CPU
+Optimizing NNI: done in 0.356252 secs using 293.3% CPU
+Optimizing NNI: done in 0.515401 secs using 292.9% CPU
+Optimizing NNI: done in 0.390394 secs using 295.4% CPU
+Optimizing NNI: done in 0.455887 secs using 296.9% CPU
+TREE SEARCH COMPLETED AFTER 158 ITERATIONS / Time: 0h:5m:15s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -5419.491
+Optimal log-likelihood: -5419.491
+Rate parameters:  A-C: 1.00000  A-G: 3.45890  A-T: 1.00000  C-G: 1.00000  C-T: 4.45201  G-T: 1.00000
+Base frequencies:  A: 0.222  C: 0.243  G: 0.262  T: 0.274
+Site proportion and rates:  (0.753,0.325) (0.247,3.056)
+Parameters optimization took 1 rounds (0.027 sec)
+BEST SCORE FOUND : -5419.491
+Creating bootstrap support values...
+Split supports printed to NEXUS file data/packages/ITS/Caloboletus/ref.splits.nex
+Total tree length: 4.334
+
+Total number of iterations: 158
+CPU time used for tree search: 193.173 sec (0h:3m:13s)
+Wall-clock time used for tree search: 68.447 sec (0h:1m:8s)
+Total CPU time used: 765.526 sec (0h:12m:45s)
+Total wall-clock time used: 315.704 sec (0h:5m:15s)
+
+Computing bootstrap consensus tree...
+Reading input file data/packages/ITS/Caloboletus/ref.splits.nex...
+134 taxa and 1706 splits.
+Consensus tree written to data/packages/ITS/Caloboletus/ref.contree
+Reading input trees file data/packages/ITS/Caloboletus/ref.contree
+Log-likelihood of consensus tree: -5419.612
+
+Analysis results written to: 
+  IQ-TREE report:                data/packages/ITS/Caloboletus/ref.iqtree
+  Maximum-likelihood tree:       data/packages/ITS/Caloboletus/ref.treefile
+  Likelihood distances:          data/packages/ITS/Caloboletus/ref.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          data/packages/ITS/Caloboletus/ref.splits.nex
+  Consensus tree:                data/packages/ITS/Caloboletus/ref.contree
+  Screen log file:               data/packages/ITS/Caloboletus/ref.log
+
+Date and Time: Mon Aug 18 18:35:22 2025

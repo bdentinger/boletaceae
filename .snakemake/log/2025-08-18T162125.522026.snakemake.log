@@ -1,0 +1,5 @@
+The flag 'directory' used in rule its_place_genus is only valid for outputs, not inputs.
+WorkflowError in file /home/bdentinger/boletaceae/workflow/rules/its_place.smk, line 63:
+Callable/function <function <lambda> at 0x7b5575bd0ea0> is passed as value for genus in 'expand' statement. This is most likely not what you want, as expand takes iterables of values or single values for its arguments. If you want to use a function to generate the values, you can wrap the entire expand in another function that does the computation.
+  File "/home/bdentinger/boletaceae/Snakefile", line 8, in <module>
+  File "/home/bdentinger/boletaceae/workflow/rules/its_place.smk", line 63, in <module>

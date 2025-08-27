@@ -1,0 +1,25 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 64
+Rules claiming more threads will be scaled down.
+Job stats:
+job                     count
+--------------------  -------
+graft_its_clusters          1
+its_global_align            1
+its_quick_tree              1
+its_split_by_cluster        1
+its_treecluster             1
+total                       5
+
+Select jobs to execute...
+
+[Tue Aug 19 13:53:34 2025]
+rule its_global_align:
+    input: data/qc/ITS.cleaned.fasta
+    output: data/align/ITS.all.aln.fasta
+    jobid: 41
+    reason: Forced execution
+    threads: 16
+    resources: tmpdir=/tmp
+

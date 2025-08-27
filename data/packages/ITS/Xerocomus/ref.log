@@ -1,0 +1,1408 @@
+IQ-TREE version 3.0.1 for Linux x86 64-bit built May  5 2025
+Developed by Bui Quang Minh, Thomas Wong, Nhan Ly-Trong, Huaiyan Ren
+Contributed by Lam-Tung Nguyen, Dominik Schrempf, Chris Bielow,
+Olga Chernomor, Michael Woodhams, Diep Thi Hoang, Heiko Schmidt
+
+Host:    lnx820.umnh.utah.edu (AVX2, FMA3, 865 GB RAM)
+Command: /home/bdentinger/iqtree-3.0.1-Linux/bin/iqtree3_intel -s data/packages/ITS/Xerocomus/aln.masked.fasta -m MFP -bb 1000 -nt AUTO -pre data/packages/ITS/Xerocomus/ref
+Seed:    890543 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Mon Aug 18 19:16:08 2025
+Kernel:  AVX+FMA - auto-detect threads (72 CPU cores detected)
+
+Reading alignment file data/packages/ITS/Xerocomus/aln.masked.fasta ... Fasta format detected
+Reading fasta file: done in 0.00419972 secs using 97.79% CPU
+Alignment most likely contains DNA/RNA sequences
+Constructing alignment: done in 0.00407226 secs using 80.03% CPU
+Alignment has 481 sequences with 582 columns, 521 distinct patterns
+393 parsimony-informative, 62 singleton sites, 127 constant sites
+                  Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 0.000699747 secs using 99.18% CPU
+   1  Xerocomus_001       6.01%    passed     51.35%
+   2  Xerocomus_002       6.01%    passed     51.35%
+   3  Xerocomus_003       6.01%    passed     51.35%
+   4  Xerocomus_004       0.00%    passed     94.39%
+   5  Xerocomus_005       2.58%    passed     94.81%
+   6  Xerocomus_006       6.01%    passed     51.35%
+   7  Xerocomus_007      11.51%    passed     51.40%
+   8  Xerocomus_008      10.14%    passed     90.92%
+   9  Xerocomus_009      12.89%    passed     97.71%
+  10  Xerocomus_010       2.58%    passed     97.22%
+  11  Xerocomus_011       0.17%    passed     86.85%
+  12  Xerocomus_012       0.00%    passed     90.29%
+  13  Xerocomus_013       0.17%    passed     86.46%
+  14  Xerocomus_014       0.00%    passed     90.29%
+  15  Xerocomus_015       0.17%    passed     91.56%
+  16  Xerocomus_016       0.17%    passed     91.56%
+  17  Xerocomus_017       0.00%    passed     90.29%
+  18  Xerocomus_018       0.00%    passed     89.61%
+  19  Xerocomus_019       0.00%    passed     90.29%
+  20  Xerocomus_020       6.01%    passed     38.43%
+  21  Xerocomus_021       4.12%    passed     88.96%
+  22  Xerocomus_022       3.26%    passed     41.38%
+  23  Xerocomus_023      15.98%    passed     99.80%
+  24  Xerocomus_024       1.37%    passed     95.70%
+  25  Xerocomus_025       0.00%    passed     90.37%
+  26  Xerocomus_026       6.01%    passed     47.22%
+  27  Xerocomus_027       0.00%    passed     91.60%
+  28  Xerocomus_028       0.17%    passed     86.85%
+  29  Xerocomus_029       0.00%    passed     96.66%
+  30  Xerocomus_030       0.00%    passed     90.29%
+  31  Xerocomus_031       1.37%    passed     94.14%
+  32  Xerocomus_032       2.06%    passed     96.33%
+  33  Xerocomus_033       0.17%    passed     90.40%
+  34  Xerocomus_034       0.00%    passed     87.57%
+  35  Xerocomus_035       0.17%    passed     93.87%
+  36  Xerocomus_036       2.58%    passed     77.86%
+  37  Xerocomus_037       6.70%    passed     11.01%
+  38  Xerocomus_038       0.17%    passed     99.10%
+  39  Xerocomus_039      27.32%    passed     92.99%
+  40  Xerocomus_040       6.01%    passed     51.35%
+  41  Xerocomus_041       0.17%    passed     95.40%
+  42  Xerocomus_042       0.17%    passed     93.87%
+  43  Xerocomus_043       0.17%    passed     95.40%
+  44  Xerocomus_044       0.17%    passed     97.26%
+  45  Xerocomus_045       9.62%    passed     92.43%
+  46  Xerocomus_046      11.68%    passed     96.78%
+  47  Xerocomus_047       0.17%    passed     95.40%
+  48  Xerocomus_048       2.06%    passed     99.17%
+  49  Xerocomus_049       5.84%    passed     97.06%
+  50  Xerocomus_050       0.00%    passed     91.60%
+  51  Xerocomus_051       0.17%    passed     93.87%
+  52  Xerocomus_052       0.00%    passed     91.60%
+  53  Xerocomus_053       0.17%    passed     91.01%
+  54  Xerocomus_054       0.00%    passed     91.60%
+  55  Xerocomus_055       0.17%    passed     93.25%
+  56  Xerocomus_056       0.17%    passed     99.10%
+  57  Xerocomus_057       7.22%    passed     78.18%
+  58  Xerocomus_058       2.06%    passed     96.91%
+  59  Xerocomus_059       2.06%    passed     96.91%
+  60  Xerocomus_060       1.72%    passed     84.24%
+  61  Xerocomus_061       9.45%    passed     90.76%
+  62  Xerocomus_062       5.67%    passed     72.81%
+  63  Xerocomus_063       9.62%    passed     99.08%
+  64  Xerocomus_064       9.62%    passed     97.85%
+  65  Xerocomus_065      15.64%    passed     70.96%
+  66  Xerocomus_066      16.49%    passed     62.44%
+  67  Xerocomus_067       1.72%    passed     84.24%
+  68  Xerocomus_068       1.03%    passed     86.85%
+  69  Xerocomus_069       0.34%    passed     97.39%
+  70  Xerocomus_070      22.85%    passed     99.99%
+  71  Xerocomus_071      22.85%    passed     99.86%
+  72  Xerocomus_072      22.68%    passed     87.91%
+  73  Xerocomus_073       7.90%    passed     77.13%
+  74  Xerocomus_074       2.92%    passed     97.08%
+  75  Xerocomus_075      39.18%    passed     66.45%
+  76  Xerocomus_076      39.18%    passed     66.45%
+  77  Xerocomus_077      39.52%    passed     68.52%
+  78  Xerocomus_078      39.52%    passed     68.52%
+  79  Xerocomus_079       2.75%    passed     91.91%
+  80  Xerocomus_080      25.77%    passed     81.62%
+  81  Xerocomus_081      30.24%    passed     92.89%
+  82  Xerocomus_082      24.40%    passed     95.80%
+  83  Xerocomus_083       1.55%    passed     97.79%
+  84  Xerocomus_084       1.55%    passed     97.79%
+  85  Xerocomus_085       1.37%    passed     90.07%
+  86  Xerocomus_086       1.20%    passed     90.82%
+  87  Xerocomus_087       1.55%    passed     83.14%
+  88  Xerocomus_088       1.55%    passed     99.18%
+  89  Xerocomus_089      18.73%    passed     91.12%
+  90  Xerocomus_090       4.12%    passed     85.13%
+  91  Xerocomus_091       4.12%    passed     85.13%
+  92  Xerocomus_092       6.01%    passed     51.35%
+  93  Xerocomus_093       2.75%    passed     98.08%
+  94  Xerocomus_094       4.12%    passed     97.65%
+  95  Xerocomus_095       4.12%    passed     96.97%
+  96  Xerocomus_096       3.61%    passed     99.86%
+  97  Xerocomus_097       3.44%    passed     99.88%
+  98  Xerocomus_098       3.44%    passed     99.88%
+  99  Xerocomus_099       3.61%    passed     99.88%
+ 100  Xerocomus_100      29.90%    passed     92.77%
+ 101  Xerocomus_101      12.20%    passed     95.84%
+ 102  Xerocomus_102       2.75%    passed     92.05%
+ 103  Xerocomus_103       3.26%    passed     99.72%
+ 104  Xerocomus_104       4.64%    passed     99.97%
+ 105  Xerocomus_105       4.12%    passed     99.87%
+ 106  Xerocomus_106       2.75%    passed     92.05%
+ 107  Xerocomus_107       4.30%    passed     99.85%
+ 108  Xerocomus_108       1.03%    passed     95.10%
+ 109  Xerocomus_109       0.17%    passed     99.10%
+ 110  Xerocomus_110       0.17%    passed     99.10%
+ 111  Xerocomus_111       0.17%    passed     99.10%
+ 112  Xerocomus_112       0.17%    passed     99.10%
+ 113  Xerocomus_113       0.17%    passed     93.25%
+ 114  Xerocomus_114       0.17%    passed     93.25%
+ 115  Xerocomus_115       0.17%    passed     99.04%
+ 116  Xerocomus_116       0.17%    passed     97.68%
+ 117  Xerocomus_117       0.34%    passed     97.50%
+ 118  Xerocomus_118       0.17%    passed     98.45%
+ 119  Xerocomus_119      41.41%    passed     73.21%
+ 120  Xerocomus_120       2.75%    passed     98.95%
+ 121  Xerocomus_121       4.64%    passed     99.13%
+ 122  Xerocomus_122       1.55%    passed     78.50%
+ 123  Xerocomus_123       1.55%    passed     78.50%
+ 124  Xerocomus_124       8.25%    passed     90.59%
+ 125  Xerocomus_125       8.42%    passed     92.25%
+ 126  Xerocomus_126      10.14%    passed     87.95%
+ 127  Xerocomus_127      25.60%    passed     88.93%
+ 128  Xerocomus_128       0.00%    passed     90.29%
+ 129  Xerocomus_129       0.00%    passed     90.29%
+ 130  Xerocomus_130       2.06%    passed     83.73%
+ 131  Xerocomus_131      29.90%    passed      9.34%
+ 132  Xerocomus_132       2.06%    passed     99.17%
+ 133  Xerocomus_133       4.64%    passed     99.97%
+ 134  Xerocomus_134      13.57%    passed     74.63%
+ 135  Xerocomus_135       7.73%    passed     37.89%
+ 136  Xerocomus_136       0.34%    passed     92.49%
+ 137  Xerocomus_137       0.34%    passed     92.49%
+ 138  Xerocomus_138       6.01%    passed     45.91%
+ 139  Xerocomus_139       6.01%    passed     51.35%
+ 140  Xerocomus_140       1.37%    passed     95.70%
+ 141  Xerocomus_141       1.37%    passed     97.37%
+ 142  Xerocomus_142       1.37%    passed     93.24%
+ 143  Xerocomus_143       0.00%    passed     89.61%
+ 144  Xerocomus_144       0.00%    passed     87.57%
+ 145  Xerocomus_145       0.17%    passed     90.08%
+ 146  Xerocomus_146       0.00%    passed     87.57%
+ 147  Xerocomus_147       0.00%    passed     90.29%
+ 148  Xerocomus_148       0.00%    passed     90.29%
+ 149  Xerocomus_149       0.00%    passed     90.29%
+ 150  Xerocomus_150       1.37%    passed     95.70%
+ 151  Xerocomus_151      12.89%    passed     82.95%
+ 152  Xerocomus_152       2.75%    passed     98.95%
+ 153  Xerocomus_153      19.93%    passed     89.87%
+ 154  Xerocomus_154       0.00%    passed     90.29%
+ 155  Xerocomus_155       1.37%    passed     95.70%
+ 156  Xerocomus_156       0.00%    passed     90.29%
+ 157  Xerocomus_157       0.00%    passed     90.29%
+ 158  Xerocomus_158       6.01%    passed     51.35%
+ 159  Xerocomus_159       0.17%    passed     91.02%
+ 160  Xerocomus_160       5.15%    passed     25.18%
+ 161  Xerocomus_161       2.41%    passed     67.56%
+ 162  Xerocomus_162       2.41%    passed     38.83%
+ 163  Xerocomus_163       4.98%    passed     58.72%
+ 164  Xerocomus_164       1.03%    passed     86.92%
+ 165  Xerocomus_165       5.33%    passed     70.54%
+ 166  Xerocomus_166       3.61%    passed     87.06%
+ 167  Xerocomus_167       2.41%    passed     67.56%
+ 168  Xerocomus_168       7.90%    passed     78.34%
+ 169  Xerocomus_169       2.41%    passed     67.56%
+ 170  Xerocomus_170       2.75%    passed     69.07%
+ 171  Xerocomus_171       2.41%    passed     37.06%
+ 172  Xerocomus_172       1.03%    passed     86.92%
+ 173  Xerocomus_173       2.41%    passed     37.06%
+ 174  Xerocomus_174       2.41%    passed     38.83%
+ 175  Xerocomus_175       2.41%    passed     37.06%
+ 176  Xerocomus_176       2.41%    passed     73.09%
+ 177  Xerocomus_177       2.41%    passed     38.83%
+ 178  Xerocomus_178       1.03%    passed     86.92%
+ 179  Xerocomus_179       1.03%    passed     86.92%
+ 180  Xerocomus_180       0.86%    passed     96.43%
+ 181  Xerocomus_181       2.41%    passed     89.52%
+ 182  Xerocomus_182       2.41%    passed     37.06%
+ 183  Xerocomus_183       6.01%    passed     48.99%
+ 184  Xerocomus_184       2.41%    passed     38.83%
+ 185  Xerocomus_185       0.17%    passed     91.02%
+ 186  Xerocomus_186       1.03%    passed     86.92%
+ 187  Xerocomus_187       5.15%    passed     71.34%
+ 188  Xerocomus_188       2.23%    passed     66.80%
+ 189  Xerocomus_189      11.34%    passed     18.11%
+ 190  Xerocomus_190       3.09%    passed     78.45%
+ 191  Xerocomus_191       6.70%    passed     41.81%
+ 192  Xerocomus_192       6.70%    passed     41.81%
+ 193  Xerocomus_193       6.70%    passed     41.81%
+ 194  Xerocomus_194       6.87%    passed     45.36%
+ 195  Xerocomus_195      10.82%    passed     36.30%
+ 196  Xerocomus_196       6.19%    passed     54.14%
+ 197  Xerocomus_197       9.97%    passed     97.11%
+ 198  Xerocomus_198       5.15%    passed      6.00%
+ 199  Xerocomus_199      25.60%    passed     11.63%
+ 200  Xerocomus_200       4.30%    failed      1.99%
+ 201  Xerocomus_201       4.30%    failed      1.99%
+ 202  Xerocomus_202       4.30%    failed      1.63%
+ 203  Xerocomus_203       7.39%    passed     17.86%
+ 204  Xerocomus_204       7.39%    passed     17.86%
+ 205  Xerocomus_205      15.64%    failed      0.00%
+ 206  Xerocomus_206       2.92%    failed      4.21%
+ 207  Xerocomus_207      20.10%    passed     92.66%
+ 208  Xerocomus_208      18.73%    passed     93.88%
+ 209  Xerocomus_209      18.90%    passed     94.79%
+ 210  Xerocomus_210      18.73%    passed     93.88%
+ 211  Xerocomus_211      18.90%    passed     94.95%
+ 212  Xerocomus_212      37.11%    passed     78.17%
+ 213  Xerocomus_213      18.73%    passed     93.65%
+ 214  Xerocomus_214      18.90%    passed     94.95%
+ 215  Xerocomus_215      18.73%    passed     93.65%
+ 216  Xerocomus_216      18.73%    passed     93.88%
+ 217  Xerocomus_217      18.73%    passed     93.88%
+ 218  Xerocomus_218      18.73%    passed     93.88%
+ 219  Xerocomus_219       7.90%    passed     74.43%
+ 220  Xerocomus_220       7.90%    passed     74.43%
+ 221  Xerocomus_221      13.40%    failed      1.39%
+ 222  Xerocomus_222       2.92%    passed     55.57%
+ 223  Xerocomus_223       4.30%    passed     49.87%
+ 224  Xerocomus_224       2.92%    passed     55.57%
+ 225  Xerocomus_225       3.09%    passed     54.51%
+ 226  Xerocomus_226       5.50%    passed     52.66%
+ 227  Xerocomus_227       5.15%    passed     54.15%
+ 228  Xerocomus_228      12.54%    passed     85.20%
+ 229  Xerocomus_229       3.09%    passed     31.96%
+ 230  Xerocomus_230       6.01%    passed     47.22%
+ 231  Xerocomus_231       6.01%    passed     51.35%
+ 232  Xerocomus_232      12.89%    passed     29.15%
+ 233  Xerocomus_233       0.00%    passed     90.29%
+ 234  Xerocomus_234      12.89%    passed     82.95%
+ 235  Xerocomus_235       1.72%    passed     92.86%
+ 236  Xerocomus_236       2.06%    passed     95.00%
+ 237  Xerocomus_237       0.00%    passed     90.29%
+ 238  Xerocomus_238       0.00%    passed     96.73%
+ 239  Xerocomus_239       1.03%    passed     42.17%
+ 240  Xerocomus_240       2.75%    passed     98.08%
+ 241  Xerocomus_241       0.86%    passed     56.49%
+ 242  Xerocomus_242      38.49%    passed     68.68%
+ 243  Xerocomus_243       0.00%    passed     90.29%
+ 244  Xerocomus_244      43.13%    passed     43.74%
+ 245  Xerocomus_245       2.92%    passed     97.34%
+ 246  Xerocomus_246       2.23%    passed     77.43%
+ 247  Xerocomus_247       0.17%    passed     97.13%
+ 248  Xerocomus_248       0.17%    passed     97.13%
+ 249  Xerocomus_249       1.37%    passed     90.07%
+ 250  Xerocomus_250       2.23%    passed     98.92%
+ 251  Xerocomus_251       3.26%    passed     59.87%
+ 252  Xerocomus_252       0.69%    passed     99.51%
+ 253  Xerocomus_253       0.17%    passed     93.10%
+ 254  Xerocomus_254       0.17%    passed     97.26%
+ 255  Xerocomus_255       0.17%    passed     97.26%
+ 256  Xerocomus_256      54.64%    passed     52.51%
+ 257  Xerocomus_257       2.92%    passed     83.21%
+ 258  Xerocomus_258       2.75%    passed     99.53%
+ 259  Xerocomus_259      19.93%    passed     89.67%
+ 260  Xerocomus_260      24.05%    passed     86.70%
+ 261  Xerocomus_261      23.54%    passed     66.59%
+ 262  Xerocomus_262      10.14%    passed     83.63%
+ 263  Xerocomus_263      11.17%    passed     25.56%
+ 264  Xerocomus_264       6.53%    passed     98.85%
+ 265  Xerocomus_265       8.08%    passed     95.39%
+ 266  Xerocomus_266      11.51%    passed     87.81%
+ 267  Xerocomus_267       7.73%    passed     87.63%
+ 268  Xerocomus_268       2.92%    passed     96.65%
+ 269  Xerocomus_269       6.87%    passed     87.41%
+ 270  Xerocomus_270       4.30%    passed     97.96%
+ 271  Xerocomus_271       1.72%    passed     93.73%
+ 272  Xerocomus_272      59.62%    passed     99.76%
+ 273  Xerocomus_273       4.47%    passed     96.24%
+ 274  Xerocomus_274       0.52%    passed     89.18%
+ 275  Xerocomus_275       1.72%    passed     48.35%
+ 276  Xerocomus_276       0.17%    passed     98.45%
+ 277  Xerocomus_277       0.17%    passed     97.26%
+ 278  Xerocomus_278      13.23%    passed     72.42%
+ 279  Xerocomus_279       4.12%    passed     85.13%
+ 280  Xerocomus_280       6.19%    passed     36.41%
+ 281  Xerocomus_281       0.17%    passed     97.26%
+ 282  Xerocomus_282      40.03%    passed     88.30%
+ 283  Xerocomus_283      41.75%    passed     18.08%
+ 284  Xerocomus_284       1.20%    passed     89.26%
+ 285  Xerocomus_285      17.01%    passed     70.90%
+ 286  Xerocomus_286       5.15%    passed     47.41%
+ 287  Xerocomus_287       2.58%    passed     40.05%
+ 288  Xerocomus_288      16.49%    passed     99.81%
+ 289  Xerocomus_289       0.17%    passed     96.73%
+ 290  Xerocomus_290       0.69%    passed     97.97%
+ 291  Xerocomus_291      16.49%    passed     27.20%
+ 292  Xerocomus_292      26.29%    passed     53.53%
+ 293  Xerocomus_293       0.17%    passed     97.26%
+ 294  Xerocomus_294       0.86%    passed     56.49%
+ 295  Xerocomus_295       2.75%    passed     98.08%
+ 296  Xerocomus_296       0.86%    passed     56.49%
+ 297  Xerocomus_297       0.00%    passed     90.29%
+ 298  Xerocomus_298      15.98%    passed     95.62%
+ 299  Xerocomus_299       2.75%    passed     99.61%
+ 300  Xerocomus_300       8.59%    passed     48.97%
+ 301  Xerocomus_301       6.87%    passed     94.59%
+ 302  Xerocomus_302       6.87%    passed     94.59%
+ 303  Xerocomus_303       0.17%    passed     98.41%
+ 304  Xerocomus_304       1.55%    passed     97.71%
+ 305  Xerocomus_305       0.17%    passed     97.16%
+ 306  Xerocomus_306      11.34%    passed     95.36%
+ 307  Xerocomus_307       7.56%    passed     96.26%
+ 308  Xerocomus_308       7.73%    passed     93.10%
+ 309  Xerocomus_309       0.17%    passed     96.73%
+ 310  Xerocomus_310       0.69%    passed     91.19%
+ 311  Xerocomus_311      52.06%    passed     10.77%
+ 312  Xerocomus_312      27.15%    passed     62.75%
+ 313  Xerocomus_313      24.91%    passed     90.43%
+ 314  Xerocomus_314      16.15%    passed     67.07%
+ 315  Xerocomus_315      16.67%    passed     55.39%
+ 316  Xerocomus_316      11.51%    passed     69.90%
+ 317  Xerocomus_317       3.61%    passed     79.03%
+ 318  Xerocomus_318      25.60%    passed     58.21%
+ 319  Xerocomus_319       4.12%    passed     85.13%
+ 320  _R_Xerocomus_320   13.23%    passed     87.87%
+ 321  Xerocomus_321      15.64%    passed     89.30%
+ 322  Xerocomus_322       9.97%    passed     85.18%
+ 323  Xerocomus_323       3.26%    passed     99.63%
+ 324  Xerocomus_324       7.22%    passed     93.96%
+ 325  Xerocomus_325       0.17%    passed     90.05%
+ 326  Xerocomus_326       1.72%    passed     96.64%
+ 327  Xerocomus_327       1.37%    passed     94.24%
+ 328  Xerocomus_328      42.61%    passed     64.47%
+ 329  Xerocomus_329       0.69%    passed     92.66%
+ 330  Xerocomus_330       1.72%    passed     94.92%
+ 331  Xerocomus_331       6.01%    passed     96.12%
+ 332  Xerocomus_332      37.11%    passed     29.80%
+ 333  Xerocomus_333       3.09%    passed     99.70%
+ 334  Xerocomus_334       1.37%    passed     95.70%
+ 335  Xerocomus_335       0.00%    passed     90.29%
+ 336  Xerocomus_336       0.00%    passed     90.29%
+ 337  Xerocomus_337       2.75%    passed     95.89%
+ 338  Xerocomus_338       6.19%    passed     16.93%
+ 339  Xerocomus_339       1.72%    passed     97.34%
+ 340  Xerocomus_340      11.34%    passed     95.61%
+ 341  Xerocomus_341       7.22%    passed     96.58%
+ 342  Xerocomus_342       3.09%    passed     97.66%
+ 343  Xerocomus_343       3.95%    passed     26.41%
+ 344  Xerocomus_344       0.00%    passed     90.48%
+ 345  Xerocomus_345      27.15%    passed     94.42%
+ 346  Xerocomus_346       2.41%    passed     94.77%
+ 347  Xerocomus_347       2.92%    passed     97.11%
+ 348  Xerocomus_348       0.17%    passed     97.26%
+ 349  Xerocomus_349       4.64%    passed     21.11%
+ 350  Xerocomus_350       6.01%    passed     96.57%
+ 351  Xerocomus_351       3.95%    passed     83.65%
+ 352  Xerocomus_352       2.58%    passed     92.92%
+ 353  Xerocomus_353      14.95%    passed     98.00%
+ 354  Xerocomus_354       4.64%    passed     84.21%
+ 355  Xerocomus_355      10.48%    passed     24.53%
+ 356  Xerocomus_356      32.82%    passed     94.47%
+ 357  Xerocomus_357      13.23%    passed     93.48%
+ 358  Xerocomus_358       0.86%    passed     94.55%
+ 359  Xerocomus_359       6.53%    passed     82.99%
+ 360  Xerocomus_360       6.36%    passed     85.90%
+ 361  Xerocomus_361       6.53%    passed     82.99%
+ 362  Xerocomus_362      11.68%    passed     98.76%
+ 363  Xerocomus_363      14.43%    passed     40.06%
+ 364  Xerocomus_364      38.83%    passed     72.94%
+ 365  Xerocomus_365      13.75%    passed     67.19%
+ 366  Xerocomus_366      34.19%    failed      0.03%
+ 367  Xerocomus_367      18.56%    passed     26.90%
+ 368  Xerocomus_368       5.84%    passed     94.42%
+ 369  Xerocomus_369       8.25%    passed     69.40%
+ 370  Xerocomus_370       7.56%    passed     96.66%
+ 371  Xerocomus_371      19.76%    passed     45.94%
+ 372  Xerocomus_372       1.72%    failed      1.30%
+ 373  Xerocomus_373      18.73%    passed     67.79%
+ 374  Xerocomus_374      18.73%    passed     93.88%
+ 375  Xerocomus_375       5.84%    passed     58.41%
+ 376  Xerocomus_376       7.22%    passed     93.96%
+ 377  Xerocomus_377       6.36%    passed     82.52%
+ 378  Xerocomus_378      22.68%    passed     88.87%
+ 379  Xerocomus_379      13.57%    passed     95.76%
+ 380  Xerocomus_380      40.89%    passed     77.27%
+ 381  Xerocomus_381      41.07%    passed     79.76%
+ 382  Xerocomus_382      40.55%    passed     76.32%
+ 383  Xerocomus_383      41.07%    passed     54.86%
+ 384  Xerocomus_384      40.38%    passed     72.89%
+ 385  Xerocomus_385       1.72%    passed     80.20%
+ 386  Xerocomus_386      17.18%    passed     35.97%
+ 387  Xerocomus_387      13.57%    passed     95.68%
+ 388  Xerocomus_388      13.40%    passed     98.47%
+ 389  Xerocomus_389      16.49%    passed     99.18%
+ 390  Xerocomus_390       2.92%    passed     97.70%
+ 391  Xerocomus_391       0.17%    passed     95.40%
+ 392  Xerocomus_392       0.34%    passed     99.20%
+ 393  Xerocomus_393       7.04%    passed      8.90%
+ 394  Xerocomus_394       4.47%    passed     94.77%
+ 395  Xerocomus_395       0.00%    passed     96.66%
+ 396  Xerocomus_396       7.56%    passed     96.05%
+ 397  Xerocomus_397       1.20%    passed     87.56%
+ 398  Xerocomus_398       3.26%    passed     38.84%
+ 399  Xerocomus_399       1.20%    passed     98.65%
+ 400  Xerocomus_400       0.69%    passed     99.63%
+ 401  Xerocomus_401       2.92%    passed     75.63%
+ 402  Xerocomus_402       4.47%    passed     17.27%
+ 403  Xerocomus_403       3.09%    passed     78.45%
+ 404  Xerocomus_404       3.09%    passed     28.45%
+ 405  Xerocomus_405      40.21%    passed     63.85%
+ 406  Xerocomus_406      41.24%    passed     28.35%
+ 407  Xerocomus_407      39.35%    passed     71.31%
+ 408  Xerocomus_408      39.69%    passed     58.97%
+ 409  Xerocomus_409      40.21%    passed     61.66%
+ 410  Xerocomus_410      41.41%    passed     54.59%
+ 411  Xerocomus_411      39.18%    passed     65.84%
+ 412  Xerocomus_412      39.69%    passed     21.06%
+ 413  Xerocomus_413       0.52%    passed     96.64%
+ 414  Xerocomus_414       0.34%    passed     95.63%
+ 415  Xerocomus_415       3.61%    passed     97.97%
+ 416  Xerocomus_416       2.06%    passed     99.17%
+ 417  Xerocomus_417       2.06%    passed     99.17%
+ 418  Xerocomus_418       2.06%    passed     99.17%
+ 419  Xerocomus_419       2.06%    passed     99.17%
+ 420  Xerocomus_420       0.17%    passed     88.58%
+ 421  Xerocomus_421       2.06%    passed     69.82%
+ 422  Xerocomus_422       0.00%    passed     96.66%
+ 423  Xerocomus_423       0.00%    passed     96.66%
+ 424  Xerocomus_424       0.17%    passed     97.16%
+ 425  Xerocomus_425       0.17%    passed     97.16%
+ 426  Xerocomus_426       0.52%    passed     96.04%
+ 427  Xerocomus_427       2.92%    passed     99.67%
+ 428  Xerocomus_428       0.17%    passed     97.16%
+ 429  Xerocomus_429       0.69%    passed     98.07%
+ 430  Xerocomus_430       0.17%    passed     97.26%
+ 431  Xerocomus_431       0.17%    passed     97.26%
+ 432  Xerocomus_432       0.17%    passed     95.40%
+ 433  Xerocomus_433       0.17%    passed     95.40%
+ 434  Xerocomus_434       0.17%    passed     97.26%
+ 435  Xerocomus_435       0.52%    passed     96.98%
+ 436  Xerocomus_436       0.17%    passed     97.26%
+ 437  Xerocomus_437       0.34%    passed     96.67%
+ 438  Xerocomus_438       1.03%    passed     97.64%
+ 439  Xerocomus_439       0.17%    passed     97.28%
+ 440  Xerocomus_440       0.17%    passed     97.26%
+ 441  Xerocomus_441       0.34%    passed     96.67%
+ 442  Xerocomus_442       0.17%    passed     95.40%
+ 443  Xerocomus_443       0.34%    passed     96.67%
+ 444  Xerocomus_444       0.34%    passed     96.67%
+ 445  Xerocomus_445       1.89%    passed     92.44%
+ 446  Xerocomus_446       8.76%    passed     75.35%
+ 447  Xerocomus_447       2.75%    passed     96.07%
+ 448  Xerocomus_448       0.17%    passed     89.04%
+ 449  Xerocomus_449       2.75%    passed     95.78%
+ 450  Xerocomus_450       0.52%    passed     90.27%
+ 451  Xerocomus_451       0.34%    passed     89.90%
+ 452  Xerocomus_452       0.17%    passed     89.34%
+ 453  Xerocomus_453       0.17%    passed     89.01%
+ 454  Xerocomus_454       0.17%    passed     88.58%
+ 455  Xerocomus_455       2.06%    passed     99.17%
+ 456  Xerocomus_456       2.06%    passed     99.17%
+ 457  Xerocomus_457       1.37%    passed     94.11%
+ 458  Xerocomus_458       0.52%    passed     93.08%
+ 459  Xerocomus_459       0.86%    passed     94.55%
+ 460  Xerocomus_460       0.86%    passed     94.55%
+ 461  Xerocomus_461       2.75%    passed     96.98%
+ 462  Xerocomus_462       0.69%    passed     94.31%
+ 463  Xerocomus_463       0.17%    passed     93.87%
+ 464  Xerocomus_464       2.06%    passed     95.14%
+ 465  Xerocomus_465       2.23%    passed     96.04%
+ 466  Xerocomus_466       3.44%    passed     98.45%
+ 467  Xerocomus_467       3.44%    passed     98.45%
+ 468  Xerocomus_468       3.44%    passed     98.59%
+ 469  Xerocomus_469       3.95%    passed     97.46%
+ 470  Xerocomus_470       2.92%    passed     97.05%
+ 471  Xerocomus_471       2.92%    passed     97.05%
+ 472  Xerocomus_472       5.50%    passed     88.56%
+ 473  Xerocomus_473       4.98%    passed     90.17%
+ 474  Xerocomus_474       4.64%    passed     91.92%
+ 475  Xerocomus_475       4.64%    passed     91.92%
+ 476  Xerocomus_476      12.20%    passed     97.60%
+ 477  Xerocomus_477       1.37%    passed     93.24%
+ 478  Xerocomus_478       0.34%    passed     88.67%
+ 479  Xerocomus_479       0.00%    passed     90.29%
+ 480  Xerocomus_480       7.22%    passed     96.91%
+ 481  Xerocomus_481       0.17%    passed     95.40%
+WARNING: 3 sequences contain more than 50% gaps/ambiguity
+****  TOTAL               7.65%  8 sequences failed composition chi2 test (p-value<5%; df=3)
+NOTE: Xerocomus_002 is identical to Xerocomus_001 but kept for subsequent analysis
+NOTE: Xerocomus_028 is identical to Xerocomus_011 but kept for subsequent analysis
+NOTE: Xerocomus_014 is identical to Xerocomus_012 but kept for subsequent analysis
+NOTE: Xerocomus_016 is identical to Xerocomus_015 but kept for subsequent analysis
+NOTE: Xerocomus_140 is identical to Xerocomus_024 but kept for subsequent analysis
+NOTE: Xerocomus_050 is identical to Xerocomus_027 but kept for subsequent analysis
+NOTE: Xerocomus_395 is identical to Xerocomus_029 but kept for subsequent analysis
+NOTE: Xerocomus_144 is identical to Xerocomus_034 but kept for subsequent analysis
+NOTE: Xerocomus_042 is identical to Xerocomus_035 but kept for subsequent analysis
+NOTE: Xerocomus_056 is identical to Xerocomus_038 but kept for subsequent analysis
+NOTE: Xerocomus_043 is identical to Xerocomus_041 but kept for subsequent analysis
+NOTE: Xerocomus_254 is identical to Xerocomus_044 but kept for subsequent analysis
+NOTE: Xerocomus_132 is identical to Xerocomus_048 but kept for subsequent analysis
+NOTE: Xerocomus_113 is identical to Xerocomus_055 but kept for subsequent analysis
+NOTE: Xerocomus_059 is identical to Xerocomus_058 but kept for subsequent analysis
+NOTE: Xerocomus_067 is identical to Xerocomus_060 but kept for subsequent analysis
+NOTE: Xerocomus_076 is identical to Xerocomus_075 but kept for subsequent analysis
+NOTE: Xerocomus_078 is identical to Xerocomus_077 but kept for subsequent analysis
+NOTE: Xerocomus_084 is identical to Xerocomus_083 but kept for subsequent analysis
+NOTE: Xerocomus_249 is identical to Xerocomus_085 but kept for subsequent analysis
+NOTE: Xerocomus_091 is identical to Xerocomus_090 but kept for subsequent analysis
+NOTE: Xerocomus_139 is identical to Xerocomus_092 but kept for subsequent analysis
+NOTE: Xerocomus_098 is identical to Xerocomus_097 but kept for subsequent analysis
+NOTE: Xerocomus_106 is identical to Xerocomus_102 but kept for subsequent analysis
+NOTE: Xerocomus_133 is identical to Xerocomus_104 but kept for subsequent analysis
+NOTE: Xerocomus_276 is identical to Xerocomus_118 but kept for subsequent analysis
+NOTE: Xerocomus_152 is identical to Xerocomus_120 but kept for subsequent analysis
+NOTE: Xerocomus_123 is identical to Xerocomus_122 but kept for subsequent analysis
+NOTE: Xerocomus_137 is identical to Xerocomus_136 but kept for subsequent analysis
+NOTE: Xerocomus_234 is identical to Xerocomus_151 but kept for subsequent analysis
+NOTE: Xerocomus_185 is identical to Xerocomus_159 but kept for subsequent analysis
+NOTE: Xerocomus_167 is identical to Xerocomus_161 but kept for subsequent analysis
+NOTE: Xerocomus_174 is identical to Xerocomus_162 but kept for subsequent analysis
+NOTE: Xerocomus_172 is identical to Xerocomus_164 but kept for subsequent analysis
+NOTE: Xerocomus_173 is identical to Xerocomus_171 but kept for subsequent analysis
+NOTE: Xerocomus_182 is identical to Xerocomus_175 but kept for subsequent analysis
+NOTE: Xerocomus_403 is identical to Xerocomus_190 but kept for subsequent analysis
+NOTE: Xerocomus_192 is identical to Xerocomus_191 but kept for subsequent analysis
+NOTE: Xerocomus_201 is identical to Xerocomus_200 but kept for subsequent analysis
+NOTE: Xerocomus_210 is identical to Xerocomus_208 but kept for subsequent analysis
+NOTE: Xerocomus_214 is identical to Xerocomus_211 but kept for subsequent analysis
+NOTE: Xerocomus_220 is identical to Xerocomus_219 but kept for subsequent analysis
+NOTE: Xerocomus_224 is identical to Xerocomus_222 but kept for subsequent analysis
+NOTE: Xerocomus_295 is identical to Xerocomus_240 but kept for subsequent analysis
+NOTE: Xerocomus_294 is identical to Xerocomus_241 but kept for subsequent analysis
+NOTE: Xerocomus_248 is identical to Xerocomus_247 but kept for subsequent analysis
+NOTE: Xerocomus_425 is identical to Xerocomus_305 but kept for subsequent analysis
+NOTE: Xerocomus_376 is identical to Xerocomus_324 but kept for subsequent analysis
+NOTE: Xerocomus_460 is identical to Xerocomus_358 but kept for subsequent analysis
+NOTE: Xerocomus_454 is identical to Xerocomus_420 but kept for subsequent analysis
+NOTE: Xerocomus_428 is identical to Xerocomus_424 but kept for subsequent analysis
+NOTE: Xerocomus_441 is identical to Xerocomus_437 but kept for subsequent analysis
+NOTE: Xerocomus_467 is identical to Xerocomus_466 but kept for subsequent analysis
+NOTE: Xerocomus_471 is identical to Xerocomus_470 but kept for subsequent analysis
+NOTE: Xerocomus_475 is identical to Xerocomus_474 but kept for subsequent analysis
+Checking for duplicate sequences: done in 0.00249674 secs using 92.28% CPU
+Identifying sites to remove: done in 0.00257227 secs using 99.76% CPU
+NOTE: 76 identical sequences (see below) will be ignored for subsequent analysis
+NOTE: Xerocomus_003 (identical to Xerocomus_001) is ignored but added at the end
+NOTE: Xerocomus_006 (identical to Xerocomus_001) is ignored but added at the end
+NOTE: Xerocomus_040 (identical to Xerocomus_001) is ignored but added at the end
+NOTE: Xerocomus_158 (identical to Xerocomus_001) is ignored but added at the end
+NOTE: Xerocomus_231 (identical to Xerocomus_001) is ignored but added at the end
+NOTE: Xerocomus_017 (identical to Xerocomus_012) is ignored but added at the end
+NOTE: Xerocomus_019 (identical to Xerocomus_012) is ignored but added at the end
+NOTE: Xerocomus_030 (identical to Xerocomus_012) is ignored but added at the end
+NOTE: Xerocomus_128 (identical to Xerocomus_012) is ignored but added at the end
+NOTE: Xerocomus_129 (identical to Xerocomus_012) is ignored but added at the end
+NOTE: Xerocomus_147 (identical to Xerocomus_012) is ignored but added at the end
+NOTE: Xerocomus_148 (identical to Xerocomus_012) is ignored but added at the end
+NOTE: Xerocomus_149 (identical to Xerocomus_012) is ignored but added at the end
+NOTE: Xerocomus_154 (identical to Xerocomus_012) is ignored but added at the end
+NOTE: Xerocomus_156 (identical to Xerocomus_012) is ignored but added at the end
+NOTE: Xerocomus_157 (identical to Xerocomus_012) is ignored but added at the end
+NOTE: Xerocomus_233 (identical to Xerocomus_012) is ignored but added at the end
+NOTE: Xerocomus_237 (identical to Xerocomus_012) is ignored but added at the end
+NOTE: Xerocomus_243 (identical to Xerocomus_012) is ignored but added at the end
+NOTE: Xerocomus_297 (identical to Xerocomus_012) is ignored but added at the end
+NOTE: Xerocomus_335 (identical to Xerocomus_012) is ignored but added at the end
+NOTE: Xerocomus_336 (identical to Xerocomus_012) is ignored but added at the end
+NOTE: Xerocomus_479 (identical to Xerocomus_012) is ignored but added at the end
+NOTE: Xerocomus_150 (identical to Xerocomus_024) is ignored but added at the end
+NOTE: Xerocomus_155 (identical to Xerocomus_024) is ignored but added at the end
+NOTE: Xerocomus_334 (identical to Xerocomus_024) is ignored but added at the end
+NOTE: Xerocomus_052 (identical to Xerocomus_027) is ignored but added at the end
+NOTE: Xerocomus_054 (identical to Xerocomus_027) is ignored but added at the end
+NOTE: Xerocomus_422 (identical to Xerocomus_029) is ignored but added at the end
+NOTE: Xerocomus_423 (identical to Xerocomus_029) is ignored but added at the end
+NOTE: Xerocomus_146 (identical to Xerocomus_034) is ignored but added at the end
+NOTE: Xerocomus_051 (identical to Xerocomus_035) is ignored but added at the end
+NOTE: Xerocomus_463 (identical to Xerocomus_035) is ignored but added at the end
+NOTE: Xerocomus_109 (identical to Xerocomus_038) is ignored but added at the end
+NOTE: Xerocomus_110 (identical to Xerocomus_038) is ignored but added at the end
+NOTE: Xerocomus_111 (identical to Xerocomus_038) is ignored but added at the end
+NOTE: Xerocomus_112 (identical to Xerocomus_038) is ignored but added at the end
+NOTE: Xerocomus_047 (identical to Xerocomus_041) is ignored but added at the end
+NOTE: Xerocomus_391 (identical to Xerocomus_041) is ignored but added at the end
+NOTE: Xerocomus_432 (identical to Xerocomus_041) is ignored but added at the end
+NOTE: Xerocomus_433 (identical to Xerocomus_041) is ignored but added at the end
+NOTE: Xerocomus_442 (identical to Xerocomus_041) is ignored but added at the end
+NOTE: Xerocomus_481 (identical to Xerocomus_041) is ignored but added at the end
+NOTE: Xerocomus_255 (identical to Xerocomus_044) is ignored but added at the end
+NOTE: Xerocomus_277 (identical to Xerocomus_044) is ignored but added at the end
+NOTE: Xerocomus_281 (identical to Xerocomus_044) is ignored but added at the end
+NOTE: Xerocomus_293 (identical to Xerocomus_044) is ignored but added at the end
+NOTE: Xerocomus_348 (identical to Xerocomus_044) is ignored but added at the end
+NOTE: Xerocomus_430 (identical to Xerocomus_044) is ignored but added at the end
+NOTE: Xerocomus_431 (identical to Xerocomus_044) is ignored but added at the end
+NOTE: Xerocomus_434 (identical to Xerocomus_044) is ignored but added at the end
+NOTE: Xerocomus_436 (identical to Xerocomus_044) is ignored but added at the end
+NOTE: Xerocomus_440 (identical to Xerocomus_044) is ignored but added at the end
+NOTE: Xerocomus_416 (identical to Xerocomus_048) is ignored but added at the end
+NOTE: Xerocomus_417 (identical to Xerocomus_048) is ignored but added at the end
+NOTE: Xerocomus_418 (identical to Xerocomus_048) is ignored but added at the end
+NOTE: Xerocomus_419 (identical to Xerocomus_048) is ignored but added at the end
+NOTE: Xerocomus_455 (identical to Xerocomus_048) is ignored but added at the end
+NOTE: Xerocomus_456 (identical to Xerocomus_048) is ignored but added at the end
+NOTE: Xerocomus_114 (identical to Xerocomus_055) is ignored but added at the end
+NOTE: Xerocomus_279 (identical to Xerocomus_090) is ignored but added at the end
+NOTE: Xerocomus_319 (identical to Xerocomus_090) is ignored but added at the end
+NOTE: Xerocomus_169 (identical to Xerocomus_161) is ignored but added at the end
+NOTE: Xerocomus_177 (identical to Xerocomus_162) is ignored but added at the end
+NOTE: Xerocomus_184 (identical to Xerocomus_162) is ignored but added at the end
+NOTE: Xerocomus_178 (identical to Xerocomus_164) is ignored but added at the end
+NOTE: Xerocomus_179 (identical to Xerocomus_164) is ignored but added at the end
+NOTE: Xerocomus_186 (identical to Xerocomus_164) is ignored but added at the end
+NOTE: Xerocomus_193 (identical to Xerocomus_191) is ignored but added at the end
+NOTE: Xerocomus_216 (identical to Xerocomus_208) is ignored but added at the end
+NOTE: Xerocomus_217 (identical to Xerocomus_208) is ignored but added at the end
+NOTE: Xerocomus_218 (identical to Xerocomus_208) is ignored but added at the end
+NOTE: Xerocomus_374 (identical to Xerocomus_208) is ignored but added at the end
+NOTE: Xerocomus_296 (identical to Xerocomus_241) is ignored but added at the end
+NOTE: Xerocomus_443 (identical to Xerocomus_437) is ignored but added at the end
+NOTE: Xerocomus_444 (identical to Xerocomus_437) is ignored but added at the end
+Alignment was printed to data/packages/ITS/Xerocomus/ref.uniqueseq.phy
+
+For your convenience alignment with unique sequences printed to data/packages/ITS/Xerocomus/ref.uniqueseq.phy
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.086 seconds
+Measuring multi-threading efficiency up to 72 CPU cores
+Increase to 10 rounds for branch lengths
+104 trees examined
+Threads: 1 / Time: 72.024 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -67141
+Threads: 2 / Time: 56.563 sec / Speedup: 1.273 / Efficiency: 64% / LogL: -67141
+Threads: 3 / Time: 51.289 sec / Speedup: 1.404 / Efficiency: 47% / LogL: -67141
+Determining AUTO threadcount: done in 179.88 secs using 186.2% CPU
+BEST NUMBER OF THREADS: 2
+
+Perform fast likelihood tree search using GTR+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Optimizing NNI: done in 1.36776 secs using 197.7% CPU
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -18826.340
+Optimal log-likelihood: -18825.355
+Rate parameters:  A-C: 0.96772  A-G: 3.51357  A-T: 1.47126  C-G: 0.99984  C-T: 4.84348  G-T: 1.00000
+Base frequencies:  A: 0.246  C: 0.230  G: 0.231  T: 0.292
+Proportion of invariable sites: 0.150
+Gamma shape alpha: 0.703
+Parameters optimization took 1 rounds (0.332 sec)
+Time for fast ML tree search: 2.898 seconds
+
+NOTE: ModelFinder requires 71 MB RAM!
+ModelFinder will test up to 968 DNA models (sample size: 582 epsilon: 0.100) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+  1  JC            21730.703    807 45075.407    1349187.407  48599.149
+  2  JC+I          20790.022    808 43196.044    1350540.044  46724.152
+  3  JC+G4         19592.239    808 40800.479    1348144.479  44328.587
+  4  JC+I+G4       19569.917    809 40757.835    1351337.835  44290.309
+  5  JC+R2         19867.967    809 41353.933    1351933.933  44886.408
+  6  JC+R3         19631.430    811 40884.860    1357948.860  44426.067
+  7  JC+R4         19574.530    813 40775.061    1364339.061  44325.001
+  8  JC+R5         19562.020    815 40754.040    1370834.040  44312.714
+  9  JC+R6         19561.461    817 40756.921    1377368.921  44324.327
+ 14  JC+I+R2       19718.384    810 41056.768    1354876.768  44593.609
+ 15  JC+I+R3       19582.037    812 40788.073    1361100.073  44333.647
+ 16  JC+I+R4       19564.826    814 40757.652    1367577.652  44311.959
+ 17  JC+I+R5       19561.777    816 40755.554    1374099.554  44318.593
+ 26  JC+I+G4       19569.917    809 40757.835    1351337.835  44290.309
+ 48  F81+I+G4      19570.147    809 40758.293    1351338.293  44290.768
+ 70  F81+F+I+G4    19522.634    812 40669.268    1360981.268  44214.842
+ 92  K2P+I+G4      18909.842    810 39439.684    1353259.684  42976.525
+114  K2P+I+G4      18909.842    810 39439.684    1353259.684  42976.525
+136  HKY+I+G4      18909.835    810 39439.669    1353259.669  42976.510
+158  HKY+F+I+G4    18855.799    813 39337.598    1362901.598  42887.539
+180  TNe+I+G4      18883.699    811 39389.398    1356453.398  42930.606
+202  TNe+I+G4      18883.699    811 39389.398    1356453.398  42930.606
+224  TN+I+G4       18883.694    811 39389.389    1356453.389  42930.596
+246  TN+F+I+G4     18840.145    814 39308.290    1366128.290  42862.597
+268  K3P+I+G4      18902.842    811 39427.683    1356491.683  42968.891
+290  K3P+I+G4      18902.842    811 39427.683    1356491.683  42968.891
+312  K3Pu+I+G4     18902.840    811 39427.679    1356491.679  42968.887
+334  K3Pu+F+I+G4   18849.771    814 39327.541    1366147.541  42881.848
+356  TPM2+I+G4     18900.193    811 39422.387    1356486.387  42963.594
+378  TPM2+I+G4     18900.193    811 39422.387    1356486.387  42963.594
+400  TPM2u+I+G4    18900.193    811 39422.385    1356486.385  42963.593
+422  TPM2u+F+I+G4  18850.206    814 39328.411    1366148.411  42882.718
+444  TPM3+I+G4     18885.880    811 39393.760    1356457.760  42934.967
+466  TPM3+I+G4     18885.880    811 39393.760    1356457.760  42934.967
+488  TPM3u+I+G4    18885.866    811 39393.732    1356457.732  42934.940
+510  TPM3u+F+I+G4  18849.813    814 39327.626    1366147.626  42881.933
+532  TIMe+I+G4     18877.059    812 39378.118    1359690.118  42923.692
+554  TIMe+I+G4     18877.059    812 39378.118    1359690.118  42923.692
+576  TIM+I+G4      18877.053    812 39378.105    1359690.105  42923.679
+598  TIM+F+I+G4    18834.385    815 39298.770    1369378.770  42857.444
+620  TIM2e+I+G4    18874.719    812 39373.438    1359685.438  42919.012
+642  TIM2e+I+G4    18874.719    812 39373.438    1359685.438  42919.012
+664  TIM2+I+G4     18874.715    812 39373.429    1359685.429  42919.003
+686  TIM2+F+I+G4   18834.693    815 39299.386    1369379.386  42858.060
+708  TIM3e+I+G4    18861.686    812 39347.373    1359659.373  42892.947
+730  TIM3e+I+G4    18861.686    812 39347.373    1359659.373  42892.947
+752  TIM3+I+G4     18861.683    812 39347.366    1359659.366  42892.940
+774  TIM3+F+I+G4   18834.959    815 39299.918    1369379.918  42858.592
+796  TVMe+I+G4     18871.428    813 39368.855    1362932.855  42918.796
+818  TVMe+I+G4     18871.428    813 39368.855    1362932.855  42918.796
+840  TVM+I+G4      18871.423    813 39368.845    1362932.845  42918.786
+862  TVM+F+I+G4    18839.812    816 39311.623    1372655.623  42874.663
+884  SYM+I+G4      18848.014    814 39324.029    1366144.029  42878.336
+906  SYM+I+G4      18848.014    814 39324.029    1366144.029  42878.336
+928  GTR+I+G4      18848.013    814 39324.025    1366144.025  42878.332
+950  GTR+F+I+G4    18825.372    817 39284.744    1375896.744  42852.151
+Akaike Information Criterion:           GTR+F+I+G4
+Corrected Akaike Information Criterion: JC+G4
+Bayesian Information Criterion:         GTR+F+I+G4
+Best-fit model: GTR+F+I+G4 chosen according to BIC
+
+All model information printed to data/packages/ITS/Xerocomus/ref.model.gz
+CPU time for ModelFinder: 461.857 seconds (0h:7m:41s)
+Wall-clock time for ModelFinder: 244.297 seconds (0h:4m:4s)
+Generating 1000 samples for ultrafast bootstrap (seed: 890543)...
+
+NOTE: 29 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+Thoroughly optimizing +I+G parameters from 10 start values...
+Init pinv, alpha: 0.000, 0.729 / Estimate: 0.000, 0.515 / LogL: -18849.206
+Init pinv, alpha: 0.024, 0.729 / Estimate: 0.159, 0.721 / LogL: -18825.337
+Init pinv, alpha: 0.048, 0.729 / Estimate: 0.159, 0.722 / LogL: -18825.341
+Init pinv, alpha: 0.073, 0.729 / Estimate: 0.158, 0.720 / LogL: -18825.367
+Init pinv, alpha: 0.097, 0.729 / Estimate: 0.159, 0.722 / LogL: -18825.368
+Init pinv, alpha: 0.121, 0.729 / Estimate: 0.157, 0.718 / LogL: -18825.401
+Init pinv, alpha: 0.145, 0.729 / Estimate: 0.158, 0.719 / LogL: -18825.403
+Init pinv, alpha: 0.170, 0.729 / Estimate: 0.166, 0.738 / LogL: -18825.394
+Init pinv, alpha: 0.194, 0.729 / Estimate: 0.166, 0.741 / LogL: -18825.418
+Init pinv, alpha: 0.218, 0.729 / Estimate: 0.166, 0.739 / LogL: -18825.424
+Optimal pinv,alpha: 0.159, 0.721 / LogL: -18825.337
+
+Parameters optimization took 10.566 sec
+Wrote distance file to... 
+Computing ML distances based on estimated model parameters...
+Calculating distance matrix: done in 0.287611 secs using 199.2% CPU
+Computing ML distances took 0.289516 sec (of wall-clock time) 0.573121 sec (of CPU time)
+Setting up auxiliary I and S matrices: done in 0.00429175 secs using 168.6% CPU
+Constructing RapidNJ tree: done in 0.0217122 secs using 196.4% CPU
+Computing RapidNJ tree took 0.026102 sec (of wall-clock time) 0.049985 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -19352.856
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 8.398 second
+Computing log-likelihood of 98 initial trees ... 5.067 seconds
+Current best score: -18825.337
+
+Do NNI search on 20 best initial trees
+Optimizing NNI: done in 1.76916 secs using 198.6% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -18824.645
+Optimizing NNI: done in 4.6283 secs using 198.5% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 2: -18795.009
+Optimizing NNI: done in 3.78216 secs using 198.2% CPU
+Optimizing NNI: done in 4.66849 secs using 198.6% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 4: -18791.200
+Optimizing NNI: done in 3.01063 secs using 198.7% CPU
+Optimizing NNI: done in 4.37781 secs using 198.5% CPU
+Optimizing NNI: done in 5.14711 secs using 198.3% CPU
+Optimizing NNI: done in 5.11107 secs using 198.6% CPU
+Optimizing NNI: done in 4.36789 secs using 198.4% CPU
+Optimizing NNI: done in 5.39624 secs using 198.3% CPU
+Iteration 10 / LogL: -18799.718 / Time: 0h:5m:12s
+Optimizing NNI: done in 4.67388 secs using 198.3% CPU
+Optimizing NNI: done in 4.8974 secs using 198.4% CPU
+Optimizing NNI: done in 3.8686 secs using 198.3% CPU
+Optimizing NNI: done in 5.0743 secs using 198.6% CPU
+Optimizing NNI: done in 4.60953 secs using 198.6% CPU
+Optimizing NNI: done in 5.08924 secs using 198.6% CPU
+Optimizing NNI: done in 4.83778 secs using 198.8% CPU
+Optimizing NNI: done in 3.03102 secs using 198.1% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 18: -18788.178
+Optimizing NNI: done in 6.69454 secs using 198.6% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 19: -18783.316
+Optimizing NNI: done in 4.92313 secs using 198.5% CPU
+Iteration 20 / LogL: -18795.655 / Time: 0h:6m:1s
+Finish initializing candidate tree set (20)
+Current best tree score: -18783.316 / CPU time: 105.740
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Optimizing NNI: done in 3.1565 secs using 197.2% CPU
+Optimizing NNI: done in 1.55348 secs using 194.7% CPU
+Optimizing NNI: done in 2.991 secs using 197.1% CPU
+Optimizing NNI: done in 3.17888 secs using 198% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 24: -18776.886
+Optimizing NNI: done in 4.36231 secs using 198.4% CPU
+Optimizing NNI: done in 4.69069 secs using 198% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 26: -18776.310
+Optimizing NNI: done in 4.2504 secs using 198.1% CPU
+Optimizing NNI: done in 2.68427 secs using 197.3% CPU
+Optimizing NNI: done in 4.75035 secs using 198.3% CPU
+Optimizing NNI: done in 3.49305 secs using 198.2% CPU
+Iteration 30 / LogL: -18783.713 / Time: 0h:6m:37s (0h:8m:28s left)
+Optimizing NNI: done in 4.44486 secs using 197.8% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 31: -18768.471
+Optimizing NNI: done in 4.54863 secs using 197.8% CPU
+Optimizing NNI: done in 4.43965 secs using 197.7% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 33: -18766.722
+Optimizing NNI: done in 1.6351 secs using 195.8% CPU
+Optimizing NNI: done in 3.72796 secs using 198.1% CPU
+Optimizing NNI: done in 2.30733 secs using 196% CPU
+Optimizing NNI: done in 4.02423 secs using 197.9% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 37: -18765.933
+Optimizing NNI: done in 4.3911 secs using 198.1% CPU
+Optimizing NNI: done in 4.77521 secs using 198.2% CPU
+Optimizing NNI: done in 5.67805 secs using 198.4% CPU
+Iteration 40 / LogL: -18769.569 / Time: 0h:7m:19s (0h:8m:4s left)
+Optimizing NNI: done in 1.77201 secs using 196.8% CPU
+Optimizing NNI: done in 3.99159 secs using 198% CPU
+Optimizing NNI: done in 5.29726 secs using 198.1% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 43: -18765.424
+Optimizing NNI: done in 1.63117 secs using 196.2% CPU
+Optimizing NNI: done in 5.74887 secs using 197.9% CPU
+Optimizing NNI: done in 2.79659 secs using 197.6% CPU
+Optimizing NNI: done in 4.3615 secs using 198% CPU
+Optimizing NNI: done in 3.51185 secs using 198% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 48: -18760.470
+Optimizing NNI: done in 6.09084 secs using 198% CPU
+Optimizing NNI: done in 3.28666 secs using 197.8% CPU
+Iteration 50 / LogL: -18787.812 / Time: 0h:7m:58s (0h:7m:48s left)
+Log-likelihood cutoff on original alignment: -18840.276
+Optimizing NNI: done in 2.93533 secs using 197.9% CPU
+Optimizing NNI: done in 3.30344 secs using 197.1% CPU
+Optimizing NNI: done in 3.96472 secs using 198% CPU
+Optimizing NNI: done in 3.78778 secs using 198.3% CPU
+Optimizing NNI: done in 1.77351 secs using 196.3% CPU
+Optimizing NNI: done in 3.24552 secs using 198.2% CPU
+Optimizing NNI: done in 3.0475 secs using 197.5% CPU
+Optimizing NNI: done in 3.753 secs using 197.9% CPU
+Optimizing NNI: done in 5.86236 secs using 198% CPU
+Optimizing NNI: done in 3.52769 secs using 197.6% CPU
+Iteration 60 / LogL: -18828.206 / Time: 0h:8m:36s (0h:6m:45s left)
+Optimizing NNI: done in 2.39252 secs using 197.5% CPU
+Optimizing NNI: done in 2.56222 secs using 196.5% CPU
+Optimizing NNI: done in 4.35893 secs using 198.1% CPU
+Optimizing NNI: done in 3.31861 secs using 198.2% CPU
+Optimizing NNI: done in 4.1224 secs using 197.4% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 65: -18757.871
+Optimizing NNI: done in 4.24991 secs using 197.9% CPU
+Optimizing NNI: done in 2.46727 secs using 196.6% CPU
+Optimizing NNI: done in 4.62029 secs using 198.2% CPU
+Optimizing NNI: done in 3.51175 secs using 197.4% CPU
+Optimizing NNI: done in 4.05665 secs using 197.6% CPU
+Iteration 70 / LogL: -18769.257 / Time: 0h:9m:12s (0h:7m:4s left)
+Optimizing NNI: done in 3.11797 secs using 197.5% CPU
+Optimizing NNI: done in 2.45656 secs using 197.1% CPU
+Optimizing NNI: done in 3.67946 secs using 198% CPU
+Optimizing NNI: done in 3.32967 secs using 197.6% CPU
+Optimizing NNI: done in 3.97815 secs using 198.2% CPU
+Optimizing NNI: done in 1.74694 secs using 196.1% CPU
+Optimizing NNI: done in 3.05474 secs using 197.8% CPU
+Optimizing NNI: done in 2.22377 secs using 197.2% CPU
+Optimizing NNI: done in 3.00469 secs using 198.1% CPU
+Optimizing NNI: done in 4.70378 secs using 198.3% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 80: -18757.304
+Iteration 80 / LogL: -18757.304 / Time: 0h:9m:44s (0h:7m:10s left)
+Optimizing NNI: done in 4.5653 secs using 197.9% CPU
+Optimizing NNI: done in 4.12553 secs using 198.1% CPU
+Optimizing NNI: done in 5.11734 secs using 198.2% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 83: -18754.435
+Optimizing NNI: done in 2.20485 secs using 196.6% CPU
+Optimizing NNI: done in 3.54159 secs using 197.8% CPU
+Optimizing NNI: done in 3.45302 secs using 198% CPU
+Optimizing NNI: done in 4.52457 secs using 198.1% CPU
+Optimizing NNI: done in 3.02149 secs using 197.5% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 88: -18753.140
+Optimizing NNI: done in 3.04382 secs using 197.2% CPU
+Optimizing NNI: done in 4.05396 secs using 198.1% CPU
+Iteration 90 / LogL: -18755.790 / Time: 0h:10m:23s (0h:6m:57s left)
+Optimizing NNI: done in 4.15755 secs using 197.4% CPU
+Optimizing NNI: done in 3.52535 secs using 197.4% CPU
+Optimizing NNI: done in 4.45113 secs using 198.1% CPU
+Optimizing NNI: done in 2.75609 secs using 197.6% CPU
+Optimizing NNI: done in 3.34952 secs using 197.4% CPU
+Optimizing NNI: done in 4.62254 secs using 198% CPU
+Optimizing NNI: done in 3.99225 secs using 198% CPU
+Optimizing NNI: done in 3.70539 secs using 198.1% CPU
+Optimizing NNI: done in 4.49096 secs using 198.1% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 99: -18751.844
+Optimizing NNI: done in 4.53881 secs using 198.1% CPU
+Iteration 100 / LogL: -18766.245 / Time: 0h:11m:3s (0h:6m:59s left)
+Log-likelihood cutoff on original alignment: -18836.463
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.967
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Optimizing NNI: done in 2.30281 secs using 196.7% CPU
+Optimizing NNI: done in 3.09762 secs using 197.3% CPU
+Optimizing NNI: done in 3.30939 secs using 197.8% CPU
+Optimizing NNI: done in 5.97758 secs using 198.2% CPU
+Optimizing NNI: done in 5.00627 secs using 198% CPU
+Optimizing NNI: done in 3.53639 secs using 198% CPU
+Optimizing NNI: done in 4.61702 secs using 197.8% CPU
+Optimizing NNI: done in 4.13105 secs using 198.1% CPU
+Optimizing NNI: done in 1.72075 secs using 196.6% CPU
+Optimizing NNI: done in 3.98927 secs using 198% CPU
+Iteration 110 / LogL: -18805.268 / Time: 0h:11m:43s (0h:6m:19s left)
+Optimizing NNI: done in 3.15236 secs using 197.4% CPU
+Optimizing NNI: done in 6.77162 secs using 197.9% CPU
+Optimizing NNI: done in 3.94907 secs using 197.8% CPU
+Optimizing NNI: done in 3.01795 secs using 197.6% CPU
+Optimizing NNI: done in 3.561 secs using 197.6% CPU
+Optimizing NNI: done in 3.40485 secs using 196.7% CPU
+Optimizing NNI: done in 4.10902 secs using 197.7% CPU
+Optimizing NNI: done in 3.20424 secs using 197.7% CPU
+Optimizing NNI: done in 4.59298 secs using 197.8% CPU
+Optimizing NNI: done in 1.7852 secs using 196.1% CPU
+Iteration 120 / LogL: -18861.165 / Time: 0h:12m:22s (0h:5m:34s left)
+Optimizing NNI: done in 4.24491 secs using 197.7% CPU
+Optimizing NNI: done in 2.67764 secs using 197.3% CPU
+Optimizing NNI: done in 4.77313 secs using 197.9% CPU
+Optimizing NNI: done in 2.25215 secs using 195.9% CPU
+Optimizing NNI: done in 2.58231 secs using 197.7% CPU
+Optimizing NNI: done in 2.8836 secs using 196.7% CPU
+Optimizing NNI: done in 2.09508 secs using 196.3% CPU
+Optimizing NNI: done in 3.32272 secs using 197.7% CPU
+Optimizing NNI: done in 3.18271 secs using 197.3% CPU
+Optimizing NNI: done in 4.6782 secs using 198% CPU
+Iteration 130 / LogL: -18753.248 / Time: 0h:12m:55s (0h:4m:48s left)
+Optimizing NNI: done in 4.33019 secs using 197.9% CPU
+Optimizing NNI: done in 3.53234 secs using 198.1% CPU
+Optimizing NNI: done in 5.13431 secs using 197.8% CPU
+Optimizing NNI: done in 2.13289 secs using 197.1% CPU
+Optimizing NNI: done in 4.05999 secs using 197.6% CPU
+Optimizing NNI: done in 4.96051 secs using 197.9% CPU
+Optimizing NNI: done in 3.80385 secs using 197.3% CPU
+Optimizing NNI: done in 6.5967 secs using 197.5% CPU
+Optimizing NNI: done in 4.83701 secs using 197.7% CPU
+Optimizing NNI: done in 3.47085 secs using 197.6% CPU
+Iteration 140 / LogL: -18761.937 / Time: 0h:13m:39s (0h:4m:8s left)
+Optimizing NNI: done in 4.23981 secs using 197.8% CPU
+Optimizing NNI: done in 5.22921 secs using 198.1% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 142: -18751.531
+Optimizing NNI: done in 4.96897 secs using 197.6% CPU
+Optimizing NNI: done in 3.67966 secs using 197.8% CPU
+Optimizing NNI: done in 4.75406 secs using 198% CPU
+Optimizing NNI: done in 4.11324 secs using 198.1% CPU
+Optimizing NNI: done in 5.00794 secs using 197.9% CPU
+Optimizing NNI: done in 4.46697 secs using 197.8% CPU
+Optimizing NNI: done in 4.14365 secs using 197.7% CPU
+Optimizing NNI: done in 4.85856 secs using 198.1% CPU
+Iteration 150 / LogL: -18777.626 / Time: 0h:14m:25s (0h:6m:23s left)
+Log-likelihood cutoff on original alignment: -18836.463
+Optimizing NNI: done in 4.69324 secs using 197.8% CPU
+Optimizing NNI: done in 2.70708 secs using 197.3% CPU
+Optimizing NNI: done in 3.361 secs using 197.4% CPU
+Optimizing NNI: done in 3.92701 secs using 197.8% CPU
+Optimizing NNI: done in 3.38476 secs using 197.9% CPU
+Optimizing NNI: done in 6.70351 secs using 197.5% CPU
+Optimizing NNI: done in 2.99369 secs using 196.7% CPU
+Optimizing NNI: done in 4.78352 secs using 197.8% CPU
+Optimizing NNI: done in 3.31687 secs using 197.7% CPU
+Optimizing NNI: done in 3.89292 secs using 197.8% CPU
+Iteration 160 / LogL: -18761.510 / Time: 0h:15m:8s (0h:5m:42s left)
+Optimizing NNI: done in 3.32222 secs using 197.4% CPU
+Optimizing NNI: done in 4.03777 secs using 197% CPU
+Optimizing NNI: done in 1.74684 secs using 196.4% CPU
+Optimizing NNI: done in 4.18078 secs using 197.9% CPU
+Optimizing NNI: done in 4.94718 secs using 197.8% CPU
+Optimizing NNI: done in 3.6137 secs using 197.3% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 166: -18751.257
+Optimizing NNI: done in 3.42483 secs using 197.9% CPU
+Optimizing NNI: done in 2.66808 secs using 196.7% CPU
+Optimizing NNI: done in 4.40233 secs using 197.9% CPU
+Optimizing NNI: done in 5.58982 secs using 197.9% CPU
+Iteration 170 / LogL: -18761.265 / Time: 0h:15m:47s (0h:6m:39s left)
+Optimizing NNI: done in 4.40677 secs using 197.4% CPU
+Optimizing NNI: done in 3.48768 secs using 197.7% CPU
+Optimizing NNI: done in 2.8464 secs using 197.7% CPU
+Optimizing NNI: done in 3.38042 secs using 197.7% CPU
+Optimizing NNI: done in 3.54208 secs using 197% CPU
+Optimizing NNI: done in 3.97492 secs using 197.4% CPU
+Optimizing NNI: done in 3.02765 secs using 197.9% CPU
+Optimizing NNI: done in 2.25315 secs using 196.2% CPU
+Optimizing NNI: done in 4.20196 secs using 197.5% CPU
+Optimizing NNI: done in 4.95619 secs using 198.1% CPU
+Iteration 180 / LogL: -18755.151 / Time: 0h:16m:24s (0h:5m:55s left)
+Optimizing NNI: done in 3.94717 secs using 197.7% CPU
+Optimizing NNI: done in 2.85106 secs using 197.6% CPU
+Optimizing NNI: done in 1.89665 secs using 195.6% CPU
+Optimizing NNI: done in 5.07201 secs using 197.7% CPU
+Optimizing NNI: done in 3.82425 secs using 197.8% CPU
+Optimizing NNI: done in 3.42769 secs using 197.4% CPU
+Optimizing NNI: done in 5.45273 secs using 197.4% CPU
+Optimizing NNI: done in 4.41553 secs using 198.1% CPU
+Optimizing NNI: done in 5.28403 secs using 197.8% CPU
+Optimizing NNI: done in 5.5943 secs using 197.8% CPU
+Iteration 190 / LogL: -18776.450 / Time: 0h:17m:7s (0h:5m:14s left)
+Optimizing NNI: done in 5.2992 secs using 197.4% CPU
+Optimizing NNI: done in 4.0273 secs using 197.8% CPU
+Optimizing NNI: done in 1.63199 secs using 196.2% CPU
+Optimizing NNI: done in 3.20454 secs using 197.5% CPU
+Optimizing NNI: done in 4.9707 secs using 197.6% CPU
+Optimizing NNI: done in 3.09792 secs using 197.2% CPU
+Optimizing NNI: done in 6.35175 secs using 197.9% CPU
+Optimizing NNI: done in 3.23329 secs using 197.6% CPU
+Optimizing NNI: done in 3.0373 secs using 197.4% CPU
+Optimizing NNI: done in 1.88106 secs using 194.9% CPU
+Iteration 200 / LogL: -18849.420 / Time: 0h:17m:45s (0h:4m:32s left)
+Log-likelihood cutoff on original alignment: -18836.463
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.988
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Optimizing NNI: done in 3.03667 secs using 197.4% CPU
+Optimizing NNI: done in 4.37594 secs using 197.9% CPU
+Optimizing NNI: done in 3.37059 secs using 197.7% CPU
+Optimizing NNI: done in 3.37127 secs using 197.6% CPU
+Optimizing NNI: done in 4.79845 secs using 197.5% CPU
+Optimizing NNI: done in 3.71641 secs using 197.4% CPU
+Optimizing NNI: done in 2.82064 secs using 197% CPU
+Optimizing NNI: done in 4.42924 secs using 198% CPU
+Optimizing NNI: done in 3.05995 secs using 198% CPU
+Optimizing NNI: done in 4.70525 secs using 197.7% CPU
+Iteration 210 / LogL: -18756.881 / Time: 0h:18m:25s (0h:6m:10s left)
+Optimizing NNI: done in 4.63412 secs using 197.6% CPU
+Optimizing NNI: done in 2.79782 secs using 197.2% CPU
+Optimizing NNI: done in 3.39526 secs using 197.5% CPU
+Optimizing NNI: done in 3.78 secs using 197% CPU
+Optimizing NNI: done in 1.99139 secs using 196.2% CPU
+Optimizing NNI: done in 5.4632 secs using 197.8% CPU
+Optimizing NNI: done in 5.77636 secs using 197.7% CPU
+Optimizing NNI: done in 2.79873 secs using 197.3% CPU
+Optimizing NNI: done in 4.20996 secs using 198% CPU
+Optimizing NNI: done in 5.85562 secs using 198.1% CPU
+Iteration 220 / LogL: -18766.377 / Time: 0h:19m:7s (0h:5m:29s left)
+Optimizing NNI: done in 5.3384 secs using 198.1% CPU
+Optimizing NNI: done in 5.26238 secs using 197.9% CPU
+Optimizing NNI: done in 2.80929 secs using 196.6% CPU
+Optimizing NNI: done in 4.76583 secs using 197.5% CPU
+Optimizing NNI: done in 4.7028 secs using 197.8% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 225: -18751.035
+Optimizing NNI: done in 3.52282 secs using 197.4% CPU
+Optimizing NNI: done in 4.30333 secs using 197.5% CPU
+Optimizing NNI: done in 3.63657 secs using 197.8% CPU
+Optimizing NNI: done in 3.03043 secs using 197.9% CPU
+Optimizing NNI: done in 3.53714 secs using 197.9% CPU
+Iteration 230 / LogL: -18751.387 / Time: 0h:19m:50s (0h:6m:32s left)
+Optimizing NNI: done in 5.48873 secs using 197.9% CPU
+Optimizing NNI: done in 3.71101 secs using 197.9% CPU
+Optimizing NNI: done in 3.77152 secs using 197.8% CPU
+Optimizing NNI: done in 2.79687 secs using 196.1% CPU
+Optimizing NNI: done in 5.044 secs using 197.7% CPU
+Optimizing NNI: done in 1.64068 secs using 195.2% CPU
+Optimizing NNI: done in 2.93758 secs using 197.9% CPU
+Optimizing NNI: done in 5.77935 secs using 197.4% CPU
+Optimizing NNI: done in 4.47566 secs using 197.6% CPU
+Optimizing NNI: done in 6.40076 secs using 197.9% CPU
+Iteration 240 / LogL: -18763.726 / Time: 0h:20m:33s (0h:5m:51s left)
+Optimizing NNI: done in 2.49399 secs using 196.6% CPU
+Optimizing NNI: done in 3.15516 secs using 197.9% CPU
+Optimizing NNI: done in 4.29948 secs using 197.3% CPU
+Optimizing NNI: done in 3.42101 secs using 197.7% CPU
+Optimizing NNI: done in 3.80842 secs using 197.6% CPU
+Optimizing NNI: done in 5.14128 secs using 198.1% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 246: -18750.785
+Optimizing NNI: done in 2.23454 secs using 197% CPU
+Optimizing NNI: done in 2.6107 secs using 195% CPU
+Optimizing NNI: done in 4.96249 secs using 197.8% CPU
+Optimizing NNI: done in 3.56175 secs using 197.2% CPU
+Iteration 250 / LogL: -18770.073 / Time: 0h:21m:10s (0h:6m:35s left)
+Log-likelihood cutoff on original alignment: -18836.463
+Optimizing NNI: done in 4.19094 secs using 198.1% CPU
+Optimizing NNI: done in 3.88197 secs using 197.9% CPU
+Optimizing NNI: done in 3.85851 secs using 197.5% CPU
+Optimizing NNI: done in 3.50879 secs using 197.5% CPU
+Optimizing NNI: done in 2.86463 secs using 197.4% CPU
+Optimizing NNI: done in 4.59495 secs using 197.7% CPU
+Optimizing NNI: done in 1.83301 secs using 195.6% CPU
+Optimizing NNI: done in 2.68668 secs using 197.3% CPU
+Optimizing NNI: done in 1.47243 secs using 196.2% CPU
+Optimizing NNI: done in 2.21877 secs using 197.5% CPU
+Iteration 260 / LogL: -18753.611 / Time: 0h:21m:44s (0h:5m:52s left)
+Optimizing NNI: done in 3.11582 secs using 197.3% CPU
+Optimizing NNI: done in 2.55417 secs using 196.1% CPU
+Optimizing NNI: done in 4.33506 secs using 197.5% CPU
+Optimizing NNI: done in 4.59343 secs using 197.9% CPU
+Optimizing NNI: done in 4.69018 secs using 197.6% CPU
+Optimizing NNI: done in 4.0044 secs using 197.6% CPU
+Optimizing NNI: done in 4.1697 secs using 197.5% CPU
+Optimizing NNI: done in 3.85954 secs using 197.5% CPU
+Optimizing NNI: done in 2.28412 secs using 197% CPU
+Optimizing NNI: done in 3.69077 secs using 197.5% CPU
+Iteration 270 / LogL: -18772.786 / Time: 0h:22m:23s (0h:5m:10s left)
+Optimizing NNI: done in 3.74549 secs using 197.7% CPU
+Optimizing NNI: done in 4.37102 secs using 197.8% CPU
+Optimizing NNI: done in 5.40047 secs using 197.4% CPU
+Optimizing NNI: done in 2.45233 secs using 197.1% CPU
+Optimizing NNI: done in 2.53989 secs using 196.4% CPU
+Optimizing NNI: done in 4.23071 secs using 197.7% CPU
+Optimizing NNI: done in 4.40698 secs using 197.9% CPU
+Optimizing NNI: done in 4.09877 secs using 198.1% CPU
+Optimizing NNI: done in 4.67919 secs using 197.6% CPU
+Optimizing NNI: done in 5.862 secs using 197.7% CPU
+Iteration 280 / LogL: -18769.401 / Time: 0h:23m:6s (0h:4m:30s left)
+Optimizing NNI: done in 3.22601 secs using 197.5% CPU
+Optimizing NNI: done in 4.73503 secs using 197.7% CPU
+Optimizing NNI: done in 1.56441 secs using 195.2% CPU
+Optimizing NNI: done in 4.27003 secs using 197.8% CPU
+Optimizing NNI: done in 2.0721 secs using 197.3% CPU
+Optimizing NNI: done in 4.15834 secs using 197.6% CPU
+Optimizing NNI: done in 2.81945 secs using 196.9% CPU
+Optimizing NNI: done in 1.80422 secs using 195.6% CPU
+Optimizing NNI: done in 3.59899 secs using 197.4% CPU
+Optimizing NNI: done in 4.16214 secs using 197.7% CPU
+Iteration 290 / LogL: -18758.455 / Time: 0h:23m:40s (0h:3m:47s left)
+Optimizing NNI: done in 3.43925 secs using 197.7% CPU
+Optimizing NNI: done in 3.86954 secs using 197.8% CPU
+Optimizing NNI: done in 5.21709 secs using 197.8% CPU
+Optimizing NNI: done in 4.45392 secs using 197.8% CPU
+Optimizing NNI: done in 5.97347 secs using 198% CPU
+Optimizing NNI: done in 2.5924 secs using 196% CPU
+Optimizing NNI: done in 4.99873 secs using 197.8% CPU
+Optimizing NNI: done in 1.67974 secs using 195.9% CPU
+Optimizing NNI: done in 3.03953 secs using 197.4% CPU
+Optimizing NNI: done in 5.04158 secs using 197.5% CPU
+Iteration 300 / LogL: -18808.165 / Time: 0h:24m:22s (0h:3m:7s left)
+Log-likelihood cutoff on original alignment: -18836.463
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.995
+Optimizing NNI: done in 3.6389 secs using 197.8% CPU
+Optimizing NNI: done in 3.12456 secs using 197.7% CPU
+Optimizing NNI: done in 3.90183 secs using 197.5% CPU
+Optimizing NNI: done in 3.31466 secs using 196.6% CPU
+Optimizing NNI: done in 2.823 secs using 196.6% CPU
+Optimizing NNI: done in 5.36991 secs using 197.8% CPU
+Optimizing NNI: done in 4.30513 secs using 197.5% CPU
+Optimizing NNI: done in 6.12421 secs using 198% CPU
+Optimizing NNI: done in 2.05662 secs using 195.8% CPU
+Optimizing NNI: done in 5.86483 secs using 197.8% CPU
+Iteration 310 / LogL: -18754.417 / Time: 0h:25m:6s (0h:6m:7s left)
+Optimizing NNI: done in 3.50381 secs using 197.5% CPU
+Optimizing NNI: done in 4.10799 secs using 197.7% CPU
+Optimizing NNI: done in 3.70755 secs using 197.6% CPU
+Optimizing NNI: done in 4.65084 secs using 197.8% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 314: -18750.331
+Optimizing NNI: done in 4.50022 secs using 197.7% CPU
+Optimizing NNI: done in 3.51917 secs using 197.2% CPU
+Optimizing NNI: done in 4.08727 secs using 197.3% CPU
+Optimizing NNI: done in 4.55254 secs using 197.8% CPU
+Optimizing NNI: done in 3.82107 secs using 197.1% CPU
+Optimizing NNI: done in 3.25669 secs using 197.4% CPU
+Iteration 320 / LogL: -18763.366 / Time: 0h:25m:47s (0h:6m:24s left)
+Optimizing NNI: done in 4.44496 secs using 196.7% CPU
+Optimizing NNI: done in 3.864 secs using 197.5% CPU
+Optimizing NNI: done in 3.9187 secs using 197.5% CPU
+Optimizing NNI: done in 2.76867 secs using 197.3% CPU
+Optimizing NNI: done in 4.37411 secs using 197.5% CPU
+Optimizing NNI: done in 3.74437 secs using 196.9% CPU
+Optimizing NNI: done in 4.18186 secs using 197.5% CPU
+Optimizing NNI: done in 3.35465 secs using 196.4% CPU
+Optimizing NNI: done in 5.66449 secs using 197.9% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 329: -18750.179
+Optimizing NNI: done in 4.43664 secs using 197.3% CPU
+Iteration 330 / LogL: -18764.015 / Time: 0h:26m:30s (0h:6m:45s left)
+Optimizing NNI: done in 5.44615 secs using 197.5% CPU
+Optimizing NNI: done in 4.231 secs using 197.7% CPU
+Optimizing NNI: done in 4.97217 secs using 197.7% CPU
+Optimizing NNI: done in 3.79313 secs using 197.7% CPU
+Optimizing NNI: done in 4.72739 secs using 197.8% CPU
+Optimizing NNI: done in 5.13228 secs using 197.6% CPU
+Optimizing NNI: done in 7.20851 secs using 197.5% CPU
+Optimizing NNI: done in 2.99384 secs using 197.5% CPU
+Optimizing NNI: done in 3.86332 secs using 197.7% CPU
+Optimizing NNI: done in 4.0893 secs using 197.3% CPU
+Iteration 340 / LogL: -18751.675 / Time: 0h:27m:18s (0h:6m:6s left)
+Optimizing NNI: done in 4.15992 secs using 197.4% CPU
+Optimizing NNI: done in 5.19251 secs using 197.6% CPU
+Optimizing NNI: done in 3.28555 secs using 197.5% CPU
+Optimizing NNI: done in 3.20046 secs using 197.1% CPU
+Optimizing NNI: done in 6.18414 secs using 197.6% CPU
+Optimizing NNI: done in 4.94439 secs using 197.2% CPU
+Optimizing NNI: done in 5.11866 secs using 197.7% CPU
+Optimizing NNI: done in 4.98556 secs using 197.4% CPU
+Optimizing NNI: done in 3.49372 secs using 197.4% CPU
+Optimizing NNI: done in 4.06696 secs using 197.3% CPU
+Iteration 350 / LogL: -18754.252 / Time: 0h:28m:5s (0h:5m:26s left)
+Log-likelihood cutoff on original alignment: -18836.463
+Optimizing NNI: done in 3.20697 secs using 197.8% CPU
+Optimizing NNI: done in 3.07699 secs using 197.8% CPU
+Optimizing NNI: done in 4.13358 secs using 197.4% CPU
+Optimizing NNI: done in 3.96805 secs using 196.9% CPU
+Optimizing NNI: done in 4.51931 secs using 197.2% CPU
+Optimizing NNI: done in 5.04915 secs using 197.9% CPU
+Optimizing NNI: done in 1.93057 secs using 195.3% CPU
+Optimizing NNI: done in 3.65235 secs using 197.8% CPU
+Optimizing NNI: done in 5.21833 secs using 198% CPU
+Optimizing NNI: done in 3.52414 secs using 197.6% CPU
+Iteration 360 / LogL: -18759.272 / Time: 0h:28m:46s (0h:4m:44s left)
+Optimizing NNI: done in 5.34908 secs using 197.8% CPU
+Optimizing NNI: done in 3.493 secs using 197.1% CPU
+Optimizing NNI: done in 4.59343 secs using 197.9% CPU
+Optimizing NNI: done in 2.77978 secs using 196.7% CPU
+Optimizing NNI: done in 4.5555 secs using 197.8% CPU
+Optimizing NNI: done in 3.97909 secs using 197.7% CPU
+Optimizing NNI: done in 4.59999 secs using 197.4% CPU
+Optimizing NNI: done in 3.13237 secs using 197.4% CPU
+Optimizing NNI: done in 3.41182 secs using 197.5% CPU
+Optimizing NNI: done in 3.41796 secs using 197.4% CPU
+Iteration 370 / LogL: -18751.257 / Time: 0h:29m:28s (0h:4m:3s left)
+Optimizing NNI: done in 3.81946 secs using 197.7% CPU
+Optimizing NNI: done in 3.88083 secs using 197.8% CPU
+Optimizing NNI: done in 2.35208 secs using 196.2% CPU
+Optimizing NNI: done in 3.49741 secs using 197.4% CPU
+Optimizing NNI: done in 4.05523 secs using 197.3% CPU
+Optimizing NNI: done in 3.37369 secs using 197.5% CPU
+Optimizing NNI: done in 3.82902 secs using 197.6% CPU
+Optimizing NNI: done in 4.60998 secs using 197.4% CPU
+Optimizing NNI: done in 2.55602 secs using 197.3% CPU
+Optimizing NNI: done in 6.16033 secs using 197.7% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 380: -18749.843
+Iteration 380 / LogL: -18749.843 / Time: 0h:30m:8s (0h:6m:52s left)
+Optimizing NNI: done in 9.05787 secs using 198.3% CPU
+Optimizing NNI: done in 4.28897 secs using 197.6% CPU
+Optimizing NNI: done in 4.40322 secs using 197.4% CPU
+Optimizing NNI: done in 3.55962 secs using 197.5% CPU
+Optimizing NNI: done in 5.17441 secs using 197.7% CPU
+Optimizing NNI: done in 4.79083 secs using 197.5% CPU
+Optimizing NNI: done in 3.47964 secs using 197.5% CPU
+Optimizing NNI: done in 3.70179 secs using 197.4% CPU
+Optimizing NNI: done in 4.00797 secs using 197.8% CPU
+Optimizing NNI: done in 3.63397 secs using 197.8% CPU
+Iteration 390 / LogL: -18761.948 / Time: 0h:30m:56s (0h:6m:13s left)
+Optimizing NNI: done in 5.8154 secs using 197.8% CPU
+Optimizing NNI: done in 4.05328 secs using 197.8% CPU
+Optimizing NNI: done in 3.96748 secs using 197.8% CPU
+Optimizing NNI: done in 3.25761 secs using 197.7% CPU
+Optimizing NNI: done in 4.39869 secs using 197.8% CPU
+Optimizing NNI: done in 3.41694 secs using 196.9% CPU
+Optimizing NNI: done in 4.19723 secs using 197.5% CPU
+Optimizing NNI: done in 4.07703 secs using 197.4% CPU
+Optimizing NNI: done in 2.78256 secs using 196.8% CPU
+Optimizing NNI: done in 3.63555 secs using 197.4% CPU
+Iteration 400 / LogL: -18762.911 / Time: 0h:31m:38s (0h:5m:31s left)
+Log-likelihood cutoff on original alignment: -18836.463
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.994
+Optimizing NNI: done in 4.57173 secs using 197.7% CPU
+Optimizing NNI: done in 4.67244 secs using 198% CPU
+Optimizing NNI: done in 3.71862 secs using 197.9% CPU
+Optimizing NNI: done in 5.30735 secs using 197.9% CPU
+Optimizing NNI: done in 4.50614 secs using 197.7% CPU
+Optimizing NNI: done in 6.43149 secs using 198% CPU
+Optimizing NNI: done in 5.32001 secs using 197.6% CPU
+Optimizing NNI: done in 2.30379 secs using 196.5% CPU
+Optimizing NNI: done in 3.62228 secs using 196.9% CPU
+Optimizing NNI: done in 4.98193 secs using 197.7% CPU
+Iteration 410 / LogL: -18758.129 / Time: 0h:32m:27s (0h:6m:14s left)
+Optimizing NNI: done in 1.75797 secs using 195% CPU
+Optimizing NNI: done in 4.84304 secs using 197.1% CPU
+Optimizing NNI: done in 5.11229 secs using 197.9% CPU
+Optimizing NNI: done in 4.75974 secs using 197.6% CPU
+Optimizing NNI: done in 4.30924 secs using 197.6% CPU
+Optimizing NNI: done in 3.05009 secs using 196.8% CPU
+Optimizing NNI: done in 2.99617 secs using 195.7% CPU
+Optimizing NNI: done in 4.18428 secs using 197.7% CPU
+Optimizing NNI: done in 2.72324 secs using 196.1% CPU
+Optimizing NNI: done in 3.5668 secs using 198% CPU
+Iteration 420 / LogL: -18799.140 / Time: 0h:33m:6s (0h:5m:32s left)
+Optimizing NNI: done in 4.98307 secs using 197.9% CPU
+Optimizing NNI: done in 3.14384 secs using 197.2% CPU
+Optimizing NNI: done in 5.10718 secs using 197.6% CPU
+Optimizing NNI: done in 3.95039 secs using 197.5% CPU
+Optimizing NNI: done in 4.57379 secs using 197.8% CPU
+Optimizing NNI: done in 1.99089 secs using 195% CPU
+Optimizing NNI: done in 3.46241 secs using 197.6% CPU
+Optimizing NNI: done in 6.02098 secs using 197.4% CPU
+Optimizing NNI: done in 2.35937 secs using 196.7% CPU
+Optimizing NNI: done in 3.7249 secs using 197.4% CPU
+Iteration 430 / LogL: -18750.556 / Time: 0h:33m:48s (0h:4m:51s left)
+Optimizing NNI: done in 4.5073 secs using 197.6% CPU
+Optimizing NNI: done in 4.34919 secs using 197.4% CPU
+Optimizing NNI: done in 4.20262 secs using 197.8% CPU
+Optimizing NNI: done in 1.73991 secs using 195.2% CPU
+Optimizing NNI: done in 3.86446 secs using 196.8% CPU
+Optimizing NNI: done in 3.34364 secs using 197.7% CPU
+Optimizing NNI: done in 2.01476 secs using 195.9% CPU
+Optimizing NNI: done in 3.3184 secs using 197.5% CPU
+Optimizing NNI: done in 4.22484 secs using 197.9% CPU
+Optimizing NNI: done in 2.60275 secs using 196.4% CPU
+Iteration 440 / LogL: -18811.883 / Time: 0h:34m:24s (0h:4m:8s left)
+Optimizing NNI: done in 3.81701 secs using 197.3% CPU
+Optimizing NNI: done in 2.92742 secs using 197.2% CPU
+Optimizing NNI: done in 3.59306 secs using 197.5% CPU
+Optimizing NNI: done in 4.88181 secs using 197.6% CPU
+Optimizing NNI: done in 4.16006 secs using 197.6% CPU
+Optimizing NNI: done in 3.15478 secs using 197.6% CPU
+Optimizing NNI: done in 4.01574 secs using 197.7% CPU
+Optimizing NNI: done in 3.40818 secs using 197.3% CPU
+Optimizing NNI: done in 3.16505 secs using 197.3% CPU
+Optimizing NNI: done in 4.10917 secs using 197.3% CPU
+Iteration 450 / LogL: -18759.188 / Time: 0h:35m:4s (0h:3m:27s left)
+Log-likelihood cutoff on original alignment: -18836.463
+Optimizing NNI: done in 5.77241 secs using 197.8% CPU
+Optimizing NNI: done in 1.86202 secs using 195.8% CPU
+Optimizing NNI: done in 3.20807 secs using 197.6% CPU
+Optimizing NNI: done in 4.46985 secs using 197.8% CPU
+Optimizing NNI: done in 3.37769 secs using 197.6% CPU
+Optimizing NNI: done in 3.1134 secs using 196.6% CPU
+Optimizing NNI: done in 3.354 secs using 197.1% CPU
+Optimizing NNI: done in 4.91973 secs using 197.4% CPU
+Optimizing NNI: done in 1.88936 secs using 195.1% CPU
+Optimizing NNI: done in 2.42416 secs using 196.4% CPU
+Iteration 460 / LogL: -18761.231 / Time: 0h:35m:42s (0h:2m:45s left)
+Optimizing NNI: done in 5.64146 secs using 197.8% CPU
+Optimizing NNI: done in 3.47698 secs using 197.2% CPU
+Optimizing NNI: done in 4.33039 secs using 197.6% CPU
+Optimizing NNI: done in 4.38447 secs using 197.8% CPU
+Optimizing NNI: done in 4.03647 secs using 197.3% CPU
+Optimizing NNI: done in 3.962 secs using 197.5% CPU
+Optimizing NNI: done in 2.04976 secs using 195.2% CPU
+Optimizing NNI: done in 4.47413 secs using 197.8% CPU
+Optimizing NNI: done in 2.96657 secs using 197.2% CPU
+Optimizing NNI: done in 4.89612 secs using 197.8% CPU
+Iteration 470 / LogL: -18767.756 / Time: 0h:36m:25s (0h:2m:4s left)
+Optimizing NNI: done in 2.89097 secs using 197.2% CPU
+Optimizing NNI: done in 3.23582 secs using 197.1% CPU
+Optimizing NNI: done in 6.59168 secs using 198.2% CPU
+Optimizing NNI: done in 5.45827 secs using 197.7% CPU
+Optimizing NNI: done in 4.38493 secs using 197.8% CPU
+Optimizing NNI: done in 4.03663 secs using 197.6% CPU
+Optimizing NNI: done in 4.93511 secs using 197.6% CPU
+Optimizing NNI: done in 3.58483 secs using 197.5% CPU
+Optimizing NNI: done in 2.21326 secs using 195.6% CPU
+Optimizing NNI: done in 4.14296 secs using 197.3% CPU
+Iteration 480 / LogL: -18752.466 / Time: 0h:37m:9s (0h:1m:22s left)
+Optimizing NNI: done in 5.01851 secs using 198% CPU
+TREE SEARCH COMPLETED AFTER 481 ITERATIONS / Time: 0h:37m:14s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -18749.843
+2. Current log-likelihood: -18749.828
+Optimal log-likelihood: -18749.820
+Rate parameters:  A-C: 0.98703  A-G: 3.60296  A-T: 1.49205  C-G: 1.04167  C-T: 4.85736  G-T: 1.00000
+Base frequencies:  A: 0.246  C: 0.230  G: 0.231  T: 0.292
+Proportion of invariable sites: 0.171
+Gamma shape alpha: 0.769
+Parameters optimization took 2 rounds (0.339 sec)
+BEST SCORE FOUND : -18749.820
+Creating bootstrap support values...
+Split supports printed to NEXUS file data/packages/ITS/Xerocomus/ref.splits.nex
+Total tree length: 14.683
+
+Total number of iterations: 481
+CPU time used for tree search: 3828.334 sec (1h:3m:48s)
+Wall-clock time used for tree search: 1978.635 sec (0h:32m:58s)
+Total CPU time used: 4315.557 sec (1h:11m:55s)
+Total wall-clock time used: 2236.612 sec (0h:37m:16s)
+
+Computing bootstrap consensus tree...
+Reading input file data/packages/ITS/Xerocomus/ref.splits.nex...
+405 taxa and 6731 splits.
+Consensus tree written to data/packages/ITS/Xerocomus/ref.contree
+Reading input trees file data/packages/ITS/Xerocomus/ref.contree
+Log-likelihood of consensus tree: -18752.022
+
+Analysis results written to: 
+  IQ-TREE report:                data/packages/ITS/Xerocomus/ref.iqtree
+  Maximum-likelihood tree:       data/packages/ITS/Xerocomus/ref.treefile
+  Likelihood distances:          data/packages/ITS/Xerocomus/ref.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          data/packages/ITS/Xerocomus/ref.splits.nex
+  Consensus tree:                data/packages/ITS/Xerocomus/ref.contree
+  Screen log file:               data/packages/ITS/Xerocomus/ref.log
+
+Date and Time: Mon Aug 18 19:53:26 2025

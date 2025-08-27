@@ -1,0 +1,20 @@
+IQ-TREE version 3.0.1 for Linux x86 64-bit built May  5 2025
+Developed by Bui Quang Minh, Thomas Wong, Nhan Ly-Trong, Huaiyan Ren
+Contributed by Lam-Tung Nguyen, Dominik Schrempf, Chris Bielow,
+Olga Chernomor, Michael Woodhams, Diep Thi Hoang, Heiko Schmidt
+
+Host:    lnx820.umnh.utah.edu (AVX2, FMA3, 865 GB RAM)
+Command: /home/bdentinger/iqtree-3.0.1-Linux/bin/iqtree3_intel -s data/packages/ITS/Imleria/aln.masked.fasta -m MFP -bb 1000 -nt AUTO -pre data/packages/ITS/Imleria/ref
+Seed:    797418 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Mon Aug 18 18:04:10 2025
+Kernel:  AVX+FMA - auto-detect threads (72 CPU cores detected)
+
+Reading alignment file data/packages/ITS/Imleria/aln.masked.fasta ... Fasta format detected
+Reading fasta file: done in 0.00177274 secs using 74.91% CPU
+Alignment most likely contains DNA/RNA sequences
+Constructing alignment: done in 0.00150143 secs using 45.96% CPU
+Alignment has 181 sequences with 535 columns, 349 distinct patterns
+184 parsimony-informative, 84 singleton sites, 267 constant sites
+ERROR: Duplicated sequence name mich
+ERROR: Duplicated sequence name tenn
+ERROR: Please rename sequences listed above!

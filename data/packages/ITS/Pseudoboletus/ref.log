@@ -1,0 +1,19 @@
+IQ-TREE version 3.0.1 for Linux x86 64-bit built May  5 2025
+Developed by Bui Quang Minh, Thomas Wong, Nhan Ly-Trong, Huaiyan Ren
+Contributed by Lam-Tung Nguyen, Dominik Schrempf, Chris Bielow,
+Olga Chernomor, Michael Woodhams, Diep Thi Hoang, Heiko Schmidt
+
+Host:    lnx820.umnh.utah.edu (AVX2, FMA3, 865 GB RAM)
+Command: /home/bdentinger/iqtree-3.0.1-Linux/bin/iqtree3_intel -s data/packages/ITS/Pseudoboletus/aln.masked.fasta -m MFP -bb 1000 -nt AUTO -pre data/packages/ITS/Pseudoboletus/ref
+Seed:    42432 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Mon Aug 18 17:48:50 2025
+Kernel:  AVX+FMA - auto-detect threads (72 CPU cores detected)
+
+Reading alignment file data/packages/ITS/Pseudoboletus/aln.masked.fasta ... Fasta format detected
+Reading fasta file: done in 0.00032212 secs using 49.67% CPU
+Alignment most likely contains DNA/RNA sequences
+Constructing alignment: done in 0.00110699 secs using 82.84% CPU
+Alignment has 13 sequences with 685 columns, 67 distinct patterns
+101 parsimony-informative, 14 singleton sites, 570 constant sites
+ERROR: Duplicated sequence name xal
+ERROR: Please rename sequences listed above!

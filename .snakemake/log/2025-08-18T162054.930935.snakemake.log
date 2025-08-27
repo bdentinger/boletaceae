@@ -1,0 +1,4 @@
+WorkflowError in file /home/bdentinger/boletaceae/Snakefile, line 8:
+Failed to open source file /home/bdentinger/boletaceae/rules/its_place.smk
+FileNotFoundError: [Errno 2] No such file or directory: '/home/bdentinger/boletaceae/rules/its_place.smk'
+  File "/home/bdentinger/boletaceae/Snakefile", line 8, in <module>

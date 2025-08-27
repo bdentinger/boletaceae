@@ -117,10 +117,12 @@ rule concat_supermatrix:
         matrix="data/align/concat.fasta",
         parts="data/align/partitions.txt",
         taxa ="data/align/taxa.txt"
+    params:
+        coding = " ".join(config.get("coding_loci", []))
     shell:
         "{config[python_bin]} workflow/scripts/concat_supermatrix.py "
         "--inputs {input} "
-        "--out-matrix {output.matrix} --out-parts {output.parts} --out-taxa {output.taxa}"
+        "--out-matrix {output.matrix} --out-parts {output.parts} --out-taxa {output.taxa} --coding {params.coding}"
 
 # 4) Build backbone with IQ-TREE using a topology constraint (if provided)
 rule build_backbone_constrained:

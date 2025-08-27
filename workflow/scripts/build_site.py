@@ -57,6 +57,12 @@ INDEX_HTML = """<!doctype html>
           <option value="off">off</option>
         </select>
       </div>
+      <div class="knob"><label>Tree</label>
+        <select id="kTree">
+          <option value="latest/backbone.newick" selected>Backbone</option>
+          <option value="latest/backbone_with_its.newick">Backbone + ITS</option>
+        </select>
+      </div>
     </div>
   </header>
 
@@ -64,7 +70,12 @@ INDEX_HTML = """<!doctype html>
 
   <script type="module">
     import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
-    const TREE_URL = "latest/backbone.newick";
+    let TREE_URL = "latest/backbone.newick";
+    document.getElementById("kTree").addEventListener("change", (e)=>{
+    TREE_URL = e.target.value;
+    render(TREE_URL);
+    });
+
 
     let BRANCH_PX_PER_UNIT = 220;
     let TIP_SPACING_PX     = 14;
@@ -234,6 +245,10 @@ def main():
 
     # copy tree to site/latest/backbone.newick
     shutil.copy2(TREE_SRC, LATEST / "backbone.newick")
+
+    bw = ROOT / "data/trees/backbone_with_its.newick"
+    if bw.exists():
+        shutil.copy2(bw, LATEST / "backbone_with_its.newick")
 
     # write viewer HTML
     INDEX.write_text(INDEX_HTML, encoding="utf-8")

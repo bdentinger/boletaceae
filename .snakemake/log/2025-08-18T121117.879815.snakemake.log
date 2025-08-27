@@ -1,0 +1,24 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 16
+Rules claiming more threads will be scaled down.
+Job stats:
+job           count
+----------  -------
+site_build        1
+total             1
+
+Select jobs to execute...
+
+[Mon Aug 18 12:11:18 2025]
+rule site_build:
+    input: data/trees/backbone.rooted.pretty.newick, workflow/scripts/build_site.py
+    output: site/index.html, site/latest/backbone.newick, site/build.txt, site/.nojekyll
+    jobid: 0
+    reason: Updated input files: workflow/scripts/build_site.py
+    resources: tmpdir=/tmp
+
+[Mon Aug 18 12:11:19 2025]
+Finished job 0.
+1 of 1 steps (100%) done
+Complete log: .snakemake/log/2025-08-18T121117.879815.snakemake.log

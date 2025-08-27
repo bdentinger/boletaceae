@@ -1,0 +1,4 @@
+Building DAG of jobs...
+FileNotFoundError in file /home/bdentinger/boletaceae/workflow/rules/its_place.smk, line 78:
+[Errno 2] No such file or directory: 'data/packages/ITS/genera.txt'
+  File "/home/bdentinger/boletaceae/workflow/rules/its_place.smk", line 78, in its_jplace_list

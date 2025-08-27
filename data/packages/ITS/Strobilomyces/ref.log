@@ -1,0 +1,911 @@
+IQ-TREE version 3.0.1 for Linux x86 64-bit built May  5 2025
+Developed by Bui Quang Minh, Thomas Wong, Nhan Ly-Trong, Huaiyan Ren
+Contributed by Lam-Tung Nguyen, Dominik Schrempf, Chris Bielow,
+Olga Chernomor, Michael Woodhams, Diep Thi Hoang, Heiko Schmidt
+
+Host:    lnx820.umnh.utah.edu (AVX2, FMA3, 865 GB RAM)
+Command: /home/bdentinger/iqtree-3.0.1-Linux/bin/iqtree3_intel -s data/packages/ITS/Strobilomyces/aln.masked.fasta -m MFP -bb 1000 -nt AUTO -pre data/packages/ITS/Strobilomyces/ref
+Seed:    784445 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Mon Aug 18 18:33:23 2025
+Kernel:  AVX+FMA - auto-detect threads (72 CPU cores detected)
+
+Reading alignment file data/packages/ITS/Strobilomyces/aln.masked.fasta ... Fasta format detected
+Reading fasta file: done in 0.00260141 secs using 99.37% CPU
+Alignment most likely contains DNA/RNA sequences
+Constructing alignment: done in 0.00224948 secs using 99.58% CPU
+Alignment has 251 sequences with 494 columns, 436 distinct patterns
+346 parsimony-informative, 60 singleton sites, 88 constant sites
+                   Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 0.000533549 secs using 99.71% CPU
+   1  Strobilomyces_001    5.47%    passed     47.83%
+   2  Strobilomyces_002    5.47%    passed     47.83%
+   3  Strobilomyces_003    5.47%    passed     47.83%
+   4  Strobilomyces_004    4.66%    passed     70.58%
+   5  Strobilomyces_005   14.78%    passed     85.37%
+   6  Strobilomyces_006    5.26%    passed     48.83%
+   7  Strobilomyces_007    0.40%    passed     49.70%
+   8  Strobilomyces_008    3.44%    passed     72.44%
+   9  Strobilomyces_009    4.86%    passed     44.79%
+  10  Strobilomyces_010    3.24%    passed     70.25%
+  11  Strobilomyces_011    3.85%    passed     79.15%
+  12  Strobilomyces_012    0.20%    passed     85.36%
+  13  Strobilomyces_013    1.42%    passed     82.63%
+  14  Strobilomyces_014    0.81%    passed     35.20%
+  15  Strobilomyces_015   13.77%    passed     91.75%
+  16  Strobilomyces_016    9.72%    passed     81.40%
+  17  Strobilomyces_017    9.11%    passed     85.27%
+  18  Strobilomyces_018    0.20%    passed     32.51%
+  19  Strobilomyces_019    1.82%    failed      2.85%
+  20  Strobilomyces_020    1.82%    passed     84.37%
+  21  Strobilomyces_021    2.02%    passed     84.58%
+  22  Strobilomyces_022   20.45%    passed     98.25%
+  23  Strobilomyces_023    0.40%    passed     47.10%
+  24  Strobilomyces_024    3.24%    passed     77.40%
+  25  Strobilomyces_025    1.21%    passed     65.99%
+  26  Strobilomyces_026    1.21%    passed     65.99%
+  27  Strobilomyces_027    1.21%    passed     65.99%
+  28  Strobilomyces_028    1.42%    passed     62.98%
+  29  Strobilomyces_029    1.21%    passed     76.85%
+  30  Strobilomyces_030   20.65%    passed     14.85%
+  31  Strobilomyces_031   20.65%    passed     14.85%
+  32  Strobilomyces_032   20.65%    passed     14.85%
+  33  Strobilomyces_033   20.65%    passed     14.85%
+  34  Strobilomyces_034   20.65%    passed     14.85%
+  35  Strobilomyces_035   20.65%    passed     14.85%
+  36  Strobilomyces_036   20.65%    passed     14.85%
+  37  Strobilomyces_037   20.65%    passed     14.85%
+  38  Strobilomyces_038   20.65%    passed     14.85%
+  39  Strobilomyces_039   20.65%    passed     14.85%
+  40  Strobilomyces_040   22.87%    passed     61.53%
+  41  Strobilomyces_041   25.10%    passed     98.87%
+  42  Strobilomyces_042   27.53%    passed     99.21%
+  43  Strobilomyces_043    4.86%    passed     59.19%
+  44  Strobilomyces_044    2.02%    passed     91.83%
+  45  Strobilomyces_045    2.02%    passed     78.78%
+  46  Strobilomyces_046    1.01%    passed     38.66%
+  47  Strobilomyces_047   20.24%    passed     45.26%
+  48  Strobilomyces_048    0.61%    passed     28.68%
+  49  Strobilomyces_049    4.05%    passed     62.90%
+  50  Strobilomyces_050   17.61%    passed     74.36%
+  51  Strobilomyces_051    5.06%    passed     82.91%
+  52  Strobilomyces_052    1.21%    passed     78.41%
+  53  Strobilomyces_053    1.62%    passed     77.37%
+  54  Strobilomyces_054    1.21%    passed     76.85%
+  55  Strobilomyces_055    2.23%    failed      0.09%
+  56  Strobilomyces_056    1.62%    passed     85.76%
+  57  Strobilomyces_057    0.61%    passed     55.86%
+  58  Strobilomyces_058    0.40%    passed     28.39%
+  59  Strobilomyces_059    0.40%    passed     76.01%
+  60  Strobilomyces_060    3.44%    passed     66.23%
+  61  Strobilomyces_061   10.53%    passed     29.67%
+  62  Strobilomyces_062    1.21%    passed     77.28%
+  63  Strobilomyces_063    5.06%    passed     75.41%
+  64  Strobilomyces_064    5.06%    passed     75.41%
+  65  Strobilomyces_065    5.06%    passed     75.41%
+  66  Strobilomyces_066    0.20%    passed     26.60%
+  67  Strobilomyces_067    1.62%    passed     50.90%
+  68  Strobilomyces_068    5.06%    passed     75.41%
+  69  Strobilomyces_069    4.86%    passed     74.18%
+  70  Strobilomyces_070    7.49%    passed     28.26%
+  71  Strobilomyces_071    0.40%    passed     79.54%
+  72  Strobilomyces_072    0.40%    passed     49.70%
+  73  Strobilomyces_073    0.40%    passed     47.77%
+  74  Strobilomyces_074    0.40%    failed      0.00%
+  75  Strobilomyces_075    0.40%    failed      0.00%
+  76  Strobilomyces_076    0.40%    failed      0.00%
+  77  Strobilomyces_077    0.40%    failed      0.00%
+  78  Strobilomyces_078    0.40%    failed      0.00%
+  79  Strobilomyces_079    0.40%    failed      0.00%
+  80  Strobilomyces_080    6.07%    passed     57.87%
+  81  Strobilomyces_081    6.07%    passed     57.87%
+  82  Strobilomyces_082    6.07%    passed     57.87%
+  83  Strobilomyces_083    6.07%    passed     57.87%
+  84  Strobilomyces_084    0.81%    passed     58.28%
+  85  Strobilomyces_085   17.61%    passed     74.36%
+  86  Strobilomyces_086    1.21%    passed     75.02%
+  87  Strobilomyces_087    3.85%    passed     56.90%
+  88  Strobilomyces_088    6.48%    passed     42.88%
+  89  Strobilomyces_089    2.02%    passed     74.37%
+  90  Strobilomyces_090    1.62%    passed     72.35%
+  91  Strobilomyces_091    1.42%    passed     78.28%
+  92  Strobilomyces_092    2.02%    passed     74.37%
+  93  Strobilomyces_093    2.23%    passed     87.75%
+  94  Strobilomyces_094    0.20%    passed     85.36%
+  95  Strobilomyces_095    4.66%    passed     86.94%
+  96  Strobilomyces_096    2.83%    passed     42.12%
+  97  Strobilomyces_097    8.70%    passed     67.68%
+  98  Strobilomyces_098    1.62%    passed     65.85%
+  99  Strobilomyces_099    2.02%    passed     30.45%
+ 100  Strobilomyces_100    2.23%    passed     25.20%
+ 101  Strobilomyces_101    2.02%    passed     88.59%
+ 102  Strobilomyces_102    2.02%    passed     78.59%
+ 103  Strobilomyces_103    1.21%    passed     61.65%
+ 104  Strobilomyces_104    1.21%    passed     61.65%
+ 105  Strobilomyces_105    1.01%    passed     43.32%
+ 106  Strobilomyces_106    1.62%    passed     10.70%
+ 107  Strobilomyces_107    4.25%    passed     49.44%
+ 108  Strobilomyces_108    0.61%    passed     31.59%
+ 109  Strobilomyces_109    0.61%    passed     28.68%
+ 110  Strobilomyces_110    3.24%    passed     25.36%
+ 111  Strobilomyces_111    4.45%    passed     69.90%
+ 112  Strobilomyces_112    4.45%    passed     69.90%
+ 113  Strobilomyces_113    7.69%    passed     76.72%
+ 114  Strobilomyces_114    3.24%    passed     71.21%
+ 115  Strobilomyces_115    0.20%    passed     89.68%
+ 116  Strobilomyces_116    0.20%    passed     76.60%
+ 117  Strobilomyces_117    1.42%    passed     39.35%
+ 118  Strobilomyces_118    1.21%    passed     32.57%
+ 119  Strobilomyces_119    2.23%    failed      0.09%
+ 120  Strobilomyces_120    2.63%    passed      5.36%
+ 121  Strobilomyces_121    0.81%    passed     85.29%
+ 122  Strobilomyces_122    2.63%    passed     67.59%
+ 123  Strobilomyces_123    3.44%    passed     62.93%
+ 124  Strobilomyces_124    1.62%    passed     85.76%
+ 125  Strobilomyces_125    2.43%    passed     94.46%
+ 126  Strobilomyces_126    0.40%    passed     49.70%
+ 127  Strobilomyces_127    0.40%    passed     34.74%
+ 128  Strobilomyces_128    0.20%    passed     52.02%
+ 129  Strobilomyces_129    1.01%    passed     32.78%
+ 130  Strobilomyces_130    3.64%    passed     81.76%
+ 131  Strobilomyces_131   13.77%    passed     91.75%
+ 132  Strobilomyces_132    0.61%    passed     32.88%
+ 133  Strobilomyces_133    0.61%    passed     32.88%
+ 134  Strobilomyces_134    0.61%    passed     33.80%
+ 135  Strobilomyces_135    0.61%    passed     55.86%
+ 136  Strobilomyces_136    0.61%    passed     51.28%
+ 137  Strobilomyces_137    0.40%    passed     82.16%
+ 138  Strobilomyces_138    0.40%    passed     76.01%
+ 139  Strobilomyces_139    1.21%    passed     62.85%
+ 140  Strobilomyces_140    4.66%    passed     86.14%
+ 141  Strobilomyces_141    6.48%    passed     93.18%
+ 142  Strobilomyces_142    0.61%    passed     33.91%
+ 143  Strobilomyces_143    0.40%    passed     28.39%
+ 144  Strobilomyces_144    0.81%    passed     86.74%
+ 145  Strobilomyces_145    0.61%    passed     88.78%
+ 146  Strobilomyces_146    1.21%    passed     45.24%
+ 147  Strobilomyces_147    2.43%    passed     83.12%
+ 148  Strobilomyces_148    2.43%    passed     69.88%
+ 149  Strobilomyces_149    6.68%    passed     86.72%
+ 150  Strobilomyces_150   31.17%    passed     68.61%
+ 151  Strobilomyces_151   43.52%    passed     17.19%
+ 152  Strobilomyces_152    0.40%    passed     74.50%
+ 153  Strobilomyces_153   11.94%    passed     97.55%
+ 154  Strobilomyces_154   45.14%    passed     83.66%
+ 155  Strobilomyces_155    1.62%    passed     50.90%
+ 156  Strobilomyces_156    5.47%    passed     76.64%
+ 157  Strobilomyces_157   13.77%    passed     91.75%
+ 158  Strobilomyces_158    3.64%    passed     74.16%
+ 159  Strobilomyces_159    5.67%    passed     71.59%
+ 160  Strobilomyces_160    2.63%    passed     60.68%
+ 161  Strobilomyces_161    1.21%    passed     70.00%
+ 162  Strobilomyces_162   35.22%    passed     24.35%
+ 163  Strobilomyces_163   15.18%    passed     75.82%
+ 164  Strobilomyces_164    1.62%    passed     37.18%
+ 165  Strobilomyces_165    5.67%    failed      0.09%
+ 166  Strobilomyces_166   39.27%    failed      0.38%
+ 167  Strobilomyces_167    6.68%    passed     78.25%
+ 168  Strobilomyces_168    7.09%    passed     77.23%
+ 169  Strobilomyces_169    0.61%    passed     65.28%
+ 170  Strobilomyces_170    0.61%    passed     78.63%
+ 171  Strobilomyces_171    2.43%    passed     89.10%
+ 172  Strobilomyces_172    0.40%    passed     91.52%
+ 173  Strobilomyces_173    0.20%    passed     74.40%
+ 174  Strobilomyces_174   15.18%    passed     75.82%
+ 175  Strobilomyces_175   15.18%    passed     75.82%
+ 176  Strobilomyces_176    0.20%    passed     85.36%
+ 177  Strobilomyces_177    2.23%    passed     80.28%
+ 178  Strobilomyces_178    1.62%    passed     37.18%
+ 179  Strobilomyces_179    3.24%    passed     95.17%
+ 180  Strobilomyces_180    1.01%    passed     70.25%
+ 181  Strobilomyces_181    1.01%    passed     70.25%
+ 182  Strobilomyces_182    1.01%    passed     70.25%
+ 183  Strobilomyces_183    1.01%    passed     70.25%
+ 184  Strobilomyces_184    1.01%    passed     67.50%
+ 185  Strobilomyces_185    1.01%    passed     70.25%
+ 186  Strobilomyces_186    1.01%    passed     70.25%
+ 187  Strobilomyces_187    1.01%    passed     70.25%
+ 188  Strobilomyces_188    1.01%    passed     63.51%
+ 189  Strobilomyces_189    1.01%    passed     70.25%
+ 190  Strobilomyces_190    1.01%    passed     70.25%
+ 191  Strobilomyces_191    1.01%    passed     70.25%
+ 192  Strobilomyces_192    1.01%    passed     70.25%
+ 193  Strobilomyces_193    1.01%    passed     70.25%
+ 194  Strobilomyces_194    1.01%    passed     70.25%
+ 195  Strobilomyces_195    1.01%    passed     70.25%
+ 196  Strobilomyces_196    1.01%    passed     70.25%
+ 197  Strobilomyces_197    1.01%    passed     70.25%
+ 198  Strobilomyces_198    1.01%    passed     70.25%
+ 199  Strobilomyces_199    1.01%    passed     70.25%
+ 200  Strobilomyces_200    1.01%    passed     70.25%
+ 201  Strobilomyces_201    1.01%    passed     63.51%
+ 202  Strobilomyces_202    1.01%    passed     70.25%
+ 203  Strobilomyces_203    1.01%    passed     70.25%
+ 204  Strobilomyces_204    1.01%    passed     70.25%
+ 205  Strobilomyces_205    1.01%    passed     70.25%
+ 206  Strobilomyces_206    1.01%    passed     70.25%
+ 207  Strobilomyces_207    1.01%    passed     70.25%
+ 208  Strobilomyces_208    2.43%    passed     80.18%
+ 209  Strobilomyces_209    2.23%    passed     78.76%
+ 210  Strobilomyces_210    2.02%    passed     80.28%
+ 211  Strobilomyces_211    2.02%    passed     80.28%
+ 212  Strobilomyces_212    2.02%    passed     80.28%
+ 213  Strobilomyces_213    2.02%    passed     80.28%
+ 214  Strobilomyces_214    2.83%    passed     83.85%
+ 215  Strobilomyces_215    2.02%    passed     76.13%
+ 216  Strobilomyces_216    2.83%    passed     83.85%
+ 217  Strobilomyces_217    1.42%    passed     73.54%
+ 218  Strobilomyces_218    0.40%    passed     56.80%
+ 219  Strobilomyces_219    0.40%    passed     53.33%
+ 220  Strobilomyces_220   28.95%    passed     33.59%
+ 221  Strobilomyces_221    1.21%    passed     75.02%
+ 222  Strobilomyces_222   41.50%    passed     68.07%
+ 223  Strobilomyces_223   34.01%    passed     23.08%
+ 224  Strobilomyces_224   31.78%    passed     83.53%
+ 225  Strobilomyces_225   32.59%    passed     54.52%
+ 226  Strobilomyces_226   32.19%    passed     45.29%
+ 227  Strobilomyces_227   32.39%    passed     49.62%
+ 228  Strobilomyces_228   30.16%    passed     48.46%
+ 229  Strobilomyces_229   31.38%    passed     55.36%
+ 230  Strobilomyces_230   36.84%    passed     96.27%
+ 231  Strobilomyces_231   32.39%    passed     75.42%
+ 232  Strobilomyces_232   32.19%    passed     68.07%
+ 233  Strobilomyces_233   32.39%    passed     63.94%
+ 234  Strobilomyces_234   29.15%    passed     35.65%
+ 235  Strobilomyces_235   28.95%    passed     36.86%
+ 236  Strobilomyces_236   29.15%    passed     37.70%
+ 237  Strobilomyces_237   29.15%    passed     34.25%
+ 238  Strobilomyces_238   28.95%    passed     33.59%
+ 239  Strobilomyces_239   28.95%    passed     21.15%
+ 240  Strobilomyces_240   29.15%    passed     21.12%
+ 241  Strobilomyces_241   28.95%    passed     28.08%
+ 242  Strobilomyces_242   28.95%    passed     27.61%
+ 243  Strobilomyces_243   29.35%    passed     13.57%
+ 244  Strobilomyces_244   29.35%    passed     14.23%
+ 245  Strobilomyces_245   29.35%    passed     10.50%
+ 246  Strobilomyces_246   29.35%    passed      7.91%
+ 247  Strobilomyces_247   29.35%    passed     11.83%
+ 248  Strobilomyces_248   29.35%    passed      7.91%
+ 249  Strobilomyces_249   29.55%    passed     10.60%
+ 250  Strobilomyces_250   29.35%    passed     11.83%
+ 251  Strobilomyces_251   29.35%    passed     10.56%
+****  TOTAL                8.16%  11 sequences failed composition chi2 test (p-value<5%; df=3)
+NOTE: Strobilomyces_002 is identical to Strobilomyces_001 but kept for subsequent analysis
+NOTE: Strobilomyces_072 is identical to Strobilomyces_007 but kept for subsequent analysis
+NOTE: Strobilomyces_094 is identical to Strobilomyces_012 but kept for subsequent analysis
+NOTE: Strobilomyces_131 is identical to Strobilomyces_015 but kept for subsequent analysis
+NOTE: Strobilomyces_026 is identical to Strobilomyces_025 but kept for subsequent analysis
+NOTE: Strobilomyces_054 is identical to Strobilomyces_029 but kept for subsequent analysis
+NOTE: Strobilomyces_031 is identical to Strobilomyces_030 but kept for subsequent analysis
+NOTE: Strobilomyces_109 is identical to Strobilomyces_048 but kept for subsequent analysis
+NOTE: Strobilomyces_085 is identical to Strobilomyces_050 but kept for subsequent analysis
+NOTE: Strobilomyces_119 is identical to Strobilomyces_055 but kept for subsequent analysis
+NOTE: Strobilomyces_124 is identical to Strobilomyces_056 but kept for subsequent analysis
+NOTE: Strobilomyces_135 is identical to Strobilomyces_057 but kept for subsequent analysis
+NOTE: Strobilomyces_143 is identical to Strobilomyces_058 but kept for subsequent analysis
+NOTE: Strobilomyces_138 is identical to Strobilomyces_059 but kept for subsequent analysis
+NOTE: Strobilomyces_065 is identical to Strobilomyces_064 but kept for subsequent analysis
+NOTE: Strobilomyces_155 is identical to Strobilomyces_067 but kept for subsequent analysis
+NOTE: Strobilomyces_078 is identical to Strobilomyces_077 but kept for subsequent analysis
+NOTE: Strobilomyces_081 is identical to Strobilomyces_080 but kept for subsequent analysis
+NOTE: Strobilomyces_221 is identical to Strobilomyces_086 but kept for subsequent analysis
+NOTE: Strobilomyces_092 is identical to Strobilomyces_089 but kept for subsequent analysis
+NOTE: Strobilomyces_104 is identical to Strobilomyces_103 but kept for subsequent analysis
+NOTE: Strobilomyces_112 is identical to Strobilomyces_111 but kept for subsequent analysis
+NOTE: Strobilomyces_133 is identical to Strobilomyces_132 but kept for subsequent analysis
+NOTE: Strobilomyces_174 is identical to Strobilomyces_163 but kept for subsequent analysis
+NOTE: Strobilomyces_178 is identical to Strobilomyces_164 but kept for subsequent analysis
+NOTE: Strobilomyces_181 is identical to Strobilomyces_180 but kept for subsequent analysis
+NOTE: Strobilomyces_211 is identical to Strobilomyces_210 but kept for subsequent analysis
+NOTE: Strobilomyces_216 is identical to Strobilomyces_214 but kept for subsequent analysis
+NOTE: Strobilomyces_238 is identical to Strobilomyces_220 but kept for subsequent analysis
+Checking for duplicate sequences: done in 0.00164233 secs using 90.79% CPU
+Identifying sites to remove: done in 0.00151063 secs using 99.36% CPU
+NOTE: 41 identical sequences (see below) will be ignored for subsequent analysis
+NOTE: Strobilomyces_003 (identical to Strobilomyces_001) is ignored but added at the end
+NOTE: Strobilomyces_126 (identical to Strobilomyces_007) is ignored but added at the end
+NOTE: Strobilomyces_176 (identical to Strobilomyces_012) is ignored but added at the end
+NOTE: Strobilomyces_157 (identical to Strobilomyces_015) is ignored but added at the end
+NOTE: Strobilomyces_027 (identical to Strobilomyces_025) is ignored but added at the end
+NOTE: Strobilomyces_032 (identical to Strobilomyces_030) is ignored but added at the end
+NOTE: Strobilomyces_033 (identical to Strobilomyces_030) is ignored but added at the end
+NOTE: Strobilomyces_034 (identical to Strobilomyces_030) is ignored but added at the end
+NOTE: Strobilomyces_035 (identical to Strobilomyces_030) is ignored but added at the end
+NOTE: Strobilomyces_036 (identical to Strobilomyces_030) is ignored but added at the end
+NOTE: Strobilomyces_037 (identical to Strobilomyces_030) is ignored but added at the end
+NOTE: Strobilomyces_038 (identical to Strobilomyces_030) is ignored but added at the end
+NOTE: Strobilomyces_039 (identical to Strobilomyces_030) is ignored but added at the end
+NOTE: Strobilomyces_068 (identical to Strobilomyces_064) is ignored but added at the end
+NOTE: Strobilomyces_082 (identical to Strobilomyces_080) is ignored but added at the end
+NOTE: Strobilomyces_083 (identical to Strobilomyces_080) is ignored but added at the end
+NOTE: Strobilomyces_175 (identical to Strobilomyces_163) is ignored but added at the end
+NOTE: Strobilomyces_182 (identical to Strobilomyces_180) is ignored but added at the end
+NOTE: Strobilomyces_183 (identical to Strobilomyces_180) is ignored but added at the end
+NOTE: Strobilomyces_185 (identical to Strobilomyces_180) is ignored but added at the end
+NOTE: Strobilomyces_186 (identical to Strobilomyces_180) is ignored but added at the end
+NOTE: Strobilomyces_187 (identical to Strobilomyces_180) is ignored but added at the end
+NOTE: Strobilomyces_189 (identical to Strobilomyces_180) is ignored but added at the end
+NOTE: Strobilomyces_190 (identical to Strobilomyces_180) is ignored but added at the end
+NOTE: Strobilomyces_191 (identical to Strobilomyces_180) is ignored but added at the end
+NOTE: Strobilomyces_192 (identical to Strobilomyces_180) is ignored but added at the end
+NOTE: Strobilomyces_193 (identical to Strobilomyces_180) is ignored but added at the end
+NOTE: Strobilomyces_194 (identical to Strobilomyces_180) is ignored but added at the end
+NOTE: Strobilomyces_195 (identical to Strobilomyces_180) is ignored but added at the end
+NOTE: Strobilomyces_196 (identical to Strobilomyces_180) is ignored but added at the end
+NOTE: Strobilomyces_197 (identical to Strobilomyces_180) is ignored but added at the end
+NOTE: Strobilomyces_198 (identical to Strobilomyces_180) is ignored but added at the end
+NOTE: Strobilomyces_199 (identical to Strobilomyces_180) is ignored but added at the end
+NOTE: Strobilomyces_200 (identical to Strobilomyces_180) is ignored but added at the end
+NOTE: Strobilomyces_202 (identical to Strobilomyces_180) is ignored but added at the end
+NOTE: Strobilomyces_203 (identical to Strobilomyces_180) is ignored but added at the end
+NOTE: Strobilomyces_204 (identical to Strobilomyces_180) is ignored but added at the end
+NOTE: Strobilomyces_205 (identical to Strobilomyces_180) is ignored but added at the end
+NOTE: Strobilomyces_206 (identical to Strobilomyces_180) is ignored but added at the end
+NOTE: Strobilomyces_207 (identical to Strobilomyces_180) is ignored but added at the end
+NOTE: Strobilomyces_212 (identical to Strobilomyces_210) is ignored but added at the end
+Alignment was printed to data/packages/ITS/Strobilomyces/ref.uniqueseq.phy
+
+For your convenience alignment with unique sequences printed to data/packages/ITS/Strobilomyces/ref.uniqueseq.phy
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.036 seconds
+Measuring multi-threading efficiency up to 72 CPU cores
+Increase to 10 rounds for branch lengths
+242 trees examined
+Threads: 1 / Time: 72.026 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -37904
+Threads: 2 / Time: 51.769 sec / Speedup: 1.391 / Efficiency: 70% / LogL: -37904
+Threads: 3 / Time: 53.636 sec / Speedup: 1.343 / Efficiency: 45% / LogL: -37904
+Determining AUTO threadcount: done in 177.436 secs using 186.7% CPU
+BEST NUMBER OF THREADS: 2
+
+Perform fast likelihood tree search using GTR+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Optimizing NNI: done in 0.94862 secs using 195.2% CPU
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -10993.971
+Optimal log-likelihood: -10993.790
+Rate parameters:  A-C: 1.39139  A-G: 2.86408  A-T: 1.51396  C-G: 0.99276  C-T: 4.27954  G-T: 1.00000
+Base frequencies:  A: 0.216  C: 0.289  G: 0.257  T: 0.238
+Proportion of invariable sites: 0.064
+Gamma shape alpha: 0.730
+Parameters optimization took 1 rounds (0.120 sec)
+Time for fast ML tree search: 1.548 seconds
+
+NOTE: ModelFinder requires 31 MB RAM!
+ModelFinder will test up to 968 DNA models (sample size: 494 epsilon: 0.100) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+  1  JC            12050.885    417 24935.769    29522.769    26688.226
+  2  JC+I          11788.432    418 24412.863    29083.317    26169.523
+  3  JC+G4         11273.559    418 23383.118    28053.572    25139.778
+  4  JC+I+G4       11273.445    419 23384.891    28141.107    25145.753
+  5  JC+R2         11345.975    419 23529.949    28286.165    25290.811
+  6  JC+R3         11264.249    421 23370.497    28305.553    25139.765
+  7  JC+R4         11248.002    423 23342.005    28466.348    25119.678
+  8  JC+R5         11246.694    425 23343.389    28668.389    25129.466
+ 14  JC+I+R2       11315.403    420 23470.806    28315.189    25235.871
+ 15  JC+I+R3       11253.909    422 23351.818    28380.157    25125.288
+ 16  JC+I+R4       11246.634    424 23341.267    28564.456    25123.142
+ 17  JC+I+R5       11246.362    426 23344.724    28774.634    25135.004
+ 29  JC+R4         11248.002    423 23342.005    28466.348    25119.678
+ 30  JC+R5         11246.694    425 23343.389    28668.389    25129.466
+ 37  JC+I+R3       11253.909    422 23351.818    28380.157    25125.288
+ 38  JC+I+R4       11246.634    424 23341.267    28564.456    25123.142
+ 51  F81+R4        11247.766    423 23341.532    28465.875    25119.205
+ 52  F81+R5        11246.526    425 23343.051    28668.051    25129.129
+ 59  F81+I+R3      11253.890    422 23351.779    28380.117    25125.249
+ 60  F81+I+R4      11246.462    424 23340.923    28564.112    25122.798
+ 73  F81+F+R4      11243.649    426 23339.299    28769.209    25129.579
+ 74  F81+F+R5      11242.693    428 23341.386    28990.986    25140.071
+ 81  F81+F+I+R3    11250.417    425 23350.833    28675.833    25136.911
+ 82  F81+F+I+R4    11242.271    427 23338.542    28876.602    25133.024
+ 95  K2P+R4        10988.213    424 22824.425    28047.614    24606.301
+ 96  K2P+R5        10986.934    426 22825.868    28255.778    24616.148
+103  K2P+I+R3      10997.557    423 22841.113    27965.456    24618.786
+104  K2P+I+R4      10986.995    425 22823.989    28148.989    24610.067
+117  K2P+R4        10988.213    424 22824.425    28047.614    24606.300
+118  K2P+R5        10986.934    426 22825.868    28255.778    24616.148
+125  K2P+I+R3      10997.557    423 22841.113    27965.456    24618.786
+126  K2P+I+R4      10986.995    425 22823.989    28148.989    24610.067
+139  HKY+R4        10988.164    424 22824.328    28047.516    24606.203
+140  HKY+R5        10986.822    426 22825.644    28255.554    24615.924
+147  HKY+I+R3      10997.555    423 22841.110    27965.453    24618.783
+148  HKY+I+R4      10986.897    425 22823.795    28148.795    24609.872
+161  HKY+F+R4      10985.580    427 22825.160    28363.221    24619.643
+162  HKY+F+R5      10984.564    429 22827.128    28591.816    24630.016
+169  HKY+F+I+R3    10994.355    426 22840.711    28270.621    24630.991
+170  HKY+F+I+R4    10984.194    428 22824.388    28473.988    24623.074
+183  TNe+R4        10968.534    425 22787.067    28112.067    24573.145
+184  TNe+R5        10964.131    427 22782.262    28320.323    24576.745
+191  TNe+I+R3      10974.167    424 22796.335    28019.523    24578.210
+192  TNe+I+R4      10968.375    426 22788.750    28218.660    24579.030
+205  TNe+R4        10968.534    425 22787.067    28112.067    24573.145
+206  TNe+R5        10964.131    427 22782.262    28320.323    24576.745
+213  TNe+I+R3      10974.167    424 22796.335    28019.523    24578.210
+214  TNe+I+R4      10968.375    426 22788.750    28218.660    24579.030
+227  TN+R4         10968.432    425 22786.863    28111.863    24572.941
+228  TN+R5         10963.994    427 22781.988    28320.049    24576.471
+235  TN+I+R3       10974.159    424 22796.318    28019.507    24578.194
+236  TN+I+R4       10968.351    426 22788.702    28218.612    24578.982
+249  TN+F+R4       10976.350    428 22808.700    28458.300    24607.385
+250  TN+F+R5       10973.679    430 22807.359    28690.851    24614.449
+257  TN+F+I+R3     10982.682    427 22819.364    28357.425    24613.847
+258  TN+F+I+R4     10975.276    429 22808.553    28573.240    24611.441
+271  K3P+R4        10988.140    425 22826.279    28151.279    24612.357
+272  K3P+R5        10985.722    427 22825.445    28363.505    24619.927
+279  K3P+I+R3      10997.589    424 22843.179    28066.367    24625.054
+280  K3P+I+R4      10986.686    426 22825.372    28255.283    24615.652
+293  K3P+R4        10988.140    425 22826.279    28151.279    24612.357
+294  K3P+R5        10985.722    427 22825.445    28363.505    24619.927
+301  K3P+I+R3      10997.589    424 22843.179    28066.367    24625.054
+302  K3P+I+R4      10986.686    426 22825.372    28255.283    24615.652
+315  K3Pu+R4       10988.121    425 22826.243    28151.243    24612.320
+316  K3Pu+R5       10985.560    427 22825.119    28363.180    24619.602
+323  K3Pu+I+R3     10997.594    424 22843.189    28066.377    24625.064
+324  K3Pu+I+R4     10986.679    426 22825.359    28255.269    24615.639
+337  K3Pu+F+R4     10985.592    428 22827.183    28476.783    24625.868
+338  K3Pu+F+R5     10983.249    430 22826.498    28709.990    24633.588
+345  K3Pu+F+I+R3   10994.375    427 22842.751    28380.811    24637.233
+346  K3Pu+F+I+R4   10984.035    429 22826.070    28590.758    24628.958
+359  TPM2+R4       10986.382    425 22822.763    28147.763    24608.841
+360  TPM2+R5       10983.780    427 22821.560    28359.621    24616.043
+367  TPM2+I+R3     10995.200    424 22838.401    28061.589    24620.276
+368  TPM2+I+R4     10985.023    426 22822.046    28251.957    24612.326
+381  TPM2+R4       10986.382    425 22822.763    28147.763    24608.841
+382  TPM2+R5       10983.780    427 22821.560    28359.621    24616.043
+389  TPM2+I+R3     10995.200    424 22838.401    28061.589    24620.276
+390  TPM2+I+R4     10985.023    426 22822.046    28251.957    24612.326
+403  TPM2u+R4      10986.353    425 22822.706    28147.706    24608.784
+404  TPM2u+R5      10983.744    427 22821.487    28359.548    24615.970
+411  TPM2u+I+R3    10995.133    424 22838.265    28061.454    24620.140
+412  TPM2u+I+R4    10984.946    426 22821.891    28251.802    24612.171
+425  TPM2u+F+R4    10976.419    428 22808.837    28458.437    24607.523
+426  TPM2u+F+R5    10974.577    430 22809.155    28692.647    24616.245
+433  TPM2u+F+I+R3  10984.020    427 22822.040    28360.101    24616.523
+434  TPM2u+F+I+R4  10975.277    429 22808.554    28573.242    24611.442
+447  TPM3+R4       10987.188    425 22824.376    28149.376    24610.453
+448  TPM3+R5       10984.221    427 22822.442    28360.503    24616.925
+455  TPM3+I+R3     10996.177    424 22840.354    28063.543    24622.230
+456  TPM3+I+R4     10985.850    426 22823.700    28253.611    24613.981
+469  TPM3+R4       10987.188    425 22824.376    28149.376    24610.453
+470  TPM3+R5       10984.221    427 22822.442    28360.503    24616.925
+477  TPM3+I+R3     10996.177    424 22840.354    28063.543    24622.230
+478  TPM3+I+R4     10985.850    426 22823.700    28253.611    24613.981
+491  TPM3u+R4      10987.170    425 22824.340    28149.340    24610.418
+492  TPM3u+R5      10984.196    427 22822.393    28360.453    24616.875
+499  TPM3u+I+R3    10996.162    424 22840.323    28063.511    24622.198
+500  TPM3u+I+R4    10985.813    426 22823.627    28253.537    24613.907
+513  TPM3u+F+R4    10985.426    428 22826.852    28476.452    24625.537
+514  TPM3u+F+R5    10982.793    430 22825.586    28709.078    24632.676
+521  TPM3u+F+I+R3  10994.335    427 22842.670    28380.730    24637.153
+522  TPM3u+F+I+R4  10983.847    429 22825.695    28590.382    24628.582
+535  TIMe+R4       10968.546    426 22789.092    28219.002    24579.372
+536  TIMe+R5       10963.625    428 22783.250    28432.850    24581.935
+543  TIMe+I+R3     10974.317    425 22798.635    28123.635    24584.712
+544  TIMe+I+R4     10968.322    427 22790.644    28328.705    24585.127
+557  TIMe+R4       10968.546    426 22789.092    28219.002    24579.372
+558  TIMe+R5       10963.625    428 22783.250    28432.850    24581.935
+565  TIMe+I+R3     10974.317    425 22798.635    28123.635    24584.712
+566  TIMe+I+R4     10968.322    427 22790.644    28328.705    24585.127
+579  TIM+R4        10968.394    426 22788.788    28218.698    24579.068
+580  TIM+R5        10963.585    428 22783.169    28432.769    24581.854
+587  TIM+I+R3      10974.157    425 22798.314    28123.314    24584.391
+588  TIM+I+R4      10968.297    427 22790.594    28328.654    24585.076
+601  TIM+F+R4      10976.224    429 22810.448    28575.136    24613.336
+602  TIM+F+R5      10973.001    431 22808.003    28814.197    24619.296
+609  TIM+F+I+R3    10982.639    428 22821.277    28470.877    24619.963
+610  TIM+F+I+R4    10975.112    430 22810.225    28693.717    24617.315
+623  TIM2e+R4      10965.829    426 22783.659    28213.569    24573.939
+624  TIM2e+R5      10961.591    428 22779.182    28428.782    24577.867
+631  TIM2e+I+R3    10971.711    425 22793.423    28118.423    24579.500
+632  TIM2e+I+R4    10965.934    427 22785.869    28323.929    24580.351
+645  TIM2e+R4      10965.829    426 22783.659    28213.569    24573.939
+646  TIM2e+R5      10961.591    428 22779.182    28428.782    24577.867
+653  TIM2e+I+R3    10971.711    425 22793.423    28118.423    24579.500
+654  TIM2e+I+R4    10965.934    427 22785.869    28323.929    24580.351
+667  TIM2+R4       10965.784    426 22783.567    28213.478    24573.847
+668  TIM2+R5       10961.593    428 22779.185    28428.785    24577.870
+675  TIM2+I+R3     10971.709    425 22793.418    28118.418    24579.496
+676  TIM2+I+R4     10965.869    427 22785.739    28323.799    24580.222
+689  TIM2+F+R4     10966.571    429 22791.141    28555.829    24594.029
+690  TIM2+F+R5     10964.149    431 22790.299    28796.492    24601.592
+697  TIM2+F+I+R3   10973.172    428 22802.344    28451.944    24601.030
+698  TIM2+F+I+R4   10965.678    430 22791.356    28674.848    24598.447
+711  TIM3e+R4      10966.008    426 22784.017    28213.927    24574.297
+712  TIM3e+R5      10961.116    428 22778.231    28427.831    24576.917
+719  TIM3e+I+R3    10972.040    425 22794.080    28119.080    24580.158
+720  TIM3e+I+R4    10966.236    427 22786.472    28324.533    24580.955
+733  TIM3e+R4      10966.008    426 22784.017    28213.927    24574.297
+734  TIM3e+R5      10961.116    428 22778.231    28427.831    24576.917
+741  TIM3e+I+R3    10972.040    425 22794.080    28119.080    24580.158
+742  TIM3e+I+R4    10966.236    427 22786.472    28324.533    24580.955
+755  TIM3+R4       10965.981    426 22783.961    28213.872    24574.242
+756  TIM3+R5       10961.069    428 22778.138    28427.738    24576.823
+763  TIM3+I+R3     10972.017    425 22794.035    28119.035    24580.113
+764  TIM3+I+R4     10966.166    427 22786.332    28324.393    24580.815
+777  TIM3+F+R4     10976.205    429 22810.409    28575.097    24613.297
+778  TIM3+F+R5     10973.075    431 22808.151    28814.344    24619.444
+785  TIM3+F+I+R3   10982.661    428 22821.322    28470.922    24620.007
+786  TIM3+F+I+R4   10975.093    430 22810.186    28693.678    24617.276
+799  TVMe+R4       10984.983    427 22823.967    28362.028    24618.450
+800  TVMe+R5       10982.858    429 22823.717    28588.404    24626.604
+807  TVMe+I+R3     10993.632    426 22839.265    28269.175    24629.545
+808  TVMe+I+R4     10984.068    428 22824.136    28473.736    24622.821
+821  TVMe+R4       10984.983    427 22823.967    28362.028    24618.450
+822  TVMe+R5       10982.858    429 22823.717    28588.404    24626.604
+829  TVMe+I+R3     10993.632    426 22839.265    28269.175    24629.545
+830  TVMe+I+R4     10984.068    428 22824.136    28473.736    24622.821
+843  TVM+R4        10984.960    427 22823.920    28361.980    24618.402
+844  TVM+R5        10982.800    429 22823.599    28588.287    24626.487
+851  TVM+I+R3      10993.627    426 22839.254    28269.164    24629.534
+852  TVM+I+R4      10984.033    428 22824.065    28473.665    24622.750
+865  TVM+F+R4      10976.055    430 22812.110    28695.602    24619.200
+866  TVM+F+R5      10974.436    432 22812.872    28945.856    24628.367
+873  TVM+F+I+R3    10983.719    429 22825.438    28590.125    24628.325
+874  TVM+F+I+R4    10974.878    431 22811.756    28817.949    24623.048
+887  SYM+R4        10963.393    428 22782.787    28432.387    24581.472
+888  SYM+R5        10959.182    430 22778.364    28661.856    24585.454
+895  SYM+I+R3      10969.464    427 22792.929    28330.989    24587.412
+896  SYM+I+R4      10963.563    429 22785.126    28549.813    24588.014
+909  SYM+R4        10963.393    428 22782.787    28432.387    24581.472
+910  SYM+R5        10959.182    430 22778.364    28661.856    24585.454
+917  SYM+I+R3      10969.464    427 22792.929    28330.989    24587.412
+918  SYM+I+R4      10963.563    429 22785.126    28549.813    24588.014
+931  GTR+R4        10963.372    428 22782.743    28432.343    24581.428
+932  GTR+R5        10959.083    430 22778.166    28661.658    24585.256
+939  GTR+I+R3      10969.451    427 22792.902    28330.963    24587.385
+940  GTR+I+R4      10963.483    429 22784.966    28549.654    24587.854
+953  GTR+F+R4      10966.279    431 22794.558    28800.751    24605.851
+954  GTR+F+R5      10964.179    433 22794.358    29058.425    24614.056
+961  GTR+F+I+R3    10973.110    430 22806.221    28689.713    24613.311
+962  GTR+F+I+R4    10965.390    432 22794.780    28927.764    24610.275
+Akaike Information Criterion:           TIM3+R5
+Corrected Akaike Information Criterion: HKY+I+R3
+Bayesian Information Criterion:         TN+R4
+Best-fit model: TN+R4 chosen according to BIC
+
+All model information printed to data/packages/ITS/Strobilomyces/ref.model.gz
+CPU time for ModelFinder: 507.838 seconds (0h:8m:27s)
+Wall-clock time for ModelFinder: 266.183 seconds (0h:4m:26s)
+Generating 1000 samples for ultrafast bootstrap (seed: 784445)...
+
+NOTE: 13 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -10976.478
+2. Current log-likelihood: -10976.153
+Optimal log-likelihood: -10976.124
+Rate parameters:  A-C: 1.00000  A-G: 2.47531  A-T: 1.00000  C-G: 1.00000  C-T: 3.54788  G-T: 1.00000
+Base frequencies:  A: 0.216  C: 0.289  G: 0.257  T: 0.238
+Site proportion and rates:  (0.404,0.126) (0.311,0.629) (0.218,1.908) (0.066,5.075)
+Parameters optimization took 2 rounds (0.368 sec)
+Wrote distance file to... 
+Computing ML distances based on estimated model parameters...
+Calculating distance matrix: done in 0.0826593 secs using 200% CPU
+Computing ML distances took 0.083111 sec (of wall-clock time) 0.165786 sec (of CPU time)
+Setting up auxiliary I and S matrices: done in 0.00136822 secs using 172.2% CPU
+Constructing RapidNJ tree: done in 0.00595718 secs using 200.3% CPU
+Computing RapidNJ tree took 0.007427 sec (of wall-clock time) 0.014395 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -11251.604
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 3.621 second
+Computing log-likelihood of 98 initial trees ... 2.207 seconds
+Current best score: -10976.124
+
+Do NNI search on 20 best initial trees
+Optimizing NNI: done in 0.227344 secs using 197.4% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -10976.102
+Optimizing NNI: done in 1.31273 secs using 198.7% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 2: -10963.598
+Optimizing NNI: done in 1.51202 secs using 198.4% CPU
+Optimizing NNI: done in 1.92336 secs using 197.9% CPU
+Optimizing NNI: done in 2.03665 secs using 198.1% CPU
+Optimizing NNI: done in 1.92831 secs using 197% CPU
+Optimizing NNI: done in 1.81696 secs using 198.3% CPU
+Optimizing NNI: done in 1.94825 secs using 197.6% CPU
+Optimizing NNI: done in 2.09908 secs using 198.1% CPU
+Optimizing NNI: done in 1.9365 secs using 197.4% CPU
+Iteration 10 / LogL: -10975.887 / Time: 0h:4m:50s
+Optimizing NNI: done in 2.27759 secs using 197.7% CPU
+Optimizing NNI: done in 1.85411 secs using 197.8% CPU
+Optimizing NNI: done in 1.11068 secs using 197.4% CPU
+Optimizing NNI: done in 1.74457 secs using 197.9% CPU
+Optimizing NNI: done in 1.45919 secs using 197.7% CPU
+Optimizing NNI: done in 1.32498 secs using 198.4% CPU
+Optimizing NNI: done in 1.38105 secs using 198.5% CPU
+Optimizing NNI: done in 1.36944 secs using 197.3% CPU
+Optimizing NNI: done in 1.43874 secs using 198.2% CPU
+Optimizing NNI: done in 1.32266 secs using 198.2% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 20: -10956.746
+Iteration 20 / LogL: -10956.746 / Time: 0h:5m:5s
+Finish initializing candidate tree set (20)
+Current best tree score: -10956.746 / CPU time: 38.605
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Optimizing NNI: done in 1.50516 secs using 197.5% CPU
+Optimizing NNI: done in 1.19155 secs using 195.9% CPU
+Optimizing NNI: done in 0.956854 secs using 197.3% CPU
+Optimizing NNI: done in 0.992436 secs using 196.8% CPU
+Optimizing NNI: done in 0.742334 secs using 196.7% CPU
+Optimizing NNI: done in 0.60815 secs using 197.1% CPU
+Optimizing NNI: done in 0.988613 secs using 196.4% CPU
+Optimizing NNI: done in 2.282 secs using 197.7% CPU
+Optimizing NNI: done in 1.05745 secs using 197% CPU
+Optimizing NNI: done in 0.964507 secs using 197.6% CPU
+Iteration 30 / LogL: -10956.996 / Time: 0h:5m:17s (0h:2m:37s left)
+Optimizing NNI: done in 1.53091 secs using 197.4% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 31: -10954.720
+Optimizing NNI: done in 1.31586 secs using 198% CPU
+Optimizing NNI: done in 1.07649 secs using 197.5% CPU
+Optimizing NNI: done in 1.51758 secs using 197% CPU
+Optimizing NNI: done in 1.11954 secs using 197.4% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 35: -10954.294
+Optimizing NNI: done in 0.928856 secs using 196.8% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 36: -10953.248
+Optimizing NNI: done in 0.925712 secs using 196.9% CPU
+Optimizing NNI: done in 0.56385 secs using 196.8% CPU
+Optimizing NNI: done in 1.08711 secs using 197.2% CPU
+Optimizing NNI: done in 1.42982 secs using 196.6% CPU
+Iteration 40 / LogL: -10958.717 / Time: 0h:5m:29s (0h:2m:35s left)
+Optimizing NNI: done in 0.971445 secs using 197.2% CPU
+Optimizing NNI: done in 1.08787 secs using 197.1% CPU
+Optimizing NNI: done in 0.915009 secs using 197.1% CPU
+Optimizing NNI: done in 0.870952 secs using 196.5% CPU
+Optimizing NNI: done in 1.16323 secs using 197.4% CPU
+Optimizing NNI: done in 1.02517 secs using 197.5% CPU
+Optimizing NNI: done in 1.2579 secs using 197% CPU
+Optimizing NNI: done in 1.32808 secs using 197.3% CPU
+Optimizing NNI: done in 1.26512 secs using 198% CPU
+Optimizing NNI: done in 0.85361 secs using 197.6% CPU
+Iteration 50 / LogL: -10961.212 / Time: 0h:5m:40s (0h:2m:10s left)
+Log-likelihood cutoff on original alignment: -11009.533
+Optimizing NNI: done in 1.04426 secs using 197.6% CPU
+Optimizing NNI: done in 0.832845 secs using 196.9% CPU
+Optimizing NNI: done in 1.80183 secs using 196.8% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 53: -10953.062
+Optimizing NNI: done in 1.40939 secs using 197% CPU
+Optimizing NNI: done in 1.09586 secs using 196.6% CPU
+Optimizing NNI: done in 0.795609 secs using 196.9% CPU
+Optimizing NNI: done in 1.5567 secs using 197.9% CPU
+Optimizing NNI: done in 1.66252 secs using 196.7% CPU
+Optimizing NNI: done in 1.04544 secs using 196.5% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 59: -10951.815
+Optimizing NNI: done in 0.923337 secs using 194.5% CPU
+Iteration 60 / LogL: -10955.703 / Time: 0h:5m:53s (0h:2m:26s left)
+Optimizing NNI: done in 1.7697 secs using 197.1% CPU
+Optimizing NNI: done in 1.01734 secs using 196.7% CPU
+Optimizing NNI: done in 1.00251 secs using 197.3% CPU
+Optimizing NNI: done in 1.02378 secs using 197.7% CPU
+Optimizing NNI: done in 1.19129 secs using 196.2% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 65: -10951.486
+Optimizing NNI: done in 1.74834 secs using 197.1% CPU
+Optimizing NNI: done in 1.59864 secs using 197.7% CPU
+Optimizing NNI: done in 1.52672 secs using 197.4% CPU
+Optimizing NNI: done in 1.05947 secs using 197.8% CPU
+Optimizing NNI: done in 1.23953 secs using 196.7% CPU
+Iteration 70 / LogL: -10953.856 / Time: 0h:6m:7s (0h:2m:19s left)
+Optimizing NNI: done in 0.749113 secs using 197.4% CPU
+Optimizing NNI: done in 0.89544 secs using 196.6% CPU
+Optimizing NNI: done in 1.84825 secs using 197.2% CPU
+Optimizing NNI: done in 1.44822 secs using 197% CPU
+Optimizing NNI: done in 1.29257 secs using 197.1% CPU
+Optimizing NNI: done in 1.54354 secs using 196.2% CPU
+Optimizing NNI: done in 0.918745 secs using 196.1% CPU
+Optimizing NNI: done in 1.71918 secs using 197.1% CPU
+Optimizing NNI: done in 2.48056 secs using 197.7% CPU
+Optimizing NNI: done in 1.87431 secs using 196.7% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 80: -10951.256
+Iteration 80 / LogL: -10951.256 / Time: 0h:6m:22s (0h:2m:27s left)
+Optimizing NNI: done in 1.41665 secs using 197.5% CPU
+Optimizing NNI: done in 0.851229 secs using 195.8% CPU
+Optimizing NNI: done in 1.04279 secs using 197.3% CPU
+Optimizing NNI: done in 1.25563 secs using 197.8% CPU
+Optimizing NNI: done in 1.24751 secs using 197.3% CPU
+Optimizing NNI: done in 0.84581 secs using 196.2% CPU
+Optimizing NNI: done in 0.6182 secs using 195.7% CPU
+Optimizing NNI: done in 0.986114 secs using 197.2% CPU
+Optimizing NNI: done in 1.55266 secs using 197.2% CPU
+Optimizing NNI: done in 1.06594 secs using 196.1% CPU
+Iteration 90 / LogL: -10976.371 / Time: 0h:6m:33s (0h:2m:8s left)
+Optimizing NNI: done in 1.90198 secs using 197.7% CPU
+Optimizing NNI: done in 1.04148 secs using 197.1% CPU
+Optimizing NNI: done in 1.50387 secs using 197.5% CPU
+Optimizing NNI: done in 0.945147 secs using 196.5% CPU
+Optimizing NNI: done in 1.38275 secs using 197.1% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 95: -10951.128
+Optimizing NNI: done in 1.19332 secs using 197.2% CPU
+Optimizing NNI: done in 0.881368 secs using 197.1% CPU
+Optimizing NNI: done in 0.669818 secs using 195.3% CPU
+Optimizing NNI: done in 0.578699 secs using 195.7% CPU
+Optimizing NNI: done in 1.46908 secs using 196.9% CPU
+Iteration 100 / LogL: -10959.651 / Time: 0h:6m:45s (0h:2m:13s left)
+Log-likelihood cutoff on original alignment: -10995.787
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.984
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Optimizing NNI: done in 1.87048 secs using 197.4% CPU
+Optimizing NNI: done in 1.17461 secs using 196.6% CPU
+Optimizing NNI: done in 1.31914 secs using 196.3% CPU
+Optimizing NNI: done in 1.24919 secs using 198.1% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 104: -10950.886
+Optimizing NNI: done in 1.28045 secs using 197.2% CPU
+Optimizing NNI: done in 1.67842 secs using 196.7% CPU
+Optimizing NNI: done in 1.85568 secs using 197.4% CPU
+Optimizing NNI: done in 1.87928 secs using 197.5% CPU
+Optimizing NNI: done in 2.19333 secs using 197.7% CPU
+Optimizing NNI: done in 1.01675 secs using 197.5% CPU
+Iteration 110 / LogL: -10974.070 / Time: 0h:7m:2s (0h:2m:14s left)
+Optimizing NNI: done in 1.12539 secs using 198% CPU
+Optimizing NNI: done in 1.20152 secs using 197.5% CPU
+Optimizing NNI: done in 1.60523 secs using 197.3% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 113: -10950.664
+Optimizing NNI: done in 1.11961 secs using 197.4% CPU
+Optimizing NNI: done in 1.16782 secs using 195.9% CPU
+Optimizing NNI: done in 1.99793 secs using 197.6% CPU
+Optimizing NNI: done in 1.2791 secs using 197% CPU
+Optimizing NNI: done in 2.3955 secs using 197.4% CPU
+Optimizing NNI: done in 1.05113 secs using 196.7% CPU
+Optimizing NNI: done in 0.749713 secs using 197% CPU
+Iteration 120 / LogL: -10957.926 / Time: 0h:7m:16s (0h:2m:12s left)
+Optimizing NNI: done in 1.12194 secs using 197% CPU
+Optimizing NNI: done in 1.93802 secs using 196.9% CPU
+Optimizing NNI: done in 1.46332 secs using 196.8% CPU
+Optimizing NNI: done in 1.34119 secs using 197.7% CPU
+Optimizing NNI: done in 0.441541 secs using 195.1% CPU
+Optimizing NNI: done in 0.859354 secs using 196.5% CPU
+Optimizing NNI: done in 1.22706 secs using 197.1% CPU
+Optimizing NNI: done in 1.46298 secs using 196.8% CPU
+Optimizing NNI: done in 1.22179 secs using 197.2% CPU
+Optimizing NNI: done in 1.41614 secs using 196.3% CPU
+Iteration 130 / LogL: -10951.103 / Time: 0h:7m:28s (0h:1m:57s left)
+Optimizing NNI: done in 0.659537 secs using 197.1% CPU
+Optimizing NNI: done in 0.828752 secs using 196.4% CPU
+Optimizing NNI: done in 1.85967 secs using 197.1% CPU
+Optimizing NNI: done in 2.12448 secs using 197.6% CPU
+Optimizing NNI: done in 1.27748 secs using 196.9% CPU
+Optimizing NNI: done in 1.14489 secs using 197.1% CPU
+Optimizing NNI: done in 1.33871 secs using 196.3% CPU
+Optimizing NNI: done in 1.53082 secs using 197% CPU
+Optimizing NNI: done in 1.47158 secs using 196.9% CPU
+Optimizing NNI: done in 1.03406 secs using 195.8% CPU
+Iteration 140 / LogL: -10959.686 / Time: 0h:7m:42s (0h:1m:43s left)
+Optimizing NNI: done in 0.840792 secs using 196.1% CPU
+Optimizing NNI: done in 0.991674 secs using 196.4% CPU
+Optimizing NNI: done in 1.08733 secs using 197.7% CPU
+Optimizing NNI: done in 0.998193 secs using 197.3% CPU
+Optimizing NNI: done in 1.27827 secs using 196.9% CPU
+Optimizing NNI: done in 1.03296 secs using 196.4% CPU
+Optimizing NNI: done in 1.52453 secs using 197.5% CPU
+Optimizing NNI: done in 1.09993 secs using 197.6% CPU
+Optimizing NNI: done in 1.09905 secs using 196.6% CPU
+Optimizing NNI: done in 2.27488 secs using 196.9% CPU
+Iteration 150 / LogL: -10955.323 / Time: 0h:7m:55s (0h:1m:28s left)
+Log-likelihood cutoff on original alignment: -10993.386
+Optimizing NNI: done in 1.60092 secs using 196.8% CPU
+Optimizing NNI: done in 0.966536 secs using 196.8% CPU
+Optimizing NNI: done in 1.63739 secs using 197.5% CPU
+Optimizing NNI: done in 2.07922 secs using 197.1% CPU
+Optimizing NNI: done in 1.9817 secs using 197.6% CPU
+Optimizing NNI: done in 1.87968 secs using 197.9% CPU
+Optimizing NNI: done in 1.22117 secs using 197.2% CPU
+Optimizing NNI: done in 1.99529 secs using 197.4% CPU
+Optimizing NNI: done in 1.06827 secs using 197.5% CPU
+Optimizing NNI: done in 1.36117 secs using 198% CPU
+Iteration 160 / LogL: -10952.845 / Time: 0h:8m:11s (0h:1m:15s left)
+Optimizing NNI: done in 1.17165 secs using 196.2% CPU
+Optimizing NNI: done in 1.18334 secs using 197.4% CPU
+Optimizing NNI: done in 1.14534 secs using 197.8% CPU
+Optimizing NNI: done in 1.39027 secs using 197.1% CPU
+Optimizing NNI: done in 0.541518 secs using 196.7% CPU
+Optimizing NNI: done in 1.67248 secs using 197.1% CPU
+Optimizing NNI: done in 1.18534 secs using 197.2% CPU
+Optimizing NNI: done in 1.30771 secs using 197.1% CPU
+Optimizing NNI: done in 1.51685 secs using 196.4% CPU
+Optimizing NNI: done in 1.05308 secs using 197.8% CPU
+Iteration 170 / LogL: -10955.849 / Time: 0h:8m:24s (0h:1m:0s left)
+Optimizing NNI: done in 1.06383 secs using 197.4% CPU
+Optimizing NNI: done in 1.37379 secs using 197.2% CPU
+Optimizing NNI: done in 1.1006 secs using 197% CPU
+Optimizing NNI: done in 1.2358 secs using 195.6% CPU
+Optimizing NNI: done in 1.26764 secs using 197.7% CPU
+Optimizing NNI: done in 1.75896 secs using 196.9% CPU
+Optimizing NNI: done in 1.23876 secs using 197.1% CPU
+Optimizing NNI: done in 1.29519 secs using 195.8% CPU
+Optimizing NNI: done in 0.962959 secs using 197.3% CPU
+Optimizing NNI: done in 1.72222 secs using 197.3% CPU
+Iteration 180 / LogL: -10986.881 / Time: 0h:8m:37s (0h:0m:46s left)
+Optimizing NNI: done in 1.67657 secs using 197.8% CPU
+Optimizing NNI: done in 0.929602 secs using 197.9% CPU
+Optimizing NNI: done in 1.84586 secs using 196.7% CPU
+Optimizing NNI: done in 1.58121 secs using 197.4% CPU
+Optimizing NNI: done in 1.27938 secs using 197% CPU
+Optimizing NNI: done in 1.24327 secs using 197% CPU
+Optimizing NNI: done in 0.94758 secs using 197.9% CPU
+Optimizing NNI: done in 1.83534 secs using 197.4% CPU
+Optimizing NNI: done in 1.42306 secs using 197.3% CPU
+Optimizing NNI: done in 0.909394 secs using 196.8% CPU
+Iteration 190 / LogL: -10955.987 / Time: 0h:8m:51s (0h:0m:32s left)
+Optimizing NNI: done in 2.02185 secs using 197.3% CPU
+Optimizing NNI: done in 1.10723 secs using 197.2% CPU
+Optimizing NNI: done in 0.740713 secs using 197.1% CPU
+Optimizing NNI: done in 1.0043 secs using 197.6% CPU
+Optimizing NNI: done in 1.38521 secs using 197.5% CPU
+Optimizing NNI: done in 1.59389 secs using 197.2% CPU
+Optimizing NNI: done in 1.41671 secs using 197.1% CPU
+Optimizing NNI: done in 1.4878 secs using 197.3% CPU
+Optimizing NNI: done in 1.74234 secs using 197% CPU
+Optimizing NNI: done in 1.25938 secs using 197.5% CPU
+Iteration 200 / LogL: -10972.898 / Time: 0h:9m:5s (0h:0m:18s left)
+Log-likelihood cutoff on original alignment: -10993.386
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.997
+Optimizing NNI: done in 1.35335 secs using 196.9% CPU
+Optimizing NNI: done in 1.15567 secs using 196.5% CPU
+Optimizing NNI: done in 1.70506 secs using 197.3% CPU
+Optimizing NNI: done in 1.72446 secs using 197.3% CPU
+Optimizing NNI: done in 1.08172 secs using 197.4% CPU
+Optimizing NNI: done in 2.02556 secs using 197% CPU
+Optimizing NNI: done in 1.05436 secs using 197% CPU
+Optimizing NNI: done in 1.61257 secs using 197.1% CPU
+Optimizing NNI: done in 1.18251 secs using 197.3% CPU
+Optimizing NNI: done in 2.27724 secs using 197.1% CPU
+Iteration 210 / LogL: -10957.448 / Time: 0h:9m:21s (0h:2m:7s left)
+Optimizing NNI: done in 1.04847 secs using 197.4% CPU
+Optimizing NNI: done in 1.82044 secs using 197.1% CPU
+Optimizing NNI: done in 1.85581 secs using 197% CPU
+Optimizing NNI: done in 1.89973 secs using 197.6% CPU
+TREE SEARCH COMPLETED AFTER 214 ITERATIONS / Time: 0h:9m:28s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -10950.664
+Optimal log-likelihood: -10950.661
+Rate parameters:  A-C: 1.00000  A-G: 2.46522  A-T: 1.00000  C-G: 1.00000  C-T: 3.55843  G-T: 1.00000
+Base frequencies:  A: 0.216  C: 0.289  G: 0.257  T: 0.238
+Site proportion and rates:  (0.387,0.115) (0.321,0.607) (0.228,1.878) (0.064,5.183)
+Parameters optimization took 1 rounds (0.170 sec)
+BEST SCORE FOUND : -10950.661
+Creating bootstrap support values...
+Split supports printed to NEXUS file data/packages/ITS/Strobilomyces/ref.splits.nex
+Total tree length: 8.647
+
+Total number of iterations: 214
+CPU time used for tree search: 584.598 sec (0h:9m:44s)
+Wall-clock time used for tree search: 301.667 sec (0h:5m:1s)
+Total CPU time used: 1094.966 sec (0h:18m:14s)
+Total wall-clock time used: 569.483 sec (0h:9m:29s)
+
+Computing bootstrap consensus tree...
+Reading input file data/packages/ITS/Strobilomyces/ref.splits.nex...
+210 taxa and 1811 splits.
+Consensus tree written to data/packages/ITS/Strobilomyces/ref.contree
+Reading input trees file data/packages/ITS/Strobilomyces/ref.contree
+Log-likelihood of consensus tree: -10950.829
+
+Analysis results written to: 
+  IQ-TREE report:                data/packages/ITS/Strobilomyces/ref.iqtree
+  Maximum-likelihood tree:       data/packages/ITS/Strobilomyces/ref.treefile
+  Likelihood distances:          data/packages/ITS/Strobilomyces/ref.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          data/packages/ITS/Strobilomyces/ref.splits.nex
+  Consensus tree:                data/packages/ITS/Strobilomyces/ref.contree
+  Screen log file:               data/packages/ITS/Strobilomyces/ref.log
+
+Date and Time: Mon Aug 18 18:42:54 2025

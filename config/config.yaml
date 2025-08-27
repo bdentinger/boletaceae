@@ -3,6 +3,10 @@ email: "bryn.dentinger@gmail.com"
 tool: "BoletaceaeBackbone"
 taxon_query: "Boletaceae[Organism]"
 update_window_days: 8
+coding_loci:
+  - RPB1
+  - RPB2
+  - TEF1
 backbone_loci: [RPB1, RPB2, TEF1]
 constraint_tree: ""
 python_bin: "python3.11"
@@ -15,3 +19,9 @@ speed_mode: accurate # or "fast"
 outgroup:
   prefer_single: ["Paxillus"]                # try this first
   fallback_clade: ["Chalciporus","Buchwaldoboletus","Rubinoboletus"]  # MRCA of any matches
+its_cluster:
+  treecluster_threshold: 0.05   # branch-length cutoff (substitutions/site)
+  min_len: 300
+  min_seqs: 4
+custom:
+  preserve_labels: true   # keep headers exactly as in your custom FASTA (for constraint matching)

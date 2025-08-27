@@ -1,0 +1,1467 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 64
+Rules claiming more threads will be scaled down.
+Job stats:
+job                count
+---------------  -------
+graft_its              1
+its_build_ref         87
+its_place_genus       87
+total                175
+
+Select jobs to execute...
+
+[Mon Aug 18 18:28:01 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Leccinellum.fasta
+    output: data/packages/ITS/Leccinellum/.built.ok, data/packages/ITS/Leccinellum/aln.masked.fasta, data/packages/ITS/Leccinellum/ref.treefile, data/packages/ITS/Leccinellum/ref.model
+    jobid: 134
+    reason: Missing output files: data/packages/ITS/Leccinellum/ref.model, data/packages/ITS/Leccinellum/aln.masked.fasta, data/packages/ITS/Leccinellum/ref.treefile
+    wildcards: genus=Leccinellum
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Rugiboletus.fasta
+    output: data/packages/ITS/Rugiboletus/.built.ok, data/packages/ITS/Rugiboletus/aln.masked.fasta, data/packages/ITS/Rugiboletus/ref.treefile, data/packages/ITS/Rugiboletus/ref.model
+    jobid: 182
+    reason: Missing output files: data/packages/ITS/Rugiboletus/aln.masked.fasta, data/packages/ITS/Rugiboletus/ref.treefile, data/packages/ITS/Rugiboletus/ref.model
+    wildcards: genus=Rugiboletus
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Crocinoboletus.fasta
+    output: data/packages/ITS/Crocinoboletus/.built.ok, data/packages/ITS/Crocinoboletus/aln.masked.fasta, data/packages/ITS/Crocinoboletus/ref.treefile, data/packages/ITS/Crocinoboletus/ref.model
+    jobid: 92
+    reason: Missing output files: data/packages/ITS/Crocinoboletus/ref.model, data/packages/ITS/Crocinoboletus/aln.masked.fasta, data/packages/ITS/Crocinoboletus/ref.treefile
+    wildcards: genus=Crocinoboletus
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Villoboletus.fasta
+    output: data/packages/ITS/Villoboletus/.built.ok, data/packages/ITS/Villoboletus/aln.masked.fasta, data/packages/ITS/Villoboletus/ref.treefile, data/packages/ITS/Villoboletus/ref.model
+    jobid: 206
+    reason: Missing output files: data/packages/ITS/Villoboletus/ref.model, data/packages/ITS/Villoboletus/aln.masked.fasta, data/packages/ITS/Villoboletus/ref.treefile
+    wildcards: genus=Villoboletus
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Acyanoboletus.fasta
+    output: data/packages/ITS/Acyanoboletus/.built.ok, data/packages/ITS/Acyanoboletus/aln.masked.fasta, data/packages/ITS/Acyanoboletus/ref.treefile, data/packages/ITS/Acyanoboletus/ref.model
+    jobid: 44
+    reason: Missing output files: data/packages/ITS/Acyanoboletus/ref.treefile, data/packages/ITS/Acyanoboletus/aln.masked.fasta, data/packages/ITS/Acyanoboletus/ref.model
+    wildcards: genus=Acyanoboletus
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Boletus.fasta
+    output: data/packages/ITS/Boletus/.built.ok, data/packages/ITS/Boletus/aln.masked.fasta, data/packages/ITS/Boletus/ref.treefile, data/packages/ITS/Boletus/ref.model
+    jobid: 68
+    reason: Missing output files: data/packages/ITS/Boletus/aln.masked.fasta, data/packages/ITS/Boletus/ref.treefile, data/packages/ITS/Boletus/ref.model
+    wildcards: genus=Boletus
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Nevesoporus.fasta
+    output: data/packages/ITS/Nevesoporus/.built.ok, data/packages/ITS/Nevesoporus/aln.masked.fasta, data/packages/ITS/Nevesoporus/ref.treefile, data/packages/ITS/Nevesoporus/ref.model
+    jobid: 146
+    reason: Missing output files: data/packages/ITS/Nevesoporus/ref.treefile, data/packages/ITS/Nevesoporus/ref.model, data/packages/ITS/Nevesoporus/aln.masked.fasta
+    wildcards: genus=Nevesoporus
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Gastroboletus.fasta
+    output: data/packages/ITS/Gastroboletus/.built.ok, data/packages/ITS/Gastroboletus/aln.masked.fasta, data/packages/ITS/Gastroboletus/ref.treefile, data/packages/ITS/Gastroboletus/ref.model
+    jobid: 104
+    reason: Missing output files: data/packages/ITS/Gastroboletus/ref.model, data/packages/ITS/Gastroboletus/aln.masked.fasta, data/packages/ITS/Gastroboletus/ref.treefile
+    wildcards: genus=Gastroboletus
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Ionosporus.fasta
+    output: data/packages/ITS/Ionosporus/.built.ok, data/packages/ITS/Ionosporus/aln.masked.fasta, data/packages/ITS/Ionosporus/ref.treefile, data/packages/ITS/Ionosporus/ref.model
+    jobid: 128
+    reason: Missing output files: data/packages/ITS/Ionosporus/ref.treefile, data/packages/ITS/Ionosporus/aln.masked.fasta, data/packages/ITS/Ionosporus/ref.model
+    wildcards: genus=Ionosporus
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Paxilloboletus.fasta
+    output: data/packages/ITS/Paxilloboletus/.built.ok, data/packages/ITS/Paxilloboletus/aln.masked.fasta, data/packages/ITS/Paxilloboletus/ref.treefile, data/packages/ITS/Paxilloboletus/ref.model
+    jobid: 152
+    reason: Missing output files: data/packages/ITS/Paxilloboletus/ref.treefile, data/packages/ITS/Paxilloboletus/aln.masked.fasta, data/packages/ITS/Paxilloboletus/ref.model
+    wildcards: genus=Paxilloboletus
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Xerocomus.fasta
+    output: data/packages/ITS/Xerocomus/.built.ok, data/packages/ITS/Xerocomus/aln.masked.fasta, data/packages/ITS/Xerocomus/ref.treefile, data/packages/ITS/Xerocomus/ref.model
+    jobid: 214
+    reason: Missing output files: data/packages/ITS/Xerocomus/aln.masked.fasta, data/packages/ITS/Xerocomus/ref.model, data/packages/ITS/Xerocomus/ref.treefile
+    wildcards: genus=Xerocomus
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Afroboletus.fasta
+    output: data/packages/ITS/Afroboletus/.built.ok, data/packages/ITS/Afroboletus/aln.masked.fasta, data/packages/ITS/Afroboletus/ref.treefile, data/packages/ITS/Afroboletus/ref.model
+    jobid: 46
+    reason: Missing output files: data/packages/ITS/Afroboletus/aln.masked.fasta, data/packages/ITS/Afroboletus/ref.treefile, data/packages/ITS/Afroboletus/ref.model
+    wildcards: genus=Afroboletus
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Borofutus.fasta
+    output: data/packages/ITS/Borofutus/.built.ok, data/packages/ITS/Borofutus/aln.masked.fasta, data/packages/ITS/Borofutus/ref.treefile, data/packages/ITS/Borofutus/ref.model
+    jobid: 70
+    reason: Missing output files: data/packages/ITS/Borofutus/aln.masked.fasta, data/packages/ITS/Borofutus/ref.model, data/packages/ITS/Borofutus/ref.treefile
+    wildcards: genus=Borofutus
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Cyanoboletus.fasta
+    output: data/packages/ITS/Cyanoboletus/.built.ok, data/packages/ITS/Cyanoboletus/aln.masked.fasta, data/packages/ITS/Cyanoboletus/ref.treefile, data/packages/ITS/Cyanoboletus/ref.model
+    jobid: 94
+    reason: Missing output files: data/packages/ITS/Cyanoboletus/aln.masked.fasta, data/packages/ITS/Cyanoboletus/ref.model, data/packages/ITS/Cyanoboletus/ref.treefile
+    wildcards: genus=Cyanoboletus
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Hortiboletus.fasta
+    output: data/packages/ITS/Hortiboletus/.built.ok, data/packages/ITS/Hortiboletus/aln.masked.fasta, data/packages/ITS/Hortiboletus/ref.treefile, data/packages/ITS/Hortiboletus/ref.model
+    jobid: 118
+    reason: Missing output files: data/packages/ITS/Hortiboletus/ref.treefile, data/packages/ITS/Hortiboletus/aln.masked.fasta, data/packages/ITS/Hortiboletus/ref.model
+    wildcards: genus=Hortiboletus
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Xanthoconium.fasta
+    output: data/packages/ITS/Xanthoconium/.built.ok, data/packages/ITS/Xanthoconium/aln.masked.fasta, data/packages/ITS/Xanthoconium/ref.treefile, data/packages/ITS/Xanthoconium/ref.model
+    jobid: 208
+    reason: Missing output files: data/packages/ITS/Xanthoconium/ref.treefile, data/packages/ITS/Xanthoconium/aln.masked.fasta, data/packages/ITS/Xanthoconium/ref.model
+    wildcards: genus=Xanthoconium
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Buchwaldoboletus.fasta
+    output: data/packages/ITS/Buchwaldoboletus/.built.ok, data/packages/ITS/Buchwaldoboletus/aln.masked.fasta, data/packages/ITS/Buchwaldoboletus/ref.treefile, data/packages/ITS/Buchwaldoboletus/ref.model
+    jobid: 76
+    reason: Missing output files: data/packages/ITS/Buchwaldoboletus/aln.masked.fasta, data/packages/ITS/Buchwaldoboletus/ref.treefile, data/packages/ITS/Buchwaldoboletus/ref.model
+    wildcards: genus=Buchwaldoboletus
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Fistulinella.fasta
+    output: data/packages/ITS/Fistulinella/.built.ok, data/packages/ITS/Fistulinella/aln.masked.fasta, data/packages/ITS/Fistulinella/ref.treefile, data/packages/ITS/Fistulinella/ref.model
+    jobid: 100
+    reason: Missing output files: data/packages/ITS/Fistulinella/aln.masked.fasta, data/packages/ITS/Fistulinella/ref.treefile, data/packages/ITS/Fistulinella/ref.model
+    wildcards: genus=Fistulinella
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Porphyrellus.fasta
+    output: data/packages/ITS/Porphyrellus/.built.ok, data/packages/ITS/Porphyrellus/aln.masked.fasta, data/packages/ITS/Porphyrellus/ref.treefile, data/packages/ITS/Porphyrellus/ref.model
+    jobid: 158
+    reason: Missing output files: data/packages/ITS/Porphyrellus/ref.treefile, data/packages/ITS/Porphyrellus/ref.model, data/packages/ITS/Porphyrellus/aln.masked.fasta
+    wildcards: genus=Porphyrellus
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Alessioporus.fasta
+    output: data/packages/ITS/Alessioporus/.built.ok, data/packages/ITS/Alessioporus/aln.masked.fasta, data/packages/ITS/Alessioporus/ref.treefile, data/packages/ITS/Alessioporus/ref.model
+    jobid: 50
+    reason: Missing output files: data/packages/ITS/Alessioporus/aln.masked.fasta, data/packages/ITS/Alessioporus/ref.treefile, data/packages/ITS/Alessioporus/ref.model
+    wildcards: genus=Alessioporus
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Mycoamaranthus.fasta
+    output: data/packages/ITS/Mycoamaranthus/.built.ok, data/packages/ITS/Mycoamaranthus/aln.masked.fasta, data/packages/ITS/Mycoamaranthus/ref.treefile, data/packages/ITS/Mycoamaranthus/ref.model
+    jobid: 140
+    reason: Missing output files: data/packages/ITS/Mycoamaranthus/ref.treefile, data/packages/ITS/Mycoamaranthus/ref.model, data/packages/ITS/Mycoamaranthus/aln.masked.fasta
+    wildcards: genus=Mycoamaranthus
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Binderoboletus.fasta
+    output: data/packages/ITS/Binderoboletus/.built.ok, data/packages/ITS/Binderoboletus/aln.masked.fasta, data/packages/ITS/Binderoboletus/ref.treefile, data/packages/ITS/Binderoboletus/ref.model
+    jobid: 62
+    reason: Missing output files: data/packages/ITS/Binderoboletus/ref.treefile, data/packages/ITS/Binderoboletus/aln.masked.fasta, data/packages/ITS/Binderoboletus/ref.model
+    wildcards: genus=Binderoboletus
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Butyriboletus.fasta
+    output: data/packages/ITS/Butyriboletus/.built.ok, data/packages/ITS/Butyriboletus/aln.masked.fasta, data/packages/ITS/Butyriboletus/ref.treefile, data/packages/ITS/Butyriboletus/ref.model
+    jobid: 78
+    reason: Missing output files: data/packages/ITS/Butyriboletus/ref.treefile, data/packages/ITS/Butyriboletus/aln.masked.fasta, data/packages/ITS/Butyriboletus/ref.model
+    wildcards: genus=Butyriboletus
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Zangia.fasta
+    output: data/packages/ITS/Zangia/.built.ok, data/packages/ITS/Zangia/aln.masked.fasta, data/packages/ITS/Zangia/ref.treefile, data/packages/ITS/Zangia/ref.model
+    jobid: 216
+    reason: Missing output files: data/packages/ITS/Zangia/ref.treefile, data/packages/ITS/Zangia/ref.model, data/packages/ITS/Zangia/aln.masked.fasta
+    wildcards: genus=Zangia
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Indoporus.fasta
+    output: data/packages/ITS/Indoporus/.built.ok, data/packages/ITS/Indoporus/aln.masked.fasta, data/packages/ITS/Indoporus/ref.treefile, data/packages/ITS/Indoporus/ref.model
+    jobid: 126
+    reason: Missing output files: data/packages/ITS/Indoporus/aln.masked.fasta, data/packages/ITS/Indoporus/ref.model, data/packages/ITS/Indoporus/ref.treefile
+    wildcards: genus=Indoporus
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Parvixerocomus.fasta
+    output: data/packages/ITS/Parvixerocomus/.built.ok, data/packages/ITS/Parvixerocomus/aln.masked.fasta, data/packages/ITS/Parvixerocomus/ref.treefile, data/packages/ITS/Parvixerocomus/ref.model
+    jobid: 150
+    reason: Missing output files: data/packages/ITS/Parvixerocomus/aln.masked.fasta, data/packages/ITS/Parvixerocomus/ref.model, data/packages/ITS/Parvixerocomus/ref.treefile
+    wildcards: genus=Parvixerocomus
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Royoungia.fasta
+    output: data/packages/ITS/Royoungia/.built.ok, data/packages/ITS/Royoungia/aln.masked.fasta, data/packages/ITS/Royoungia/ref.treefile, data/packages/ITS/Royoungia/ref.model
+    jobid: 174
+    reason: Missing output files: data/packages/ITS/Royoungia/aln.masked.fasta, data/packages/ITS/Royoungia/ref.model, data/packages/ITS/Royoungia/ref.treefile
+    wildcards: genus=Royoungia
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Turmalinea.fasta
+    output: data/packages/ITS/Turmalinea/.built.ok, data/packages/ITS/Turmalinea/aln.masked.fasta, data/packages/ITS/Turmalinea/ref.treefile, data/packages/ITS/Turmalinea/ref.model
+    jobid: 198
+    reason: Missing output files: data/packages/ITS/Turmalinea/ref.model, data/packages/ITS/Turmalinea/ref.treefile, data/packages/ITS/Turmalinea/aln.masked.fasta
+    wildcards: genus=Turmalinea
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Suillellus.fasta
+    output: data/packages/ITS/Suillellus/.built.ok, data/packages/ITS/Suillellus/aln.masked.fasta, data/packages/ITS/Suillellus/ref.treefile, data/packages/ITS/Suillellus/ref.model
+    jobid: 192
+    reason: Missing output files: data/packages/ITS/Suillellus/ref.treefile, data/packages/ITS/Suillellus/ref.model, data/packages/ITS/Suillellus/aln.masked.fasta
+    wildcards: genus=Suillellus
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Retiboletus.fasta
+    output: data/packages/ITS/Retiboletus/.built.ok, data/packages/ITS/Retiboletus/aln.masked.fasta, data/packages/ITS/Retiboletus/ref.treefile, data/packages/ITS/Retiboletus/ref.model
+    jobid: 168
+    reason: Missing output files: data/packages/ITS/Retiboletus/ref.treefile, data/packages/ITS/Retiboletus/aln.masked.fasta, data/packages/ITS/Retiboletus/ref.model
+    wildcards: genus=Retiboletus
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Mucilopilus.fasta
+    output: data/packages/ITS/Mucilopilus/.built.ok, data/packages/ITS/Mucilopilus/aln.masked.fasta, data/packages/ITS/Mucilopilus/ref.treefile, data/packages/ITS/Mucilopilus/ref.model
+    jobid: 138
+    reason: Missing output files: data/packages/ITS/Mucilopilus/ref.treefile, data/packages/ITS/Mucilopilus/aln.masked.fasta, data/packages/ITS/Mucilopilus/ref.model
+    wildcards: genus=Mucilopilus
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Costatisporus.fasta
+    output: data/packages/ITS/Costatisporus/.built.ok, data/packages/ITS/Costatisporus/aln.masked.fasta, data/packages/ITS/Costatisporus/ref.treefile, data/packages/ITS/Costatisporus/ref.model
+    jobid: 90
+    reason: Missing output files: data/packages/ITS/Costatisporus/ref.model, data/packages/ITS/Costatisporus/ref.treefile, data/packages/ITS/Costatisporus/aln.masked.fasta
+    wildcards: genus=Costatisporus
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Hemileccinum.fasta
+    output: data/packages/ITS/Hemileccinum/.built.ok, data/packages/ITS/Hemileccinum/aln.masked.fasta, data/packages/ITS/Hemileccinum/ref.treefile, data/packages/ITS/Hemileccinum/ref.model
+    jobid: 114
+    reason: Missing output files: data/packages/ITS/Hemileccinum/ref.treefile, data/packages/ITS/Hemileccinum/aln.masked.fasta, data/packages/ITS/Hemileccinum/ref.model
+    wildcards: genus=Hemileccinum
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Rufoboletus.fasta
+    output: data/packages/ITS/Rufoboletus/.built.ok, data/packages/ITS/Rufoboletus/aln.masked.fasta, data/packages/ITS/Rufoboletus/ref.treefile, data/packages/ITS/Rufoboletus/ref.model
+    jobid: 180
+    reason: Missing output files: data/packages/ITS/Rufoboletus/aln.masked.fasta, data/packages/ITS/Rufoboletus/ref.model, data/packages/ITS/Rufoboletus/ref.treefile
+    wildcards: genus=Rufoboletus
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Xerocomellus.fasta
+    output: data/packages/ITS/Xerocomellus/.built.ok, data/packages/ITS/Xerocomellus/aln.masked.fasta, data/packages/ITS/Xerocomellus/ref.treefile, data/packages/ITS/Xerocomellus/ref.model
+    jobid: 210
+    reason: Missing output files: data/packages/ITS/Xerocomellus/ref.treefile, data/packages/ITS/Xerocomellus/ref.model, data/packages/ITS/Xerocomellus/aln.masked.fasta
+    wildcards: genus=Xerocomellus
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Cacaoporus.fasta
+    output: data/packages/ITS/Cacaoporus/.built.ok, data/packages/ITS/Cacaoporus/aln.masked.fasta, data/packages/ITS/Cacaoporus/ref.treefile, data/packages/ITS/Cacaoporus/ref.model
+    jobid: 80
+    reason: Missing output files: data/packages/ITS/Cacaoporus/ref.treefile, data/packages/ITS/Cacaoporus/aln.masked.fasta, data/packages/ITS/Cacaoporus/ref.model
+    wildcards: genus=Cacaoporus
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Rhodactina.fasta
+    output: data/packages/ITS/Rhodactina/.built.ok, data/packages/ITS/Rhodactina/aln.masked.fasta, data/packages/ITS/Rhodactina/ref.treefile, data/packages/ITS/Rhodactina/ref.model
+    jobid: 170
+    reason: Missing output files: data/packages/ITS/Rhodactina/ref.treefile, data/packages/ITS/Rhodactina/ref.model, data/packages/ITS/Rhodactina/aln.masked.fasta
+    wildcards: genus=Rhodactina
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Sutorius.fasta
+    output: data/packages/ITS/Sutorius/.built.ok, data/packages/ITS/Sutorius/aln.masked.fasta, data/packages/ITS/Sutorius/ref.treefile, data/packages/ITS/Sutorius/ref.model
+    jobid: 194
+    reason: Missing output files: data/packages/ITS/Sutorius/aln.masked.fasta, data/packages/ITS/Sutorius/ref.treefile, data/packages/ITS/Sutorius/ref.model
+    wildcards: genus=Sutorius
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Afrocastellanoa.fasta
+    output: data/packages/ITS/Afrocastellanoa/.built.ok, data/packages/ITS/Afrocastellanoa/aln.masked.fasta, data/packages/ITS/Afrocastellanoa/ref.treefile, data/packages/ITS/Afrocastellanoa/ref.model
+    jobid: 48
+    reason: Missing output files: data/packages/ITS/Afrocastellanoa/ref.treefile, data/packages/ITS/Afrocastellanoa/aln.masked.fasta, data/packages/ITS/Afrocastellanoa/ref.model
+    wildcards: genus=Afrocastellanoa
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Bothia.fasta
+    output: data/packages/ITS/Bothia/.built.ok, data/packages/ITS/Bothia/aln.masked.fasta, data/packages/ITS/Bothia/ref.treefile, data/packages/ITS/Bothia/ref.model
+    jobid: 72
+    reason: Missing output files: data/packages/ITS/Bothia/aln.masked.fasta, data/packages/ITS/Bothia/ref.model, data/packages/ITS/Bothia/ref.treefile
+    wildcards: genus=Bothia
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Tylocinum.fasta
+    output: data/packages/ITS/Tylocinum/.built.ok, data/packages/ITS/Tylocinum/aln.masked.fasta, data/packages/ITS/Tylocinum/ref.treefile, data/packages/ITS/Tylocinum/ref.model
+    jobid: 200
+    reason: Missing output files: data/packages/ITS/Tylocinum/aln.masked.fasta, data/packages/ITS/Tylocinum/ref.treefile, data/packages/ITS/Tylocinum/ref.model
+    wildcards: genus=Tylocinum
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Octaviania.fasta
+    output: data/packages/ITS/Octaviania/.built.ok, data/packages/ITS/Octaviania/aln.masked.fasta, data/packages/ITS/Octaviania/ref.treefile, data/packages/ITS/Octaviania/ref.model
+    jobid: 148
+    reason: Missing output files: data/packages/ITS/Octaviania/ref.treefile, data/packages/ITS/Octaviania/ref.model, data/packages/ITS/Octaviania/aln.masked.fasta
+    wildcards: genus=Octaviania
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Austroboletus.fasta
+    output: data/packages/ITS/Austroboletus/.built.ok, data/packages/ITS/Austroboletus/aln.masked.fasta, data/packages/ITS/Austroboletus/ref.treefile, data/packages/ITS/Austroboletus/ref.model
+    jobid: 58
+    reason: Missing output files: data/packages/ITS/Austroboletus/ref.model, data/packages/ITS/Austroboletus/aln.masked.fasta, data/packages/ITS/Austroboletus/ref.treefile
+    wildcards: genus=Austroboletus
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Pseudoaustroboletus.fasta
+    output: data/packages/ITS/Pseudoaustroboletus/.built.ok, data/packages/ITS/Pseudoaustroboletus/aln.masked.fasta, data/packages/ITS/Pseudoaustroboletus/ref.treefile, data/packages/ITS/Pseudoaustroboletus/ref.model
+    jobid: 160
+    reason: Missing output files: data/packages/ITS/Pseudoaustroboletus/aln.masked.fasta, data/packages/ITS/Pseudoaustroboletus/ref.treefile, data/packages/ITS/Pseudoaustroboletus/ref.model
+    wildcards: genus=Pseudoaustroboletus
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Singerocomus.fasta
+    output: data/packages/ITS/Singerocomus/.built.ok, data/packages/ITS/Singerocomus/aln.masked.fasta, data/packages/ITS/Singerocomus/ref.treefile, data/packages/ITS/Singerocomus/ref.model
+    jobid: 184
+    reason: Missing output files: data/packages/ITS/Singerocomus/ref.treefile, data/packages/ITS/Singerocomus/aln.masked.fasta, data/packages/ITS/Singerocomus/ref.model
+    wildcards: genus=Singerocomus
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Neoboletus.fasta
+    output: data/packages/ITS/Neoboletus/.built.ok, data/packages/ITS/Neoboletus/aln.masked.fasta, data/packages/ITS/Neoboletus/ref.treefile, data/packages/ITS/Neoboletus/ref.model
+    jobid: 142
+    reason: Missing output files: data/packages/ITS/Neoboletus/ref.model, data/packages/ITS/Neoboletus/aln.masked.fasta, data/packages/ITS/Neoboletus/ref.treefile
+    wildcards: genus=Neoboletus
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Boletaceae.fasta
+    output: data/packages/ITS/Boletaceae/.built.ok, data/packages/ITS/Boletaceae/aln.masked.fasta, data/packages/ITS/Boletaceae/ref.treefile, data/packages/ITS/Boletaceae/ref.model
+    jobid: 64
+    reason: Missing output files: data/packages/ITS/Boletaceae/ref.treefile, data/packages/ITS/Boletaceae/ref.model, data/packages/ITS/Boletaceae/aln.masked.fasta
+    wildcards: genus=Boletaceae
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Guyanaporus.fasta
+    output: data/packages/ITS/Guyanaporus/.built.ok, data/packages/ITS/Guyanaporus/aln.masked.fasta, data/packages/ITS/Guyanaporus/ref.treefile, data/packages/ITS/Guyanaporus/ref.model
+    jobid: 106
+    reason: Missing output files: data/packages/ITS/Guyanaporus/ref.treefile, data/packages/ITS/Guyanaporus/aln.masked.fasta, data/packages/ITS/Guyanaporus/ref.model
+    wildcards: genus=Guyanaporus
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Tylopilus.fasta
+    output: data/packages/ITS/Tylopilus/.built.ok, data/packages/ITS/Tylopilus/aln.masked.fasta, data/packages/ITS/Tylopilus/ref.treefile, data/packages/ITS/Tylopilus/ref.model
+    jobid: 202
+    reason: Missing output files: data/packages/ITS/Tylopilus/ref.treefile, data/packages/ITS/Tylopilus/aln.masked.fasta, data/packages/ITS/Tylopilus/ref.model
+    wildcards: genus=Tylopilus
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Chiua.fasta
+    output: data/packages/ITS/Chiua/.built.ok, data/packages/ITS/Chiua/aln.masked.fasta, data/packages/ITS/Chiua/ref.treefile, data/packages/ITS/Chiua/ref.model
+    jobid: 88
+    reason: Missing output files: data/packages/ITS/Chiua/ref.treefile, data/packages/ITS/Chiua/ref.model, data/packages/ITS/Chiua/aln.masked.fasta
+    wildcards: genus=Chiua
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Heliogaster.fasta
+    output: data/packages/ITS/Heliogaster/.built.ok, data/packages/ITS/Heliogaster/aln.masked.fasta, data/packages/ITS/Heliogaster/ref.treefile, data/packages/ITS/Heliogaster/ref.model
+    jobid: 112
+    reason: Missing output files: data/packages/ITS/Heliogaster/ref.model, data/packages/ITS/Heliogaster/ref.treefile, data/packages/ITS/Heliogaster/aln.masked.fasta
+    wildcards: genus=Heliogaster
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Rubroboletus.fasta
+    output: data/packages/ITS/Rubroboletus/.built.ok, data/packages/ITS/Rubroboletus/aln.masked.fasta, data/packages/ITS/Rubroboletus/ref.treefile, data/packages/ITS/Rubroboletus/ref.model
+    jobid: 178
+    reason: Missing output files: data/packages/ITS/Rubroboletus/aln.masked.fasta, data/packages/ITS/Rubroboletus/ref.treefile, data/packages/ITS/Rubroboletus/ref.model
+    wildcards: genus=Rubroboletus
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Amoenoboletus.fasta
+    output: data/packages/ITS/Amoenoboletus/.built.ok, data/packages/ITS/Amoenoboletus/aln.masked.fasta, data/packages/ITS/Amoenoboletus/ref.treefile, data/packages/ITS/Amoenoboletus/ref.model
+    jobid: 52
+    reason: Missing output files: data/packages/ITS/Amoenoboletus/ref.treefile, data/packages/ITS/Amoenoboletus/aln.masked.fasta, data/packages/ITS/Amoenoboletus/ref.model
+    wildcards: genus=Amoenoboletus
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Pulveroboletus.fasta
+    output: data/packages/ITS/Pulveroboletus/.built.ok, data/packages/ITS/Pulveroboletus/aln.masked.fasta, data/packages/ITS/Pulveroboletus/ref.treefile, data/packages/ITS/Pulveroboletus/ref.model
+    jobid: 166
+    reason: Missing output files: data/packages/ITS/Pulveroboletus/ref.model, data/packages/ITS/Pulveroboletus/aln.masked.fasta, data/packages/ITS/Pulveroboletus/ref.treefile
+    wildcards: genus=Pulveroboletus
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Strobilomyces.fasta
+    output: data/packages/ITS/Strobilomyces/.built.ok, data/packages/ITS/Strobilomyces/aln.masked.fasta, data/packages/ITS/Strobilomyces/ref.treefile, data/packages/ITS/Strobilomyces/ref.model
+    jobid: 190
+    reason: Missing output files: data/packages/ITS/Strobilomyces/aln.masked.fasta, data/packages/ITS/Strobilomyces/ref.model, data/packages/ITS/Strobilomyces/ref.treefile
+    wildcards: genus=Strobilomyces
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Imperator.fasta
+    output: data/packages/ITS/Imperator/.built.ok, data/packages/ITS/Imperator/aln.masked.fasta, data/packages/ITS/Imperator/ref.treefile, data/packages/ITS/Imperator/ref.model
+    jobid: 124
+    reason: Missing output files: data/packages/ITS/Imperator/ref.treefile, data/packages/ITS/Imperator/aln.masked.fasta, data/packages/ITS/Imperator/ref.model
+    wildcards: genus=Imperator
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Chamonixia.fasta
+    output: data/packages/ITS/Chamonixia/.built.ok, data/packages/ITS/Chamonixia/aln.masked.fasta, data/packages/ITS/Chamonixia/ref.treefile, data/packages/ITS/Chamonixia/ref.model
+    jobid: 86
+    reason: Missing output files: data/packages/ITS/Chamonixia/ref.treefile, data/packages/ITS/Chamonixia/aln.masked.fasta, data/packages/ITS/Chamonixia/ref.model
+    wildcards: genus=Chamonixia
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Heimioporus.fasta
+    output: data/packages/ITS/Heimioporus/.built.ok, data/packages/ITS/Heimioporus/aln.masked.fasta, data/packages/ITS/Heimioporus/ref.treefile, data/packages/ITS/Heimioporus/ref.model
+    jobid: 110
+    reason: Missing output files: data/packages/ITS/Heimioporus/ref.model, data/packages/ITS/Heimioporus/ref.treefile, data/packages/ITS/Heimioporus/aln.masked.fasta
+    wildcards: genus=Heimioporus
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Erythrophylloporus.fasta
+    output: data/packages/ITS/Erythrophylloporus/.built.ok, data/packages/ITS/Erythrophylloporus/aln.masked.fasta, data/packages/ITS/Erythrophylloporus/ref.treefile, data/packages/ITS/Erythrophylloporus/ref.model
+    jobid: 96
+    reason: Missing output files: data/packages/ITS/Erythrophylloporus/ref.treefile, data/packages/ITS/Erythrophylloporus/ref.model, data/packages/ITS/Erythrophylloporus/aln.masked.fasta
+    wildcards: genus=Erythrophylloporus
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Rubinoboletus.fasta
+    output: data/packages/ITS/Rubinoboletus/.built.ok, data/packages/ITS/Rubinoboletus/aln.masked.fasta, data/packages/ITS/Rubinoboletus/ref.treefile, data/packages/ITS/Rubinoboletus/ref.model
+    jobid: 176
+    reason: Missing output files: data/packages/ITS/Rubinoboletus/ref.model, data/packages/ITS/Rubinoboletus/ref.treefile, data/packages/ITS/Rubinoboletus/aln.masked.fasta
+    wildcards: genus=Rubinoboletus
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Caloboletus.fasta
+    output: data/packages/ITS/Caloboletus/.built.ok, data/packages/ITS/Caloboletus/aln.masked.fasta, data/packages/ITS/Caloboletus/ref.treefile, data/packages/ITS/Caloboletus/ref.model
+    jobid: 82
+    reason: Missing output files: data/packages/ITS/Caloboletus/ref.model, data/packages/ITS/Caloboletus/ref.treefile, data/packages/ITS/Caloboletus/aln.masked.fasta
+    wildcards: genus=Caloboletus
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Rossbeevera.fasta
+    output: data/packages/ITS/Rossbeevera/.built.ok, data/packages/ITS/Rossbeevera/aln.masked.fasta, data/packages/ITS/Rossbeevera/ref.treefile, data/packages/ITS/Rossbeevera/ref.model
+    jobid: 172
+    reason: Missing output files: data/packages/ITS/Rossbeevera/aln.masked.fasta, data/packages/ITS/Rossbeevera/ref.model, data/packages/ITS/Rossbeevera/ref.treefile
+    wildcards: genus=Rossbeevera
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Tropicoboletus.fasta
+    output: data/packages/ITS/Tropicoboletus/.built.ok, data/packages/ITS/Tropicoboletus/aln.masked.fasta, data/packages/ITS/Tropicoboletus/ref.treefile, data/packages/ITS/Tropicoboletus/ref.model
+    jobid: 196
+    reason: Missing output files: data/packages/ITS/Tropicoboletus/aln.masked.fasta, data/packages/ITS/Tropicoboletus/ref.model, data/packages/ITS/Tropicoboletus/ref.treefile
+    wildcards: genus=Tropicoboletus
+    resources: tmpdir=/tmp
+
+
+[Mon Aug 18 18:28:02 2025]
+rule its_build_ref:
+    input: data/packages/ITS/split/Hourangia.fasta
+    output: data/packages/ITS/Hourangia/.built.ok, data/packages/ITS/Hourangia/aln.masked.fasta, data/packages/ITS/Hourangia/ref.treefile, data/packages/ITS/Hourangia/ref.model
+    jobid: 120
+    reason: Missing output files: data/packages/ITS/Hourangia/ref.model, data/packages/ITS/Hourangia/ref.treefile, data/packages/ITS/Hourangia/aln.masked.fasta
+    wildcards: genus=Hourangia
+    resources: tmpdir=/tmp
+
+[Mon Aug 18 18:28:02 2025]
+Error in rule its_build_ref:
+    jobid: 44
+    input: data/packages/ITS/split/Acyanoboletus.fasta
+    output: data/packages/ITS/Acyanoboletus/.built.ok, data/packages/ITS/Acyanoboletus/aln.masked.fasta, data/packages/ITS/Acyanoboletus/ref.treefile, data/packages/ITS/Acyanoboletus/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Acyanoboletus.fasta --outdir data/packages/ITS/Acyanoboletus
+           touch data/packages/ITS/Acyanoboletus/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Mon Aug 18 18:28:02 2025]
+Error in rule its_build_ref:
+    jobid: 216
+    input: data/packages/ITS/split/Zangia.fasta
+    output: data/packages/ITS/Zangia/.built.ok, data/packages/ITS/Zangia/aln.masked.fasta, data/packages/ITS/Zangia/ref.treefile, data/packages/ITS/Zangia/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Zangia.fasta --outdir data/packages/ITS/Zangia
+           touch data/packages/ITS/Zangia/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Mon Aug 18 18:28:02 2025]
+Error in rule its_build_ref:
+    jobid: 174
+    input: data/packages/ITS/split/Royoungia.fasta
+    output: data/packages/ITS/Royoungia/.built.ok, data/packages/ITS/Royoungia/aln.masked.fasta, data/packages/ITS/Royoungia/ref.treefile, data/packages/ITS/Royoungia/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Royoungia.fasta --outdir data/packages/ITS/Royoungia
+           touch data/packages/ITS/Royoungia/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Mon Aug 18 18:28:02 2025]
+Error in rule its_build_ref:
+    jobid: 90
+    input: data/packages/ITS/split/Costatisporus.fasta
+    output: data/packages/ITS/Costatisporus/.built.ok, data/packages/ITS/Costatisporus/aln.masked.fasta, data/packages/ITS/Costatisporus/ref.treefile, data/packages/ITS/Costatisporus/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Costatisporus.fasta --outdir data/packages/ITS/Costatisporus
+           touch data/packages/ITS/Costatisporus/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Mon Aug 18 18:28:02 2025]
+Error in rule its_build_ref:
+    jobid: 180
+    input: data/packages/ITS/split/Rufoboletus.fasta
+    output: data/packages/ITS/Rufoboletus/.built.ok, data/packages/ITS/Rufoboletus/aln.masked.fasta, data/packages/ITS/Rufoboletus/ref.treefile, data/packages/ITS/Rufoboletus/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Rufoboletus.fasta --outdir data/packages/ITS/Rufoboletus
+           touch data/packages/ITS/Rufoboletus/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Mon Aug 18 18:28:02 2025]
+Error in rule its_build_ref:
+    jobid: 80
+    input: data/packages/ITS/split/Cacaoporus.fasta
+    output: data/packages/ITS/Cacaoporus/.built.ok, data/packages/ITS/Cacaoporus/aln.masked.fasta, data/packages/ITS/Cacaoporus/ref.treefile, data/packages/ITS/Cacaoporus/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Cacaoporus.fasta --outdir data/packages/ITS/Cacaoporus
+           touch data/packages/ITS/Cacaoporus/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Mon Aug 18 18:28:02 2025]
+[Mon Aug 18 18:28:02 2025]
+Error in rule its_build_ref:
+    jobid: 170
+    input: data/packages/ITS/split/Rhodactina.fasta
+    output: data/packages/ITS/Rhodactina/.built.ok, data/packages/ITS/Rhodactina/aln.masked.fasta, data/packages/ITS/Rhodactina/ref.treefile, data/packages/ITS/Rhodactina/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Rhodactina.fasta --outdir data/packages/ITS/Rhodactina
+           touch data/packages/ITS/Rhodactina/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Error in rule its_build_ref:
+    jobid: 200
+    input: data/packages/ITS/split/Tylocinum.fasta
+    output: data/packages/ITS/Tylocinum/.built.ok, data/packages/ITS/Tylocinum/aln.masked.fasta, data/packages/ITS/Tylocinum/ref.treefile, data/packages/ITS/Tylocinum/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Tylocinum.fasta --outdir data/packages/ITS/Tylocinum
+           touch data/packages/ITS/Tylocinum/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Mon Aug 18 18:28:02 2025]
+Error in rule its_build_ref:
+    jobid: 48
+    input: data/packages/ITS/split/Afrocastellanoa.fasta
+    output: data/packages/ITS/Afrocastellanoa/.built.ok, data/packages/ITS/Afrocastellanoa/aln.masked.fasta, data/packages/ITS/Afrocastellanoa/ref.treefile, data/packages/ITS/Afrocastellanoa/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Afrocastellanoa.fasta --outdir data/packages/ITS/Afrocastellanoa
+           touch data/packages/ITS/Afrocastellanoa/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Mon Aug 18 18:28:03 2025]
+Error in rule its_build_ref:
+    jobid: 126
+    input: data/packages/ITS/split/Indoporus.fasta
+    output: data/packages/ITS/Indoporus/.built.ok, data/packages/ITS/Indoporus/aln.masked.fasta, data/packages/ITS/Indoporus/ref.treefile, data/packages/ITS/Indoporus/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Indoporus.fasta --outdir data/packages/ITS/Indoporus
+           touch data/packages/ITS/Indoporus/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Indoporus/aln.masked.fasta
+[Mon Aug 18 18:28:03 2025]
+Error in rule its_build_ref:
+    jobid: 138
+    input: data/packages/ITS/split/Mucilopilus.fasta
+    output: data/packages/ITS/Mucilopilus/.built.ok, data/packages/ITS/Mucilopilus/aln.masked.fasta, data/packages/ITS/Mucilopilus/ref.treefile, data/packages/ITS/Mucilopilus/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Mucilopilus.fasta --outdir data/packages/ITS/Mucilopilus
+           touch data/packages/ITS/Mucilopilus/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Mucilopilus/aln.masked.fasta
+[Mon Aug 18 18:28:03 2025]
+Error in rule its_build_ref:
+    jobid: 182
+    input: data/packages/ITS/split/Rugiboletus.fasta
+    output: data/packages/ITS/Rugiboletus/.built.ok, data/packages/ITS/Rugiboletus/aln.masked.fasta, data/packages/ITS/Rugiboletus/ref.treefile, data/packages/ITS/Rugiboletus/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Rugiboletus.fasta --outdir data/packages/ITS/Rugiboletus
+           touch data/packages/ITS/Rugiboletus/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Rugiboletus/aln.masked.fasta
+[Mon Aug 18 18:28:03 2025]
+Error in rule its_build_ref:
+    jobid: 150
+    input: data/packages/ITS/split/Parvixerocomus.fasta
+    output: data/packages/ITS/Parvixerocomus/.built.ok, data/packages/ITS/Parvixerocomus/aln.masked.fasta, data/packages/ITS/Parvixerocomus/ref.treefile, data/packages/ITS/Parvixerocomus/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Parvixerocomus.fasta --outdir data/packages/ITS/Parvixerocomus
+           touch data/packages/ITS/Parvixerocomus/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Parvixerocomus/aln.masked.fasta
+[Mon Aug 18 18:28:03 2025]
+Error in rule its_build_ref:
+    jobid: 176
+    input: data/packages/ITS/split/Rubinoboletus.fasta
+    output: data/packages/ITS/Rubinoboletus/.built.ok, data/packages/ITS/Rubinoboletus/aln.masked.fasta, data/packages/ITS/Rubinoboletus/ref.treefile, data/packages/ITS/Rubinoboletus/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Rubinoboletus.fasta --outdir data/packages/ITS/Rubinoboletus
+           touch data/packages/ITS/Rubinoboletus/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Rubinoboletus/aln.masked.fasta
+[Mon Aug 18 18:28:03 2025]
+Error in rule its_build_ref:
+    jobid: 196
+    input: data/packages/ITS/split/Tropicoboletus.fasta
+    output: data/packages/ITS/Tropicoboletus/.built.ok, data/packages/ITS/Tropicoboletus/aln.masked.fasta, data/packages/ITS/Tropicoboletus/ref.treefile, data/packages/ITS/Tropicoboletus/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Tropicoboletus.fasta --outdir data/packages/ITS/Tropicoboletus
+           touch data/packages/ITS/Tropicoboletus/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Tropicoboletus/aln.masked.fasta
+[Mon Aug 18 18:28:03 2025]
+Error in rule its_build_ref:
+    jobid: 104
+    input: data/packages/ITS/split/Gastroboletus.fasta
+    output: data/packages/ITS/Gastroboletus/.built.ok, data/packages/ITS/Gastroboletus/aln.masked.fasta, data/packages/ITS/Gastroboletus/ref.treefile, data/packages/ITS/Gastroboletus/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Gastroboletus.fasta --outdir data/packages/ITS/Gastroboletus
+           touch data/packages/ITS/Gastroboletus/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Gastroboletus/aln.masked.fasta
+[Mon Aug 18 18:28:03 2025]
+Error in rule its_build_ref:
+    jobid: 160
+    input: data/packages/ITS/split/Pseudoaustroboletus.fasta
+    output: data/packages/ITS/Pseudoaustroboletus/.built.ok, data/packages/ITS/Pseudoaustroboletus/aln.masked.fasta, data/packages/ITS/Pseudoaustroboletus/ref.treefile, data/packages/ITS/Pseudoaustroboletus/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Pseudoaustroboletus.fasta --outdir data/packages/ITS/Pseudoaustroboletus
+           touch data/packages/ITS/Pseudoaustroboletus/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Pseudoaustroboletus/aln.masked.fasta
+[Mon Aug 18 18:28:03 2025]
+Error in rule its_build_ref:
+    jobid: 112
+    input: data/packages/ITS/split/Heliogaster.fasta
+    output: data/packages/ITS/Heliogaster/.built.ok, data/packages/ITS/Heliogaster/aln.masked.fasta, data/packages/ITS/Heliogaster/ref.treefile, data/packages/ITS/Heliogaster/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Heliogaster.fasta --outdir data/packages/ITS/Heliogaster
+           touch data/packages/ITS/Heliogaster/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Mon Aug 18 18:28:03 2025]
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Heliogaster/aln.masked.fasta
+Error in rule its_build_ref:
+    jobid: 70
+    input: data/packages/ITS/split/Borofutus.fasta
+    output: data/packages/ITS/Borofutus/.built.ok, data/packages/ITS/Borofutus/aln.masked.fasta, data/packages/ITS/Borofutus/ref.treefile, data/packages/ITS/Borofutus/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Borofutus.fasta --outdir data/packages/ITS/Borofutus
+           touch data/packages/ITS/Borofutus/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Borofutus/aln.masked.fasta
+[Mon Aug 18 18:28:03 2025]
+Error in rule its_build_ref:
+    jobid: 96
+    input: data/packages/ITS/split/Erythrophylloporus.fasta
+    output: data/packages/ITS/Erythrophylloporus/.built.ok, data/packages/ITS/Erythrophylloporus/aln.masked.fasta, data/packages/ITS/Erythrophylloporus/ref.treefile, data/packages/ITS/Erythrophylloporus/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Erythrophylloporus.fasta --outdir data/packages/ITS/Erythrophylloporus
+           touch data/packages/ITS/Erythrophylloporus/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Erythrophylloporus/aln.masked.fasta
+[Mon Aug 18 18:28:04 2025]
+Error in rule its_build_ref:
+    jobid: 72
+    input: data/packages/ITS/split/Bothia.fasta
+    output: data/packages/ITS/Bothia/.built.ok, data/packages/ITS/Bothia/aln.masked.fasta, data/packages/ITS/Bothia/ref.treefile, data/packages/ITS/Bothia/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Bothia.fasta --outdir data/packages/ITS/Bothia
+           touch data/packages/ITS/Bothia/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Bothia/aln.masked.fasta
+[Mon Aug 18 18:28:04 2025]
+Error in rule its_build_ref:
+    jobid: 146
+    input: data/packages/ITS/split/Nevesoporus.fasta
+    output: data/packages/ITS/Nevesoporus/.built.ok, data/packages/ITS/Nevesoporus/aln.masked.fasta, data/packages/ITS/Nevesoporus/ref.treefile, data/packages/ITS/Nevesoporus/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Nevesoporus.fasta --outdir data/packages/ITS/Nevesoporus
+           touch data/packages/ITS/Nevesoporus/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Nevesoporus/aln.masked.fasta
+[Mon Aug 18 18:28:04 2025]
+Error in rule its_build_ref:
+    jobid: 152
+    input: data/packages/ITS/split/Paxilloboletus.fasta
+    output: data/packages/ITS/Paxilloboletus/.built.ok, data/packages/ITS/Paxilloboletus/aln.masked.fasta, data/packages/ITS/Paxilloboletus/ref.treefile, data/packages/ITS/Paxilloboletus/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Paxilloboletus.fasta --outdir data/packages/ITS/Paxilloboletus
+           touch data/packages/ITS/Paxilloboletus/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Paxilloboletus/aln.masked.fasta
+[Mon Aug 18 18:28:04 2025]
+Error in rule its_build_ref:
+    jobid: 46
+    input: data/packages/ITS/split/Afroboletus.fasta
+    output: data/packages/ITS/Afroboletus/.built.ok, data/packages/ITS/Afroboletus/aln.masked.fasta, data/packages/ITS/Afroboletus/ref.treefile, data/packages/ITS/Afroboletus/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Afroboletus.fasta --outdir data/packages/ITS/Afroboletus
+           touch data/packages/ITS/Afroboletus/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Afroboletus/aln.masked.fasta
+[Mon Aug 18 18:28:04 2025]
+Error in rule its_build_ref:
+    jobid: 88
+    input: data/packages/ITS/split/Chiua.fasta
+    output: data/packages/ITS/Chiua/.built.ok, data/packages/ITS/Chiua/aln.masked.fasta, data/packages/ITS/Chiua/ref.treefile, data/packages/ITS/Chiua/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Chiua.fasta --outdir data/packages/ITS/Chiua
+           touch data/packages/ITS/Chiua/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Chiua/aln.masked.fasta
+[Mon Aug 18 18:28:05 2025]
+Error in rule its_build_ref:
+    jobid: 50
+    input: data/packages/ITS/split/Alessioporus.fasta
+    output: data/packages/ITS/Alessioporus/.built.ok, data/packages/ITS/Alessioporus/aln.masked.fasta, data/packages/ITS/Alessioporus/ref.treefile, data/packages/ITS/Alessioporus/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Alessioporus.fasta --outdir data/packages/ITS/Alessioporus
+           touch data/packages/ITS/Alessioporus/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Alessioporus/aln.masked.fasta
+[Mon Aug 18 18:28:06 2025]
+Error in rule its_build_ref:
+    jobid: 124
+    input: data/packages/ITS/split/Imperator.fasta
+    output: data/packages/ITS/Imperator/.built.ok, data/packages/ITS/Imperator/aln.masked.fasta, data/packages/ITS/Imperator/ref.treefile, data/packages/ITS/Imperator/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Imperator.fasta --outdir data/packages/ITS/Imperator
+           touch data/packages/ITS/Imperator/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Imperator/aln.masked.fasta
+[Mon Aug 18 18:28:07 2025]
+Error in rule its_build_ref:
+    jobid: 86
+    input: data/packages/ITS/split/Chamonixia.fasta
+    output: data/packages/ITS/Chamonixia/.built.ok, data/packages/ITS/Chamonixia/aln.masked.fasta, data/packages/ITS/Chamonixia/ref.treefile, data/packages/ITS/Chamonixia/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Chamonixia.fasta --outdir data/packages/ITS/Chamonixia
+           touch data/packages/ITS/Chamonixia/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Chamonixia/aln.masked.fasta
+[Mon Aug 18 18:28:08 2025]
+Error in rule its_build_ref:
+    jobid: 198
+    input: data/packages/ITS/split/Turmalinea.fasta
+    output: data/packages/ITS/Turmalinea/.built.ok, data/packages/ITS/Turmalinea/aln.masked.fasta, data/packages/ITS/Turmalinea/ref.treefile, data/packages/ITS/Turmalinea/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Turmalinea.fasta --outdir data/packages/ITS/Turmalinea
+           touch data/packages/ITS/Turmalinea/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Turmalinea/aln.masked.fasta
+[Mon Aug 18 18:28:09 2025]
+Error in rule its_build_ref:
+    jobid: 184
+    input: data/packages/ITS/split/Singerocomus.fasta
+    output: data/packages/ITS/Singerocomus/.built.ok, data/packages/ITS/Singerocomus/aln.masked.fasta, data/packages/ITS/Singerocomus/ref.treefile, data/packages/ITS/Singerocomus/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Singerocomus.fasta --outdir data/packages/ITS/Singerocomus
+           touch data/packages/ITS/Singerocomus/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Singerocomus/aln.masked.fasta
+[Mon Aug 18 18:28:11 2025]
+Error in rule its_build_ref:
+    jobid: 110
+    input: data/packages/ITS/split/Heimioporus.fasta
+    output: data/packages/ITS/Heimioporus/.built.ok, data/packages/ITS/Heimioporus/aln.masked.fasta, data/packages/ITS/Heimioporus/ref.treefile, data/packages/ITS/Heimioporus/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Heimioporus.fasta --outdir data/packages/ITS/Heimioporus
+           touch data/packages/ITS/Heimioporus/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Heimioporus/aln.masked.fasta
+[Mon Aug 18 18:28:19 2025]
+Error in rule its_build_ref:
+    jobid: 120
+    input: data/packages/ITS/split/Hourangia.fasta
+    output: data/packages/ITS/Hourangia/.built.ok, data/packages/ITS/Hourangia/aln.masked.fasta, data/packages/ITS/Hourangia/ref.treefile, data/packages/ITS/Hourangia/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Hourangia.fasta --outdir data/packages/ITS/Hourangia
+           touch data/packages/ITS/Hourangia/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Hourangia/aln.masked.fasta
+[Mon Aug 18 18:28:20 2025]
+Error in rule its_build_ref:
+    jobid: 208
+    input: data/packages/ITS/split/Xanthoconium.fasta
+    output: data/packages/ITS/Xanthoconium/.built.ok, data/packages/ITS/Xanthoconium/aln.masked.fasta, data/packages/ITS/Xanthoconium/ref.treefile, data/packages/ITS/Xanthoconium/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Xanthoconium.fasta --outdir data/packages/ITS/Xanthoconium
+           touch data/packages/ITS/Xanthoconium/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Xanthoconium/aln.masked.fasta
+[Mon Aug 18 18:28:41 2025]
+Error in rule its_build_ref:
+    jobid: 94
+    input: data/packages/ITS/split/Cyanoboletus.fasta
+    output: data/packages/ITS/Cyanoboletus/.built.ok, data/packages/ITS/Cyanoboletus/aln.masked.fasta, data/packages/ITS/Cyanoboletus/ref.treefile, data/packages/ITS/Cyanoboletus/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Cyanoboletus.fasta --outdir data/packages/ITS/Cyanoboletus
+           touch data/packages/ITS/Cyanoboletus/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Cyanoboletus/aln.masked.fasta
+[Mon Aug 18 18:30:33 2025]
+Error in rule its_build_ref:
+    jobid: 128
+    input: data/packages/ITS/split/Ionosporus.fasta
+    output: data/packages/ITS/Ionosporus/.built.ok, data/packages/ITS/Ionosporus/aln.masked.fasta, data/packages/ITS/Ionosporus/ref.treefile, data/packages/ITS/Ionosporus/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Ionosporus.fasta --outdir data/packages/ITS/Ionosporus
+           touch data/packages/ITS/Ionosporus/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Ionosporus/aln.masked.fasta, data/packages/ITS/Ionosporus/ref.treefile
+[Mon Aug 18 18:31:08 2025]
+Error in rule its_build_ref:
+    jobid: 62
+    input: data/packages/ITS/split/Binderoboletus.fasta
+    output: data/packages/ITS/Binderoboletus/.built.ok, data/packages/ITS/Binderoboletus/aln.masked.fasta, data/packages/ITS/Binderoboletus/ref.treefile, data/packages/ITS/Binderoboletus/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Binderoboletus.fasta --outdir data/packages/ITS/Binderoboletus
+           touch data/packages/ITS/Binderoboletus/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Binderoboletus/aln.masked.fasta
+[Mon Aug 18 18:31:09 2025]
+Error in rule its_build_ref:
+    jobid: 206
+    input: data/packages/ITS/split/Villoboletus.fasta
+    output: data/packages/ITS/Villoboletus/.built.ok, data/packages/ITS/Villoboletus/aln.masked.fasta, data/packages/ITS/Villoboletus/ref.treefile, data/packages/ITS/Villoboletus/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Villoboletus.fasta --outdir data/packages/ITS/Villoboletus
+           touch data/packages/ITS/Villoboletus/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Villoboletus/aln.masked.fasta
+[Mon Aug 18 18:31:09 2025]
+Error in rule its_build_ref:
+    jobid: 106
+    input: data/packages/ITS/split/Guyanaporus.fasta
+    output: data/packages/ITS/Guyanaporus/.built.ok, data/packages/ITS/Guyanaporus/aln.masked.fasta, data/packages/ITS/Guyanaporus/ref.treefile, data/packages/ITS/Guyanaporus/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Guyanaporus.fasta --outdir data/packages/ITS/Guyanaporus
+           touch data/packages/ITS/Guyanaporus/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Guyanaporus/aln.masked.fasta
+[Mon Aug 18 18:31:15 2025]
+Error in rule its_build_ref:
+    jobid: 92
+    input: data/packages/ITS/split/Crocinoboletus.fasta
+    output: data/packages/ITS/Crocinoboletus/.built.ok, data/packages/ITS/Crocinoboletus/aln.masked.fasta, data/packages/ITS/Crocinoboletus/ref.treefile, data/packages/ITS/Crocinoboletus/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Crocinoboletus.fasta --outdir data/packages/ITS/Crocinoboletus
+           touch data/packages/ITS/Crocinoboletus/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Crocinoboletus/aln.masked.fasta, data/packages/ITS/Crocinoboletus/ref.treefile
+[Mon Aug 18 18:31:23 2025]
+Error in rule its_build_ref:
+    jobid: 194
+    input: data/packages/ITS/split/Sutorius.fasta
+    output: data/packages/ITS/Sutorius/.built.ok, data/packages/ITS/Sutorius/aln.masked.fasta, data/packages/ITS/Sutorius/ref.treefile, data/packages/ITS/Sutorius/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Sutorius.fasta --outdir data/packages/ITS/Sutorius
+           touch data/packages/ITS/Sutorius/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Sutorius/aln.masked.fasta, data/packages/ITS/Sutorius/ref.treefile
+[Mon Aug 18 18:31:25 2025]
+Error in rule its_build_ref:
+    jobid: 140
+    input: data/packages/ITS/split/Mycoamaranthus.fasta
+    output: data/packages/ITS/Mycoamaranthus/.built.ok, data/packages/ITS/Mycoamaranthus/aln.masked.fasta, data/packages/ITS/Mycoamaranthus/ref.treefile, data/packages/ITS/Mycoamaranthus/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Mycoamaranthus.fasta --outdir data/packages/ITS/Mycoamaranthus
+           touch data/packages/ITS/Mycoamaranthus/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Mycoamaranthus/aln.masked.fasta, data/packages/ITS/Mycoamaranthus/ref.treefile
+[Mon Aug 18 18:31:27 2025]
+Error in rule its_build_ref:
+    jobid: 52
+    input: data/packages/ITS/split/Amoenoboletus.fasta
+    output: data/packages/ITS/Amoenoboletus/.built.ok, data/packages/ITS/Amoenoboletus/aln.masked.fasta, data/packages/ITS/Amoenoboletus/ref.treefile, data/packages/ITS/Amoenoboletus/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Amoenoboletus.fasta --outdir data/packages/ITS/Amoenoboletus
+           touch data/packages/ITS/Amoenoboletus/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Amoenoboletus/aln.masked.fasta, data/packages/ITS/Amoenoboletus/ref.treefile
+[Mon Aug 18 18:31:49 2025]
+Error in rule its_build_ref:
+    jobid: 76
+    input: data/packages/ITS/split/Buchwaldoboletus.fasta
+    output: data/packages/ITS/Buchwaldoboletus/.built.ok, data/packages/ITS/Buchwaldoboletus/aln.masked.fasta, data/packages/ITS/Buchwaldoboletus/ref.treefile, data/packages/ITS/Buchwaldoboletus/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Buchwaldoboletus.fasta --outdir data/packages/ITS/Buchwaldoboletus
+           touch data/packages/ITS/Buchwaldoboletus/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Buchwaldoboletus/aln.masked.fasta, data/packages/ITS/Buchwaldoboletus/ref.treefile
+[Mon Aug 18 18:32:06 2025]
+Error in rule its_build_ref:
+    jobid: 134
+    input: data/packages/ITS/split/Leccinellum.fasta
+    output: data/packages/ITS/Leccinellum/.built.ok, data/packages/ITS/Leccinellum/aln.masked.fasta, data/packages/ITS/Leccinellum/ref.treefile, data/packages/ITS/Leccinellum/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Leccinellum.fasta --outdir data/packages/ITS/Leccinellum
+           touch data/packages/ITS/Leccinellum/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Leccinellum/aln.masked.fasta, data/packages/ITS/Leccinellum/ref.treefile
+[Mon Aug 18 18:32:18 2025]
+Error in rule its_build_ref:
+    jobid: 158
+    input: data/packages/ITS/split/Porphyrellus.fasta
+    output: data/packages/ITS/Porphyrellus/.built.ok, data/packages/ITS/Porphyrellus/aln.masked.fasta, data/packages/ITS/Porphyrellus/ref.treefile, data/packages/ITS/Porphyrellus/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Porphyrellus.fasta --outdir data/packages/ITS/Porphyrellus
+           touch data/packages/ITS/Porphyrellus/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Porphyrellus/aln.masked.fasta, data/packages/ITS/Porphyrellus/ref.treefile
+[Mon Aug 18 18:33:01 2025]
+Error in rule its_build_ref:
+    jobid: 100
+    input: data/packages/ITS/split/Fistulinella.fasta
+    output: data/packages/ITS/Fistulinella/.built.ok, data/packages/ITS/Fistulinella/aln.masked.fasta, data/packages/ITS/Fistulinella/ref.treefile, data/packages/ITS/Fistulinella/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Fistulinella.fasta --outdir data/packages/ITS/Fistulinella
+           touch data/packages/ITS/Fistulinella/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Fistulinella/aln.masked.fasta, data/packages/ITS/Fistulinella/ref.treefile
+[Mon Aug 18 18:33:04 2025]
+Error in rule its_build_ref:
+    jobid: 168
+    input: data/packages/ITS/split/Retiboletus.fasta
+    output: data/packages/ITS/Retiboletus/.built.ok, data/packages/ITS/Retiboletus/aln.masked.fasta, data/packages/ITS/Retiboletus/ref.treefile, data/packages/ITS/Retiboletus/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Retiboletus.fasta --outdir data/packages/ITS/Retiboletus
+           touch data/packages/ITS/Retiboletus/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Retiboletus/aln.masked.fasta, data/packages/ITS/Retiboletus/ref.treefile
+[Mon Aug 18 18:33:42 2025]
+Error in rule its_build_ref:
+    jobid: 172
+    input: data/packages/ITS/split/Rossbeevera.fasta
+    output: data/packages/ITS/Rossbeevera/.built.ok, data/packages/ITS/Rossbeevera/aln.masked.fasta, data/packages/ITS/Rossbeevera/ref.treefile, data/packages/ITS/Rossbeevera/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Rossbeevera.fasta --outdir data/packages/ITS/Rossbeevera
+           touch data/packages/ITS/Rossbeevera/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Rossbeevera/aln.masked.fasta, data/packages/ITS/Rossbeevera/ref.treefile
+[Mon Aug 18 18:34:15 2025]
+Error in rule its_build_ref:
+    jobid: 114
+    input: data/packages/ITS/split/Hemileccinum.fasta
+    output: data/packages/ITS/Hemileccinum/.built.ok, data/packages/ITS/Hemileccinum/aln.masked.fasta, data/packages/ITS/Hemileccinum/ref.treefile, data/packages/ITS/Hemileccinum/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Hemileccinum.fasta --outdir data/packages/ITS/Hemileccinum
+           touch data/packages/ITS/Hemileccinum/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Hemileccinum/aln.masked.fasta, data/packages/ITS/Hemileccinum/ref.treefile
+[Mon Aug 18 18:35:22 2025]
+Error in rule its_build_ref:
+    jobid: 82
+    input: data/packages/ITS/split/Caloboletus.fasta
+    output: data/packages/ITS/Caloboletus/.built.ok, data/packages/ITS/Caloboletus/aln.masked.fasta, data/packages/ITS/Caloboletus/ref.treefile, data/packages/ITS/Caloboletus/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Caloboletus.fasta --outdir data/packages/ITS/Caloboletus
+           touch data/packages/ITS/Caloboletus/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Caloboletus/aln.masked.fasta, data/packages/ITS/Caloboletus/ref.treefile
+[Mon Aug 18 18:36:08 2025]
+Error in rule its_build_ref:
+    jobid: 166
+    input: data/packages/ITS/split/Pulveroboletus.fasta
+    output: data/packages/ITS/Pulveroboletus/.built.ok, data/packages/ITS/Pulveroboletus/aln.masked.fasta, data/packages/ITS/Pulveroboletus/ref.treefile, data/packages/ITS/Pulveroboletus/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Pulveroboletus.fasta --outdir data/packages/ITS/Pulveroboletus
+           touch data/packages/ITS/Pulveroboletus/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Pulveroboletus/aln.masked.fasta, data/packages/ITS/Pulveroboletus/ref.treefile
+[Mon Aug 18 18:37:23 2025]
+Error in rule its_build_ref:
+    jobid: 178
+    input: data/packages/ITS/split/Rubroboletus.fasta
+    output: data/packages/ITS/Rubroboletus/.built.ok, data/packages/ITS/Rubroboletus/aln.masked.fasta, data/packages/ITS/Rubroboletus/ref.treefile, data/packages/ITS/Rubroboletus/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Rubroboletus.fasta --outdir data/packages/ITS/Rubroboletus
+           touch data/packages/ITS/Rubroboletus/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Rubroboletus/aln.masked.fasta, data/packages/ITS/Rubroboletus/ref.treefile
+[Mon Aug 18 18:37:50 2025]
+Error in rule its_build_ref:
+    jobid: 192
+    input: data/packages/ITS/split/Suillellus.fasta
+    output: data/packages/ITS/Suillellus/.built.ok, data/packages/ITS/Suillellus/aln.masked.fasta, data/packages/ITS/Suillellus/ref.treefile, data/packages/ITS/Suillellus/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Suillellus.fasta --outdir data/packages/ITS/Suillellus
+           touch data/packages/ITS/Suillellus/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Suillellus/aln.masked.fasta, data/packages/ITS/Suillellus/ref.treefile
+[Mon Aug 18 18:37:53 2025]
+Error in rule its_build_ref:
+    jobid: 58
+    input: data/packages/ITS/split/Austroboletus.fasta
+    output: data/packages/ITS/Austroboletus/.built.ok, data/packages/ITS/Austroboletus/aln.masked.fasta, data/packages/ITS/Austroboletus/ref.treefile, data/packages/ITS/Austroboletus/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Austroboletus.fasta --outdir data/packages/ITS/Austroboletus
+           touch data/packages/ITS/Austroboletus/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Austroboletus/aln.masked.fasta, data/packages/ITS/Austroboletus/ref.treefile
+[Mon Aug 18 18:37:56 2025]
+Error in rule its_build_ref:
+    jobid: 148
+    input: data/packages/ITS/split/Octaviania.fasta
+    output: data/packages/ITS/Octaviania/.built.ok, data/packages/ITS/Octaviania/aln.masked.fasta, data/packages/ITS/Octaviania/ref.treefile, data/packages/ITS/Octaviania/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Octaviania.fasta --outdir data/packages/ITS/Octaviania
+           touch data/packages/ITS/Octaviania/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Octaviania/aln.masked.fasta, data/packages/ITS/Octaviania/ref.treefile
+[Mon Aug 18 18:42:54 2025]
+Error in rule its_build_ref:
+    jobid: 190
+    input: data/packages/ITS/split/Strobilomyces.fasta
+    output: data/packages/ITS/Strobilomyces/.built.ok, data/packages/ITS/Strobilomyces/aln.masked.fasta, data/packages/ITS/Strobilomyces/ref.treefile, data/packages/ITS/Strobilomyces/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Strobilomyces.fasta --outdir data/packages/ITS/Strobilomyces
+           touch data/packages/ITS/Strobilomyces/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Strobilomyces/aln.masked.fasta, data/packages/ITS/Strobilomyces/ref.treefile
+[Mon Aug 18 18:44:07 2025]
+Error in rule its_build_ref:
+    jobid: 78
+    input: data/packages/ITS/split/Butyriboletus.fasta
+    output: data/packages/ITS/Butyriboletus/.built.ok, data/packages/ITS/Butyriboletus/aln.masked.fasta, data/packages/ITS/Butyriboletus/ref.treefile, data/packages/ITS/Butyriboletus/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Butyriboletus.fasta --outdir data/packages/ITS/Butyriboletus
+           touch data/packages/ITS/Butyriboletus/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Butyriboletus/aln.masked.fasta, data/packages/ITS/Butyriboletus/ref.treefile
+[Mon Aug 18 18:46:30 2025]
+Error in rule its_build_ref:
+    jobid: 118
+    input: data/packages/ITS/split/Hortiboletus.fasta
+    output: data/packages/ITS/Hortiboletus/.built.ok, data/packages/ITS/Hortiboletus/aln.masked.fasta, data/packages/ITS/Hortiboletus/ref.treefile, data/packages/ITS/Hortiboletus/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Hortiboletus.fasta --outdir data/packages/ITS/Hortiboletus
+           touch data/packages/ITS/Hortiboletus/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Hortiboletus/aln.masked.fasta, data/packages/ITS/Hortiboletus/ref.treefile
+[Mon Aug 18 18:51:02 2025]
+Error in rule its_build_ref:
+    jobid: 142
+    input: data/packages/ITS/split/Neoboletus.fasta
+    output: data/packages/ITS/Neoboletus/.built.ok, data/packages/ITS/Neoboletus/aln.masked.fasta, data/packages/ITS/Neoboletus/ref.treefile, data/packages/ITS/Neoboletus/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Neoboletus.fasta --outdir data/packages/ITS/Neoboletus
+           touch data/packages/ITS/Neoboletus/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Neoboletus/aln.masked.fasta, data/packages/ITS/Neoboletus/ref.treefile
+[Mon Aug 18 18:51:50 2025]
+Error in rule its_build_ref:
+    jobid: 64
+    input: data/packages/ITS/split/Boletaceae.fasta
+    output: data/packages/ITS/Boletaceae/.built.ok, data/packages/ITS/Boletaceae/aln.masked.fasta, data/packages/ITS/Boletaceae/ref.treefile, data/packages/ITS/Boletaceae/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Boletaceae.fasta --outdir data/packages/ITS/Boletaceae
+           touch data/packages/ITS/Boletaceae/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Boletaceae/aln.masked.fasta, data/packages/ITS/Boletaceae/ref.treefile
+[Mon Aug 18 19:53:26 2025]
+Error in rule its_build_ref:
+    jobid: 214
+    input: data/packages/ITS/split/Xerocomus.fasta
+    output: data/packages/ITS/Xerocomus/.built.ok, data/packages/ITS/Xerocomus/aln.masked.fasta, data/packages/ITS/Xerocomus/ref.treefile, data/packages/ITS/Xerocomus/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Xerocomus.fasta --outdir data/packages/ITS/Xerocomus
+           touch data/packages/ITS/Xerocomus/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Xerocomus/aln.masked.fasta, data/packages/ITS/Xerocomus/ref.treefile
+[Mon Aug 18 20:11:25 2025]
+Error in rule its_build_ref:
+    jobid: 210
+    input: data/packages/ITS/split/Xerocomellus.fasta
+    output: data/packages/ITS/Xerocomellus/.built.ok, data/packages/ITS/Xerocomellus/aln.masked.fasta, data/packages/ITS/Xerocomellus/ref.treefile, data/packages/ITS/Xerocomellus/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Xerocomellus.fasta --outdir data/packages/ITS/Xerocomellus
+           touch data/packages/ITS/Xerocomellus/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Xerocomellus/aln.masked.fasta, data/packages/ITS/Xerocomellus/ref.treefile
+[Mon Aug 18 21:37:27 2025]
+Error in rule its_build_ref:
+    jobid: 202
+    input: data/packages/ITS/split/Tylopilus.fasta
+    output: data/packages/ITS/Tylopilus/.built.ok, data/packages/ITS/Tylopilus/aln.masked.fasta, data/packages/ITS/Tylopilus/ref.treefile, data/packages/ITS/Tylopilus/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Tylopilus.fasta --outdir data/packages/ITS/Tylopilus
+           touch data/packages/ITS/Tylopilus/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job its_build_ref since they might be corrupted:
+data/packages/ITS/Tylopilus/aln.masked.fasta, data/packages/ITS/Tylopilus/ref.treefile
+Terminating processes on user request, this might take some time.
+[Tue Aug 19 07:32:56 2025]
+Error in rule its_build_ref:
+    jobid: 68
+    input: data/packages/ITS/split/Boletus.fasta
+    output: data/packages/ITS/Boletus/.built.ok, data/packages/ITS/Boletus/aln.masked.fasta, data/packages/ITS/Boletus/ref.treefile, data/packages/ITS/Boletus/ref.model
+    shell:
+        python3.11 workflow/scripts/build_its_ref.py \
+             --in data/packages/ITS/split/Boletus.fasta --outdir data/packages/ITS/Boletus
+           touch data/packages/ITS/Boletus/.built.ok
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Complete log: .snakemake/log/2025-08-18T182800.996312.snakemake.log

@@ -1,0 +1,13 @@
+Building DAG of jobs...
+AmbiguousRuleException:
+Rules graft_its and graft_its_clusters are ambiguous for the file data/trees/backbone_with_its.newick.
+Consider starting rule output with a unique prefix, constrain your wildcards, or use the ruleorder directive.
+Wildcards:
+	graft_its: 
+	graft_its_clusters: 
+Expected input files:
+	graft_its: data/trees/backbone.rooted.pretty.newick data/packages/ITS/split.done
+	graft_its_clusters: data/trees/backbone.rooted.pretty.newick data/staging/taxon_map.tsv
+Expected output files:
+	graft_its: data/trees/backbone_with_its.newick
+	graft_its_clusters: data/trees/backbone_with_its.newick

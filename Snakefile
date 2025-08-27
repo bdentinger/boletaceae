@@ -5,6 +5,8 @@ configfile: "config/config.yaml"
 include: "workflow/rules/fetch.smk"
 include: "workflow/rules/align_tree.smk"
 include: "workflow/rules/release.smk"
+#include: "workflow/rules/its_place.smk"
+include: "workflow/rules/its_cluster.smk"
 
 # Default target(s)
 rule all:

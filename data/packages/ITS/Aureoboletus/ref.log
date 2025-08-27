@@ -1,0 +1,26 @@
+IQ-TREE version 3.0.1 for Linux x86 64-bit built May  5 2025
+Developed by Bui Quang Minh, Thomas Wong, Nhan Ly-Trong, Huaiyan Ren
+Contributed by Lam-Tung Nguyen, Dominik Schrempf, Chris Bielow,
+Olga Chernomor, Michael Woodhams, Diep Thi Hoang, Heiko Schmidt
+
+Host:    lnx820.umnh.utah.edu (AVX2, FMA3, 865 GB RAM)
+Command: /home/bdentinger/iqtree-3.0.1-Linux/bin/iqtree3_intel -s data/packages/ITS/Aureoboletus/aln.masked.fasta -m MFP -bb 1000 -nt AUTO -pre data/packages/ITS/Aureoboletus/ref
+Seed:    642673 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Mon Aug 18 18:07:44 2025
+Kernel:  AVX+FMA - auto-detect threads (72 CPU cores detected)
+
+Reading alignment file data/packages/ITS/Aureoboletus/aln.masked.fasta ... Fasta format detected
+Reading fasta file: done in 0.00270624 secs using 77.67% CPU
+Alignment most likely contains DNA/RNA sequences
+Constructing alignment: done in 0.00289879 secs using 96.7% CPU
+Alignment has 211 sequences with 625 columns, 554 distinct patterns
+407 parsimony-informative, 101 singleton sites, 117 constant sites
+ERROR: Duplicated sequence name gdgm
+ERROR: Duplicated sequence name hkas
+ERROR: Duplicated sequence name hkas
+ERROR: Duplicated sequence name hkas
+ERROR: Duplicated sequence name pul
+ERROR: Duplicated sequence name pul
+ERROR: Duplicated sequence name ubc
+ERROR: Duplicated sequence name ubc
+ERROR: Please rename sequences listed above!

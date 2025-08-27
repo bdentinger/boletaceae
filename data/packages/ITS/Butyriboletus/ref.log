@@ -1,0 +1,788 @@
+IQ-TREE version 3.0.1 for Linux x86 64-bit built May  5 2025
+Developed by Bui Quang Minh, Thomas Wong, Nhan Ly-Trong, Huaiyan Ren
+Contributed by Lam-Tung Nguyen, Dominik Schrempf, Chris Bielow,
+Olga Chernomor, Michael Woodhams, Diep Thi Hoang, Heiko Schmidt
+
+Host:    lnx820.umnh.utah.edu (AVX2, FMA3, 865 GB RAM)
+Command: /home/bdentinger/iqtree-3.0.1-Linux/bin/iqtree3_intel -s data/packages/ITS/Butyriboletus/aln.masked.fasta -m MFP -bb 1000 -nt AUTO -pre data/packages/ITS/Butyriboletus/ref
+Seed:    760536 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Mon Aug 18 18:36:51 2025
+Kernel:  AVX+FMA - auto-detect threads (72 CPU cores detected)
+
+Reading alignment file data/packages/ITS/Butyriboletus/aln.masked.fasta ... Fasta format detected
+Reading fasta file: done in 0.00287468 secs using 71.31% CPU
+Alignment most likely contains DNA/RNA sequences
+Constructing alignment: done in 0.00282066 secs using 96.82% CPU
+Alignment has 257 sequences with 668 columns, 520 distinct patterns
+352 parsimony-informative, 68 singleton sites, 248 constant sites
+                   Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 0.000380224 secs using 96.52% CPU
+   1  Butyriboletus_001    0.15%    passed     90.29%
+   2  Butyriboletus_002    8.23%    passed     68.16%
+   3  Butyriboletus_003    5.84%    passed     92.51%
+   4  Butyriboletus_004    5.84%    passed     92.51%
+   5  Butyriboletus_005    5.84%    passed     92.51%
+   6  Butyriboletus_006   17.96%    passed     97.91%
+   7  Butyriboletus_007    0.15%    passed     95.06%
+   8  Butyriboletus_008    0.90%    passed     97.08%
+   9  Butyriboletus_009    0.45%    passed     89.10%
+  10  Butyriboletus_010    0.15%    passed     97.04%
+  11  Butyriboletus_011   20.51%    failed      2.90%
+  12  Butyriboletus_012    0.45%    passed      7.56%
+  13  Butyriboletus_013    0.45%    passed      6.17%
+  14  Butyriboletus_014    0.15%    passed     98.72%
+  15  Butyriboletus_015    5.69%    passed     91.23%
+  16  Butyriboletus_016    1.80%    passed     78.78%
+  17  Butyriboletus_017    0.45%    passed     96.25%
+  18  Butyriboletus_018    2.99%    passed     99.68%
+  19  Butyriboletus_019   12.13%    passed     88.91%
+  20  Butyriboletus_020    9.13%    passed     97.18%
+  21  Butyriboletus_021    9.13%    passed     84.82%
+  22  Butyriboletus_022    9.13%    passed     84.82%
+  23  Butyriboletus_023    5.69%    passed     91.01%
+  24  Butyriboletus_024    1.95%    passed     76.10%
+  25  Butyriboletus_025    0.15%    passed     94.08%
+  26  Butyriboletus_026    0.60%    passed     99.57%
+  27  Butyriboletus_027    0.15%    passed     95.31%
+  28  Butyriboletus_028    0.15%    passed     91.51%
+  29  Butyriboletus_029    5.99%    passed     97.12%
+  30  Butyriboletus_030    0.30%    passed     94.92%
+  31  Butyriboletus_031    2.99%    passed     99.88%
+  32  Butyriboletus_032   11.23%    passed     92.82%
+  33  Butyriboletus_033   11.23%    passed     92.82%
+  34  Butyriboletus_034    0.15%    passed     95.41%
+  35  Butyriboletus_035    0.15%    passed     91.51%
+  36  Butyriboletus_036    0.00%    passed     93.11%
+  37  Butyriboletus_037    0.30%    passed     92.68%
+  38  Butyriboletus_038    0.00%    passed     93.11%
+  39  Butyriboletus_039    0.00%    passed     93.11%
+  40  Butyriboletus_040    0.00%    passed     93.11%
+  41  Butyriboletus_041    0.45%    passed     99.23%
+  42  Butyriboletus_042    5.84%    passed     92.51%
+  43  Butyriboletus_043    0.45%    passed     95.77%
+  44  Butyriboletus_044    0.15%    passed     99.19%
+  45  Butyriboletus_045    5.69%    passed     92.60%
+  46  Butyriboletus_046    5.69%    passed     91.23%
+  47  Butyriboletus_047    0.15%    passed     98.35%
+  48  Butyriboletus_048    0.15%    passed     98.86%
+  49  Butyriboletus_049    0.60%    passed     98.89%
+  50  Butyriboletus_050    3.59%    passed     90.36%
+  51  Butyriboletus_051    6.59%    passed     86.01%
+  52  Butyriboletus_052   19.91%    passed     11.76%
+  53  Butyriboletus_053    0.15%    passed     90.98%
+  54  Butyriboletus_054    0.15%    passed     87.01%
+  55  Butyriboletus_055    0.15%    passed     95.10%
+  56  Butyriboletus_056    0.15%    passed     97.82%
+  57  Butyriboletus_057    0.30%    passed     98.27%
+  58  Butyriboletus_058   18.11%    passed     89.66%
+  59  Butyriboletus_059   18.41%    passed     96.88%
+  60  Butyriboletus_060    2.54%    passed     86.72%
+  61  Butyriboletus_061    3.59%    passed     90.36%
+  62  Butyriboletus_062    9.43%    passed     93.12%
+  63  Butyriboletus_063    4.34%    passed     90.84%
+  64  Butyriboletus_064    5.39%    passed     93.61%
+  65  Butyriboletus_065    0.15%    passed     98.35%
+  66  Butyriboletus_066    3.14%    passed     98.48%
+  67  Butyriboletus_067    0.15%    passed     90.27%
+  68  Butyriboletus_068    3.59%    passed     97.68%
+  69  Butyriboletus_069    0.00%    passed     96.92%
+  70  Butyriboletus_070    1.80%    passed     80.30%
+  71  Butyriboletus_071    0.15%    passed     87.59%
+  72  Butyriboletus_072    0.00%    passed     95.05%
+  73  Butyriboletus_073    3.44%    passed     93.84%
+  74  Butyriboletus_074   36.38%    passed     46.57%
+  75  Butyriboletus_075    0.15%    passed     98.50%
+  76  Butyriboletus_076   35.63%    passed     81.12%
+  77  Butyriboletus_077    0.30%    passed     97.35%
+  78  Butyriboletus_078    0.60%    passed     96.44%
+  79  Butyriboletus_079    1.20%    passed     96.18%
+  80  Butyriboletus_080    1.80%    passed     79.40%
+  81  Butyriboletus_081    0.15%    passed     93.33%
+  82  Butyriboletus_082    3.44%    passed     93.84%
+  83  Butyriboletus_083   13.17%    passed     84.91%
+  84  Butyriboletus_084    0.90%    passed     99.47%
+  85  Butyriboletus_085    5.54%    passed     91.53%
+  86  Butyriboletus_086   53.59%    passed     53.72%
+  87  Butyriboletus_087   24.10%    passed     89.56%
+  88  Butyriboletus_088   17.96%    passed     26.08%
+  89  Butyriboletus_089    0.15%    passed     94.68%
+  90  Butyriboletus_090    1.80%    passed     78.78%
+  91  Butyriboletus_091    2.99%    passed     99.68%
+  92  Butyriboletus_092   12.13%    passed     95.80%
+  93  Butyriboletus_093    9.88%    passed     94.41%
+  94  Butyriboletus_094   10.93%    passed     93.74%
+  95  Butyriboletus_095   15.72%    passed     80.09%
+  96  Butyriboletus_096    0.30%    passed     98.57%
+  97  Butyriboletus_097   15.72%    passed     80.09%
+  98  Butyriboletus_098   20.36%    passed     80.68%
+  99  Butyriboletus_099   25.60%    passed     92.21%
+ 100  Butyriboletus_100    2.69%    passed     93.54%
+ 101  Butyriboletus_101    1.80%    passed     78.78%
+ 102  Butyriboletus_102    1.80%    passed     78.78%
+ 103  Butyriboletus_103    0.15%    passed     87.59%
+ 104  Butyriboletus_104    0.15%    passed     87.59%
+ 105  Butyriboletus_105    0.15%    passed     87.59%
+ 106  Butyriboletus_106    9.58%    passed     95.79%
+ 107  Butyriboletus_107    9.43%    passed     94.52%
+ 108  Butyriboletus_108    0.00%    passed     97.21%
+ 109  Butyriboletus_109   22.16%    passed     88.29%
+ 110  Butyriboletus_110   15.42%    passed     99.02%
+ 111  Butyriboletus_111    0.15%    passed     87.59%
+ 112  Butyriboletus_112    1.80%    passed     78.78%
+ 113  Butyriboletus_113    0.15%    passed     87.59%
+ 114  Butyriboletus_114    1.80%    passed     80.30%
+ 115  Butyriboletus_115    1.80%    passed     80.30%
+ 116  Butyriboletus_116    2.25%    passed     79.72%
+ 117  Butyriboletus_117    1.80%    passed     84.73%
+ 118  Butyriboletus_118    1.95%    passed     82.07%
+ 119  Butyriboletus_119    1.95%    passed     77.29%
+ 120  Butyriboletus_120    1.95%    passed     77.29%
+ 121  Butyriboletus_121    0.15%    passed     87.59%
+ 122  Butyriboletus_122    7.04%    passed     93.36%
+ 123  Butyriboletus_123   14.52%    passed     97.81%
+ 124  Butyriboletus_124    0.30%    passed     98.93%
+ 125  Butyriboletus_125    0.15%    passed     95.10%
+ 126  Butyriboletus_126    0.45%    passed     95.77%
+ 127  Butyriboletus_127   21.26%    passed     81.98%
+ 128  Butyriboletus_128    0.15%    passed     92.36%
+ 129  Butyriboletus_129    2.69%    passed     98.45%
+ 130  Butyriboletus_130   11.98%    passed     99.30%
+ 131  Butyriboletus_131    0.15%    passed     98.62%
+ 132  Butyriboletus_132    4.04%    passed     87.63%
+ 133  Butyriboletus_133    3.59%    passed     51.25%
+ 134  Butyriboletus_134    2.84%    passed     84.04%
+ 135  Butyriboletus_135    1.05%    passed     89.31%
+ 136  Butyriboletus_136    0.15%    passed     87.61%
+ 137  Butyriboletus_137    0.00%    passed     97.21%
+ 138  Butyriboletus_138    1.05%    passed     94.29%
+ 139  Butyriboletus_139    0.15%    passed     98.71%
+ 140  Butyriboletus_140    0.15%    passed     83.14%
+ 141  Butyriboletus_141    1.65%    passed     96.15%
+ 142  Butyriboletus_142    0.45%    passed     95.77%
+ 143  Butyriboletus_143    9.58%    passed     95.79%
+ 144  Butyriboletus_144    9.43%    passed     94.52%
+ 145  Butyriboletus_145   13.47%    passed     96.67%
+ 146  Butyriboletus_146    3.74%    passed     86.60%
+ 147  Butyriboletus_147    0.00%    passed     99.64%
+ 148  Butyriboletus_148    1.80%    passed     82.07%
+ 149  Butyriboletus_149    9.43%    passed     91.62%
+ 150  Butyriboletus_150    9.43%    passed     91.62%
+ 151  Butyriboletus_151    0.15%    passed     87.40%
+ 152  Butyriboletus_152    0.15%    passed     93.73%
+ 153  Butyriboletus_153    0.15%    passed     87.61%
+ 154  Butyriboletus_154    6.14%    passed     89.88%
+ 155  Butyriboletus_155    3.44%    passed     91.07%
+ 156  Butyriboletus_156    3.44%    passed     93.84%
+ 157  Butyriboletus_157    3.59%    passed     79.43%
+ 158  Butyriboletus_158    9.88%    passed     91.92%
+ 159  Butyriboletus_159    3.59%    passed     84.27%
+ 160  Butyriboletus_160    0.15%    passed     94.22%
+ 161  Butyriboletus_161    0.15%    passed     94.22%
+ 162  Butyriboletus_162    0.15%    passed     94.22%
+ 163  Butyriboletus_163   76.35%    passed     77.35%
+ 164  Butyriboletus_164    0.15%    passed     95.31%
+ 165  Butyriboletus_165    0.15%    passed     95.31%
+ 166  Butyriboletus_166    9.43%    passed     94.52%
+ 167  Butyriboletus_167   16.02%    passed     76.14%
+ 168  Butyriboletus_168    0.90%    passed     93.90%
+ 169  Butyriboletus_169   24.25%    passed     96.02%
+ 170  Butyriboletus_170   20.66%    passed     91.06%
+ 171  Butyriboletus_171    4.49%    passed     97.57%
+ 172  Butyriboletus_172   11.98%    passed     97.46%
+ 173  Butyriboletus_173    3.74%    passed     82.46%
+ 174  Butyriboletus_174    0.15%    passed     92.36%
+ 175  Butyriboletus_175   50.15%    passed     36.95%
+ 176  Butyriboletus_176   15.57%    passed     99.31%
+ 177  Butyriboletus_177    0.45%    passed     95.77%
+ 178  Butyriboletus_178    2.69%    passed     98.45%
+ 179  Butyriboletus_179   15.42%    passed     97.73%
+ 180  Butyriboletus_180    2.69%    passed     91.46%
+ 181  Butyriboletus_181    3.14%    passed     98.55%
+ 182  Butyriboletus_182   12.72%    passed     96.75%
+ 183  Butyriboletus_183   10.78%    passed     96.11%
+ 184  Butyriboletus_184   19.91%    passed     81.37%
+ 185  Butyriboletus_185   13.47%    passed     98.74%
+ 186  Butyriboletus_186    1.35%    passed     99.41%
+ 187  Butyriboletus_187    0.15%    passed     98.62%
+ 188  Butyriboletus_188    0.30%    passed     97.71%
+ 189  Butyriboletus_189    0.45%    passed     97.85%
+ 190  Butyriboletus_190    9.13%    passed     86.49%
+ 191  Butyriboletus_191   10.63%    passed     94.93%
+ 192  Butyriboletus_192    5.24%    passed     94.97%
+ 193  Butyriboletus_193   13.92%    passed     94.66%
+ 194  Butyriboletus_194    0.30%    passed     97.71%
+ 195  Butyriboletus_195    3.59%    passed     96.54%
+ 196  Butyriboletus_196    0.90%    passed     99.20%
+ 197  Butyriboletus_197    2.25%    passed     96.99%
+ 198  Butyriboletus_198    8.68%    passed     94.90%
+ 199  Butyriboletus_199   11.98%    passed     99.30%
+ 200  Butyriboletus_200    4.94%    passed     98.76%
+ 201  Butyriboletus_201    1.05%    passed     90.13%
+ 202  Butyriboletus_202   10.33%    passed     93.54%
+ 203  Butyriboletus_203   12.87%    passed     96.93%
+ 204  Butyriboletus_204    2.99%    passed     92.25%
+ 205  Butyriboletus_205   19.31%    passed     82.65%
+ 206  Butyriboletus_206   10.18%    passed     90.87%
+ 207  Butyriboletus_207    0.00%    passed     90.48%
+ 208  Butyriboletus_208    2.69%    passed     98.67%
+ 209  Butyriboletus_209    0.60%    passed     97.98%
+ 210  Butyriboletus_210    9.43%    passed     92.51%
+ 211  Butyriboletus_211    0.30%    passed     99.49%
+ 212  Butyriboletus_212   19.16%    passed     96.16%
+ 213  Butyriboletus_213    7.78%    passed     99.66%
+ 214  Butyriboletus_214   21.26%    passed     81.98%
+ 215  Butyriboletus_215   17.66%    passed     93.18%
+ 216  Butyriboletus_216   12.87%    passed     98.86%
+ 217  Butyriboletus_217   12.87%    passed     99.07%
+ 218  Butyriboletus_218    0.45%    passed     96.15%
+ 219  Butyriboletus_219    3.59%    passed     98.80%
+ 220  Butyriboletus_220    2.69%    passed     95.19%
+ 221  Butyriboletus_221    3.59%    passed     95.16%
+ 222  Butyriboletus_222    4.64%    passed     96.03%
+ 223  Butyriboletus_223    0.15%    passed     95.06%
+ 224  Butyriboletus_224    0.15%    passed     92.52%
+ 225  Butyriboletus_225    4.04%    passed     90.65%
+ 226  Butyriboletus_226    1.80%    passed     85.88%
+ 227  Butyriboletus_227    1.80%    passed     82.07%
+ 228  Butyriboletus_228    1.80%    passed     78.78%
+ 229  Butyriboletus_229    0.00%    passed     94.70%
+ 230  Butyriboletus_230    0.00%    passed     95.05%
+ 231  Butyriboletus_231    0.00%    passed     95.05%
+ 232  Butyriboletus_232    0.15%    passed     87.59%
+ 233  Butyriboletus_233    0.15%    passed     83.14%
+ 234  Butyriboletus_234    0.15%    passed     84.42%
+ 235  Butyriboletus_235    8.38%    passed     47.25%
+ 236  Butyriboletus_236    9.43%    passed     94.52%
+ 237  Butyriboletus_237    9.43%    passed     94.52%
+ 238  Butyriboletus_238    9.73%    passed     93.12%
+ 239  Butyriboletus_239    9.43%    passed     94.52%
+ 240  Butyriboletus_240    9.43%    passed     95.08%
+ 241  Butyriboletus_241    9.43%    passed     94.52%
+ 242  Butyriboletus_242    0.00%    passed     96.71%
+ 243  Butyriboletus_243    0.00%    passed     94.65%
+ 244  Butyriboletus_244    0.00%    passed     96.18%
+ 245  Butyriboletus_245    0.15%    passed     87.59%
+ 246  Butyriboletus_246    0.15%    passed     87.59%
+ 247  Butyriboletus_247    3.14%    passed     10.51%
+ 248  Butyriboletus_248    2.99%    passed     10.29%
+ 249  Butyriboletus_249    0.00%    passed     95.05%
+ 250  Butyriboletus_250    1.95%    passed     89.72%
+ 251  Butyriboletus_251    3.29%    passed     92.35%
+ 252  Butyriboletus_252   10.63%    passed     50.92%
+ 253  Butyriboletus_253   11.23%    passed     77.51%
+ 254  Butyriboletus_254   11.68%    passed     92.41%
+ 255  Butyriboletus_255    2.69%    passed     99.20%
+ 256  Butyriboletus_256    2.69%    passed     96.83%
+ 257  Butyriboletus_257   51.35%    passed     96.16%
+WARNING: 4 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                6.14%  1 sequences failed composition chi2 test (p-value<5%; df=3)
+NOTE: Butyriboletus_004 is identical to Butyriboletus_003 but kept for subsequent analysis
+NOTE: Butyriboletus_046 is identical to Butyriboletus_015 but kept for subsequent analysis
+NOTE: Butyriboletus_090 is identical to Butyriboletus_016 but kept for subsequent analysis
+NOTE: Butyriboletus_091 is identical to Butyriboletus_018 but kept for subsequent analysis
+NOTE: Butyriboletus_022 is identical to Butyriboletus_021 but kept for subsequent analysis
+NOTE: Butyriboletus_164 is identical to Butyriboletus_027 but kept for subsequent analysis
+NOTE: Butyriboletus_035 is identical to Butyriboletus_028 but kept for subsequent analysis
+NOTE: Butyriboletus_033 is identical to Butyriboletus_032 but kept for subsequent analysis
+NOTE: Butyriboletus_038 is identical to Butyriboletus_036 but kept for subsequent analysis
+NOTE: Butyriboletus_126 is identical to Butyriboletus_043 but kept for subsequent analysis
+NOTE: Butyriboletus_065 is identical to Butyriboletus_047 but kept for subsequent analysis
+NOTE: Butyriboletus_061 is identical to Butyriboletus_050 but kept for subsequent analysis
+NOTE: Butyriboletus_125 is identical to Butyriboletus_055 but kept for subsequent analysis
+NOTE: Butyriboletus_114 is identical to Butyriboletus_070 but kept for subsequent analysis
+NOTE: Butyriboletus_103 is identical to Butyriboletus_071 but kept for subsequent analysis
+NOTE: Butyriboletus_230 is identical to Butyriboletus_072 but kept for subsequent analysis
+NOTE: Butyriboletus_082 is identical to Butyriboletus_073 but kept for subsequent analysis
+NOTE: Butyriboletus_097 is identical to Butyriboletus_095 but kept for subsequent analysis
+NOTE: Butyriboletus_143 is identical to Butyriboletus_106 but kept for subsequent analysis
+NOTE: Butyriboletus_137 is identical to Butyriboletus_108 but kept for subsequent analysis
+NOTE: Butyriboletus_120 is identical to Butyriboletus_119 but kept for subsequent analysis
+NOTE: Butyriboletus_214 is identical to Butyriboletus_127 but kept for subsequent analysis
+NOTE: Butyriboletus_174 is identical to Butyriboletus_128 but kept for subsequent analysis
+NOTE: Butyriboletus_178 is identical to Butyriboletus_129 but kept for subsequent analysis
+NOTE: Butyriboletus_199 is identical to Butyriboletus_130 but kept for subsequent analysis
+NOTE: Butyriboletus_187 is identical to Butyriboletus_131 but kept for subsequent analysis
+NOTE: Butyriboletus_153 is identical to Butyriboletus_136 but kept for subsequent analysis
+NOTE: Butyriboletus_166 is identical to Butyriboletus_144 but kept for subsequent analysis
+NOTE: Butyriboletus_150 is identical to Butyriboletus_149 but kept for subsequent analysis
+NOTE: Butyriboletus_161 is identical to Butyriboletus_160 but kept for subsequent analysis
+Checking for duplicate sequences: done in 0.00139931 secs using 9.576% CPU
+Identifying sites to remove: done in 0.00188825 secs using 37.02% CPU
+NOTE: 28 identical sequences (see below) will be ignored for subsequent analysis
+NOTE: Butyriboletus_005 (identical to Butyriboletus_003) is ignored but added at the end
+NOTE: Butyriboletus_042 (identical to Butyriboletus_003) is ignored but added at the end
+NOTE: Butyriboletus_101 (identical to Butyriboletus_016) is ignored but added at the end
+NOTE: Butyriboletus_102 (identical to Butyriboletus_016) is ignored but added at the end
+NOTE: Butyriboletus_112 (identical to Butyriboletus_016) is ignored but added at the end
+NOTE: Butyriboletus_228 (identical to Butyriboletus_016) is ignored but added at the end
+NOTE: Butyriboletus_165 (identical to Butyriboletus_027) is ignored but added at the end
+NOTE: Butyriboletus_039 (identical to Butyriboletus_036) is ignored but added at the end
+NOTE: Butyriboletus_040 (identical to Butyriboletus_036) is ignored but added at the end
+NOTE: Butyriboletus_142 (identical to Butyriboletus_043) is ignored but added at the end
+NOTE: Butyriboletus_177 (identical to Butyriboletus_043) is ignored but added at the end
+NOTE: Butyriboletus_115 (identical to Butyriboletus_070) is ignored but added at the end
+NOTE: Butyriboletus_104 (identical to Butyriboletus_071) is ignored but added at the end
+NOTE: Butyriboletus_105 (identical to Butyriboletus_071) is ignored but added at the end
+NOTE: Butyriboletus_111 (identical to Butyriboletus_071) is ignored but added at the end
+NOTE: Butyriboletus_113 (identical to Butyriboletus_071) is ignored but added at the end
+NOTE: Butyriboletus_121 (identical to Butyriboletus_071) is ignored but added at the end
+NOTE: Butyriboletus_232 (identical to Butyriboletus_071) is ignored but added at the end
+NOTE: Butyriboletus_245 (identical to Butyriboletus_071) is ignored but added at the end
+NOTE: Butyriboletus_246 (identical to Butyriboletus_071) is ignored but added at the end
+NOTE: Butyriboletus_231 (identical to Butyriboletus_072) is ignored but added at the end
+NOTE: Butyriboletus_249 (identical to Butyriboletus_072) is ignored but added at the end
+NOTE: Butyriboletus_156 (identical to Butyriboletus_073) is ignored but added at the end
+NOTE: Butyriboletus_236 (identical to Butyriboletus_144) is ignored but added at the end
+NOTE: Butyriboletus_237 (identical to Butyriboletus_144) is ignored but added at the end
+NOTE: Butyriboletus_239 (identical to Butyriboletus_144) is ignored but added at the end
+NOTE: Butyriboletus_241 (identical to Butyriboletus_144) is ignored but added at the end
+NOTE: Butyriboletus_162 (identical to Butyriboletus_160) is ignored but added at the end
+Alignment was printed to data/packages/ITS/Butyriboletus/ref.uniqueseq.phy
+
+For your convenience alignment with unique sequences printed to data/packages/ITS/Butyriboletus/ref.uniqueseq.phy
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.034 seconds
+Measuring multi-threading efficiency up to 72 CPU cores
+Increase to 10 rounds for branch lengths
+201 trees examined
+Threads: 1 / Time: 72.047 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -28184
+Threads: 2 / Time: 51.291 sec / Speedup: 1.405 / Efficiency: 70% / LogL: -28184
+Threads: 3 / Time: 45.972 sec / Speedup: 1.567 / Efficiency: 52% / LogL: -28184
+Threads: 4 / Time: 44.785 sec / Speedup: 1.609 / Efficiency: 40% / LogL: -28184
+Determining AUTO threadcount: done in 214.097 secs using 226.7% CPU
+BEST NUMBER OF THREADS: 3
+
+Perform fast likelihood tree search using GTR+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Optimizing NNI: done in 0.583945 secs using 294.2% CPU
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -8687.859
+Optimal log-likelihood: -8687.645
+Rate parameters:  A-C: 1.43400  A-G: 5.75215  A-T: 1.54760  C-G: 1.34921  C-T: 6.67527  G-T: 1.00000
+Base frequencies:  A: 0.236  C: 0.222  G: 0.250  T: 0.292
+Proportion of invariable sites: 0.205
+Gamma shape alpha: 0.812
+Parameters optimization took 1 rounds (0.104 sec)
+Time for fast ML tree search: 1.234 seconds
+
+NOTE: ModelFinder requires 40 MB RAM!
+ModelFinder will test up to 968 DNA models (sample size: 668 epsilon: 0.100) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+  1  JC            9654.193     455 20218.386    22175.744    22267.837
+  2  JC+I          9250.113     456 19412.226    21387.506    21466.182
+  3  JC+G4         9103.656     456 19119.311    21094.591    21173.267
+  4  JC+I+G4       9091.631     457 19097.262    21090.652    21155.722
+  5  JC+R2         9146.188     457 19206.376    21199.766    21264.835
+  6  JC+R3         9082.882     459 19083.764    21113.956    21151.232
+  7  JC+R4         9082.617     461 19087.235    21155.021    21163.712
+ 14  JC+I+R2       9096.265     458 19108.531    21120.224    21171.495
+ 15  JC+I+R3       9083.643     460 19087.286    21136.175    21159.259
+ 16  JC+I+R4       9083.607     462 19091.213    21178.101    21172.195
+ 26  JC+I+G4       9091.631     457 19097.262    21090.652    21155.722
+ 28  JC+R3         9082.882     459 19083.764    21113.956    21151.232
+ 37  JC+I+R3       9083.643     460 19087.286    21136.175    21159.259
+ 48  F81+I+G4      9091.535     457 19097.070    21090.461    21155.530
+ 50  F81+R3        9082.623     459 19083.246    21113.438    21150.714
+ 59  F81+I+R3      9083.632     460 19087.263    21136.152    21159.236
+ 70  F81+F+I+G4    9079.979     460 19079.958    21128.847    21151.930
+ 72  F81+F+R3      9071.064     462 19066.128    21153.016    21147.109
+ 81  F81+F+I+R3    9072.290     463 19070.580    21176.777    21156.066
+ 92  K2P+I+G4      8705.005     458 18326.011    20337.705    20388.975
+ 94  K2P+R3        8694.671     460 18309.343    20358.231    20381.315
+103  K2P+I+R3      8695.871     461 18313.742    20381.528    20390.218
+114  K2P+I+G4      8705.005     458 18326.011    20337.705    20388.975
+116  K2P+R3        8694.671     460 18309.343    20358.231    20381.315
+125  K2P+I+R3      8695.871     461 18313.742    20381.528    20390.218
+136  HKY+I+G4      8705.018     458 18326.035    20337.729    20388.999
+138  HKY+R3        8694.588     460 18309.177    20358.066    20381.149
+147  HKY+I+R3      8695.850     461 18313.699    20381.486    20390.176
+158  HKY+F+I+G4    8692.558     461 18307.116    20374.902    20383.593
+160  HKY+F+R3      8681.926     463 18289.852    20396.048    20375.337
+169  HKY+F+I+R3    8683.623     464 18295.247    20420.961    20385.237
+180  TNe+I+G4      8701.905     459 18321.810    20352.002    20389.278
+182  TNe+R3        8690.781     461 18303.562    20371.349    20380.039
+191  TNe+I+R3      8692.256     462 18308.513    20395.401    20389.494
+202  TNe+I+G4      8701.905     459 18321.810    20352.002    20389.278
+204  TNe+R3        8690.781     461 18303.562    20371.349    20380.039
+213  TNe+I+R3      8692.256     462 18308.513    20395.401    20389.494
+224  TN+I+G4       8701.913     459 18321.826    20352.018    20389.294
+226  TN+R3         8690.732     461 18303.465    20371.251    20379.942
+235  TN+I+R3       8692.233     462 18308.466    20395.354    20389.447
+246  TN+F+I+G4     8691.565     462 18307.130    20394.018    20388.111
+248  TN+F+R3       8680.284     464 18288.567    20414.282    20378.557
+257  TN+F+I+R3     8682.145     465 18294.290    20439.736    20388.784
+268  K3P+I+G4      8703.966     459 18325.931    20356.123    20393.399
+270  K3P+R3        8693.425     461 18308.850    20376.636    20385.326
+279  K3P+I+R3      8694.608     462 18313.216    20400.104    20394.197
+290  K3P+I+G4      8703.966     459 18325.931    20356.123    20393.399
+292  K3P+R3        8693.425     461 18308.850    20376.636    20385.326
+301  K3P+I+R3      8694.608     462 18313.216    20400.104    20394.197
+312  K3Pu+I+G4     8703.968     459 18325.936    20356.128    20393.404
+314  K3Pu+R3       8693.363     461 18308.727    20376.513    20385.204
+323  K3Pu+I+R3     8694.593     462 18313.186    20400.074    20394.167
+334  K3Pu+F+I+G4   8690.995     462 18305.990    20392.878    20386.971
+336  K3Pu+F+R3     8679.947     464 18287.893    20413.607    20377.883
+345  K3Pu+F+I+R3   8681.661     465 18293.322    20438.768    20387.816
+356  TPM2+I+G4     8703.815     459 18325.630    20355.822    20393.098
+358  TPM2+R3       8693.167     461 18308.334    20376.120    20384.811
+367  TPM2+I+R3     8694.252     462 18312.503    20399.391    20393.484
+378  TPM2+I+G4     8703.815     459 18325.630    20355.822    20393.098
+380  TPM2+R3       8693.167     461 18308.334    20376.120    20384.811
+389  TPM2+I+R3     8694.252     462 18312.503    20399.391    20393.484
+400  TPM2u+I+G4    8703.827     459 18325.653    20355.845    20393.121
+402  TPM2u+R3      8693.116     461 18308.232    20376.018    20384.709
+411  TPM2u+I+R3    8694.237     462 18312.474    20399.362    20393.455
+422  TPM2u+F+I+G4  8690.336     462 18304.671    20391.559    20385.652
+424  TPM2u+F+R3    8679.265     464 18286.530    20412.245    20376.520
+433  TPM2u+F+I+R3  8680.784     465 18291.568    20437.014    20386.062
+444  TPM3+I+G4     8704.293     459 18326.585    20356.778    20394.054
+446  TPM3+R3       8693.850     461 18309.701    20377.487    20386.178
+455  TPM3+I+R3     8694.865     462 18313.729    20400.617    20394.710
+466  TPM3+I+G4     8704.293     459 18326.585    20356.778    20394.054
+468  TPM3+R3       8693.850     461 18309.701    20377.487    20386.178
+477  TPM3+I+R3     8694.865     462 18313.729    20400.617    20394.710
+488  TPM3u+I+G4    8704.296     459 18326.593    20356.785    20394.061
+490  TPM3u+R3      8693.796     461 18309.591    20377.378    20386.068
+499  TPM3u+I+R3    8694.852     462 18313.705    20400.593    20394.686
+510  TPM3u+F+I+G4  8692.129     462 18308.257    20395.145    20389.238
+512  TPM3u+F+R3    8681.283     464 18290.567    20416.281    20380.556
+521  TPM3u+F+I+R3  8682.720     465 18295.440    20440.885    20389.934
+532  TIMe+I+G4     8700.903     460 18321.806    20370.695    20393.778
+534  TIMe+R3       8689.532     462 18303.065    20389.953    20384.046
+543  TIMe+I+R3     8690.735     463 18307.471    20413.667    20392.956
+554  TIMe+I+G4     8700.903     460 18321.806    20370.695    20393.778
+556  TIMe+R3       8689.532     462 18303.065    20389.953    20384.046
+565  TIMe+I+R3     8690.735     463 18307.471    20413.667    20392.956
+576  TIM+I+G4      8700.911     460 18321.822    20370.710    20393.794
+578  TIM+R3        8689.510     462 18303.020    20389.908    20384.001
+587  TIM+I+R3      8690.720     463 18307.440    20413.636    20392.925
+598  TIM+F+I+G4    8689.953     463 18305.905    20412.101    20391.391
+600  TIM+F+R3      8678.392     465 18286.783    20432.229    20381.277
+609  TIM+F+I+R3    8680.323     466 18292.646    20458.039    20391.644
+620  TIM2e+I+G4    8700.591     460 18321.181    20370.070    20393.154
+622  TIM2e+R3      8689.071     462 18302.143    20389.030    20383.124
+631  TIM2e+I+R3    8690.233     463 18306.467    20412.663    20391.952
+642  TIM2e+I+G4    8700.591     460 18321.181    20370.070    20393.154
+644  TIM2e+R3      8689.071     462 18302.143    20389.030    20383.124
+653  TIM2e+I+R3    8690.233     463 18306.467    20412.663    20391.952
+664  TIM2+I+G4     8700.599     460 18321.197    20370.086    20393.170
+666  TIM2+R3       8689.062     462 18302.124    20389.012    20383.105
+675  TIM2+I+R3     8690.219     463 18306.439    20412.635    20391.924
+686  TIM2+F+I+G4   8689.185     463 18304.369    20410.566    20389.855
+688  TIM2+F+R3     8677.601     465 18285.202    20430.648    20379.696
+697  TIM2+F+I+R3   8679.227     466 18290.454    20455.847    20389.452
+708  TIM3e+I+G4    8701.187     460 18322.374    20371.263    20394.347
+710  TIM3e+R3      8689.866     462 18303.731    20390.619    20384.712
+719  TIM3e+I+R3    8690.983     463 18307.967    20414.163    20393.452
+730  TIM3e+I+G4    8701.187     460 18322.374    20371.263    20394.347
+732  TIM3e+R3      8689.866     462 18303.731    20390.619    20384.712
+741  TIM3e+I+R3    8690.983     463 18307.967    20414.163    20393.452
+752  TIM3+I+G4     8701.193     460 18322.387    20371.276    20394.359
+754  TIM3+R3       8689.860     462 18303.719    20390.607    20384.700
+763  TIM3+I+R3     8690.969     463 18307.938    20414.134    20393.424
+774  TIM3+F+I+G4   8691.040     463 18308.079    20414.275    20393.565
+776  TIM3+F+R3     8679.842     465 18289.684    20435.130    20384.178
+785  TIM3+F+I+R3   8681.306     466 18294.611    20460.004    20393.610
+796  TVMe+I+G4     8701.810     461 18325.620    20393.406    20402.096
+798  TVMe+R3       8691.097     463 18308.195    20414.391    20393.680
+807  TVMe+I+R3     8691.949     464 18311.899    20437.613    20401.889
+818  TVMe+I+G4     8701.810     461 18325.620    20393.406    20402.096
+820  TVMe+R3       8691.097     463 18308.195    20414.391    20393.680
+829  TVMe+I+R3     8691.949     464 18311.899    20437.613    20401.889
+840  TVM+I+G4      8701.817     461 18325.634    20393.420    20402.111
+842  TVM+R3        8691.066     463 18308.133    20414.329    20393.618
+851  TVM+I+R3      8691.938     464 18311.877    20437.591    20401.866
+862  TVM+F+I+G4    8688.564     464 18305.129    20430.843    20395.118
+864  TVM+F+R3      8677.450     466 18286.900    20452.293    20385.899
+873  TVM+F+I+R3    8679.061     467 18292.122    20477.682    20395.624
+884  SYM+I+G4      8698.541     462 18321.082    20407.970    20402.063
+886  SYM+R3        8687.052     464 18302.105    20427.819    20392.095
+895  SYM+I+R3      8688.098     465 18306.195    20451.641    20400.689
+906  SYM+I+G4      8698.541     462 18321.082    20407.970    20402.063
+908  SYM+R3        8687.052     464 18302.105    20427.819    20392.095
+917  SYM+I+R3      8688.098     465 18306.195    20451.641    20400.689
+928  GTR+I+G4      8698.551     462 18321.101    20407.989    20402.083
+930  GTR+R3        8687.046     464 18302.092    20427.806    20392.081
+939  GTR+I+R3      8688.088     465 18306.176    20451.621    20400.670
+950  GTR+F+I+G4    8687.375     465 18304.749    20450.195    20399.243
+952  GTR+F+R3      8675.784     467 18285.569    20471.129    20389.071
+961  GTR+F+I+R3    8677.546     468 18291.092    20497.041    20399.098
+Akaike Information Criterion:           TIM2+F+R3
+Corrected Akaike Information Criterion: K2P+I+G4
+Bayesian Information Criterion:         HKY+F+R3
+Best-fit model: HKY+F+R3 chosen according to BIC
+
+All model information printed to data/packages/ITS/Butyriboletus/ref.model.gz
+CPU time for ModelFinder: 587.030 seconds (0h:9m:47s)
+Wall-clock time for ModelFinder: 248.287 seconds (0h:4m:8s)
+Generating 1000 samples for ultrafast bootstrap (seed: 760536)...
+
+NOTE: 13 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -8681.785
+2. Current log-likelihood: -8681.642
+Optimal log-likelihood: -8681.604
+Rate parameters:  A-C: 1.00000  A-G: 4.75719  A-T: 1.00000  C-G: 1.00000  C-T: 4.75719  G-T: 1.00000
+Base frequencies:  A: 0.236  C: 0.222  G: 0.250  T: 0.292
+Site proportion and rates:  (0.487,0.090) (0.395,1.202) (0.118,4.068)
+Parameters optimization took 2 rounds (0.210 sec)
+Wrote distance file to... 
+Computing ML distances based on estimated model parameters...
+Calculating distance matrix: done in 0.0892942 secs using 299.7% CPU
+Computing ML distances took 0.089667 sec (of wall-clock time) 0.268080 sec (of CPU time)
+Setting up auxiliary I and S matrices: done in 0.00155653 secs using 163.1% CPU
+Constructing RapidNJ tree: done in 0.00528737 secs using 213.1% CPU
+Computing RapidNJ tree took 0.006954 sec (of wall-clock time) 0.013921 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -8789.980
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 3.526 second
+Computing log-likelihood of 98 initial trees ... 2.071 seconds
+Current best score: -8681.604
+
+Do NNI search on 20 best initial trees
+Optimizing NNI: done in 0.318919 secs using 296.5% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -8680.421
+Optimizing NNI: done in 1.30476 secs using 296.7% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 2: -8678.335
+Optimizing NNI: done in 1.10884 secs using 296.6% CPU
+Optimizing NNI: done in 1.25436 secs using 297.4% CPU
+Optimizing NNI: done in 1.38471 secs using 297.7% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 5: -8677.240
+Optimizing NNI: done in 1.02517 secs using 297.9% CPU
+Optimizing NNI: done in 1.09332 secs using 297% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 7: -8676.559
+Optimizing NNI: done in 1.17061 secs using 297.8% CPU
+Optimizing NNI: done in 1.00128 secs using 297.8% CPU
+Optimizing NNI: done in 1.07402 secs using 297% CPU
+Iteration 10 / LogL: -8683.175 / Time: 0h:4m:25s
+Optimizing NNI: done in 1.18802 secs using 298.2% CPU
+Optimizing NNI: done in 1.13589 secs using 297% CPU
+Optimizing NNI: done in 1.26465 secs using 297.5% CPU
+Optimizing NNI: done in 1.20762 secs using 297.1% CPU
+Optimizing NNI: done in 1.09889 secs using 297.2% CPU
+Optimizing NNI: done in 1.24123 secs using 297.4% CPU
+Optimizing NNI: done in 1.09324 secs using 297.3% CPU
+Optimizing NNI: done in 1.09816 secs using 296.9% CPU
+Optimizing NNI: done in 1.05603 secs using 297.1% CPU
+Optimizing NNI: done in 1.18178 secs using 297.8% CPU
+Iteration 20 / LogL: -8685.763 / Time: 0h:4m:37s
+Finish initializing candidate tree set (20)
+Current best tree score: -8676.559 / CPU time: 28.439
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Optimizing NNI: done in 1.00415 secs using 295.2% CPU
+Optimizing NNI: done in 1.1497 secs using 296.7% CPU
+Optimizing NNI: done in 1.3075 secs using 295.4% CPU
+Optimizing NNI: done in 1.26236 secs using 296.7% CPU
+Optimizing NNI: done in 1.06037 secs using 296.8% CPU
+Optimizing NNI: done in 1.29073 secs using 297.1% CPU
+Optimizing NNI: done in 0.864744 secs using 294.8% CPU
+Optimizing NNI: done in 1.48651 secs using 296.6% CPU
+Optimizing NNI: done in 1.15492 secs using 296.8% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 29: -8676.346
+Optimizing NNI: done in 1.44627 secs using 296.1% CPU
+Iteration 30 / LogL: -8679.699 / Time: 0h:4m:49s (0h:2m:21s left)
+Optimizing NNI: done in 0.9202 secs using 294.3% CPU
+Optimizing NNI: done in 1.27958 secs using 295.7% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 32: -8675.501
+Optimizing NNI: done in 0.963674 secs using 296.4% CPU
+Optimizing NNI: done in 0.813048 secs using 295.9% CPU
+Optimizing NNI: done in 1.29629 secs using 296.6% CPU
+Optimizing NNI: done in 0.94378 secs using 295.6% CPU
+Optimizing NNI: done in 0.87452 secs using 296.9% CPU
+Optimizing NNI: done in 1.14158 secs using 295.8% CPU
+Optimizing NNI: done in 1.03062 secs using 296% CPU
+Optimizing NNI: done in 0.899681 secs using 296.6% CPU
+Iteration 40 / LogL: -8676.672 / Time: 0h:5m:0s (0h:2m:2s left)
+Optimizing NNI: done in 0.80957 secs using 296% CPU
+Optimizing NNI: done in 1.07799 secs using 296.3% CPU
+Optimizing NNI: done in 1.05641 secs using 295.2% CPU
+Optimizing NNI: done in 1.1256 secs using 296.2% CPU
+Optimizing NNI: done in 1.32778 secs using 296.1% CPU
+Optimizing NNI: done in 0.549518 secs using 294.6% CPU
+Optimizing NNI: done in 1.15352 secs using 296.2% CPU
+Optimizing NNI: done in 1.08981 secs using 296.9% CPU
+Optimizing NNI: done in 0.735605 secs using 295.8% CPU
+Optimizing NNI: done in 1.25605 secs using 295.8% CPU
+Iteration 50 / LogL: -8676.347 / Time: 0h:5m:10s (0h:1m:44s left)
+Log-likelihood cutoff on original alignment: -8713.670
+Optimizing NNI: done in 1.03347 secs using 296.8% CPU
+Optimizing NNI: done in 0.855525 secs using 295.1% CPU
+Optimizing NNI: done in 1.08598 secs using 296.7% CPU
+Optimizing NNI: done in 1.02268 secs using 295.6% CPU
+Optimizing NNI: done in 1.28327 secs using 296.9% CPU
+Optimizing NNI: done in 1.40497 secs using 295.5% CPU
+Optimizing NNI: done in 0.733826 secs using 293.8% CPU
+Optimizing NNI: done in 1.46282 secs using 295.4% CPU
+Optimizing NNI: done in 1.28423 secs using 296.4% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 59: -8674.290
+Optimizing NNI: done in 0.738786 secs using 292.7% CPU
+Iteration 60 / LogL: -8939.261 / Time: 0h:5m:22s (0h:2m:4s left)
+Optimizing NNI: done in 1.1138 secs using 295.9% CPU
+Optimizing NNI: done in 0.931325 secs using 295.4% CPU
+Optimizing NNI: done in 1.16664 secs using 295.6% CPU
+Optimizing NNI: done in 1.45079 secs using 296.3% CPU
+Optimizing NNI: done in 1.0918 secs using 295.6% CPU
+Optimizing NNI: done in 0.88727 secs using 293.3% CPU
+Optimizing NNI: done in 1.28106 secs using 297.2% CPU
+Optimizing NNI: done in 1.11349 secs using 296.9% CPU
+Optimizing NNI: done in 0.911757 secs using 295.9% CPU
+Optimizing NNI: done in 1.281 secs using 295.8% CPU
+Iteration 70 / LogL: -8675.432 / Time: 0h:5m:34s (0h:1m:50s left)
+Optimizing NNI: done in 0.574322 secs using 294% CPU
+Optimizing NNI: done in 0.625166 secs using 294.8% CPU
+Optimizing NNI: done in 1.20195 secs using 296.6% CPU
+Optimizing NNI: done in 1.11991 secs using 296.8% CPU
+Optimizing NNI: done in 0.645365 secs using 295.7% CPU
+Optimizing NNI: done in 0.578252 secs using 293% CPU
+Optimizing NNI: done in 1.19407 secs using 295.4% CPU
+Optimizing NNI: done in 1.03957 secs using 296.2% CPU
+Optimizing NNI: done in 1.30356 secs using 295.8% CPU
+Optimizing NNI: done in 0.95268 secs using 295.8% CPU
+Iteration 80 / LogL: -8675.716 / Time: 0h:5m:43s (0h:1m:35s left)
+Optimizing NNI: done in 1.05736 secs using 296.8% CPU
+Optimizing NNI: done in 0.914519 secs using 293.9% CPU
+Optimizing NNI: done in 1.13545 secs using 296.7% CPU
+Optimizing NNI: done in 0.409288 secs using 295.1% CPU
+Optimizing NNI: done in 1.10795 secs using 295.7% CPU
+Optimizing NNI: done in 1.10265 secs using 297.2% CPU
+Optimizing NNI: done in 0.997467 secs using 296.2% CPU
+Optimizing NNI: done in 1.105 secs using 295.1% CPU
+Optimizing NNI: done in 1.25197 secs using 296.2% CPU
+Optimizing NNI: done in 0.956079 secs using 294.5% CPU
+Iteration 90 / LogL: -8674.408 / Time: 0h:5m:53s (0h:1m:21s left)
+Optimizing NNI: done in 1.02 secs using 296.6% CPU
+Optimizing NNI: done in 0.773631 secs using 295.1% CPU
+Optimizing NNI: done in 0.845119 secs using 295.7% CPU
+Optimizing NNI: done in 1.00291 secs using 296.6% CPU
+Optimizing NNI: done in 1.48739 secs using 295% CPU
+Optimizing NNI: done in 1.21206 secs using 295.8% CPU
+Optimizing NNI: done in 1.16137 secs using 296.2% CPU
+Optimizing NNI: done in 0.9482 secs using 295.2% CPU
+Optimizing NNI: done in 1.29417 secs using 296.9% CPU
+Optimizing NNI: done in 1.49325 secs using 295.5% CPU
+Iteration 100 / LogL: -8677.338 / Time: 0h:6m:5s (0h:1m:9s left)
+Log-likelihood cutoff on original alignment: -8713.670
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.992
+Optimizing NNI: done in 1.39068 secs using 296.4% CPU
+Optimizing NNI: done in 2.16387 secs using 296.8% CPU
+Optimizing NNI: done in 1.19518 secs using 296.1% CPU
+Optimizing NNI: done in 1.33805 secs using 296.5% CPU
+Optimizing NNI: done in 1.24828 secs using 295.6% CPU
+Optimizing NNI: done in 1.7721 secs using 295.9% CPU
+Optimizing NNI: done in 0.841974 secs using 294.2% CPU
+Optimizing NNI: done in 1.47983 secs using 296.1% CPU
+Optimizing NNI: done in 1.3122 secs using 295.9% CPU
+Optimizing NNI: done in 1.12932 secs using 296.6% CPU
+Iteration 110 / LogL: -8674.782 / Time: 0h:6m:20s (0h:1m:49s left)
+Optimizing NNI: done in 1.23265 secs using 296.4% CPU
+Optimizing NNI: done in 0.935707 secs using 297.3% CPU
+Optimizing NNI: done in 1.13183 secs using 296.7% CPU
+Optimizing NNI: done in 0.976652 secs using 295.7% CPU
+Optimizing NNI: done in 0.84716 secs using 295.5% CPU
+Optimizing NNI: done in 1.01666 secs using 296.1% CPU
+Optimizing NNI: done in 0.600646 secs using 292.8% CPU
+Optimizing NNI: done in 0.959524 secs using 295.4% CPU
+Optimizing NNI: done in 0.95653 secs using 297.5% CPU
+Optimizing NNI: done in 1.0721 secs using 296.7% CPU
+Iteration 120 / LogL: -8674.786 / Time: 0h:6m:30s (0h:1m:35s left)
+Optimizing NNI: done in 0.866164 secs using 294.8% CPU
+Optimizing NNI: done in 0.86738 secs using 296% CPU
+Optimizing NNI: done in 0.985514 secs using 296.1% CPU
+Optimizing NNI: done in 0.972405 secs using 296.9% CPU
+Optimizing NNI: done in 1.43495 secs using 296.8% CPU
+Optimizing NNI: done in 0.615527 secs using 295.4% CPU
+Optimizing NNI: done in 1.23023 secs using 295.7% CPU
+Optimizing NNI: done in 1.21534 secs using 295.2% CPU
+Optimizing NNI: done in 0.7641 secs using 295.1% CPU
+Optimizing NNI: done in 0.970547 secs using 297.9% CPU
+Iteration 130 / LogL: -8679.192 / Time: 0h:6m:40s (0h:1m:22s left)
+Optimizing NNI: done in 0.829951 secs using 296.3% CPU
+Optimizing NNI: done in 1.25165 secs using 297.5% CPU
+Optimizing NNI: done in 1.08096 secs using 296.5% CPU
+Optimizing NNI: done in 1.07626 secs using 296.4% CPU
+Optimizing NNI: done in 0.963719 secs using 295% CPU
+Optimizing NNI: done in 0.775607 secs using 295% CPU
+Optimizing NNI: done in 0.908603 secs using 295.3% CPU
+Optimizing NNI: done in 0.672917 secs using 295.7% CPU
+Optimizing NNI: done in 0.999121 secs using 296.6% CPU
+Optimizing NNI: done in 1.06267 secs using 295.9% CPU
+Iteration 140 / LogL: -8687.988 / Time: 0h:6m:50s (0h:1m:10s left)
+Optimizing NNI: done in 1.38834 secs using 296.8% CPU
+Optimizing NNI: done in 1.0671 secs using 296.5% CPU
+Optimizing NNI: done in 1.06561 secs using 296.6% CPU
+Optimizing NNI: done in 0.916725 secs using 296.1% CPU
+Optimizing NNI: done in 1.00408 secs using 296.7% CPU
+Optimizing NNI: done in 0.969974 secs using 295.3% CPU
+Optimizing NNI: done in 1.06658 secs using 296.7% CPU
+Optimizing NNI: done in 1.38172 secs using 297% CPU
+Optimizing NNI: done in 1.02333 secs using 295.1% CPU
+Optimizing NNI: done in 0.896558 secs using 296.1% CPU
+Iteration 150 / LogL: -8674.368 / Time: 0h:7m:1s (0h:0m:58s left)
+Log-likelihood cutoff on original alignment: -8713.670
+Optimizing NNI: done in 1.15345 secs using 295.8% CPU
+Optimizing NNI: done in 1.18308 secs using 295.4% CPU
+Optimizing NNI: done in 0.949608 secs using 296.5% CPU
+Optimizing NNI: done in 0.908375 secs using 296.4% CPU
+Optimizing NNI: done in 0.781534 secs using 294.2% CPU
+Optimizing NNI: done in 1.08851 secs using 295.1% CPU
+Optimizing NNI: done in 1.34546 secs using 296.4% CPU
+Optimizing NNI: done in 1.63052 secs using 295.9% CPU
+Optimizing NNI: done in 1.253 secs using 295.4% CPU
+Optimizing NNI: done in 1.08168 secs using 296.2% CPU
+Iteration 160 / LogL: -8689.537 / Time: 0h:7m:14s (0h:0m:46s left)
+TREE SEARCH COMPLETED AFTER 160 ITERATIONS / Time: 0h:7m:14s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -8674.290
+Optimal log-likelihood: -8674.280
+Rate parameters:  A-C: 1.00000  A-G: 4.77911  A-T: 1.00000  C-G: 1.00000  C-T: 4.77911  G-T: 1.00000
+Base frequencies:  A: 0.236  C: 0.222  G: 0.250  T: 0.292
+Site proportion and rates:  (0.492,0.087) (0.394,1.215) (0.114,4.190)
+Parameters optimization took 1 rounds (0.110 sec)
+BEST SCORE FOUND : -8674.280
+Creating bootstrap support values...
+Split supports printed to NEXUS file data/packages/ITS/Butyriboletus/ref.splits.nex
+Total tree length: 3.634
+
+Total number of iterations: 160
+CPU time used for tree search: 530.676 sec (0h:8m:50s)
+Wall-clock time used for tree search: 185.488 sec (0h:3m:5s)
+Total CPU time used: 1120.476 sec (0h:18m:40s)
+Total wall-clock time used: 435.240 sec (0h:7m:15s)
+
+Computing bootstrap consensus tree...
+Reading input file data/packages/ITS/Butyriboletus/ref.splits.nex...
+229 taxa and 2706 splits.
+Consensus tree written to data/packages/ITS/Butyriboletus/ref.contree
+Reading input trees file data/packages/ITS/Butyriboletus/ref.contree
+Log-likelihood of consensus tree: -8676.993
+
+Analysis results written to: 
+  IQ-TREE report:                data/packages/ITS/Butyriboletus/ref.iqtree
+  Maximum-likelihood tree:       data/packages/ITS/Butyriboletus/ref.treefile
+  Likelihood distances:          data/packages/ITS/Butyriboletus/ref.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          data/packages/ITS/Butyriboletus/ref.splits.nex
+  Consensus tree:                data/packages/ITS/Butyriboletus/ref.contree
+  Screen log file:               data/packages/ITS/Butyriboletus/ref.log
+
+Date and Time: Mon Aug 18 18:44:07 2025

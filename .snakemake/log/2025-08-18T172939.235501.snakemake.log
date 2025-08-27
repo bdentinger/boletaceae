@@ -1,0 +1,46 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 64
+Rules claiming more threads will be scaled down.
+Job stats:
+job           count
+----------  -------
+graft_its         1
+its_bridge        1
+qc_locus          1
+total             3
+
+Select jobs to execute...
+
+[Mon Aug 18 17:29:39 2025]
+rule qc_locus:
+    input: data/staging/ITS.gb
+    output: data/qc/ITS.cleaned.fasta
+    jobid: 38
+    reason: Missing output files: data/qc/ITS.cleaned.fasta
+    wildcards: locus=ITS
+    resources: tmpdir=/tmp
+
+[Mon Aug 18 17:29:43 2025]
+Finished job 38.
+1 of 3 steps (33%) done
+Select jobs to execute...
+
+[Mon Aug 18 17:29:43 2025]
+checkpoint its_bridge:
+    input: data/trees/backbone.rooted.pretty.newick, data/staging/taxon_map.tsv, data/qc/ITS.cleaned.fasta
+    output: data/packages/ITS/bridge.tsv, data/packages/ITS/genera.txt
+    jobid: 37
+    reason: Missing output files: data/packages/ITS/bridge.tsv; Input files updated by another job: data/qc/ITS.cleaned.fasta
+    resources: tmpdir=/tmp
+DAG of jobs will be updated after completion.
+
+[Mon Aug 18 17:29:43 2025]
+Finished job 37.
+2 of 3 steps (67%) done
+MissingInputException in rule its_build_ref in file /home/bdentinger/boletaceae/workflow/rules/its_place.smk, line 46:
+Missing input files for rule its_build_ref:
+    output: data/packages/ITS/Acyanoboletus/.built.ok, data/packages/ITS/Acyanoboletus/aln.masked.fasta, data/packages/ITS/Acyanoboletus/ref.treefile, data/packages/ITS/Acyanoboletus/ref.model
+    wildcards: genus=Acyanoboletus
+    affected files:
+        data/packages/ITS/split/Acyanoboletus.fasta

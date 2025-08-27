@@ -1,20 +1,27 @@
 #!/usr/bin/env python3.11
-import argparse, re
-from Bio import SeqIO
+import argparse, re, sys
 from pathlib import Path
+from Bio import SeqIO
 
-SAFE = re.compile(r"[^A-Za-z0-9]+")  # anything not [A-Za-z0-9] -> "_"
-
-def canon(s: str | None) -> str | None:
-    if not s: return None
+def norm(s: str | None) -> str | None:
+    if not s:
+        return None
     s = s.strip().lower()
-    s = SAFE.sub("_", s)       # convert / : - . space etc. to "_"
-    s = re.sub(r"_+", "_", s).strip("_")
-    return s or None
+    s = re.sub(r"[^\w\s:/.\-]+", "", s)     # drop weird punctuation, keep :, /, ., -
+    s = re.sub(r"[\s\-]+", "_", s)          # normalize spaces/hyphens to underscores
+    return s
 
-def too_generic(k: str) -> bool:
-    # e.g., "cfmr", "hkas" → too short or no digits
-    return (len(k) < 6) or (k.isalpha() and not any(ch.isdigit() for ch in k))
+def seq_is_defined(seq) -> bool:
+    """Return True if a Seq object has real bases, False if it's undefined/empty."""
+    if seq is None:
+        return False
+    try:
+        s = str(seq)
+    except Exception:
+        return False
+    if not s or set(s) <= {"?", "N", "n"}:   # undefined or all ambiguous
+        return False
+    return True
 
 def main():
     ap = argparse.ArgumentParser()
@@ -24,10 +31,14 @@ def main():
     args = ap.parse_args()
 
     out_recs = []
-    for rec in SeqIO.parse(args.inp, "genbank"):
-        gb_acc_raw = rec.id
-        gb_acc = canon(gb_acc_raw) or gb_acc_raw.lower()
+    skipped = 0
 
+    for rec in SeqIO.parse(args.inp, "genbank"):
+        if not seq_is_defined(rec.seq):
+            skipped += 1
+            continue
+
+        gb_acc = rec.id
         src = next((f for f in rec.features if f.type == 'source'), None)
         biosample = voucher = culture = isolate = strain = None
         if src:
@@ -35,47 +46,34 @@ def main():
                 if x.startswith("BioSample:"):
                     biosample = x.split(":", 1)[1]
                     break
-            voucher = (src.qualifiers.get("specimen_voucher", [None])[0])
-            culture = (src.qualifiers.get("culture_collection", [None])[0])
-            isolate = (src.qualifiers.get("isolate", [None])[0])
-            strain  = (src.qualifiers.get("strain", [None])[0])
+            voucher  = (src.qualifiers.get("specimen_voucher",  [None])[0])
+            culture  = (src.qualifiers.get("culture_collection",[None])[0])
+            isolate  = (src.qualifiers.get("isolate",           [None])[0])
+            strain   = (src.qualifiers.get("strain",            [None])[0])
 
-        key = canon(biosample) or canon(voucher) or canon(culture) or canon(isolate) or canon(strain) or gb_acc
-        # If key still too generic, append sanitized accession to make unique & stable
-        if too_generic(key):
-            key = f"{key}_{gb_acc}"
+        key = (norm(biosample) or norm(voucher) or norm(culture) or
+               norm(isolate) or norm(strain) or gb_acc)
 
-        rec = rec[:]  # shallow copy to avoid mutating original
         rec.id = f"{key}|{args.locus}|{gb_acc}"
         rec.description = ""
         out_recs.append(rec)
 
-    # Write FASTA
     Path(args.out).parent.mkdir(parents=True, exist_ok=True)
-    SeqIO.write(out_recs, args.out, "fasta")
+    if out_recs:
+        SeqIO.write(out_recs, args.out, "fasta")
+    else:
+        Path(args.out).write_text("", encoding="utf-8")
 
-    # Build/append a de-duplicated taxon map (specimen_key \t species)
     map_path = Path("data/staging/taxon_map.tsv")
     map_path.parent.mkdir(parents=True, exist_ok=True)
-    existing = {}
-    if map_path.exists():
-        for line in map_path.read_text().splitlines():
-            if not line.strip(): continue
-            k, v = line.split("\t", 1)
-            existing[k] = v
+    with map_path.open("a", encoding="utf-8") as M:
+        for rec in out_recs:
+            specimen = rec.id.split("|", 1)[0]
+            sp = (rec.annotations.get("organism") or "").strip()
+            M.write(f"{specimen}\t{sp}\n")
 
-    with map_path.open("w") as M:
-        # rewrite everything we know (existing first)
-        for k in sorted(existing):
-            M.write(f"{k}\t{existing[k]}\n")
-        # add/update from current batch
-        added = set(existing.keys())
-        for r in out_recs:
-            specimen = r.id.split("|", 1)[0]
-            sp = (r.annotations.get("organism") or "").strip()
-            if specimen not in added and sp:
-                M.write(f"{specimen}\t{sp}\n")
-                added.add(specimen)
+    print(f"[normalize_ids] wrote {len(out_recs)} records; skipped {skipped} with undefined/empty seq",
+          file=sys.stderr)
 
 if __name__ == "__main__":
     main()
