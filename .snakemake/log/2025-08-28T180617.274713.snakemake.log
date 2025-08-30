@@ -1,0 +1,92 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 64
+Rules claiming more threads will be scaled down.
+Job stats:
+job                           count
+--------------------------  -------
+align_locus                       3
+all                               1
+build_backbone_constrained        1
+concat_supermatrix                1
+filter_locus_by_keep              3
+locus_tree_firstpass              3
+mask_locus                        3
+pretty_tree                       1
+realign_locus_refined             3
+remask_locus_refined              3
+reroot_pretty_for_site            1
+site_build                        1
+treeshrink_locus                  3
+total                            27
+
+Select jobs to execute...
+
+[Thu Aug 28 18:06:18 2025]
+rule align_locus:
+    input: data/qc/RPB2.dedup.fasta
+    output: data/align/RPB2.aln.fasta
+    jobid: 28
+    reason: Forced execution
+    wildcards: locus=RPB2
+    threads: 48
+    resources: tmpdir=/tmp
+
+[Thu Aug 28 18:20:16 2025]
+Finished job 28.
+1 of 27 steps (4%) done
+Select jobs to execute...
+
+[Thu Aug 28 18:20:16 2025]
+rule mask_locus:
+    input: data/align/RPB2.aln.fasta
+    output: data/align/RPB2.masked.fasta
+    jobid: 27
+    reason: Input files updated by another job: data/align/RPB2.aln.fasta
+    wildcards: locus=RPB2
+    resources: tmpdir=/tmp
+
+
+[Thu Aug 28 18:20:16 2025]
+rule align_locus:
+    input: data/qc/RPB1.dedup.fasta
+    output: data/align/RPB1.aln.fasta
+    jobid: 20
+    reason: Forced execution
+    wildcards: locus=RPB1
+    threads: 48
+    resources: tmpdir=/tmp
+
+[Thu Aug 28 18:20:16 2025]
+Finished job 27.
+2 of 27 steps (7%) done
+Select jobs to execute...
+[Thu Aug 28 18:37:37 2025]
+Finished job 20.
+3 of 27 steps (11%) done
+
+[Thu Aug 28 18:37:37 2025]
+rule locus_tree_firstpass:
+    input: data/align/RPB2.masked.fasta
+    output: data/trees/loci/RPB2.firstpass.treefile
+    jobid: 26
+    reason: Missing output files: data/trees/loci/RPB2.firstpass.treefile; Input files updated by another job: data/align/RPB2.masked.fasta
+    wildcards: locus=RPB2
+    threads: 64
+    resources: tmpdir=/tmp
+
+[Thu Aug 28 18:37:37 2025]
+Error in rule locus_tree_firstpass:
+    jobid: 26
+    input: data/align/RPB2.masked.fasta
+    output: data/trees/loci/RPB2.firstpass.treefile
+    shell:
+        
+        mkdir -p data/trees/loci
+        iqtree3 -s data/align/RPB2.masked.fasta -m MFP -T 64 -fast -pre data/trees/loci/RPB2.firstpass
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2025-08-28T180617.274713.snakemake.log

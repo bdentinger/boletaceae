@@ -7,7 +7,7 @@
 rule enrich_taxon_names:
     input:
         gb = expand("data/staging/{locus}.gb", locus=config["backbone_loci"] + ["ITS"]),
-        clean = expand("data/qc/{locus}.merged.fasta", locus=config["backbone_loci"])
+        clean = expand("data/qc/{locus}.dedup.fasta", locus=config["backbone_loci"])
     output:
         map = "data/staging/taxon_map.tsv"
     params:

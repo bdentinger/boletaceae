@@ -1,0 +1,56 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 64
+Rules claiming more threads will be scaled down.
+Job stats:
+job            count
+-----------  -------
+align_locus        3
+total              3
+
+Select jobs to execute...
+
+[Wed Aug 27 16:11:00 2025]
+rule align_locus:
+    input: data/qc/RPB2.dedup.fasta
+    output: data/align/RPB2.aln.fasta
+    jobid: 4
+    reason: Missing output files: data/align/RPB2.aln.fasta
+    wildcards: locus=RPB2
+    threads: 48
+    resources: tmpdir=/tmp
+
+[Wed Aug 27 16:26:45 2025]
+Finished job 4.
+1 of 3 steps (33%) done
+Select jobs to execute...
+
+[Wed Aug 27 16:26:45 2025]
+rule align_locus:
+    input: data/qc/TEF1.dedup.fasta
+    output: data/align/TEF1.aln.fasta
+    jobid: 2
+    reason: Missing output files: data/align/TEF1.aln.fasta
+    wildcards: locus=TEF1
+    threads: 48
+    resources: tmpdir=/tmp
+
+[Wed Aug 27 17:11:56 2025]
+Finished job 2.
+2 of 3 steps (67%) done
+Select jobs to execute...
+
+[Wed Aug 27 17:11:56 2025]
+rule align_locus:
+    input: data/qc/RPB1.dedup.fasta
+    output: data/align/RPB1.aln.fasta
+    jobid: 0
+    reason: Missing output files: data/align/RPB1.aln.fasta
+    wildcards: locus=RPB1
+    threads: 48
+    resources: tmpdir=/tmp
+
+[Wed Aug 27 17:42:49 2025]
+Finished job 0.
+3 of 3 steps (100%) done
+Complete log: .snakemake/log/2025-08-27T161059.575913.snakemake.log

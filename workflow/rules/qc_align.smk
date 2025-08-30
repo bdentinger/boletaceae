@@ -35,7 +35,7 @@ rule merge_custom:
     output:
         merged = "data/qc/{locus}.merged.fasta"
     params:
-        custom = "data/custom/{locus}.fasta",
+        custom = "data/custom/sequences/{locus}.fasta",
         preserve = lambda wc: str(config.get("custom", {}).get("preserve_labels", True)).lower()
     shell:
         r"""
@@ -56,7 +56,7 @@ rule merge_custom:
 # 3) Align (codon-aware for coding loci; MAFFT+TrimAl for non-coding)
 rule align_locus:
     input:
-        fa = "data/qc/{locus}.merged.fasta"
+        fa = "data/qc/{locus}.dedup.fasta"
     output:
         aln = "data/align/{locus}.aln.fasta"
     shell:

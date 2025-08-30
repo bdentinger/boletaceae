@@ -1,0 +1,24 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 64
+Rules claiming more threads will be scaled down.
+Job stats:
+job           count
+----------  -------
+loci_table        1
+total             1
+
+Select jobs to execute...
+
+[Thu Aug 28 15:31:36 2025]
+rule loci_table:
+    input: data/staging/specimens/specimen_loci.tsv
+    output: data/staging/loci_table.tsv
+    jobid: 0
+    reason: Missing output files: data/staging/loci_table.tsv
+    resources: tmpdir=/tmp
+
+[Thu Aug 28 15:31:37 2025]
+Finished job 0.
+1 of 1 steps (100%) done
+Complete log: .snakemake/log/2025-08-28T153135.211502.snakemake.log

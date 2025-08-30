@@ -1,0 +1,51 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 64
+Rules claiming more threads will be scaled down.
+Job stats:
+job             count
+------------  -------
+dedupe_locus        3
+total               3
+
+Select jobs to execute...
+
+[Wed Aug 27 15:34:07 2025]
+rule dedupe_locus:
+    input: data/qc/TEF1.merged.fasta
+    output: data/qc/TEF1.dedup.fasta
+    jobid: 1
+    reason: Missing output files: data/qc/TEF1.dedup.fasta
+    wildcards: locus=TEF1
+    resources: tmpdir=/tmp
+
+
+[Wed Aug 27 15:34:08 2025]
+rule dedupe_locus:
+    input: data/qc/RPB2.merged.fasta
+    output: data/qc/RPB2.dedup.fasta
+    jobid: 0
+    reason: Missing output files: data/qc/RPB2.dedup.fasta
+    wildcards: locus=RPB2
+    resources: tmpdir=/tmp
+
+
+[Wed Aug 27 15:34:08 2025]
+rule dedupe_locus:
+    input: data/qc/RPB1.merged.fasta
+    output: data/qc/RPB1.dedup.fasta
+    jobid: 2
+    reason: Missing output files: data/qc/RPB1.dedup.fasta
+    wildcards: locus=RPB1
+    resources: tmpdir=/tmp
+
+[Wed Aug 27 15:34:08 2025]
+Finished job 2.
+1 of 3 steps (33%) done
+[Wed Aug 27 15:34:08 2025]
+Finished job 0.
+2 of 3 steps (67%) done
+[Wed Aug 27 15:34:08 2025]
+Finished job 1.
+3 of 3 steps (100%) done
+Complete log: .snakemake/log/2025-08-27T153406.585877.snakemake.log

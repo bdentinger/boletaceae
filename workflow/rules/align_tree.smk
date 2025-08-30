@@ -7,16 +7,35 @@ T_IQTREE   = int(config.get("threads", {}).get("iqtree", 8))
 
 # first, dedupe datasets to avoid multiple sequence entries from same specimen
 rule dedupe_locus:
-    input:  "data/qc/{locus}.cleaned.fasta"
-    output: "data/qc/{locus}.merged.fasta"
-    params:
-        minlen=lambda wc: int(config.get("min_seq_len", {}).get(wc.locus, 0))
+    input:
+        "data/qc/{locus}.merged.fasta"
+    output:
+        "data/qc/{locus}.dedup.fasta"
     shell:
-        "python3.11 workflow/scripts/dedupe_by_specimen.py --in {input} --out {output} --minlen {params.minlen}"
+        r"""
+        if command -v seqkit >/dev/null 2>&1; then
+          seqkit rmdup -s {input} > {output}
+        else
+          python3.11 - <<'PY' > {output}
+import sys
+seen=set(); hdr=None; seq=[]
+with open("{input}") as fh:
+    for line in fh:
+        if line.startswith(">"):
+            if hdr and hdr not in seen:
+                print(hdr); print("".join(seq), end=""); seen.add(hdr)
+            hdr=line.strip(); seq=[]
+        else:
+            seq.append(line)
+    if hdr and hdr not in seen:
+        print(hdr); print("".join(seq), end="")
+PY
+        fi
+        """
 
 # 1) MAFFT align each locus
 rule align_locus:
-    input:  "data/qc/{locus}.merged.fasta"
+    input:  "data/qc/{locus}.dedup.fasta"
     output: "data/align/{locus}.aln.fasta"
     threads: T_ALIGN
     shell:
@@ -88,7 +107,7 @@ rule treeshrink_locus:
 # Filter each locus to its own keepers, then re-align & re-mask (refined)
 rule filter_locus_by_keep:
     input:
-        fa   = "data/qc/{locus}.merged.fasta",
+        fa   = "data/qc/{locus}.dedup.fasta",
         keep = "data/trees/loci/{locus}.treeshrink.keep.txt"
     output:
         kept = "data/qc/{locus}.kept.fasta"

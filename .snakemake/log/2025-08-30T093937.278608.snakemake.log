@@ -1,0 +1,7 @@
+Building DAG of jobs...
+MissingInputException in rule dedupe_locus in file /home/bdentinger/boletaceae/workflow/rules/align_tree.smk, line 9:
+Missing input files for rule dedupe_locus:
+    output: data/qc/RPB2.dedup.fasta
+    wildcards: locus=RPB2
+    affected files:
+        data/qc/RPB2.merged.fasta

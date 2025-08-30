@@ -1,0 +1,165 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 64
+Rules claiming more threads will be scaled down.
+Job stats:
+job                           count
+--------------------------  -------
+all                               1
+build_backbone_constrained        1
+concat_supermatrix                1
+enrich_taxon_names                1
+filter_locus_by_keep              3
+loci_table                        1
+locus_tree_firstpass              3
+mask_locus                        3
+pretty_tree                       1
+qc_locus                          4
+realign_locus_refined             3
+remask_locus_refined              3
+reroot_pretty_for_site            1
+site_build                        1
+specimen_loci                     1
+treeshrink_locus                  3
+total                            31
+
+Select jobs to execute...
+
+[Thu Aug 28 09:51:16 2025]
+rule qc_locus:
+    input: data/staging/RPB2.gb
+    output: data/qc/RPB2.cleaned.fasta
+    jobid: 7
+    reason: Forced execution
+    wildcards: locus=RPB2
+    resources: tmpdir=/tmp
+
+
+[Thu Aug 28 09:51:29 2025]
+rule enrich_taxon_names:
+    input: data/staging/RPB1.gb, data/staging/RPB2.gb, data/staging/TEF1.gb, data/staging/ITS.gb, data/qc/RPB1.dedup.fasta, data/qc/RPB2.dedup.fasta, data/qc/TEF1.dedup.fasta
+    output: data/staging/taxon_map.tsv
+    jobid: 38
+    reason: Updated input files: data/qc/RPB2.dedup.fasta, data/qc/RPB1.dedup.fasta, data/qc/TEF1.dedup.fasta
+    resources: tmpdir=/tmp
+
+
+[Thu Aug 28 09:51:29 2025]
+rule qc_locus:
+    input: data/staging/RPB1.gb
+    output: data/qc/RPB1.cleaned.fasta
+    jobid: 6
+    reason: Forced execution
+    wildcards: locus=RPB1
+    resources: tmpdir=/tmp
+
+
+[Thu Aug 28 09:51:29 2025]
+rule qc_locus:
+    input: data/staging/ITS.gb
+    output: data/qc/ITS.cleaned.fasta
+    jobid: 9
+    reason: Forced execution
+    wildcards: locus=ITS
+    resources: tmpdir=/tmp
+
+
+[Thu Aug 28 09:51:29 2025]
+rule mask_locus:
+    input: data/align/TEF1.aln.fasta
+    output: data/align/TEF1.masked.fasta
+    jobid: 35
+    reason: Missing output files: data/align/TEF1.masked.fasta; Updated input files: data/align/TEF1.aln.fasta
+    wildcards: locus=TEF1
+    resources: tmpdir=/tmp
+
+
+[Thu Aug 28 09:51:29 2025]
+rule mask_locus:
+    input: data/align/RPB2.aln.fasta
+    output: data/align/RPB2.masked.fasta
+    jobid: 27
+    reason: Missing output files: data/align/RPB2.masked.fasta; Updated input files: data/align/RPB2.aln.fasta
+    wildcards: locus=RPB2
+    resources: tmpdir=/tmp
+
+
+[Thu Aug 28 09:51:29 2025]
+rule mask_locus:
+    input: data/align/RPB1.aln.fasta
+    output: data/align/RPB1.masked.fasta
+    jobid: 19
+    reason: Missing output files: data/align/RPB1.masked.fasta; Updated input files: data/align/RPB1.aln.fasta
+    wildcards: locus=RPB1
+    resources: tmpdir=/tmp
+
+
+[Thu Aug 28 09:51:29 2025]
+rule qc_locus:
+    input: data/staging/TEF1.gb
+    output: data/qc/TEF1.cleaned.fasta
+    jobid: 8
+    reason: Forced execution
+    wildcards: locus=TEF1
+    resources: tmpdir=/tmp
+
+[Thu Aug 28 09:51:29 2025]
+Finished job 19.
+1 of 31 steps (3%) done
+Select jobs to execute...
+[Thu Aug 28 09:51:29 2025]
+Finished job 27.
+2 of 31 steps (6%) done
+[Thu Aug 28 09:51:29 2025]
+Finished job 35.
+3 of 31 steps (10%) done
+[Thu Aug 28 09:51:30 2025]
+Finished job 6.
+4 of 31 steps (13%) done
+[Thu Aug 28 09:51:30 2025]
+Finished job 7.
+5 of 31 steps (16%) done
+[Thu Aug 28 09:51:30 2025]
+Finished job 8.
+6 of 31 steps (19%) done
+[Thu Aug 28 09:51:32 2025]
+Finished job 9.
+7 of 31 steps (23%) done
+
+[Thu Aug 28 09:51:32 2025]
+rule specimen_loci:
+    input: data/qc/RPB1.cleaned.fasta, data/qc/RPB2.cleaned.fasta, data/qc/TEF1.cleaned.fasta, data/qc/ITS.cleaned.fasta
+    output: data/staging/specimens/specimen_loci.tsv
+    jobid: 5
+    reason: Missing output files: data/staging/specimens/specimen_loci.tsv; Input files updated by another job: data/qc/TEF1.cleaned.fasta, data/qc/ITS.cleaned.fasta, data/qc/RPB1.cleaned.fasta, data/qc/RPB2.cleaned.fasta
+    resources: tmpdir=/tmp
+
+[Thu Aug 28 09:51:33 2025]
+Finished job 5.
+8 of 31 steps (26%) done
+Select jobs to execute...
+
+[Thu Aug 28 09:51:33 2025]
+rule loci_table:
+    input: data/staging/specimens/specimen_loci.tsv
+    output: data/staging/loci_table.tsv
+    jobid: 10
+    reason: Missing output files: data/staging/loci_table.tsv; Input files updated by another job: data/staging/specimens/specimen_loci.tsv
+    resources: tmpdir=/tmp
+
+[Thu Aug 28 09:51:34 2025]
+Finished job 38.
+9 of 31 steps (29%) done
+Select jobs to execute...
+[Thu Aug 28 09:51:34 2025]
+Error in rule loci_table:
+    jobid: 10
+    input: data/staging/specimens/specimen_loci.tsv
+    output: data/staging/loci_table.tsv
+    shell:
+        python3.11 workflow/scripts/loci_table.py --specimen_loci data/staging/specimens/specimen_loci.tsv --out data/staging/loci_table.tsv
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2025-08-28T095114.973812.snakemake.log

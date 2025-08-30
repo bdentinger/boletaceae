@@ -1,0 +1,6 @@
+Building DAG of jobs...
+MissingInputException in rule loci_table in file /home/bdentinger/boletaceae/workflow/rules/fetch.smk, line 90:
+Missing input files for rule loci_table:
+    output: data/staging/loci_table.tsv
+    affected files:
+        data/staging/specimens/specimen_loci.tsv

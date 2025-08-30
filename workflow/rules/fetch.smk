@@ -50,6 +50,16 @@ rule qc_locus:
             "--in {input} --locus {params.locus} --out {output}"
         )
 
+# Build specimen×locus table from cleaned FASTAs
+rule specimen_loci:
+    input:
+        expand("data/qc/{locus}.cleaned.fasta", locus=config["backbone_loci"] + ["ITS"])
+    output:
+        "data/staging/specimens/specimen_loci.tsv"
+    shell:
+        r"""{config[python_bin]} workflow/scripts/build_specimen_loci.py \
+                --inputs {input} \
+                --out {output}"""
 
 # 3) Ingest optional custom sequences for a locus (if files exist)
 #    Produces normalized headers compatible with pipeline; creates an empty file if none.
@@ -73,25 +83,10 @@ rule ingest_custom_locus:
         fi
         """
 
-
-# 4) Merge GenBank-cleaned + custom (prefer custom on specimen×locus clashes)
-rule merge_locus:
-    input:
-        gb   = "data/qc/{locus}.cleaned.fasta",
-        cust = "data/qc/{locus}.custom.fasta"
-    output:
-        "data/qc/{locus}.merged.fasta"
-    shell:
-        (
-            "{config[python_bin]} workflow/scripts/merge_locus.py "
-            "--gb {input.gb} --cust {input.cust} --out {output}"
-        )
-
-
 # 5) Link loci across the same specimen (choose longest per specimen×locus)
 rule link_specimens:
     input:
-        expand("data/qc/{locus}.merged.fasta", locus=LOCUS_LIST)
+        expand("data/qc/{locus}.dedup.fasta", locus=LOCUS_LIST)
     output:
         directory("data/staging/specimens")
     shell:
@@ -120,6 +115,6 @@ rule fetch_all:
         expand("data/staging/{locus}.gb", locus=LOCUS_LIST),
         expand("data/qc/{locus}.cleaned.fasta", locus=LOCUS_LIST),
         expand("data/qc/{locus}.custom.fasta",  locus=LOCUS_LIST),
-        expand("data/qc/{locus}.merged.fasta",  locus=LOCUS_LIST),
+        expand("data/qc/{locus}.dedup.fasta",  locus=LOCUS_LIST),
         "data/staging/specimens/specimen_loci.tsv",
         "data/staging/loci_table.tsv"
