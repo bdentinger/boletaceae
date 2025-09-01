@@ -1,0 +1,13 @@
+Building DAG of jobs...
+AmbiguousRuleException:
+Rules align_locus_refined and align_locus are ambiguous for the file data/align/RPB1.aln.fasta.
+Consider starting rule output with a unique prefix, constrain your wildcards, or use the ruleorder directive.
+Wildcards:
+	align_locus_refined: locus=RPB1
+	align_locus: locus=RPB1
+Expected input files:
+	align_locus_refined: data/qc/RPB1.dedup.fasta
+	align_locus: data/qc/RPB1.dedup.fasta
+Expected output files:
+	align_locus_refined: data/align/RPB1.aln.fasta
+	align_locus: data/align/RPB1.aln.fasta

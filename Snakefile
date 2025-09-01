@@ -1,24 +1,17 @@
-# Use central config
 configfile: "config/config.yaml"
 
-# Include rule modules
+# Include modules (order avoids ambiguity)
 include: "workflow/rules/fetch.smk"
+include: "workflow/rules/qc_align.smk"
 include: "workflow/rules/align_tree.smk"
+include: "workflow/rules/its_cluster.smk"   # optional scaffold; doesn't block site
 include: "workflow/rules/release.smk"
-#include: "workflow/rules/its_place.smk"
-include: "workflow/rules/its_cluster.smk"
 
-# Default target(s)
 rule all:
     input:
-        # GenBank pulls for backbone loci + ITS
         expand("data/staging/{locus}.gb", locus=config.get("backbone_loci", []) + ["ITS"]),
-        # Specimen linkage tables
         "data/staging/specimens/specimen_loci.tsv",
         "data/staging/loci_table.tsv",
-        # Backbone tree (constraint-aware)
-        "data/trees/backbone.treefile",
-        "data/trees/backbone.pretty.newick",
+        "data/trees/backbone.rooted.pretty.newick",
         "site/index.html",
         "site/latest/backbone.newick"
-
