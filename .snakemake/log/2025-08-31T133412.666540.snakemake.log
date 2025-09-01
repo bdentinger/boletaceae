@@ -1,0 +1,110 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 64
+Rules claiming more threads will be scaled down.
+Job stats:
+job             count
+------------  -------
+merge_custom        3
+total               3
+
+Select jobs to execute...
+
+[Sun Aug 31 13:34:13 2025]
+rule merge_custom:
+    input: data/qc/TEF1.cleaned.fasta
+    output: data/qc/TEF1.merged.fasta
+    jobid: 3
+    reason: Missing output files: data/qc/TEF1.merged.fasta
+    wildcards: locus=TEF1
+    resources: tmpdir=/tmp
+
+
+[Sun Aug 31 13:34:14 2025]
+rule merge_custom:
+    input: data/qc/RPB2.cleaned.fasta
+    output: data/qc/RPB2.merged.fasta
+    jobid: 6
+    reason: Missing output files: data/qc/RPB2.merged.fasta
+    wildcards: locus=RPB2
+    resources: tmpdir=/tmp
+
+
+[Sun Aug 31 13:34:14 2025]
+rule merge_custom:
+    input: data/qc/RPB1.cleaned.fasta
+    output: data/qc/RPB1.merged.fasta
+    jobid: 0
+    reason: Missing output files: data/qc/RPB1.merged.fasta
+    wildcards: locus=RPB1
+    resources: tmpdir=/tmp
+
+[Sun Aug 31 13:34:14 2025]
+[Sun Aug 31 13:34:14 2025]
+Error in rule merge_custom:
+    jobid: 3
+    input: data/qc/TEF1.cleaned.fasta
+    output: data/qc/TEF1.merged.fasta
+    shell:
+        
+        mkdir -p data/qc
+        if [[ -s data/custom/sequences/TEF1.fasta ]]; then
+          # ingest custom -> tmp, appending to taxon_map
+          python3.11 workflow/scripts/ingest_custom_fasta.py \
+             --in data/custom/sequences/TEF1.fasta --locus TEF1 \
+             --out data/qc/TEF1.custom.ingested.fasta \
+             --taxon-map-append data/staging/taxon_map.tsv \
+             {"--preserve-labels" if params.preserve in ["1","true","yes"] else ""}
+          cat data/qc/TEF1.cleaned.fasta data/qc/TEF1.custom.ingested.fasta > data/qc/TEF1.merged.fasta
+        else
+          cp data/qc/TEF1.cleaned.fasta data/qc/TEF1.merged.fasta
+        fi
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Error in rule merge_custom:
+    jobid: 6
+    input: data/qc/RPB2.cleaned.fasta
+    output: data/qc/RPB2.merged.fasta
+    shell:
+        
+        mkdir -p data/qc
+        if [[ -s data/custom/sequences/RPB2.fasta ]]; then
+          # ingest custom -> tmp, appending to taxon_map
+          python3.11 workflow/scripts/ingest_custom_fasta.py \
+             --in data/custom/sequences/RPB2.fasta --locus RPB2 \
+             --out data/qc/RPB2.custom.ingested.fasta \
+             --taxon-map-append data/staging/taxon_map.tsv \
+             {"--preserve-labels" if params.preserve in ["1","true","yes"] else ""}
+          cat data/qc/RPB2.cleaned.fasta data/qc/RPB2.custom.ingested.fasta > data/qc/RPB2.merged.fasta
+        else
+          cp data/qc/RPB2.cleaned.fasta data/qc/RPB2.merged.fasta
+        fi
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Aug 31 13:34:14 2025]
+Error in rule merge_custom:
+    jobid: 0
+    input: data/qc/RPB1.cleaned.fasta
+    output: data/qc/RPB1.merged.fasta
+    shell:
+        
+        mkdir -p data/qc
+        if [[ -s data/custom/sequences/RPB1.fasta ]]; then
+          # ingest custom -> tmp, appending to taxon_map
+          python3.11 workflow/scripts/ingest_custom_fasta.py \
+             --in data/custom/sequences/RPB1.fasta --locus RPB1 \
+             --out data/qc/RPB1.custom.ingested.fasta \
+             --taxon-map-append data/staging/taxon_map.tsv \
+             {"--preserve-labels" if params.preserve in ["1","true","yes"] else ""}
+          cat data/qc/RPB1.cleaned.fasta data/qc/RPB1.custom.ingested.fasta > data/qc/RPB1.merged.fasta
+        else
+          cp data/qc/RPB1.cleaned.fasta data/qc/RPB1.merged.fasta
+        fi
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2025-08-31T133412.666540.snakemake.log

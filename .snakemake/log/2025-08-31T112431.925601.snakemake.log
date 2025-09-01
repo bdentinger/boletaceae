@@ -1,0 +1,105 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 64
+Rules claiming more threads will be scaled down.
+Job stats:
+job             count
+------------  -------
+merge_custom        3
+qc_from_gb          3
+total               6
+
+Select jobs to execute...
+
+[Sun Aug 31 11:24:32 2025]
+rule qc_from_gb:
+    input: data/staging/RPB2.gb
+    output: data/qc/RPB2.cleaned.fasta
+    jobid: 4
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: locus=RPB2
+    resources: tmpdir=/tmp
+
+
+[Sun Aug 31 11:24:33 2025]
+rule qc_from_gb:
+    input: data/staging/TEF1.gb
+    output: data/qc/TEF1.cleaned.fasta
+    jobid: 7
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: locus=TEF1
+    resources: tmpdir=/tmp
+
+
+[Sun Aug 31 11:24:33 2025]
+rule qc_from_gb:
+    input: data/staging/RPB1.gb
+    output: data/qc/RPB1.cleaned.fasta
+    jobid: 1
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: locus=RPB1
+    resources: tmpdir=/tmp
+
+[Sun Aug 31 11:24:33 2025]
+Error in rule qc_from_gb:
+    jobid: 4
+    input: data/staging/RPB2.gb
+    output: data/qc/RPB2.cleaned.fasta
+    shell:
+        
+        mkdir -p data/qc
+        if [[ "RPB2" =~ ^(RPB1|RPB2|TEF1)$ ]]; then
+            python3.11 workflow/scripts/normalize_ids.py \
+                --in data/staging/RPB2.gb --locus RPB2 --out data/qc/RPB2.cleaned.fasta \
+                --cds-only --min-len 150
+        else
+            python3.11 workflow/scripts/normalize_ids.py \
+                --in data/staging/RPB2.gb --locus RPB2 --out data/qc/RPB2.cleaned.fasta \
+                --min-len 150
+        fi
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Aug 31 11:24:33 2025]
+Error in rule qc_from_gb:
+    jobid: 1
+    input: data/staging/RPB1.gb
+    output: data/qc/RPB1.cleaned.fasta
+    shell:
+        
+        mkdir -p data/qc
+        if [[ "RPB1" =~ ^(RPB1|RPB2|TEF1)$ ]]; then
+            python3.11 workflow/scripts/normalize_ids.py \
+                --in data/staging/RPB1.gb --locus RPB1 --out data/qc/RPB1.cleaned.fasta \
+                --cds-only --min-len 150
+        else
+            python3.11 workflow/scripts/normalize_ids.py \
+                --in data/staging/RPB1.gb --locus RPB1 --out data/qc/RPB1.cleaned.fasta \
+                --min-len 150
+        fi
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Sun Aug 31 11:24:33 2025]
+Error in rule qc_from_gb:
+    jobid: 7
+    input: data/staging/TEF1.gb
+    output: data/qc/TEF1.cleaned.fasta
+    shell:
+        
+        mkdir -p data/qc
+        if [[ "TEF1" =~ ^(RPB1|RPB2|TEF1)$ ]]; then
+            python3.11 workflow/scripts/normalize_ids.py \
+                --in data/staging/TEF1.gb --locus TEF1 --out data/qc/TEF1.cleaned.fasta \
+                --cds-only --min-len 150
+        else
+            python3.11 workflow/scripts/normalize_ids.py \
+                --in data/staging/TEF1.gb --locus TEF1 --out data/qc/TEF1.cleaned.fasta \
+                --min-len 150
+        fi
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2025-08-31T112431.925601.snakemake.log

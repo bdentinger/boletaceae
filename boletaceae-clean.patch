@@ -1,0 +1,1000 @@
+*** Begin Patch
+*** Add File: env.yml
++name: boletaceae
++channels: [conda-forge, bioconda, defaults]
++dependencies:
++  - python=3.11
++  - snakemake
++  - biopython
++  - numpy
++  - pandas
++  - mafft
++  - iqtree=3
++  - trimal
++  - fasttree
++  - ete3
++  - seqkit
++  - pal2nal
++  - treecluster
++  - pip
++  - pip:
++      - fastapi
++      - uvicorn
++      - jinja2
++
+*** End Patch
+*** Begin Patch
+*** Add File: config/config.yaml
++version: "v2025.08-clean"
++email: "you@example.org"
++tool: "BoletaceaeBackbone"
++taxon_query: "Boletaceae[Organism]"
++update_window_days: 8
++
++# Loci
++coding_loci: [RPB1, RPB2, TEF1]
++backbone_loci: [RPB1, RPB2, TEF1]
++
++# Optional constraint tree (Newick); leave "" to disable
++constraint_tree: ""
++
++# Binaries
++python_bin: "python3.11"
++iqtree_bin: "iqtree3"
++
++threads:
++  align: 48
++  iqtree: 72
++
++speed_mode: accurate  # or "fast"
++
++outgroup:
++  prefer_single: ["Paxillus"]
++  fallback_clade: ["Chalciporus","Buchwaldoboletus","Rubinoboletus"]
++
++its_cluster:
++  treecluster_threshold: 0.05
++  min_len: 300
++  min_seqs: 4
++
++custom:
++  preserve_labels: true
++
+*** End Patch
+*** Begin Patch
+*** Update File: Snakefile
+@@
+-configfile: "config/config.yaml"
+-
+-include: "workflow/rules/fetch.smk"
+-include: "workflow/rules/align_tree.smk"
+-include: "workflow/rules/release.smk"
+-#include: "workflow/rules/its_place.smk"
+-include: "workflow/rules/its_cluster.smk"
+-
+-rule all:
+-    input:
+-        # GenBank pulls for backbone loci + ITS
+-        expand("data/staging/{locus}.gb", locus=config.get("backbone_loci", []) + [>
+-        # Specimen linkage tables
+-        "data/staging/specimens/specimen_loci.tsv",
+-        "data/staging/loci_table.tsv",
+-        # Backbone tree (constraint-aware)
+-        "data/trees/backbone.treefile",
+-        "data/trees/backbone.pretty.newick",
+-        "site/index.html",
+-        "site/latest/backbone.newick"
++configfile: "config/config.yaml"
++
++# Order matters to avoid ambiguous producers
++include: "workflow/rules/fetch.smk"
++include: "workflow/rules/qc_align.smk"
++include: "workflow/rules/align_tree.smk"
++include: "workflow/rules/its_cluster.smk"   # optional scaffold (does not affect site)
++include: "workflow/rules/release.smk"
++
++rule all:
++    input:
++        expand("data/staging/{locus}.gb", locus=config.get("backbone_loci", []) + ["ITS"]),
++        "data/staging/specimens/specimen_loci.tsv",
++        "data/staging/loci_table.tsv",
++        "data/trees/backbone.rooted.pretty.newick",
++        "site/index.html",
++        "site/latest/backbone.newick"
+*** End Patch
+*** Begin Patch
+*** Add File: workflow/rules/fetch.smk
++##############################
++# fetch.smk — data ingestion #
++##############################
++
++LOCUS_LIST  = config.get("backbone_loci", []) + ["ITS"]
++TAXON       = config.get("taxon_query", "Boletaceae[Organism]")
++DAYS        = config.get("update_window_days", 8)
++
++rule fetch_locus:
++    output:
++        "data/staging/{locus}.gb"
++    params:
++        taxon = TAXON,
++        days  = DAYS
++    shell:
++        r"""
++        mkdir -p data/staging
++        {config[python_bin]} workflow/scripts/fetch_ncbi.py \
++          --taxon '{params.taxon}' \
++          --locus '{wildcards.locus}' \
++          --days {params.days} \
++          --out {output}
++        """
++
++rule specimen_loci:
++    input:
++        expand("data/qc/{locus}.cleaned.fasta", locus=LOCUS_LIST)
++    output:
++        "data/staging/specimens/specimen_loci.tsv"
++    shell:
++        r"""
++        {config[python_bin]} workflow/scripts/link_specimens.py \
++          --fastas {input} \
++          --out {output}
++        """
++
++rule loci_table:
++    input:  "data/staging/specimens/specimen_loci.tsv"
++    output: "data/staging/loci_table.tsv"
++    shell:
++        r"""{config[python_bin]} workflow/scripts/loci_table.py \
++              --specimen_loci {input} --out {output}"""
++
+*** End Patch
+*** Begin Patch
+*** Add File: workflow/rules/qc_align.smk
++# QC + alignment (first pass)
++
++CODING = set(config.get("coding_loci", ["RPB1","RPB2","TEF1"]))
++
++rule qc_from_gb:
++    input:  gb = "data/staging/{locus}.gb"
++    output: fa = "data/qc/{locus}.cleaned.fasta"
++    shell:
++        r"""
++        mkdir -p data/qc
++        if [[ "{wildcards.locus}" =~ ^(RPB1|RPB2|TEF1)$ ]]; then
++          {config[python_bin]} workflow/scripts/normalize_ids.py \
++            --in {input.gb} --locus {wildcards.locus} --out {output.fa} \
++            --cds-only --min-len 150
++        else
++          {config[python_bin]} workflow/scripts/normalize_ids.py \
++            --in {input.gb} --locus {wildcards.locus} --out {output.fa}
++        fi
++        """
++
++rule merge_custom:
++    input:  gb = "data/qc/{locus}.cleaned.fasta"
++    output: merged = "data/qc/{locus}.merged.fasta"
++    params:
++        custom   = "data/custom/sequences/{locus}.fasta",
++        preserve = lambda wc: str(config.get("custom", {}).get("preserve_labels", True)).lower()
++    shell:
++        r"""
++        set -euo pipefail
++        mkdir -p data/qc
++        PRES=""
++        if [[ "{params.preserve}" == "true" || "{params.preserve}" == "1" || "{params.preserve}" == "yes" ]]; then
++          PRES="--preserve-labels"
++        fi
++        if [[ -s "{params.custom}" ]]; then
++          {config[python_bin]} workflow/scripts/ingest_custom_fasta.py \
++            --in "{params.custom}" \
++            --locus "{wildcards.locus}" \
++            --out "data/qc/{wildcards.locus}.custom.ingested.fasta" \
++            --taxon-map-append "data/staging/taxon_map.tsv" \
++            $PRES
++          cat "{input.gb}" "data/qc/{wildcards.locus}.custom.ingested.fasta" > "{output.merged}"
++        else
++          cp "{input.gb}" "{output.merged}"
++        fi
++        """
++
++rule dedupe_locus:
++    input:  "data/qc/{locus}.merged.fasta"
++    output: "data/qc/{locus}.dedup.fasta"
++    shell:
++        r"""{config[python_bin]} workflow/scripts/dedupe_by_specimen.py \
++              --in {input} --out {output}"""
++
++rule align_locus:
++    input:  "data/qc/{locus}.dedup.fasta"
++    output: "data/align/{locus}.aln.fasta"
++    shell:
++        r"""
++        mkdir -p data/align
++        if [[ "{wildcards.locus}" =~ ^(RPB1|RPB2|TEF1)$ ]]; then
++          bash workflow/shell/align_coding.sh {input} {output}
++        else
++          mafft --maxiterate 1000 --localpair --thread -1 {input} > {output}
++          trimal -in {output} -out {output} -gt 0.7
++        fi
++        """
++
+*** End Patch
+*** Begin Patch
+*** Add File: workflow/rules/align_tree.smk
++# Refine alignments with Treeshrink, concatenate, infer backbone
++
++LOCUS_LIST = config.get("backbone_loci", [])
++CONSTR     = config.get("constraint_tree", "")
++T_ALIGN    = int(config.get("threads", {}).get("align", 8))
++T_IQTREE   = int(config.get("threads", {}).get("iqtree", 8))
++IQBIN      = config.get("iqtree_bin", "iqtree3")
++
++rule mask_locus_refined:
++    input:  "data/align/{locus}.aln.fasta"
++    output: "data/align/{locus}.masked.fasta"
++    shell:  "trimal -in {input} -out {output} -gt 0.7"
++
++rule locus_tree_firstpass:
++    input:  "data/align/{locus}.masked.fasta"
++    output: "data/trees/loci/{locus}.firstpass.treefile"
++    threads: T_IQTREE
++    shell:
++        r"""
++        mkdir -p data/trees/loci
++        {IQBIN} -s {input} -m MFP -T {threads} -fast -pre data/trees/loci/{wildcards.locus}.firstpass
++        """
++
++rule treeshrink_locus:
++    input:  tree = "data/trees/loci/{locus}.firstpass.treefile"
++    output:
++        keep    = "data/trees/loci/{locus}.treeshrink.keep.txt",
++        removed = "data/trees/loci/{locus}.treeshrink.removed.txt"
++    params:
++        outdir = "data/trees/loci/{locus}.treeshrink",
++        q      = 0.02
++    shell:
++        r"""
++        mkdir -p {params.outdir}
++        if command -v run_treeshrink.py >/dev/null 2>&1; then
++          run_treeshrink.py -t {input.tree} -o {params.outdir} -q {params.q} >/dev/null 2>&1 || true
++          cp {params.outdir}/output_keep.txt {output.keep}
++          cp {params.outdir}/output_outliers.txt {output.removed} || true
++        else
++          {config[python_bin]} workflow/scripts/tree_tips_to_keep.py --tree {input.tree} --out {output.keep}
++          : > {output.removed}
++        fi
++        """
++
++rule filter_locus_by_keep:
++    input:
++        fa   = "data/qc/{locus}.dedup.fasta",
++        keep = "data/trees/loci/{locus}.treeshrink.keep.txt"
++    output: kept = "data/qc/{locus}.kept.fasta"
++    shell:
++        r"""{config[python_bin]} workflow/scripts/subset_fasta_by_headers.py \
++              --in {input.fa} --keep {input.keep} --out {output.kept}"""
++
++rule align_locus_refined:
++    input:  "data/qc/{locus}.kept.fasta"
++    output: "data/align/{locus}.aln.refined.fasta"
++    threads: T_ALIGN
++    shell:
++        r"""
++        if [[ "{wildcards.locus}" =~ ^(RPB1|RPB2|TEF1)$ ]]; then
++          bash workflow/shell/align_coding.sh {input} {output}
++        else
++          mafft --maxiterate 1000 --localpair --thread {threads} {input} > {output}
++          trimal -in {output} -out {output} -gt 0.7
++        fi
++        """
++
++rule remask_locus_refined:
++    input:  "data/align/{locus}.aln.refined.fasta"
++    output: "data/align/{locus}.masked.refined.fasta"
++    shell:  "trimal -in {input} -out {output} -gt 0.7"
++
++rule concat_supermatrix:
++    input:  expand("data/align/{locus}.masked.refined.fasta", locus=LOCUS_LIST)
++    output:
++        matrix = "data/align/concat.fasta",
++        parts  = "data/align/partitions.txt",
++        taxa   = "data/align/taxa.txt"
++    params: coding = config.get("coding_loci", [])
++    shell:
++        r"""{config[python_bin]} workflow/scripts/concat_supermatrix.py \
++              --inputs {input} \
++              --out-matrix {output.matrix} \
++              --out-parts {output.parts} \
++              --out-taxa {output.taxa} \
++              --coding {' '.join(params.coding)}"""
++
++rule build_backbone_constrained:
++    input:
++        matrix = "data/align/concat.fasta",
++        parts  = "data/align/partitions.txt"
++    output: tree = "data/trees/backbone.treefile"
++    threads: T_IQTREE
++    params: constr = CONSTR
++    shell:
++        r"""
++        mkdir -p data/trees
++        if [ -n "{params.constr}" ] && [ -s "{params.constr}" ]; then
++          {IQBIN} -s {input.matrix} -p {input.parts} -m MFP+MERGE \
++                  -B 2000 --bsam GENESITE --alrt 1000 \
++                  -T {threads} -g {params.constr} -pre data/trees/backbone
++        else
++          {IQBIN} -s {input.matrix} -p {input.parts} -m MFP+MERGE \
++                  -B 2000 --bsam GENESITE --alrt 1000 \
++                  -T {threads} -pre data/trees/backbone
++        fi
++        """
++
+*** End Patch
+*** Begin Patch
+*** Add File: workflow/rules/release.smk
++rule pretty_tree:
++    input:
++        tree = "data/trees/backbone.treefile",
++        map  = "data/staging/taxon_map.tsv"
++    output: "data/trees/backbone.pretty.newick"
++    shell:
++        r"""{config[python_bin]} workflow/scripts/rename_tree_tips.py \
++              --tree {input.tree} --map {input.map} --out {output}"""
++
++rule reroot_pretty_for_site:
++    input:  "data/trees/backbone.pretty.newick"
++    output: "data/trees/backbone.rooted.pretty.newick"
++    params:
++        prefer   = " ".join(config.get("outgroup", {}).get("prefer_single", [])),
++        fallback = " ".join(config.get("outgroup", {}).get("fallback_clade", []))
++    shell:
++        r"""{config[python_bin]} workflow/scripts/reroot_tree.py \
++              --in {input} --out {output} \
++              --prefer {params.prefer} --fallback {params.fallback}"""
++
++rule site_build:
++    input:
++        tree   = "data/trees/backbone.rooted.pretty.newick",
++        script = "workflow/scripts/build_site.py"
++    output:
++        html   = "site/index.html",
++        latest = "site/latest/backbone.newick",
++        stamp  = "site/build.txt",
++        noj    = "site/.nojekyll"
++    shell:
++        "{config[python_bin]} {input.script}"
++
+*** End Patch
+*** Begin Patch
+*** Add File: workflow/rules/its_cluster.smk
++# ITS clustering scaffold (optional)
++
++rule its_global_align:
++    input: "data/qc/ITS.cleaned.fasta"
++    output: "data/packages/ITS/its.aln.fasta"
++    shell:
++        r"""
++        mkdir -p data/packages/ITS
++        mafft --maxiterate 1000 --localpair --thread -1 {input} > {output}
++        """
++
++rule its_quick_tree:
++    input: "data/packages/ITS/its.aln.fasta"
++    output: "data/packages/ITS/its.quick.tree"
++    shell:
++        "fasttree -nt {input} > {output}"
++
++rule its_treecluster:
++    input:  tree = "data/packages/ITS/its.quick.tree"
++    output: tsv  = "data/packages/ITS/clusters.tsv"
++    params: thr  = config.get("its_cluster", {}).get("treecluster_threshold", 0.05)
++    shell:
++        "treecluster --tree {input.tree} --threshold {params.thr} --out {output.tsv}"
++
+*** End Patch
+*** Begin Patch
+*** Add File: workflow/shell/align_coding.sh
++#!/usr/bin/env bash
++set -euo pipefail
++NT="$1"
++OUT="$2"
++TMP=$(mktemp -d)
++trap 'rm -rf "$TMP"' EXIT
++
++python3 - "$NT" "$TMP/aa.faa" << 'PY'
++from Bio import SeqIO
++from Bio.Seq import Seq
++from Bio.SeqRecord import SeqRecord
++import sys
++inp, outp = sys.argv[1], sys.argv[2]
++out=[]
++for r in SeqIO.parse(inp, "fasta"):
++    s=str(r.seq)
++    trim = len(s) - (len(s)//3)*3
++    if trim:
++        s = s[:-trim]
++    aa = Seq(s).translate(to_stop=False)
++    out.append(SeqRecord(aa, id=r.id, description=""))
++SeqIO.write(out, outp, "fasta")
++PY
++
++mafft --maxiterate 1000 --localpair --thread -1 "$TMP/aa.faa" > "$TMP/aa.aln.faa"
++pal2nal.pl "$TMP/aa.aln.faa" "$NT" -output fasta > "$OUT"
++
+*** End Patch
+*** Begin Patch
+*** Add File: workflow/scripts/fetch_ncbi.py
++#!/usr/bin/env python3.11
++import argparse, time, os
++from Bio import Entrez
++
++LOCI_QUERIES = {
++  "ITS": "(internal transcribed spacer[Title] OR ITS1[All Fields] OR ITS2[All Fields])",
++  "RPB1": "rpb1[Gene]",
++  "RPB2": "rpb2[Gene]",
++  "TEF1": "(tef1[All Fields] OR tef1-alpha[All Fields] OR translation elongation factor 1-alpha[Title])"
++}
++
++ap = argparse.ArgumentParser()
++ap.add_argument("--taxon", required=True)
++ap.add_argument("--locus", required=True)
++ap.add_argument("--days", type=int, default=8)
++ap.add_argument("--out", required=True)
++args = ap.parse_args()
++
++Entrez.email = os.environ.get("NCBI_EMAIL", "")
++Entrez.tool  = os.environ.get("NCBI_TOOL", "BoletaceaeBackbone")
++if os.environ.get("NCBI_API_KEY"):
++    Entrez.api_key = os.environ["NCBI_API_KEY"]
++
++def esearch_ids(query):
++    h = Entrez.esearch(db="nuccore", term=query, retmax=100000)
++    r = Entrez.read(h)
++    return r["IdList"]
++
++q = f"{args.taxon} AND ({LOCI_QUERIES.get(args.locus, args.locus)}) AND (2000:3000[PDAT])"
++ids = esearch_ids(q)
++
++with open(args.out, "w") as OUT:
++    for i in range(0, len(ids), 200):
++        batch = ids[i:i+200]
++        h = Entrez.efetch(db="nuccore", id=",".join(batch), rettype="gb", retmode="text")
++        OUT.write(h.read())
++        time.sleep(0.34)
++
+*** End Patch
+*** Begin Patch
+*** Add File: workflow/scripts/normalize_ids.py
++#!/usr/bin/env python3.11
++import argparse, re, sys
++from pathlib import Path
++from Bio import SeqIO
++from Bio.SeqRecord import SeqRecord
++
++def norm(s: str | None) -> str | None:
++    if not s:
++        return None
++    s = s.strip()
++    s = re.sub(r"[^\w\s:/\.\-]+", "", s)
++    s = re.sub(r"[\s\-]+", "_", s)
++    return s
++
++def extract_cds_nt(rec) -> str | None:
++    if not rec.seq:
++        return None
++    cds_feats = [f for f in rec.features if f.type.lower() == "cds"]
++    if not cds_feats:
++        return None
++    pieces = []
++    for f in cds_feats:
++        try:
++            seq_part = f.extract(rec.seq)
++        except Exception:
++            return None
++        pieces.append(str(seq_part))
++    if not pieces:
++        return None
++    return "".join(pieces)
++
++def main():
++    ap = argparse.ArgumentParser(description="Extract/normalize from GenBank")
++    ap.add_argument("--in", dest="inp", required=True)
++    ap.add_argument("--locus", required=True)
++    ap.add_argument("--out", required=True)
++    ap.add_argument("--cds-only", action="store_true")
++    ap.add_argument("--min-len", type=int, default=1)
++    args = ap.parse_args()
++
++    out_recs = []
++    TAX = {}
++    n_in=n_w=n_ns=n_nc=n_sh=0
++
++    for rec in SeqIO.parse(args.inp, "genbank"):
++        n_in += 1
++        gb_acc = rec.id
++        src = next((f for f in rec.features if f.type=="source"), None)
++        biosample=voucher=culture=isolate=strain=None
++        organism = (rec.annotations.get("organism") or "").strip()
++
++        if src:
++            for x in src.qualifiers.get("db_xref", []):
++                if isinstance(x,str) and x.startswith("BioSample:"):
++                    biosample = x.split(":",1)[1]; break
++            voucher  = src.qualifiers.get("specimen_voucher", [None])[0]
++            culture  = src.qualifiers.get("culture_collection", [None])[0]
++            isolate  = src.qualifiers.get("isolate", [None])[0]
++            strain   = src.qualifiers.get("strain", [None])[0]
++
++        specimen = norm(biosample) or norm(voucher) or norm(culture) or norm(isolate) or norm(strain) or gb_acc
++
++        if args.cds_only:
++            seq_str = extract_cds_nt(rec)
++            if not seq_str:
++                n_nc += 1; continue
++        else:
++            if not rec.seq:
++                n_ns += 1; continue
++            seq_str = str(rec.seq)
++
++        if len(seq_str) < args.min_len:
++            n_sh += 1; continue
++
++        new_id = f"{specimen}|{args.locus}|{gb_acc}"
++        r = SeqRecord(rec.seq.__class__(seq_str), id=new_id, description="")
++        out_recs.append(r)
++        if specimen not in TAX:
++            TAX[specimen] = organism
++
++    Path(args.out).parent.mkdir(parents=True, exist_ok=True)
++    SeqIO.write(out_recs, args.out, "fasta")
++
++    tmap = Path("data/staging/taxon_map.tsv")
++    existing = {}
++    if tmap.exists():
++        for line in tmap.read_text().splitlines():
++            if not line.strip(): continue
++            k,v = (line.split("\t",1)+["Unknown"])[:2]
++            existing[k]=v
++    for k,v in TAX.items():
++        if k not in existing:
++            existing[k]=v or "Unknown"
++    tmap.parent.mkdir(parents=True, exist_ok=True)
++    with tmap.open("w") as fh:
++        for k,v in existing.items():
++            fh.write(f"{k}\t{v}\n")
++
++    print(f"[normalize] in={n_in} out={len(out_recs)} skip_no_seq={n_ns} skip_no_cds={n_nc} skip_short={n_sh}", file=sys.stderr)
++
++if __name__=="__main__":
++    main()
++
+*** End Patch
+*** Begin Patch
+*** Add File: workflow/scripts/ingest_custom_fasta.py
++#!/usr/bin/env python3.11
++import argparse, re
++from pathlib import Path
++
++def norm(s: str)->str:
++    s = s.strip()
++    s = re.sub(r"[^\w\s:/\.\-]+", "", s)
++    return re.sub(r"[\s\-]+","_", s)
++
++ap = argparse.ArgumentParser(description="Ingest custom FASTA; update taxon_map.tsv")
++ap.add_argument("--in", dest="inp", required=True)
++ap.add_argument("--locus", required=True)
++ap.add_argument("--out", required=True)
++ap.add_argument("--taxon-map-append", required=True)
++ap.add_argument("--preserve-labels", action="store_true")
++args = ap.parse_args()
++
++INP = Path(args.inp); OUT = Path(args.out); MAP = Path(args.taxon_map_append)
++OUT.parent.mkdir(parents=True, exist_ok=True); MAP.parent.mkdir(parents=True, exist_ok=True)
++
++existing = {}
++if MAP.exists():
++    for line in MAP.read_text().splitlines():
++        if not line.strip(): continue
++        k,v = (line.split("\t",1)+["Unknown"])[:2]
++        existing[k]=v
++
++def process_records():
++    with INP.open() as fh:
++        hdr=None; seq=[]
++        for line in fh:
++            if line.startswith(">"):
++                if hdr is not None and seq:
++                    yield hdr, "".join(seq).replace(" ","").replace("\r","").replace("\n","")
++                hdr=line[1:].strip(); seq=[]
++            else:
++                seq.append(line.strip())
++        if hdr is not None and seq:
++            yield hdr, "".join(seq).replace(" ","")
++
++out_lines=[]
++added=0
++for raw_label,seq in process_records():
++    specimen = norm(raw_label)
++    pretty = raw_label if args.preserve_labels else raw_label.replace("_"," ")
++    new_id = f"{specimen}|{args.locus}|custom:{specimen}"
++    out_lines.append(f">{new_id}\n{seq}\n")
++    if specimen not in existing:
++        existing[specimen]=pretty; added+=1
++
++OUT.write_text("".join(out_lines))
++MAP.write_text("".join(f"{k}\t{v}\n" for k,v in existing.items()))
++print(f"[ingest_custom] wrote {len(out_lines)//2} seqs; taxon_map +{added}")
++
+*** End Patch
+*** Begin Patch
+*** Add File: workflow/scripts/dedupe_by_specimen.py
++#!/usr/bin/env python3.11
++import argparse
++from Bio import SeqIO
++
++ap = argparse.ArgumentParser()
++ap.add_argument("--in", dest="inp", required=True)
++ap.add_argument("--out", required=True)
++args = ap.parse_args()
++
++seen = set()
++out = []
++for rec in SeqIO.parse(args.inp, "fasta"):
++    key = rec.id.split("|",1)[0]
++    if key in seen:
++        continue
++    seen.add(key)
++    out.append(rec)
++
++SeqIO.write(out, args.out, "fasta")
++print(f"[dedupe] kept {len(out)} unique specimens")
++
+*** End Patch
+*** Begin Patch
+*** Add File: workflow/scripts/subset_fasta_by_headers.py
++#!/usr/bin/env python3.11
++import argparse
++from Bio import SeqIO
++
++ap = argparse.ArgumentParser()
++ap.add_argument("--in", dest="inp", required=True)
++ap.add_argument("--keep", required=True)
++ap.add_argument("--out", required=True)
++args = ap.parse_args()
++
++keep = {line.strip() for line in open(args.keep) if line.strip()}
++def specimen(rec_id:str)->str:
++    return rec_id.split("|",1)[0]
++
++out=[]
++for rec in SeqIO.parse(args.inp, "fasta"):
++    if specimen(rec.id) in keep:
++        out.append(rec)
++SeqIO.write(out, args.out, "fasta")
++print(f"[subset] kept {len(out)}")
++
+*** End Patch
+*** Begin Patch
+*** Add File: workflow/scripts/concat_supermatrix.py
++#!/usr/bin/env python3.11
++import argparse, os, sys
++from pathlib import Path
++from collections import OrderedDict
++from Bio import SeqIO
++
++ap = argparse.ArgumentParser(description="Concatenate masked alignments with codon partitions")
++ap.add_argument("--inputs", nargs="+", required=True)
++ap.add_argument("--out-matrix", required=True)
++ap.add_argument("--out-parts", required=True)
++ap.add_argument("--out-taxa", required=True)
++ap.add_argument("--coding", nargs="*", default=[])
++args = ap.parse_args()
++
++def locus_name_from_path(p:str)->str:
++    base = os.path.basename(p)
++    suffixes = (
++        ".masked.refined.fasta",
++        ".aln.refined.fasta",
++        ".masked.fasta",
++        ".aln.fasta",
++        ".fasta",".fas",".fa",".aln",
++    )
++    for suf in suffixes:
++        if base.endswith(suf):
++            base = base[:-len(suf)]
++            break
++    return base
++
++locus_aln = OrderedDict()
++locus_len = OrderedDict()
++all_taxa  = OrderedDict()
++
++for fn in args.inputs:
++    L = locus_name_from_path(fn)
++    taxa = OrderedDict()
++    alen=None
++    n=0
++    for rec in SeqIO.parse(fn, "fasta"):
++        s=str(rec.seq).upper()
++        if alen is None: alen=len(s)
++        elif len(s)!=alen:
++            print(f"[concat] ERROR: {fn} inconsistent sequence lengths", file=sys.stderr); sys.exit(2)
++        taxa[rec.id]=s; all_taxa.setdefault(rec.id,None); n+=1
++    if alen is None:
++        print(f"[concat] WARNING: empty {fn}; skipping", file=sys.stderr); continue
++    locus_aln[L]=taxa; locus_len[L]=alen
++    print(f"[concat] {L}: {n} seqs, {alen} cols", file=sys.stderr)
++
++if not locus_aln:
++    Path(args.out_matrix).write_text(""); Path(args.out_parts).write_text(""); Path(args.out_taxa).write_text(""); sys.exit(0)
++
++taxa = list(all_taxa.keys())
++gap_for = {L:"-"*locus_len[L] for L in locus_aln.keys()}
++Path(args.out_matrix).parent.mkdir(parents=True, exist_ok=True)
++with open(args.out_matrix,"w") as OUT:
++    for t in taxa:
++        OUT.write(f">{t}\n{''.join(locus_aln[L].get(t,gap_for[L]) for L in locus_aln.keys())}\n")
++
++with open(args.out_taxa,"w") as T:
++    for t in taxa: T.write(t+"\n")
++
++parts=[]; start=1; coding=set(args.coding)
++for L in locus_aln.keys():
++    Llen=locus_len[L]; end=start+Llen-1
++    if L in coding:
++        parts.append(f"DNA, {L}_pos1 = {start}-{end}\\3")
++        parts.append(f"DNA, {L}_pos2 = {start+1}-{end}\\3")
++        parts.append(f"DNA, {L}_pos3 = {start+2}-{end}\\3")
++    else:
++        parts.append(f"DNA, {L} = {start}-{end}")
++    start=end+1
++
++with open(args.out_parts,"w") as P:
++    P.write("\n".join(parts)+"\n")
++
++print(f"[concat] Wrote {args.out_matrix}; parts={args.out_parts}; taxa={args.out_taxa}", file=sys.stderr)
++
+*** End Patch
+*** Begin Patch
+*** Add File: workflow/scripts/rename_tree_tips.py
++#!/usr/bin/env python3.11
++import argparse
++from Bio import Phylo
++
++ap = argparse.ArgumentParser()
++ap.add_argument("--tree", required=True)
++ap.add_argument("--map", required=True)
++ap.add_argument("--out", required=True)
++args = ap.parse_args()
++
++name_for = {}
++with open(args.map) as fh:
++    for line in fh:
++        if not line.strip(): continue
++        k,v = (line.rstrip("\n").split("\t",1)+["Unknown"])[:2]
++        name_for[k]=v
++
++t = Phylo.read(args.tree, "newick")
++for tip in t.get_terminals():
++    spec = tip.name.split("|",1)[0]
++    pretty = name_for.get(spec, spec)
++    tip.name = pretty.replace(" ", "_")
++Phylo.write(t, args.out, "newick")
++
+*** End Patch
+*** Begin Patch
+*** Add File: workflow/scripts/reroot_tree.py
++#!/usr/bin/env python3.11
++import argparse
++from Bio import Phylo
++
++ap = argparse.ArgumentParser()
++ap.add_argument("--in", dest="inp", required=True)
++ap.add_argument("--out", required=True)
++ap.add_argument("--prefer", nargs="*", default=[])
++ap.add_argument("--fallback", nargs="*", default=[])
++args = ap.parse_args()
++
++t = Phylo.read(args.inp, "newick")
++
++def find_first(names):
++    for tip in t.get_terminals():
++        for n in names:
++            if tip.name.startswith(n+"_") or tip.name==n:
++                return tip.name
++    return None
++
++rootname = find_first(args.prefer)
++if not rootname and args.fallback:
++    present = [tip.name for tip in t.get_terminals() if any(tip.name.startswith(x+"_") or tip.name==x for x in args.fallback)]
++    if len(present)>=2:
++        mrca = t.common_ancestor(present[0], present[1])
++        t.root_with_outgroup(mrca)
++else:
++    if rootname:
++        t.root_with_outgroup(rootname)
++
++Phylo.write(t, args.out, "newick")
++
+*** End Patch
+*** Begin Patch
+*** Add File: workflow/scripts/tree_tips_to_keep.py
++#!/usr/bin/env python3.11
++import argparse
++from Bio import Phylo
++ap = argparse.ArgumentParser()
++ap.add_argument("--tree", required=True)
++ap.add_argument("--out", required=True)
++args = ap.parse_args()
++t = Phylo.read(args.tree, "newick")
++with open(args.out,"w") as fh:
++    for tip in t.get_terminals():
++        fh.write(tip.name+"\n")
++
+*** End Patch
+*** Begin Patch
+*** Add File: workflow/scripts/link_specimens.py
++#!/usr/bin/env python3.11
++import argparse
++from Bio import SeqIO
++
++ap = argparse.ArgumentParser(description="Build specimen×locus presence table")
++ap.add_argument("--fastas", nargs="+", required=True)
++ap.add_argument("--out", required=True)
++args = ap.parse_args()
++
++rows = []
++for fn in args.fastas:
++    L = fn.split("/")[-1].split(".")[0]
++    for rec in SeqIO.parse(fn, "fasta"):
++        spec = rec.id.split("|",1)[0]
++        rows.append((spec, L))
++
++from collections import defaultdict
++has_locus = defaultdict(set)
++for spec, L in rows:
++    has_locus[spec].add(L)
++
++with open(args.out,"w") as fh:
++    fh.write("specimen_id\tlocus\n")
++    for spec, loci in has_locus.items():
++        for L in sorted(loci):
++            fh.write(f"{spec}\t{L}\n")
++
+*** End Patch
+*** Begin Patch
+*** Add File: workflow/scripts/loci_table.py
++#!/usr/bin/env python3.11
++import argparse, pandas as pd
++
++ap = argparse.ArgumentParser()
++ap.add_argument("--specimen_loci", required=True)
++ap.add_argument("--out", required=True)
++args = ap.parse_args()
++
++df = pd.read_csv(args.specimen_loci, sep="\t")
++if "specimen_id" not in df.columns or "locus" not in df.columns:
++    df = pd.read_csv(args.specimen_loci, sep="\t", header=None, names=["specimen_id","locus"])
++
++df["v"]=1
++wide = (df.pivot_table(index="specimen_id", columns="locus", values="v", aggfunc="max", fill_value=0)
++          .reset_index())
++wide.to_csv(args.out, sep="\t", index=False)
++print(f"[loci_table] wrote {args.out} with {len(wide)} rows")
++
+*** End Patch
+*** Begin Patch
+*** Add File: workflow/scripts/build_site.py
++#!/usr/bin/env python3.11
++import os, shutil, pathlib
++
++root = pathlib.Path(".")
++site = root/"site"
++site.mkdir(parents=True, exist_ok=True)
++(site/"latest").mkdir(parents=True, exist_ok=True)
++
++src = root/"data/trees/backbone.rooted.pretty.newick"
++dst = site/"latest"/"backbone.newick"
++shutil.copy2(src, dst)
++(site/".nojekyll").write_text("")
++
++html = """<!doctype html>
++<html>
++<head>
++<meta charset="utf-8"/>
++<title>Boletaceae Backbone</title>
++<meta name="viewport" content="width=device-width, initial-scale=1"/>
++<style>
++ body{font-family:ui-sans-serif,system-ui,-apple-system;margin:0}
++ header{padding:12px 16px;border-bottom:1px solid #ddd;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
++ #viewer{width:100vw;height:calc(100vh - 60px)}
++ #tree{width:100%;height:100%}
++</style>
++<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.min.js" crossorigin="anonymous"></script>
++<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/phylotree@2.1.0/dist/phylotree.css">
++<script src="https://cdn.jsdelivr.net/npm/phylotree@2.1.0/dist/phylotree.js" crossorigin="anonymous"></script>
++</head>
++<body>
++<header>
++  <strong>Boletaceae Backbone</strong>
++  <span id="meta"></span>
++  <input type="text" id="q" placeholder="Find tip..." />
++  <button onclick="zoomAll()">Fit</button>
++</header>
++<div id="viewer"><div id="tree"></div></div>
++<script>
++const url = "latest/backbone.newick";
++async function load() {
++  const txt = await fetch(url).then(r=>r.text());
++  document.getElementById('meta').textContent = (txt.match(/\\)/g)||[]).length + " tips";
++  render(txt);
++}
++function render(nwk){
++  const ph = d3.layout.phylotree().options({brush:false, 'zoom':true});
++  const div = d3.select("#tree");
++  div.selectAll("*").remove();
++  ph(d3.select("#tree")).svg(d3.select("#tree")).newick(nwk).layout();
++  window.ph = ph;
++}
++function zoomAll(){
++  if(window.ph){ window.ph.placenodes().update(); }
++}
++document.getElementById('q').addEventListener('input', e=>{
++  const v = e.target.value.trim();
++  if(!window.ph) return;
++  window.ph.clear_search();
++  if(v.length>=2){ window.ph.search(v); }
++});
++load();
++</script>
++</body>
++</html>
++"""
++(site/"index.html").write_text(html)
++(site/"build.txt").write_text("ok\n")
++print("[site] wrote site/index.html and site/latest/backbone.newick")
++
+*** End Patch
+*** Begin Patch
+*** Add File: .github/workflows/gh-pages.yml
++name: Deploy static tree to GitHub Pages
++on:
++  push:
++    branches: [ "main" ]
++  workflow_dispatch:
++
++jobs:
++  build:
++    runs-on: ubuntu-latest
++    steps:
++      - uses: actions/checkout@v4
++      - name: Set up Python
++        uses: actions/setup-python@v5
++        with:
++          python-version: '3.11'
++      - name: Install minimal deps
++        run: |
++          pip install biopython pandas
++      - name: Prepare site (expects tree from prior run)
++        run: |
++          mkdir -p site/latest
++          if [ ! -s site/latest/backbone.newick ]; then echo "(root);" > site/latest/backbone.newick; fi
++          python workflow/scripts/build_site.py || true
++      - name: Upload artifact
++        uses: actions/upload-pages-artifact@v3
++        with:
++          path: site
++  deploy:
++    needs: build
++    permissions:
++      pages: write
++      id-token: write
++    environment:
++      name: github-pages
++      url: ${{ steps.deployment.outputs.page_url }}
++    runs-on: ubuntu-latest
++    steps:
++      - id: deployment
++        uses: actions/deploy-pages@v4
++
+*** End Patch

@@ -1,27 +1,23 @@
 #!/usr/bin/env python3.11
-import argparse, re
-from pathlib import Path
+import argparse
+from Bio import Phylo
 
 ap = argparse.ArgumentParser()
-ap.add_argument("--in", dest="inp", required=True)    # input newick (backbone.treefile)
-ap.add_argument("--map", required=True)               # TSV: specimen_key \t Species name
+ap.add_argument("--tree", required=True)
+ap.add_argument("--map", required=True)
 ap.add_argument("--out", required=True)
-a = ap.parse_args()
+args = ap.parse_args()
 
-m = {}
-for line in Path(a.map).read_text().splitlines():
-    if not line.strip(): continue
-    spk, name = line.split("\t", 1)
-    m[spk.strip()] = (name.strip() or spk).replace(" ", "_")
+name_for = {}
+with open(args.map) as fh:
+    for line in fh:
+        if not line.strip(): continue
+        k,v = (line.rstrip("\n").split("\t",1)+["Unknown"])[:2]
+        name_for[k]=v
 
-nwk = Path(a.inp).read_text().strip()
-# Replace labels that appear right after '(' or ',' and before ':' or ')' or ','
-def repl(match):
-    old = match.group(1)
-    key = old.split("|", 1)[0]  # specimen key is before first '|'
-    return m.get(key, old)
-
-out = re.sub(r"(?<=[(,])\s*([^:,()\s]+)\s*(?=[:),])", repl, nwk)
-if not out.endswith(";"): out += ";"
-Path(a.out).parent.mkdir(parents=True, exist_ok=True)
-Path(a.out).write_text(out)
+t = Phylo.read(args.tree, "newick")
+for tip in t.get_terminals():
+    spec = tip.name.split("|",1)[0]
+    pretty = name_for.get(spec, spec)
+    tip.name = pretty.replace(" ", "_")
+Phylo.write(t, args.out, "newick")

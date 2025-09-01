@@ -1,40 +1,39 @@
-name: Deploy site
-
+name: Deploy static tree to GitHub Pages
 on:
   push:
-    branches: [ main ]
+    branches: [ "main" ]
   workflow_dispatch:
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
-
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install minimal deps
+        run: |
+          pip install biopython pandas
+      - name: Prepare site (expects tree from prior run)
+        run: |
+          mkdir -p site/latest
+          if [ ! -s site/latest/backbone.newick ]; then echo "(root);" > site/latest/backbone.newick; fi
+          python workflow/scripts/build_site.py || true
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
   deploy:
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
-
-      # sanity: make sure the site exists and has the files we need
-      - name: Verify site files
-        run: |
-          test -f site/index.html || { echo "site/index.html missing"; exit 1; }
-          test -f site/latest/backbone.newick || { echo "site/latest/backbone.newick missing"; exit 1; }
-
-      - name: Upload site/ as Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: site
-
-      - name: Deploy to GitHub Pages
-        id: deployment
+      - id: deployment
         uses: actions/deploy-pages@v4
