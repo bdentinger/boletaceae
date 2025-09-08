@@ -114,6 +114,67 @@ ORIGIN
       481 cgtcaaggga aagaccctcc tcgacgccat cgacgccatc gagcctccta c
 //
 
+LOCUS       MZ233725                 624 bp    DNA     linear   PLN 14-JUL-2025
+DEFINITION  Boletus vigasensis voucher Hervert 67 translation elongation factor
+            1-alpha (tef1) gene, partial cds.
+ACCESSION   MZ233725
+VERSION     MZ233725.1
+KEYWORDS    .
+SOURCE      Boletus vigasensis
+  ORGANISM  Boletus vigasensis
+            Eukaryota; Fungi; Dikarya; Basidiomycota; Agaricomycotina;
+            Agaricomycetes; Agaricomycetidae; Boletales; Boletineae;
+            Boletaceae; Boletoideae; Boletus.
+REFERENCE   1  (bases 1 to 624)
+  AUTHORS   Montoya,L., Ramos,A., Cesar,E. and Bandala,V.M.
+  TITLE     New edible species of Boletus sects. Boletus and Aereus from
+            coniferous forest in eastern Mexico
+  JOURNAL   Unpublished
+REFERENCE   2  (bases 1 to 624)
+  AUTHORS   Montoya,L., Ramos,A., Cesar,E. and Bandala,V.M.
+  TITLE     Direct Submission
+  JOURNAL   Submitted (17-MAY-2021) Red de Biodiversidad y Sistematica,
+            Instituto de Ecologia, A.C., Carretera Antigua a Coatepec 351, El
+            Haya, Xalapa, Veracruz 91073, Mexico
+COMMENT     ##Assembly-Data-START##
+            Sequencing Technology :: Sanger dideoxy sequencing
+            ##Assembly-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..624
+                     /organism="Boletus vigasensis"
+                     /mol_type="genomic DNA"
+                     /specimen_voucher="Hervert 67"
+                     /db_xref="taxon:3448710"
+                     /tissue_type="basidiocarp"
+                     /geo_loc_name="Mexico: Veracruz"
+     gene            <1..>624
+                     /gene="tef1"
+     mRNA            join(<1..192,247..383,436..>624)
+                     /gene="tef1"
+                     /product="translation elongation factor 1-alpha"
+     CDS             join(<1..192,247..383,436..>624)
+                     /gene="tef1"
+                     /codon_start=1
+                     /product="translation elongation factor 1-alpha"
+                     /protein_id="WJM00673.1"
+                     /translation="RDFIKNMITGTSQADCAILIIAAGTGEFEAGISKDGQTREHALL
+                     AFTLGVRQLIVAVNKMDTTKWSEDRFNEIIKETSTFIKKVGYNPKAVAFVPISGWHGD
+                     NMLEESPNMTWYKGWTKEVKGGVVKGKTLLDAIDAIEPPARPSDKPLRLPLQDVYKIG
+                     GIGTVPVGRVETG"
+ORIGIN      
+        1 cgtgatttca tcaaaaacat gattactggt acctcccagg ctgattgcgc cattctcatt
+       61 atcgccgctg gtaccggtga gttcgaggct ggtatctcca aagacggtca aacccgtgaa
+      121 cacgctcttc tggcgttcac ccttggcgtg cgtcaactca ttgtcgctgt aaacaagatg
+      181 gacacgacca aggtgtgttg tacattctcc tttgagggat attgtttgat gtacgatcgc
+      241 cgatagtgga gcgaggaccg cttcaacgaa atcatcaagg aaacctcgac atttatcaag
+      301 aaggttggct acaaccccaa ggctgtcgct tttgtaccca tctccggctg gcatggtgac
+      361 aacatgctgg aggaatcccc caagtaagca ttgtctgatg ggttagctcc cggcattcac
+      421 agagcatcgc aatagcatga cttggtacaa gggctggact aaggaggtca agggtggtgt
+      481 tgtcaagggc aagaccctcc tcgatgccat tgatgctatc gaacctcctg ctcgtccctc
+      541 cgacaagccc cttcgccttc ctctccagga tgtctacaag atcggtggta ttggaacggt
+      601 gcccgtcggt cgtgttgaaa ctgg
+//
+
 LOCUS       PV106171                1152 bp    DNA     linear   PLN 16-JUN-2025
 DEFINITION  Hortiboletus flavorubellus voucher MICH10015 translation elongation
             factor 1-alpha (TEF1) gene, partial cds.
@@ -970,67 +1031,6 @@ ORIGIN
       481 tcgtcaaggg caagaccctc ctcgatgcca ttgatgctat cgaacctcct gttcgtccct
       541 ccgacaagcc ccttcgcctt cctctccagg atgtctacaa gatcggtggt atcggaacgg
       601 tgcccgtcgg tcgtgttgaa actgg
-//
-
-LOCUS       MZ233725                 624 bp    DNA     linear   PLN 14-JUL-2025
-DEFINITION  Boletus vigasensis voucher Hervert 67 translation elongation factor
-            1-alpha (tef1) gene, partial cds.
-ACCESSION   MZ233725
-VERSION     MZ233725.1
-KEYWORDS    .
-SOURCE      Boletus vigasensis
-  ORGANISM  Boletus vigasensis
-            Eukaryota; Fungi; Dikarya; Basidiomycota; Agaricomycotina;
-            Agaricomycetes; Agaricomycetidae; Boletales; Boletineae;
-            Boletaceae; Boletoideae; Boletus.
-REFERENCE   1  (bases 1 to 624)
-  AUTHORS   Montoya,L., Ramos,A., Cesar,E. and Bandala,V.M.
-  TITLE     New edible species of Boletus sects. Boletus and Aereus from
-            coniferous forest in eastern Mexico
-  JOURNAL   Unpublished
-REFERENCE   2  (bases 1 to 624)
-  AUTHORS   Montoya,L., Ramos,A., Cesar,E. and Bandala,V.M.
-  TITLE     Direct Submission
-  JOURNAL   Submitted (17-MAY-2021) Red de Biodiversidad y Sistematica,
-            Instituto de Ecologia, A.C., Carretera Antigua a Coatepec 351, El
-            Haya, Xalapa, Veracruz 91073, Mexico
-COMMENT     ##Assembly-Data-START##
-            Sequencing Technology :: Sanger dideoxy sequencing
-            ##Assembly-Data-END##
-FEATURES             Location/Qualifiers
-     source          1..624
-                     /organism="Boletus vigasensis"
-                     /mol_type="genomic DNA"
-                     /specimen_voucher="Hervert 67"
-                     /db_xref="taxon:3448710"
-                     /tissue_type="basidiocarp"
-                     /geo_loc_name="Mexico: Veracruz"
-     gene            <1..>624
-                     /gene="tef1"
-     mRNA            join(<1..192,247..383,436..>624)
-                     /gene="tef1"
-                     /product="translation elongation factor 1-alpha"
-     CDS             join(<1..192,247..383,436..>624)
-                     /gene="tef1"
-                     /codon_start=1
-                     /product="translation elongation factor 1-alpha"
-                     /protein_id="WJM00673.1"
-                     /translation="RDFIKNMITGTSQADCAILIIAAGTGEFEAGISKDGQTREHALL
-                     AFTLGVRQLIVAVNKMDTTKWSEDRFNEIIKETSTFIKKVGYNPKAVAFVPISGWHGD
-                     NMLEESPNMTWYKGWTKEVKGGVVKGKTLLDAIDAIEPPARPSDKPLRLPLQDVYKIG
-                     GIGTVPVGRVETG"
-ORIGIN      
-        1 cgtgatttca tcaaaaacat gattactggt acctcccagg ctgattgcgc cattctcatt
-       61 atcgccgctg gtaccggtga gttcgaggct ggtatctcca aagacggtca aacccgtgaa
-      121 cacgctcttc tggcgttcac ccttggcgtg cgtcaactca ttgtcgctgt aaacaagatg
-      181 gacacgacca aggtgtgttg tacattctcc tttgagggat attgtttgat gtacgatcgc
-      241 cgatagtgga gcgaggaccg cttcaacgaa atcatcaagg aaacctcgac atttatcaag
-      301 aaggttggct acaaccccaa ggctgtcgct tttgtaccca tctccggctg gcatggtgac
-      361 aacatgctgg aggaatcccc caagtaagca ttgtctgatg ggttagctcc cggcattcac
-      421 agagcatcgc aatagcatga cttggtacaa gggctggact aaggaggtca agggtggtgt
-      481 tgtcaagggc aagaccctcc tcgatgccat tgatgctatc gaacctcctg ctcgtccctc
-      541 cgacaagccc cttcgccttc ctctccagga tgtctacaag atcggtggta ttggaacggt
-      601 gcccgtcggt cgtgttgaaa ctgg
 //
 
 LOCUS       PV592033                 536 bp    DNA     linear   PLN 07-MAY-2025
@@ -12874,69 +12874,6 @@ ORIGIN
       541 atgtctacaa gatcggtgg
 //
 
-LOCUS       OK323368                 589 bp    DNA     linear   PLN 23-OCT-2023
-DEFINITION  Boletus kundabungkid isolate MEL2417154 translation elongation
-            factor 1-alpha (EF1-alpha) gene, partial cds.
-ACCESSION   OK323368
-VERSION     OK323368.1
-KEYWORDS    .
-SOURCE      Boletus kundabungkid
-  ORGANISM  Boletus kundabungkid
-            Eukaryota; Fungi; Dikarya; Basidiomycota; Agaricomycotina;
-            Agaricomycetes; Agaricomycetidae; Boletales; Boletineae;
-            Boletaceae; Boletoideae; Boletus.
-REFERENCE   1  (bases 1 to 589)
-  AUTHORS   Lebel,T., Davoodian,N., Bloomfield,M.C., Syme,K., May,T.W.,
-            Hosaka,K. and Castellano,M.A.
-  TITLE     A mixed bag of sequestrate fungi from five different families:
-            Boletaceae, Russulaceae, Psathyrellaceae, Strophariaceae, and
-            Hysterangiaceae
-  JOURNAL   Swainsona 36, 33-65 (2022)
-REFERENCE   2  (bases 1 to 589)
-  AUTHORS   Lebel,T., Davoodian,N., Bloomfield,M.C., Syme,K., May,T.W.,
-            Hosaka,K. and Castellano,M.A.
-  TITLE     Direct Submission
-  JOURNAL   Submitted (26-SEP-2021) Science - Research, Royal Botanic Gardens
-            Victoria - Melbourne, Birdwood Avenue, SOUTH YARRA, VIC 3141,
-            Australia
-COMMENT     ##Assembly-Data-START##
-            Sequencing Technology :: Sanger dideoxy sequencing
-            ##Assembly-Data-END##
-FEATURES             Location/Qualifiers
-     source          1..589
-                     /organism="Boletus kundabungkid"
-                     /mol_type="genomic DNA"
-                     /isolate="MEL2417154"
-                     /type_material="holotype of Boletus kundabungkid"
-                     /db_xref="taxon:2873942"
-                     /geo_loc_name="Australia"
-     gene            <1..>589
-                     /gene="EF1-alpha"
-     mRNA            join(<1..192,248..384,438..>589)
-                     /gene="EF1-alpha"
-                     /product="translation elongation factor 1-alpha"
-     CDS             join(<1..192,248..384,438..>589)
-                     /gene="EF1-alpha"
-                     /codon_start=1
-                     /product="translation elongation factor 1-alpha"
-                     /protein_id="UYP39481.1"
-                     /translation="RDFIKNMITGTSQADCAILIIAAGTGEFEAGISKDGQTREHALL
-                     AFTLGVRQLIVAVNKMDTTKWSEDRFNEIIKETSTFIKKVGYNPKAVAFVPISGWHGD
-                     NMLEESANMTWYKGWTKESKSGVVKGKTLLDAIDAIEPPVRPSDKPLRLPLQDVYKIG
-                     "
-ORIGIN      
-        1 cgtgatttca tcaagaacat gattaccggt acctcccagg ctgattgcgc catcctcatt
-       61 atcgcggctg gtactggtga gttcgaggct ggtatatcaa aggacggtca aacccgtgaa
-      121 cacgctcttc tggcgttcac ccttggtgtg cgtcaactca ttgtcgctgt taacaagatg
-      181 gacacgacca aggtgtgttg tgcacgctcc tttgtgggat ggaatttaat gtgtgattcg
-      241 tcaacagtgg agcgaggacc ggttcaatga aattatcaag gagacttcga cctttatcaa
-      301 gaaggtcggc tacaacccca aggctgtcgc tttcgtgcct atctctggct ggcatgggga
-      361 caacatgctg gaagaatccg ccaagtaagt agtgcgctac caggcacatc cccggcagtc
-      421 taatgatgcc gcaatagcat gacttggtac aagggctgga ccaaggagtc gaagagtggc
-      481 gtcgtcaagg ggaagaccct ccttgatgcc atcgatgcca tcgaacctcc tgttcgtcca
-      541 tccgacaaac ctctccgcct tccactccag gatgtgtaca agatcggtg
-//
-
 LOCUS       OQ676977                 800 bp    DNA     linear   PLN 16-OCT-2023
 DEFINITION  Tylopilus pallidocervicolor voucher GDGM91094 translation
             elongation factor 1-alpha (tef1) gene, partial cds.
@@ -21099,334 +21036,6 @@ ORIGIN
       961 agttcgctga gcttattgag aagattgacc gtcggagtgg caagtctctt gagcaggcac
      1021 ccaagtttgt caagtcaggt gacgcctgca ttgtcaaact cgttccttcc aagccgatgt
      1081 gtgtcgagtc atacaacgag tatccacctt tgggtcggtt cgccgttcgt gacatgaga
-//
-
-LOCUS       OQ110628                 534 bp    DNA     linear   PLN 19-APR-2023
-DEFINITION  Xerocomus coccolobae voucher JBSD133069 (ANGE965) translation
-            elongation factor 1-alpha (EF1a) gene, partial cds.
-ACCESSION   OQ110628
-VERSION     OQ110628.1
-KEYWORDS    .
-SOURCE      Xerocomus coccolobae
-  ORGANISM  Xerocomus coccolobae
-            Eukaryota; Fungi; Dikarya; Basidiomycota; Agaricomycotina;
-            Agaricomycetes; Agaricomycetidae; Boletales; Boletineae;
-            Boletaceae; Xerocomoideae; Xerocomus.
-REFERENCE   1  (bases 1 to 534)
-  AUTHORS   Gelardi,M., Angelini,C., Biketova,A.Y., Suz,L.M., Ercole,E.,
-            Svetasheva,T.Y., Miller,K.O., de la Fuente,J.I., Jimenez,J.G. and
-            Vizzini,A.
-  TITLE     Coccoloba-associated xerocomoid boletes (Boletaceae) from the
-            Caribbean and Mexico: Tropicoboletus ruborculus gen. et comb. nov.,
-            revision of Xerocomus coccolobae, phylogenetic assessment of
-            Singerocomus guadelupae comb. nov., and type studies of Xerocomus
-            caeruleonigrescens, X. cuneipes, and X. pseudoboletinus var.
-            pini-caribaeae
-  JOURNAL   Mycol Prog 22 (4), 29 (2023)
-  REMARK    DOI: 10.1007/s11557-023-01876-7
-REFERENCE   2  (bases 1 to 534)
-  AUTHORS   Gelardi,M., Angelini,C., Biketova,A.Y., Suz,L.M., Ercole,E.,
-            Svetasheva,T.Y., Miller,K.O., de la Fuente,J.I., Jimenez,J.G. and
-            Vizzini,A.
-  TITLE     Direct Submission
-  JOURNAL   Submitted (20-DEC-2022) Department of Plant Biology, University of
-            Turin, Viale P.A. Mattioli 25, Torino, Torino 10125, Italy
-COMMENT     ##Assembly-Data-START##
-            Sequencing Technology :: Sanger dideoxy sequencing
-            ##Assembly-Data-END##
-FEATURES             Location/Qualifiers
-     source          1..534
-                     /organism="Xerocomus coccolobae"
-                     /mol_type="genomic DNA"
-                     /specimen_voucher="JBSD133069 (ANGE965)"
-                     /db_xref="taxon:3016128"
-                     /geo_loc_name="Dominican Republic"
-     gene            <1..>534
-                     /gene="EF1a"
-     mRNA            join(<1..150,198..334,384..>534)
-                     /gene="EF1a"
-                     /product="translation elongation factor 1-alpha"
-     CDS             join(<1..150,198..334,384..>534)
-                     /gene="EF1a"
-                     /codon_start=1
-                     /product="translation elongation factor 1-alpha"
-                     /protein_id="WGD18110.1"
-                     /translation="DCAILIIAGGTGEFEAGISKDGQTREHALLAFTLGVRQLIVAVN
-                     KMDTVKWSEERFNEIVKETSNFIKKVGYNPKAVAFVPISGWHGDNMLEESTNLTWYKG
-                     WTKESKSGVVKGKTLLDAIDAIEPPTRPSDKPLRLPLQDVYKIG"
-ORIGIN      
-        1 gactgtgcta tcctcatcat tgctggtggc acgggtgagt tcgaggctgg tatttccaag
-       61 gacggtcaga cccgtgaaca cgcccttctg gcattcactc tcggtgtgcg tcagcttatc
-      121 gtcgctgtaa acaagatgga cactgtcaag gtgcggtata tgtactctcc tgacgaatgt
-      181 ggccgacatg tctccagtgg agcgaggaac gtttcaacga aatcgtcaag gaaacttcaa
-      241 actttatcaa gaaggtcggt tacaatccca aggctgtcgc ctttgtacca atctctggct
-      301 ggcacggtga caacatgctg gaagagtcta ccaagtaagc gttattttac tatgacattt
-      361 ggcagtatcc tcactcgaaa tagccttact tggtataaag gctggaccaa ggagagcaag
-      421 agtggtgtcg tcaaaggaaa gacactcctc gatgccattg acgccattga acctcctact
-      481 cggccttctg acaaacccct tcgccttcct ctccaggatg tctacaagat cggt
-//
-
-LOCUS       OQ110627                 531 bp    DNA     linear   PLN 19-APR-2023
-DEFINITION  Xerocomus coccolobae voucher JBSD133068 (ANGE915) translation
-            elongation factor 1-alpha (EF1a) gene, partial cds.
-ACCESSION   OQ110627
-VERSION     OQ110627.1
-KEYWORDS    .
-SOURCE      Xerocomus coccolobae
-  ORGANISM  Xerocomus coccolobae
-            Eukaryota; Fungi; Dikarya; Basidiomycota; Agaricomycotina;
-            Agaricomycetes; Agaricomycetidae; Boletales; Boletineae;
-            Boletaceae; Xerocomoideae; Xerocomus.
-REFERENCE   1  (bases 1 to 531)
-  AUTHORS   Gelardi,M., Angelini,C., Biketova,A.Y., Suz,L.M., Ercole,E.,
-            Svetasheva,T.Y., Miller,K.O., de la Fuente,J.I., Jimenez,J.G. and
-            Vizzini,A.
-  TITLE     Coccoloba-associated xerocomoid boletes (Boletaceae) from the
-            Caribbean and Mexico: Tropicoboletus ruborculus gen. et comb. nov.,
-            revision of Xerocomus coccolobae, phylogenetic assessment of
-            Singerocomus guadelupae comb. nov., and type studies of Xerocomus
-            caeruleonigrescens, X. cuneipes, and X. pseudoboletinus var.
-            pini-caribaeae
-  JOURNAL   Mycol Prog 22 (4), 29 (2023)
-  REMARK    DOI: 10.1007/s11557-023-01876-7
-REFERENCE   2  (bases 1 to 531)
-  AUTHORS   Gelardi,M., Angelini,C., Biketova,A.Y., Suz,L.M., Ercole,E.,
-            Svetasheva,T.Y., Miller,K.O., de la Fuente,J.I., Jimenez,J.G. and
-            Vizzini,A.
-  TITLE     Direct Submission
-  JOURNAL   Submitted (20-DEC-2022) Department of Plant Biology, University of
-            Turin, Viale P.A. Mattioli 25, Torino, Torino 10125, Italy
-COMMENT     ##Assembly-Data-START##
-            Sequencing Technology :: Sanger dideoxy sequencing
-            ##Assembly-Data-END##
-FEATURES             Location/Qualifiers
-     source          1..531
-                     /organism="Xerocomus coccolobae"
-                     /mol_type="genomic DNA"
-                     /specimen_voucher="JBSD133068 (ANGE915)"
-                     /db_xref="taxon:3016128"
-                     /geo_loc_name="Dominican Republic"
-     gene            <1..>531
-                     /gene="EF1a"
-     mRNA            join(<1..147,195..331,381..>531)
-                     /gene="EF1a"
-                     /product="translation elongation factor 1-alpha"
-     CDS             join(<1..147,195..331,381..>531)
-                     /gene="EF1a"
-                     /codon_start=1
-                     /product="translation elongation factor 1-alpha"
-                     /protein_id="WGD18109.1"
-                     /translation="CAILIIAGGTGEFEAGISKDGQTREHALLAFTLGVRQLIVAVNK
-                     MDTVKWSEERFNEIVKETSNFIKKVGYNPKAVAFVPISGWHGDNMLEESTNLTWYKGW
-                     TKESKSGVVKGKTLLDAIDAIEPPTRPSDKPLRLPLQDVYKIG"
-ORIGIN      
-        1 tgtgctatcc tcatcattgc tggtggcacg ggtgagttcg aggctggtat ttccaaggac
-       61 ggtcagaccc gtgaacacgc ccttctggca ttcactctcg gtgtgcgtca gcttatcgtc
-      121 gctgtaaaca agatggacac tgtcaaggtg cggtatatgt actctcctga cgaatgtggc
-      181 cgacatgtct ccagtggagc gaggaacgtt tcaacgaaat cgtcaaggaa acttcaaact
-      241 ttatcaagaa ggtcggttac aatcccaagg ctgtcgcctt tgtaccaatc tctggctggc
-      301 acggtgacaa catgctggaa gagtctacca agtaagcgtt attttactat gacatttggc
-      361 agtatcctca ctcgaaatag ccttacttgg tataaaggct ggaccaagga gagcaagagt
-      421 ggtgtcgtca aaggaaagac actcctcgat gccattgacg ccattgaacc tcctactcgg
-      481 ccttctgaca aaccccttcg ccttcctctc caggatgtct acaagatcgg t
-//
-
-LOCUS       OQ110626                 555 bp    DNA     linear   PLN 19-APR-2023
-DEFINITION  Xerocomus coccolobae voucher JBSD133071 (ANGE1405) translation
-            elongation factor 1-alpha (EF1a) gene, partial cds.
-ACCESSION   OQ110626
-VERSION     OQ110626.1
-KEYWORDS    .
-SOURCE      Xerocomus coccolobae
-  ORGANISM  Xerocomus coccolobae
-            Eukaryota; Fungi; Dikarya; Basidiomycota; Agaricomycotina;
-            Agaricomycetes; Agaricomycetidae; Boletales; Boletineae;
-            Boletaceae; Xerocomoideae; Xerocomus.
-REFERENCE   1  (bases 1 to 555)
-  AUTHORS   Gelardi,M., Angelini,C., Biketova,A.Y., Suz,L.M., Ercole,E.,
-            Svetasheva,T.Y., Miller,K.O., de la Fuente,J.I., Jimenez,J.G. and
-            Vizzini,A.
-  TITLE     Coccoloba-associated xerocomoid boletes (Boletaceae) from the
-            Caribbean and Mexico: Tropicoboletus ruborculus gen. et comb. nov.,
-            revision of Xerocomus coccolobae, phylogenetic assessment of
-            Singerocomus guadelupae comb. nov., and type studies of Xerocomus
-            caeruleonigrescens, X. cuneipes, and X. pseudoboletinus var.
-            pini-caribaeae
-  JOURNAL   Mycol Prog 22 (4), 29 (2023)
-  REMARK    DOI: 10.1007/s11557-023-01876-7
-REFERENCE   2  (bases 1 to 555)
-  AUTHORS   Gelardi,M., Angelini,C., Biketova,A.Y., Suz,L.M., Ercole,E.,
-            Svetasheva,T.Y., Miller,K.O., de la Fuente,J.I., Jimenez,J.G. and
-            Vizzini,A.
-  TITLE     Direct Submission
-  JOURNAL   Submitted (20-DEC-2022) Department of Plant Biology, University of
-            Turin, Viale P.A. Mattioli 25, Torino, Torino 10125, Italy
-COMMENT     ##Assembly-Data-START##
-            Sequencing Technology :: Sanger dideoxy sequencing
-            ##Assembly-Data-END##
-FEATURES             Location/Qualifiers
-     source          1..555
-                     /organism="Xerocomus coccolobae"
-                     /mol_type="genomic DNA"
-                     /specimen_voucher="JBSD133071 (ANGE1405)"
-                     /db_xref="taxon:3016128"
-                     /geo_loc_name="Dominican Republic"
-     gene            <1..>555
-                     /gene="EF1a"
-     mRNA            join(<1..204,252..388,438..>555)
-                     /gene="EF1a"
-                     /product="translation elongation factor 1-alpha"
-     CDS             join(<1..204,252..388,438..>555)
-                     /gene="EF1a"
-                     /codon_start=1
-                     /product="translation elongation factor 1-alpha"
-                     /protein_id="WGD18108.1"
-                     /translation="APGHRDFIKNMITGTSQADCAILIIAGGTGEFEAGISKDGQTRE
-                     HALLAFTLGVRQLIVAVNKMDTVKWSEERFNEIVKETSNFIKKVGYNPKAVAFVPISG
-                     WHGDNMLEESTNLTWYKGWTKESKSGVVKGKTLLDAIDAIEPPTRPSDKPL"
-ORIGIN      
-        1 gctcctggtc atcgtgattt tatcaagaac atgattactg gtacttctca ggctgactgt
-       61 gctatcctca tcattgctgg tggcacgggt gagttcgagg ctggtatttc caaggacggt
-      121 cagacccgtg aacacgccct tctggcattc actctcggtg tgcgtcagct tatcgtcgct
-      181 gtaaacaaga tggacactgt caaggtgcgg tatatgtact ctcctgacga atgtggccga
-      241 catgtctcca gtggagcgag gaacgtttca acgaaatcgt caaggaaact tcaaacttta
-      301 tcaagaaggt cggttacaat cccaaggctg tcgcctttgt accaatctct ggctggcacg
-      361 gtgacaacat gctggaagag tctaccaagt aagcgttatt ttactatgac atttggcagt
-      421 atcctcactc gaaatagcct tacttggtat aaaggctgga ccaaggagag caagagtggt
-      481 gtcgtcaaag gaaagacact cctcgatgcc attgacgcca ttgaacctcc tactcggcct
-      541 tctgacaaac ccctt
-//
-
-LOCUS       OQ110625                 543 bp    DNA     linear   PLN 19-APR-2023
-DEFINITION  Tropicoboletus ruborculus voucher MO439745-komille277 translation
-            elongation factor 1-alpha (EF1a) gene, partial cds.
-ACCESSION   OQ110625
-VERSION     OQ110625.1
-KEYWORDS    .
-SOURCE      Tropicoboletus ruborculus
-  ORGANISM  Tropicoboletus ruborculus
-            Eukaryota; Fungi; Dikarya; Basidiomycota; Agaricomycotina;
-            Agaricomycetes; Agaricomycetidae; Boletales; Boletineae;
-            Boletaceae; Boletaceae incertae sedis; Tropicoboletus.
-REFERENCE   1  (bases 1 to 543)
-  AUTHORS   Gelardi,M., Angelini,C., Biketova,A.Y., Suz,L.M., Ercole,E.,
-            Svetasheva,T.Y., Miller,K.O., de la Fuente,J.I., Jimenez,J.G. and
-            Vizzini,A.
-  TITLE     Coccoloba-associated xerocomoid boletes (Boletaceae) from the
-            Caribbean and Mexico: Tropicoboletus ruborculus gen. et comb. nov.,
-            revision of Xerocomus coccolobae, phylogenetic assessment of
-            Singerocomus guadelupae comb. nov., and type studies of Xerocomus
-            caeruleonigrescens, X. cuneipes, and X. pseudoboletinus var.
-            pini-caribaeae
-  JOURNAL   Mycol Prog 22 (4), 29 (2023)
-  REMARK    DOI: 10.1007/s11557-023-01876-7
-REFERENCE   2  (bases 1 to 543)
-  AUTHORS   Gelardi,M., Angelini,C., Biketova,A.Y., Suz,L.M., Ercole,E.,
-            Svetasheva,T.Y., Miller,K.O., de la Fuente,J.I., Jimenez,J.G. and
-            Vizzini,A.
-  TITLE     Direct Submission
-  JOURNAL   Submitted (20-DEC-2022) Department of Plant Biology, University of
-            Turin, Viale P.A. Mattioli 25, Torino, Torino 10125, Italy
-COMMENT     ##Assembly-Data-START##
-            Sequencing Technology :: Sanger dideoxy sequencing
-            ##Assembly-Data-END##
-FEATURES             Location/Qualifiers
-     source          1..543
-                     /organism="Tropicoboletus ruborculus"
-                     /mol_type="genomic DNA"
-                     /specimen_voucher="MO439745-komille277"
-                     /db_xref="taxon:3016396"
-                     /geo_loc_name="Puerto Rico"
-     gene            <1..>543
-                     /gene="EF1a"
-     mRNA            join(<1..195,252..388,441..>543)
-                     /gene="EF1a"
-                     /product="translation elongation factor 1-alpha"
-     CDS             join(<1..195,252..388,441..>543)
-                     /gene="EF1a"
-                     /codon_start=1
-                     /product="translation elongation factor 1-alpha"
-                     /protein_id="WGD18107.1"
-                     /translation="HRDFIKNMITGTSQADCAILIIAGGTGEFEAGISKDGQTREHAL
-                     LAFTLGVRQLIVAVNKMDTTKWSEDRFNEIIKETSTFIKKVGYNPKAVAFVPISGWHG
-                     DNMLEESANMPWYKGWTKETKGGVVKGKTLLDAIDAIEPPVRP"
-ORIGIN      
-        1 caccgtgatt tcattaaaaa catgatcacc ggtacctccc aggccgactg tgccatcctc
-       61 attattgccg gtggtaccgg tgagttcgag gctggcatct ccaaggatgg ccagacccgt
-      121 gaacacgcac ttctggcttt caccctcggt gtgcgtcagc tcatcgtcgc tgtaaataaa
-      181 atggacacga ccaaggtatg ttgtgtactt ccttggatga atgtggtttg acgtggagat
-      241 gtcgccaata gtggagcgag gatcggttca acgaaattat caaggaaact tcgaccttta
-      301 ttaagaaggt tggctacaac cccaaggctg tcgccttcgt gcccatctct ggctggcacg
-      361 gtgacaacat gctggaggag tccgccaagt aagcattatt tcatgagctt ggctttcagc
-      421 attcttaaac atcgagatag catgccctgg tacaagggct ggaccaagga aaccaagggt
-      481 ggtgtcgtca agggaaaaac acttctcgat gccatcgatg ccatcgagcc tcctgttcgt
-      541 ccc
-//
-
-LOCUS       OQ110624                 549 bp    DNA     linear   PLN 19-APR-2023
-DEFINITION  Tropicoboletus ruborculus voucher JBSD133074 (ANGE1406) translation
-            elongation factor 1-alpha (EF1a) gene, partial cds.
-ACCESSION   OQ110624
-VERSION     OQ110624.1
-KEYWORDS    .
-SOURCE      Tropicoboletus ruborculus
-  ORGANISM  Tropicoboletus ruborculus
-            Eukaryota; Fungi; Dikarya; Basidiomycota; Agaricomycotina;
-            Agaricomycetes; Agaricomycetidae; Boletales; Boletineae;
-            Boletaceae; Boletaceae incertae sedis; Tropicoboletus.
-REFERENCE   1  (bases 1 to 549)
-  AUTHORS   Gelardi,M., Angelini,C., Biketova,A.Y., Suz,L.M., Ercole,E.,
-            Svetasheva,T.Y., Miller,K.O., de la Fuente,J.I., Jimenez,J.G. and
-            Vizzini,A.
-  TITLE     Coccoloba-associated xerocomoid boletes (Boletaceae) from the
-            Caribbean and Mexico: Tropicoboletus ruborculus gen. et comb. nov.,
-            revision of Xerocomus coccolobae, phylogenetic assessment of
-            Singerocomus guadelupae comb. nov., and type studies of Xerocomus
-            caeruleonigrescens, X. cuneipes, and X. pseudoboletinus var.
-            pini-caribaeae
-  JOURNAL   Mycol Prog 22 (4), 29 (2023)
-  REMARK    DOI: 10.1007/s11557-023-01876-7
-REFERENCE   2  (bases 1 to 549)
-  AUTHORS   Gelardi,M., Angelini,C., Biketova,A.Y., Suz,L.M., Ercole,E.,
-            Svetasheva,T.Y., Miller,K.O., de la Fuente,J.I., Jimenez,J.G. and
-            Vizzini,A.
-  TITLE     Direct Submission
-  JOURNAL   Submitted (20-DEC-2022) Department of Plant Biology, University of
-            Turin, Viale P.A. Mattioli 25, Torino, Torino 10125, Italy
-COMMENT     ##Assembly-Data-START##
-            Sequencing Technology :: Sanger dideoxy sequencing
-            ##Assembly-Data-END##
-FEATURES             Location/Qualifiers
-     source          1..549
-                     /organism="Tropicoboletus ruborculus"
-                     /mol_type="genomic DNA"
-                     /specimen_voucher="JBSD133074 (ANGE1406)"
-                     /db_xref="taxon:3016396"
-                     /geo_loc_name="Dominican Republic"
-     gene            <1..>549
-                     /gene="EF1a"
-     mRNA            join(<1..192,249..385,438..>549)
-                     /gene="EF1a"
-                     /product="translation elongation factor 1-alpha"
-     CDS             join(<1..192,249..385,438..>549)
-                     /gene="EF1a"
-                     /codon_start=1
-                     /product="translation elongation factor 1-alpha"
-                     /protein_id="WGD18106.1"
-                     /translation="RDFIKNMITGTSQADCAILIIAGGTGEFEAGISKDGQTREHALL
-                     AFTLGVRQLIVAVNKMDTTKWSEDRFNEIIKETSTFIKKVGYNPKAVAFVPISGWHGD
-                     NMLEESANMPWYKGWTKETKGGVVKGKTLLDAIDAIEPPVRPSDK"
-ORIGIN      
-        1 cgtgacttca ttaaaaacat gatcaccggt acctcccagg ccgactgtgc catcctcatt
-       61 attgccggtg gtaccggtga gttcgaggct ggcatctcca aggatggcca gacccgtgaa
-      121 cacgcacttc tggctttcac cctcggtgtg cgtcagctca tcgtcgctgt aaataaaatg
-      181 gacacgacca aggtatgttg tgtacttcct tggatgaatg tggtttgacg tggagatgtc
-      241 gccaatagtg gagcgaggat cggttcaacg aaattatcaa ggaaacttcg acctttatta
-      301 agaaggttgg ctacaacccc aaggctgtcg ccttcgtgcc catctctggc tggcacggtg
-      361 acaacatgct ggaggagtcc gccaagtaag cattatttca tgagcttggc tttcagcatt
-      421 cttaaacatc gagatagcat gccctggtac aagggctgga ccaaggaaac caagggtggt
-      481 gtcgtcaagg gaaaaacact tctcgatgcc atcgatgcca tcgagcctcc tgttcgtccc
-      541 tctgacaaa
 //
 
 LOCUS       ON855013                 533 bp    DNA     linear   PLN 23-MAR-2023
@@ -66280,183 +65889,6 @@ ORIGIN
       301 gaaggagatc aagggtggtt ccgccaaggg gaagaccctn cttgacgcca tcgatgccat
       361 cgagcctcct acccgtccct ccgacaaacc ccttcgtctt cctctccagg atgtctacaa
       421 gatcgg
-//
-
-LOCUS       MT164322                 520 bp    DNA     linear   PLN 21-SEP-2020
-DEFINITION  Tylopilus hayatae voucher UAEH 180 translation elongation factor
-            1-alpha (ef1a) gene, partial cds.
-ACCESSION   MT164322
-VERSION     MT164322.1
-KEYWORDS    .
-SOURCE      Tylopilus hayatae
-  ORGANISM  Tylopilus hayatae
-            Eukaryota; Fungi; Dikarya; Basidiomycota; Agaricomycotina;
-            Agaricomycetes; Agaricomycetidae; Boletales; Boletineae;
-            Boletaceae; Boletoideae; Tylopilus.
-REFERENCE   1  (bases 1 to 520)
-  AUTHORS   Rodriguez-Ramirez,E.C., Martinez-Gonzalez,C.R., Gonzalez-Avila,P.A.
-            and Luna-Vega,I.
-  TITLE     Tylopilus hayatae, a new endemic bolete species in relict Mexican
-            beech forest
-  JOURNAL   Phytotaxa 441 (1), 35-46 (2020)
-REFERENCE   2  (bases 1 to 520)
-  AUTHORS   Martinez-Gonzalez,C.R., Luna-Vega,I., Rodriguez-Ramirez,E.C. and
-            Gonzalez-Avila,P.A.
-  TITLE     Direct Submission
-  JOURNAL   Submitted (06-MAR-2020) Biologia, Universidad Nacional Autonoma de
-            Mexico, C.U., Ciudad de Mexico, CDMX 04510, Mexico
-COMMENT     ##Assembly-Data-START##
-            Sequencing Technology :: Sanger dideoxy sequencing
-            ##Assembly-Data-END##
-FEATURES             Location/Qualifiers
-     source          1..520
-                     /organism="Tylopilus hayatae"
-                     /mol_type="genomic DNA"
-                     /specimen_voucher="UAEH 180"
-                     /db_xref="taxon:2772423"
-                     /geo_loc_name="Mexico"
-     gene            <1..>520
-                     /gene="ef1a"
-     mRNA            <1..>520
-                     /gene="ef1a"
-                     /product="translation elongation factor 1-alpha"
-     CDS             <1..>520
-                     /gene="ef1a"
-                     /codon_start=1
-                     /product="translation elongation factor 1-alpha"
-                     /protein_id="QNS42812.1"
-                     /translation="ETAKYYVTIIDAPGHRDFIKNMITGTSQADCAVLIVAAGTGEFE
-                     AGISKNGQTREHALLAFTLGVKQLIVGVNKMDSSEPPYSEARYEEIKKEVSSYIKKIG
-                     YNPAAVAFVPISGWHGDNMLEASTNMNWFKGWKIERKEANADGKTLIDALDAILPPSR
-                     PSEKPLRLPLQDV"
-ORIGIN      
-        1 gaaaccgcca aatactacgt caccatcatc gacgcccccg gtcacagaga tttcatcaag
-       61 aacatgatca ctggtacctc ccaagctgat tgcgccgtct tgattgttgc tgccggtact
-      121 ggtgaattcg aagccggtat ctccaagaac ggtcagaccc gtgaacacgc cttgttggcc
-      181 ttcaccttgg gtgtcaagca attgatcgtt ggtgtcaaca agatggattc atctgaacca
-      241 ccctacagcg aggcccgtta tgaggaaatc aagaaggaag tctcctctta catcaagaag
-      301 attggttaca atcccgctgc tgttgctttc gttcccatct ccggctggca cggtgataac
-      361 atgttggagg cctccaccaa catgaactgg ttcaagggat ggaagatcga acgtaaggaa
-      421 gccaacgccg acggcaagac cctcatcgat gccttggacg ctatcttgcc tccttcccgt
-      481 ccctctgaga agcccctgcg tttgcccttg caggatgttt
-//
-
-LOCUS       MT164321                 520 bp    DNA     linear   PLN 21-SEP-2020
-DEFINITION  Tylopilus hayatae voucher FCME 2013 translation elongation factor
-            1-alpha (ef1a) gene, partial cds.
-ACCESSION   MT164321
-VERSION     MT164321.1
-KEYWORDS    .
-SOURCE      Tylopilus hayatae
-  ORGANISM  Tylopilus hayatae
-            Eukaryota; Fungi; Dikarya; Basidiomycota; Agaricomycotina;
-            Agaricomycetes; Agaricomycetidae; Boletales; Boletineae;
-            Boletaceae; Boletoideae; Tylopilus.
-REFERENCE   1  (bases 1 to 520)
-  AUTHORS   Rodriguez-Ramirez,E.C., Martinez-Gonzalez,C.R., Gonzalez-Avila,P.A.
-            and Luna-Vega,I.
-  TITLE     Tylopilus hayatae, a new endemic bolete species in relict Mexican
-            beech forest
-  JOURNAL   Phytotaxa 441 (1), 35-46 (2020)
-REFERENCE   2  (bases 1 to 520)
-  AUTHORS   Martinez-Gonzalez,C.R., Luna-Vega,I., Rodriguez-Ramirez,E.C. and
-            Gonzalez-Avila,P.A.
-  TITLE     Direct Submission
-  JOURNAL   Submitted (06-MAR-2020) Biologia, Universidad Nacional Autonoma de
-            Mexico, C.U., Ciudad de Mexico, CDMX 04510, Mexico
-COMMENT     ##Assembly-Data-START##
-            Sequencing Technology :: Sanger dideoxy sequencing
-            ##Assembly-Data-END##
-FEATURES             Location/Qualifiers
-     source          1..520
-                     /organism="Tylopilus hayatae"
-                     /mol_type="genomic DNA"
-                     /specimen_voucher="FCME 2013"
-                     /db_xref="taxon:2772423"
-                     /geo_loc_name="Mexico"
-     gene            <1..>520
-                     /gene="ef1a"
-     mRNA            <1..>520
-                     /gene="ef1a"
-                     /product="translation elongation factor 1-alpha"
-     CDS             <1..>520
-                     /gene="ef1a"
-                     /codon_start=1
-                     /product="translation elongation factor 1-alpha"
-                     /protein_id="QNS42811.1"
-                     /translation="ETAKYYVTIIDAPGHRDFIKNMITGTSQADCAVLIVAAGTGEFE
-                     AGISKNGQTREHALLAFTLGVKQLIVGVNKMDSSEPPYSEARYEEIKKEVSSYIKKIG
-                     YNPAAVAFVPISGWHGDNMLEASTNMNWFKGWKIERKEANADGKTLIDALDAILPPSR
-                     PSEKPLRLPLQDV"
-ORIGIN      
-        1 gaaaccgcca aatactacgt caccatcatc gacgcccccg gtcacagaga tttcatcaag
-       61 aacatgatca ctggtacctc ccaagctgat tgcgccgtct tgattgttgc tgccggtact
-      121 ggtgaattcg aagccggtat ctccaagaac ggtcagaccc gtgaacacgc cttgttggcc
-      181 ttcaccttgg gtgtcaagca attgatcgtt ggtgtcaaca agatggattc atctgaacca
-      241 ccctacagcg aggcccgtta tgaggaaatc aagaaggaag tctcctctta catcaagaag
-      301 attggttaca atcccgctgc tgttgctttc gttcccatct ccggctggca cggtgataac
-      361 atgttggagg cctccaccaa catgaactgg ttcaagggat ggaagatcga acgtaaggaa
-      421 gccaacgccg acggcaagac cctcatcgat gccttggacg ctatcttgcc tccttcccgt
-      481 ccctctgaga agcccctgcg tttgcccttg caggatgttt
-//
-
-LOCUS       MT164320                 520 bp    DNA     linear   PLN 21-SEP-2020
-DEFINITION  Tylopilus hayatae voucher FCME 2017 translation elongation factor
-            1-alpha (ef1a) gene, partial cds.
-ACCESSION   MT164320
-VERSION     MT164320.1
-KEYWORDS    .
-SOURCE      Tylopilus hayatae
-  ORGANISM  Tylopilus hayatae
-            Eukaryota; Fungi; Dikarya; Basidiomycota; Agaricomycotina;
-            Agaricomycetes; Agaricomycetidae; Boletales; Boletineae;
-            Boletaceae; Boletoideae; Tylopilus.
-REFERENCE   1  (bases 1 to 520)
-  AUTHORS   Rodriguez-Ramirez,E.C., Martinez-Gonzalez,C.R., Gonzalez-Avila,P.A.
-            and Luna-Vega,I.
-  TITLE     Tylopilus hayatae, a new endemic bolete species in relict Mexican
-            beech forest
-  JOURNAL   Phytotaxa 441 (1), 35-46 (2020)
-REFERENCE   2  (bases 1 to 520)
-  AUTHORS   Martinez-Gonzalez,C.R., Luna-Vega,I., Rodriguez-Ramirez,E.C. and
-            Gonzalez-Avila,P.A.
-  TITLE     Direct Submission
-  JOURNAL   Submitted (06-MAR-2020) Biologia, Universidad Nacional Autonoma de
-            Mexico, C.U., Ciudad de Mexico, CDMX 04510, Mexico
-COMMENT     ##Assembly-Data-START##
-            Sequencing Technology :: Sanger dideoxy sequencing
-            ##Assembly-Data-END##
-FEATURES             Location/Qualifiers
-     source          1..520
-                     /organism="Tylopilus hayatae"
-                     /mol_type="genomic DNA"
-                     /specimen_voucher="FCME 2017"
-                     /db_xref="taxon:2772423"
-                     /geo_loc_name="Mexico"
-     gene            <1..>520
-                     /gene="ef1a"
-     mRNA            <1..>520
-                     /gene="ef1a"
-                     /product="translation elongation factor 1-alpha"
-     CDS             <1..>520
-                     /gene="ef1a"
-                     /codon_start=1
-                     /product="translation elongation factor 1-alpha"
-                     /protein_id="QNS42810.1"
-                     /translation="ETAKYYVTIIDAPGHRDFIKNMITGTSQADCAVLIVAAGTGEFE
-                     AGISKNGQTREHALLAFTLGVKQLIVGVNKMDSSEPPYSEARYEEIKKEVSSYIKKIG
-                     YNPAAVAFVPISGWHGDNMLEASTNMNWFKGWKIERKEANADGKTLIDALDAILPPSR
-                     PSEKPLRLPLQDV"
-ORIGIN      
-        1 gaaaccgcca aatactacgt caccatcatc gacgcccccg gtcacagaga tttcatcaag
-       61 aacatgatca ctggtacctc ccaagctgat tgcgccgtct tgattgttgc tgccggtact
-      121 ggtgaattcg aagccggtat ctccaagaac ggtcagaccc gtgaacacgc cttgttggcc
-      181 ttcaccttgg gtgtcaagca attgatcgtt ggtgtcaaca agatggattc atctgaacca
-      241 ccctacagcg aggcccgtta tgaggaaatc aagaaggaag tctcctctta catcaagaag
-      301 attggttaca atcccgctgc tgttgctttc gttcccatct ccggctggca cggtgataac
-      361 atgttggagg cctccaccaa catgaactgg ttcaagggat ggaagatcga acgtaaggaa
-      421 gccaacgccg acggcaagac cctcatcgat gccttggacg ctatcttgcc tccttcccgt
-      481 ccctctgaga agcccctgcg tttgcccttg caggatgttt
 //
 
 LOCUS       MN304799                 564 bp    DNA     linear   PLN 30-AUG-2020

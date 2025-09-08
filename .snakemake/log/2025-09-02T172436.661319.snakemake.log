@@ -1,0 +1,101 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 64
+Rules claiming more threads will be scaled down.
+Job stats:
+job                           count
+--------------------------  -------
+align_locus                       3
+all                               1
+build_backbone_constrained        1
+build_site                        1
+build_taxon_map                   1
+concat_supermatrix                1
+dedupe_locus                      4
+fetch_locus                       1
+loci_table                        1
+mask_locus_refined                3
+merge_custom                      4
+prettify_tree                     1
+qc_from_gb                        4
+root_tree                         1
+specimen_loci                     1
+total                            28
+
+Select jobs to execute...
+
+[Tue Sep  2 17:24:37 2025]
+rule fetch_locus:
+    output: data/staging/ITS.gb
+    jobid: 25
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: locus=ITS
+    resources: tmpdir=/tmp
+
+
+[Tue Sep  2 17:24:38 2025]
+rule qc_from_gb:
+    input: data/staging/RPB2.gb
+    output: data/qc/RPB2.cleaned.fasta
+    jobid: 16
+    reason: Code has changed since last execution
+    wildcards: locus=RPB2
+    resources: tmpdir=/tmp
+
+
+[Tue Sep  2 17:24:38 2025]
+rule qc_from_gb:
+    input: data/staging/TEF1.gb
+    output: data/qc/TEF1.cleaned.fasta
+    jobid: 22
+    reason: Code has changed since last execution
+    wildcards: locus=TEF1
+    resources: tmpdir=/tmp
+
+
+[Tue Sep  2 17:24:38 2025]
+rule qc_from_gb:
+    input: data/staging/RPB1.gb
+    output: data/qc/RPB1.cleaned.fasta
+    jobid: 10
+    reason: Code has changed since last execution
+    wildcards: locus=RPB1
+    resources: tmpdir=/tmp
+
+[Tue Sep  2 17:24:38 2025]
+Finished job 10.
+1 of 28 steps (4%) done
+Select jobs to execute...
+
+[Tue Sep  2 17:24:38 2025]
+rule merge_custom:
+    input: data/qc/RPB1.cleaned.fasta
+    output: data/qc/RPB1.merged.fasta
+    jobid: 9
+    reason: Input files updated by another job: data/qc/RPB1.cleaned.fasta
+    wildcards: locus=RPB1
+    resources: tmpdir=/tmp
+
+RuleException in rule merge_custom in file /home/bdentinger/boletaceae/workflow/rules/qc_align.smk, line 26:
+NameError: The name 'PRESERVE_FLAG' is unknown in this context. Please make sure that you defined that variable. Also note that braces not used for variable access have to be escaped by repeating them, i.e. {{print $1}}, when formatting the following:
+
+        set -euo pipefail
+        mkdir -p data/qc
+
+        PRESERVE_FLAG=""
+        if [[ "{params.preserve}" == "true" || "{params.preserve}" == "1" || "{params.preserve}" == "yes" ]]; then
+          PRESERVE_FLAG="--preserve-labels"
+        fi
+
+        if [[ -s "{params.custom}" ]]; then
+          {config[python_bin]} workflow/scripts/ingest_custom_fasta.py \
+            --in "{params.custom}" \
+            --locus "{wildcards.locus}" \
+            --out "data/qc/{wildcards.locus}.custom.ingested.fasta" \
+            --taxon-map-append "data/staging/taxon_map.tsv" \
+            ${PRESERVE_FLAG}
+          cat "{input.gb}" "data/qc/{wildcards.locus}.custom.ingested.fasta" > "{output.merged}"
+        else
+          cp "{input.gb}" "{output.merged}"
+        fi
+        

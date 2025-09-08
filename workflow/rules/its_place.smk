@@ -1,121 +1,171 @@
-# ITS placement and grafting (checkpoint-aware, non-empty genera only)
+##############################
+# its_place.smk — ITS clustering and EPA-ng placement #
+##############################
 
-# 1) Write bridge.tsv and a preliminary genera.txt (may include genera with 0 seqs)
-checkpoint its_bridge:
+# Find bridge taxa (specimens with both ITS and backbone loci)
+checkpoint find_bridge_taxa:
     input:
-        backbone = "data/trees/backbone.rooted.pretty.newick",
-        taxmap   = "data/staging/taxon_map.tsv",
-        its      = "data/qc/ITS.cleaned.fasta"
+        backbone_tree = "data/trees/backbone.treefile",
+        taxon_map = "data/staging/taxon_map.tsv",
+        its_fasta = "data/qc/ITS.dedup.fasta",
+        specimen_loci = "data/staging/specimens/specimen_loci.tsv"
     output:
-        bridges  = "data/packages/ITS/bridge.tsv",
-        genera   = "data/packages/ITS/genera.txt"
+        bridge_taxa = "data/its/bridge_taxa.tsv",
+        genera_list = "data/its/genera.txt"
     shell:
-        r"""{config[python_bin]} workflow/scripts/find_bridge_taxa.py \
-              --backbone {input.backbone} \
-              --taxon-map {input.taxmap} \
-              --its-fasta {input.its} \
-              --out {output.bridges}
-           cut -f1 {output.bridges} | sort -u > {output.genera}"""
-
-# 2) Split ITS by genus (checkpoint so we can inspect the split outputs)
-checkpoint its_split_by_genus:
-    input:
-        its    = "data/qc/ITS.cleaned.fasta",
-        taxmap = "data/staging/taxon_map.tsv",
-        # depend on the preliminary genera list
-        genera = "data/packages/ITS/genera.txt"
-    output:
-        done = touch("data/packages/ITS/split.done")
-    shell:
-        r"""{config[python_bin]} - <<'PY'
-from pathlib import Path
-import subprocess, shlex
-gens = [l.strip() for l in Path("{input.genera}").read_text().splitlines() if l.strip()]
-cmd = [
-  "{config[python_bin]}","workflow/scripts/split_its_by_genus.py",
-  "--its","{input.its}","--taxon-map","{input.taxmap}",
-  "--outdir","data/packages/ITS/split","--genera", *gens
-]
-print("[split]"," ".join(shlex.quote(x) for x in cmd))
-subprocess.check_call(cmd)
-Path("data/packages/ITS/split.done").write_text("ok\n")
-PY
+        r"""
+        mkdir -p data/its
+        {config[python_bin]} workflow/scripts/find_bridge_taxa.py \
+          --backbone-tree {input.backbone_tree} \
+          --taxon-map {input.taxon_map} \
+          --its-fasta {input.its_fasta} \
+          --specimen-loci {input.specimen_loci} \
+          --out-bridge {output.bridge_taxa} \
+          --out-genera {output.genera_list}
         """
 
-# helper: after split checkpoint, list genera with a non-empty split FASTA
-def nonempty_genera():
-    ch = checkpoints.its_split_by_genus.get()
-    # list *.fasta in split dir and keep those with size > 0
-    import os, glob
-    paths = sorted(glob.glob("data/packages/ITS/split/*.fasta"))
-    gens = []
-    for p in paths:
-        try:
-            if os.path.getsize(p) > 0:
-                gens.append(os.path.splitext(os.path.basename(p))[0])
-        except OSError:
-            pass
-    return gens
-
-# materialize targets for all non-empty genera
-def built_ok_targets(wc):
-    gens = nonempty_genera()
-    return expand("data/packages/ITS/{genus}/.built.ok", genus=gens)
-
-def jplace_targets(wc):
-    gens = nonempty_genera()
-    return expand("data/placements/ITS/{genus}/placements.jplace", genus=gens)
-
-# 3) Build genus reference package (only for non-empty genera)
-rule its_build_ref:
+# Split ITS sequences by genus
+checkpoint split_its_by_genus:
     input:
-        fa = "data/packages/ITS/split/{genus}.fasta"
+        its_fasta = "data/align/ITS.final.masked.fasta",
+        bridge_taxa = "data/its/bridge_taxa.tsv",
+        genera_list = "data/its/genera.txt"
     output:
-        pkg_done = touch("data/packages/ITS/{genus}/.built.ok"),
-        msa      = "data/packages/ITS/{genus}/aln.masked.fasta",
-        tree     = "data/packages/ITS/{genus}/ref.treefile",
-        model    = "data/packages/ITS/{genus}/ref.model"
+        split_done = touch("data/its/split/.done")
     params:
-        outdir = "data/packages/ITS/{genus}"
+        outdir = "data/its/split",
+        min_seqs = config.get("its_placement", {}).get("min_seqs_per_genus", 4)
     shell:
-        r"""{config[python_bin]} workflow/scripts/build_its_ref.py \
-             --in {input.fa} --outdir {params.outdir}
-           touch {output.pkg_done}"""
+        r"""
+        mkdir -p {params.outdir}
+        {config[python_bin]} workflow/scripts/split_its_by_genus.py \
+          --its-fasta {input.its_fasta} \
+          --bridge-taxa {input.bridge_taxa} \
+          --genera-file {input.genera_list} \
+          --outdir {params.outdir} \
+          --min-seqs {params.min_seqs}
+        """
 
-# 4) Place ITS for each genus
-rule its_place_genus:
+# Helper function to get valid genera after splitting
+def get_valid_genera():
+    import os
+    import glob
+    
+    # Check if checkpoint has completed
+    try:
+        checkpoints.split_its_by_genus.get()
+        split_dir = "data/its/split"
+        
+        if os.path.exists(split_dir):
+            fasta_files = glob.glob(f"{split_dir}/*.fasta")
+            genera = []
+            for f in fasta_files:
+                if os.path.getsize(f) > 0:  # Non-empty file
+                    genus = os.path.basename(f).replace('.fasta', '')
+                    genera.append(genus)
+            return sorted(genera)
+        else:
+            return []
+    except:
+        return []
+
+# Build reference tree for each genus
+rule build_genus_reference:
     input:
-        msa   = "data/packages/ITS/{genus}/aln.masked.fasta",
-        tree  = "data/packages/ITS/{genus}/ref.treefile",
-        model = "data/packages/ITS/{genus}/ref.model",
-        qs    = "data/packages/ITS/split/{genus}.fasta"
+        genus_fasta = "data/its/split/{genus}.fasta"
     output:
-        jp    = "data/placements/ITS/{genus}/placements.jplace"
+        ref_tree = "data/its/refs/{genus}/reference.treefile",
+        ref_aln = "data/its/refs/{genus}/reference.fasta",
+        ref_info = "data/its/refs/{genus}/reference.raxml.info"
     params:
-        pkg   = "data/packages/ITS/{genus}"
+        outdir = "data/its/refs/{genus}"
+    threads:
+        config.get("threads", {}).get("iqtree", 4)
     shell:
-        r"""{config[python_bin]} workflow/scripts/place_its.py \
-             --pkg {params.pkg} \
-             --queries {input.qs} \
-             --out {output.jp}"""
+        r"""
+        mkdir -p {params.outdir}
+        
+        # Align genus sequences
+        mafft --maxiterate 1000 --localpair --thread {threads} \
+              {input.genus_fasta} > {output.ref_aln}
+        
+        # Trim alignment
+        trimal -in {output.ref_aln} -out {output.ref_aln} -gt 0.5
+        
+        # Build reference tree
+        {config[iqtree_bin]} -s {output.ref_aln} -m GTR+I+G \
+                             -B 1000 -T {threads} \
+                             -pre {params.outdir}/reference
+        """
 
-# 5) Aggregate targets driven by the non-empty genus list
-rule its_all_refs:
-    input: built_ok_targets
-
-rule its_all_placements:
-    input: jplace_targets
-
-# 6) Graft all placements onto the backbone
-rule graft_its:
+# Build EPA-ng reference package for each genus
+rule build_epa_reference:
     input:
-        bb  = "data/trees/backbone.rooted.pretty.newick",
-        # ensure split checkpoint ran and use only non-empty genera
-        jps = jplace_targets
+        ref_tree = "data/its/refs/{genus}/reference.treefile",
+        ref_aln = "data/its/refs/{genus}/reference.fasta"
     output:
-        out = "data/trees/backbone_with_its.newick"
+        epa_info = "data/its/refs/{genus}/reference.raxml.rba"
+    params:
+        prefix = "data/its/refs/{genus}/reference"
+    threads:
+        config.get("threads", {}).get("iqtree", 4)
     shell:
-        r"""{config[python_bin]} workflow/scripts/graft_by_genus.py \
-             --backbone {input.bb} \
-             --placements {input.jps} \
-             --out {output.out}"""
+        r"""
+        # Build EPA-ng reference package
+        epa-ng --ref-msa {input.ref_aln} --tree {input.ref_tree} \
+               --prefix {params.prefix} --model GTR+I+G \
+               --threads {threads}
+        """
+
+# Place ITS sequences using EPA-ng
+rule place_its_sequences:
+    input:
+        ref_rba = "data/its/refs/{genus}/reference.raxml.rba",
+        query_fasta = "data/its/split/{genus}.fasta"
+    output:
+        placement = "data/its/placements/{genus}.jplace"
+    params:
+        ref_prefix = "data/its/refs/{genus}/reference",
+        out_prefix = "data/its/placements/{genus}"
+    threads:
+        config.get("threads", {}).get("iqtree", 4)
+    shell:
+        r"""
+        mkdir -p data/its/placements
+        
+        # Run EPA-ng placement
+        epa-ng --ref-msa {params.ref_prefix}.raxml.rba \
+               --query {input.query_fasta} \
+               --outdir data/its/placements \
+               --outfile {wildcards.genus}.jplace \
+               --threads {threads} \
+               --heuristic {config[its_placement][epa_heuristic]}
+        """
+
+# Aggregate all genus placements
+def get_placement_files():
+    genera = get_valid_genera()
+    return expand("data/its/placements/{genus}.jplace", genus=genera)
+
+rule aggregate_placements:
+    input:
+        get_placement_files
+    output:
+        touch("data/its/placements/.done")
+
+# Graft ITS sequences onto backbone tree
+rule graft_its_to_backbone:
+    input:
+        backbone_tree = "data/trees/backbone.treefile",
+        placements = get_placement_files,
+        bridge_taxa = "data/its/bridge_taxa.tsv"
+    output:
+        grafted_tree = "data/trees/backbone_with_its.newick"
+    shell:
+        r"""
+        {config[python_bin]} workflow/scripts/graft_its_to_backbone.py \
+          --backbone-tree {input.backbone_tree} \
+          --placements {input.placements} \
+          --bridge-taxa {input.bridge_taxa} \
+          --output {output.grafted_tree}
+        """

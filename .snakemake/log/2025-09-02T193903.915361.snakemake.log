@@ -1,0 +1,276 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 64
+Rules claiming more threads will be scaled down.
+Job stats:
+job                           count
+--------------------------  -------
+align_locus                       3
+build_backbone_constrained        1
+build_site                        1
+build_taxon_map                   1
+concat_supermatrix                1
+dedupe_locus                      4
+fetch_locus                       1
+loci_table                        1
+mask_locus_refined                3
+merge_custom                      4
+prettify_tree                     1
+qc_from_gb                        3
+root_tree                         1
+specimen_loci                     1
+total                            26
+
+Select jobs to execute...
+
+[Tue Sep  2 19:39:04 2025]
+rule fetch_locus:
+    output: data/staging/ITS.gb
+    jobid: 24
+    reason: Forced execution
+    wildcards: locus=ITS
+    resources: tmpdir=/tmp
+
+
+[Tue Sep  2 19:39:05 2025]
+rule qc_from_gb:
+    input: data/staging/TEF1.gb
+    output: data/qc/TEF1.cleaned.fasta
+    jobid: 21
+    reason: Forced execution
+    wildcards: locus=TEF1
+    resources: tmpdir=/tmp
+
+
+[Tue Sep  2 19:39:05 2025]
+rule merge_custom:
+    input: data/qc/RPB1.cleaned.fasta
+    output: data/qc/RPB1.merged.fasta
+    jobid: 8
+    reason: Updated input files: data/qc/RPB1.cleaned.fasta
+    wildcards: locus=RPB1
+    resources: tmpdir=/tmp
+
+
+[Tue Sep  2 19:39:05 2025]
+rule qc_from_gb:
+    input: data/staging/RPB2.gb
+    output: data/qc/RPB2.cleaned.fasta
+    jobid: 15
+    reason: Forced execution
+    wildcards: locus=RPB2
+    resources: tmpdir=/tmp
+
+[Tue Sep  2 19:39:05 2025]
+Finished job 8.
+1 of 26 steps (4%) done
+Select jobs to execute...
+
+[Tue Sep  2 19:39:05 2025]
+rule dedupe_locus:
+    input: data/qc/RPB1.merged.fasta
+    output: data/qc/RPB1.dedup.fasta
+    jobid: 7
+    reason: Input files updated by another job: data/qc/RPB1.merged.fasta
+    wildcards: locus=RPB1
+    resources: tmpdir=/tmp
+
+[Tue Sep  2 19:39:05 2025]
+Finished job 7.
+2 of 26 steps (8%) done
+Select jobs to execute...
+
+[Tue Sep  2 19:39:05 2025]
+rule align_locus:
+    input: data/qc/RPB1.dedup.fasta
+    output: data/align/RPB1.aln.fasta
+    log: logs/mafft/RPB1.log
+    jobid: 6
+    reason: Missing output files: data/align/RPB1.aln.fasta; Input files updated by another job: data/qc/RPB1.dedup.fasta
+    wildcards: locus=RPB1
+    threads: 16
+    resources: tmpdir=/tmp
+
+[Tue Sep  2 19:39:06 2025]
+Finished job 15.
+3 of 26 steps (12%) done
+Select jobs to execute...
+
+[Tue Sep  2 19:39:06 2025]
+rule merge_custom:
+    input: data/qc/RPB2.cleaned.fasta
+    output: data/qc/RPB2.merged.fasta
+    jobid: 14
+    reason: Input files updated by another job: data/qc/RPB2.cleaned.fasta
+    wildcards: locus=RPB2
+    resources: tmpdir=/tmp
+
+[Tue Sep  2 19:39:06 2025]
+Finished job 14.
+4 of 26 steps (15%) done
+Select jobs to execute...
+
+[Tue Sep  2 19:39:06 2025]
+rule dedupe_locus:
+    input: data/qc/RPB2.merged.fasta
+    output: data/qc/RPB2.dedup.fasta
+    jobid: 13
+    reason: Input files updated by another job: data/qc/RPB2.merged.fasta
+    wildcards: locus=RPB2
+    resources: tmpdir=/tmp
+
+[Tue Sep  2 19:39:06 2025]
+Finished job 13.
+5 of 26 steps (19%) done
+Select jobs to execute...
+
+[Tue Sep  2 19:39:06 2025]
+rule align_locus:
+    input: data/qc/RPB2.dedup.fasta
+    output: data/align/RPB2.aln.fasta
+    log: logs/mafft/RPB2.log
+    jobid: 12
+    reason: Missing output files: data/align/RPB2.aln.fasta; Input files updated by another job: data/qc/RPB2.dedup.fasta
+    wildcards: locus=RPB2
+    threads: 16
+    resources: tmpdir=/tmp
+
+[Tue Sep  2 19:39:06 2025]
+Finished job 21.
+6 of 26 steps (23%) done
+Select jobs to execute...
+
+[Tue Sep  2 19:39:06 2025]
+rule merge_custom:
+    input: data/qc/TEF1.cleaned.fasta
+    output: data/qc/TEF1.merged.fasta
+    jobid: 20
+    reason: Input files updated by another job: data/qc/TEF1.cleaned.fasta
+    wildcards: locus=TEF1
+    resources: tmpdir=/tmp
+
+[Tue Sep  2 19:39:06 2025]
+Finished job 20.
+7 of 26 steps (27%) done
+Select jobs to execute...
+
+[Tue Sep  2 19:39:06 2025]
+rule dedupe_locus:
+    input: data/qc/TEF1.merged.fasta
+    output: data/qc/TEF1.dedup.fasta
+    jobid: 19
+    reason: Input files updated by another job: data/qc/TEF1.merged.fasta
+    wildcards: locus=TEF1
+    resources: tmpdir=/tmp
+
+[Tue Sep  2 19:39:06 2025]
+Finished job 19.
+8 of 26 steps (31%) done
+Select jobs to execute...
+
+[Tue Sep  2 19:39:06 2025]
+rule align_locus:
+    input: data/qc/TEF1.dedup.fasta
+    output: data/align/TEF1.aln.fasta
+    log: logs/mafft/TEF1.log
+    jobid: 18
+    reason: Missing output files: data/align/TEF1.aln.fasta; Input files updated by another job: data/qc/TEF1.dedup.fasta
+    wildcards: locus=TEF1
+    threads: 16
+    resources: tmpdir=/tmp
+
+[Tue Sep  2 19:39:58 2025]
+Finished job 6.
+9 of 26 steps (35%) done
+Select jobs to execute...
+
+[Tue Sep  2 19:39:58 2025]
+rule mask_locus_refined:
+    input: data/align/RPB1.aln.fasta
+    output: data/align/RPB1.masked.fasta
+    jobid: 5
+    reason: Missing output files: data/align/RPB1.masked.fasta; Input files updated by another job: data/align/RPB1.aln.fasta
+    wildcards: locus=RPB1
+    resources: tmpdir=/tmp
+
+[Tue Sep  2 19:39:58 2025]
+Finished job 5.
+10 of 26 steps (38%) done
+[Tue Sep  2 19:40:08 2025]
+Finished job 12.
+11 of 26 steps (42%) done
+Select jobs to execute...
+
+[Tue Sep  2 19:40:08 2025]
+rule mask_locus_refined:
+    input: data/align/RPB2.aln.fasta
+    output: data/align/RPB2.masked.fasta
+    jobid: 11
+    reason: Missing output files: data/align/RPB2.masked.fasta; Input files updated by another job: data/align/RPB2.aln.fasta
+    wildcards: locus=RPB2
+    resources: tmpdir=/tmp
+
+[Tue Sep  2 19:40:08 2025]
+Finished job 11.
+12 of 26 steps (46%) done
+[Tue Sep  2 19:40:19 2025]
+Finished job 18.
+13 of 26 steps (50%) done
+Select jobs to execute...
+
+[Tue Sep  2 19:40:19 2025]
+rule mask_locus_refined:
+    input: data/align/TEF1.aln.fasta
+    output: data/align/TEF1.masked.fasta
+    jobid: 17
+    reason: Missing output files: data/align/TEF1.masked.fasta; Input files updated by another job: data/align/TEF1.aln.fasta
+    wildcards: locus=TEF1
+    resources: tmpdir=/tmp
+
+[Tue Sep  2 19:40:19 2025]
+Finished job 17.
+14 of 26 steps (54%) done
+Select jobs to execute...
+
+[Tue Sep  2 19:40:19 2025]
+rule concat_supermatrix:
+    input: data/align/RPB1.masked.fasta, data/align/RPB2.masked.fasta, data/align/TEF1.masked.fasta
+    output: data/align/concat.fasta, data/align/partitions.txt, data/align/taxa.txt
+    jobid: 4
+    reason: Missing output files: data/align/concat.fasta, data/align/partitions.txt; Input files updated by another job: data/align/RPB1.masked.fasta, data/align/RPB2.masked.fasta, data/align/TEF1.masked.fasta
+    resources: tmpdir=/tmp
+
+[Tue Sep  2 19:40:20 2025]
+Finished job 4.
+15 of 26 steps (58%) done
+Select jobs to execute...
+
+[Tue Sep  2 19:40:20 2025]
+rule build_backbone_constrained:
+    input: data/align/concat.fasta, data/align/partitions.txt
+    output: data/trees/backbone.treefile
+    jobid: 3
+    reason: Missing output files: data/trees/backbone.treefile; Input files updated by another job: data/align/concat.fasta, data/align/partitions.txt
+    resources: tmpdir=/tmp
+
+[Tue Sep  2 19:40:20 2025]
+Error in rule build_backbone_constrained:
+    jobid: 3
+    input: data/align/concat.fasta, data/align/partitions.txt
+    output: data/trees/backbone.treefile
+    shell:
+        
+        iqtree3 -s data/align/concat.fasta -p data/align/partitions.txt \
+                -g constraints/Trembleetal_branchlength.newick \
+		-T AUTO \
+                -B 1000 --sampling GENESITE \
+                -pre data/trees/backbone
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Tue Sep  2 19:41:11 2025]
+Finished job 24.
+16 of 26 steps (62%) done
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2025-09-02T193903.915361.snakemake.log

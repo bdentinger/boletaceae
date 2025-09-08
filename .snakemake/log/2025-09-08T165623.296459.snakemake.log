@@ -1,0 +1,102 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 64
+Rules claiming more threads will be scaled down.
+Job stats:
+job           count
+----------  -------
+build_site        1
+root_tree         1
+total             2
+
+Select jobs to execute...
+
+[Mon Sep  8 16:56:24 2025]
+rule root_tree:
+    input: data/trees/backbone.pretty.newick
+    output: data/trees/backbone.rooted.pretty.newick
+    jobid: 1
+    reason: Missing output files: data/trees/backbone.rooted.pretty.newick; Updated input files: data/trees/backbone.pretty.newick
+    resources: tmpdir=/tmp
+
+
+        set -euo pipefail
+        # Build optional flag strings only if non-empty
+        flags_single=""
+        if [[ -n "" ]]; then
+          flags_single="--outgroup-single "
+        fi
+
+        flags_clade=""
+        if [[ -n "" ]]; then
+          flags_clade="--outgroup-clade "
+        fi
+
+        python3.11 workflow/scripts/reroot_tree.py \
+          --in data/trees/backbone.pretty.newick \
+          --out data/trees/backbone.rooted.pretty.newick \
+          $flags_single \
+          $flags_clade
+        
+[Mon Sep  8 16:56:25 2025]
+Finished job 1.
+1 of 2 steps (50%) done
+Select jobs to execute...
+
+[Mon Sep  8 16:56:25 2025]
+rule build_site:
+    input: data/trees/backbone.rooted.pretty.newick, data/trees/backbone_with_its.newick, data/staging/loci_table.tsv
+    output: site/index.html, site/latest/backbone.newick, site/latest/backbone_with_its.newick, site/data/tree_data.json, site/.nojekyll
+    jobid: 0
+    reason: Input files updated by another job: data/trees/backbone.rooted.pretty.newick
+    resources: tmpdir=/tmp
+
+
+        mkdir -p site/latest site/data
+        
+        # Copy tree files
+        cp data/trees/backbone.rooted.pretty.newick site/latest/backbone.newick
+        cp data/trees/backbone_with_its.newick site/latest/backbone_with_its.newick
+        
+        # Build interactive site
+        python3.11 workflow/scripts/build_interactive_site.py \
+          --backbone-tree data/trees/backbone.rooted.pretty.newick \
+          --its-tree data/trees/backbone_with_its.newick \
+          --loci-table data/staging/loci_table.tsv \
+          --version v2025.09.01 \
+          --output-dir site
+        
+        # Prevent Jekyll processing
+        touch site/.nojekyll
+        
+[Mon Sep  8 16:56:25 2025]
+Error in rule build_site:
+    jobid: 0
+    input: data/trees/backbone.rooted.pretty.newick, data/trees/backbone_with_its.newick, data/staging/loci_table.tsv
+    output: site/index.html, site/latest/backbone.newick, site/latest/backbone_with_its.newick, site/data/tree_data.json, site/.nojekyll
+    shell:
+        
+        mkdir -p site/latest site/data
+        
+        # Copy tree files
+        cp data/trees/backbone.rooted.pretty.newick site/latest/backbone.newick
+        cp data/trees/backbone_with_its.newick site/latest/backbone_with_its.newick
+        
+        # Build interactive site
+        python3.11 workflow/scripts/build_interactive_site.py \
+          --backbone-tree data/trees/backbone.rooted.pretty.newick \
+          --its-tree data/trees/backbone_with_its.newick \
+          --loci-table data/staging/loci_table.tsv \
+          --version v2025.09.01 \
+          --output-dir site
+        
+        # Prevent Jekyll processing
+        touch site/.nojekyll
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Removing output files of failed job build_site since they might be corrupted:
+site/latest/backbone.newick, site/latest/backbone_with_its.newick
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2025-09-08T165623.296459.snakemake.log

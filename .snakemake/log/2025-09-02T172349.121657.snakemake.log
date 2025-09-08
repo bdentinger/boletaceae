@@ -1,0 +1,6 @@
+Building DAG of jobs...
+MissingInputException in rule build_site in file /home/bdentinger/boletaceae/workflow/rules/release.smk, line 39:
+Missing input files for rule build_site:
+    output: site/index.html, site/latest/backbone.newick, site/latest/backbone_with_its.newick, site/data/tree_data.json, site/.nojekyll
+    affected files:
+        data/trees/backbone_with_its.newick

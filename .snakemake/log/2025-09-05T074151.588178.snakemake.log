@@ -1,0 +1,66 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 64
+Rules claiming more threads will be scaled down.
+Job stats:
+job                           count
+--------------------------  -------
+build_backbone_constrained        1
+build_site                        1
+prettify_tree                     1
+root_tree                         1
+total                             4
+
+Select jobs to execute...
+
+[Fri Sep  5 07:41:52 2025]
+rule build_backbone_constrained:
+    input: data/align/concat.fasta, data/align/partitions.txt
+    output: data/trees/backbone.treefile
+    jobid: 3
+    reason: Forced execution
+    resources: tmpdir=/tmp
+
+
+        iqtree3 -s data/align/concat.fasta -p data/align/partitions.txt \
+                -g constraints/Trembleetal_branchlength.newick \
+		-T AUTO \
+                -B 1000 --sampling GENESITE \
+                -pre data/trees/backbone
+        
+[Fri Sep  5 15:29:38 2025]
+Finished job 3.
+1 of 4 steps (25%) done
+Select jobs to execute...
+
+[Fri Sep  5 15:29:38 2025]
+rule prettify_tree:
+    input: data/trees/backbone.treefile, data/staging/taxon_map.tsv
+    output: data/trees/backbone.pretty.newick
+    jobid: 2
+    reason: Missing output files: data/trees/backbone.pretty.newick; Input files updated by another job: data/trees/backbone.treefile
+    resources: tmpdir=/tmp
+
+
+        python3.11 workflow/scripts/prettify_tree_labels.py \
+          --tree data/trees/backbone.treefile \
+          --taxon-map data/staging/taxon_map.tsv \
+          --output data/trees/backbone.pretty.newick
+        
+[Fri Sep  5 15:29:38 2025]
+Error in rule prettify_tree:
+    jobid: 2
+    input: data/trees/backbone.treefile, data/staging/taxon_map.tsv
+    output: data/trees/backbone.pretty.newick
+    shell:
+        
+        python3.11 workflow/scripts/prettify_tree_labels.py \
+          --tree data/trees/backbone.treefile \
+          --taxon-map data/staging/taxon_map.tsv \
+          --output data/trees/backbone.pretty.newick
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2025-09-05T074151.588178.snakemake.log

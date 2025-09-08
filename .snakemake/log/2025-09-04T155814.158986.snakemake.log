@@ -1,0 +1,121 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 64
+Rules claiming more threads will be scaled down.
+Job stats:
+job                           count
+--------------------------  -------
+build_backbone_constrained        1
+build_site                        1
+dedupe_locus                      1
+loci_table                        1
+merge_custom                      1
+prettify_tree                     1
+root_tree                         1
+specimen_loci                     1
+total                             8
+
+Select jobs to execute...
+
+[Thu Sep  4 15:58:15 2025]
+rule merge_custom:
+    input: data/qc/ITS.cleaned.fasta
+    output: data/qc/ITS.merged.fasta
+    jobid: 28
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: locus=ITS
+    resources: tmpdir=/tmp
+
+
+        set -euo pipefail
+        mkdir -p data/qc
+
+        if [[ -s "data/custom/sequences/ITS.fasta" ]]; then
+          python3.11 workflow/scripts/ingest_custom_fasta.py \
+            --in "data/custom/sequences/ITS.fasta" \
+            --locus "ITS" \
+            --out "data/qc/ITS.custom.ingested.fasta" \
+            --taxon-map-append "data/staging/taxon_map.tsv" \
+            --preserve-labels
+          cat "data/qc/ITS.cleaned.fasta" "data/qc/ITS.custom.ingested.fasta" > "data/qc/ITS.merged.fasta"
+        else
+          cp "data/qc/ITS.cleaned.fasta" "data/qc/ITS.merged.fasta"
+        fi
+        
+
+[Thu Sep  4 15:58:15 2025]
+rule build_backbone_constrained:
+    input: data/align/concat.fasta, data/align/partitions.txt
+    output: data/trees/backbone.treefile
+    jobid: 3
+    reason: Missing output files: data/trees/backbone.treefile; Updated input files: data/align/concat.fasta, data/align/partitions.txt
+    resources: tmpdir=/tmp
+
+
+        iqtree3 -s data/align/concat.fasta -p data/align/partitions.txt \
+                -g constraints/Trembleetal_branchlength.newick \
+		-T AUTO \
+                -B 1000 --sampling GENESITE \
+                -pre data/trees/backbone
+        
+[Thu Sep  4 15:58:15 2025]
+Finished job 28.
+1 of 8 steps (12%) done
+Select jobs to execute...
+
+[Thu Sep  4 15:58:15 2025]
+rule dedupe_locus:
+    input: data/qc/ITS.merged.fasta
+    output: data/qc/ITS.dedup.fasta
+    jobid: 27
+    reason: Input files updated by another job: data/qc/ITS.merged.fasta
+    wildcards: locus=ITS
+    resources: tmpdir=/tmp
+
+
+        awk 'BEGIN{FS=""} /^>/{
+            if (h) { print h"\n"seq; } h=$0; seq="";
+        } !/^>/{ seq=seq$0; } END{ if (h) print h"\n"seq; }' data/qc/ITS.merged.fasta \
+        | awk 'BEGIN{RS=">"; ORS="";} NR>1{split($0,a,"\n"); h=a[1]; gsub("\r","",h); sub("\n.*","",h); seq=""; for(i=2;i<=NF;i++) seq=seq a[i]"\n"; len=length(gensub("\n","", "g", seq)); if (len>max[h]){buf[h]=seq; max[h]=len;}} END{for (k in buf) print ">"k"\n"buf[k];}' \
+        > data/qc/ITS.dedup.fasta
+        
+[Thu Sep  4 15:58:16 2025]
+Finished job 27.
+2 of 8 steps (25%) done
+Select jobs to execute...
+
+[Thu Sep  4 15:58:16 2025]
+rule specimen_loci:
+    input: data/qc/RPB1.dedup.fasta, data/qc/RPB2.dedup.fasta, data/qc/TEF1.dedup.fasta, data/qc/ITS.dedup.fasta
+    output: data/staging/specimens/specimen_loci.tsv
+    jobid: 26
+    reason: Input files updated by another job: data/qc/ITS.dedup.fasta
+    resources: tmpdir=/tmp
+
+
+        mkdir -p data/staging/specimens
+        python3.11 workflow/scripts/link_specimens.py \
+          --fastas data/qc/RPB1.dedup.fasta data/qc/RPB2.dedup.fasta data/qc/TEF1.dedup.fasta data/qc/ITS.dedup.fasta \
+          --out data/staging/specimens/specimen_loci.tsv
+        
+[Thu Sep  4 15:58:16 2025]
+Finished job 26.
+3 of 8 steps (38%) done
+Select jobs to execute...
+
+[Thu Sep  4 15:58:16 2025]
+rule loci_table:
+    input: data/staging/specimens/specimen_loci.tsv
+    output: data/staging/loci_table.tsv
+    jobid: 25
+    reason: Input files updated by another job: data/staging/specimens/specimen_loci.tsv
+    resources: tmpdir=/tmp
+
+
+        python3.11 workflow/scripts/loci_table.py \
+          --specimen_loci data/staging/specimens/specimen_loci.tsv \
+          --out data/staging/loci_table.tsv
+        
+[Thu Sep  4 15:58:16 2025]
+Finished job 25.
+4 of 8 steps (50%) done

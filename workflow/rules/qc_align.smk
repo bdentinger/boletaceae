@@ -1,67 +1,106 @@
-# QC + merge custom + dedupe + alignment (first pass)
-
-CODING = set(config.get("coding_loci", ["RPB1","RPB2","TEF1"]))
-
+# Produce cleaned FASTA per locus directly from GenBank (normalize_ids.py handles CDS vs ITS)
 rule qc_from_gb:
-    input:  gb = "data/staging/{locus}.gb"
-    output: fa = "data/qc/{locus}.cleaned.fasta"
+    input:  "data/staging/{locus}.gb"
+    output: "data/qc/{locus}.cleaned.fasta"
     shell:
         r"""
         mkdir -p data/qc
-        if [[ "{wildcards.locus}" =~ ^(RPB1|RPB2|TEF1)$ ]]; then
-          {config[python_bin]} workflow/scripts/normalize_ids.py \
-            --in {input.gb} --locus {wildcards.locus} --out {output.fa} \
-            --cds-only --min-len 150
-        else
-          {config[python_bin]} workflow/scripts/normalize_ids.py \
-            --in {input.gb} --locus {wildcards.locus} --out {output.fa}
-        fi
+        {config[python_bin]} workflow/scripts/normalize_ids.py \
+          --in {input} --locus {wildcards.locus} --out {output}
         """
 
+# (optional) de-duplicate by header (keep longest)
+rule dedupe_locus:
+    input:  "data/qc/{locus}.merged.fasta"
+    output: "data/qc/{locus}.dedup.fasta"
+    shell:
+        r"""
+        awk 'BEGIN{{FS=""}} /^>/{{
+            if (h) {{ print h"\n"seq; }} h=$0; seq="";
+        }} !/^>/{{ seq=seq$0; }} END{{ if (h) print h"\n"seq; }}' {input} \
+        | awk 'BEGIN{{RS=">"; ORS="";}} NR>1{{split($0,a,"\n"); h=a[1]; gsub("\r","",h); sub("\n.*","",h); seq=""; for(i=2;i<=NF;i++) seq=seq a[i]"\n"; len=length(gensub("\n","", "g", seq)); if (len>max[h]){{buf[h]=seq; max[h]=len;}}}} END{{for (k in buf) print ">"k"\n"buf[k];}}' \
+        > {output}
+        """
+
+# Merge GenBank-cleaned with optional custom sequences
 rule merge_custom:
-    input:  gb = "data/qc/{locus}.cleaned.fasta"
-    output: merged = "data/qc/{locus}.merged.fasta"
+    input:
+        gb = "data/qc/{locus}.cleaned.fasta"
+    output:
+        merged = "data/qc/{locus}.merged.fasta"
     params:
-        custom   = "data/custom/sequences/{locus}.fasta",
-        preserve = lambda wc: str(config.get("custom", {}).get("preserve_labels", True)).lower()
+        custom = "data/custom/sequences/{locus}.fasta",
+        taxon_map = "data/staging/taxon_map.tsv"
     shell:
         r"""
         set -euo pipefail
         mkdir -p data/qc
-        PRES=""
-        if [[ "{params.preserve}" == "true" || "{params.preserve}" == "1" || "{params.preserve}" == "yes" ]]; then
-          PRES="--preserve-labels"
-        fi
+
         if [[ -s "{params.custom}" ]]; then
           {config[python_bin]} workflow/scripts/ingest_custom_fasta.py \
             --in "{params.custom}" \
             --locus "{wildcards.locus}" \
             --out "data/qc/{wildcards.locus}.custom.ingested.fasta" \
-            --taxon-map-append "data/staging/taxon_map.tsv" \
-            $PRES
+            --taxon-map-append "{params.taxon_map}" \
+            --preserve-labels
           cat "{input.gb}" "data/qc/{wildcards.locus}.custom.ingested.fasta" > "{output.merged}"
         else
           cp "{input.gb}" "{output.merged}"
         fi
         """
 
-rule dedupe_locus:
-    input:  "data/qc/{locus}.merged.fasta"
-    output: "data/qc/{locus}.dedup.fasta"
-    shell:
-        r"""{config[python_bin]} workflow/scripts/dedupe_by_specimen.py \
-              --in {input} --out {output}"""
-
+# **Unified alignment rule**: MACSE for coding loci; MAFFT for ITS (non-coding)
 rule align_locus:
     input:  "data/qc/{locus}.dedup.fasta"
     output: "data/align/{locus}.aln.fasta"
+    log:    "logs/mafft/{locus}.log"
+    params:
+        mafft_threads = lambda wc: config.get("threads", {}).get("align", 8),
+        coding_vec    = lambda wc: " ".join(config.get("coding_loci", []))   # <— NEW
     shell:
         r"""
-        mkdir -p data/align
-        if [[ "{wildcards.locus}" =~ ^(RPB1|RPB2|TEF1)$ ]]; then
-          bash workflow/shell/align_coding.sh {input} {output}
+        set -euo pipefail
+        mkdir -p data/align logs/mafft
+
+        LOCUS="{wildcards.locus}"
+        LUP=$(echo "$LOCUS" | tr '[:lower:]' '[:upper:]')
+
+        if [[ " {params.coding_vec} " == *" ${{LUP}} "* ]]; then
+            # CODING: MACSE (codon-aware, NT output)
+            java -jar /home/bdentinger/macse_v2.07.jar -prog alignSequences \
+                  -seq {input} \
+                  -out_NT {output} \
+                  -out_AA data/align/{wildcards.locus}.aa.aln.fasta \
+                  -gc_def 1
         else
-          mafft --maxiterate 1000 --localpair --thread -1 {input} > {output}
-          trimal -in {output} -out {output} -gt 0.7
+            # NON-CODING: MAFFT
+            tmp_aln=$(mktemp)
+            mafft --thread {params.mafft_threads} \
+                  --anysymbol --adjustdirectionaccurately \
+                  --retree 2 --maxiterate 0 \
+                  "{input}" > "$tmp_aln" 2> "{log}"
+
+            # sanity: all sequences same length and non-empty
+            {config[python_bin]} - <<'PY' "$tmp_aln" "{output}"
+import sys
+from Bio import SeqIO
+aln_in, outp = sys.argv[1], sys.argv[2]
+recs = list(SeqIO.parse(aln_in, "fasta"))
+if not recs:
+    raise SystemExit(3)
+lengths = set(len(r.seq) for r in recs)
+if len(lengths) != 1 or next(iter(lengths)) == 0:
+    raise SystemExit(4)
+SeqIO.write(recs, outp, "fasta")
+PY
         fi
         """
+
+# Mask after alignment (both MACSE NT and MAFFT NT)
+rule mask_locus_refined:
+    input:  "data/align/{locus}.aln.fasta"
+    output: "data/align/{locus}.masked.fasta"
+    params:
+        gt = lambda wc: config.get("masking", {}).get("gap_threshold", 0.7)
+    shell:
+        "trimal -in {input} -out {output} -gt {params.gt}"

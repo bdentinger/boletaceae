@@ -1,0 +1,45 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 64
+Rules claiming more threads will be scaled down.
+Job stats:
+job              count
+-------------  -------
+build_site           1
+prettify_tree        1
+root_tree            1
+total                3
+
+Select jobs to execute...
+
+[Mon Sep  8 15:23:39 2025]
+rule prettify_tree:
+    input: data/trees/backbone.treefile, data/staging/taxon_map.tsv
+    output: data/trees/backbone.pretty.newick
+    jobid: 2
+    reason: Missing output files: data/trees/backbone.pretty.newick; Updated input files: data/trees/backbone.treefile, data/staging/taxon_map.tsv
+    resources: tmpdir=/tmp
+
+
+        python3.11 workflow/scripts/prettify_tree_labels.py \
+          --tree data/trees/backbone.treefile \
+          --taxon-map data/staging/taxon_map.tsv \
+          --output data/trees/backbone.pretty.newick
+        
+[Mon Sep  8 15:23:40 2025]
+Error in rule prettify_tree:
+    jobid: 2
+    input: data/trees/backbone.treefile, data/staging/taxon_map.tsv
+    output: data/trees/backbone.pretty.newick
+    shell:
+        
+        python3.11 workflow/scripts/prettify_tree_labels.py \
+          --tree data/trees/backbone.treefile \
+          --taxon-map data/staging/taxon_map.tsv \
+          --output data/trees/backbone.pretty.newick
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2025-09-08T152338.348107.snakemake.log

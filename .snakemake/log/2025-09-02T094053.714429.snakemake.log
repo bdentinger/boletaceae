@@ -1,0 +1,4 @@
+AttributeError in file /home/bdentinger/boletaceae/workflow/rules/align_tree.smk, line 27:
+invalid name for input, output, wildcard, params or log: remove is reserved for internal use
+  File "/home/bdentinger/boletaceae/Snakefile", line 6, in <module>
+  File "/home/bdentinger/boletaceae/workflow/rules/align_tree.smk", line 27, in <module>

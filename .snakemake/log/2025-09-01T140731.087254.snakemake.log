@@ -1,0 +1,16 @@
+Assuming unrestricted shared filesystem usage.
+None
+host: lnx820.umnh.utah.edu
+Building DAG of jobs...
+AmbiguousRuleException:
+Rules qc_locus and qc_from_gb are ambiguous for the file data/qc/RPB1.cleaned.fasta.
+Consider starting rule output with a unique prefix, constrain your wildcards, or use the ruleorder directive.
+Wildcards:
+	qc_locus: locus=RPB1
+	qc_from_gb: locus=RPB1
+Expected input files:
+	qc_locus: data/staging/RPB1.gb
+	qc_from_gb: data/staging/RPB1.gb
+Expected output files:
+	qc_locus: data/qc/RPB1.cleaned.fasta
+	qc_from_gb: data/qc/RPB1.cleaned.fasta

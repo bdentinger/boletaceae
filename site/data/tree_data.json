@@ -1,0 +1,7 @@
+{
+  "version": "v2025.09.01",
+  "generated": "2025-09-08T23:19:05Z",
+  "backbone_newick": "site/latest/backbone.newick",
+  "with_its_newick": "site/latest/backbone_with_its.newick",
+  "loci_table": "data/staging/loci_table.tsv"
+}

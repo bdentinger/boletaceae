@@ -1,0 +1,42 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 64
+Rules claiming more threads will be scaled down.
+Job stats:
+job           count
+----------  -------
+build_site        1
+total             1
+
+Select jobs to execute...
+
+[Mon Sep  8 17:19:04 2025]
+rule build_site:
+    input: data/trees/backbone.rooted.pretty.newick, data/trees/backbone_with_its.newick, data/staging/loci_table.tsv
+    output: site/index.html, site/latest/backbone.newick, site/latest/backbone_with_its.newick, site/data/tree_data.json, site/.nojekyll
+    jobid: 0
+    reason: Missing output files: site/index.html
+    resources: tmpdir=/tmp
+
+
+        mkdir -p site/latest site/data
+        
+        # Copy tree files
+        cp data/trees/backbone.rooted.pretty.newick site/latest/backbone.newick
+        cp data/trees/backbone_with_its.newick site/latest/backbone_with_its.newick
+        
+        # Build interactive site
+        python3.11 workflow/scripts/build_site.py \
+          --backbone-tree data/trees/backbone.rooted.pretty.newick \
+          --its-tree data/trees/backbone_with_its.newick \
+          --loci-table data/staging/loci_table.tsv \
+          --version v2025.09.01 \
+          --output-dir site
+        
+        # Prevent Jekyll processing
+        touch site/.nojekyll
+        
+[Mon Sep  8 17:19:05 2025]
+Finished job 0.
+1 of 1 steps (100%) done
+Complete log: .snakemake/log/2025-09-08T171904.088660.snakemake.log

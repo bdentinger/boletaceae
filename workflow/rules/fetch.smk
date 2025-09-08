@@ -1,17 +1,18 @@
 ##############################
-# fetch.smk — data ingestion #
+# fetch.smk — GenBank data ingestion #
 ##############################
 
-LOCUS_LIST  = config.get("backbone_loci", []) + ["ITS"]
-TAXON       = config.get("taxon_query", "Boletaceae[Organism]")
-DAYS        = config.get("update_window_days", 8)
+LOCUS_LIST = config.get("backbone_loci", []) + ["ITS"]
+TAXON = config.get("taxon_query", "Boletaceae[Organism]")
+DAYS = config.get("update_window_days", 8)
 
+# Query GenBank for each locus
 rule fetch_locus:
     output:
         "data/staging/{locus}.gb"
     params:
         taxon = TAXON,
-        days  = DAYS
+        days = DAYS
     shell:
         r"""
         mkdir -p data/staging
@@ -22,37 +23,43 @@ rule fetch_locus:
           --out {output}
         """
 
-rule qc_locus:  # legacy alias (kept for compatibility)
-    input:  "data/staging/{locus}.gb"
-    output: "data/qc/{locus}.cleaned.fasta"
+# Extract taxonomic information from GenBank files
+rule build_taxon_map:
+    input:
+        expand("data/staging/{locus}.gb", locus=LOCUS_LIST)
+    output:
+        "data/staging/taxon_map.tsv"
     shell:
         r"""
-        mkdir -p data/qc
-        if [[ "{wildcards.locus}" =~ ^(RPB1|RPB2|TEF1)$ ]]; then
-          {config[python_bin]} workflow/scripts/normalize_ids.py \
-            --in {input} --locus {wildcards.locus} --out {output} \
-            --cds-only --min-len 150
-        else
-          {config[python_bin]} workflow/scripts/normalize_ids.py \
-            --in {input} --locus {wildcards.locus} --out {output}
-        fi
+        mkdir -p data/staging
+        {config[python_bin]} workflow/scripts/build_taxon_map.py \
+          --genbank {input} \
+          --out {output}
         """
 
+# Build specimen-locus presence matrix after QC
 rule specimen_loci:
     input:
-        expand("data/qc/{locus}.cleaned.fasta", locus=LOCUS_LIST)
+        fastas = expand("data/qc/{locus}.dedup.fasta", locus=LOCUS_LIST)
     output:
         "data/staging/specimens/specimen_loci.tsv"
     shell:
         r"""
+        mkdir -p data/staging/specimens
         {config[python_bin]} workflow/scripts/link_specimens.py \
-          --fastas {input} \
+          --fastas {input.fastas} \
           --out {output}
         """
 
+# Summary statistics table
 rule loci_table:
-    input:  "data/staging/specimens/specimen_loci.tsv"
-    output: "data/staging/loci_table.tsv"
+    input:
+        specimen_loci = "data/staging/specimens/specimen_loci.tsv"
+    output:
+        "data/staging/loci_table.tsv"
     shell:
-        r"""{config[python_bin]} workflow/scripts/loci_table.py \
-              --specimen_loci {input} --out {output}"""
+        r"""
+        {config[python_bin]} workflow/scripts/loci_table.py \
+          --specimen_loci {input.specimen_loci} \
+          --out {output}
+        """

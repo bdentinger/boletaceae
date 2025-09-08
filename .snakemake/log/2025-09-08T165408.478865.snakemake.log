@@ -1,0 +1,90 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 64
+Rules claiming more threads will be scaled down.
+Job stats:
+job              count
+-------------  -------
+build_site           1
+prettify_tree        1
+root_tree            1
+total                3
+
+Select jobs to execute...
+
+[Mon Sep  8 16:54:09 2025]
+rule prettify_tree:
+    input: data/trees/backbone.treefile, data/staging/taxon_map.tsv
+    output: data/trees/backbone.pretty.newick
+    jobid: 2
+    reason: Missing output files: data/trees/backbone.pretty.newick; Updated input files: data/trees/backbone.treefile, data/staging/taxon_map.tsv
+    resources: tmpdir=/tmp
+
+
+        python3.11 workflow/scripts/prettify_tree_labels.py \
+          --in data/trees/backbone.treefile \
+          --map data/staging/taxon_map.tsv \
+          --out data/trees/backbone.pretty.newick
+        
+[Mon Sep  8 16:54:10 2025]
+Finished job 2.
+1 of 3 steps (33%) done
+Select jobs to execute...
+
+[Mon Sep  8 16:54:10 2025]
+rule root_tree:
+    input: data/trees/backbone.pretty.newick
+    output: data/trees/backbone.rooted.pretty.newick
+    jobid: 1
+    reason: Missing output files: data/trees/backbone.rooted.pretty.newick; Input files updated by another job: data/trees/backbone.pretty.newick
+    resources: tmpdir=/tmp
+
+
+        set -euo pipefail
+        # Build optional flag strings only if non-empty
+        flags_single=""
+        if [[ -n "" ]]; then
+          flags_single="--outgroup-single "
+        fi
+
+        flags_clade=""
+        if [[ -n "" ]]; then
+          flags_clade="--outgroup-clade "
+        fi
+
+        python3.11 workflow/scripts/root_tree.py \
+          --input data/trees/backbone.pretty.newick \
+          --output data/trees/backbone.rooted.pretty.newick \
+          $flags_single \
+          $flags_clade
+        
+[Mon Sep  8 16:54:10 2025]
+Error in rule root_tree:
+    jobid: 1
+    input: data/trees/backbone.pretty.newick
+    output: data/trees/backbone.rooted.pretty.newick
+    shell:
+        
+        set -euo pipefail
+        # Build optional flag strings only if non-empty
+        flags_single=""
+        if [[ -n "" ]]; then
+          flags_single="--outgroup-single "
+        fi
+
+        flags_clade=""
+        if [[ -n "" ]]; then
+          flags_clade="--outgroup-clade "
+        fi
+
+        python3.11 workflow/scripts/root_tree.py \
+          --input data/trees/backbone.pretty.newick \
+          --output data/trees/backbone.rooted.pretty.newick \
+          $flags_single \
+          $flags_clade
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2025-09-08T165408.478865.snakemake.log

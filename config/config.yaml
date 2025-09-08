@@ -1,34 +1,30 @@
-version: "v2025.08-clean"
-email: "you@example.org"
-tool: "BoletaceaeBackbone"
+version: "v2025.09.01"
+email: "bryn.dentinger@gmail.com"
+toolname: "BoletaceaeBackbone"
 taxon_query: "Boletaceae[Organism]"
 update_window_days: 8
 
-# Loci
-coding_loci: [RPB1, RPB2, TEF1]
-backbone_loci: [RPB1, RPB2, TEF1]
+backbone_loci: [RPB1, RPB2, TEF1]   # LSU removed
+coding_loci:   [RPB1, RPB2, TEF1]   # these are CDS-only loci
+constraint_newick: [constraints/Trembleetal_branchlength.newick]
 
-# Optional constraint tree (Newick); set path to enable (e.g., constraints/boletaceae_constraint.nwk)
-constraint_tree: ""
+its_clade_rank: genus
 
-# Binaries
-python_bin: "python3.11"
-iqtree_bin: "iqtree3"
+min_seq_len:
+  ITS: 300
+  RPB1: 300
+  RPB2: 300
+  TEF1: 250
+
+masking:
+  gap_threshold: 0.7
 
 threads:
-  align: 48
-  iqtree: 72
+  align: 16      # per-job MAFFT threads (tools flag)
+  iqtree: "AUTO" # IQ-TREE 3 --T
 
-speed_mode: accurate  # or "fast"
+classifier:
+  method: sklearn
+  min_confidence: 0.8
 
-outgroup:
-  prefer_single: ["Paxillus"]
-  fallback_clade: ["Chalciporus","Buchwaldoboletus","Rubinoboletus"]
-
-its_cluster:
-  treecluster_threshold: 0.05
-  min_len: 300
-  min_seqs: 4
-
-custom:
-  preserve_labels: true
+python_bin: "python3.11"

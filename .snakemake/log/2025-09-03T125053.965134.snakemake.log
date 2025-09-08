@@ -1,0 +1,36 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 8
+Rules claiming more threads will be scaled down.
+Job stats:
+job           count
+----------  -------
+loci_table        1
+total             1
+
+Select jobs to execute...
+
+[Wed Sep  3 12:50:55 2025]
+rule loci_table:
+    input: data/staging/specimens/specimen_loci.tsv
+    output: data/staging/loci_table.tsv
+    jobid: 0
+    reason: Missing output files: data/staging/loci_table.tsv
+    resources: tmpdir=/tmp
+
+[Wed Sep  3 12:50:56 2025]
+Error in rule loci_table:
+    jobid: 0
+    input: data/staging/specimens/specimen_loci.tsv
+    output: data/staging/loci_table.tsv
+    shell:
+        
+        python3.11 workflow/scripts/loci_table.py \
+          --specimen-loci data/staging/specimens/specimen_loci.tsv \
+          --out data/staging/loci_table.tsv
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2025-09-03T125053.965134.snakemake.log

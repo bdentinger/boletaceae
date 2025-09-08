@@ -32,6 +32,6 @@ ids = esearch_ids(q)
 with open(args.out, "w") as OUT:
     for i in range(0, len(ids), 200):
         batch = ids[i:i+200]
-        h = Entrez.efetch(db="nuccore", id=",".join(batch), rettype="gb", retmode="text")
+        h = Entrez.efetch(db="nuccore", id=",".join(batch), rettype="gbwithparts", retmode="text")
         OUT.write(h.read())
         time.sleep(0.34)

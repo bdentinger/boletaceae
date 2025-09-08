@@ -2,95 +2,70 @@
 import argparse, re, sys
 from pathlib import Path
 from Bio import SeqIO
-from Bio.SeqRecord import SeqRecord
 
-def norm(s: str | None) -> str | None:
-    if not s:
-        return None
+def norm(s):
+    if not s: return None
     s = s.strip()
-    s = re.sub(r"[^\w\s:/\.\-]+", "", s)
-    s = re.sub(r"[\s\-]+", "_", s)
-    return s
+    s = re.sub(r"[^\w\s:/.\-]+", "", s)  # remove odd punctuation
+    s = re.sub(r"[\s\-]+", "_", s)       # spaces/hyphens -> underscores
+    return s.lower()
 
-def extract_cds_nt(rec) -> str | None:
-    if not rec.seq:
-        return None
-    cds_feats = [f for f in rec.features if f.type.lower() == "cds"]
-    if not cds_feats:
-        return None
-    parts = []
-    for f in cds_feats:
-        try:
-            parts.append(str(f.extract(rec.seq)))
-        except Exception:
-            return None
-    return "".join(parts) if parts else None
+def specimen_key(rec):
+    src = next((f for f in rec.features if f.type == "source"), None)
+    biosample = voucher = culture = isolate = strain = None
+    if src:
+        for x in src.qualifiers.get("db_xref", []):
+            if x.startswith("BioSample:"):
+                biosample = x.split(":", 1)[1]
+                break
+        voucher = src.qualifiers.get("specimen_voucher", [None])[0]
+        culture = src.qualifiers.get("culture_collection", [None])[0]
+        isolate = src.qualifiers.get("isolate", [None])[0]
+        strain  = src.qualifiers.get("strain", [None])[0]
+    k = norm(biosample) or norm(voucher) or norm(culture) or norm(isolate) or norm(strain) or rec.id
+    return k
 
 def main():
-    ap = argparse.ArgumentParser(description="Extract/normalize from GenBank")
-    ap.add_argument("--in", dest="inp", required=True)
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--in",  dest="inp", required=True, help="Input GenBank")
     ap.add_argument("--locus", required=True)
     ap.add_argument("--out", required=True)
-    ap.add_argument("--cds-only", action="store_true")
-    ap.add_argument("--min-len", type=int, default=1)
     args = ap.parse_args()
 
+    out_fa = Path(args.out)
+    out_fa.parent.mkdir(parents=True, exist_ok=True)
+
     out_recs = []
-    TAX = {}
-    n_in=n_w=n_ns=n_nc=n_sh=0
-
+    skipped_undef = 0
     for rec in SeqIO.parse(args.inp, "genbank"):
-        n_in += 1
-        gb_acc = rec.id
-        src = next((f for f in rec.features if f.type=="source"), None)
-        biosample=voucher=culture=isolate=strain=None
-        organism = (rec.annotations.get("organism") or "").strip()
+        # Skip records whose sequence is undefined (Biopython would raise on str(rec.seq))
+        try:
+            s = str(rec.seq)
+        except Exception:
+            skipped_undef += 1
+            continue
+        if not s or set(s.upper()) <= {"N"}:
+            # all Ns or empty — drop
+            skipped_undef += 1
+            continue
 
-        if src:
-            for x in src.qualifiers.get("db_xref", []):
-                if isinstance(x,str) and x.startswith("BioSample:"):
-                    biosample = x.split(":",1)[1]; break
-            voucher  = src.qualifiers.get("specimen_voucher", [None])[0]
-            culture  = src.qualifiers.get("culture_collection", [None])[0]
-            isolate  = src.qualifiers.get("isolate", [None])[0]
-            strain   = src.qualifiers.get("strain", [None])[0]
+        key = specimen_key(rec)
+        rec.id = f"{key}|{args.locus}|{rec.id}"
+        rec.description = ""
+        out_recs.append(rec)
 
-        specimen = norm(biosample) or norm(voucher) or norm(culture) or norm(isolate) or norm(strain) or gb_acc
+    # write FASTA
+    SeqIO.write(out_recs, out_fa, "fasta")
+    print(f"[normalize_ids] wrote {len(out_recs)} seqs; skipped {skipped_undef} undefined", file=sys.stderr)
 
-        if args.cds_only:
-            seq_str = extract_cds_nt(rec)
-            if not seq_str:
-                n_nc += 1; continue
-        else:
-            if not rec.seq:
-                n_ns += 1; continue
-            seq_str = str(rec.seq)
+    # append to taxon_map
+    map_path = Path("data/staging/taxon_map.tsv")
+    map_path.parent.mkdir(parents=True, exist_ok=True)
+    with map_path.open("a") as M:
+        for rec in out_recs:
+            specimen = rec.id.split("|", 1)[0]
+            sp = (rec.annotations.get("organism") or "").strip()
+            M.write(f"{specimen}\t{sp}\n")
 
-        if len(seq_str) < args.min_len:
-            n_sh += 1; continue
-
-        r = SeqRecord(rec.seq.__class__(seq_str), id=f"{specimen}|{args.locus}|{gb_acc}", description="")
-        out_recs.append(r)
-        TAX.setdefault(specimen, organism)
-
-    Path(args.out).parent.mkdir(parents=True, exist_ok=True)
-    SeqIO.write(out_recs, args.out, "fasta")
-
-    tmap = Path("data/staging/taxon_map.tsv")
-    existing = {}
-    if tmap.exists():
-        for line in tmap.read_text().splitlines():
-            if not line.strip(): continue
-            k,v = (line.split("\t",1)+["Unknown"])[:2]
-            existing[k]=v
-    for k,v in TAX.items():
-        existing.setdefault(k, v or "Unknown")
-    tmap.parent.mkdir(parents=True, exist_ok=True)
-    with tmap.open("w") as fh:
-        for k,v in existing.items():
-            fh.write(f"{k}\t{v}\n")
-
-    print(f"[normalize] in={n_in} out={len(out_recs)} skip_no_seq={n_ns} skip_no_cds={n_nc} skip_short={n_sh}", file=sys.stderr)
-
-if __name__=="__main__":
+if __name__ == "__main__":
     main()

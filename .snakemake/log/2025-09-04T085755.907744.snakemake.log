@@ -1,0 +1,51 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 32
+Rules claiming more threads will be scaled down.
+Job stats:
+job             count
+------------  -------
+merge_custom        3
+total               3
+
+Select jobs to execute...
+
+[Thu Sep  4 08:57:57 2025]
+rule merge_custom:
+    input: data/qc/RPB1.cleaned.fasta
+    output: data/qc/RPB1.merged.fasta
+    jobid: 6
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: locus=RPB1
+    resources: tmpdir=/tmp
+
+
+[Thu Sep  4 08:57:59 2025]
+rule merge_custom:
+    input: data/qc/RPB2.cleaned.fasta
+    output: data/qc/RPB2.merged.fasta
+    jobid: 0
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: locus=RPB2
+    resources: tmpdir=/tmp
+
+
+[Thu Sep  4 08:57:59 2025]
+rule merge_custom:
+    input: data/qc/TEF1.cleaned.fasta
+    output: data/qc/TEF1.merged.fasta
+    jobid: 3
+    reason: Code has changed since last execution; Params have changed since last execution
+    wildcards: locus=TEF1
+    resources: tmpdir=/tmp
+
+[Thu Sep  4 08:58:00 2025]
+Finished job 6.
+1 of 3 steps (33%) done
+[Thu Sep  4 08:58:00 2025]
+Finished job 0.
+2 of 3 steps (67%) done
+[Thu Sep  4 08:58:00 2025]
+Finished job 3.
+3 of 3 steps (100%) done
+Complete log: .snakemake/log/2025-09-04T085755.907744.snakemake.log

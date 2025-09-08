@@ -1,0 +1,4 @@
+NameError in file /home/bdentinger/boletaceae/workflow/rules/align_tree.smk, line 18:
+name 'AUTO' is not defined
+  File "/home/bdentinger/boletaceae/Snakefile", line 6, in <module>
+  File "/home/bdentinger/boletaceae/workflow/rules/align_tree.smk", line 18, in <module>

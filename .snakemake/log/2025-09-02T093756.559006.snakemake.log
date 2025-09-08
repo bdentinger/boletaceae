@@ -1,0 +1,4 @@
+RuleException in file /home/bdentinger/boletaceae/workflow/rules/align_tree.smk, line 12:
+Threads value has to be an integer, float, or a callable.
+  File "/home/bdentinger/boletaceae/Snakefile", line 6, in <module>
+  File "/home/bdentinger/boletaceae/workflow/rules/align_tree.smk", line 12, in <module>
